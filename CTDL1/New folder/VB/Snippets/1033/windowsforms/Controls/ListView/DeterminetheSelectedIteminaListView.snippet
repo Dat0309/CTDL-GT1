@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Determine the Selected Item in a ListView</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Determines the selected item in a ListView and assigns it to a variable.</Description>
+      <Shortcut>lvSelected</Shortcut>
+      <Keywords>
+        <Keyword>ListView</Keyword>
+        <Keyword>ListViewItem</Keyword>
+        <Keyword>SelectedItems</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>listViewName</ID>
+          <Type>ListView</Type>
+          <ToolTip>Replace with a ListView control on your form.</ToolTip>
+          <Default>ListView1</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim selectedItem As ListViewItem
+If $listViewName$.SelectedItems.Count > 0 Then
+    selectedItem = $listViewName$.SelectedItems(0)
+Else
+    selectedItem = Nothing
+End If]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Define a Sub that Overrides Dispose</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Overrides the Dispose Function according to the Dispose Finalize pattern.</Description>
+      <Keywords>
+        <Keyword>IDisposable</Keyword>
+        <Keyword>Finalize</Keyword>
+        <Keyword>Dispose</Keyword>
+        <Keyword>release</Keyword>
+        <Keyword>resource</Keyword>
+      </Keywords>
+      <Shortcut>Dispose</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.ComponentModel</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="VB" Kind="method decl"><![CDATA[    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        MyBase.Dispose(disposing)
+        If disposing Then
+            ' TODO: dispose managed state (managed objects).
+        End If
+
+        ' TODO: free unmanaged resources (unmanaged objects).
+    End Sub]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

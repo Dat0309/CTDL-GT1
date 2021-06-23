@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Model	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns="http://schemas.microsoft.com/windows/2007/BusinessDataCatalog"
+        Name="$safeitemrootname$">
+  <LobSystems>
+    <LobSystem Name="$safeitemrootname$" Type="DotNetAssembly">
+      <LobSystemInstances>
+        <LobSystemInstance Name="$safeitemrootname$"/>
+      </LobSystemInstances>
+      <Entities>
+        <Entity Name="Entity1" Namespace="$rootnamespace$" EstimatedInstanceCount="1000" Version="1.0.0.0">
+          <Properties>
+            <Property Name="Class" Type="System.String">$rootnamespace$.Entity1Service, $safeitemrootname$</Property>
+          </Properties>
+          <Identifiers>
+            <Identifier Name="Identifier1" TypeName="System.String" />
+            <!-- $loc_BdcmIdTodoComment$ -->
+          </Identifiers>
+          <Methods>
+            <!-- $loc_BdcmFinderStartComment$ -->
+            <Method Name="ReadList">
+              <!-- $loc_BdcmFinderTodoComment$ -->
+              <Parameters>
+                <Parameter Direction="Return" Name="returnParameter">
+                  <TypeDescriptor TypeName="System.Collections.Generic.IEnumerable`1[[$rootnamespace$.Entity1, $safeitemrootname$]]" IsCollection="true" Name="Entity1List">
+                    <TypeDescriptors>
+                      <TypeDescriptor TypeName="$rootnamespace$.Entity1, $safeitemrootname$" Name="Entity1">
+                        <TypeDescriptors>
+                          <TypeDescriptor TypeName="System.String" IdentifierName="Identifier1" Name="Identifier1" />
+                          <TypeDescriptor TypeName="System.String" Name="Message" />
+                          <!-- $loc_BdcmAddTDTodoComment$ -->
+                        </TypeDescriptors>
+                      </TypeDescriptor>
+                    </TypeDescriptors>
+                  </TypeDescriptor>
+                </Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Type="Finder" ReturnParameterName="returnParameter" Default="true" Name="ReadList" DefaultDisplayName="Entity1 List"/>
+              </MethodInstances>
+            </Method>
+            <!-- $loc_BdcmFinderEndComment$ -->
+            <!-- $loc_BdcmSpecificFinderStartComment$ -->
+            <Method Name="ReadItem">
+              <Parameters>
+                <Parameter Direction="In" Name="id">
+                  <TypeDescriptor TypeName="System.String" IdentifierName="Identifier1" Name="Identifier1" />
+                </Parameter>
+                <Parameter Direction="Return" Name="returnParameter">
+                  <TypeDescriptor TypeName="$rootnamespace$.Entity1, $safeitemrootname$" Name="Entity1">
+                    <TypeDescriptors>
+                      <TypeDescriptor TypeName="System.String" IdentifierName="Identifier1" Name="Identifier1" />
+                      <TypeDescriptor TypeName="System.String" Name="Message" />
+                      <!-- $loc_BdcmAddTDTodoComment$ -->
+                    </TypeDescriptors>
+                  </TypeDescriptor>
+                </Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Type="SpecificFinder" ReturnParameterName="returnParameter" Default="true" Name="ReadItem" DefaultDisplayName="Read Entity1"/>
+              </MethodInstances>
+            </Method>
+            <!-- $loc_BdcmSpecificFinderEndComment$ -->
+          </Methods>
+        </Entity>
+      </Entities>
+    </LobSystem>
+  </LobSystems>
+</Model>

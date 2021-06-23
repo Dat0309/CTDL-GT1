@@ -1,0 +1,9 @@
+[$RootKey$\Packages\{a1609ac6-6b91-42e1-8b92-6c8593cb4a8d}]
+@="Microsoft.VisualStudio.Dialogs"
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"Class"="Microsoft.VisualStudio.Dialogs.DialogPackage"
+"Assembly"="Microsoft.VisualStudio.Dialogs,version=12.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+"CodeBase"="$ShellFolder$\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.Dialogs.dll"
+[$RootKey$\Services\{e85b2a12-255d-4acc-a3f5-337b0887f283}]
+@="{a1609ac6-6b91-42e1-8b92-6c8593cb4a8d}"
+"Name"="SVsDialogService"

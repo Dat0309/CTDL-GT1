@@ -1,0 +1,38 @@
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>LightSwitch VisualBasic client project template</Name>
+    <Description>Project template for LightSwitch VisualBasic subproject</Description>
+    <Icon Package="{e1ca83b9-2035-465f-8a04-737358829f65}" ID="3100" />
+    <ProjectType>VisualBasic</ProjectType>
+    <ProjectSubType>LightSwitch</ProjectSubType>
+    <TemplateID>Microsoft.LightSwitch.BlankClientProject.SL.VB.V4</TemplateID>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Client</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <RequiredFrameworkVersion>4.5</RequiredFrameworkVersion>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <Hidden>true</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <CustomParameters>
+      <CustomParameter Name="$ClientProjectName$" />
+      <CustomParameter Name="$ClientProjectSuffix$" Value="" />
+      <CustomParameter Name="$ServerProjectReference$" />
+    </CustomParameters>
+    <Project File="Client.vbproj" ReplaceParameters="true">
+      <!-- Client project -->
+      <ProjectItem TargetFileName="My Project\AssemblyInfo.vb" ReplaceParameters="true">Client.AssemblyInfo.vb</ProjectItem>
+      <ProjectItem TargetFileName="My Project\Client.lsml" ReplaceParameters="true">Client.lsml</ProjectItem>
+      <ProjectItem TargetFileName="My Project\AppManifest.xml" ReplaceParameters="true">AppManifest.xml</ProjectItem>
+      <ProjectItem TargetFileName="My Project\OutOfBrowserSettings.xml" ReplaceParameters="true">OutOfBrowserSettings.xml</ProjectItem>
+      <ProjectItem TargetFileName="My Project\Config.xml" ReplaceParameters="true">Config.xml</ProjectItem>
+      <ProjectItem TargetFileName="default.htm" ReplaceParameters="true">default.htm</ProjectItem>
+      <ProjectItem TargetFileName="Silverlight.js">Silverlight.js</ProjectItem>
+      <Folder Name="Screens\"/>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.LightSwitch.Design.VSTemplateWizard, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, Custom=null</Assembly>
+    <FullClassName>Microsoft.LightSwitch.Design.VSTemplateWizard.TemplateWizardImplementation</FullClassName>
+  </WizardExtension>  
+</VSTemplate>

@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Filter by a function call</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Creates a query that filters by a call to a function.</Description>
+      <Shortcut>qFiltFunc</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>queryResult</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the query.</ToolTip>
+          <Default>query</Default>
+        </Literal>
+        <Literal>
+          <ID>item</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the variable that represents an item from your data source.</ToolTip>
+          <Default>fruit</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSource</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the identifier for your data source.</ToolTip>
+          <Default>New String() {"apple", "orange", "pear", "banana"}</Default>
+        </Literal>
+        <Literal>
+          <ID>field</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the name of the field being filtered on.</ToolTip>
+          <Default>ToUpper()</Default>
+        </Literal>
+        <Literal>
+          <ID>comparisonValue</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the value of the second argument to the function.</ToolTip>
+          <Default>"PEAR"</Default>
+        </Literal>
+        <Literal>
+          <ID>condition1</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the first condition being filtered by.</ToolTip>
+          <Default>= 0</Default>
+        </Literal>
+        <Literal>
+          <ID>functionCall</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the name of the function condition being filtered by.</ToolTip>
+          <Default>String.Compare</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $queryResult$ = From $item$ In $dataSource$ _
+                    Where $functionCall$($item$.$field$, $comparisonValue$) $condition1$ _
+                    Select $item$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

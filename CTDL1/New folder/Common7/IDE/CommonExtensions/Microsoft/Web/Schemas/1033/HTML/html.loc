@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <element _locid="0" url="http://www.w3.org/TR/html5/semantics.html#the-html-element">
+    The html element represents the root of an HTML document.
+  </element>
+  <element _locid="1" url="http://www.w3.org/TR/html5/semantics.html#the-head-element">
+    The head element represents a collection of metadata for the document. Head element must be the first element in an html element.
+  </element>
+  <element _locid="2" url="http://www.w3.org/TR/html5/semantics.html#the-title-element">
+    The title element represents the document's title or name. Authors should use titles that identify their documents even when they are used out of context, for example in a user's history or bookmarks, or in search results. The document's title is often different from its first heading, since the first heading does not have to stand alone when taken out of context.
+  </element>
+  <element _locid="3" url="http://www.w3.org/TR/html5/document-metadata.html#the-base-element">
+    The base element allows authors to specify the document base URL for the purposes of resolving relative URLs, and the name of the default browsing context for the purposes of following hyperlinks. The element does not represent any content beyond this information. 
+  </element>
+  <element _locid="4" url="http://www.w3.org/TR/html5/document-metadata.html#the-link-element">
+    The link element allows authors to link their document to other resources.
+  </element>
+  <element _locid="5" url="http://www.w3.org/TR/html5/document-metadata.html#the-meta-element">
+    The meta element represents various kinds of metadata that cannot be expressed using the 
+    title, base, link, style, and script elements.
+  </element>
+  <element _locid="6" url="http://www.w3.org/TR/html5/document-metadata.html#the-style-element">
+    The style element allows authors to embed style information in their documents. The style element is one of several inputs to the styling processing model. The element does not represent content for the user.
+  </element>
+  <element _locid="7" url="http://www.w3.org/TR/html5/sections.html#the-body-element">
+    The body element represents the content of the document.
+  </element>
+  <element _locid="8" url="http://www.w3.org/TR/html5/sections.html#the-article-element">
+    The article element represents a complete, or self-contained, composition in a document, page, application, or site and that is, in principle, independently distributable or reusable, e.g. in syndication. This could be a forum post, a magazine or newspaper article, a blog entry, a user-submitted comment, an interactive widget or gadget, or any other independent item of content.
+  </element>
+  <element _locid="9" url="http://www.w3.org/TR/html5/sections.html#the-section-element">
+    The section element represents a generic section of a document or application. A section, in this context, is a thematic grouping of content. The theme of each section should be identified, typically by including a heading (h1-h6 element) as a child of the section element.
+  </element>
+  <element _locid="10" url="http://www.w3.org/TR/html5/sections.html#the-nav-element">
+    The nav element represents a section of a page that links to other pages or to parts within the page: a section with navigation links.
+  </element>
+  <element _locid="11" url="http://www.w3.org/TR/html5/sections.html#the-aside-element">
+    The aside element represents a section of a page that consists of content that is tangentially related to the content around the aside element, and which could be considered separate from that content. Such sections are often represented as sidebars in printed typography.
+  </element>
+  <element _locid="12" url="http://www.w3.org/TR/html5/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">
+    These elements represent headings for their sections.
+  </element>
+  <element _locid="13" url="http://www.w3.org/TR/html5/sections.html#the-header-element">
+    The header element represents introductory content for its nearest ancestor sectioning content or sectioning root element. A header typically contains a group of introductory or navigational aids.
+  </element>
+  <element _locid="14" url="http://www.w3.org/TR/html5/sections.html#the-footer-element">
+    The footer element represents a footer for its nearest ancestor sectioning content or sectioning root element. A footer typically contains information about its section such as who wrote it, links to related documents, copyright data, and the like.
+  </element>
+  <element _locid="15" url="http://www.w3.org/TR/html5/sections.html#the-address-element">
+    The address element represents the contact information for its nearest article or body element ancestor. If that is the body element, then the contact information applies to the document as a whole.
+  </element>
+  <element _locid="16" url="http://www.w3.org/TR/html5/grouping-content.html#the-p-element">
+    The p element represents a paragraph.
+  </element>
+  <element _locid="17" url="http://www.w3.org/TR/html5/grouping-content.html#the-hr-element">
+    The hr element represents a paragraph-level thematic break, e.g. a scene change in a story, or a transition to another topic within a section of a reference book.
+  </element>
+  <element _locid="18" url="http://www.w3.org/TR/html5/grouping-content.html#the-pre-element">
+    The pre element represents a block of preformatted text, in which structure is represented by typographic conventions rather than by elements.
+  </element>
+  <element _locid="19" url="http://www.w3.org/TR/html5/grouping-content.html#the-blockquote-element">
+    The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element, and optionally with in-line changes such as annotations and abbreviations.
+  </element>
+  <element _locid="20" url="http://www.w3.org/TR/html5/grouping-content.html#the-ol-element">
+    The ol element represents a list of items, where the items have been intentionally ordered, such that changing the order would change the meaning of the document.
+  </element>
+  <element _locid="21" url="http://www.w3.org/TR/html5/grouping-content.html#the-ul-element">
+    The ul element represents a list of items, where the order of the items is not important — that is, where changing the order would not materially change the meaning of the document.
+  </element>
+  <element _locid="22" url="http://www.w3.org/TR/html5/grouping-content.html#the-li-element">
+    The li element represents a list item. If its parent element is an ol, or ul, then the element is an item of the parent element's list, as defined for those elements. Otherwise, the list item has no defined list-related relationship to any other li element.
+  </element>
+  <element _locid="23" url="http://www.w3.org/TR/html5/grouping-content.html#the-dl-element">
+    The dl element represents an association list consisting of zero or more name-value groups (a description list). A name-value group consists of one or more names (dt elements) followed by one or more values (dd elements), ignoring any nodes other than dt and dd elements. Within a single dl element, there should not be more than one dt element for each name.
+  </element>
+  <element _locid="24" url="http://www.w3.org/TR/html5/grouping-content.html#the-dt-element">
+    The dt element represents the term, or name, part of a term-description group in a description list (dl element).
+  </element>
+  <element _locid="25" url="http://www.w3.org/TR/html5/grouping-content.html#the-dd-element">
+    The dd element represents the description, definition, or value, part of a term-description group in a description list (dl element).
+  </element>
+  <element _locid="26" url="http://www.w3.org/TR/html5/grouping-content.html#the-figure-element">
+    The figure element represents some flow content, optionally with a caption, that is self-contained (like a complete sentence) and is typically referenced as a single unit from the main flow of the document.
+  </element>
+  <element _locid="27" url="http://www.w3.org/TR/html5/grouping-content.html#the-figcaption-element">
+    The figcaption element represents a caption or legend for the rest of the contents of the figcaption element's parent figure element, if any.
+  </element>
+  <element _locid="28" url="http://www.w3.org/TR/html5/grouping-content.html#the-div-element">
+    The div element has no special meaning at all. It represents its children. It can be used with the class, lang, and title attributes to mark up semantics common to a group of consecutive elements.
+  </element>
+  <element _locid="29" url="http://www.w3.org/TR/html5/grouping-content.html#the-main-element">
+    The main element represents the main content of the body of a document or application. The main content area consists of content that is directly related to or expands upon the central topic of a document or central functionality of an application.
+  </element>
+  <element _locid="30" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-a-element">
+    If the a element has an href attribute, then it represents a hyperlink (a hypertext anchor) labeled by its contents.
+  </element>
+  <element _locid="31" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-em-element">
+    The em element represents stress emphasis of its contents.
+  </element>
+  <element _locid="32" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-strong-element">
+    The strong element represents strong importance, seriousness, or urgency for its contents.
+  </element>
+  <element _locid="33" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-small-element">
+    The small element represents side comments such as small print.
+  </element>
+  <element _locid="34" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-s-element">
+    The s element represents contents that are no longer accurate or no longer relevant.
+  </element>
+  <element _locid="35" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-cite-element">
+    The cite element represents a reference to a creative work. It must include the title of the work or the name of the author(person, people or organization) or an URL reference, which may be in an abbreviated form as per the conventions used for the addition of citation metadata.
+  </element>
+  <element _locid="36" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-q-element">
+    The q element represents some phrasing content quoted from another source.
+  </element>
+  <element _locid="37" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-dfn-element">
+    The dfn element represents the defining instance of a term. The paragraph, description list group, or section that is the nearest ancestor of the dfn element must also contain the definition(s) for the term given by the dfn element.
+  </element>
+  <element _locid="38" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-abbr-element">
+    The abbr element represents an abbreviation or acronym, optionally with its expansion. The title attribute may be used to provide an expansion of the abbreviation. The attribute, if specified, must contain an expansion of the abbreviation, and nothing else.
+  </element>
+  <element _locid="39" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-time-element">
+    The time element represents its contents, along with a machine-readable form of those contents in the datetime attribute. The kind of content is limited to various kinds of dates, times, time-zone offsets, and durations, as described below.
+  </element>
+  <element _locid="40" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-code-element">
+    The code element represents a fragment of computer code. This could be an XML element name, a file name, a computer program, or any other string that a computer would recognize.
+  </element>
+  <element _locid="41" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-var-element">
+    The var element represents a variable. This could be an actual variable in a mathematical expression or programming context, an identifier representing a constant, a symbol identifying a physical quantity, a function parameter, or just be a term used as a placeholder in prose.
+  </element>
+  <element _locid="42" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-samp-element">
+    The samp element represents (sample) output from a program or computing system.
+  </element>
+  <element _locid="43" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-kbd-element">
+    The kbd element represents user input (typically keyboard input, although it may also be used to represent other input, such as voice commands).
+  </element>
+  <element _locid="44" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-sub-and-sup-elements">
+    The sup element represents a superscript and the sub element represents a subscript.
+  </element>
+  <element _locid="45" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-i-element">
+    The i element represents a span of text in an alternate voice or mood, or otherwise offset from the normal prose in a manner indicating a different quality of text, such as a taxonomic designation, a technical term, an idiomatic phrase from another language, transliteration, a thought, or a ship name in Western texts.
+  </element>
+  <element _locid="46" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-b-element">
+    The b element represents a span of text to which attention is being drawn for utilitarian purposes without conveying any extra importance and with no implication of an alternate voice or mood, such as key words in a document abstract, product names in a review, actionable words in interactive text-driven software, or an article lede.
+  </element>
+  <element _locid="47" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-u-element">
+    The u element represents a span of text with an unarticulated, though explicitly rendered, non-textual annotation, such as labeling the text as being a proper name in Chinese text (a Chinese proper name mark), or labeling the text as being misspelt.
+  </element>
+  <element _locid="48" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-mark-element">
+    The mark element represents a run of text in one document marked or highlighted for reference purposes, due to its relevance in another context. When used in a quotation or other block of text referred to from the prose, it indicates a highlight that was not originally present but which has been added to bring the reader's attention to a part of the text that might not have been considered important by the original author when the block was originally written, but which is now under previously unexpected scrutiny. When used in the main prose of a document, it indicates a part of the document that has been highlighted due to its likely relevance to the user's current activity.
+  </element>
+  <element _locid="49" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-ruby-element">
+    The ruby element allows one or more spans of phrasing content to be marked with ruby annotations. Ruby annotations are short runs of text presented alongside base text, primarily used in East Asian typography as a guide for pronunciation or to include other annotations. 
+  </element>
+  <element _locid="50" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-rt-element">
+    The rt element marks the ruby text component of a ruby annotation. When it is the child of a ruby element or of an rtc element that is itself the child of a ruby element, it doesn't represent anything itself, but its ancestor ruby element uses it as part of determining what it represents. 
+  </element>
+  <element _locid="51" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-rtc-element">
+    The rtc element marks a ruby text container for ruby text components in a ruby annotation. When it is the child of a ruby element it doesn't represent anything itself, but its parent ruby element uses it as part of determining what it represents. 
+  </element>
+  <element _locid="52" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-rp-element">
+    The rp element is used to provide fallback text to be shown by user agents that don't support ruby annotations. One widespread convention is to provide parentheses around the ruby text component of a ruby annotation. 
+  </element>
+  <element _locid="53" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-bdi-element">
+    The bdi element represents a span of text that is to be isolated from its surroundings for the purposes  of bidirectional text formatting.
+  </element>
+  <element _locid="54" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-bdo-element">
+    The bdo element represents explicit text directionality formatting control for its children. It allows authors to override the Unicode bidirectional algorithm by explicitly specifying a direction override.
+  </element>
+  <element _locid="55" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-span-element">
+    The span element doesn't mean anything on its own, but can be useful when used together with the global attributes, e.g. class, lang, or dir. It represents its children.
+  </element>
+  <element _locid="56" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-br-element">
+    The br element represents a line break.
+  </element>
+  <element _locid="57" url="http://www.w3.org/TR/html5/text-level-semantics.html#the-wbr-element">
+    The wbr element represents a line break opportunity.
+  </element>
+  <element _locid="58" url="http://www.w3.org/TR/html5/edits.html#the-ins-element">
+    The ins element represents an addition to the document.
+  </element>
+  <element _locid="59" url="http://www.w3.org/TR/html5/edits.html#the-del-element">
+    The del element represents a removal from the document.
+  </element>
+  <element _locid="60" url="http://www.w3.org/TR/html5/embedded-content-0.html#the-img-element">
+    An img element represents an image.
+  </element>
+  <element _locid="61" url="http://www.w3.org/TR/html5/embedded-content-0.html#the-iframe-element">
+    The iframe element represents a nested browsing context.
+  </element>
+  <element _locid="62" url="http://www.w3.org/TR/html5/embedded-content-0.html#the-embed-element">
+    The embed element provides an integration point for an external (typically non-HTML) application or interactive content.
+  </element>
+  <element _locid="63" url="http://www.w3.org/TR/html5/embedded-content-0.html#the-object-element">
+    The object element can represent an external resource, which, depending on the type of the resource, will either be treated as an image, as a nested browsing context, or as an external resource to be processed by a plugin.
+  </element>
+  <element _locid="64" url="http://www.w3.org/TR/html5/embedded-content-0.html#the-param-element">
+    The param element defines parameters for plugins invoked by object elements. It does not represent anything on its own.
+  </element>
+  <element _locid="65" url="http://www.w3.org/TR/html5/embedded-content-0.html#the-video-element">
+    A video element is used for playing videos or movies, and audio files with captions.
+  </element>
+  <element _locid="66" url="http://www.w3.org/TR/html5/embedded-content-0.html#the-audio-element">
+    An audio element represents a sound or audio stream.
+  </element>
+  <element _locid="67" url="http://www.w3.org/TR/html5/embedded-content-0.html#the-source-element">
+    The source element allows authors to specify multiple alternative media resources for media elements. It does not represent anything on its own.
+  </element>
+  <element _locid="68" url="http://www.w3.org/TR/html5/embedded-content-0.html#the-track-element">
+    The track element allows authors to specify explicit external timed text tracks for media elements. It does not represent anything on its own.
+  </element>
+  <element _locid="69" url="http://www.w3.org/TR/html5/embedded-content-0.html#the-map-element">
+    The map element, in conjunction with an img element and any area element descendants, defines an image map. The element represents its children.
+  </element>
+  <element _locid="70" url="http://www.w3.org/TR/html5/embedded-content-0.html#the-area-element">
+    The area element represents either a hyperlink with some text and a corresponding area on an image map, or a dead area on an image map.
+  </element>
+  <element _locid="71" url="http://www.w3.org/TR/html5/tabular-data.html#the-table-element">
+    The table element represents data with more than one dimension, in the form of a table.
+  </element>
+  <element _locid="72" url="http://www.w3.org/TR/html5/tabular-data.html#the-caption-element">
+    The caption element represents the title of the table that is its parent, if it has a parent and that is a table element.
+  </element>
+  <element _locid="73" url="http://www.w3.org/TR/html5/tabular-data.html#the-colgroup-element">
+    The colgroup element represents a group of one or more columns in the table that is its parent, if it has a parent and that is a table element.
+  </element>
+  <element _locid="74" url="http://www.w3.org/TR/html5/tabular-data.html#the-col-element">
+    If a col element has a parent and that is a colgroup element that itself has a parent that is a table element, then the col element represents one or more columns in the column group represented by that colgroup.
+  </element>
+  <element _locid="75" url="http://www.w3.org/TR/html5/tabular-data.html#the-tbody-element">
+    The tbody element represents a block of rows that consist of a body of data for the parent table element, if the tbody element has a parent and it is a table.
+  </element>
+  <element _locid="76" url="http://www.w3.org/TR/html5/tabular-data.html#the-thead-element">
+    The thead element represents the block of rows that consist of the column labels (headers) for the parent table element, if the thead element has a parent and it is a table.
+  </element>
+  <element _locid="77" url="http://www.w3.org/TR/html5/tabular-data.html#the-tfoot-element">
+    The tfoot element represents the block of rows that consist of the column summaries (footers) for the parent table element, if the tfoot element has a parent and it is a table.
+  </element>
+  <element _locid="78" url="http://www.w3.org/TR/html5/tabular-data.html#the-tr-element">
+    The tr element represents a row of cells in a table.
+  </element>
+  <element _locid="79" url="http://www.w3.org/TR/html5/tabular-data.html#the-td-element">
+    The td element represents a data cell in a table.
+  </element>
+  <element _locid="80" url="http://www.w3.org/TR/html5/tabular-data.html#the-th-element">
+    The th element represents a header cell in a table.
+  </element>
+  <element _locid="81" url="http://www.w3.org/TR/html5/forms.html#the-form-element">
+    The form element represents a collection of form-associated elements, some of which can represent editable 
+    values that can be submitted to a server for processing.
+  </element>
+  <element _locid="82" url="http://www.w3.org/TR/html5/forms.html#the-label-element">
+    The label element represents a caption in a user interface. The caption can be associated with a specific form control,  known as the label element's labeled control, either using the for attribute, or by putting the form control inside the label element itself.
+  </element>
+  <element _locid="83" url="http://www.w3.org/TR/html5/forms.html#the-input-element">
+    The input element represents a typed data field, usually with a form control to allow the user to edit the data.
+  </element>
+  <element _locid="84" url="http://www.w3.org/TR/html5/forms.html#the-button-element">
+    The button element represents a button labeled by its contents.
+  </element>
+  <element _locid="85" url="http://www.w3.org/TR/html5/forms.html#the-select-element">
+    The select element represents a control for selecting amongst a set of options.
+  </element>
+  <element _locid="86" url="http://www.w3.org/TR/html5/forms.html#the-datalist-element">
+    The datalist element represents a set of option elements that represent predefined options for other controls. In the rendering, the datalist element represents nothing and it, along with its children, should be hidden.
+  </element>
+  <element _locid="87" url="http://www.w3.org/TR/html5/forms.html#the-optgroup-element">
+    The optgroup element represents a group of option elements with a common label.
+  </element>
+  <element _locid="88" url="http://www.w3.org/TR/html5/forms.html#the-option-element">
+    The option element represents an option in a select element or as part of a list of suggestions in a datalist element.
+  </element>
+  <element _locid="89" url="http://www.w3.org/TR/html5/forms.html#the-textarea-element">
+    The textarea element represents a multiline plain text edit control for the element's raw value. The contents of the control represent the control's default value.
+  </element>
+  <element _locid="90" url="http://www.w3.org/TR/html5/forms.html#the-keygen-element">
+    The keygen element represents a key pair generator control. When the control's form is submitted, the private key is stored in the local keystore, and the public key is packaged and sent to the server.
+  </element>
+  <element _locid="91" url="http://www.w3.org/TR/html5/forms.html#the-output-element">
+    The output element represents the result of a calculation or user action.
+  </element>
+  <element _locid="92" url="http://www.w3.org/TR/html5/forms.html#the-progress-element">
+    The progress element represents the completion progress of a task. The progress is either indeterminate, indicating that progress is being made but that it is not clear how much more work remains to be done before the task is complete (e.g. because the task is waiting for a remote host to respond), or the progress is a number in the range zero to a maximum, giving the fraction of work that has so far been completed.
+  </element>
+  <element _locid="93" url="http://www.w3.org/TR/html5/forms.html#the-meter-element">
+    The meter element represents a scalar measurement within a known range, or a fractional value; for example disk usage, the relevance of a query result, or the fraction of a voting population to have selected a particular candidate.
+  </element>
+  <element _locid="94" url="http://www.w3.org/TR/html5/forms.html#the-fieldset-element">
+    The fieldset element represents a set of form controls optionally grouped under a common name.
+  </element>
+  <element _locid="95" url="http://www.w3.org/TR/html5/forms.html#the-legend-element">
+    The legend element represents a caption for the rest of the contents of the legend element's parent fieldset element, if any.
+  </element>
+  <element _locid="96" url="http://www.w3.org/TR/html5/scripting-1.html#the-script-element">
+    The script element allows authors to include dynamic script and data blocks in their documents. The element does not represent content for the user.
+  </element>
+  <element _locid="97" url="http://www.w3.org/TR/html5/scripting-1.html#the-noscript-element">
+    The noscript element represents nothing if scripting is enabled, and represents its children if scripting is disabled. It is used to present different markup to user agents that support scripting and those that don't support scripting, by affecting how the document is parsed.
+  </element>
+  <element _locid="98" url="http://www.w3.org/TR/html5/scripting-1.html#the-template-element">
+    The template element is used to declare fragments of HTML that can be cloned and inserted in the document by script.
+  </element>
+  <element _locid="99" url="http://www.w3.org/TR/html5/scripting-1.html#the-canvas-element">
+    The canvas element provides scripts with a resolution-dependent bitmap canvas, which can be used for rendering graphs, game graphics, art, or other visual images on the fly.
+  </element>
+  <element _locid="100" url="http://www.w3.org/TR/html5/embedded-content-0.html#mathml">
+    The math element from the MathML namespace falls into the embedded content, phrasing content, and flow content categories for the purposes of the content models in this specification.
+  </element>
+  <element _locid="101" url="http://www.w3.org/TR/html5/embedded-content-0.html#svg">
+    The svg element from the SVG namespace falls into the embedded content, phrasing content, and flow content categories for the purposes of the content models in this specification.
+  </element>
+  <element _locid="102" url="http://www.w3.org/TR/shadow-dom/#the-content-element">
+    The content element represents an insertion point in the shadow tree.
+  </element>
+  <element _locid="103" url="http://www.w3.org/TR/shadow-dom/#the-shadow-element">
+    The shadow element represents an shadow insertion point in a shadow tree.
+  </element>
+  <element _locid="104" url="http://www.w3.org/wiki/HTML/Elements/hgroup">
+    The hgroup element was introduced in HTML 5 and was used to group a set of h1–h6 elements when the heading has multiple levels. It is now deprecated.
+  </element>
+  <element _locid="105" url="http://msdn.microsoft.com/en-us/library/windows/apps/dn301831.aspx">
+    Displays HTML content in an app.
+  </element>
+  <element _locid="106" url="http://www.w3.org/wiki/HTML/Elements/command">
+    The command element represents a command that the user can invoke.
+  </element>
+  <element _locid="107" url="http://www.polymer-project.org/docs/start/creatingelements.html">
+    A polymer-element is used to create new HTML elements using the Polymer JavaScript library.
+  </element>
+  <element _locid="108" url="https://angularjs.org/">
+    An element used by the AngularJS JavaScript library.
+  </element>
+  <element _locid="109" url="http://www.w3.org/TR/html51/interactive-elements.html#the-dialog-element">
+    The dialog element represents a part of an application that a user interacts with to perform a task, for example a dialog box, inspector, or window.
+  </element>
+  <element _locid="110" url="http://www.w3.org/TR/html51/interactive-elements.html#the-details-element">
+    The details element represents a disclosure widget from which the user can obtain additional information or controls.
+  </element>
+  <element _locid="111" url="http://www.w3.org/TR/html51/interactive-elements.html#the-summary-element">
+    The summary element represents a summary, caption, or legend for the rest of the contents of the summary element's parent details element, if any.
+  </element>
+  <element _locid="112" url="http://www.w3.org/TR/html51/interactive-elements.html#the-menu-element">
+    The menu element represents a list of commands.
+  </element>
+  <element _locid="113" url="http://www.w3.org/TR/html51/interactive-elements.html#the-menuitem-element">
+    The menuitem element represents a command that the user can invoke from a popup menu (either a context menu or the menu of a menu button).
+  </element>
+  <element _locid="114" url="http://www.w3.org/html/wg/drafts/html/master/embedded-content.html#the-picture-element">
+    The picture element is a container which provides multiples sources to its contained img element to allow authors to declaratively control or give hints to the user agent about which image resource to use, based on the screen pixel density, viewport size, image format, and other factors. It represents its children.
+  </element>
+  <element _locid="115" url="http://www.w3.org/wiki/HTML/Elements/acronym">
+    The acronym element is a non-standard element. HTML5 classifies it as a non-conforming feature. Use abbr instead
+  </element>
+  <element _locid="116" url="http://www.w3.org/wiki/HTML/Elements/center">
+    The center element was introduced in HTML 3.2. It has been deprecated since HTML 4. HTML5 classifies it as a non-conforming feature.
+  </element>
+  <element _locid="117" url="http://www.w3.org/wiki/HTML/Elements/font">
+    The font element is a non-standard element. HTML5 classifies it as a non-conforming feature.
+  </element>
+  <element _locid="118" url="http://www.w3.org/wiki/HTML/Elements/nobr">
+    The nobr element is a non-standard element. HTML5 classifies it as a non-conforming feature.
+  </element>
+</root>

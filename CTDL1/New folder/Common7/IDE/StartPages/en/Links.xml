@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<items>
+  <discovertitle id="discovertitle">Discover what's new in %VSSKU_INFO%</discovertitle>
+  <discovertext id="discovertext">You can find information about new features and enhancements in %VSSKU_INFO% by reviewing the following sections.</discovertext>
+  <discovercommands>
+    <command>
+      <commandtype>Browse</commandtype>
+      <title id="learn_new_features_in_vs12">Learn about new features in %VSSKU_INFO%</title>
+      <parameter>http://go.microsoft.com/fwlink/p/?LinkId=294770&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+    </command>
+    <command>
+      <commandtype>Browse</commandtype>
+      <title id="see_whatsnew_in_dotnet_45">See what's new in .NET Framework 4.5.1</title>
+      <parameter>http://go.microsoft.com/fwlink/p/?LinkId=294771&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+    </command>
+    <command>
+      <commandtype>Browse</commandtype>
+      <title id="see_whatsnew_in_tfs">Explore what's new in Visual Studio Online</title>
+      <parameter>http://go.microsoft.com/fwlink/p/?LinkId=294772&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+    </command>
+  </discovercommands>
+  <discovernothanks id="discovernothanks">No thanks, may be later.</discovernothanks>
+  <whatsnewtitle id="whatsnewtitle">What's new on Microsoft Platforms</whatsnewtitle>
+  <whatsnewcommands>
+    <command>
+      <commandtype>Browse</commandtype>
+      <image>windows8.png</image>
+      <title id="whats_new_in_win">Windows</title>
+      <parameter>http://go.microsoft.com/fwlink/p/?LinkId=294763&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+    </command>
+    <command>
+      <commandtype>Browse</commandtype>
+      <image>winazure.png</image>
+      <title id="whats_new_in_winazure">Microsoft Azure</title>
+      <parameter>http://go.microsoft.com/fwlink/p/?LinkId=294764&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+    </command>
+    <command>
+      <commandtype>Browse</commandtype>
+      <image>aspdotnet.png</image>
+      <title id="whats_new_in_aspdotnet">ASP.NET vNext and Web</title>
+      <parameter>http://go.microsoft.com/fwlink/p/?LinkId=294765&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+    </command>
+    <command>
+      <commandtype>Browse</commandtype>
+      <image>winphone.png</image>
+      <title id="whats_new_in_winphone">Windows Phone</title>
+      <parameter>http://go.microsoft.com/fwlink/p/?LinkId=294766&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+    </command>
+    <command>
+      <commandtype>Browse</commandtype>
+      <image>msoffice.png</image>
+      <title id="whats_new_in_msoffice">Microsoft Office</title>
+      <parameter>http://go.microsoft.com/fwlink/p/?LinkId=294767&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+    </command>
+    <command>
+      <commandtype>Browse</commandtype>
+      <image>sharepoint.png</image>
+      <title id="whats_new_in_sharepoint">SharePoint Development</title>
+      <parameter>http://go.microsoft.com/fwlink/p/?LinkId=294768&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+    </command>
+  </whatsnewcommands>
+  <announcementsfeed>http://go.microsoft.com/fwlink/p/?LinkId=294769&amp;clcid=%VSSPV_LCID_HEX%</announcementsfeed>
+  <MoreAnnouncementsLink>http://go.microsoft.com/fwlink/p/?LinkId=294801&amp;clcid=%VSSPV_LCID_HEX%</MoreAnnouncementsLink>
+</items>

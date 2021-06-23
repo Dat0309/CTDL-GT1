@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Unprotect a Chart</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Unprotects an Excel chart object.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Excel.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Excel = Microsoft.Office.Interop.Excel</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>password</ID>
+          <Type>System.String</Type>
+          <ToolTip>Replace with the password used to protect the chart, or blank if none.</ToolTip>
+          <Default>"password"</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>chart</ID>
+          <Type>Microsoft.Office.Interop.Excel.Chart</Type>
+          <ToolTip>Replace with the chart to unprotect.</ToolTip>
+          <Default>chart</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="CSharp" Kind="" Delimiter="$"><![CDATA[
+$chart$.Unprotect($password$);
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

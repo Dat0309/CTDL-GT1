@@ -1,0 +1,27 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>region</Title>
+    <Author>Microsoft Corporation</Author>
+    <Shortcut>region</Shortcut>
+    <Description>A snippet for adding a custom region</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>name</ID>
+        <ToolTip>Name value</ToolTip>
+        <Default>name</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="css">
+        <![CDATA[/*#region $name$ */
+
+$selected$$end$
+
+/*#endregion */]]></Code>
+  </Snippet>
+</CodeSnippet>

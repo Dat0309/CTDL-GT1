@@ -1,0 +1,13 @@
+[$RootKey$\Packages]
+
+[$RootKey$\Packages\{AC5E9513-8EDF-4966-91CE-31E5569D02CC}]
+"Assembly"="Microsoft.LightSwitch.VersionBroker.Package, Version=12.1.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"Class"="Microsoft.LightSwitch.VersionBroker.VersionBrokerPackage"
+"CodeBase"="$ShellFolder$\Common7\IDE\PrivateAssemblies\Microsoft.LightSwitch.VersionBroker.Package.dll"
+"CompanyName"="Microsoft Corporation"
+"ID"=dword:00000064
+"InProcServer32"="$System$\mscoree.dll"
+"MinEdition"="Standard"
+"ProductName"="LightSwitch Version Broker package"
+"ProductVersion"="4.5"
+@="LightSwitch Version Broker package"

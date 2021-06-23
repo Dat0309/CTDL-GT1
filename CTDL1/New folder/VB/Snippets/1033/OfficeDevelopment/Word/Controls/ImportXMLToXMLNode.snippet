@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Import XML into an XMLNode</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Imports XML data into a Word XMLNode object.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Word.dll</Assembly>
+          <Url></Url>
+        </Reference>
+        <Reference>
+          <Assembly>Microsoft.Office.Tools.Word.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Word = Microsoft.Office.Interop.Word</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Office.Tools.Word</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object Editable="true">
+          <ID>xmlNode</ID>
+          <Type>Microsoft.Office.Tools.Word.XMLNode</Type>
+          <ToolTip>Replace with the XMLNode to load the data into.</ToolTip>
+          <Default>xmlNode</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>xmlData</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with a string variable that contains the XML data to load into the XMLNode.</ToolTip>
+          <Default>xmlData</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="" Delimiter="$"><![CDATA[
+$xmlNode$.LoadXml($xmlData$)
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

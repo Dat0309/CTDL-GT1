@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Copy a String to the Clipboard</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Copies a String to the Clipboard.</Description>
+      <Shortcut>clipCopyString</Shortcut>
+    </Header>
+    <Snippet>
+		<References>
+			<Reference>
+				<Assembly>System.Windows.Forms.dll</Assembly>
+			</Reference>
+		</References>
+		<Imports>
+			<Import>
+				<Namespace>System</Namespace>
+			</Import>
+			<Import>
+				<Namespace>Microsoft.VisualBasic</Namespace>
+			</Import>
+			<Import>
+				<Namespace>System.Windows.Forms</Namespace>
+			</Import>
+		</Imports>
+      <Declarations>
+        <Object>
+          <ID>text</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the String you want to copy to the clipboard.</ToolTip>
+          <Default>"My String"</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[My.Computer.Clipboard.SetText($text$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

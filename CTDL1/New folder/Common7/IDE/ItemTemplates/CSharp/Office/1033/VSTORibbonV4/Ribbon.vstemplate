@@ -1,0 +1,39 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{D26B5834-CA88-4677-912A-EF20D6C4D589}" ID="312" />
+    <Description Package="{D26B5834-CA88-4677-912A-EF20D6C4D589}" ID="313" />
+    <Icon Package="{D26B5834-CA88-4677-912A-EF20D6C4D589}" ID="600" />
+    <ProjectType>CSharp</ProjectType>
+    <TemplateGroupID>VSTORibbonNoMAF</TemplateGroupID>
+    <TemplateID>VSTORibbonNoMAF</TemplateID>
+    <ShowByDefault>false</ShowByDefault>
+    <SortOrder>11</SortOrder>
+    <DefaultName>Ribbon.cs</DefaultName>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Data</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Drawing</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Windows.Forms</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Xml</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem ReplaceParameters="true" SubType="Form">Ribbon.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true">Ribbon.Designer.cs</ProjectItem>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.Tools.Office.Designer, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, Custom=null</Assembly>
+    <FullClassName>Microsoft.VisualStudio.Tools.Office.Ribbon.Wizards.RibbonItemWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

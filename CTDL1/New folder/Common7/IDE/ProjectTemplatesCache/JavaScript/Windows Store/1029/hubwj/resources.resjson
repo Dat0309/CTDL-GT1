@@ -1,0 +1,21 @@
+﻿// Pro podrobnosti o lokalizaci aplikace systému Windows, viz: http://go.microsoft.com/fwlink/?LinkId=212836
+
+{
+    "Section1": "Oddíl 1",
+    "Section1Subtext": "Lorem ipsum dolor sit nonumy sed consectetuer ising elit, sed diam",
+    "Section1Description": "Lorem ipsum dolor sit amet, consectetur ising elit, sed diam nonummy nibh uismod tincidunt ut laoreet suscipit lobortis nisl ut wisi quipexerci quis consequat minim veniam, quis nostrud. exerci tation ullam corper.",
+
+    "Section2": "Oddíl 2",
+    "Section2ItemTitle": "Název položky",
+    "Section2ItemSubtitle": "Podnázev položky",
+    "Section2Subtext": "Quisque in porta lorem dolor amet sed consectetuer ising elit, sed diam non my nibh uis mod wisi quip.",
+    "Section2Description": "Lorem ipsum dolor sit amet, consectetur ising elit, sed diam nonummy nibh uismod tincidunt ut laoreet suscipit lobortis nisl ut wisi quipexerci quis consequat minim veniam, quis nostrud. exerci tation ullam corper.",
+    
+    "Section3": "Oddíl 3",
+    
+    "Section4": "Oddíl 4",
+    "Section4Description": "Lorem ipsum dolor sit amet, consectetur ising elit, sed diam nonummy nibh uismod tincidunt ut laoreet suscipit lobortis nisl ut wisi quipexerci quis consequat minim veniam, quis nostrud. exerci tation ullam corper.",
+
+    "DescriptionText": "Text popisu:",
+    "SectionSubtitle": "Podnadpis oddílu"
+}

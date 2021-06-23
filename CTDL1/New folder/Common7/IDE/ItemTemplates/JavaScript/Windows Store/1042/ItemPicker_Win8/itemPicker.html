@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="ms-design-extensionType" content="FileOpenPicker" />
+    <title>항목 선택기 계약</title>
+
+    <!-- WinJS 참조 -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="$fileinputname$.css" rel="stylesheet" />
+    <script src="/js/data.js"></script>
+    <script src="$fileinputname$.js"></script>
+</head>
+<body>
+    <!-- 이 템플릿은 아래 선언된 ListView의 각 항목을 표시하는 데
+         사용됩니다. -->
+    <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
+        <div class="item">
+            <img class="item-image" src="#" data-win-bind="src: backgroundImage; alt: title" />
+        </div>
+    </div>
+
+    <!-- 로드되어 표시되는 콘텐츠입니다. -->
+    <section role="main" class="$safeitemname$">
+        <ul class="commandbar">
+            <li class="win-type-x-large win-type-interactive">위로 이동</li>
+        </ul>
+        <div class="pickerlist" aria-label="Items" data-win-control="WinJS.UI.ListView" data-win-options="{layout: {type: WinJS.UI.GridLayout}, selectionMode: 'multi', tapBehavior: 'toggleSelect', swipeBehavior: 'select'}"></div>
+    </section>
+</body>
+</html>

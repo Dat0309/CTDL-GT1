@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>List Environment Variables</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Creates a string that lists all the user environment variables and their values.</Description>
+      <Shortcut>sysListVar</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Collections</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>target</ID>
+          <Type>EnvironmentVariableTarget</Type>
+          <ToolTip>Replace with an enumeration for the variables you want to retrieve.</ToolTip>
+          <Default>EnvironmentVariableTarget.User</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim environmentVariables = Environment.GetEnvironmentVariables($target$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

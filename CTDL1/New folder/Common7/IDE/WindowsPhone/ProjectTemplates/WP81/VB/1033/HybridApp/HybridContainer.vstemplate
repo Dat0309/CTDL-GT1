@@ -1,0 +1,26 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="ProjectGroup">
+  <TemplateData>
+    <Name Package="{6DCA0999-0829-4FAC-8631-16FB9388DBA0}" ID="5555" />
+    <Description Package="{BA0DECDA-A80F-41BF-995E-81E41D2EA71F}" ID="5556" />
+    <ProjectType>VisualBasic</ProjectType>
+    <ProjectSubType></ProjectSubType>
+    <SortOrder>80</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Direct3DInterop</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__templateicon.ico</Icon>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+      <ProjectTemplateLink ProjectName="$safeprojectname$">D3DInteropApp\D3DInteropApp.vstemplate</ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$safeprojectname$Comp">D3DInteropComp\D3DInteropComp.vstemplate</ProjectTemplateLink>
+    </ProjectCollection>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SmartDevice.ProjectSystem.Base, Version=12.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SmartDevice.ProjectSystem.Wizards.ProjectTemplateWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

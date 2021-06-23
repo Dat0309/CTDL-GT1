@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Read and Write from the Console Window</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Writes a prompt and then reads in the user request. It is run from a console application.</Description>
+      <Shortcut>appConRW</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>prompt</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the input prompt.</ToolTip>
+          <Default>"Type in a sentence and hit Enter:"</Default>
+        </Literal>
+        <Object>
+          <ID>inputFromConsole</ID>
+          <Type>String</Type>
+          <ToolTip>The String variable that stores the input from the console window.</ToolTip>
+          <Default>inputFromConsole</Default>
+        </Object>
+        <Object>
+          <ID>outputToConsole</ID>
+          <Type>String</Type>
+          <ToolTip>The String variable that stores the output to the console window.</ToolTip>
+          <Default>outputToConsole</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Console.WriteLine($prompt$)
+$inputFromConsole$ = Console.ReadLine()
+Console.WriteLine($outputToConsole$)
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

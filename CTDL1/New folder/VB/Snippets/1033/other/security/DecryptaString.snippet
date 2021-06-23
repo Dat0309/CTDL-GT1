@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Decrypt text from a file</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Decrypts text from a file using the Rijndael encryption algorithm.</Description>
+      <Shortcut>secDecrypt</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Security.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Security.Cryptography</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.IO</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>fileName</ID>
+          <Type>String</Type>
+          <ToolTip>The filename containing the text to be decrypted.</ToolTip>
+          <Default>"encrypted.txt"</Default>
+        </Literal>
+        <Object>
+          <ID>privateKey</ID>
+          <Type>Byte</Type>
+          <ToolTip>The private Key used to encrypt the data.</ToolTip>
+          <Default>RijndaelAlg.Key</Default>
+        </Object>
+        <Object>
+          <ID>initializationVector</ID>
+          <Type>Byte</Type>
+          <ToolTip>The initialization vector used in the symmetric key encryption scheme.</ToolTip>
+          <Default>RijndaelAlg.IV</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Using fStream = File.Open("encrypted.txt", FileMode.OpenOrCreate)
+    Dim RijndaelAlg As Rijndael = Rijndael.Create
+    Using cStream As New CryptoStream(fStream,
+                                  RijndaelAlg.CreateDecryptor(RijndaelAlg.Key, RijndaelAlg.IV),
+                                  CryptoStreamMode.Read)
+
+        Using sReader As New StreamReader(cStream)
+            Dim plainText = sReader.ReadLine()
+        End Using
+    End Using
+End Using]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

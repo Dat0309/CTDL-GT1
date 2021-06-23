@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+	<TemplateData>
+		<TemplateID>Microsoft.CPP.WinRT.SharedHubApplication.Shared</TemplateID>
+		<DefaultName>$projectname$</DefaultName>
+		<TemplateGroupID>WinRT-Native</TemplateGroupID>
+		<ProjectType>VC</ProjectType>
+		<TargetPlatformName>Windows</TargetPlatformName>
+		<RequiredPlatformVersion>6.3.0</RequiredPlatformVersion>
+		<CreateInPlace>true</CreateInPlace>
+		<CreateNewFolder>true</CreateNewFolder>
+		<LocationField>Enabled</LocationField>
+		<Hidden>true</Hidden>
+	</TemplateData>
+	<TemplateContent>
+		<Project File="Shared.Application.Shared.vcxitems" ReplaceParameters="true">
+			<ProjectItem ReplaceParameters="true" TargetFileName="$ext_projectname$.Shared.vcxitems.filters">Shared.Application.Shared.vcxitems.filters</ProjectItem>
+			<ProjectItem ReplaceParameters="true" TargetFileName="App.xaml">Shared.App.xaml</ProjectItem>
+			<ProjectItem ReplaceParameters="true" OpenInEditor="true" BlendOpenInEditor="false" TargetFileName="App.xaml.cpp">Shared.App.xaml.cpp</ProjectItem>
+			<ProjectItem ReplaceParameters="true" TargetFileName="App.xaml.h">Shared.App.xaml.h</ProjectItem>
+			<ProjectItem ReplaceParameters="true" TargetFileName="pch.cpp">Shared.pch.cpp</ProjectItem>
+			<ProjectItem ReplaceParameters="true" TargetFileName="pch.h">Shared.pch.h</ProjectItem>
+			<Folder Name="Common">
+				<ProjectItem ReplaceParameters="true" TargetFileName="NavigationHelper.cpp">Shared.NavigationHelper.cpp</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="NavigationHelper.h">Shared.NavigationHelper.h</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="RelayCommand.cpp">Shared.RelayCommand.cpp</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="RelayCommand.h">Shared.RelayCommand.h</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="SuspensionManager.cpp">Shared.SuspensionManager.cpp</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="SuspensionManager.h">Shared.SuspensionManager.h</ProjectItem>
+			</Folder>
+			<Folder Name="Assets">
+				<ProjectItem ReplaceParameters="false" TargetFileName="LightGray.png">LightGray.png</ProjectItem>
+				<ProjectItem ReplaceParameters="false" TargetFileName="MediumGray.png">MediumGray.png</ProjectItem>
+				<ProjectItem ReplaceParameters="false" TargetFileName="DarkGray.png">DarkGray.png</ProjectItem>
+			</Folder>
+			<Folder Name="DataModel">
+				<ProjectItem ReplaceParameters="true" TargetFileName="SampleDataSource.cpp">Shared.SampleDataSource.cpp</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="SampleDataSource.h">Shared.SampleDataSource.h</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="SampleData.json">Shared.SampleData.json</ProjectItem>
+			</Folder>
+			<Folder Name="Strings">
+				<Folder Name="Language" TargetFolderName="$currentuiculturename$">
+					<ProjectItem ReplaceParameters="true" TargetFileName="Resources.resw">Shared.Resources.resw</ProjectItem>
+				</Folder>
+			</Folder>
+		</Project>
+	</TemplateContent>
+</VSTemplate>

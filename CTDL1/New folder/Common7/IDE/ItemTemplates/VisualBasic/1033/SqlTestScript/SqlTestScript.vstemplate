@@ -1,0 +1,16 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{462b036f-7349-4835-9e21-bec60e989b9c}" ID="3101" />
+    <Description Package="{462b036f-7349-4835-9e21-bec60e989b9c}" ID="3102" />
+    <Icon/>
+    <ProjectType>VisualBasic</ProjectType>
+    <TemplateGroupID>SqlServerProjects</TemplateGroupID>
+    <TemplateID>SqlFunction</TemplateID>
+    <Hidden>true</Hidden>
+    <SortOrder>400</SortOrder>
+    <DefaultName>Test.sql</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="false">Test.sql</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

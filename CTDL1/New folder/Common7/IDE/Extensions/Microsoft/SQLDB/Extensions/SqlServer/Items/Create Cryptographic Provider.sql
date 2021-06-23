@@ -1,0 +1,2 @@
+﻿CREATE CRYPTOGRAPHIC PROVIDER [$rawname$]
+	FROM FILE = 'Path_Of_DLL'

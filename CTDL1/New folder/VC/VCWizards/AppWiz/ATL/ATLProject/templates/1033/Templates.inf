@@ -1,0 +1,46 @@
+stdafx.cpp
+stdafx.h
+targetver.h
+root.cpp
+resource.h
+root.rc
+readme.txt
+root.rgs
+[!if DLL_APP]
+dllmain.cpp
+dllmain.h
+[!endif]
+[!if SUPPORT_COMPONENT_REGISTRAR]
+compreg.cpp
+compreg.h
+[!endif]
+
+root.idl
+[!if DLL_APP]
+root.def
+[!endif]
+
+[!if MERGE_PROXY_STUB]
+xdlldata.c
+xdlldata.h
+[!endif]
+
+[!if PREVIEW_HANDLER]
+Preview.h
+Preview.rgs
+[!endif]
+
+[!if THUMBNAIL_HANDLER]
+Thumbnail.h
+Thumbnail.rgs
+[!endif]
+
+[!if SEARCH_HANDLER]
+Search.h
+Search.rgs
+[!endif]
+
+[!if GENERATE_ATL_DOCUMENT]
+document.cpp
+document.h
+[!endif]

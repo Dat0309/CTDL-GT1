@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Write to the Application Event Log from a Specified Source</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Writes a message to the application Event Log.</Description>
+      <Shortcut>evWriteApp</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Diagnostics</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>EntryType</ID>
+          <Type>EventLogEntryType</Type>
+          <ToolTip>Replace with an enumeration value.</ToolTip>
+          <Default>EventLogEntryType.Warning</Default>
+        </Literal>
+        <Literal>
+          <ID>SourceName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the source name. The source name is associated with an particular application when the events are written.</ToolTip>
+          <Default>"SourceName"</Default>
+        </Literal>
+        <Literal>
+          <ID>message</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with a message to be written.</ToolTip>
+          <Default>"Message text"</Default>
+        </Literal>
+        <Literal>
+          <ID>LogName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the log name. This reads the Application log on the local computer.</ToolTip>
+          <Default>"Application"</Default>
+        </Literal>
+        <Literal>
+          <ID>Machine</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the computer name. The "." represents the local computer.</ToolTip>
+          <Default>"Machine Name"</Default>
+        </Literal>
+        <Literal>
+          <ID>EventID</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with an Integer value. Your application defines the values and what they mean.</ToolTip>
+          <Default>123</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim log As New EventLog($LogName$, $Machine$, $SourceName$)
+log.WriteEntry($message$, $EntryType$, $EventID$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

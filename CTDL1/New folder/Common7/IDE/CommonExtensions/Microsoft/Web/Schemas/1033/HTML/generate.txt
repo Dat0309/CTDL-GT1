@@ -1,0 +1,19 @@
+ This file contains instructions on the current steps to generate asp_html.xsd.
+
+Step 1: Create a new web application
+
+Step 2: Debug the web application, using mgd debugging
+
+Step 3: Set a breakpoint in mvw\webcontrolschemagenerator\schemainfo.cs 
+        SchemaInfo::Populate on the line:
+		if (_schemaInfoCreationData.RequireToolBoxItemAttribute)
+
+Step 4: Add the following register directive to the page
+	<%@ Register TagPrefix="foo" namespace="System.Web.UI.HtmlControls" Assembly="System.Web" %>
+
+Step 5: When the breakpoint hits, set _schemaInfoCreationData.RequireToolBoxItemAttribute to false
+		when attempting to generate the schema for the newly inserted register directive.
+
+Step 6: The new schema should now be in 
+		C:\Documents and Settings\%USERNAME%\Application Data\Microsoft\VisualStudio\8.0\ReflectedSchemas
+

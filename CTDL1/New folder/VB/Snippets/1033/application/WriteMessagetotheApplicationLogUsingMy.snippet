@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Write a Message to the Application Log</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Writes a message to the application log.</Description>
+      <Shortcut>appEvent</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>messageText</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with log string.</ToolTip>
+          <Default>"Action complete."</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[My.Application.Log.WriteEntry($messageText$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

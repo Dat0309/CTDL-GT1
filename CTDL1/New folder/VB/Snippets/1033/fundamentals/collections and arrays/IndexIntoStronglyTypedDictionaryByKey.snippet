@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Index into a strongly typed dictionary using a key.</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Indexes into strongly typed dictionary by using a key.</Description>
+      <Shortcut>colIndex</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>itemVar</ID>
+          <ToolTip>Replace with the identifier for the item variable.</ToolTip>
+          <Default>capitol</Default>
+        </Literal>
+        <Literal>
+          <ID>itemType</ID>
+          <ToolTip>Replace with the type of items in the collection.</ToolTip>
+          <Default>String</Default>
+        </Literal>
+        <Object>
+          <ID>storageVar</ID>
+          <ToolTip>Replace with the collection object to index into.</ToolTip>
+          <Default>stateCaps</Default>
+          <Type>System.Collections.IDictionary</Type>
+        </Object>
+        <Literal>
+          <ID>key</ID>
+          <ToolTip>Replace with the key at which the value is stored.</ToolTip>
+          <Default>"NM"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $itemVar$ As $itemType$ = $storageVar$.Item($key$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

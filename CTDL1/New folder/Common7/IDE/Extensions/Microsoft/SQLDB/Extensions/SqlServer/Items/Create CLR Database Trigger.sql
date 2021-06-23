@@ -1,0 +1,4 @@
+﻿CREATE TRIGGER [$rawname$]
+ON DATABASE
+FOR DDL_TABLE_VIEW_EVENTS
+AS EXTERNAL NAME $SomeAssembly$.$SomeType$.$SomeMethod$

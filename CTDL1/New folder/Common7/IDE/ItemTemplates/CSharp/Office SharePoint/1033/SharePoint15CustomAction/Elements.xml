@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction Id="$guid2$.$ProjectItemName$"
+                RegistrationType="$UICustomAction_RegistrationType$"
+                RegistrationId="$UICustomAction_RegistrationId$"
+                Location="EditControlBlock"
+                Sequence="10001"
+                Title="$UICustomAction_Title$">
+    <!-- 
+    $loc_custom_action_urlaction_comment1$
+    $loc_custom_action_urlaction_comment2$
+    $loc_custom_action_urlaction_comment3$
+    -->
+    <UrlAction Url="$UICustomAction_NavigationTarget$" />
+  </CustomAction>
+</Elements>

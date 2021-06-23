@@ -1,0 +1,537 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<html dir="LTR">
+<head>
+	<title>ATL Project Wizard</title>
+	<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="MSThemeCompatible" content="Yes">
+	<link id="LINKURL" rel="stylesheet" href="../../../../../1033/NewStyles.css">
+	<symbol name="SAFE_PROJECT_IDENTIFIER_NAME" type="text"></symbol>
+	<symbol name="UPPER_CASE_SAFE_PROJECT_IDENTIFIER_NAME" type="text"></symbol>
+	<symbol name="LIB_NAME" type="text"></symbol>
+	<symbol name="DLL_APP" type="checkbox" value="true"></symbol>
+	<symbol name="EXE_APP" type="checkbox" value="false"></symbol>
+	<symbol name="SERVICE_APP" type="checkbox" value="false"></symbol>
+	<symbol name="MERGE_PROXY_STUB" type="checkbox" value="false"></symbol>
+	<symbol name="SUPPORT_MFC" type="checkbox" value="false"></symbol>
+	<symbol name="SUPPORT_COMPLUS" type="checkbox" value="false"></symbol>
+	<symbol name="SUPPORT_COMPONENT_REGISTRAR" type="checkbox" value="false"></symbol>
+	<symbol name="SDL_CHECK" TYPE="checkbox" value="true"></symbol>
+	<symbol name="COMPREG_REGISTRY_FORMAT" type="text"></symbol>
+	<symbol name="LIBID_REGISTRY_FORMAT" type="text"></symbol>
+	<symbol name="APPID_REGISTRY_FORMAT" type="text"></symbol>
+	<symbol name="YEAR" type="text"></symbol>
+	<symbol name="PREVIEW_HANDLER" type="checkbox" value="false"></symbol>
+	<symbol name="THUMBNAIL_HANDLER" type="checkbox" value="false"></symbol>
+	<symbol name="SEARCH_HANDLER" type="checkbox" value="false"></symbol>
+	<symbol name="FILE_EXTENSION" type="text" value=""></symbol>
+	<symbol name="FILE_EXTENSION_TRIMMED" type="text" value=""></symbol>
+	<symbol name="FILE_EXTENSION_SPECIFIED" type="bool" value="false"></symbol>
+	<symbol name="IID_PREVIEW" type="text"></symbol>
+	<symbol name="CLSID_PREVIEW" type="text"></symbol>
+	<symbol name="IID_THUMBNAIL" type="text"></symbol>
+	<symbol name="CLSID_THUMBNAIL" type="text"></symbol>
+	<symbol name="IID_SEARCH" type="text"></symbol>
+	<symbol name="CLSID_SEARCH" type="text"></symbol>
+	<symbol name="CLSID_PERSISTENT_HANDLER" type="text"></symbol>
+	<symbol name="DOCUMENT_CLASS_NAME" type="text" value=""></symbol>
+	<symbol name="DOCUMENT_CLASS_NAME_TRIMMED" type="text" value=""></symbol>
+	<symbol name="DOCUMENT_CLASS_NAME_SPECIFIED" type="bool" value="false"></symbol>
+	<symbol name="VIEW_CLASS_NAME" type="text" value=""></symbol>
+	<symbol name="VIEW_CLASS_NAME_TRIMMED" type="text" value=""></symbol>
+	<symbol name="VIEW_CLASS_NAME_SPECIFIED" type="bool" value="false"></symbol>
+	<symbol name="DOCUMENT_HEADER_FILENAME" type="text" value=""></symbol>
+	<symbol name="DOCUMENT_HEADER_FILENAME_TRIMMED" type="text" value=""></symbol>
+	<symbol name="DOCUMENT_HEADER_FILENAME_SPECIFIED" type="bool" value="false"></symbol>
+	<symbol name="DOCUMENT_IMPL_FILENAME" type="text" value=""></symbol>
+	<symbol name="DOCUMENT_IMPL_FILENAME_TRIMMED" type="text" value=""></symbol>
+	<symbol name="DOCUMENT_IMPL_FILENAME_SPECIFIED" type="bool" value="false"></symbol>
+	<symbol name="VIEW_HEADER_FILENAME" type="text" value=""></symbol>
+	<symbol name="VIEW_HEADER_FILENAME_TRIMMED" type="text" value=""></symbol>
+	<symbol name="VIEW_HEADER_FILENAME_SPECIFIED" type="bool" value="false"></symbol>
+	<symbol name="GENERATE_ATL_DOCUMENT" type="bool" value="false"></symbol>
+</head>
+<body bgcolor="BUTTONFACE" topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0"
+	onload="InitDocument(document);" onkeydown="if (!bValidating) OnKey();" onkeypress="if (!bValidating) OnPress();">
+	<table class="ONE" height="100%" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<col width="178">
+		<col>
+		<!--OPEN OF INTRODUCTORY INFORMATION TABLE//-->
+		<tr valign="TOP">
+			<td height="79" width="100%" colspan="2">
+				<table class="TWO" border="0" cellpadding="0" cellspacing="0">
+					<col width="12">
+					<col>
+					<col width="12">
+					<tr>
+						<td valign="TOP" height="12" width="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="12" width="12">
+							&nbsp;
+						</td>
+						<td class="IMAGE" valign="BOTTOM" width="110" rowspan="2">
+							<div class="SMALLA" id="Layer0">
+								<img class="SMALLEST" src="../../Images/ATL_1.gif" width="63" height="63" alt=""
+									border="0">
+							</div>
+						</td>
+						<td valign="TOP" height="12" width="6" rowspan="2">
+							&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td valign="TOP" height="65" width="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="65">
+							<h4 class="HEAD" id="HEAD">Welcome to the ATL Project Wizard</h4>
+							<p class="SUBHEAD" id="SUBHEAD">
+								This wizard generates an ATL project with the properties you specify.</p>
+						</td>
+						<td valign="TOP" height="65" width="12">
+							&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td valign="TOP" class="RULE" colspan="5" height="2">
+							<table border="0" width="100%" height="1" cellpadding="0" cellspacing="0">
+								<tr valign="TOP">
+									<td height="1" width="100%" bgcolor="BUTTONSHADOW">
+									</td>
+									<td height="1" width="1" bgcolor="WINDOW">
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<!--CLOSE OF INTRODUCTORY INFORMATION TABLE//-->
+		<!--OPEN OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+		<tr valign="TOP">
+			<td class="Three" valign="TOP" height="100%" width="100%">
+				<table class="fixedSize" height="100%" width="100%" border="0" cellpadding="0" cellspacing="0">
+					<tr valign="TOP">
+						<td class="threeCustom" valign="TOP">
+							<!--OPEN OF NAVIGATION TABLE//-->
+							<table class="THREE" border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col width="166">
+								<col width="1">
+								<tr>
+									<td valign="TOP" colspan="3" height="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="100%">
+										&nbsp;
+									</td>
+									<td valign="TOP" height="100%">
+										<!--OPEN OF NAVIGATIONAL LINKS//-->
+										<div class="LINKSELECTED">
+											<span class="VERTLINE1">
+												<img src="../../../../../1033/Images/spacer.gif" width="1" height="1" alt="" border="0">
+											</span><span class="HORILINE1">
+												<table width="167" height="100%" border="0" cellpadding="0" cellspacing="0">
+													<tr valign="TOP">
+														<td class="DOTTEDLINE" height="1">
+														</td>
+													</tr>
+													<tr valign="TOP">
+														<td height="100%">
+															<img src="../../../../../1033/Images/spacer.gif" width="1" height="28" alt="" border="0">
+														</td>
+													</tr>
+													<tr valign="TOP">
+														<td class="DOTTEDLINE" height="1">
+														</td>
+													</tr>
+												</table>
+											</span>
+											<table width="160" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXTSELECTED">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span id="Default" title="Examine an overview of selections.">Overview</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="AppSettings" title="Specify the application type and feature support for your ATL project."
+															onclick="Next(document, 'AppSettings.htm');" tabindex="1">Application Settings</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<!--CLOSE OF NAVIGATIONAL LINKS//-->
+									</td>
+									<td width="1">
+										<div class="VERTLINE">
+											<img src="../../../../../1033/Images/spacer.gif" width="1" height="1" alt="" border="0">
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				<!--CLOSE OF NAVIGATION TABLE//-->
+			</td>
+			<td valign="TOP" height="100%">
+				<!--OPEN OF CONTENT AND BUTTON TABLE//-->
+				<table class="ONE" border="0" cellpadding="0" cellspacing="0">
+					<col width="100%">
+					<tr valign="TOP">
+						<td height="100%">
+							<!--OPEN OF CONTENT//-->
+							<table class="CONTENT" border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col width="398">
+								<col width="12">
+								<tr>
+									<td valign="TOP" height="12" colspan="3">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP">
+										<span class="ItemTextTop" id="SETTINGS_SPAN"><b>These are the current project settings:</b></span>
+										<ul>
+											<li class="LIST"><span class="SideBtnHidden" id="APPTYPE" title="">
+												<label for="APPTYPE">
+												</label>
+											</span></li>
+											<li class="LIST"><span class="SideBtnHidden" id="MERGEPS" title="">
+												<label for="MERGEPS">
+												</label>
+											</span></li>
+											<li class="LIST"><span class="SideBtnHidden" id="MFCSUPPORT" title="">
+												<label for="MFCSUPPORT">
+												</label>
+											</span></li>
+											<li class="LIST"><span class="SideBtnHidden" id="FILETYPESUPPORT" title="">
+												<label for="FILETYPESUPPORT">
+												</label>
+											</span></li>
+											<li class="LIST"><span class="SideBtnHidden" id="COMPLUSSUPPORT" title="">
+												<label for="COMPLUSSUPPORT">
+												</label>
+											</span></li>
+										</ul>
+										<span class="ItemText" id="FinishText">Click <b>Finish</b> from any window to accept
+											the current settings.</span>
+										<p class="ElementSpacer2">
+											&nbsp;</p>
+										<span class="ItemText" id="README_REMINDER" title="">After you create the project, see
+											the project's readme.txt file for information about the project features and files
+											that are generated.</span>
+									</td>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+								</tr>
+							</table>
+							<!--CLOSE OF CONTENT//-->
+						</td>
+					</tr>
+					<tr valign="BOTTOM">
+						<td>
+							<!--OPEN OF BUTTON HTML//-->
+							<table border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col>
+								<col width="75">
+								<col width="4">
+								<col width="75">
+								<col width="4">
+								<col width="75">
+								<col width="12">
+								<tr>
+									<td valign="TOP" class="RULE" colspan="8" height="2">
+										<table border="0" width="100%" height="1" cellpadding="0" cellspacing="0">
+											<tr valign="TOP">
+												<td height="1" width="100%" bgcolor="BUTTONSHADOW">
+												</td>
+												<td height="1" width="1" bgcolor="WINDOW">
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="11" colspan="8">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="MIDDLE" height="23" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP" height="23">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="FinishBtn" onclick="OnFinish(document);">
+											Finish</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="4">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="CancelBtn" onclick="window.external.Finish(document, 'cancel');">
+											Cancel</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="4">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="HelpBtn" onclick="window.external.OnHelp('vc.appwiz.atl.com.overview');">
+											Help</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="12" colspan="8">
+										&nbsp;
+									</td>
+								</tr>
+							</table>
+							<!--CLOSE OF BUTTON HTML//-->
+						</td>
+					</tr>
+				</table>
+				<!--CLOSE OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+<script language="JSCRIPT">
+
+	var tab_array = new Array();
+	tab_array[0] = Default;
+	tab_array[1] = AppSettings;
+
+	function InitDocument(document) {
+		setDirection();
+
+		if (window.external.FindSymbol("DOCUMENT_FIRST_LOAD")) {
+			var L_WizardDialogTitle_Text = "ATL Project Wizard";
+			window.external.AddSymbol("WIZARD_DIALOG_TITLE", L_WizardDialogTitle_Text);
+			var strProjName = window.external.FindSymbol("PROJECT_NAME");
+			var coll = document.all.tags("symbol");
+			var numSymbols = coll.length;
+			for (i = 0; i < numSymbols; i++) {
+				var obj = coll(i);
+				if (typeof (obj.value) == "undefined") {
+					getval(obj, strProjName);
+				}
+			}
+			SetLocaleForResources(window.external.GetHostLocale());
+			window.external.SetDefaults(document);
+			CreateGuids();
+		}
+		//If user selected project name Atl or Win --> generated classes CAtlModule (CWinApp)
+		//are reserved. Therefore rename to CAtl1Module and CWin1App in this case.
+		var strSafeProjName = window.external.FindSymbol("SAFE_PROJECT_IDENTIFIER_NAME");
+		var strAtlModuleClassName = ConstructClassName(strSafeProjName, "Module");
+		window.external.AddSymbol("SAFE_ATL_MODULE_NAME", strAtlModuleClassName);
+		var strMFCAppClassName = ConstructClassName(strSafeProjName, "App");
+		window.external.AddSymbol("SAFE_MFC_APP_NAME", strMFCAppClassName);
+
+		window.external.Load(document);
+		InitControls();
+	}
+
+	function CreateGuids() {
+		strGuid = window.external.CreateGuid();
+		strVal = window.external.FormatGuid(strGuid, 0);
+		window.external.AddSymbol("LIBID_REGISTRY_FORMAT", strVal);
+		strGuid = window.external.CreateGuid();
+		strVal = window.external.FormatGuid(strGuid, 0);
+		window.external.AddSymbol("CLSID_REGISTRY_FORMAT", strVal);
+		strGuid = window.external.CreateGuid();
+		strVal = window.external.FormatGuid(strGuid, 0);
+		window.external.AddSymbol("APPID_REGISTRY_FORMAT", strVal);
+		strGuid = window.external.CreateGuid();
+		strVal = window.external.FormatGuid(strGuid, 0);
+		window.external.AddSymbol("COMPREG_REGISTRY_FORMAT", strVal);
+
+		strGuid = window.external.CreateGuid();
+		strVal = window.external.FormatGuid(strGuid, 0);
+		window.external.AddSymbol("CLSID_PREVIEW", strVal);
+		strGuid = window.external.CreateGuid();
+		strVal = window.external.FormatGuid(strGuid, 0);
+		window.external.AddSymbol("IID_PREVIEW", strVal);
+
+		strGuid = window.external.CreateGuid();
+		strVal = window.external.FormatGuid(strGuid, 0);
+		window.external.AddSymbol("CLSID_THUMBNAIL", strVal);
+		strGuid = window.external.CreateGuid();
+		strVal = window.external.FormatGuid(strGuid, 0);
+		window.external.AddSymbol("IID_THUMBNAIL", strVal);
+
+		strGuid = window.external.CreateGuid();
+		strVal = window.external.FormatGuid(strGuid, 0);
+		window.external.AddSymbol("CLSID_SEARCH", strVal);
+		strGuid = window.external.CreateGuid();
+		strVal = window.external.FormatGuid(strGuid, 0);
+		window.external.AddSymbol("IID_SEARCH", strVal);
+
+		strGuid = window.external.CreateGuid();
+		strVal = window.external.FormatGuid(strGuid, 0);
+		window.external.AddSymbol("CLSID_PERSISTENT_HANDLER", strVal);
+	}
+
+	function InitControls() {
+		var L_APPTYPEDLL_Text = "Dynamic-Link Library";
+		var L_APPTYPEEXE_Text = "Executable";
+		var L_APPTYPESRV_Text = "Service";
+		if (window.external.FindSymbol("EXE_APP"))
+			APPTYPE.innerText = L_APPTYPEEXE_Text;
+		else {
+			if (window.external.FindSymbol("SERVICE_APP"))
+				APPTYPE.innerText = L_APPTYPESRV_Text;
+			else
+				APPTYPE.innerText = L_APPTYPEDLL_Text;
+		}
+
+		MERGEPS.parentNode.style.display = 'none';
+		if (window.external.FindSymbol("MERGE_PROXY_STUB") && !window.external.IsSymbolDisabled("MERGE_PROXY_STUB")) {
+			var L_MERGPS_Text = "Proxy/stub merging";
+			MERGEPS.innerText = L_MERGPS_Text;
+			MERGEPS.parentNode.style.display = 'block';
+		}
+
+		MFCSUPPORT.parentNode.style.display = 'none';
+		if (window.external.FindSymbol("SUPPORT_MFC") && !window.external.IsSymbolDisabled("SUPPORT_MFC")) {
+			var L_MFCSUPPORT_Text = "MFC support";
+			MFCSUPPORT.innerText = L_MFCSUPPORT_Text;
+			MFCSUPPORT.parentNode.style.display = 'block';
+		}
+
+		FILETYPESUPPORT.parentNode.style.display = 'none';
+		if (window.external.FindSymbol("PREVIEW_HANDLER") && !window.external.IsSymbolDisabled("PREVIEW_HANDLER") &&
+			window.external.FindSymbol("THUMBNAIL_HANDLER") && !window.external.IsSymbolDisabled("THUMBNAIL_HANDLER") &&
+			window.external.FindSymbol("SEARCH_HANDLER") && !window.external.IsSymbolDisabled("SEARCH_HANDLER")) {
+			var L_FILETYPESUPPORT_PreviewThumbnailSearch_Text = "File type support (preview, thumbnail, and search handlers)";
+			FILETYPESUPPORT.innerText = L_FILETYPESUPPORT_PreviewThumbnailSearch_Text;
+			FILETYPESUPPORT.parentNode.style.display = 'block';
+		}
+		else if (window.external.FindSymbol("PREVIEW_HANDLER") && !window.external.IsSymbolDisabled("PREVIEW_HANDLER") &&
+			window.external.FindSymbol("SEARCH_HANDLER") && !window.external.IsSymbolDisabled("SEARCH_HANDLER")) {
+			var L_FILETYPESUPPORT_PreviewSearch_Text = "File type support (preview and search handlers)";
+			FILETYPESUPPORT.innerText = L_FILETYPESUPPORT_PreviewSearch_Text;
+			FILETYPESUPPORT.parentNode.style.display = 'block';
+		}
+		else if (window.external.FindSymbol("PREVIEW_HANDLER") && !window.external.IsSymbolDisabled("PREVIEW_HANDLER") &&
+			window.external.FindSymbol("THUMBNAIL_HANDLER") && !window.external.IsSymbolDisabled("THUMBNAIL_HANDLER")) {
+			var L_FILETYPESUPPORT_PreviewThumbnail_Text = "File type support (preview and thumbnail handlers)";
+			FILETYPESUPPORT.innerText = L_FILETYPESUPPORT_PreviewThumbnail_Text;
+			FILETYPESUPPORT.parentNode.style.display = 'block';
+		}
+		else if (window.external.FindSymbol("THUMBNAIL_HANDLER") && !window.external.IsSymbolDisabled("THUMBNAIL_HANDLER") &&
+			window.external.FindSymbol("SEARCH_HANDLER") && !window.external.IsSymbolDisabled("SEARCH_HANDLER")) {
+			var L_FILETYPESUPPORT_ThumbnailSearch_Text = "File type support (thumbnail and search handlers)";
+			FILETYPESUPPORT.innerText = L_FILETYPESUPPORT_ThumbnailSearch_Text;
+			FILETYPESUPPORT.parentNode.style.display = 'block';
+		}
+		else if (window.external.FindSymbol("PREVIEW_HANDLER") && !window.external.IsSymbolDisabled("PREVIEW_HANDLER")) {
+			var L_FILETYPESUPPORT_Preview_Text = "File type support (preview handler)";
+			FILETYPESUPPORT.innerText = L_FILETYPESUPPORT_Preview_Text;
+			FILETYPESUPPORT.parentNode.style.display = 'block';
+		}
+		else if (window.external.FindSymbol("THUMBNAIL_HANDLER") && !window.external.IsSymbolDisabled("THUMBNAIL_HANDLER")) {
+			var L_FILETYPESUPPORT_Thumbnail_Text = "File type support (thumbnail handler)";
+			FILETYPESUPPORT.innerText = L_FILETYPESUPPORT_Thumbnail_Text;
+			FILETYPESUPPORT.parentNode.style.display = 'block';
+		}
+		else if (window.external.FindSymbol("SEARCH_HANDLER") && !window.external.IsSymbolDisabled("SEARCH_HANDLER")) {
+			var L_FILETYPESUPPORT_Search_Text = "File type support (search handler)";
+			FILETYPESUPPORT.innerText = L_FILETYPESUPPORT_Search_Text;
+			FILETYPESUPPORT.parentNode.style.display = 'block';
+		}
+
+		COMPLUSSUPPORT.parentNode.style.display = 'none';
+		if (window.external.FindSymbol("SUPPORT_COMPLUS") && !window.external.IsSymbolDisabled("SUPPORT_COMPLUS")) {
+			var L_COMPLUSSUPPORT_Text = "COM+ 1.0 support";
+			COMPLUSSUPPORT.innerText = L_COMPLUSSUPPORT_Text;
+			COMPLUSSUPPORT.parentNode.style.display = 'block';
+		}
+	}
+
+	function Next(document, linkto) {
+		window.external.Next(document, linkto);
+	}
+
+	function OnFinish(document) {
+		OnWizFinish(document);
+	}
+
+	function getval(obj, strProjName) {
+		var SymbolValue = "";
+		switch (obj.name) {
+			case "SAFE_PROJECT_IDENTIFIER_NAME":
+				SymbolValue = CreateASCIIName(strProjName);
+				break;
+			case "UPPER_CASE_SAFE_PROJECT_IDENTIFIER_NAME":
+				{
+					var strSafeProjName = CreateSafeName(strProjName);
+					SymbolValue = strSafeProjName.toUpperCase();
+				}
+				break;
+			case "LIB_NAME":
+				{
+					var strSafeLibName = CreateIdentifierSafeName(strProjName);
+					for (n = 0; n < 10; n++) {
+						if (strSafeLibName.substr(0, 1) == n.toString())
+							strSafeLibName = "My" + strSafeLibName;
+					}
+					SymbolValue = strSafeLibName;
+				}
+				break;
+			case "YEAR":
+				{
+					d = new Date();
+					SymbolValue = d.getFullYear().toString();
+				}
+				break;
+			default:
+				SymbolValue = "";
+				break;
+		}
+		obj.value = SymbolValue;
+	}
+
+</script>
+
+<script id="INCLUDE_SCRIPT" language="JSCRIPT"></script>
+
+<script id="INCLUDE_COMMON" language="JSCRIPT"></script>
+
+<script>
+	document.scripts("INCLUDE_SCRIPT").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Script.js";
+	document.scripts("INCLUDE_COMMON").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Common.js";
+</script>
+

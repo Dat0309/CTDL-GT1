@@ -1,0 +1,38 @@
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <Name>搜索协定</Name>
+        <Icon>search.ico</Icon>
+        <Description>支持显示搜索结果的应用程序协定。</Description>
+        <ProjectType>JavaScript</ProjectType>
+        <TemplateID>Microsoft.JavaScript.Search</TemplateID>
+        <TemplateGroupID>JavaScript_Windows_8.0_GroupID</TemplateGroupID>
+        <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+        <DefaultName>searchResults.html</DefaultName>
+        <PreviewImage>Search.png</PreviewImage>
+        <TargetPlatformName>Windows</TargetPlatformName> 
+        <RequiredPlatformVersion>6.2.0</RequiredPlatformVersion>
+    </TemplateData>
+    <TemplateContent>
+        <ProjectItem TargetFileName="$fileinputname$.js" ReplaceParameters="true" OpenInEditor="true" BlendOpenInEditor="false">search.js</ProjectItem>
+        <ProjectItem TargetFileName="$fileinputname$.html" ReplaceParameters="true" BlendOpenInEditor="true">search.html</ProjectItem>
+        <ProjectItem TargetFileName="$fileinputname$.css" ReplaceParameters="true">search.css</ProjectItem>
+    </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.WinRT.TemplateWizards, Version=12.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.WinRT.TemplateWizards.ActivationContract.Wizard</FullClassName>
+  </WizardExtension>
+    <WizardData>
+        <Activation>
+            <ManifestData>
+                <Extension Category="windows.search"/>
+            </ManifestData>
+            <ManifestComment>
+                //
+                // TODO:  编辑清单以允许用作搜索目标。   包
+                // 清单无法自动更新。   打开包清单文件
+                // 并确保启用了对搜索激活的支持。
+
+            </ManifestComment>
+        </Activation>
+    </WizardData>
+</VSTemplate>

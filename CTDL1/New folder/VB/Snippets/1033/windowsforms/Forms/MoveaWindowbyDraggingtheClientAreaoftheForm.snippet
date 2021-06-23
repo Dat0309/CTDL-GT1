@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Move a Window by Dragging the Client Area of the Form</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Moves a form by dragging any part of it with the mouse. This feature is particularly useful when the form has no title bar.</Description>
+      <Shortcut>formDrag</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Drawing.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>mouseOffset</ID>
+          <Type>Point</Type>
+          <ToolTip>The offset of the mouse cursor.</ToolTip>
+          <Default>mouseOffset</Default>
+        </Object>
+        <Object>
+          <ID>formName</ID>
+          <Type>Form</Type>
+          <ToolTip>The form in which the snippet is inserted.</ToolTip>
+          <Default>Me</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[Dim mouseOffset As Point
+
+Private Sub $formName$_MouseDown(ByVal sender As Object, ByVal e As MouseEventArgs) Handles MyBase.MouseDown
+    $mouseOffset$ = New Point(-e.X, -e.Y)
+End Sub
+
+Private Sub $formName$_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles MyBase.MouseMove
+
+    If e.Button = MouseButtons.Left Then
+        Dim mousePos = Control.MousePosition
+        mousePos.Offset($mouseOffset$.X, $mouseOffset$.Y)
+        Location = mousePos
+    End If
+End Sub]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

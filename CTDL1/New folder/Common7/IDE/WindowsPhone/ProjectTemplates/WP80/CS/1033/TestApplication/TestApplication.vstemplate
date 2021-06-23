@@ -1,0 +1,43 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name Package="{7D4626A3-18C3-43A4-A66C-169D1D609803}" ID="1138" />
+    <Description Package="{7D4626A3-18C3-43A4-A66C-169D1D609803}" ID="1139" />
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>WindowsPhone</ProjectSubType>
+    <TemplateID>Microsoft.WindowsPhone.UnitTest.Application</TemplateID>
+    <TemplateGroupID>Windows Phone</TemplateGroupID>
+    <SortOrder>1010</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>TestApp</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <PreviewImage>__PreviewImage.PNG</PreviewImage>
+  </TemplateData>
+  <TemplateContent BuildOnLoad="true">
+    <Project File="WindowsPhoneUnitTestTemplate.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true">App.xaml</ProjectItem>
+      <ProjectItem ReplaceParameters="true">App.xaml.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true">UnitTest1.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">LocalizedStrings.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">MainPage.xaml</ProjectItem>
+      <ProjectItem ReplaceParameters="true">MainPage.xaml.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Properties\AppManifest.xml</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Properties\AssemblyInfo.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Properties\WMAppManifest.xml</ProjectItem>
+      <ProjectItem ReplaceParameters="false">Resources\AppResources.resx</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Resources\AppResources.Designer.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false">Assets\ApplicationIcon.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false">Assets\AlignmentGrid.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false">Assets\Tiles\FlipCycleTileLarge.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false">Assets\Tiles\FlipCycleTileMedium.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false">Assets\Tiles\FlipCycleTileSmall.png</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SmartDevice.ProjectSystem.Base, Version=12.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SmartDevice.ProjectSystem.Wizards.ProjectTemplateWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

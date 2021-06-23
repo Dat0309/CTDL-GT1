@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Create an E-Mail Message </Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Uses the MailMessage class to send an e-mail message.</Description>
+      <Shortcut>conEmail</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Net.Mail</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>recipient</ID>
+          <ToolTip>Replace with the e-mail address of the recipient of the e-mail.</ToolTip>
+          <Default>"from@address"</Default>
+        </Literal>
+        <Literal>
+          <ID>sender</ID>
+          <ToolTip>Replace with the e-mail address of the sender.</ToolTip>
+          <Default>"sender@address"</Default>
+        </Literal>
+        <Literal>
+          <ID>message</ID>
+          <ToolTip>Replace with the text of the message.</ToolTip>
+          <Default>"Message Text"</Default>
+        </Literal>
+        <Literal>
+          <ID>subject</ID>
+          <ToolTip>Replace with the contents of the subject line for the e-mail.</ToolTip>
+          <Default>"Subject"</Default>
+        </Literal>
+        <Literal>
+          <ID>serverName</ID>
+          <ToolTip>Replace with the name of the SMTP server.</ToolTip>
+          <Default>"Email Server Name"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim message As New MailMessage($sender$, $recipient$, $subject$, $message$)
+Dim emailClient As New SmtpClient($serverName$)
+emailClient.Send(message)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

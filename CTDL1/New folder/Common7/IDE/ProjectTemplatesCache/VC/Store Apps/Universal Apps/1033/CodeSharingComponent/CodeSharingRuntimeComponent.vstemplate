@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="ProjectGroup">
+	<TemplateData>
+		<Name Package="{1B027A40-8F43-11D0-8D11-00A0C91BC942}" ID="3254" />
+		<Description Package="{1B027A40-8F43-11D0-8D11-00A0C91BC942}" ID="3255" />
+		<Icon Package="{1B027A40-8F43-11D0-8D11-00A0C91BC942}" ID="3230" />
+		<ProjectType>VC</ProjectType>
+		<DefaultName>RuntimeComponent</DefaultName>
+    <NumberOfParentCategoriesToRollUp>2</NumberOfParentCategoriesToRollUp>
+		<TargetPlatformName>Windows</TargetPlatformName>
+		<RequiredPlatformVersion>6.3.0</RequiredPlatformVersion>
+		<CreateInPlace>true</CreateInPlace>
+		<CreateNewFolder>true</CreateNewFolder>
+		<SortOrder>52</SortOrder>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectCollection>
+			<SolutionFolder Name="$projectname$" >
+				<ProjectTemplateLink ProjectName="$projectname$.Shared" CopyParameters="true">
+					Shared\Shared.vstemplate
+				</ProjectTemplateLink>
+				<ProjectTemplateLink ProjectName="$projectname$.Windows" CopyParameters="true">
+					Windows\Windows.vstemplate
+				</ProjectTemplateLink>
+				<ProjectTemplateLink ProjectName="$projectname$.WindowsPhone" CopyParameters="true">
+					WindowsPhone\WindowsPhone.vstemplate
+				</ProjectTemplateLink>
+			</SolutionFolder>
+		</ProjectCollection>
+	</TemplateContent>
+</VSTemplate>

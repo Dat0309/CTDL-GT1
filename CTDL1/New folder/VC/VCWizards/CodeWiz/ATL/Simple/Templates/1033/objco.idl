@@ -1,0 +1,32 @@
+[!if CONNECTION_POINTS]
+	[
+		uuid([!output CONNECTION_POINT_IID])		
+	]
+	dispinterface _[!output INTERFACE_NAME]Events
+	{
+		properties:
+		methods:
+	};
+[!endif]
+	[
+		uuid([!output CLSID_REGISTRY_FORMAT])		
+	]
+	coclass [!output COCLASS]
+	{
+[!if !ADD_HANDLER_SUPPORT]
+		[default] interface [!output INTERFACE_NAME];
+[!else] 
+[!if PREVIEW_HANDLER]
+		[default] interface IPreviewHandler;
+[!endif]
+[!if THUMBNAIL_PROVIDER_HANDLER]
+		[default] interface IThumbnailProvider;
+[!endif]
+[!if SEARCH_HANDLER]
+		[default] interface IFilter;
+[!endif]
+[!endif]
+[!if CONNECTION_POINTS]
+		[default, source] dispinterface _[!output INTERFACE_NAME]Events;
+[!endif]
+	};

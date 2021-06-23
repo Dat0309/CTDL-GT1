@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VsixLanguagePack Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema-lp/2010">
+  <LocalizedName>Gestionnaire de package NuGet</LocalizedName>
+  <LocalizedDescription>Collection d'outils permettant d'automatiser le processus d'installation, de mise à niveau, de configuration et de suppression de packages d'un projet VS.</LocalizedDescription>
+  <License>EULA.rtf</License>
+  <MoreInfoUrl>http://nuget.codeplex.com/documentation</MoreInfoUrl>
+</VsixLanguagePack>

@@ -1,0 +1,27 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>SQL CLR C# Type</Name>
+    <Description>SQL CLR C# type</Description>
+    <Icon></Icon>
+    <ProjectType>SqlServer</ProjectType>
+    <DefaultName>SqlClrType.cs</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Data</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Xml</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem ReplaceParameters="true">CSSqlUserDefinedType.cs</ProjectItem>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.Data.Tools.Package, Version=12.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a, Custom=null</Assembly>
+    <FullClassName>Microsoft.VisualStudio.Data.Tools.Package.Project.SqlClrTemplateWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Enter Multiline String into Multiline TextBox</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Enters a multiline string into a multiline textbox.</Description>
+      <Shortcut>tbArray</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>textboxName</ID>
+          <Type>TextBox</Type>
+          <ToolTip>Replace with a multiline TextBox on your form.</ToolTip>
+          <Default>TextBox1</Default>
+        </Object>
+        <Literal>
+          <ID>arrayName</ID>
+          <ToolTip>Replace with an Array of Strings to populate the lines of yourTextBox.</ToolTip>
+          <Default>names</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[$textboxName$.Lines = $arrayName$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

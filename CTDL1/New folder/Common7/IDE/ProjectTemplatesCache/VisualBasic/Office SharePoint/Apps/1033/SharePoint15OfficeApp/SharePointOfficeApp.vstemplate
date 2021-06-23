@@ -1,0 +1,50 @@
+﻿<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="394" />
+    <Description Package ="{0E109BD6-39F8-41AC-97B5-257344833610}" ID ="395" />
+    <Icon Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="244" />
+    <TemplateID>SharePoint15OfficeApp_VB</TemplateID>
+    <ProjectType>VisualBasic</ProjectType>
+    <CreateNewFolder>true</CreateNewFolder>
+    <CreateInPlace>true</CreateInPlace>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>OfficeApp</DefaultName>
+    <SortOrder>1</SortOrder>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="SharePointOfficeApp.vbproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters ="true" TargetFileName="$projectname$Manifest\$projectname$.xml">OfficeAppManifest_selfhost_v1_0.xml</ProjectItem>
+      <ProjectItem ReplaceParameters ="true" TargetFileName="$projectname$Manifest\$projectname$.xml">OfficeAppManifest_selfhost_v1_1.xml</ProjectItem>
+      <ProjectItem ReplaceParameters ="true" TargetFileName="$projectname$Manifest\SharePointProjectItem.spdata">OfficeApp_SharePointProjectItem_selfhost.spdata</ProjectItem>
+    </Project>
+    <CustomParameters>
+      <CustomParameter Name="$TargetOfficeVersion$" Value="15.0" />
+      <CustomParameter Name="$ProjectMode$" Value="OfficeApp" />
+      <CustomParameter Name="$SharePointAppSentinel$" Value="SharePointAppSentinel" />
+      <CustomParameter Name="$ContentAppBasicWebFormItemTemplateName$" Value="SharePoint15ContentAppBasicWebFormItem.zip"/>
+      <CustomParameter Name="$ContentAppVisualizationWebFormItemTemplateName$" Value="SharePoint15ContentAppVisualizationWebFormItem.zip"/>
+      <CustomParameter Name="$TaskPaneAppWebFormItemTemplateName$" Value="SharePoint15TaskPaneAppWebFormItem.zip"/>
+      <CustomParameter Name="$MailAppWebFormItemTemplateName$" Value="SharePoint15MailAppWebFormItem.zip"/>
+      <CustomParameter Name="$OfficeAppetizingWebFormItemTemplateName$" Value="SharePoint15OfficeAppetizingWebFormItem.zip"/>
+      <CustomParameter Name="$StandaloneItems$" Value='&lt;!--no web project Office App scenarios are currently not supported--&gt;' />
+      <CustomParameter Name="$MultiItems$" Value='  &lt;ItemGroup&gt;
+    &lt;None Include="$projectname$Manifest\SharePointProjectItem.spdata"&gt;
+      &lt;SharePointProjectItemId&gt;{$guid2$}&lt;/SharePointProjectItemId&gt;
+    &lt;/None&gt;
+    &lt;Content Include="$projectname$Manifest\$projectname$.xml" &gt;
+      &lt;OpcRelationship&gt;manifest-oemanifest&lt;/OpcRelationship&gt;
+    &lt;/Content&gt;
+  &lt;/ItemGroup&gt;' />
+      <CustomParameter Name="$loc_ProviderName$" _locID="$loc_ProviderName$" _locAttrData="Value" Value="[Provider name]" />
+    </CustomParameters>
+
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.OfficeAppProjectWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

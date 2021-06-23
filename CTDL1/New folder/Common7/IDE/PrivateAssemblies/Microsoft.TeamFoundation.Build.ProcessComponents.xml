@@ -1,0 +1,653 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.TeamFoundation.Build.ProcessComponents</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.TeamFoundation.Build.TeamBuildEventArgs"></member>
+    <member name="M:Microsoft.TeamFoundation.Build.TeamBuildEventArgs.#ctor(System.String,System.String)"></member>
+    <member name="P:Microsoft.TeamFoundation.Build.TeamBuildEventArgs.Tag">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.TeamBuildEventArgs.Value">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.UpdateBuildNumberDropLocation">
+      <summary>This task will update the build number and drop location on the server.</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.UpdateBuildNumberDropLocation.#ctor"></member>
+    <member name="P:Microsoft.TeamFoundation.Build.UpdateBuildNumberDropLocation.BuildNumber">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.UpdateBuildNumberDropLocation.BuildUri">
+      <summary>Property that gives the URI of the build for which this task is executing.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.UpdateBuildNumberDropLocation.DropLocation">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.BuildStep"></member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.BuildStep.#ctor"></member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.BuildStep.BuildUri">
+      <summary>Property that gives the URI of the build for which this task is executing.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.BuildStep.Id">
+      <summary>The ID of the added build step. This can be used to update an existing build step with a second instance of the BuildStep task.</summary>
+      <returns>Returns <see cref="T:System.Int32" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.BuildStep.Message">
+      <summary>The message of the build step to be added. This is the text that appears in the build report.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.BuildStep.Name">
+      <summary>The optional name of the build step to be added. If not specified, the message text will be used for the name also.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.BuildStep.Status">
+      <summary>The status of the build step to be added. If not specified, <see cref="BuildStepStatus.InProgress" /> will be used and the build step will not be marked as complete until a second invocation of the BuildStep task updates its status (using the <see cref="Idoutput" /> property).</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.CopyDirectoryTask">
+      <summary>This task will copy all inputs to a specified target</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.CopyDirectoryTask.#ctor"></member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CopyDirectoryTask.Destination">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CopyDirectoryTask.Source">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.CreateNewWorkItem"></member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.CreateNewWorkItem.#ctor"></member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CreateNewWorkItem.BuildId">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CreateNewWorkItem.BuildNumber">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CreateNewWorkItem.Description">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CreateNewWorkItem.TeamProject">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CreateNewWorkItem.Title">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CreateNewWorkItem.WorkItemFieldValues">
+      <summary>A semicolon delimited list of name/value pairs to populate work item A typical input: "propname1=propvalue1;propname2=propvalue2;propname3=propvalue3".</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CreateNewWorkItem.WorkItemType">
+      <summary>Use this work item type to create the new work item.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.CreateWorkspaceTask">
+      <summary>This task is used to create a workspace using an existing workspace template file. It modifies the local paths based on the <see cref="LocalPath" /> property of the task.</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.CreateWorkspaceTask.#ctor"></member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CreateWorkspaceTask.BuildDirectory">
+      <summary>The working directory of the build agent performing the build.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CreateWorkspaceTask.BuildUri">
+      <summary>Property that gives the URI of the build for which this task is executing.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CreateWorkspaceTask.Comment">
+      <summary>This is the comment attached to the workspace created by the task.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CreateWorkspaceTask.Name">
+      <summary>This is the name of the workspace that is created.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CreateWorkspaceTask.Owner">
+      <summary>This is the owner of the workspace that is created.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.CreateWorkspaceTask.SourcesDirectory">
+      <summary>The sources directory of the build agent performing the build—typically BuildDirectory\..\Sources.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.DeleteWorkspaceTask">
+      <summary>This task is used to delete a workspace from an existing workspace template file.</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.DeleteWorkspaceTask.#ctor"></member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.DeleteWorkspaceTask.DeleteLocalItems">
+      <summary>If true, <see cref="DeleteWorkspaceTask" /> will attempt to delete all local items—files and folders—before deleting.</summary>
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.DeleteWorkspaceTask.Name">
+      <summary>This is the name of the workspace that is deleted.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.GenCheckinNotesUpdateWorkItems"></member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.GenCheckinNotesUpdateWorkItems.#ctor"></member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GenCheckinNotesUpdateWorkItems.AssociatedChangesets">
+      <returns>Returns <see cref="T:Microsoft.Build.Framework.ITaskItem" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GenCheckinNotesUpdateWorkItems.BuildId">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GenCheckinNotesUpdateWorkItems.BuildNumber">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GenCheckinNotesUpdateWorkItems.BuildUri">
+      <summary>Property that gives the URI of the build for which this task is executing.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GenCheckinNotesUpdateWorkItems.CurrentLabel">
+      <summary>The source label for sources used in the current build.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GenCheckinNotesUpdateWorkItems.LastLabel">
+      <summary>The source label of the last build that must be compared with the current build source. This property is not required because it may be empty for the first build of a particular definition. When it is not provided, no changesets or work items will be associated with the build.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GenCheckinNotesUpdateWorkItems.UpdateWorkItems">
+      <summary>Set to true if you want <see cref="WorkItems" /> updated with a "Fixed in build XYZ" link.</summary>
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.Get"></member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Get.#ctor"></member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.AllowUnmapped">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.AutoMerge">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.BuildDirectory">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.Deletes">
+      <summary>The list of all items that were deleted from the workspace.</summary>
+      <returns>Returns <see cref="T:Microsoft.Build.Framework.ITaskItem" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.Filespec">
+      <summary>The local path file specification that should be retrieved.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.Force">
+      <summary>Forces all files to be retrieved, not just those that are out of date. This option also overwrites writable files on the local disk that are under version control but not checked out.</summary>
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.Gets">
+      <summary>The list of all items that did not occur in the workspace.</summary>
+      <returns>Returns <see cref="T:Microsoft.Build.Framework.ITaskItem" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.NoCIOption">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.Overwrite">
+      <summary>This option provides the ability to overwrite writable files without forcing a get of the complete workspace.</summary>
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.PopulateOutput">
+      <summary>A Boolean that controls whether the output properties—Gets, Replaces, Deletes—are populated.</summary>
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.Preview">
+      <summary>When set to true, no files are actually downloaded; instead, events are fired that show what files would have been downloaded.</summary>
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.Recursive">
+      <summary>Retrieves <see cref="Filespec" /> recursively.</summary>
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.Replaces">
+      <summary>The list of all items that were replaced in the workspace.</summary>
+      <returns>Returns <see cref="T:Microsoft.Build.Framework.ITaskItem" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.Version">
+      <summary>The Hatteras-formatted version specifier that will be used to pick the correct versions of files to retrieve into the local workspace.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.Warnings">
+      <summary>The list of warnings encountered during the <see cref="Get" /> operation.</summary>
+      <returns>Returns <see cref="T:Microsoft.Build.Framework.ITaskItem" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Get.Workspace">
+      <summary>The name of the workspace.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties"></member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.#ctor"></member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.BuildAgentName">
+      <summary>The name of the agent used to perform this build.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.BuildAgentUri">
+      <summary>The URI of the agent used to perform this build.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.BuildDefinitionName">
+      <summary>The name of the definition used to perform this build.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.BuildDefinitionUri">
+      <summary>The URI of the definition used to perform this build.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.BuildDirectory">
+      <summary>The working directory for the build's build agent, with all variable replacements.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.BuildNumber">
+      <summary>The number that's used to identify this build.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.BuildUri">
+      <summary>Property that gives the URI of the build for which this task is executing.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.CompilationStatus">
+      <summary>The status of the compilation phase of the build.</summary>
+      <returns>Returns <see cref="T:Microsoft.TeamFoundation.Build.Client.BuildPhaseStatus" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.CompilationSuccess">
+      <summary>The success or failure of the compilation phase of the build.</summary>
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.ConfigurationFolderUri">
+      <summary>The versioned URI of the configuration folder used for the build.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.DropLocation">
+      <summary>The location of the output of the build.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.LabelName">
+      <summary>The label generated for the build.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.LastChangedBy">
+      <summary>The name of the last user to change the build.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.LastChangedOn">
+      <summary>The date and time of the last change to the build.</summary>
+      <returns>Returns <see cref="T:System.DateTime" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.LogLocation">
+      <summary>The location of the log file for the build.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.MachineName">
+      <summary>The machine for the build's build agent.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.MaxProcesses">
+      <summary>The maximum number of processes for the build's build agent.</summary>
+      <returns>Returns <see cref="T:System.Int32" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.Port">
+      <summary>The port for the build's build agent.</summary>
+      <returns>Returns <see cref="T:System.Int32" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.Quality">
+      <summary>The quality of the build.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.Reason">
+      <summary>The reason the build was requested.</summary>
+      <returns>Returns <see cref="T:Microsoft.TeamFoundation.Build.Client.BuildReason" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.RequestedBy">
+      <summary>The user who requested the build.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.RequestedFor">
+      <summary>The user for whom the build was requested.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.SourceGetVersion">
+      <summary>The date and time at which the sources were retrieved for the build.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.StartTime">
+      <summary>The date and time at which the build started.</summary>
+      <returns>Returns <see cref="T:System.DateTime" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.Status">
+      <summary>The overall status of the build.</summary>
+      <returns>Returns <see cref="T:Microsoft.TeamFoundation.Build.Client.BuildStatus" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.TeamProject">
+      <summary>The team project that owns the build.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.TestStatus">
+      <summary>The status of the test phase of the build.</summary>
+      <returns>Returns <see cref="T:Microsoft.TeamFoundation.Build.Client.BuildPhaseStatus" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties.TestSuccess">
+      <summary>The success or failure of the test phase of the build.</summary>
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.InternalMapping">
+      <summary>This class contains the minimum set of information that you need to re-create a working folder. These are serialized to local files.</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.InternalMapping.#ctor"></member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.InternalMapping.#ctor(Microsoft.TeamFoundation.VersionControl.Client.WorkingFolder)"></member>
+    <member name="F:Microsoft.TeamFoundation.Build.Tasks.InternalMapping.LocalItem"></member>
+    <member name="F:Microsoft.TeamFoundation.Build.Tasks.InternalMapping.ServerItem"></member>
+    <member name="F:Microsoft.TeamFoundation.Build.Tasks.InternalMapping.Type"></member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.Label"></member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Label.#ctor"></member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Label.Child">
+      <summary>How you want to handle labels underneath the current labels scope with the same name.Set this property to whatever string argument you would use in the label command line.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Label.Comments">
+      <summary>This is the comment applied to the label.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Label.Files">
+      <summary>This is the set of Folders/Files to put into the label. This property is set through the MSBuild task configuration.</summary>
+      <returns>Returns <see cref="T:Microsoft.Build.Framework.ITaskItem" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Label.Name">
+      <summary>The name of the label being created.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Label.Recursive">
+      <summary>Retrieves Filespec recursively.</summary>
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Label.Scope">
+      <summary>The scope of the label being created.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Label.Version">
+      <summary>This is the version string to apply to the items being added to the label.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.RevertWorkspaceTask"></member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.RevertWorkspaceTask.#ctor"></member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.RevertWorkspaceTask.WorkspaceName">
+      <summary>The name of the workspace that will be used for the conversion.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.RevertWorkspaceTask.WorkspaceOwner">
+      <summary>The owner of the workspace that will be used for the conversion.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.SerializedWorkspace">
+      <summary>This class is used to serialize a workspaces mapping to a file.</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.SerializedWorkspace.#ctor"></member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.SerializedWorkspace.Deserialize(System.String)">
+      <summary>Creates a serialized workspace from a file previously created by using the <see cref="Serialize" /> method.</summary>
+      <returns>The serialized workspace from the supplied file.</returns>
+      <param name="serializedFile">This is the fully qualified path of the serialized workspace file.</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.SerializedWorkspace.FindCommonServerPath(Microsoft.TeamFoundation.VersionControl.Client.WorkingFolder[])">
+      <summary>Get the common minimum server path from the set of folder mappings.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+      <param name="workingFolders">Folder mapping of the selected workspace.</param>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.Build.Tasks.SerializedWorkspace.Mappings">
+      <summary>This is the set of mappings being used in this serialized workspace.</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.SerializedWorkspace.Serialize(Microsoft.TeamFoundation.VersionControl.Client.WorkingFolder[],System.String)">
+      <summary>Used to serialize a workspace into a local XML file that can be used in the CreateWorkspace task for generating another workspace.</summary>
+      <returns>Returns <see cref="T:Microsoft.TeamFoundation.Build.Tasks.SerializedWorkspace" />.</returns>
+      <param name="workspaceFileName">This is the path of the local file to serialize the workspace into.</param>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.SetBuildProperties"></member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.SetBuildProperties.#ctor"></member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.SetBuildProperties.BuildNumber">
+      <summary>The number that's used to identify this build.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.SetBuildProperties.BuildUri">
+      <summary>Property that gives the URI of the build for which this task is executing.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.SetBuildProperties.CompilationStatus">
+      <summary>The status of the compilation phase of the build.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.SetBuildProperties.DropLocation">
+      <summary>The location of the output of the build.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.SetBuildProperties.LabelName">
+      <summary>The label name generated for the build.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.SetBuildProperties.LogLocation">
+      <summary>The location of the log file for the build.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.SetBuildProperties.Quality">
+      <summary>The quality of the build.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.SetBuildProperties.SourceGetVersion">
+      <summary>The source get version of the build.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.SetBuildProperties.Status">
+      <summary>The overall status of the build.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.SetBuildProperties.TestStatus">
+      <summary>The status of the test phase of the build.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.Task"></member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.#ctor"></member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.AddNameValuePair(System.String)">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.AddNameValuePair(System.String,Microsoft.Build.Framework.ITaskItem[])">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.AddNameValuePair(System.String,System.Boolean)">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.AddNameValuePair(System.String,System.String)">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Task.BuildEngine">
+      <summary>ITask implementation—<see cref="BuildEngine" /> property.</summary>
+      <returns>Returns <see cref="T:Microsoft.Build.Framework.IBuildEngine" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Task.BuildUri">
+      <summary>Property that gives the URI of the build for which this task is executing. Derived classes can override this property to make it required.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.Execute">
+      <summary>ITask implementation - Execute method.</summary>
+      <returns>True if the task succeeded, false otherwise. Important<see cref="Microsoft.TeamFoundation.Build.Tasks.Task" /> objects should typically throw exceptions instead of returning false.</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.GetParameterLog(System.String[])">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Task.HostObject">
+      <summary>ITask implementation—<see cref="HostObject" /> property.</summary>
+      <returns>Returns <see cref="T:Microsoft.Build.Framework.ITaskHost" />.</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.LogCustomEvent(Microsoft.Build.Framework.CustomBuildEventArgs)">
+      <summary>Helper to log a custom event if the task is running within MSBuild.</summary>
+      <param name="e">Event args to be logged.</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.LogError(System.String)">
+      <summary>Helper to log an error string if the task is running within MSBuild.</summary>
+      <param name="errorMessage">String to be logged as an error.</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.LogErrorEvent(Microsoft.Build.Framework.BuildErrorEventArgs)">
+      <summary>Helper to log an error event if the task is running within MSBuild.</summary>
+      <param name="e">Event args to be logged.</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.LogMessage(System.String)">
+      <summary>Helper to log a message string if the task is running within MSBuild.</summary>
+      <param name="message">String to be logged as a message.</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.LogMessage(System.String,Microsoft.Build.Framework.MessageImportance)">
+      <summary>Helper to log a message string if the task is running within MSBuild.</summary>
+      <param name="message">String to be logged as a message.</param>
+      <param name="importance">Importance of the message to be logged.</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.LogMessageEvent(Microsoft.Build.Framework.BuildMessageEventArgs)">
+      <summary>Helper to log a message event if the task is running within MSBuild.</summary>
+      <param name="e">Event args to be logged.</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.LogWarning(System.String)">
+      <summary>Helper to log a warning string if the task is running within MSBuild.</summary>
+      <param name="warningMessage">String to be logged as a warning.</param>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.Task.LogWarningEvent(Microsoft.Build.Framework.BuildWarningEventArgs)">
+      <summary>Helper to log a warning event if the task is running within MSBuild.</summary>
+      <param name="e">Event args to be logged.</param>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Task.TeamFoundationServerUrl">
+      <summary>Property that gives the URL of the Team Foundation Server.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.Task.Tfs">
+      <summary>Lazy <see cref="init" /> property that gives access to the Team Foundation Server.</summary>
+      <returns>Returns <see cref="T:Microsoft.TeamFoundation.Client.TfsTeamProjectCollection" />.</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.TeamBuildTaskCompletedEventArgs"></member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.TeamBuildTaskCompletedEventArgs.#ctor"></member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TeamBuildTaskCompletedEventArgs.Successful">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.TeamBuildTaskStartedEventArgs"></member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.TeamBuildTaskStartedEventArgs.#ctor"></member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TeamBuildTaskStartedEventArgs.TaskDisplayText">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TeamBuildTaskStartedEventArgs.TaskType">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.TeamBuildTaskTrackingEventArgs"></member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.TeamBuildTaskTrackingEventArgs.#ctor"></member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TeamBuildTaskTrackingEventArgs.TaskId">
+      <returns>Returns <see cref="T:System.Guid" />.</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask">
+      <summary>MSBuild task to execute MSTest.exe.</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.#ctor"></member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.BuildFlavor">
+      <summary>Flavor of the build against which test results should be published.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.Category">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.ExitCode">
+      <returns>Returns <see cref="T:System.Int32" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.MaxPriority">
+      <summary>Specify the maximum priority for test execution. Only tests whose priority is less than or equal to this value will be executed. Specify -1 if you do not want to specify a maximum priority.</summary>
+      <returns>Returns <see cref="T:System.Int32" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.MetadataFile">
+      <summary>The metadata file that points to the test lists to execute.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.MinPriority">
+      <summary>Specify the minimum priority for test execution. Only tests whose priority is greater than or equal to this value will be executed. Specify -1 if you do not want to specify a minimum priority.</summary>
+      <returns>Returns <see cref="T:System.Int32" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.PathToResultsFilesRoot">
+      <summary>The root location where test results should be saved.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.Platform">
+      <summary>Platform of the build against which test results should be published.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.Publish">
+      <summary>Specify whether test results should be published.</summary>
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.PublishBuild">
+      <summary>Build identifier against which test results should be published This was replaced with <see cref="BuildUri" />. It is left here for backward compatibility.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.PublishServer">
+      <summary>The Team Foundation Server to which test results should be published This was replaced with <see cref="TeamFoundationServerUrl" />. It is left here for backward compatibility.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.RunConfigFile">
+      <summary>The run configuration file that contains the settings to perform the run.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.SearchPathRoot">
+      <summary>The root location where tests can be found.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.StandardErrorImportance">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.StandardOutputImportance">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.TeamFoundationServerUrl">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.TeamProject">
+      <summary>Team project against which test results should be published.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.TestConfigId">
+      <summary>Specify the ID of an existing test management configuration to associate with the published run.</summary>
+      <returns>Returns <see cref="T:System.Int32" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.TestConfigName">
+      <summary>Specify the name of an existing test management configuration to associate with the published run.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.TestContainers">
+      <summary>The test containers to run.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.TestLists">
+      <summary>The test lists to run.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.TestNames">
+      <summary>The names of tests in a test list or test container to run.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.Timeout">
+      <returns>Returns <see cref="T:System.Int32" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.ToolExe">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.TestToolsTask.ToolPath">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.WorkflowTask"></member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.WorkflowTask.#ctor"></member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.WorkflowTask.Extensions">
+      <returns>Returns <see cref="T:System.Collections.Generic.ICollection`1" />.</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.Build.Tasks.WorkspaceItemConverterTask"></member>
+    <member name="M:Microsoft.TeamFoundation.Build.Tasks.WorkspaceItemConverterTask.#ctor"></member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.WorkspaceItemConverterTask.LocalItems">
+      <summary>As input, the LocalItems to be converted to ServerItems. As output, the converted ServerItems.</summary>
+      <returns>Returns <see cref="T:Microsoft.Build.Framework.ITaskItem" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.WorkspaceItemConverterTask.ServerItems">
+      <summary>As input, the ServerItems to be converted to LocalItems. As output, the converted LocalItems.</summary>
+      <returns>Returns <see cref="T:Microsoft.Build.Framework.ITaskItem" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.WorkspaceItemConverterTask.WorkspaceName">
+      <summary>The name of the workspace that will be used for the conversion.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.Build.Tasks.WorkspaceItemConverterTask.WorkspaceOwner">
+      <summary>The owner of the workspace that will be used for the conversion.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+  </members>
+</doc>

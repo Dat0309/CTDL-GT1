@@ -1,0 +1,27 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <DefaultName>WindowsPhoneControl.xaml</DefaultName>
+    <Name Package="{7D4626A3-18C3-43A4-A66C-169D1D609803}" ID="1105" />
+    <Description Package="{7D4626A3-18C3-43A4-A66C-169D1D609803}" ID="1106" />
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>WindowsPhone</ProjectSubType>
+    <TemplateID>Microsoft.WindowsPhone.CSharp.UserControl</TemplateID>
+    <TemplateGroupID>Windows Phone</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+    <SortOrder>12</SortOrder>
+    <Icon>__TemplateIcon.ico</Icon>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>Microsoft.Phone</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>Microsoft.Phone.Interop</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem SubType="Designer" TargetFileName="$fileinputname$.xaml" OpenInEditor="true" ReplaceParameters="true" CustomTool="MSBuild:Compile">SilverlightControl1.xaml</ProjectItem>
+    <ProjectItem SubType="Code" TargetFileName="$fileinputname$.xaml.cs" ReplaceParameters="true">SilverlightControl1.xaml.cs</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

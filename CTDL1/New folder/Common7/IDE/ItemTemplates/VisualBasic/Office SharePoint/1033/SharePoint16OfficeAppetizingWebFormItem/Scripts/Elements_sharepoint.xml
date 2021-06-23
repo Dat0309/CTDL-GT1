@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Scripts">
+    <File Path="Scripts\_officeintellisense.js" Url="Scripts/_officeintellisense.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Office\MicrosoftAjax.js" Url="Scripts/Office/MicrosoftAjax.js" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

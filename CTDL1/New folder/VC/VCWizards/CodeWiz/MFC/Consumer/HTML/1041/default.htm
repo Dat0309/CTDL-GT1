@@ -1,0 +1,517 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<HTML DIR="LTR">
+
+<HEAD>
+	<TITLE>ODBC コンシューマー ウィザード</TITLE>
+	<META NAME="vs_targetSchema" CONTENT="http://schemas.microsoft.com/intellisense/ie5">
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=shift_jis">
+	<META HTTP-EQUIV="MSThemeCompatible" CONTENT="Yes">
+	<LINK ID="LINKURL" REL="stylesheet" HREF="../../../../../1041/NewStyles.css">
+	<SYMBOL NAME="CLASS_NAME" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="HEADER_FILE" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="IMPLEMENTATION_FILE" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="HEADER_FILE_VALID" TYPE=bool VALUE=false></SYMBOL>
+	<SYMBOL NAME="IMPLEMENTATION_FILE_VALID" TYPE=bool VALUE=false></SYMBOL>
+
+	<SYMBOL NAME="SNAPSHOT" TYPE=radio VALUE=false></SYMBOL>
+	<SYMBOL NAME="DYNASET" TYPE=radio VALUE=true></SYMBOL>
+
+	<SYMBOL NAME="ROWSET_CLASS_ODBC_DECL" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="ROWSET_CLASS_ODBC_IMPL" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="BIND_ALL_COLUMNS" TYPE=checkbox VALUE=true></SYMBOL>
+
+	<SYMBOL NAME="DB_CONNECTION_STRING" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="DB_TABLE" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="DB_SCHEMA" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="DB_CLASS_NAME" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="DB_STORED_PROCEDURE" TYPE=bool VALUE=false></SYMBOL>
+	<SYMBOL NAME="DTL_CODE" TYPE=text VALUE=""></SYMBOL>
+
+	<SYMBOL NAME="MERGE_FILE" TYPE=bool VALUE=false></SYMBOL>
+</HEAD>
+
+<BODY BGCOLOR="BUTTONFACE" TOPMARGIN="0" LEFTMARGIN="0" RIGHTMARGIN="0" BOTTOMMARGIN="0" ONLOAD="InitDocument(document);" ONKEYDOWN="OnKey();" ONKEYPRESS="OnPress();">
+
+<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<COL WIDTH="100%">
+  <TR VALIGN="TOP">
+	<TD HEIGHT="79">
+	<!--OPEN OF ALL ENCOMPASSING TABLE ROW ONE//-->
+	 <TABLE CLASS="TWO" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	 <COL WIDTH="12"><COL><COL WIDTH="12">
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+
+	   <TD VALIGN="TOP" HEIGHT="12">
+	  	&nbsp;
+	   </TD>
+
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+
+	   <TD CLASS="IMAGE" VALIGN="BOTTOM" WIDTH="110" ROWSPAN="2">
+		<DIV CLASS="SMALLA" ID="Layer0">
+		 <IMG CLASS="SMALLEST" SRC="..\..\Images\MConsumer.gif" WIDTH="63" HEIGHT="63" ALT="" BORDER="0">
+		</DIV>
+	   </TD>
+
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="6" ROWSPAN="2">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+
+	   <TD VALIGN="TOP" HEIGHT="65">
+		<H4 CLASS="HEAD" ID="HEAD">MFC ODBC コンシューマー ウィザードへようこそ</H4>
+		<P CLASS="SUBHEAD" ID="SUBHEAD">このウィザードは、ODBC コンシューマー クラスをプロジェクトに追加します。</P>
+	   </TD>
+
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+
+	  <TR>
+	   <TD VALIGN="TOP" CLASS="RULE" COLSPAN="5" HEIGHT="2">
+		<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+	  	 <TR VALIGN="TOP">
+	  	  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+	  	  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+	  	 </TR>
+		</TABLE>
+	   </TD>
+	  </TR>
+	 </TABLE>
+
+	<!--CLOSE OF ALL ENCOMPASSING TABLE ROW ONE//-->
+	</TD>
+	</TR>
+	<TR VALIGN="TOP">
+	<TD HEIGHT="100%">
+	<!--OPEN OF ALL ENCOMPASSING TABLE ROW TWO//-->
+
+	 <TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	 <COL>
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="100%">
+	   <!--OPEN OF CONTENT AND BUTTON TABLE//-->
+
+	   	<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+		<COL WIDTH="100%">
+		 <TR VALIGN="TOP">
+		  <TD HEIGHT="100%">
+	   	  <!--OPEN OF CONTENT//-->
+
+		  	<TABLE CLASS="CONTENT" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL WIDTH="185"><COL WIDTH="12"><COL WIDTH="178"><COL WIDTH="12"><COL WIDTH="193"><COL WIDTH="12">
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="7">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+
+ 			 <TR VALIGN="TOP">
+ 			 <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" COLSPAN="5">
+   				<SPAN CLASS="itemText" ID="DATA_SOURCE_SPAN">データ ソース:
+	  				 <P CLASS="Spacer">&nbsp;</P>
+
+	  				 <BUTTON ID="DATASOURCE_BUTTON" ACCESSKEY="S" TYPE="BUTTON" TITLE="既存のデータベースをアプリケーション データ ソースに指定してください。" onClick="OnSelectDataSource();">データ ソース(<U>S</U>)...</BUTTON>
+				</SPAN>
+  		  	  </TD>
+			  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+ 		  	 </TR>
+
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="5" COLSPAN="7">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+
+ 			 <TR VALIGN="TOP">
+ 			 <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP">
+				<SPAN CLASS="itemText" ID="CLASS_NAME_TITLE" TITLE="生成したクラス名">
+	  	 			 <LABEL FOR="CLASS_NAME" ID="CLASS_NAME_LABEL" TITLE="生成したクラス名">クラス(<U>L</U>):</LABEL>
+	  	 			 <BR>
+	  	 			 <INPUT CLASS="sideBtnThreeColumn" ID="CLASS_NAME" ACCESSKEY="L" TITLE="生成したクラス名" TYPE="text">
+				</SPAN>
+  		  	  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+  			  <TD VALIGN="TOP">
+			  	<NOBR>
+				 <SPAN CLASS="itemText" ID="HEADER_FILE_TITLE" TITLE="生成したヘッダー ファイル">
+	  	 			<LABEL FOR="HEADER_FILE" ID="HEADER_FILE_LABEL" TITLE="生成したヘッダー ファイル">.h ファイル(<u>E</u>):</LABEL>
+	  	 			<BR>
+	  	 			<INPUT CLASS="sideBtn21A" ID="HEADER_FILE" ACCESSKEY="E" TITLE="生成したヘッダー ファイル" TYPE="text" onPropertyChange="window.external.AddSymbol('HEADER_FILE_VALID', false);">
+				 	<BUTTON CLASS="buttonClass3Custom" ID="BrowseBtnHeader" TYPE="BUTTON" TITLE="ヘッダー ファイルを参照します。" onClick="OnBrowseHeaderFile();">...</BUTTON>
+				 </SPAN>
+				</NOBR>
+			  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+  			  <TD VALIGN="TOP">
+			  	<NOBR>
+				 <SPAN CLASS="itemText" ID="IMPLEMENTATION_FILE_TITLE" TITLE="生成した実装ファイル">
+	  	 			<LABEL FOR="IMPLEMENTATION_FILE" ID="IMPLEMENTATION_FILE_LABEL" TITLE="生成した実装ファイル">.cpp ファイル(<U>P</U>):</LABEL>
+	  	 			<BR>
+	  	 			<INPUT CLASS="sideBtn21A" ID="IMPLEMENTATION_FILE" ACCESSKEY="P" TITLE="生成した実装ファイル" TYPE="text" onPropertyChange="window.external.AddSymbol('IMPLEMENTATION_FILE_VALID', false);">
+				 	<BUTTON CLASS="buttonClass3Custom" ID="BrowseBtnImpl" TYPE="BUTTON" TITLE="実装ファイルを参照します。" onClick="OnBrowseImplFile();">...</BUTTON>
+				 </SPAN>
+				</NOBR>
+			  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+ 		  	 </TR>
+
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="7">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+
+ 			 <TR VALIGN="TOP">
+ 			 <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP">
+ 				<SPAN CLASS="itemText" ID="TYPE_SPAN">種類:
+					 <P CLASS="Spacer">&nbsp;</P>
+
+	  				 <INPUT TYPE="radio" CLASS="Radio" ACCESSKEY="Y" TITLE="レコードセットは常にデータ ソースと同期します。" NAME="type" ID="DYNASET">
+	  	 			 <DIV CLASS="itemTextRadioB" ID="DYNASET_DIV" TITLE="レコードセットは常にデータ ソースと同期します。">
+	      			  <LABEL FOR="DYNASET" ID="DYNASET_LABEL">ダイナセット(<U>Y</U>)</LABEL>
+	  	 			 </DIV>
+
+					 <BR>
+
+	  				 <INPUT TYPE="radio" CLASS="Radio" ACCESSKEY="N" TITLE="レコードセットはスナップショットが作成されたときに存在したデータのスタティック ビューを反映します。" NAME="type" ID="SNAPSHOT">
+	  	 			 <DIV CLASS="itemTextRadioB" ID="SNAPSHOT_DIV" TITLE="レコードセットはスナップショットが作成されたときに存在したデータのスタティック ビューを反映します。">
+	      			  <LABEL FOR="SNAPSHOT" ID="SNAPSHOT_LABEL" TITLE="レコードセットはスナップショットが作成されたときに存在したデータのスタティック ビューを反映します。">スナップショット(<u>N</u>)</LABEL>
+	  	 			 </DIV>
+				</SPAN>
+			  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+  			  <TD VALIGN="TOP" COLSPAN="3">
+			  	<SPAN CLASS="itemText" ID="BIND_ALL_COLUMNS_SPAN" TITLE="ユーザーのテーブルのすべての列に自動的にバインドします。">
+	  				 <INPUT CLASS="CheckBox" TYPE="checkbox" ID="BIND_ALL_COLUMNS" ACCESSKEY="B" TITLE="ユーザーのテーブルのすべての列に自動的にバインドします。">
+	  	 			 <DIV CLASS="itemTextCheckboxA" ID="ATTRIBUTED_DIV" TITLE="ユーザーのテーブルのすべての列に自動的にバインドします。">
+		  			  <LABEL FOR="BIND_ALL_COLUMNS" ID="BIND_ALL_COLUMNS_LABEL" TITLE="ユーザーのテーブルのすべての列に自動的にバインドします。">すべての列をバインド(<u>B</u>)</LABEL>
+	  	 			 </DIV>
+				</SPAN>
+			  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+ 		  	 </TR>
+
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="100%" COLSPAN="7">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+		 	</TABLE>
+
+	   	  <!--CLOSE OF CONTENT//-->
+		  </TD>
+		 </TR>
+		 <TR VALIGN="BOTTOM">
+		  <TD>
+	   	  <!--OPEN OF BUTTON HTML//-->
+
+		  	<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="12">
+			 <TR>
+  			  <TD VALIGN="TOP" CLASS="RULE" COLSPAN="8" HEIGHT="2">
+				<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+  	 			 <TR VALIGN="TOP">
+  	  			  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+  	  			  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+  	 			 </TR>
+				</TABLE>
+  			  </TD>
+ 			  </TR>
+
+ 			  <TR>
+  			  <TD VALIGN="TOP" HEIGHT="11" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+
+ 			<TR>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" HEIGHT="23">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="FinishBtn" onClick="OnFinish(document);">完了</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="CancelBtn" onClick="window.external.Finish(document, 'cancel');">キャンセル</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="HelpBtn" onClick="window.external.OnHelp('vc.codewiz.class.mfc.consumer.overview');">ヘルプ</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			</TABLE>
+
+	   	  <!--CLOSE OF BUTTON HTML//-->
+		  </TD>
+		 </TR>
+		</TABLE>
+
+	   <!--CLOSE OF CONTENT AND BUTTON TABLE//-->
+	   </TD>
+	  </TR>
+	 </TABLE>
+
+	<!--CLOSE OF ALL ENCOMPASSING TABLE ROW TWO//-->
+	</TD>
+  </TR>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<SCRIPT LANGUAGE="JSCRIPT">
+
+var tab_array = new Array();
+
+function InitDocument(document)
+{
+	setDirection();
+
+	if (window.external.FindSymbol("DOCUMENT_FIRST_LOAD"))
+	{
+		var L_WizardDialogTitle_Text = "MFC ODBC コンシューマー ウィザード";
+		window.external.AddSymbol("WIZARD_DIALOG_TITLE", L_WizardDialogTitle_Text);
+		window.external.SetDefaults(document);
+	}
+	window.external.Load(document);
+	CLASS_NAME.disabled = true;
+	HEADER_FILE.disabled = true;
+	CLASS_NAME_LABEL.disabled = true;
+	HEADER_FILE_LABEL.disabled = true;
+	IMPLEMENTATION_FILE.disabled = true;
+	IMPLEMENTATION_FILE_LABEL.disabled = true;
+	BrowseBtnHeader.disabled = true;
+	BrowseBtnImpl.disabled = true;
+}
+
+function OnSelectDataSource()
+{
+	try
+	{
+		var strConnectString = window.external.SelectODBCDatabase();
+	}
+	catch(e)
+	{
+		var L_ErrMsg_Text = "SelectDataSource() のエラーです。";
+		if (e.description.length != 0)
+		{
+			L_ErrMsg_Text += ": ";
+			L_ErrMsg_Text += e.description;
+		}
+		window.external.ReportError(L_ErrMsg_Text);
+		return;
+	}
+	var strClassName = window.external.FindSymbol("DB_CLASS_NAME");
+	if (strConnectString.length > 1 && strClassName.length > 1)
+	{
+		CLASS_NAME.value = strClassName;
+		HEADER_FILE.value = strClassName.substr(1) + ".h";
+		IMPLEMENTATION_FILE.value = strClassName.substr(1) + ".cpp";
+		CLASS_NAME.disabled = false;
+		HEADER_FILE.disabled = false;
+		IMPLEMENTATION_FILE.disabled = false;
+		CLASS_NAME_LABEL.disabled = false;
+		HEADER_FILE_LABEL.disabled = false;
+		IMPLEMENTATION_FILE_LABEL.disabled = false;
+		BrowseBtnHeader.disabled = false;
+		BrowseBtnImpl.disabled = false;
+	}
+}
+
+function Next(document, linkto)
+{
+	window.external.Next(document, linkto);
+}
+
+function OnFinish(document)
+{
+	if (window.external.FindSymbol("DB_CLASS_NAME") == "")
+	{
+		var L_ErrMsg1_Text = "データソースを選択してください。";
+		window.external.ReportError(L_ErrMsg1_Text);
+		return;
+	}
+	if (!ValidateInput())
+		return;
+
+	OnWizFinish(document);
+}
+
+function OnBrowseHeaderFile()
+{
+	var strFile;
+	try
+	{
+		L_Title1_Text = "VS ウィザードの選択ファイル";
+		L_Title2_Text = "Visual C++ ヘッダー ファイル (*.h)\0*.h\0\0";
+		strFile = window.external.GetOpenFileNameViaDlg(L_Title1_Text, window.external.FindSymbol("PROJECT_PATH"), L_Title2_Text, HEADER_FILE.value);
+	}
+	catch(e)
+	{
+		if (e.number != OLE_E_PROMPTSAVECANCELLED)
+		{
+			var L_ErrMsg2_Text = "OnBrowseHeaderFile() でエラーが発生しました。";
+			if (e.description.length != 0)
+			{
+				L_ErrMsg2_Text += ": ";
+				L_ErrMsg2_Text += e.description;
+			}
+			window.external.ReportError(L_ErrMsg2_Text);
+		}
+		return;
+	}
+	HEADER_FILE.value = strFile;
+}
+
+function OnBrowseImplFile()
+{
+	var strFile;
+	try
+	{
+		L_Title3_Text = "VS ウィザードの選択ファイル";
+		L_Title4_Text = "Visual C++ ファイル (*.cpp;*.h;*.inl;*.c)\0*.cpp;*.h;*.inl;*.c\0\0";
+		strFile = window.external.GetOpenFileNameViaDlg(L_Title3_Text, window.external.FindSymbol("PROJECT_PATH"), L_Title4_Text, IMPLEMENTATION_FILE.value);
+	}
+	catch(e)
+	{
+		if (e.number != OLE_E_PROMPTSAVECANCELLED)
+		{
+			var L_ErrMsg3_Text = "OnBrowseImplFile() でエラーが発生しました。";
+			if (e.description.length != 0)
+			{
+				L_ErrMsg3_Text += ": ";
+				L_ErrMsg3_Text += e.description;
+			}
+			window.external.ReportError(L_ErrMsg3_Text);
+		}
+		return;
+	}
+	IMPLEMENTATION_FILE.value = strFile;
+}
+
+function ValidateInput()
+{
+	var oInvalid = null;
+
+	if (!CLASS_NAME.disabled)
+		if (!Validate(CLASS_NAME))
+			oInvalid = CLASS_NAME;
+
+	if (oInvalid == null && !HEADER_FILE.disabled)
+		if (!Validate(HEADER_FILE))
+			oInvalid = HEADER_FILE;
+
+	if (oInvalid == null && !IMPLEMENTATION_FILE.disabled)
+		if (!Validate(IMPLEMENTATION_FILE))
+			oInvalid = IMPLEMENTATION_FILE;
+
+	if (oInvalid != null)
+	{
+		if (gbShowError)
+			window.external.ReportError();
+		else
+			gbShowError = true;
+		oInvalid.focus();
+		return false;
+	}
+	return true;
+}
+
+var gbShowError = true;
+
+function Validate(obj)
+{
+	var bValid = true;
+	switch(obj.id)
+	{
+		case "CLASS_NAME":
+			bValid = window.external.ParentObject.ValidateMember(CLASS_NAME.value, vsCMElementClass);
+			break;
+		case "HEADER_FILE":
+			if (!window.external.FindSymbol("HEADER_FILE_VALID"))
+			{
+				gbShowError = bValid = CanUseFileName(obj.value, true);
+				if (!bValid)
+					break;
+				window.external.AddSymbol("HEADER_FILE_VALID", true)
+			}
+			bValid = ValidateFileNameAndEnsureInProject(obj.value, vsCMValidateFileExtCpp);
+			break;
+		case "IMPLEMENTATION_FILE":
+			if (!window.external.FindSymbol("IMPLEMENTATION_FILE_VALID"))
+			{
+				gbShowError = bValid = CanUseFileName(obj.value, false, false, true);
+				if (!bValid)
+					break;
+				window.external.AddSymbol("IMPLEMENTATION_FILE_VALID", true)
+			}
+			bValid = ValidateFileNameAndEnsureInProject(obj.value, vsCMValidateFileExtCppSource);
+			break;
+		default:
+			break;
+	}
+
+	if (typeof(bValid) == "undefined")
+		bValid = false;
+
+	return bValid;
+}
+
+</SCRIPT>
+<SCRIPT ID="INCLUDE_SCRIPT" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT ID="INCLUDE_COMMON" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT>
+	document.scripts("INCLUDE_SCRIPT").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Script.js";
+	document.scripts("INCLUDE_COMMON").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Common.js";
+</SCRIPT>

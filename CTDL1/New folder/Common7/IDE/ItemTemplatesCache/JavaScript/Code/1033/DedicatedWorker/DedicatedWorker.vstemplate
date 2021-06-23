@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name _locID="JSP_Item_DedicatedWorkerName">Dedicated Worker</Name>
+    <Description _locID="JSP_Item_DedicatedWorkerDesc">A background worker for running scripts in parallel to the main application. This allows for thread-like operation with message-passing as the coordination mechanism.</Description>
+    <Icon>DedicatedWorker.ico</Icon>
+    <TemplateID>Microsoft.JavaScript.DedicatedWorker</TemplateID>
+    <TemplateGroupID>JavaScript_Neutral_GroupID</TemplateGroupID>
+    <ProjectType>JavaScript</ProjectType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>worker.js</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem>worker.js</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

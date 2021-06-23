@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Get Information About a File </Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Obtains an object containing information about a file.</Description>
+      <Shortcut>filFileInfo</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.IO</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>Filename</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the file name.</ToolTip>
+          <Default>"C:\Test.txt"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim fileData As FileInfo = My.Computer.FileSystem.GetFileInfo($Filename$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

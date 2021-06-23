@@ -1,0 +1,6 @@
+﻿// Pour plus d'informations sur la localisation d'une application Windows, consultez : http://go.microsoft.com/fwlink/?LinkId=212836
+
+{
+    "greeting"              : "Hello World!",
+    "_greeting.comment"     : "Commentaire à l'intention du localiseur"
+}

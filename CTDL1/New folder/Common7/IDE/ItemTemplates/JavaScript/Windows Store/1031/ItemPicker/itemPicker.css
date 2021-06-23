@@ -1,0 +1,137 @@
+﻿.$safeitemname$ {
+    /* Ein Raster mit Zeilen für Befehle und Elemente definieren */
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 75px 1fr;
+    display: -ms-grid;
+    height: 100%;
+    width: 100%;
+}
+
+    .$safeitemname$ .commandbar {
+        height: 100%;
+        list-style-type: none;
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-top: 13px;
+        width: 100%;
+    }
+
+        .$safeitemname$ .commandbar li {
+            display: inline;
+            font-family: "Segoe UI Light";
+            margin-left: 20px;
+            margin-right: 20px;
+            opacity: 0.6;
+        }
+
+            .$safeitemname$ .commandbar li:hover {
+                opacity: 1.0;
+            }
+
+    .$safeitemname$ .pickerlist {
+        -ms-grid-row: 2;
+        height: 100%;
+        width: 100%;
+    }
+
+        /* Diese Auswahl wird verwendet, damit "ui-dark/light.css" keine Änderungen
+           an ".win-surface" überschreiben kann. */
+        .$safeitemname$ .pickerlist .win-horizontal.win-viewport .win-surface {
+            margin-bottom: 20px;
+            margin-left: 115px;
+            margin-right: 115px;
+        }
+
+        .$safeitemname$ .pickerlist .item {
+            height: 130px;
+            width: 190px;
+        }
+
+            .$safeitemname$ .pickerlist .item .item-image {
+                height: 130px;
+                width: 190px;
+            }
+
+        /* Die QuickInfo standardmäßig ausblenden. */
+        .$safeitemname$ .pickerlist .win-template > .pickerlist-tooltip {
+            display: none;
+        }
+
+/* QuickInfo-Stile für die Auswahllistenelemente. */
+.win-tooltip {
+    background-color: inherit;
+    color: inherit;
+    max-width: none;
+    padding: 0;
+}
+
+.pickerlist-tooltip {
+    -ms-grid-columns: auto 20px auto;
+    display: -ms-grid;
+    padding: 20px;
+}
+
+    .pickerlist-tooltip .tooltip-image-column {
+        -ms-flex-align: center;
+        -ms-grid-column: 1;
+        background-color: #3d3d3d;
+        display: -ms-flexbox;
+        height: 160px;
+        width: 160px;
+    }
+
+        .pickerlist-tooltip .tooltip-image-column .tooltip-image {
+            height: 120px;
+            width: 160px;
+        }
+
+    .pickerlist-tooltip .tooltip-body-column {
+        -ms-grid-column: 3;
+        font-weight: normal;
+        height: 160px;
+        margin-top: 4px;
+        width: 200px;
+    }
+
+        .pickerlist-tooltip .tooltip-body-column .tooltip-body {
+            margin-top: 4px;
+            opacity: 0.87;
+        }
+
+        .pickerlist-tooltip .tooltip-body-column .tooltip-body-secondary {
+            opacity: 0.60;
+            white-space: normal;
+        }
+
+@media (max-width: 499px) {
+    .$safeitemname$ {
+        -ms-grid-rows: 55px 1fr;
+    }
+
+        .$safeitemname$ .commandbar {
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: 14px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+            .$safeitemname$ .commandbar .up-button {
+                font-size: 11pt;
+            }
+
+        .$safeitemname$ .pickerlist .win-vertical.win-viewport .win-surface {
+            margin-bottom: 20px;
+            margin-left: 13px;
+            margin-right: 13px;
+        }
+
+            .$safeitemname$ .pickerlist .win-vertical.win-viewport .win-surface .win-itemsblock {
+                overflow: visible;
+            }
+
+        .$safeitemname$ .pickerlist .win-container {
+            height: 130px;
+            width: 190px;
+        }
+}

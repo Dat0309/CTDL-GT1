@@ -1,0 +1,81 @@
+﻿<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name Package="{349c5850-65df-11da-9384-00065b846f21}" ID="1001" />
+    <Description Package="{349c5850-65df-11da-9384-00065b846f21}" ID="1002" />
+    <Icon Package="{349c5850-65df-11da-9384-00065b846f21}" ID="9001" />
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>Web</ProjectSubType>
+    <TemplateGroupID>Web</TemplateGroupID>
+    <TemplateID>Microsoft.WAP.CSharp.WebFormsBasic</TemplateID>
+    <SortOrder>15</SortOrder>
+    <RequiredFrameworkVersion>4.5</RequiredFrameworkVersion>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>WebApplication</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="WebApplication.csproj" ReplaceParameters="true">
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+
+      <Folder Name="App_Data" TargetFolderName="App_Data"/>
+      <Folder Name="App_Start" TargetFolderName="App_Start">
+        <ProjectItem ReplaceParameters="true" TargetFileName="BundleConfig.cs">BundleConfig.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Content" TargetFolderName="Content">
+        <ProjectItem ReplaceParameters="false" TargetFileName="Site.css">Site.css</ProjectItem>
+      </Folder>
+      <Folder Name="Scripts">
+        <ProjectItem ReplaceParameters="false" TargetFileName="_references.js">_references.js</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="About.aspx">About.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="About.aspx.cs">About.aspx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="About.aspx.designer.cs">About.aspx.designer.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Contact.aspx">Contact.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Contact.aspx.cs">Contact.aspx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Contact.aspx.designer.cs">Contact.aspx.designer.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Default.aspx">Default.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Default.aspx.cs">Default.aspx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Default.aspx.designer.cs">Default.aspx.designer.cs</ProjectItem>
+      <ProjectItem>favicon.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax">Global.asax</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax.cs">Global.asax.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Site.Master">Site.Master</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Site.Master.cs">Site.Master.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Site.Master.designer.cs">Site.Master.designer.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.config">Web.config</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Bundle.config">Bundle.config</ProjectItem>
+      <ProjectItem ReplaceParameters="false" OpenInWebBrowser="true" TargetFileName="Project_Readme.html">Project_Readme.html</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <packages repository="registry" keyName="WebFormsVS12" isPreunzipped="true">
+      <package id="jQuery" version="1.10.2" />
+      <package id="Respond" version="1.2.0" />
+      <package id="Modernizr" version="2.6.2" />
+      <package id="bootstrap" version="3.0.0" />
+      <package id="WebGrease" version="1.5.2" skipAssemblyReferences="true" />
+      <package id="Antlr" version="3.4.1.9004" skipAssemblyReferences="true" />
+      <package id="Newtonsoft.Json" version="6.0.4" skipAssemblyReferences="true" />
+      <package id="Microsoft.AspNet.Web.Optimization" version="1.1.3" skipAssemblyReferences="true" />
+      <package id="AspNet.ScriptManager.bootstrap" version="3.0.0" skipAssemblyReferences="true" />
+      <package id="AspNet.ScriptManager.jQuery" version="1.10.2" skipAssemblyReferences="true" />
+      <package id="Microsoft.AspNet.ScriptManager.MSAjax" version="5.0.0" skipAssemblyReferences="true" />
+      <package id="Microsoft.AspNet.ScriptManager.WebForms" version="5.0.0" skipAssemblyReferences="true" />
+      <package id="Microsoft.Web.Infrastructure" version="1.0.0.0" skipAssemblyReferences="true" />
+      <package id="Microsoft.AspNet.Web.Optimization.WebForms" version="1.1.3" skipAssemblyReferences="true" />
+      <package id="Microsoft.AspNet.FriendlyUrls.Core" version="1.0.2" skipAssemblyReferences="true" />
+      <package id="Microsoft.AspNet.FriendlyUrls" version="1.0.2" skipAssemblyReferences="true" />
+     
+    </packages>
+  </WizardData>
+</VSTemplate>

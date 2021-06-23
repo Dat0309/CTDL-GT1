@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Read an Excel Built-In Property</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Reads a built-in property from an Excel workbook.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Excel.dll</Assembly>
+          <Url></Url>
+        </Reference>
+        <Reference>
+          <Assembly>Office.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Excel = Microsoft.Office.Interop.Excel</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Office = Microsoft.Office.Core</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>propertyName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the name of the built-in property to read.</ToolTip>
+          <Default>"Title"</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>propertyValue</ID>
+          <Type>Microsoft.Office.Core.DocumentProperty</Type>
+          <ToolTip>Replace with an object that can store the value of the property.</ToolTip>
+          <Default>propertyValue</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>workbook</ID>
+          <Type>Microsoft.Office.Interop.Excel.Workbook</Type>
+          <ToolTip>Replace with the workbook to read the built-in property from.</ToolTip>
+          <Default>workbook</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="" Delimiter="$"><![CDATA[
+Dim docProperties As Office.DocumentProperties = CType($workbook$.BuiltinDocumentProperties, Office.DocumentProperties)
+Dim $propertyValue$ As Office.DocumentProperty = CType(docProperties.Item($propertyName$), Office.DocumentProperty)
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

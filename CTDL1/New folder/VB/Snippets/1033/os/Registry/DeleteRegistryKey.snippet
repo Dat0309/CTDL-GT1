@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Delete a Registry Key</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Deletes a registry key.</Description>
+      <Shortcut>regDel</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.Win32</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>SubKey</ID>
+          <ToolTip>Replace with key in registry.</ToolTip>
+          <Default>"Software"</Default>
+        </Literal>
+        <Literal>
+          <ID>KeyToDelete</ID>
+          <ToolTip>Replace with key to delete.</ToolTip>
+          <Default>"KeyToDelete"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Using key As RegistryKey = My.Computer.Registry.LocalMachine.OpenSubKey($SubKey$)
+    key.DeleteSubKey($KeyToDelete$)
+End Using]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

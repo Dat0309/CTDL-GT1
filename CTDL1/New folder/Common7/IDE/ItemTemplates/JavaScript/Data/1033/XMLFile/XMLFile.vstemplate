@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name _locID="JSP_Item_XMLFileName">XML File</Name>
+    <Description _locID="JSP_Item_XMLFileDesc">A blank XML file.</Description>
+    <Icon>XMLFile.ico</Icon>
+    <TemplateID>Microsoft.JavaScript.XMLFile</TemplateID>
+    <TemplateGroupID>JavaScript_Neutral_GroupID</TemplateGroupID>
+    <ProjectType>JavaScript</ProjectType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>xmlfile.xml</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem>XMLFile.xml</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

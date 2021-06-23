@@ -1,0 +1,330 @@
+{
+    "start_url": "Views\\XAMLProfiler.html",
+    "domain": "http://microsoft.com",
+    "name":"Xaml Profiler",
+    "version":"1.0",
+    "resource_aliases": {
+        "Resources": {
+            "path": "Resources\\XAMLProfilerResources",
+            "is_default": true 
+        },
+        "DiagnosticsHubControlsResources": {
+            "path": "..\\..\\Platform\\DiagnosticsHub\\WebViews\\DiagnosticsHub.Javascript.Controls.ScriptResources",
+            "is_default": false 
+        }
+    },
+    "file_aliases": {
+        "DiagnosticsHub.DataWarehouseHost": {}
+    },
+    "vs": {
+        "theme_token_aliases": {
+           "vs-combo-box-background-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "ComboBoxBackground"
+            },
+            "vs-combo-box-border-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "ComboBoxBorder"
+            },
+            "vs-combo-box-disabled-background-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "ComboBoxDisabledBackground"
+            },
+            "vs-combo-box-disabled-border-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "ComboBoxDisabledBorder"
+            },
+            "vs-combo-box-popup-background-begin-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "ComboBoxPopupBackgroundBegin"
+            },
+            "vs-combo-box-popup-background-end-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "ComboBoxPopupBackgroundEnd"
+            },
+            "vs-combo-box-popup-border-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "ComboBoxPopupBorder"
+            },
+            "vs-command-bar-gradient-begin-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "CommandBarGradientBegin"
+           },
+            "vs-command-bar-hover-over-selected-icon-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "CommandBarHoverOverSelectedIcon"
+            },
+            "vs-command-bar-mouse-down-background-begin-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "CommandBarMouseDownBackgroundBegin"
+            },
+            "vs-command-bar-mouse-down-background-end-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "CommandBarMouseDownBackgroundEnd"
+            },
+            "vs-command-bar-mouse-down-border-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "CommandBarMouseDownBorder"
+            },
+            "vs-command-bar-mouse-over-background-begin-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "CommandBarMouseOverBackgroundBegin"
+            },
+            "vs-command-bar-mouse-over-background-middle1-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "CommandBarMouseOverBackgroundMiddle1"
+            },
+            "vs-command-bar-options-background-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "CommandBarOptionsBackground"
+            },
+            "vs-command-bar-selected-border-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "CommandBarSelectedBorder"
+            },
+            "vs-command-bar-selected-icon-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "CommandBarSelectedIcon"
+            },
+            "vs-command-bar-split-button-separator-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "CommandBarSplitButtonSeparator"
+            },
+            "vs-command-bar-text-inactive-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "CommandBarTextInactive"
+            },
+            "vs-command-bar-text-selected-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "CommandBarTextSelected"
+            },
+            "vs-designer-selection-dots-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "DesignerSelectionDots"
+            },
+            "vs-dropdown-disabled-border-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "DropDownDisabledBorder"
+            },
+            "vs-file-tab-inactive-text-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "FileTabInactiveText"
+            },
+            "vs-file-tab-selected-background-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "FileTabSelectedBackground"
+            },
+            "vs-highlight-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "Highlight"
+            },
+            "vs-inactive-caption-text-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "InactiveCaptionText"
+            },
+            "vs-main-window-button-down-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "MainWindowButtonDown"
+            },
+           "vs-main-window-button-down-glyph-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "MainWindowButtonDownGlyph"
+            },
+            "vs-main-window-button-hover-active-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "MainWindowButtonHoverActive"
+            },
+            "vs-new-project-item-inactive-begin-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "NewProjectItemInactiveBegin"
+            },
+            "vs-panel-hyperlink-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "PanelHyperlink"
+            },
+            "vs-scroll-bar-thumb-background-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "ScrollBarThumbBackground"
+            },
+            "vs-start-page-text-heading-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "StartPageTextHeading"
+            },
+            "vs-start-page-text-sub-heading-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "StartPageTextSubHeading"
+            },
+            "vs-start-page-text-sub-heading-mouse-over-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "StartPageTextSubHeadingMouseOver"
+            },
+            "vs-start-page-text-sub-heading-selected-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "StartPageTextSubHeadingSelected"
+            },
+            "vs-system-window-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "Window"
+            },
+            "vs-system-window-frame-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "WindowFrame"
+            },
+            "vs-system-window-text-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "WindowText"
+            },
+            "vs-toolbox-background-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "ToolboxBackground"
+            },
+            "vs-tool-window-background-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "ToolWindowBackground"
+            },
+            "vs-tool-window-button-inactive-glyph-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "ToolWindowButtonInactiveGlyph"
+            },
+            "vs-tool-window-text-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "ToolWindowText"
+            },
+            "vs-tree-view-selected-item-inactive-color": {
+                "category": "92ecf08e-8b13-4cf4-99e9-ae2692382185",
+                "key_type": "BackgroundColor",
+                "name": "SelectedItemInactive"
+            },
+            "vs-tab-inactive-border-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "AutoHideTabBorder"
+            },
+            "vs-tab-inactive-text-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "AutoHideTabText"
+            },
+            "vs-tab-inactive-background-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "AutoHideTabBackgroundBegin"
+            },
+            "vs-tab-active-border-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "AutoHideTabMouseOverBorder"
+            },
+            "vs-tab-active-text-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "AutoHideTabMouseOverText"
+            },
+            "vs-tab-active-background-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "AutoHideTabMouseOverBackgroundBegin"
+            },
+            "diagnostics-host-graph-line": {
+                "category": "f8a8b2a5-dd35-43f6-a382-fd6a61325c22",
+                "key_type": "BackgroundColor",
+                "name": "GraphLine"
+            },
+            "plugin-perftools-splitter": {
+                "category": "634eef98-6af2-4f63-8d9f-36351e18b606",
+                "key_type": "BackgroundColor",
+                "name": "Splitter"
+            },
+            "plugin-responsiveness-graph-border": {
+                "category": "6ADCF200-0249-47F3-B14F-AB041A443E9B",
+                "key_type": "BackgroundColor",
+                "name": "GraphBorder"
+            },
+             "plugin-perftools-detail-pane": {
+                "category": "634eef98-6af2-4f63-8d9f-36351e18b606",
+                "key_type": "BackgroundColor",
+                "name": "DetailPane"
+            },
+             "diagnostics-host-swimlane-border": {
+                "category": "f8a8b2a5-dd35-43f6-a382-fd6a61325c22",
+                "key_type": "BackgroundColor",
+                "name": "SwimlaneBorder"
+            },
+            "diagnostics-host-graph-scale": {
+                "category": "f8a8b2a5-dd35-43f6-a382-fd6a61325c22",
+                "key_type": "BackgroundColor",
+                "name": "GraphScale"
+            },
+            "diagnostics-host-graph-cursor": {
+                "category": "f8a8b2a5-dd35-43f6-a382-fd6a61325c22",
+                "key_type": "BackgroundColor",
+                "name": "GraphCursor"
+            }
+        },
+        "themed_images": {
+            "vs-image-icon-tree-expanded": {
+                "bitmap_source": "Views\\CSS\\images\\itemExpandedIcon.png",
+                "background_color": "vs-tool-window-background-color"
+            },
+            "vs-image-icon-tree-collapsed": {
+                "bitmap_source": "Views\\CSS\\images\\itemCollapsedIcon.png",
+                "background_color": "vs-tool-window-background-color"
+            },
+            "vs-image-graph-user-mark": {
+                "bitmap_source": "Views\\CSS\\images\\i_usermark.png",
+                "background_color": "vs-tool-window-background-color"
+            },
+            "vs-image-graph-app-event": {
+                "bitmap_source": "Views\\CSS\\images\\i_appevent.png",
+                "background_color": "vs-tool-window-background-color"
+            },
+             "vs-image-graph-aggregated-event": {
+                "bitmap_source": "Views\\CSS\\images\\CustomMark5_18x.png",
+                "background_color": "plugin-background-color"
+            }
+        }
+    }
+}

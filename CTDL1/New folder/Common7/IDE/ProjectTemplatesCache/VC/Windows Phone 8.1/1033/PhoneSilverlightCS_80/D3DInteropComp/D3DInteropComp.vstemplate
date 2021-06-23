@@ -1,0 +1,33 @@
+﻿<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>D3DInteropComp</Name>
+    <Description>Direct3D Interop Component</Description>
+    <ProjectType>VC</ProjectType>
+    <ProjectSubType>WindowsPhone</ProjectSubType>
+    <TemplateID>Microsoft.WindowsPhone.VC.D3DInteropComp</TemplateID>
+    <TemplateGroupID>Windows Phone</TemplateGroupID>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>$safeprojectname$Comp</DefaultName>
+    <Hidden>true</Hidden>
+    <TargetPlatformName>WindowsPhone</TargetPlatformName>
+    <RequiredPlatformVersion>6.2.0</RequiredPlatformVersion>
+  </TemplateData>
+  <TemplateContent BuildOnLoad="true">
+    <Project TargetFileName="$safeprojectname$Comp.vcxproj" File="D3DInteropComp.vcxproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="false">BasicTimer.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false">CubeRenderer.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false">CubeRenderer.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false">Direct3DBase.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false">Direct3DBase.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false">DirectXHelper.h</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Direct3DInterop.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Direct3DInterop.h</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Direct3DContentProvider.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Direct3DContentProvider.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false">pch.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false">pch.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false">SimplePixelShader.hlsl</ProjectItem>
+      <ProjectItem ReplaceParameters="false">SimpleVertexShader.hlsl</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

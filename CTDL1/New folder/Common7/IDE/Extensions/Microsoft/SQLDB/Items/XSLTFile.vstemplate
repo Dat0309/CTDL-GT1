@@ -1,0 +1,14 @@
+<VSTemplate Type="Item" Version="2.0.0"
+    xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{97358C99-E52D-42C7-8B7C-B59CC4425F4B}" ID="740"/>
+    <Description Package="{97358C99-E52D-42C7-8B7C-B59CC4425F4B}" ID="741"/>
+    <Icon></Icon>
+    <ProjectType>Database Projects</ProjectType>
+    <SortOrder>0</SortOrder>
+    <DefaultName>XSLTFile.xslt</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem >XSLTFile.xslt</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

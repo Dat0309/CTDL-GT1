@@ -1,0 +1,16 @@
+﻿Build started 03/06/2020 4:36:26 CH.
+     1>Project "D:\CTDL1\19111133_NguyenTranQuangBao_GK\19111133_NguyenTranQuangBao_GK\19111133_NguyenTranQuangBao_GK.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\CTDL1\New folder\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt program.cpp
+         program.cpp
+     1>d:\ctdl1\19111133_nguyentranquangbao_gk\19111133_nguyentranquangbao_gk\1911133_thuvien.h(265): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>d:\ctdl1\19111133_nguyentranquangbao_gk\19111133_nguyentranquangbao_gk\1911133_thuvien.h(304): warning C4129: 'D' : unrecognized character escape sequence
+     1>d:\ctdl1\19111133_nguyentranquangbao_gk\19111133_nguyentranquangbao_gk\1911133_menu.h(29): warning C4101: 'x' : unreferenced local variable
+       Link:
+         D:\CTDL1\New folder\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\CTDL1\19111133_NguyenTranQuangBao_GK\Debug\19111133_NguyenTranQuangBao_GK.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\CTDL1\19111133_NguyenTranQuangBao_GK\Debug\19111133_NguyenTranQuangBao_GK.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\CTDL1\19111133_NguyenTranQuangBao_GK\Debug\19111133_NguyenTranQuangBao_GK.lib" /MACHINE:X86 Debug\program.obj
+         19111133_NguyenTranQuangBao_GK.vcxproj -> D:\CTDL1\19111133_NguyenTranQuangBao_GK\Debug\19111133_NguyenTranQuangBao_GK.exe
+     1>Done Building Project "D:\CTDL1\19111133_NguyenTranQuangBao_GK\19111133_NguyenTranQuangBao_GK\19111133_NguyenTranQuangBao_GK.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.05

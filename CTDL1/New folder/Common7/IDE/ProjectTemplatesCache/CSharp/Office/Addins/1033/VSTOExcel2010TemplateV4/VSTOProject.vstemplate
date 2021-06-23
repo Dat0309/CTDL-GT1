@@ -1,0 +1,37 @@
+﻿<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{09CEFBAA-66D5-4FD2-B5BC-B9B2D7A8ADEF}" ID="115" />
+    <Description Package="{09CEFBAA-66D5-4FD2-B5BC-B9B2D7A8ADEF}" ID="116" />
+    <Icon Package="{09CEFBAA-66D5-4FD2-B5BC-B9B2D7A8ADEF}" ID="301" />
+    <TemplateID>VSTO_Excel2010Template_CS</TemplateID>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>310</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <CreateNewFolder>true</CreateNewFolder>
+    <CreateInPlace>true</CreateInPlace>
+    <DefaultName>ExcelTemplate</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <PromptForSaveOnCreation>false</PromptForSaveOnCreation>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="VSTOProject.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Properties\Resources.resx">Resources.resx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\Resources.Designer.cs">Resources.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Properties\Settings.settings">Settings.settings</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\Settings.Designer.cs">Settings.cs</ProjectItem>
+    </Project>
+    <CustomParameters>
+      <CustomParameter Name="VSTOLanguage" Value="CS" />
+      <CustomParameter Name="VSTODocumentType" Value="XLT" />
+      <CustomParameter Name="VSTOHostService" Value="{825100CF-0BA7-47EA-A084-DCF3308DAF74}" />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.Tools.Applications.Project, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, Custom=null</Assembly>
+    <FullClassName>Microsoft.VisualStudio.Tools.Applications.Project.Wizard.Office2010Wizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

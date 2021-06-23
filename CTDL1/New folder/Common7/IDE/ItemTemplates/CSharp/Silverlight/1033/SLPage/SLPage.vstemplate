@@ -1,0 +1,24 @@
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <Name Package="{CB22EE0E-4072-4ae7-96E2-90FCCF879544}" ID="1017"/>
+        <Description Package="{CB22EE0E-4072-4ae7-96E2-90FCCF879544}" ID="1018"/>
+        <Icon Package="{CB22EE0E-4072-4ae7-96E2-90FCCF879544}" ID="9014"/>
+        <TemplateID>Microsoft.Silverlight.CSharp.Page</TemplateID>
+        <TemplateGroupID>Silverlight</TemplateGroupID>
+        <ProjectType>CSharp</ProjectType>
+        <ShowByDefault>false</ShowByDefault>
+        <SortOrder>12</SortOrder>
+        <RequiredFrameworkVersion>3.0</RequiredFrameworkVersion>
+        <DefaultName>Page.xaml</DefaultName>
+        <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>System.Windows.Controls.Navigation</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem OpenInEditor="true" SubType="Designer" TargetFileName="$fileinputname$.xaml" ReplaceParameters="true">Page.xaml</ProjectItem>
+    <ProjectItem OpenInEditor="false" SubType="Code" TargetFileName="$fileinputname$.xaml.cs" ReplaceParameters="true">Page.xaml.cs</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+	<TemplateData>
+		<Name Package="{1B027A40-8F43-11D0-8D11-00A0C91BC942}" ID="3252" />
+		<Description Package="{1B027A40-8F43-11D0-8D11-00A0C91BC942}" ID="3253" />
+		<Icon Package="{1B027A40-8F43-11D0-8D11-00A0C91BC942}" ID="3232" />
+		<ProjectType>VC</ProjectType>
+		<DefaultName>$safeprojectname$</DefaultName>
+		<CreateInPlace>true</CreateInPlace>
+		<Hidden>true</Hidden>
+	</TemplateData>
+	<TemplateContent>
+		<Project File="WindowsPhone.vcxproj" ReplaceParameters="true">
+			<ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.vcxproj.filters">WindowsPhone.vcxproj.filters</ProjectItem>
+		</Project>
+	</TemplateContent>
+</VSTemplate>

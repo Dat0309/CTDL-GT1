@@ -1,0 +1,70 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="373" />
+    <Description Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="374" />
+    <Icon Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="201" />
+    <TemplateID>SharePoint16RemoteEventReceiver_CS_ITEM</TemplateID>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>51</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>RemoteEventReceiver</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <CreateInPlace>true</CreateInPlace>
+    <TemplateGroupID>SharePointItemTemplateGroupID</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\SharePointProjectItem.spdata" OpenInEditor="false">SharePointRemoteEventReceiver.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Elements.xml" OpenInEditor="false">Elements.xml</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="SharePointProjectTemplateAttributes" Value="ProjectItem"/>
+      <CustomParameter Name="SharePointProjectParentFilter" Value="General;ProjectItem"/>
+      <CustomParameter Name="SharePointProjectProjectModeFilter" Value="SharePointApp"/>
+      <CustomParameter Name="$ProjectItemName$" Value="$fileinputname$"/>
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.RemoteEventReceiverProjectItemWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <Data DefaultEventClassId="ItemEventReceiver" xmlns="http://schemas.microsoft.com/internal/VisualStudio/SharePoint/EventGen.xsd">
+    <Events xmlns="http://schemas.microsoft.com/internal/VisualStudio/SharePoint/EventGen.xsd">
+      <EventClass Class="ListEventReceiver" Id="ListEventReceiver" SourceExtensionType="Microsoft.VisualStudio.SharePoint.SiteDefinition">
+        <Event Id="FieldAdded" Method="FieldAdded" />
+        <Event Id="FieldAdding" Method="FieldAdding" />
+        <Event Id="FieldDeleted" Method="FieldDeleted" />
+        <Event Id="FieldDeleting" Method="FieldDeleting" />
+        <Event Id="FieldUpdated" Method="FieldUpdated" />
+        <Event Id="FieldUpdating" Method="FieldUpdating" />
+        <Event Id="ListAdding" Method="ListAdding" />
+        <Event Id="ListDeleting" Method="ListDeleting" />
+        <Event Id="ListAdded" Method="ListAdded" />
+        <Event Id="ListDeleted" Method="ListDeleted" />
+      </EventClass>
+      <EventClass Class="ItemEventReceiver" Id="ItemEventReceiver" SourceExtensionType="Microsoft.VisualStudio.SharePoint.ListDefinition">
+        <Event Id="ItemAdding" Method="ItemAdding" />
+        <Event Id="ItemUpdating" Method="ItemUpdating" />
+        <Event Id="ItemDeleting" Method="ItemDeleting" />
+        <Event Id="ItemCheckingIn" Method="ItemCheckingIn" />
+        <Event Id="ItemCheckingOut" Method="ItemCheckingOut" />
+        <Event Id="ItemUncheckingOut" Method="ItemUncheckingOut" />
+        <Event Id="ItemAttachmentAdding" Method="ItemAttachmentAdding" />
+        <Event Id="ItemAttachmentDeleting" Method="ItemAttachmentDeleting" />
+        <Event Id="ItemFileMoving" Method="ItemFileMoving" />
+        <Event Id="ItemAdded" Method="ItemAdded" />
+        <Event Id="ItemUpdated" Method="ItemUpdated" />
+        <Event Id="ItemDeleted" Method="ItemDeleted" />
+        <Event Id="ItemCheckedIn" Method="ItemCheckedIn" />
+        <Event Id="ItemCheckedOut" Method="ItemCheckedOut" />
+        <Event Id="ItemUncheckedOut" Method="ItemUncheckedOut" />
+        <Event Id="ItemAttachmentAdded" Method="ItemAttachmentAdded" />
+        <Event Id="ItemAttachmentDeleted" Method="ItemAttachmentDeleted" />
+        <Event Id="ItemFileMoved" Method="ItemFileMoved" />
+        <Event Id="ItemFileConverted" Method="ItemFileConverted" />
+      </EventClass>
+    </Events>
+    </Data>
+  </WizardData>
+</VSTemplate>

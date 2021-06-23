@@ -1,0 +1,34 @@
+HKCR
+{
+[!if PROGID_VALID]
+	[!output PROGID] = s '[!output TYPE_NAME]'
+	{
+		CLSID = s '{[!output CLSID_REGISTRY_FORMAT]}'
+	}
+	[!output VERSION_INDEPENDENT_PROGID] = s '[!output TYPE_NAME]'
+	{		
+		CurVer = s '[!output PROGID]'
+	}
+[!endif]
+	NoRemove CLSID
+	{
+		ForceRemove {[!output CLSID_REGISTRY_FORMAT]} = s '[!output TYPE_NAME]'
+		{
+[!if PROGID_VALID]
+			ProgID = s '[!output PROGID]'
+			VersionIndependentProgID = s '[!output VERSION_INDEPENDENT_PROGID]'
+[!endif]
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'OLE DB Provider' = s '[!output TYPE_NAME]'
+[!if APPID_EXIST]
+			val AppID = s '[!output APPID_REGISTRY_FORMAT]'
+[!endif]
+			val OLEDB_SERVICES = d '4294967295'
+			TypeLib = s '{[!output LIBID_REGISTRY_FORMAT]}'
+			Version = s '[!output TYPELIB_VERSION_MAJOR].[!output TYPELIB_VERSION_MINOR]'
+		}
+	}
+}

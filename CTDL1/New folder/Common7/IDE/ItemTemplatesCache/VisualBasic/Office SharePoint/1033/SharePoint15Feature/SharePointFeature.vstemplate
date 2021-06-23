@@ -1,0 +1,22 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{540DCB6B-915E-4a16-A7D8-838D154377A8}" ID="301"/>
+    <Description Package="{540DCB6B-915E-4a16-A7D8-838D154377A8}" ID="302"/>
+    <Icon Package="{540DCB6B-915E-4a16-A7D8-838D154377A8}" ID="303"/>
+    <TemplateID>SharePoint15Feature_VB_ITEM</TemplateID>
+    <ProjectType>VisualBasic</ProjectType>
+    <DefaultName>Feature.feature</DefaultName>
+    <Hidden>true</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem TargetFileName="$fileinputname$\$fileinputname$.feature" ReplaceParameters="true" OpenInEditor="false">Feature.feature</ProjectItem>
+    <ProjectItem TargetFileName="$fileinputname$\$fileinputname$.Template.xml" ReplaceParameters="true" OpenInEditor="false">Feature.xml</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="$RootNodeFileExtension$" Value=".feature"/>
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.PackagingItemsWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

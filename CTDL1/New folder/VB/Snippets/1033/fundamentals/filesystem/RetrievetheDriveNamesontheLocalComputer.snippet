@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Retrieve the Drives on the Local Computer</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Retrieves the drive names on the local computer.</Description>
+      <Shortcut>filDriveNames</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.IO</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim driveNames As New List(Of String)
+        For Each drive As DriveInfo In My.Computer.FileSystem.Drives
+            driveNames.Add(drive.Name)
+        Next]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

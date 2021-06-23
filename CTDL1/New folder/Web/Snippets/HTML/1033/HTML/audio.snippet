@@ -1,0 +1,25 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>audio</Title>
+    <Author>Microsoft Corporation</Author>
+    <Shortcut>audio</Shortcut>
+    <Description>Markup snippet for a audio with multiple sources</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+      <Declarations>
+          <Literal>
+              <ID>file</ID>
+              <ToolTip>file</ToolTip>
+              <Default>file</Default>
+          </Literal>
+      </Declarations>
+    <Code Language="html"><![CDATA[<audio controls="controls">
+  <source src="$file$.mp3" type="audio/mp3" />
+  <source src="$file$.ogg" type="audio/ogg" />
+</audio>$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

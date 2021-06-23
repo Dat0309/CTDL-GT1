@@ -1,0 +1,495 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<HTML DIR="LTR">
+
+<HEAD>
+	<TITLE>MFC ActiveX 컨트롤 마법사</TITLE>
+	<META NAME="vs_targetSchema" CONTENT="http://schemas.microsoft.com/intellisense/ie5">
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ks_c_5601-1987">
+	<META HTTP-EQUIV="MSThemeCompatible" CONTENT="Yes">
+	<LINK ID="LINKURL" REL="stylesheet" HREF="../../../../../1042/NewStyles.css">
+</HEAD>
+
+<BODY BGCOLOR="BUTTONFACE" TOPMARGIN="0" LEFTMARGIN="0" RIGHTMARGIN="0" BOTTOMMARGIN="0" ONLOAD="InitDocument(document);" ONKEYDOWN="if (!bValidating) OnKey();" ONKEYPRESS="if (!bValidating) OnPress();">
+
+<TABLE CLASS="ONE" HEIGHT="100%" WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<COL CLASS="LinkPane"><COL>
+
+  <!--OPEN OF INTRODUCTORY INFORMATION TABLE//-->
+  <TR VALIGN="TOP">
+	<TD HEIGHT="79" WIDTH="100%" COLSPAN="2">
+	 <TABLE CLASS="TWO" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	 <COL WIDTH="12"><COL><COL WIDTH="12">
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD CLASS="IMAGE" VALIGN="BOTTOM" WIDTH="110" ROWSPAN="2">
+		<DIV CLASS="SMALLA" ID="Layer0">
+		 <IMG CLASS="SMALLEST" SRC="..\..\Images\MFC_CTL_1.gif" WIDTH="63" HEIGHT="63" ALT="" BORDER="0">
+		</DIV>
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="6" ROWSPAN="2">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+	 
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="65">
+		<H4 CLASS="HEAD" ID="HEAD">컨트롤 설정</H4>
+		<P CLASS="SUBHEAD" ID="SUBHEAD">Windows 클래스 상속 및 컨트롤에 대한 선택적 특성을 지정합니다.</P>
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+	 
+	  <TR>
+	   <TD VALIGN="TOP" CLASS="RULE" COLSPAN="5" HEIGHT="2">
+		<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+	  	 <TR VALIGN="TOP">
+	  	  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+	  	  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+	  	 </TR>
+		</TABLE>
+	   </TD>
+	  </TR>
+	 </TABLE>
+	</TD>
+  </TR>
+  <!--CLOSE OF INTRODUCTORY INFORMATION TABLE//-->
+
+  <!--OPEN OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+  <TR VALIGN="TOP">
+	<TD CLASS="Three" VALIGN="TOP" HEIGHT="100%" WIDTH="100%">
+	 <TABLE CLASS="fixedSize" HEIGHT="100%" WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+  	  <TR VALIGN="TOP">
+	   <TD CLASS="threeCustom" VALIGN="TOP">
+	   <!--OPEN OF NAVIGATION TABLE//-->
+	
+	    <TABLE CLASS="THREE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+		<COL WIDTH="12"><COL><COL WIDTH="1">
+		 <TR>
+	   	  <TD VALIGN="TOP" COLSPAN="3" HEIGHT="12">
+	  		&nbsp;
+		  </TD>
+		 </TR>
+		 <TR>
+	   	  <TD VALIGN="TOP" HEIGHT="100%">
+	  		&nbsp;
+		  </TD>
+	   	  <TD VALIGN="TOP" HEIGHT="100%">
+	   	  <!--OPEN OF NAVIGATIONAL LINKS//-->
+	  		
+			<DIV CLASS="LINK">
+			 <TABLE WIDTH="100%" HEIGHT="28" BORDER="0" CELLPADDING="0" CELLSPACING="0" CLASS="LINKTEXT">
+			  <TR VALIGN="MIDDLE">
+	  		   <TD WIDTH="100%">
+				<SPAN CLASS="ACTIVELINK" ID="Default" TITLE="현재 설정을 요약하여 보여 줍니다." onClick="Next(document, 'Default.htm');" TABINDEX="1">개요</SPAN>
+			   </TD>
+	  		   <TD WIDTH="4">
+			  	<IMG SRC="../../../../../1033/Images/spacer.gif" HEIGHT="1" WIDTH="4">
+			   </TD>
+			  </TR>
+			 </TABLE>
+			</DIV>
+	  		
+			<DIV CLASS="LINK">
+			 <TABLE WIDTH="100%" HEIGHT="28" BORDER="0" CELLPADDING="0" CELLSPACING="0" CLASS="LINKTEXT">
+			  <TR VALIGN="MIDDLE">
+	  		   <TD WIDTH="100%">
+				<SPAN CLASS="ACTIVELINK" ID="AppSettings" TITLE="런타임 라이선스를 지정합니다." onClick="Next(document, 'AppSettings.htm');" TABINDEX="2">응용 프로그램 설정</SPAN>
+			   </TD>
+	  		   <TD WIDTH="4">
+			  	<IMG SRC="../../../../../1033/Images/spacer.gif" HEIGHT="1" WIDTH="4">
+			   </TD>
+			  </TR>
+			 </TABLE>
+			</DIV>
+	  		
+			<DIV CLASS="LINK">
+			 <TABLE WIDTH="100%" HEIGHT="28" BORDER="0" CELLPADDING="0" CELLSPACING="0" CLASS="LINKTEXT">
+			  <TR VALIGN="MIDDLE">
+	  		   <TD WIDTH="162">
+				
+				<SPAN CLASS="ACTIVELINK" ID="ControlNames" TITLE="컨트롤 클래스와 속성 페이지 클래스 이름, 형식 이름 및 컨트롤의 형식 식별자를 지정합니다." onClick="Next(document, 'ControlNames.htm');" TABINDEX="3">컨트롤 이름</SPAN>
+			   </TD>
+	  		   <TD WIDTH="4">
+			  	<IMG SRC="../../../../../1033/Images/spacer.gif" HEIGHT="1" WIDTH="4">
+			   </TD>
+			  </TR>
+			 </TABLE>
+			</DIV>
+
+		  	<DIV CLASS="LINKSELECTED">
+	 	   	 <SPAN CLASS="VERTLINE1">
+			  <IMG SRC="../../../../../1033/Images/spacer.gif" WIDTH="1" HEIGHT="1" ALT="" BORDER="0">
+			 </SPAN>
+			 <SPAN CLASS="HORILINE1">
+			  <TABLE WIDTH="167" HEIGHT="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			   <TR VALIGN="TOP">
+			    <TD CLASS="DOTTEDLINE" HEIGHT="1">
+				</TD>
+			   </TR>
+			   <TR VALIGN="TOP">
+			    <TD HEIGHT="100%">
+				 <IMG SRC="../../../../../1033/Images/spacer.gif" WIDTH="1" HEIGHT="28" ALT="" BORDER="0">
+			    </TD>
+			   </TR>
+			   <TR VALIGN="TOP">
+			    <TD CLASS="DOTTEDLINE" HEIGHT="1">
+			    </TD>
+			   </TR>
+			  </TABLE>
+			 </SPAN>
+			 <TABLE WIDTH="160" HEIGHT="28" BORDER="0" CELLPADDING="0" CELLSPACING="0" CLASS="LINKTEXTSELECTED">
+			  <TR VALIGN="MIDDLE">
+			   <TD WIDTH="100%">
+				<SPAN ID="CtlSettings" TITLE="Windows 클래스 상속 및 컨트롤에 대한 선택적 특성을 지정합니다.">컨트롤 설정</SPAN>
+			   </TD>
+			   <TD WIDTH="4">
+				<IMG SRC="../../../../../1033/Images/spacer.gif" HEIGHT="1" WIDTH="4">
+			   </TD>
+			  </TR>
+			 </TABLE>
+			</DIV>
+			
+	   	  <!--CLOSE OF NAVIGATIONAL LINKS//-->
+		  </TD>
+		  <TD WIDTH="1">
+		   <DIV CLASS="VERTLINE">
+			 <IMG SRC="../../../../../1033/Images/spacer.gif" WIDTH="1" HEIGHT="1" ALT="" BORDER="0">
+		   </DIV>
+		  </TD>
+		 </TR>
+		 </TABLE>
+		</TD>
+	   </TR>
+	   </TABLE>
+			
+	   <!--CLOSE OF NAVIGATION TABLE//-->
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="100%">
+	   <!--OPEN OF CONTENT AND BUTTON TABLE//-->
+	   
+	   	<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+		<COL WIDTH="100%">
+		 <TR VALIGN="TOP">
+		  <TD HEIGHT="100%">
+	   	  <!--OPEN OF CONTENT//-->
+		  
+		  	<TABLE CLASS="CONTENT" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL WIDTH="398"><COL WIDTH="12">
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="3">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			 
+			 <TR>
+  			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+ 		 	  <TD VALIGN="TOP">
+  				<SPAN CLASS="itemTextTop" ID="WINDOW_cLASS_SPAN" TITLE="드롭다운 목록에서 단추, 도구 모음, 입력란 등의 공용 Windows 컨트롤을 선택하여 서브클래스에 추가합니다.">
+				<LABEL FOR="WINDOW_CLASS" ID="WINDOW_CLASS_LABEL">컨트롤 기준(<u>E</u>):</LABEL>
+				<BR>
+				<SELECT CLASS="sideBtnOneCLong" ID="WINDOW_CLASS" ACCESSKEY="E" onpropertychange="OnBase();" TITLE="드롭다운 목록에서 단추, 도구 모음, 입력란 등의 공용 Windows 컨트롤을 선택하여 서브클래스에 추가합니다." SIZE="1">
+					<OPTION VALUE="(none)" SELECTED>(none)</OPTION>
+					<OPTION VALUE="BUTTON">BUTTON</OPTION>
+					<OPTION VALUE="COMBOBOX">COMBOBOX</OPTION>
+					<OPTION VALUE="EDIT">EDIT</OPTION>
+					<OPTION VALUE="LISTBOX">LISTBOX</OPTION>
+					<OPTION VALUE="SCROLLBAR">SCROLLBAR</OPTION>
+					<OPTION VALUE="STATIC">STATIC</OPTION>
+					<OPTION VALUE="msctls_hotkey32">msctls_hotkey32</OPTION>
+					<OPTION VALUE="msctls_progress32">msctls_progress32</OPTION>
+					<OPTION VALUE="msctls_statusbar32">msctls_statusbar32</OPTION>
+					<OPTION VALUE="msctls_trackbar32">msctls_trackbar32</OPTION>
+					<OPTION VALUE="msctls_updown32">msctls_updown32</OPTION>
+					<OPTION VALUE="SysAnimate32">SysAnimate32</OPTION>
+					<OPTION VALUE="SysHeader32">SysHeader32</OPTION>
+					<OPTION VALUE="SysListView32">SysListView32</OPTION>
+					<OPTION VALUE="SysTabControl32">SysTabControl32</OPTION>
+					<OPTION VALUE="SysTreeView32">SysTreeView32</OPTION>
+				</SELECT>
+				</SPAN>
+  			  </TD>
+			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="13" COLSPAN="3">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 
+ 			 <TR>
+  			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP">
+				<SPAN CLASS="itemText" ID="ADDITIONAL_FEATURES_SPAN">추가 기능:</SPAN>
+  			  </TD>
+ 	 		  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="9" COLSPAN="3">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 
+ 			 <TR>
+  			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP">
+ 				<TABLE CLASS="FixedSize" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+				<COL WIDTH="193"><COL WIDTH="12"><COL WIDTH="193">
+ 		 		  <TR>
+  	 	 		   <TD VALIGN="TOP">
+  					<SPAN CLASS="itemText" TITLE="" STYLE="POSITION:RELATIVE; TOP:-5PX;">
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="ACTIVATE_WHEN_VISIBLE" ACCESSKEY="A" TITLE="표시될 때 컨트롤이 활성화될 OLE 규칙을 선택합니다.">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="ACTIVATE_WHEN_VISIBLE_DIV" TITLE="표시될 때 컨트롤이 활성화될 OLE 규칙을 선택합니다.">
+		  			  <LABEL FOR="ACTIVATE_WHEN_VISIBLE" ID="ACTIVATE_WHEN_VISIBLE_LABEL">표시되었을 때 활성화(<U>A</U>)</LABEL>
+	  	 			 </DIV>
+					 
+	  				 <BR>
+	  
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="INVISIBLE_AT_RUNTIME" ACCESSKEY="I" TITLE="런타임에서 컨트롤이 보이지 않도록 지정합니다.">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="INVISIBLE_AT_RUNTIME_DIV" TITLE="런타임에서 컨트롤이 보이지 않도록 지정합니다.">
+		  			  <LABEL FOR="INVISIBLE_AT_RUNTIME" ID="INVISIBLE_AT_RUNTIME_LABEL">런타임에 숨김(<U>I</U>)</LABEL>
+	  	 			 </DIV>
+					 
+	  				 <BR>
+	  
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="ABOUT_BOX" ACCESSKEY="T" TITLE="이 컨트롤에 대한 [정보] 상자를 생성하도록 지정합니다.">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="ABOUT_BOX_DIV" TITLE="이 컨트롤에 대한 [정보] 상자를 생성하도록 지정합니다.">
+		  			  <LABEL FOR="ABOUT_BOX" ID="ABOUT_BOX_LABEL">[정보] 대화 상자 포함(<U>T</U>)</LABEL>
+	  	 			 </DIV>
+					 
+	  				 <BR>
+	  
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="OPTIMIZED_DRAW" ACCESSKEY="P" TITLE="컨트롤이 그려진 후 컨테이너에서 원래 개체를 자동으로 복원하도록 설정합니다.">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="OPTIMIZED_DRAW_DIV" TITLE="컨트롤이 그려진 후 컨테이너에서 원래 개체를 자동으로 복원하도록 설정합니다.">
+		  			  <LABEL FOR="OPTIMIZED_DRAW" ID="OPTIMIZED_DRAW_LABEL">그리기 코드 최적화(<U>P</U>)</LABEL>
+	  	 			 </DIV>
+					 
+	  				 <BR>
+	  
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="WINDOWLESS" ACCESSKEY="S" TITLE="창을 생성하지 않고 컨트롤을 활성화합니다." onPropertyChange="OnWindowless();">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="WINDOWLESS_DIV" TITLE="창을 생성하지 않고 컨트롤을 활성화합니다.">
+		  			  <LABEL FOR="WINDOWLESS" ID="WINDOWLESS_LABEL">창 없는 활성화(<U>S</U>)</LABEL>
+	  	 			 </DIV>
+					 
+	  				 <BR>
+	  
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="UNCLIPPED_DEVICE_CONTEXT" ACCESSKEY="U" TITLE="COleControl에서 IntersectClipRect를 호출할 수 없습니다. 창 없는 활성화가 재정의됩니다.">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="unclipped_device_context_title" TITLE="COleControl에서 IntersectClipRect를 호출할 수 없습니다. 창 없는 활성화가 재정의됩니다.">
+		  			  <LABEL FOR="UNCLIPPED_DEVICE_CONTEXT" ID="UNCLIPPED_DEVICE_CONTEXT_LABEL">잘리지 않는 장치 컨텍스트(<U>U</U>)</LABEL>
+	  	 			 </DIV>
+					</SPAN>
+  		  	  	   </TD>
+ 			 	   <TD VALIGN="TOP" WIDTH="12">
+  					&nbsp;
+  			  	   </TD>
+  			  	   <TD VALIGN="TOP">
+ 					<SPAN CLASS="itemText" ID="FILE_NAME_SPAN" TITLE="헤더 파일 이름과 일치하도록 속성 페이지 클래스 .cpp 파일의 이름을 입력합니다." STYLE="POSITION:RELATIVE; TOP:-5PX;">	
+					 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="FLICKER_FREE" ACCESSKEY="V" TITLE="비활성 및 활성 상태로 전환할 때 일반적으로 발생하는 그리기 작업 및 깜빡임을 제거합니다. 창 없는 활성화가 재정의됩니다.">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="flicker_free_title" TITLE="비활성 및 활성 상태로 전환할 때 일반적으로 발생하는 그리기 작업 및 깜빡임을 제거합니다. 창 없는 활성화가 재정의됩니다.">
+		  			  <LABEL FOR="FLICKER_FREE" ID="FLICKER_FREE_LABEL">깜빡임 없는 활성화(<U>V</U>)</LABEL>
+	  	 			 </DIV>
+					 
+	  				 <BR>
+	  
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="INSERTABLE" ACCESSKEY="O" TITLE="[개체 삽입] 대화 상자에 이 컨트롤을 표시하도록 지정합니다.">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="INSERTABLE_DIV" TITLE="[개체 삽입] 대화 상자에 이 컨트롤을 표시하도록 지정합니다.">
+		  			  <LABEL FOR="INSERTABLE" ID="INSERTABLE_LABEL">[개체 삽입] 대화 상자에서 사용 가능(<U>O</U>)</LABEL>
+	  	 			 </DIV>
+					 
+	  				 <BR>
+	  
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="MOUSE_NOTIFICATIONS" ACCESSKEY="M" TITLE="컨트롤이 비활성 상태인 경우를 포함하여 컨트롤에서 항상 마우스 알림을 처리하도록 설정합니다.">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="MOUSE_NOTIFICATIONS_DIV" TITLE="컨트롤이 비활성 상태인 경우를 포함하여 컨트롤에서 항상 마우스 알림을 처리하도록 설정합니다.">
+		  			  <LABEL FOR="MOUSE_NOTIFICATIONS" ID="MOUSE_NOTIFICATIONS_LABEL">비활성화 상태 시 마우스 포인터 알림(<U>M</U>)</LABEL>
+	  	 			 </DIV>
+					 
+	  				 <BR>
+	  
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="SIMPLE_FRAME" ACCESSKEY="R" TITLE="이 컨트롤을 다른 컨트롤의 컨테이너로 지정합니다.">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="SIMPLE_FRAME_DIV" TITLE="이 컨트롤을 다른 컨트롤의 컨테이너로 지정합니다.">
+		  			  <LABEL FOR="SIMPLE_FRAME" ID="SIMPLE_FRAME_LABEL">단순 프레임 컨트롤로 사용(<U>R</U>)</LABEL>
+	  	 			 </DIV>
+					 
+	  				 <BR>
+	  
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="ASYNC_PROPERTY_LOAD" ACCESSKEY="L" TITLE="이전 비동기 데이터를 다시 설정하고 컨트롤의 비동기 속성의 새 로드를 초기화합니다.">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="ASYNC_PROPERTY_LOAD_DIV" TITLE="이전 비동기 데이터를 다시 설정하고 컨트롤의 비동기 속성의 새 로드를 초기화합니다.">
+		  			  <LABEL FOR="ASYNC_PROPERTY_LOAD" ID="ASYNC_PROPERTY_LOAD_LABEL">비동기적으로 속성 로드(<U>L</U>)</LABEL>
+	  	 			 </DIV>
+					</SPAN>
+		  		   </TD>
+ 		 		  </TR>
+				</TABLE>
+  			  </TD>
+			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="100%" COLSPAN="3">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+		 	</TABLE>
+			
+	   	  <!--CLOSE OF CONTENT//-->
+		  </TD>
+		 </TR>
+		 <TR VALIGN="BOTTOM">
+		  <TD>
+	   	  <!--OPEN OF BUTTON HTML//-->
+		  
+		  	<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="12">
+			 <TR>
+  			  <TD VALIGN="TOP" CLASS="RULE" COLSPAN="8" HEIGHT="2">
+				<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+  	 			 <TR VALIGN="TOP">
+  	  			  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+  	  			  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+  	 			 </TR>
+				</TABLE>
+  			  </TD>
+ 			 </TR>
+ 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="11" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 
+ 			<TR>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" HEIGHT="23">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="FinishBtn" onClick="OnFinish(document);">마침</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="CancelBtn" onClick="window.external.Finish(document, 'cancel');">취소</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="HelpBtn" onClick="window.external.OnHelp('vc.appwiz.mfc.ctl.settings');">도움말</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			</TABLE>
+			
+	   	  <!--CLOSE OF BUTTON HTML//-->
+		  </TD>
+		 </TR>
+		</TABLE>
+	
+  	<!--CLOSE OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+ 	</TD>
+  </TR>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<SCRIPT LANGUAGE="JSCRIPT">
+
+var tab_array = new Array();
+tab_array[0] = Default;
+tab_array[1] = AppSettings;
+tab_array[2] = ControlNames;
+tab_array[3] = CtlSettings;
+
+function InitDocument(document)
+{
+	setDirection();
+	WINDOW_CLASS.focus();
+	window.external.Load(document);
+}
+
+function Next(document, linkto)
+{
+	window.external.Next(document, linkto);
+}
+
+function OnFinish(document)
+{
+	OnWizFinish(document);
+}
+
+function OnWindowless()
+{
+	UNCLIPPED_DEVICE_CONTEXT.disabled = false;
+	unclipped_device_context_title.disabled = false;
+	FLICKER_FREE.disabled = false;
+	flicker_free_title.disabled = false;
+
+	if (WINDOWLESS.checked)
+	{
+		UNCLIPPED_DEVICE_CONTEXT.disabled = true;
+		unclipped_device_context_title.disabled = true;
+		FLICKER_FREE.disabled = true;
+		flicker_free_title.disabled = true;
+	}
+}
+
+function OnBase()
+{
+	if (WINDOW_CLASS.options[WINDOW_CLASS.selectedIndex].text == "(none)")
+		window.external.AddSymbol("SUBCLASS_WINDOW", false);
+	else
+		window.external.AddSymbol("SUBCLASS_WINDOW", true);
+}
+
+</SCRIPT>
+<SCRIPT ID="INCLUDE_SCRIPT" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT ID="INCLUDE_COMMON" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT>
+	document.scripts("INCLUDE_SCRIPT").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Script.js";
+	document.scripts("INCLUDE_COMMON").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Common.js";
+</SCRIPT>

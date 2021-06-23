@@ -1,0 +1,6 @@
+﻿$if$ ($targetframeworkversion$ == 3.5)
+<%@ ServiceHost Language="C#" Factory="System.Data.Services.DataServiceHostFactory, System.Data.Services, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Service="$rootnamespace$.$safeitemname$" %>
+$endif$
+$if$ ($targetframeworkversion$ >= 4.0)
+<%@ ServiceHost Language="C#" Factory="System.ServiceModel.Activation.WebServiceHostFactory, System.ServiceModel.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Service="$rootnamespace$.$safeitemname$" %>
+$endif$

@@ -1,0 +1,6 @@
+﻿// Para obter detalhes sobre a localização de um aplicativo do Windows, consulte: http://go.microsoft.com/fwlink/?LinkId=212836
+
+{
+    "greeting"              : "Olá Mundo!",
+    "_greeting.comment"     : "Este é um comentário para o localizador"
+}

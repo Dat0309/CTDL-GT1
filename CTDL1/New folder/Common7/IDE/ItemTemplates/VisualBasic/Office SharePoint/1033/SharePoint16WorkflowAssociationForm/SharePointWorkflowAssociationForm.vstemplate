@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="336" />
+    <Description Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="335" />
+    <Icon Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="247" />
+    <TemplateID>SharePoint16WorkflowAssociationForm_VB</TemplateID>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+    <ProjectType>VisualBasic</ProjectType>
+    <SortOrder>90</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>WorkflowAssociationForm.aspx</DefaultName>
+    <TemplateGroupID>SharePointItemTemplateGroupID</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>Microsoft.SharePoint</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Data</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Drawing</Assembly>
+      </Reference>      
+      <Reference>
+        <Assembly>System.Web</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Xml</Assembly>
+      </Reference>      
+    </References>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.$fileinputextension$">Default.aspx</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.$fileinputextension$.vb" SubType="ASPXCodeBehind">Default.aspx.vb</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.$fileinputextension$.designer.vb">Default.aspx.designer.vb</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="SharePointRequiredItemFilter" Value="Microsoft.VisualStudio.SharePoint.Workflow"/>
+      <CustomParameter Name="SharePointProjectParentFilter" Value="ProjectItem;MappedFolder"/>
+      <CustomParameter Name="$loc_AssociateWorkflowButtonText$" _locID="$loc_AssociateWorkflowButtonText$" _locAttrData="Value" Value="Associate Workflow" />
+      <CustomParameter Name="$loc_AssociateWorkflowClickComment$" _locID="$loc_AssociateWorkflowClickComment$" _locAttrData="Value" Value="Optionally, add code here to perform additional steps before associating your workflow" />
+      <CustomParameter Name="$loc_AssociationCodeRegion$" _locID="$loc_AssociationCodeRegion$" _locAttrData="Value" Value="Workflow Association Code - Typically, the following code should not be changed" />
+      <CustomParameter Name="$loc_AssociationFailedError$" _locID="$loc_AssociationFailedError$" _locAttrData="Value" Value="Error occured while associating Workflow template. {0}" />
+      <CustomParameter Name="$loc_AssociationFormTitle$" _locID="$loc_AssociationFormTitle$" _locAttrData="Value" Value="Workflow Association Form" />
+      <CustomParameter Name="$loc_AutoGenComment$" _locID="$loc_AutoGenComment$" _locAttrData="Value" Value="Auto-generated field." />
+      <CustomParameter Name="$loc_CancelButtonText$" _locID="$loc_CancelButtonText$" _locAttrData="Value" Value="Cancel" />
+      <CustomParameter Name="$loc_ControlComment$" _locID="$loc_ControlComment$" _locAttrData="Value" Value="Control" />
+      <CustomParameter Name="$loc_CreateNewListComment$" _locID="$loc_CreateNewListComment$" _locAttrData="Value" Value="Create a new list if the value starts with 'z'" />
+      <CustomParameter Name="$loc_GetAssocDataComment$" _locID="$loc_GetAssocDataComment$" _locAttrData="Value" Value="TODO: Return a string that contains the association data that will be passed to the workflow. Typically, this is in XML format." />
+      <CustomParameter Name="$loc_GetAssocDataSummary$" _locID="$loc_GetAssocDataSummary$" _locAttrData="Value" Value="This method is called when the user clicks the button to associate the workflow." />
+      <CustomParameter Name="$loc_HistoryListDescription$" _locID="$loc_HistoryListDescription$" _locAttrData="Value" Value="Custom History List" />
+      <CustomParameter Name="$loc_IfFirstLoadComment$" _locID="$loc_IfFirstLoadComment$" _locAttrData="Value" Value="Check if the page is loaded for first time" />
+      <CustomParameter Name="$loc_ListCreationError$" _locID="$loc_ListCreationError$" _locAttrData="Value" Value="Failed to create list {0} as a list with same name already exists" />
+      <CustomParameter Name="$loc_ModifyComment$" _locID="$loc_ModifyComment$" _locAttrData="Value" Value="To modify move field declaration from designer file to code-behind file." />
+      <CustomParameter Name="$loc_PrePopulateComment$" _locID="$loc_PrePopulateComment$" _locAttrData="Value" Value="Optionally, add code here to pre-populate your form fields." />
+      <CustomParameter Name="$loc_TaskListDescription$" _locID="$loc_TaskListDescription$" _locAttrData="Value" Value="Custom Task List" />
+      <CustomParameter Name="$loc_UseExistingListComment$" _locID="$loc_UseExistingListComment$" _locAttrData="Value" Value="Use existing list" />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.WorkflowAssociationFormWizard</FullClassName>
+  </WizardExtension>  
+</VSTemplate>

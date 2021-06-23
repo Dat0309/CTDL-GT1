@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TemplateDefinition Name="MVC" Order="1000">
+    <UI>
+        <Template Name="MVC" BaseTemplateID="Microsoft.WAP.VisualBasic.MvcBasicApplication.v5.0" Order="1000">
+            <Icon>VBProject.ico</Icon>
+            <PreviewImage>VBProject.ico</PreviewImage>
+            <Summary>A project template for creating ASP.NET MVC applications. ASP.NET MVC allows you to build applications using the Model-View-Controller architecture. ASP.NET MVC includes many features that enable fast, test-driven development for creating applications that use the latest standards.</Summary>
+            <Description>A project template for creating ASP.NET MVC applications. ASP.NET MVC allows you to build applications using the Model-View-Controller architecture. ASP.NET MVC includes many features that enable fast, test-driven development for creating applications that use the latest standards.</Description>
+            <Options>
+                <Authentication Default="IndividualAuth">
+                    <NoAuth/>
+                    <IndividualAuth/>
+                    <WindowsAuth/>
+                    <OrgAuth/>
+                </Authentication>
+                <TemplateReferences>
+                    <WebForms/>
+                    <MVC Required="true"/>
+                    <WebAPI/>
+                </TemplateReferences>
+                <AzureResources>
+                    <AzureWebsite />
+                    <AzureVirtualMachine />
+                </AzureResources>
+            </Options>
+            <UnitTest DefaultBaseTemplateID="Microsoft.VisualBasic.MvcApplicationTestLibrary.v5.0"/>
+        </Template>
+        <Template Name="Single Page Application" BaseTemplateID="Microsoft.WAP.VisualBasic.Spa.v5.0" Order="1200">
+            <Icon>VBProject.ico</Icon>
+            <PreviewImage>VBProject.ico</PreviewImage>
+            <Summary>A project template for creating rich client side JavaScript driven HTML5 applications using ASP.NET Web API. Single Page Applications provide a rich user experience which includes client-side interactions using HTML5, CSS3, and JavaScript.</Summary>
+            <Description>A project template for creating rich client side JavaScript driven HTML5 applications using ASP.NET Web API. Single Page Applications provide a rich user experience which includes client-side interactions using HTML5, CSS3, and JavaScript.</Description>
+            <Options>
+                <Authentication Default="IndividualAuth">
+                    <IndividualAuth/>
+                </Authentication>
+                <TemplateReferences>
+                    <WebForms/>
+                    <MVC Required="true"/>
+                    <WebAPI Required="true"/>
+                </TemplateReferences>
+                <AzureResources>
+                    <AzureWebsite />
+                    <AzureVirtualMachine />
+                </AzureResources>
+            </Options>
+            <UnitTest DefaultBaseTemplateID="Microsoft.VisualBasic.MvcEmptyTestLibrary.v5.0"/>
+        </Template>
+    </UI>
+
+    <BaseTemplates>
+        <BaseTemplate ID="Microsoft.WAP.VisualBasic.MvcBasicApplication.v5.0"
+                      NugetPackageKey="AspNetWebFrameworksAndTools5"
+                      VSTemplatePath="MvcBasicApplicationv5.0\MvcBasicApplication.vbhtml.vstemplate">
+            <ApplyRules>
+                <RunRule RuleID="MvcBasicNugetReferences" />
+            </ApplyRules>
+            <ApplyRules>
+                <RunRule RuleID="global.WebAPI" Option="WebAPI" />
+            </ApplyRules> 
+            <ApplyRules>
+                <RunRule RuleID="global.WebForms" Option="WebForms" />
+            </ApplyRules>
+            <ApplyRules Option="NoAuth">
+                <RunRule RuleID="BasicMvcWithWebApi" Option="WebAPI" />
+                <RunRule RuleID="BasicMvcWithWebForms" Option="WebForms" />
+                <RunRule RuleID="BasicMvcWithWebApiWebForms" Option="WebAPI,WebForms" />
+            </ApplyRules>
+            <ApplyRules Option="WindowsAuth">
+                <RunRule RuleID="MvcBasicWindowsAuthFiles"/>
+                <RunRule RuleID="BasicMvcWithWebApiWindowsAuth" Option="WebAPI" />
+                <RunRule RuleID="BasicMvcWithWebFormsWindowsAuth" Option="WebForms" />
+                <RunRule RuleID="BasicMvcWithWebApiWebFormsWindowsAuth" Option="WebAPI,WebForms" />
+            </ApplyRules>
+            <ApplyRules Option="IndividualAuth">
+                <RunRule RuleID="MvcBasicCommonAuthFiles"/>
+                <RunRule RuleID="MvcBasicIndividualAuthFiles"/>
+                <RunRule RuleID="BasicMvcWithWebApiIndividualAuth" Option="WebAPI" />
+                <RunRule RuleID="BasicMvcWithWebFormsIndividualAuth" Option="WebForms" />
+                <RunRule RuleID="BasicMvcWithWebApiWebFormsIndividualAuth" Option="WebAPI,WebForms" />
+                <RunRule RuleID="IndividualAuthPackages"/>
+            </ApplyRules>
+            <ApplyRules Option="OrgAuth">
+                <RunRule RuleID="MvcBasicCommonAuthFiles"/>
+                <ApplyRules Option="SSO">
+                    <RunRule RuleID="MvcBasicOrgAuthSSOFiles"/>
+                    <RunRule RuleID="BasicMvcWithWebApiOrgAuthSSO" Option="WebAPI" />
+                    <RunRule RuleID="BasicMvcWithWebFormsOrgAuthSSO" Option="WebForms" />
+                    <RunRule RuleID="BasicMvcWithWebApiWebFormsOrgAuthSSO" Option="WebAPI,WebForms" />
+                </ApplyRules>
+                <ApplyRules Option="SSOR">
+                    <RunRule RuleID="MvcBasicOrgAuthSSOFiles"/>
+                    <RunRule RuleID="MvcBasicOrgAuthADReadFiles"/>
+                    <RunRule RuleID="MvcBasicOrgAuthADReadSSOFiles"/>
+                    <RunRule RuleID="BasicMvcWithWebApiOrgAuthSSO" Option="WebAPI" />
+                    <RunRule RuleID="BasicMvcWithWebFormsOrgAuthSSO" Option="WebForms" />
+                    <RunRule RuleID="BasicMvcWithWebApiWebFormsOrgAuthSSO" Option="WebAPI,WebForms" />
+                    <RunRule RuleID="OrgAuthADReadPackages"/>
+                </ApplyRules>
+                <ApplyRules Option="SSOW">
+                    <RunRule RuleID="MvcBasicOrgAuthSSOFiles"/>
+                    <RunRule RuleID="MvcBasicOrgAuthADReadFiles"/>
+                    <RunRule RuleID="MvcBasicOrgAuthADReadSSOFiles"/>
+                    <RunRule RuleID="BasicMvcWithWebApiOrgAuthSSO" Option="WebAPI" />
+                    <RunRule RuleID="BasicMvcWithWebFormsOrgAuthSSO" Option="WebForms" />
+                    <RunRule RuleID="BasicMvcWithWebApiWebFormsOrgAuthSSO" Option="WebAPI,WebForms" />
+                    <RunRule RuleID="OrgAuthADReadPackages"/>
+                </ApplyRules>
+                <ApplyRules Option="MultiOrg">
+                    <RunRule RuleID="MvcBasicOrgAuthMultiOrgFiles"/>
+                    <RunRule RuleID="BasicMvcWithWebApiOrgAuthMultiOrg" Option="WebAPI" />
+                    <RunRule RuleID="BasicMvcWithWebFormsOrgAuthMultiOrg" Option="WebForms" />
+                    <RunRule RuleID="BasicMvcWithWebApiWebFormsOrgAuthMultiOrg" Option="WebAPI,WebForms" />
+                </ApplyRules>
+                <ApplyRules Option="MultiOrgR">
+                    <RunRule RuleID="MvcBasicOrgAuthMultiOrgFiles"/>
+                    <RunRule RuleID="MvcBasicOrgAuthADReadFiles"/>
+                    <RunRule RuleID="MvcBasicOrgAuthADReadMultiOrgFiles"/>
+                    <RunRule RuleID="BasicMvcWithWebApiOrgAuthMultiOrg" Option="WebAPI" />
+                    <RunRule RuleID="BasicMvcWithWebFormsOrgAuthMultiOrg" Option="WebForms" />
+                    <RunRule RuleID="BasicMvcWithWebApiWebFormsOrgAuthMultiOrg" Option="WebAPI,WebForms" />
+                    <RunRule RuleID="OrgAuthADReadPackages"/>
+                </ApplyRules>
+                <ApplyRules Option="MultiOrgW">
+                    <RunRule RuleID="MvcBasicOrgAuthMultiOrgFiles"/>
+                    <RunRule RuleID="MvcBasicOrgAuthADReadFiles"/>
+                    <RunRule RuleID="MvcBasicOrgAuthADReadMultiOrgFiles"/>
+                    <RunRule RuleID="BasicMvcWithWebApiOrgAuthMultiOrg" Option="WebAPI" />
+                    <RunRule RuleID="BasicMvcWithWebFormsOrgAuthMultiOrg" Option="WebForms" />
+                    <RunRule RuleID="BasicMvcWithWebApiWebFormsOrgAuthMultiOrg" Option="WebAPI,WebForms" />
+                    <RunRule RuleID="OrgAuthADReadPackages"/>
+                </ApplyRules>
+                <ApplyRules Option="OnPrem">
+                    <RunRule RuleID="MvcBasicOrgAuthOnPremFiles"/>
+                    <RunRule RuleID="BasicMvcWithWebApiOrgAuthOnPrem" Option="WebAPI" />
+                    <RunRule RuleID="BasicMvcWithWebFormsOrgAuthOnPrem" Option="WebForms" />
+                    <RunRule RuleID="BasicMvcWithWebApiWebFormsOrgAuthOnPrem" Option="WebAPI,WebForms" />
+                </ApplyRules>
+                <RunRule RuleID="OrgAuthPackages"/>
+            </ApplyRules>
+        </BaseTemplate>
+        <BaseTemplate ID="Microsoft.WAP.VisualBasic.Spa.v5.0"
+                      NugetPackageKey="AspNetWebFrameworksAndTools5"
+                      VSTemplatePath="Spav5.0\Spa.vbhtml.vstemplate">
+            <ApplyRules>
+                <RunRule RuleID="global.WebForms" Option="WebForms" /> 
+                <RunRule RuleID="SpaWithWebForms" Option="WebForms" /> 
+            </ApplyRules>
+            <ApplyRules Option="IndividualAuth"/>
+        </BaseTemplate>
+        <BaseTemplate ID="Microsoft.VisualBasic.MvcEmptyTestLibrary.v5.0"
+                      NugetPackageKey="AspNetWebFrameworksAndTools5"
+                      VSTemplatePath="MvcEmptyTestLibraryv5.0\MvcEmptyTestLibrary.vb.vstemplate">
+        </BaseTemplate>
+        <BaseTemplate ID="Microsoft.VisualBasic.MvcApplicationTestLibrary.v5.0"
+                      NugetPackageKey="AspNetWebFrameworksAndTools5"
+                      VSTemplatePath="MvcApplicationTestLibraryv5.0\MvcApplicationTestLibrary.vb.vstemplate">
+        </BaseTemplate>
+    </BaseTemplates>
+
+    <Rules>
+        <Rule ID="MvcBasicIndividualAuthFiles">
+            <ReplaceFile Destination="web.config" Source="MvcBasicApplicationv5.0\_IndividualAuth\web.12.config"/>
+            <AddFile Destination="Startup.vb" Source="MvcBasicApplicationv5.0\_IndividualAuth\Startup.vb"/>
+            <ReplaceFile Destination="Global.asax.vb" Source="MvcBasicApplicationv5.0\_IndividualAuth\Global.asax.vb"/>
+            <AddFile Destination="App_Start\IdentityConfig.vb" Source="MvcBasicApplicationv5.0\_IndividualAuth\App_Start\IdentityConfig.vb"/>
+            <AddFile Destination="App_Start\Startup.Auth.vb" Source="MvcBasicApplicationv5.0\_IndividualAuth\App_Start\Startup.Auth.vb"/>
+            <AddFile Destination="Controllers\AccountController.vb" Source="MvcBasicApplicationv5.0\_IndividualAuth\Controllers\AccountController.vb"/>
+            <AddFile Destination="Controllers\ManageController.vb" Source="MvcBasicApplicationv5.0\_IndividualAuth\Controllers\ManageController.vb"/>
+            <AddFile Destination="Models\AccountViewModels.vb" Source="MvcBasicApplicationv5.0\_IndividualAuth\Models\AccountViewModels.vb"/>
+            <AddFile Destination="Models\IdentityModels.vb" Source="MvcBasicApplicationv5.0\_IndividualAuth\Models\IdentityModels.vb"/>
+            <AddFile Destination="Models\ManageViewModels.vb" Source="MvcBasicApplicationv5.0\_IndividualAuth\Models\ManageViewModels.vb"/>
+            <AddFile Destination="Views\Account\_ExternalLoginsListPartial.vbhtml" Source="MvcBasicApplicationv5.0\_IndividualAuth\Views\Account\_ExternalLoginsListPartial.vbhtml"/>
+            <AddFile Destination="Views\Account\ConfirmEmail.vbhtml" Source="MvcBasicApplicationv5.0\_IndividualAuth\Views\Account\ConfirmEmail.vbhtml"/>
+            <AddFile Destination="Views\Account\ExternalLoginConfirmation.vbhtml" Source="MvcBasicApplicationv5.0\_IndividualAuth\Views\Account\ExternalLoginConfirmation.vbhtml"/>
+            <AddFile Destination="Views\Account\ExternalLoginFailure.vbhtml" Source="MvcBasicApplicationv5.0\_IndividualAuth\Views\Account\ExternalLoginFailure.vbhtml"/>
+            <AddFile Destination="Views\Account\ForgotPassword.vbhtml" Source="MvcBasicApplicationv5.0\_IndividualAuth\Views\Account\ForgotPassword.vbhtml"/>
+            <AddFile Destination="Views\Account\ForgotPasswordConfirmation.vbhtml" Source="MvcBasicApplicationv5.0\_IndividualAuth\Views\Account\ForgotPasswordConfirmation.vbhtml"/>
+            <AddFile Destination="Views\Account\Login.vbhtml" Source="MvcBasicApplicationv5.0\_IndividualAuth\Views\Account\Login.vbhtml"/>
+            <AddFile Destination="Views\Account\Register.vbhtml" Source="MvcBasicApplicationv5.0\_IndividualAuth\Views\Account\Register.vbhtml"/>
+            <AddFile Destination="Views\Account\ResetPassword.vbhtml" Source="MvcBasicApplicationv5.0\_IndividualAuth\Views\Account\ResetPassword.vbhtml"/>
+            <AddFile Destination="Views\Account\ResetPasswordConfirmation.vbhtml" Source="MvcBasicApplicationv5.0\_IndividualAuth\Views\Account\ResetPasswordConfirmation.vbhtml"/>
+            <AddFile Destination="Views\Account\SendCode.vbhtml" Source="MvcBasicApplicationv5.0\_IndividualAuth\Views\Account\SendCode.vbhtml"/>
+            <AddFile Destination="Views\Account\VerifyCode.vbhtml" Source="MvcBasicApplicationv5.0\_IndividualAuth\Views\Account\VerifyCode.vbhtml"/>
+            <AddFile Destination="Views\Manage\AddPhoneNumber.vbhtml" Source="MvcBasicApplicationv5.0\_IndividualAuth\Views\Manage\AddPhoneNumber.vbhtml"/>
+            <AddFile Destination="Views\Manage\ChangePassword.vbhtml" Source="MvcBasicApplicationv5.0\_IndividualAuth\Views\Manage\ChangePassword.vbhtml"/>
+            <AddFile Destination="Views\Manage\Index.vbhtml" Source="MvcBasicApplicationv5.0\_IndividualAuth\Views\Manage\Index.vbhtml"/>
+            <AddFile Destination="Views\Manage\ManageLogins.vbhtml" Source="MvcBasicApplicationv5.0\_IndividualAuth\Views\Manage\ManageLogins.vbhtml"/>
+            <AddFile Destination="Views\Manage\SetPassword.vbhtml" Source="MvcBasicApplicationv5.0\_IndividualAuth\Views\Manage\SetPassword.vbhtml"/>
+            <AddFile Destination="Views\Manage\VerifyPhoneNumber.vbhtml" Source="MvcBasicApplicationv5.0\_IndividualAuth\Views\Manage\VerifyPhoneNumber.vbhtml"/>
+            <AddFile Destination="Views\Shared\Lockout.vbhtml" Source="MvcBasicApplicationv5.0\_IndividualAuth\Views\Shared\Lockout.vbhtml"/>
+            <AddFile Destination="Views\Shared\_LoginPartial.vbhtml" Source="MvcBasicApplicationv5.0\_IndividualAuth\Views\Shared\_LoginPartial.vbhtml"/>
+        </Rule>
+        <Rule ID="MvcBasicWindowsAuthFiles">
+            <ReplaceFile Destination="Views\Shared\_Layout.vbhtml" Source="MvcBasicApplicationv5.0\_WindowsAuth\Views\Shared\_Layout.vbhtml"/>
+            <ReplaceFile Destination="Views\Shared\Error.vbhtml" Source="MvcBasicApplicationv5.0\_WindowsAuth\Views\Shared\Error.vbhtml"/>
+            <ReplaceFile Destination="web.config" Source="MvcBasicApplicationv5.0\_WindowsAuth\web.12.config"/>
+        </Rule>
+        <Rule ID="MvcBasicOrgAuthSSOFiles">
+            <ReplaceFile Destination="Global.asax.vb" Source="MvcBasicApplicationv5.0\_OrgAuth\Global.asax.vb"/>
+            <AddFile Destination="Models\TenantDbContext.vb" Source="MvcBasicApplicationv5.0\_OrgAuth\_SSO\Models\TenantDbContext.vb"/>
+            <AddFile Destination="Models\TenantRegistrationModels.vb" Source="MvcBasicApplicationv5.0\_OrgAuth\_SSO\Models\TenantRegistrationModels.vb"/>
+            <AddFile Destination="App_Start\IdentityConfig.vb" Source="MvcBasicApplicationv5.0\_OrgAuth\_SSO\App_Start\IdentityConfig.vb"/>
+            <AddFile Destination="Controllers\AccountController.vb" Source="MvcBasicApplicationv5.0\_OrgAuth\_SSO\Controllers\AccountController.12.vb"/>
+            <AddFile Destination="Utils\DatabaseIssuerNameRegistry.vb" Source="MvcBasicApplicationv5.0\_OrgAuth\_SSO\Utils\DatabaseIssuerNameRegistry.vb"/>
+            <AddFile Destination="Views\Shared\_LoginPartial.vbhtml" Source="MvcBasicApplicationv5.0\_OrgAuth\_SSO\Views\Shared\_LoginPartial.12.vbhtml"/>
+            <AddFile Destination="Views\Account\SignOutCallback.vbhtml" Source="MvcBasicApplicationv5.0\_OrgAuth\_SSO\Views\Account\SignOutCallback.vbhtml"/>
+            <ReplaceFile Destination="web.config" Source="MvcBasicApplicationv5.0\_OrgAuth\_SSO\web.12.config"/>
+        </Rule>
+        <Rule ID="MvcBasicOrgAuthMultiOrgFiles">
+            <ReplaceFile Destination="Global.asax.vb" Source="MvcBasicApplicationv5.0\_OrgAuth\Global.asax.vb"/>
+            <AddFile Destination="Models\TenantDbContext.vb" Source="MvcBasicApplicationv5.0\_OrgAuth\_MultiOrg\Models\TenantDbContext.vb"/>
+            <AddFile Destination="Models\TenantRegistrationModels.vb" Source="MvcBasicApplicationv5.0\_OrgAuth\_MultiOrg\Models\TenantRegistrationModels.vb"/>
+            <AddFile Destination="App_Start\IdentityConfig.vb" Source="MvcBasicApplicationv5.0\_OrgAuth\_SSO\App_Start\IdentityConfig.vb"/>
+            <AddFile Destination="Controllers\AccountController.vb" Source="MvcBasicApplicationv5.0\_OrgAuth\_MultiOrg\Controllers\AccountController.vb"/>
+            <AddFile Destination="Controllers\TenantController.vb" Source="MvcBasicApplicationv5.0\_OrgAuth\_MultiOrg\Controllers\TenantController.vb"/>
+            <AddFile Destination="Utils\DatabaseIssuerNameRegistry.vb" Source="MvcBasicApplicationv5.0\_OrgAuth\_MultiOrg\Utils\DatabaseIssuerNameRegistry.vb"/>
+            <AddFile Destination="Views\Tenant\Index.vbhtml" Source="MvcBasicApplicationv5.0\_OrgAuth\_MultiOrg\Views\Tenant\Index.vbhtml"/>
+            <AddFile Destination="Views\Tenant\SignUpCallback.vbhtml" Source="MvcBasicApplicationv5.0\_OrgAuth\_MultiOrg\Views\Tenant\SignUpCallback.vbhtml"/>
+            <AddFile Destination="Views\Shared\_LoginPartial.vbhtml" Source="MvcBasicApplicationv5.0\_OrgAuth\_MultiOrg\Views\Shared\_LoginPartial.12.vbhtml"/>
+            <ReplaceFile Destination="web.config" Source="MvcBasicApplicationv5.0\_OrgAuth\_MultiOrg\web.12.config"/>
+        </Rule>
+        <Rule ID="MvcBasicCommonAuthFiles">
+            <ReplaceFile Destination="Views\Shared\_Layout.vbhtml" Source="MvcBasicApplicationv5.0\_AuthCommon\Views\Shared\_Layout.vbhtml"/>
+            <ReplaceFile Destination="Views\Shared\Error.vbhtml" Source="MvcBasicApplicationv5.0\_AuthCommon\Views\Shared\Error.12.vbhtml"/>
+        </Rule>
+        <Rule ID="MvcBasicOrgAuthADReadFiles">
+            <ReplaceFile Destination="Controllers\HomeController.vb" Source="MvcBasicApplicationv5.0\_OrgAuth\_Read\Controllers\HomeController.vb"/>
+            <ReplaceFile Destination="Views\Shared\_Layout.vbhtml" Source="MvcBasicApplicationv5.0\_OrgAuth\_Read\Views\Shared\_Layout.vbhtml"/>
+            <AddFile Destination="Views\Home\UserProfile.vbhtml" Source="MvcBasicApplicationv5.0\_OrgAuth\_Read\Views\Home\UserProfile.vbhtml"/>
+            <AddFile Destination="Models\HomeViewModels.vb" Source="MvcBasicApplicationv5.0\_OrgAuth\_Read\Models\HomeViewModels.vb"/>
+        </Rule>
+        <Rule ID="MvcBasicOrgAuthADReadSSOFiles">
+            <ReplaceFile Destination="Views\Shared\_LoginPartial.vbhtml" Source="MvcBasicApplicationv5.0\_OrgAuth\_Read\Views\Shared\_SSO\_LoginPartial.12.vbhtml"/>
+        </Rule>
+        <Rule ID="MvcBasicOrgAuthADReadMultiOrgFiles">
+            <ReplaceFile Destination="Views\Shared\_LoginPartial.vbhtml" Source="MvcBasicApplicationv5.0\_OrgAuth\_Read\Views\Shared\_MultiOrg\_LoginPartial.12.vbhtml"/>
+        </Rule>
+        <Rule ID="MvcBasicOrgAuthOnPremFiles">
+            <AddFile Destination="App_Start\IdentityConfig.vb" Source="MvcBasicApplicationv5.0\_OrgAuth\_OnPrem\App_Start\IdentityConfig.vb"/>
+            <AddFile Destination="Views\Shared\_LoginPartial.vbhtml" Source="MvcBasicApplicationv5.0\_OrgAuth\_OnPrem\Views\Shared\_LoginPartial.12.vbhtml"/>
+            <ReplaceFile Destination="web.config" Source="MvcBasicApplicationv5.0\_OrgAuth\_OnPrem\web.12.config"/>
+        </Rule>
+        <Rule ID="MvcBasicNugetReferences">
+          <AddNugetPackages NugetPackageKey="AspNetWebFrameworksAndTools5" SkipAssemblyReferences="true" IsPreUnzipped="true">
+            <Package ID="Newtonsoft.Json" Version="6.0.4" >
+              <References>
+                <Reference Include="Newtonsoft.Json" HintPath="$nugetpackagesfolder$Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll"/>
+              </References>
+            </Package>
+          </AddNugetPackages>
+        </Rule>
+        <Rule ID="OrgAuthPackages">
+            <AddReference Name="System.IdentityModel" />
+            <AddReference Name="System.IdentityModel.Services" />
+            <AddNugetPackages NugetPackageKey="AspNetWebFrameworksAndTools5" SkipAssemblyReferences="true" IsPreUnzipped="true">
+                <Package ID="EntityFramework" Version="6.1.3">
+                    <References>
+                        <Reference Include="EntityFramework" HintPath="$nugetpackagesfolder$EntityFramework.6.1.3\lib\net45\EntityFramework.dll"/>
+                        <Reference Include="EntityFramework.SqlServer" HintPath="$nugetpackagesfolder$EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll"/>
+                    </References>
+                </Package>
+                <Package ID="Microsoft.AspNet.Identity.Core" Version="2.2.1">
+                    <References>
+                        <Reference Include="Microsoft.AspNet.Identity.Core" HintPath="$nugetpackagesfolder$Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll"/>
+                    </References>
+                </Package>
+                <Package ID="Microsoft.AspNet.Identity.EntityFramework" Version="2.2.1">
+                    <References>
+                        <Reference Include="Microsoft.AspNet.Identity.EntityFramework" HintPath="$nugetpackagesfolder$Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll" />
+                    </References>
+                </Package>
+                <Package ID="System.IdentityModel.Tokens.ValidatingIssuerNameRegistry" Version="4.5.1">
+                    <References>
+                        <Reference Include="System.IdentityModel.Tokens.ValidatingIssuerNameRegistry" HintPath="$nugetpackagesfolder$System.IdentityModel.Tokens.ValidatingIssuerNameRegistry.4.5.1\lib\net45\System.IdentityModel.Tokens.ValidatingIssuerNameRegistry.dll" />
+                    </References>
+                </Package>
+                
+            </AddNugetPackages>
+        </Rule>
+        <Rule ID="OrgAuthADReadPackages">
+            <AddNugetPackages NugetPackageKey="AspNetWebFrameworksAndTools5" SkipAssemblyReferences="true" IsPreUnzipped="true">
+                <Package ID="Microsoft.IdentityModel.Clients.ActiveDirectory" Version="2.14.201151115" >
+                    <References>
+                        <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory" HintPath="$nugetpackagesfolder$Microsoft.IdentityModel.Clients.ActiveDirectory.2.14.201151115\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.dll"/>
+                    </References>
+                </Package>
+            </AddNugetPackages>
+        </Rule>
+        <Rule ID="IndividualAuthPackages">
+            <AddNugetPackages NugetPackageKey="AspNetWebFrameworksAndTools5" SkipAssemblyReferences="true" IsPreUnzipped="true">
+                <Package ID="EntityFramework" Version="6.1.3">
+                    <References>
+                        <Reference Include="EntityFramework" HintPath="$nugetpackagesfolder$EntityFramework.6.1.3\lib\net45\EntityFramework.dll"/>
+                        <Reference Include="EntityFramework.SqlServer" HintPath="$nugetpackagesfolder$EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll"/>
+                    </References>
+                </Package>
+                <Package ID="Microsoft.AspNet.Identity.Core" Version="2.2.1">
+                    <References>
+                        <Reference Include="Microsoft.AspNet.Identity.Core" HintPath="$nugetpackagesfolder$Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll"/>
+                    </References>
+                </Package>
+                <Package ID="Microsoft.AspNet.Identity.Owin" Version="2.2.1">
+                    <References>
+                        <Reference Include="Microsoft.AspNet.Identity.Owin" HintPath="$nugetpackagesfolder$Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll"/>
+                    </References>
+                </Package>
+                <Package ID="Microsoft.AspNet.Identity.EntityFramework" Version="2.2.1">
+                    <References>
+                        <Reference Include="Microsoft.AspNet.Identity.EntityFramework" HintPath="$nugetpackagesfolder$Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll" />
+                    </References>
+                </Package>
+                <Package ID="Owin" Version="1.0">
+                    <References>
+                        <Reference Include="Owin" HintPath="$nugetpackagesfolder$Owin.1.0\lib\net40\Owin.dll"/>
+                    </References>
+                </Package>
+                <Package ID="Microsoft.Owin" Version="3.0.1">
+                    <References>
+                        <Reference Include="Microsoft.Owin" HintPath="$nugetpackagesfolder$Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll"/>
+                    </References>
+                </Package>
+                <Package ID="Microsoft.Owin.Host.SystemWeb" Version="3.0.1">
+                    <References>
+                        <Reference Include="Microsoft.Owin.Host.SystemWeb" HintPath="$nugetpackagesfolder$Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll" />
+                    </References>
+                </Package>
+                <Package ID="Microsoft.Owin.Security" Version="3.0.1">
+                    <References>
+                        <Reference Include="Microsoft.Owin.Security" HintPath="$nugetpackagesfolder$Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll"/>
+                    </References>
+                </Package>
+                <Package ID="Microsoft.Owin.Security.Facebook" Version="3.0.1">
+                    <References>
+                        <Reference Include="Microsoft.Owin.Security.Facebook" HintPath="$nugetpackagesfolder$Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll" />
+                    </References>
+                </Package>
+                <Package ID="Microsoft.Owin.Security.Cookies" Version="3.0.1">
+                    <References>
+                        <Reference Include="Microsoft.Owin.Security.Cookies" HintPath="$nugetpackagesfolder$Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll"/>
+                    </References>
+                </Package>
+                <Package ID="Microsoft.Owin.Security.OAuth" Version="3.0.1">
+                    <References>
+                        <Reference Include="Microsoft.Owin.Security.OAuth" HintPath="$nugetpackagesfolder$Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll"/>
+                    </References>
+                </Package>
+                <Package ID="Microsoft.Owin.Security.Google" Version="3.0.1">
+                    <References>
+                        <Reference Include="Microsoft.Owin.Security.Google" HintPath="$nugetpackagesfolder$Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll"/>
+                    </References>
+                </Package>
+                <Package ID="Microsoft.Owin.Security.Twitter" Version="3.0.1">
+                    <References>
+                        <Reference Include="Microsoft.Owin.Security.Twitter" HintPath="$nugetpackagesfolder$Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll"/>
+                    </References>
+                </Package>
+                <Package ID="Microsoft.Owin.Security.MicrosoftAccount" Version="3.0.1">
+                    <References>
+                        <Reference Include="Microsoft.Owin.Security.MicrosoftAccount" HintPath="$nugetpackagesfolder$Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll"/>
+                    </References>
+                </Package>
+                
+            </AddNugetPackages>
+        </Rule>
+
+        <!-- Basic MVC No Auth Conflict Resolution -->
+        <Rule ID="BasicMvcWithWebApi">
+            <ReplaceFile Destination="Global.asax.vb" Source="MvcBasicApplicationv5.0\_WebApi\Global.asax.vb"/>
+            <ReplaceFile Destination="web.config" Source="MvcBasicApplicationv5.0\_WebApi\web.12.config"/>
+        </Rule>
+        <Rule ID="BasicMvcWithWebForms">
+            <ReplaceFile Destination="Global.asax.vb" Source="MvcBasicApplicationv5.0\_WebForms\Global.asax.vb"/>
+            <ReplaceFile Destination="web.config" Source="MvcBasicApplicationv5.0\_WebForms\web.12.config"/>
+        </Rule>
+        <Rule ID="BasicMvcWithWebApiWebForms">
+            <ReplaceFile Destination="Global.asax.vb" Source="MvcBasicApplicationv5.0\_WebApiWebForms\Global.asax.vb"/>
+            <ReplaceFile Destination="web.config" Source="MvcBasicApplicationv5.0\_WebApi\web.12.config"/>
+        </Rule>
+
+        <!-- Basic MVC Windows Auth Conflict Resolution -->
+        <Rule ID="BasicMvcWithWebApiWindowsAuth">
+            <ReplaceFile Destination="Global.asax.vb" Source="MvcBasicApplicationv5.0\_WebApi\Global.asax.vb"/>
+            <ReplaceFile Destination="web.config" Source="MvcBasicApplicationv5.0\_WebApi\_WindowsAuth\web.12.config"/>
+        </Rule>
+        <Rule ID="BasicMvcWithWebFormsWindowsAuth">
+            <ReplaceFile Destination="Global.asax.vb" Source="MvcBasicApplicationv5.0\_WebForms\Global.asax.vb"/>
+            <ReplaceFile Destination="web.config" Source="MvcBasicApplicationv5.0\_WindowsAuth\web.12.config"/>
+        </Rule>
+        <Rule ID="BasicMvcWithWebApiWebFormsWindowsAuth">
+            <ReplaceFile Destination="Global.asax.vb" Source="MvcBasicApplicationv5.0\_WebApiWebForms\Global.asax.vb"/>
+            <ReplaceFile Destination="web.config" Source="MvcBasicApplicationv5.0\_WebApi\_WindowsAuth\web.12.config"/>
+        </Rule>
+
+        <!-- Basic MVC Individual Auth Conflict Resolution -->
+        <Rule ID="BasicMvcWithWebApiIndividualAuth">
+            <ReplaceFile Destination="Global.asax.vb" Source="MvcBasicApplicationv5.0\_WebApi\_IndividualAuth\Global.asax.vb"/>
+            <ReplaceFile Destination="web.config" Source="MvcBasicApplicationv5.0\_WebApi\_IndividualAuth\web.12.config"/>
+        </Rule>
+        <Rule ID="BasicMvcWithWebFormsIndividualAuth">
+            <ReplaceFile Destination="Global.asax.vb" Source="MvcBasicApplicationv5.0\_WebForms\_IndividualAuth\Global.asax.vb"/>
+            <ReplaceFile Destination="web.config" Source="MvcBasicApplicationv5.0\_IndividualAuth\web.12.config"/>
+        </Rule>
+        <Rule ID="BasicMvcWithWebApiWebFormsIndividualAuth">
+            <ReplaceFile Destination="Global.asax.vb" Source="MvcBasicApplicationv5.0\_WebApiWebForms\_IndividualAuth\Global.asax.vb"/>
+            <ReplaceFile Destination="web.config" Source="MvcBasicApplicationv5.0\_WebApi\_IndividualAuth\web.12.config"/>
+        </Rule>
+
+        <!-- Basic MVC Org Auth SSO Conflict Resolution -->
+        <Rule ID="BasicMvcWithWebApiOrgAuthSSO">
+            <ReplaceFile Destination="Global.asax.vb" Source="MvcBasicApplicationv5.0\_WebApi\_OrgAuth\Global.asax.vb"/>
+            <ReplaceFile Destination="web.config" Source="MvcBasicApplicationv5.0\_WebApi\_OrgAuth\_SSO\web.12.config"/>
+        </Rule>
+        <Rule ID="BasicMvcWithWebFormsOrgAuthSSO">
+            <ReplaceFile Destination="Global.asax.vb" Source="MvcBasicApplicationv5.0\_WebForms\_OrgAuth\Global.asax.vb"/>
+            <ReplaceFile Destination="web.config" Source="MvcBasicApplicationv5.0\_OrgAuth\_SSO\web.12.config"/>
+        </Rule>
+        <Rule ID="BasicMvcWithWebApiWebFormsOrgAuthSSO">
+            <ReplaceFile Destination="Global.asax.vb" Source="MvcBasicApplicationv5.0\_WebApi\_OrgAuth\Global.asax.vb"/>
+            <ReplaceFile Destination="web.config" Source="MvcBasicApplicationv5.0\_WebApi\_OrgAuth\_SSO\web.12.config"/>
+        </Rule>
+
+        <!-- Basic MVC Org Auth OnPrem Conflict Resolution -->
+        <Rule ID="BasicMvcWithWebApiOrgAuthOnPrem">
+            <ReplaceFile Destination="Global.asax.vb" Source="MvcBasicApplicationv5.0\_WebApi\_OrgAuth\Global.asax.vb"/>
+            <ReplaceFile Destination="web.config" Source="MvcBasicApplicationv5.0\_WebApi\_OrgAuth\_OnPrem\web.12.config"/>
+        </Rule>
+        <Rule ID="BasicMvcWithWebFormsOrgAuthOnPrem">
+            <ReplaceFile Destination="Global.asax.vb" Source="MvcBasicApplicationv5.0\_WebForms\_OrgAuth\Global.asax.vb"/>
+            <ReplaceFile Destination="web.config" Source="MvcBasicApplicationv5.0\_OrgAuth\_OnPrem\web.12.config"/>
+        </Rule>
+        <Rule ID="BasicMvcWithWebApiWebFormsOrgAuthOnPrem">
+            <ReplaceFile Destination="Global.asax.vb" Source="MvcBasicApplicationv5.0\_WebApi\_OrgAuth\Global.asax.vb"/>
+            <ReplaceFile Destination="web.config" Source="MvcBasicApplicationv5.0\_WebApi\_OrgAuth\_OnPrem\web.12.config"/>
+        </Rule>
+
+        <!-- Basic MVC Org Auth MultiOrg Conflict Resolution -->
+        <Rule ID="BasicMvcWithWebApiOrgAuthMultiOrg">
+            <ReplaceFile Destination="Global.asax.vb" Source="MvcBasicApplicationv5.0\_WebApi\_OrgAuth\Global.asax.vb"/>
+            <ReplaceFile Destination="web.config" Source="MvcBasicApplicationv5.0\_WebApi\_OrgAuth\_MultiOrg\web.12.config"/>
+        </Rule>
+        <Rule ID="BasicMvcWithWebFormsOrgAuthMultiOrg">
+            <ReplaceFile Destination="Global.asax.vb" Source="MvcBasicApplicationv5.0\_WebForms\_OrgAuth\Global.asax.vb"/>
+            <ReplaceFile Destination="web.config" Source="MvcBasicApplicationv5.0\_OrgAuth\_MultiOrg\web.12.config"/>
+        </Rule>
+        <Rule ID="BasicMvcWithWebApiWebFormsOrgAuthMultiOrg">
+            <ReplaceFile Destination="Global.asax.vb" Source="MvcBasicApplicationv5.0\_WebApi\_OrgAuth\Global.asax.vb"/>
+            <ReplaceFile Destination="web.config" Source="MvcBasicApplicationv5.0\_WebApi\_OrgAuth\_MultiOrg\web.12.config"/>
+        </Rule>
+
+        <!-- Spa Individual Auth Conflict Resolution -->
+        <Rule ID="SpaWithWebForms">
+            <ReplaceFile Destination="Global.asax.vb" Source="Spav5.0\_WebForms\Global.asax.vb"/>
+            <ReplaceFile Destination="web.config" Source="Spav5.0\_WebForms\web.12.config"/>
+        </Rule>
+
+        <Rule ID="MVC">
+            <AddFolder Name="App_Data"/>
+            <AddFolder Name="App_Start"/>
+            <AddFolder Name="Controllers"/>
+            <AddFolder Name="Models"/>
+            <AddFolder Name="Views"/>
+            <AddFile Destination="Global.asax.vb" Source="MvcBasicApplicationv5.0\_Empty\Global.asax.vb"/>
+            <AddFile Destination="Global.asax" Source="MvcBasicApplicationv5.0\_Empty\Global.vb.asax"/>
+            <ReplaceFile Destination="web.config" Source="MvcBasicApplicationv5.0\_Empty\web.12.config"/>
+            <AddFile Destination="App_Start\RouteConfig.vb" Source="MvcBasicApplicationv5.0\App_Start\RouteConfig.vb"/>
+            <AddFile Destination="Views\web.config" Source="MvcBasicApplicationv5.0\_Empty\Views\web.config"/>
+            <AddNugetPackages NugetPackageKey="AspNetWebFrameworksAndTools5" SkipAssemblyReferences="true" IsPreUnzipped="true">
+                <Package ID="Microsoft.AspNet.Razor" Version="3.2.3">
+                    <References>
+                        <Reference Include="System.Web.Razor" HintPath="$nugetpackagesfolder$Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll"/>
+                    </References>
+                </Package>
+                <Package ID="Microsoft.AspNet.Webpages" Version="3.2.3">
+                    <References>
+                        <Reference Include="System.Web.Webpages" HintPath="$nugetpackagesfolder$Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll"/>
+                        <Reference Include="System.Web.Webpages.Deployment" HintPath="$nugetpackagesfolder$Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll"/>
+                        <Reference Include="System.Web.Webpages.Razor" HintPath="$nugetpackagesfolder$Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll"/>
+                        <Reference Include="System.Web.Helpers" HintPath="$nugetpackagesfolder$Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll"/>
+                    </References>
+                </Package>
+                <Package ID="Microsoft.web.Infrastructure" Version="1.0.0.0">
+                    <References>
+                        <Reference Include="Microsoft.Web.Infrastructure" HintPath="$nugetpackagesfolder$Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll"/>
+                    </References>
+                </Package>
+                <Package ID="Microsoft.AspNet.Mvc" Version="5.2.3">
+                    <References>
+                        <Reference Include="System.Web.Mvc" HintPath="$nugetpackagesfolder$Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll"/>
+                    </References>
+                </Package>
+                
+            </AddNugetPackages>
+        </Rule>
+    </Rules>
+</TemplateDefinition>

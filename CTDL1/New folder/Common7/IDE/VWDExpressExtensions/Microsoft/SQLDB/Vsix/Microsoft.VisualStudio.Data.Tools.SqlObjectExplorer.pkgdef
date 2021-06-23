@@ -1,0 +1,24 @@
+﻿[$RootKey$\Packages\{00b73ab4-7a2a-4ddf-90c9-e78a163ab06a}]
+@="SQL Object Explorer Package"
+"Assembly"="Microsoft.VisualStudio.Data.Tools.SqlObjectExplorer, SqlObjectExplorerPackage, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"Class"="Microsoft.VisualStudio.Data.Tools.SqlObjectExplorer.SqlObjectExplorerPackage"
+"CodeBase"="$RootFolder$Common7\IDE\Extensions\Microsoft\SQLDB\Microsoft.VisualStudio.Data.Tools.SqlObjectExplorer.dll"
+"CompanyName"="Microsoft Corporation"
+"ID"=dword:00000065
+"InprocServer32"="$WinDir$\SYSTEM32\MSCOREE.DLL"
+"ProductName"="Microsoft SQL Server Data Tools, Object Explorer"
+
+[$RootKey$\Menus]
+"{00b73ab4-7a2a-4ddf-90c9-e78a163ab06a}"=", Menus.ctmenu, 1"
+
+[$RootKey$\ToolWindows\{fbcae063-e2c0-4ab1-a516-996ea3dafb72}]
+@="{00b73ab4-7a2a-4ddf-90c9-e78a163ab06a}"
+"Float"="50,50,150,350"
+"Name"="Microsoft.VisualStudio.Data.Tools.SqlObjectExplorer.SqlServerObjectExplorerToolWindow"
+"Style"="Tabbed"
+"Orientation"="Left"
+"Window"="{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+
+[$RootKey$\AutoLoadPackages]
+[$RootKey$\AutoLoadPackages\{27F27371-B70C-4B7B-BA28-9EDF8A3F0538}]
+"{00b73ab4-7a2a-4ddf-90c9-e78a163ab06a}"=dword:00000000

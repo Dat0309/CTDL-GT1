@@ -1,0 +1,10 @@
+VSWIZARD 7.0
+Wizard=VsWizard.VsWizardEngine.12.0
+
+Param="WIZARD_NAME = [!output CUSTOM_WIZARD_NAME]"
+Param="ABSOLUTE_PATH = [!output CUSTOM_WIZARD_START_PATH]"
+Param="FALLBACK_LCID = [!output LCID]"
+[!if !CUSTOM_WIZARD_UI]
+Param="WIZARD_UI = FALSE"
+Param="SOURCE_FILTER = txt"
+[!endif]

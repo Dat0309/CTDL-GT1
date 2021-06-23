@@ -1,0 +1,13 @@
+[$RootKey$]
+
+[$RootKey$\Editors]
+
+[$RootKey$\Editors\{3d94cb00-3b0c-42f9-ac7c-f5377a47dfa4}]
+"DisplayName"="#105"
+"Package"="{60e27db8-af54-4dd0-93f9-0c112e4a5903}"
+@="LightSwitch Designer"
+
+[$RootKey$\Editors\{3d94cb00-3b0c-42f9-ac7c-f5377a47dfa4}\Extensions]
+
+[$RootKey$\Editors\{3d94cb00-3b0c-42f9-ac7c-f5377a47dfa4}\LogicalViews]
+"{7651a702-06e5-11d1-8ebd-00a0c90f26ea}"=""

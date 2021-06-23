@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="Microsoft.VisualStudio.WebClient.Diagnostics.Phone.2F72A496-429D-4C0A-B26A-0EF8B156B243">
+    <Name>Debug Internet Explorer on Windows Phone Package</Name>
+    <Author>Microsoft Corporation</Author>
+    <Version>1.0</Version>
+    <Description xml:space="preserve">Debug Internet Explorer on Windows Phone Package</Description>
+    <Locale>1033</Locale>
+    <Icon>VSIXProject_small.png</Icon>
+    <PreviewImage>VSIXProject_large.png</PreviewImage>
+    <SystemComponent>true</SystemComponent>
+    <InstalledByMsi>true</InstalledByMsi>
+    <SupportedProducts>
+      <VisualStudio Version="12.0">
+        <Edition>IntegratedShell</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5" />
+  </Identifier>
+  <References />
+  <Content>
+    <MefComponent>Microsoft.VisualStudio.WebClient.Diagnostics.Phone.dll</MefComponent>
+    <VsPackage>Microsoft.VisualStudio.WebClient.Diagnostics.Phone.pkgdef</VsPackage>
+  </Content>
+</Vsix>

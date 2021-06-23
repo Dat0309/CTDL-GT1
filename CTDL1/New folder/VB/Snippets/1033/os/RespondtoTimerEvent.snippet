@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Respond to Timer Event</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Responds to a timer event.</Description>
+      <Shortcut>osTimer</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Windows.Forms</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>interval</ID>
+          <ToolTip>Replace with interval in milliseconds. </ToolTip>
+          <Default>1000</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[' Start the timer with the given interval
+Private Sub StartTimer()
+    Dim Timer1 As New Timer()
+    AddHandler Timer1.Tick, AddressOf Timer1_Tick
+    Timer1.Interval = $interval$
+    Timer1.Start()
+End Sub
+
+Private Sub Timer1_Tick(ByVal obj As Object, ByVal e As EventArgs)
+
+End Sub]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,7 @@
+; [!output PROJECT_NAME].def : Declara os parâmetros do módulo.
+
+EXPORTS
+	DllCanUnloadNow     PRIVATE
+	DllGetClassObject   PRIVATE
+	DllRegisterServer   PRIVATE
+	DllUnregisterServer PRIVATE

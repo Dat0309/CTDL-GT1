@@ -1,0 +1,13 @@
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="674C2B08-C90D-4A31-A791-6E474F2AE2BF" Version="15.1.0.1" Language="en-US" Publisher="Microsoft Corporation" />
+    <DisplayName>Microsoft Office JavaScript API</DisplayName>
+    <Description xml:space="preserve">Provides the latest Microsoft Office JavaScript API Package for developing apps for Office.</Description>
+  </Metadata>
+  <Installation Scope="ProductExtension" AllUsers="true" InstalledByMsi="true" >
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="12.0" ProductUpdate="true" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" Version="4.5" />
+  </Dependencies>
+</PackageManifest>

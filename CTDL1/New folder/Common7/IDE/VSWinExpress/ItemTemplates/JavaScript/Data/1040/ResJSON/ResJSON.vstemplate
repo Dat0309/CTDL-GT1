@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>File di risorse (resjson)</Name>
+    <Description>File per l'archiviazione di risorse stringa.</Description>
+    <Icon>Resources.ico</Icon>
+    <TemplateID>Microsoft.JavaScript.ResJSON</TemplateID>
+    <TemplateGroupID>JavaScript_Windows_8.1_GroupID</TemplateGroupID>
+    <ProjectType>JavaScript</ProjectType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>resources.resjson</DefaultName>
+    <TargetPlatformName>Windows</TargetPlatformName> 
+    <RequiredPlatformVersion>6.3.0</RequiredPlatformVersion>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem>Resources.resjson</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

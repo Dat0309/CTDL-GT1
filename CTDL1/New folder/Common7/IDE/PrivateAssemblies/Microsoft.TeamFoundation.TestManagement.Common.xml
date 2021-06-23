@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.TeamFoundation.TestManagement.Common</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.TeamFoundation.TestManagement.Common.AttachmentTypes">
+      <summary>Specifies the attachment type names for the test result attachments.</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.AttachmentTypes.ActionRecording">
+      <summary>Returns "ActionRecording".</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.AttachmentTypes.BugFilingData">
+      <summary>Returns "BugFilingData".</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.AttachmentTypes.CodeCoverage">
+      <summary>Returns "CodeCoverage".</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.AttachmentTypes.GeneralAttachment">
+      <summary>Returns "GeneralAttachment".</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.AttachmentTypes.IntermediateCollectorData">
+      <summary>Returns "IntermediateCollectorData".</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.AttachmentTypes.RunConfiguration">
+      <summary>Returns "RunConfiguration".</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.AttachmentTypes.TestImpactDetails">
+      <summary>Returns "TestImpactDetails".</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.AttachmentTypes.TmiTestRunDeploymentFiles">
+      <summary>Returns "TmiTestRunDeploymentFiles".</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.AttachmentTypes.TmiTestRunReverseDeploymentFiles">
+      <summary>Returns "TmiTestRunReverseDeploymentFiles".</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.AttachmentTypes.TrxTmiTestResultDetail">
+      <summary>Returns "TrxTmiTestResultDetail".</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.AttachmentTypes.TrxTmiTestRunSummary">
+      <summary>Returns "TrxTmiTestRunSummary".</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.TestManagement.Common.EnvironmentParentTypes">
+      <summary>Specifies the types of the parent (owner) of the test environments.</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.EnvironmentParentTypes.TeamProject">
+      <summary>The test environment belongs to a Team project.</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.EnvironmentParentTypes.TestController">
+      <summary>The test environment belongs to a test controller.</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.TestManagement.Common.IdConstants">
+      <summary>Specifies the job IDs for the Team Foundation Server agent jobs.</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.IdConstants.CoverAnJobId">
+      <summary>Returns a string ID for CoverAnJob.</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.IdConstants.ProjectDeletionCleanupJobId">
+      <summary>Returns a string ID for ProjectDeletionCleanupJob.</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.IdConstants.SuiteRepopulateJobId">
+      <summary>Returns a string ID for SuiteRepopulateJobId.</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.IdConstants.TestCaseSynchronizerJobId">
+      <summary>Returns a string ID for TestCaseSynchronizerJobId.</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.TestManagement.Common.TestManagementErrorCodes">
+      <summary>Specifies the error codes for error messages from both client and server sides.</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.TestManagementErrorCodes.None">
+      <summary>No Error.</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.TestManagementErrorCodes.SaveTestPlanError">
+      <summary>Error while saving the test plan.</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.TestManagementErrorCodes.DuplicateSuiteName">
+      <summary>Duplicate suite name.</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.TestManagementErrorCodes.TestPointNotFoundError">
+      <summary>Test point not found.</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.TestManagementErrorCodes.DuplicateTestCaseInSuite">
+      <summary>Duplicate test case in test suite.</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.TestManagementErrorCodes.TestSettingsNotFound">
+      <summary>Test settings not found.</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.TestManagementErrorCodes.TestEnvironmentAlreadyExistsOnTestController">
+      <summary>Test environment already exists on this test controller.</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.TestManagement.Common.TestWellKnownGroups">
+      <summary>Provides the information for TestWellKnownGroups.</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.TestWellKnownGroups.TestServiceAccountsIdentifier">
+      <summary>Returns the security identity of the test service accounts. </summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.TestManagement.Common.WitCategoryRefName">
+      <summary>Specifies the constants for WIT category names.</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.WitCategoryRefName.Bug">
+      <summary>Returns "Microsoft.BugCategory".</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.WitCategoryRefName.FeedbackRequestCategory"></member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.WitCategoryRefName.FeedbackResponseCategory"></member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.WitCategoryRefName.Requirement">
+      <summary>Returns "Microsoft.RequirementCategory".</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.WitCategoryRefName.SharedStep">
+      <summary>Returns "Microsoft.SharedStepCategory".</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.WitCategoryRefName.SharedStepByForwardLink">
+      <summary>Returns "Microsoft.VSTS.TestCase.SharedStepReferencedBy-Forward".</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.WitCategoryRefName.SharedStepByReverseLink">
+      <summary>Returns "Microsoft.VSTS.TestCase.SharedStepReferencedBy-Reverse".</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.WitCategoryRefName.TestCase">
+      <summary>Returns "Microsoft.TestCaseCategory".</summary>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.TestManagement.Common.Internal.ArtifactHelper">
+      <summary>For internal use only. Helper class for managing artifact URI conversion.</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.ArtifactHelper.ConvertWorkItemUrisToIds(System.Collections.Generic.List{System.String})">
+      <returns>Returns <see cref="T:System.Collections.Generic.List`1" />.</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.ArtifactHelper.ExtractQueryParameters(System.Uri,System.String@)">
+      <returns>Returns <see cref="T:System.Collections.Specialized.NameValueCollection" />.</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.ArtifactHelper.GetArtifactUrlFromHttpUrl(System.String)">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.ArtifactHelper.ParseAttachmentId(System.String,System.Int32@)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.ArtifactHelper.ParseAttachmentId(System.Uri,System.Int32@)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.ArtifactHelper.ParseSessionId(System.Uri,System.Int32@)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.ArtifactHelper.ParseTestCaseResultAttachmentId(System.String,System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.ArtifactHelper.ParseTestCaseResultAttachmentId(System.Uri,System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.ArtifactHelper.ParseTestCaseResultId(System.String,System.Int32@,System.Int32@)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.ArtifactHelper.ParseTestCaseResultId(System.Uri,System.Int32@,System.Int32@)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.TestManagement.Common.Internal.AttachmentDownloadFields">
+      <summary>FOR INTERNAL USE ONLY. Query string parameters that are used for attachment downloads.</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.AttachmentDownloadFields.AttachmentId"></member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.AttachmentDownloadFields.Length"></member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.AttachmentDownloadFields.SessionId"></member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.AttachmentDownloadFields.TestResultId"></member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.AttachmentDownloadFields.TestRunId"></member>
+    <member name="T:Microsoft.TeamFoundation.TestManagement.Common.Internal.HttpRange">
+      <summary>FOR INTERNAL USE ONLY. Used to contain and parse the byte offsets used in an HTTP range header.</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.HttpRange.#ctor(System.Int64,System.Int64,System.Int64)"></member>
+    <member name="P:Microsoft.TeamFoundation.TestManagement.Common.Internal.HttpRange.End">
+      <returns>Returns <see cref="T:System.Int64" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.TestManagement.Common.Internal.HttpRange.Start">
+      <returns>Returns <see cref="T:System.Int64" />.</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.HttpRange.ToString">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:Microsoft.TeamFoundation.TestManagement.Common.Internal.HttpRange.Total">
+      <returns>Returns <see cref="T:System.Int64" />.</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.HttpRange.TryParse(System.String,Microsoft.TeamFoundation.TestManagement.Common.Internal.HttpRange@)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="T:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames">
+      <summary>For internal use only. The reference names of various work item fields used by Test Manager subsystem.</summary>
+    </member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.Actions"></member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.ActivatedBy"></member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.ActivatedDate"></member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.AutomationStatus"></member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.ClosedBy"></member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.ClosedDate"></member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.DataField"></member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.Description"></member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.IntegrationBuild"></member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.Owner"></member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.Parameters"></member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.Priority"></member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.StateChangeDate"></member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.Storage"></member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.TestId"></member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.TestIdIsNotNull"></member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.TestName"></member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.TestType"></member>
+    <member name="F:Microsoft.TeamFoundation.TestManagement.Common.Internal.WorkItemFieldNames.WorkItemType"></member>
+    <member name="T:Microsoft.TeamFoundation.TestManagement.Common.Internal.XmlUtility">
+      <summary>FOR INTERNAL USE ONLY. Helper functions for reading/writing/loading of XML documents.</summary>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.XmlUtility.CreateSafeReader(System.IO.Stream)">
+      <returns>Returns <see cref="T:System.Xml.XmlReader" />.</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.XmlUtility.CreateSafeReader(System.IO.TextReader)">
+      <returns>Returns <see cref="T:System.Xml.XmlReader" />.</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.XmlUtility.CreateSafeXmlTextReader(System.IO.Stream)">
+      <returns>Returns <see cref="T:System.Xml.XmlTextReader" />.</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.XmlUtility.CreateSafeXmlTextReader(System.IO.TextReader)">
+      <returns>Returns <see cref="T:System.Xml.XmlTextReader" />.</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.XmlUtility.LoadXmlDocumentFromFile(System.String)">
+      <returns>Returns <see cref="T:System.Xml.XmlDocument" />.</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.XmlUtility.LoadXmlDocumentFromStream(System.IO.Stream)">
+      <returns>Returns <see cref="T:System.Xml.XmlDocument" />.</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.XmlUtility.LoadXmlDocumentFromString(System.String)">
+      <returns>Returns <see cref="T:System.Xml.XmlDocument" />.</returns>
+    </member>
+    <member name="M:Microsoft.TeamFoundation.TestManagement.Common.Internal.XmlUtility.LoadXmlDocumentFromTextReader(System.IO.TextReader)">
+      <returns>Returns <see cref="T:System.Xml.XmlDocument" />.</returns>
+    </member>
+  </members>
+</doc>

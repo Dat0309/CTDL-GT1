@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BytesAbbreviation" xml:space="preserve">
+    <value>바이트</value>
+  </data>
+  <data name="CPU_Category" xml:space="preserve">
+    <value>CPU</value>
+  </data>
+  <data name="DescriptionLabel" xml:space="preserve">
+    <value>이벤트 설명</value>
+  </data>
+  <data name="Display_Category" xml:space="preserve">
+    <value>표시</value>
+  </data>
+  <data name="DownloadDataLabel" xml:space="preserve">
+    <value>데이터 다운로드</value>
+  </data>
+  <data name="DrillDownViewTitle" xml:space="preserve">
+    <value>자세히</value>
+  </data>
+  <data name="DrillDownViewTooltip" xml:space="preserve">
+    <value>자세히</value>
+  </data>
+  <data name="EnergySummaryDescriptionForSelection" xml:space="preserve">
+    <value>선택한 지역에서 {1} 동안 소비된 배터리 충전량은 약 {0}입니다. 이 속도로 사용될 경우 완전히 충전된 표준 배터리가 약 {2} 이내에 방전됩니다.</value>
+  </data>
+  <data name="EventsTimelineAriaLabel" xml:space="preserve">
+    <value>현재 선택한 시간 내에 발생한 이벤트 순서를 표시하는 스크롤 가능한 Gantt 차트입니다.  이동하려면 위쪽 및 아래쪽 화살표를 누르십시오.</value>
+  </data>
+  <data name="GigaBytesAbbreviation" xml:space="preserve">
+    <value>GB</value>
+  </data>
+  <data name="HoursAbbreviation" xml:space="preserve">
+    <value>시간</value>
+  </data>
+  <data name="KiloBytesAbbreviation" xml:space="preserve">
+    <value>KB</value>
+  </data>
+  <data name="KiloWattAbbreviation" xml:space="preserve">
+    <value>KW</value>
+  </data>
+  <data name="KiloWattHourAbbreviation" xml:space="preserve">
+    <value>KW Hr</value>
+  </data>
+  <data name="MegaBytesAbbreviation" xml:space="preserve">
+    <value>MB</value>
+  </data>
+  <data name="MillisecondsAbbreviation" xml:space="preserve">
+    <value>밀리초</value>
+  </data>
+  <data name="MillisecondsLabel" xml:space="preserve">
+    <value>밀리초</value>
+  </data>
+  <data name="MilliWattHrAbbreviation" xml:space="preserve">
+    <value>mW-h</value>
+  </data>
+  <data name="MilliWattsAbbreviation" xml:space="preserve">
+    <value>mW</value>
+  </data>
+  <data name="MinutesAbbreviation" xml:space="preserve">
+    <value>분</value>
+  </data>
+  <data name="MinutesLabel" xml:space="preserve">
+    <value>분</value>
+  </data>
+  <data name="Network2GState" xml:space="preserve">
+    <value>2G 네트워크</value>
+  </data>
+  <data name="Network3GState" xml:space="preserve">
+    <value>3G 네트워크</value>
+  </data>
+  <data name="Network4GState" xml:space="preserve">
+    <value>4G 네트워크</value>
+  </data>
+  <data name="NetworkLANState" xml:space="preserve">
+    <value>이더넷 네트워크</value>
+  </data>
+  <data name="NetworkTraffic" xml:space="preserve">
+    <value>데이터 전송</value>
+  </data>
+  <data name="NetworkWIFIState" xml:space="preserve">
+    <value>Wi-Fi 네트워크</value>
+  </data>
+  <data name="Network_Category" xml:space="preserve">
+    <value>네트워크</value>
+  </data>
+  <data name="EnergyConsumedLabel" xml:space="preserve">
+    <value>소비된 에너지</value>
+  </data>
+  <data name="PowerMultilineGraphTitle" xml:space="preserve">
+    <value>예상 전원 사용</value>
+  </data>
+  <data name="PowerProfilerDetailsViewTitle" xml:space="preserve">
+    <value>에너지 소비</value>
+  </data>
+  <data name="PowerProfilerToolDescription" xml:space="preserve">
+    <value>응용 프로그램에서 에너지가 소비된 위치를 검토합니다.</value>
+  </data>
+  <data name="PowerProfilerToolName" xml:space="preserve">
+    <value>에너지 소비</value>
+  </data>
+  <data name="PowerTimelineViewEventHeaderLabel" xml:space="preserve">
+    <value>리소스(설정/해제)</value>
+  </data>
+  <data name="PowerUnit" xml:space="preserve">
+    <value>mW</value>
+  </data>
+  <data name="RulerAriaLabel" xml:space="preserve">
+    <value>눈금자의 최소값은 {0}이고 최대값은 {1}입니다.</value>
+  </data>
+  <data name="RulerLeftSliderAriaLabel" xml:space="preserve">
+    <value>왼쪽 슬라이더</value>
+  </data>
+  <data name="RulerLifecycleMarkLabel" xml:space="preserve">
+    <value>앱 수명 주기 표시</value>
+  </data>
+  <data name="RulerRightSliderAriaLabel" xml:space="preserve">
+    <value>오른쪽 슬라이더</value>
+  </data>
+  <data name="RulerSliderAriaValueText" xml:space="preserve">
+    <value>현재 값은 {0}입니다. 최소값은 {1}입니다. 최대값은 {2}입니다.</value>
+  </data>
+  <data name="RulerTitle" xml:space="preserve">
+    <value>진단 세션</value>
+  </data>
+  <data name="RulerUserMarkLabel" xml:space="preserve">
+    <value>사용자 표시</value>
+  </data>
+  <data name="Ruler_LifeCycleEvents" xml:space="preserve">
+    <value>앱 수명 주기 표시</value>
+  </data>
+  <data name="Ruler_UserMarks" xml:space="preserve">
+    <value>사용자 표식</value>
+  </data>
+  <data name="RulerMarkLabel" xml:space="preserve">
+    <value>다음 이벤트가 발생했음을 나타내는 눈금자 눈금: {0}</value>
+    <comment>{0} is replaced with the tooltip content of the ruler mark(s)</comment>
+  </data>
+  <data name="SecondsAbbreviation" xml:space="preserve">
+    <value>초</value>
+  </data>
+  <data name="SecondsLabel" xml:space="preserve">
+    <value>초</value>
+  </data>
+  <data name="SectorToolTip" xml:space="preserve">
+    <value>{0}: {1}%({2})</value>
+  </data>
+  <data name="SummaryViewTabTitle" xml:space="preserve">
+    <value>요약</value>
+  </data>
+  <data name="SummaryViewTabTooltip" xml:space="preserve">
+    <value>요약</value>
+  </data>
+  <data name="Total_Category" xml:space="preserve">
+    <value>합계</value>
+  </data>
+  <data name="UploadDataLabel" xml:space="preserve">
+    <value>데이터 업로드</value>
+  </data>
+  <data name="WattHrAbbreviation" xml:space="preserve">
+    <value>W hr</value>
+  </data>
+  <data name="WattsAbbreviation" xml:space="preserve">
+    <value>W</value>
+  </data>
+  <data name="EnerguSummarySectorAriaLabel" xml:space="preserve">
+    <value>에너지의 {1}%가 {0}에 의해 소비되었습니다. 소비된 총 에너지: {2}</value>
+    <comment>{0} -&gt; Energy Consumer, {1} -&gt; percentage of energy Consumed, {2} -&gt; Energy consumed</comment>
+  </data>
+  <data name="InclusiveTimeSVGLabelString" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="summaryGraphAriaLabel" xml:space="preserve">
+    <value>에너지를 가장 많이 소비한 리소스를 표시하는 도넛형 차트입니다.</value>
+  </data>
+  <data name="SummaryTitle" xml:space="preserve">
+    <value>예상 에너지 사용 요약({0})</value>
+    <comment>Energy Usage Summary (units)</comment>
+  </data>
+  <data name="EnergySummaryDescriptionForSession" xml:space="preserve">
+    <value>세션에서 {1} 동안 소비된 배터리 충전량은 약 {0}입니다. 이 속도로 사용될 경우 완전히 충전된 표준 배터리가 약 {2} 이내에 방전됩니다.</value>
+  </data>
+  <data name="RulerMarkTooltipLabel" xml:space="preserve">
+    <value> 위치: {0}</value>
+    <comment>placeholder 0 is replaced with the formatted time the mark fired.</comment>
+  </data>
+</root>

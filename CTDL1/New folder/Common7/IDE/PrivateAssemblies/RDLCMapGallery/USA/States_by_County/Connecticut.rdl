@@ -1,0 +1,746 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Map Name="Map1">
+            <MapViewport>
+              <MapCoordinateSystem>Geographic</MapCoordinateSystem>
+              <MapProjection>Mercator</MapProjection>
+              <ProjectionCenterX>0</ProjectionCenterX>
+              <ProjectionCenterY>0</ProjectionCenterY>
+              <MapLimits>
+                <MinimumX>NaN</MinimumX>
+                <MinimumY>NaN</MinimumY>
+                <MaximumX>NaN</MaximumX>
+                <MaximumY>NaN</MaximumY>
+              </MapLimits>
+              <MaximumZoom>4000000</MaximumZoom>
+              <SimplificationResolution>0.01</SimplificationResolution>
+              <MapCustomView>
+                <Zoom>100</Zoom>
+              </MapCustomView>
+              <MapMeridians>
+                <Style>
+                  <Border>
+                    <Color>#c08080ff</Color>
+                    <Style>None</Style>
+                  </Border>
+                  <FontSize>8pt</FontSize>
+                  <Format>#°E;#°W;0°</Format>
+                  <Color>#c08080ff</Color>
+                </Style>
+                <Hidden>true</Hidden>
+                <Interval>NaN</Interval>
+                <ShowLabels>true</ShowLabels>
+              </MapMeridians>
+              <MapParallels>
+                <Style>
+                  <Border>
+                    <Color>#c08080ff</Color>
+                    <Style>None</Style>
+                  </Border>
+                  <FontSize>8pt</FontSize>
+                  <Format>#°N;#°S;0°</Format>
+                  <Color>#c08080ff</Color>
+                </Style>
+                <Hidden>true</Hidden>
+                <Interval>NaN</Interval>
+                <ShowLabels>true</ShowLabels>
+              </MapParallels>
+              <GridUnderContent>false</GridUnderContent>
+              <Style>
+                <Border>
+                  <Color>Gray</Color>
+                  <Style>None</Style>
+                </Border>
+                <BackgroundColor>White</BackgroundColor>
+                <BackgroundGradientType>None</BackgroundGradientType>
+                <BackgroundGradientEndColor>Gainsboro</BackgroundGradientEndColor>
+                <ShadowOffset>0pt</ShadowOffset>
+              </Style>
+              <LeftMargin>2pt</LeftMargin>
+              <RightMargin>2pt</RightMargin>
+              <TopMargin>2pt</TopMargin>
+              <BottomMargin>2pt</BottomMargin>
+            </MapViewport>
+            <MapLayers>
+              <MapPolygonLayer Name="PolygonLayer1">
+                <MapPolygonTemplate>
+                  <CenterPointOffsetX>0</CenterPointOffsetX>
+                  <CenterPointOffsetY>0</CenterPointOffsetY>
+                  <Style>
+                    <Border>
+                      <Color>Gray</Color>
+                      <Style>Solid</Style>
+                    </Border>
+                    <BackgroundColor>White</BackgroundColor>
+                    <BackgroundGradientType>None</BackgroundGradientType>
+                    <BackgroundGradientEndColor>LightGrey</BackgroundGradientEndColor>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                  <Hidden>false</Hidden>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <Label />
+                  <ToolTip />
+                  <DataElementLabel />
+                </MapPolygonTemplate>
+                <MapPolygonRules />
+                <MapMarkerTemplate>
+                  <MapMarker>
+                    <MapMarkerStyle>Circle</MapMarkerStyle>
+                  </MapMarker>
+                  <Size>10pt</Size>
+                  <Style>
+                    <Border>
+                      <Color>Gray</Color>
+                      <Style>Solid</Style>
+                    </Border>
+                    <BackgroundColor>#e0ffffff</BackgroundColor>
+                    <BackgroundGradientType>None</BackgroundGradientType>
+                    <BackgroundGradientEndColor>LightGrey</BackgroundGradientEndColor>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                  <Hidden>true</Hidden>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <Label />
+                  <ToolTip />
+                  <DataElementLabel />
+                </MapMarkerTemplate>
+                <MapCenterPointRules />
+                <MapPolygons>
+                  <MapPolygon>
+                    <UseCustomPolygonTemplate>false</UseCustomPolygonTemplate>
+                    <MapPolygonTemplate>
+                      <CenterPointOffsetX>0</CenterPointOffsetX>
+                      <CenterPointOffsetY>0</CenterPointOffsetY>
+                      <Style>
+                        <Border>
+                          <Color>Gray</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BackgroundGradientType>None</BackgroundGradientType>
+                        <BackgroundGradientEndColor>LightGrey</BackgroundGradientEndColor>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                      <Hidden>false</Hidden>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <Label />
+                      <ToolTip />
+                      <DataElementLabel />
+                    </MapPolygonTemplate>
+                    <UseCustomCenterPointTemplate>false</UseCustomCenterPointTemplate>
+                    <MapMarkerTemplate>
+                      <MapMarker>
+                        <MapMarkerStyle>Circle</MapMarkerStyle>
+                      </MapMarker>
+                      <Size>10pt</Size>
+                      <Style>
+                        <Border>
+                          <Color>Gray</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BackgroundGradientType>None</BackgroundGradientType>
+                        <BackgroundGradientEndColor>LightGrey</BackgroundGradientEndColor>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                      <Hidden>false</Hidden>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <Label />
+                      <ToolTip />
+                      <DataElementLabel />
+                    </MapMarkerTemplate>
+                    <VectorData>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</VectorData>
+                    <MapFields>
+                      <MapField>
+                        <Name>STATEFP</Name>
+                        <Value>09</Value>
+                      </MapField>
+                      <MapField>
+                        <Name>COUNTYFP</Name>
+                        <Value>009</Value>
+                      </MapField>
+                      <MapField>
+                        <Name>COUNTYNAME</Name>
+                        <Value>New Haven</Value>
+                      </MapField>
+                    </MapFields>
+                  </MapPolygon>
+                  <MapPolygon>
+                    <UseCustomPolygonTemplate>false</UseCustomPolygonTemplate>
+                    <MapPolygonTemplate>
+                      <CenterPointOffsetX>0</CenterPointOffsetX>
+                      <CenterPointOffsetY>0</CenterPointOffsetY>
+                      <Style>
+                        <Border>
+                          <Color>Gray</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BackgroundGradientType>None</BackgroundGradientType>
+                        <BackgroundGradientEndColor>LightGrey</BackgroundGradientEndColor>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                      <Hidden>false</Hidden>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <Label />
+                      <ToolTip />
+                      <DataElementLabel />
+                    </MapPolygonTemplate>
+                    <UseCustomCenterPointTemplate>false</UseCustomCenterPointTemplate>
+                    <MapMarkerTemplate>
+                      <MapMarker>
+                        <MapMarkerStyle>Circle</MapMarkerStyle>
+                      </MapMarker>
+                      <Size>10pt</Size>
+                      <Style>
+                        <Border>
+                          <Color>Gray</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BackgroundGradientType>None</BackgroundGradientType>
+                        <BackgroundGradientEndColor>LightGrey</BackgroundGradientEndColor>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                      <Hidden>false</Hidden>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <Label />
+                      <ToolTip />
+                      <DataElementLabel />
+                    </MapMarkerTemplate>
+                    <VectorData>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</VectorData>
+                    <MapFields>
+                      <MapField>
+                        <Name>STATEFP</Name>
+                        <Value>09</Value>
+                      </MapField>
+                      <MapField>
+                        <Name>COUNTYFP</Name>
+                        <Value>007</Value>
+                      </MapField>
+                      <MapField>
+                        <Name>COUNTYNAME</Name>
+                        <Value>Middlesex</Value>
+                      </MapField>
+                    </MapFields>
+                  </MapPolygon>
+                  <MapPolygon>
+                    <UseCustomPolygonTemplate>false</UseCustomPolygonTemplate>
+                    <MapPolygonTemplate>
+                      <CenterPointOffsetX>0</CenterPointOffsetX>
+                      <CenterPointOffsetY>0</CenterPointOffsetY>
+                      <Style>
+                        <Border>
+                          <Color>Gray</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BackgroundGradientType>None</BackgroundGradientType>
+                        <BackgroundGradientEndColor>LightGrey</BackgroundGradientEndColor>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                      <Hidden>false</Hidden>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <Label />
+                      <ToolTip />
+                      <DataElementLabel />
+                    </MapPolygonTemplate>
+                    <UseCustomCenterPointTemplate>false</UseCustomCenterPointTemplate>
+                    <MapMarkerTemplate>
+                      <MapMarker>
+                        <MapMarkerStyle>Circle</MapMarkerStyle>
+                      </MapMarker>
+                      <Size>10pt</Size>
+                      <Style>
+                        <Border>
+                          <Color>Gray</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BackgroundGradientType>None</BackgroundGradientType>
+                        <BackgroundGradientEndColor>LightGrey</BackgroundGradientEndColor>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                      <Hidden>false</Hidden>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <Label />
+                      <ToolTip />
+                      <DataElementLabel />
+                    </MapMarkerTemplate>
+                    <VectorData>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</VectorData>
+                    <MapFields>
+                      <MapField>
+                        <Name>STATEFP</Name>
+                        <Value>09</Value>
+                      </MapField>
+                      <MapField>
+                        <Name>COUNTYFP</Name>
+                        <Value>001</Value>
+                      </MapField>
+                      <MapField>
+                        <Name>COUNTYNAME</Name>
+                        <Value>Fairfield</Value>
+                      </MapField>
+                    </MapFields>
+                  </MapPolygon>
+                  <MapPolygon>
+                    <UseCustomPolygonTemplate>false</UseCustomPolygonTemplate>
+                    <MapPolygonTemplate>
+                      <CenterPointOffsetX>0</CenterPointOffsetX>
+                      <CenterPointOffsetY>0</CenterPointOffsetY>
+                      <Style>
+                        <Border>
+                          <Color>Gray</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BackgroundGradientType>None</BackgroundGradientType>
+                        <BackgroundGradientEndColor>LightGrey</BackgroundGradientEndColor>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                      <Hidden>false</Hidden>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <Label />
+                      <ToolTip />
+                      <DataElementLabel />
+                    </MapPolygonTemplate>
+                    <UseCustomCenterPointTemplate>false</UseCustomCenterPointTemplate>
+                    <MapMarkerTemplate>
+                      <MapMarker>
+                        <MapMarkerStyle>Circle</MapMarkerStyle>
+                      </MapMarker>
+                      <Size>10pt</Size>
+                      <Style>
+                        <Border>
+                          <Color>Gray</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BackgroundGradientType>None</BackgroundGradientType>
+                        <BackgroundGradientEndColor>LightGrey</BackgroundGradientEndColor>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                      <Hidden>false</Hidden>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <Label />
+                      <ToolTip />
+                      <DataElementLabel />
+                    </MapMarkerTemplate>
+                    <VectorData>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</VectorData>
+                    <MapFields>
+                      <MapField>
+                        <Name>STATEFP</Name>
+                        <Value>09</Value>
+                      </MapField>
+                      <MapField>
+                        <Name>COUNTYFP</Name>
+                        <Value>003</Value>
+                      </MapField>
+                      <MapField>
+                        <Name>COUNTYNAME</Name>
+                        <Value>Hartford</Value>
+                      </MapField>
+                    </MapFields>
+                  </MapPolygon>
+                  <MapPolygon>
+                    <UseCustomPolygonTemplate>false</UseCustomPolygonTemplate>
+                    <MapPolygonTemplate>
+                      <CenterPointOffsetX>0</CenterPointOffsetX>
+                      <CenterPointOffsetY>0</CenterPointOffsetY>
+                      <Style>
+                        <Border>
+                          <Color>Gray</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BackgroundGradientType>None</BackgroundGradientType>
+                        <BackgroundGradientEndColor>LightGrey</BackgroundGradientEndColor>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                      <Hidden>false</Hidden>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <Label />
+                      <ToolTip />
+                      <DataElementLabel />
+                    </MapPolygonTemplate>
+                    <UseCustomCenterPointTemplate>false</UseCustomCenterPointTemplate>
+                    <MapMarkerTemplate>
+                      <MapMarker>
+                        <MapMarkerStyle>Circle</MapMarkerStyle>
+                      </MapMarker>
+                      <Size>10pt</Size>
+                      <Style>
+                        <Border>
+                          <Color>Gray</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BackgroundGradientType>None</BackgroundGradientType>
+                        <BackgroundGradientEndColor>LightGrey</BackgroundGradientEndColor>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                      <Hidden>false</Hidden>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <Label />
+                      <ToolTip />
+                      <DataElementLabel />
+                    </MapMarkerTemplate>
+                    <VectorData>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</VectorData>
+                    <MapFields>
+                      <MapField>
+                        <Name>STATEFP</Name>
+                        <Value>09</Value>
+                      </MapField>
+                      <MapField>
+                        <Name>COUNTYFP</Name>
+                        <Value>013</Value>
+                      </MapField>
+                      <MapField>
+                        <Name>COUNTYNAME</Name>
+                        <Value>Tolland</Value>
+                      </MapField>
+                    </MapFields>
+                  </MapPolygon>
+                  <MapPolygon>
+                    <UseCustomPolygonTemplate>false</UseCustomPolygonTemplate>
+                    <MapPolygonTemplate>
+                      <CenterPointOffsetX>0</CenterPointOffsetX>
+                      <CenterPointOffsetY>0</CenterPointOffsetY>
+                      <Style>
+                        <Border>
+                          <Color>Gray</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BackgroundGradientType>None</BackgroundGradientType>
+                        <BackgroundGradientEndColor>LightGrey</BackgroundGradientEndColor>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                      <Hidden>false</Hidden>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <Label />
+                      <ToolTip />
+                      <DataElementLabel />
+                    </MapPolygonTemplate>
+                    <UseCustomCenterPointTemplate>false</UseCustomCenterPointTemplate>
+                    <MapMarkerTemplate>
+                      <MapMarker>
+                        <MapMarkerStyle>Circle</MapMarkerStyle>
+                      </MapMarker>
+                      <Size>10pt</Size>
+                      <Style>
+                        <Border>
+                          <Color>Gray</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BackgroundGradientType>None</BackgroundGradientType>
+                        <BackgroundGradientEndColor>LightGrey</BackgroundGradientEndColor>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                      <Hidden>false</Hidden>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <Label />
+                      <ToolTip />
+                      <DataElementLabel />
+                    </MapMarkerTemplate>
+                    <VectorData>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</VectorData>
+                    <MapFields>
+                      <MapField>
+                        <Name>STATEFP</Name>
+                        <Value>09</Value>
+                      </MapField>
+                      <MapField>
+                        <Name>COUNTYFP</Name>
+                        <Value>011</Value>
+                      </MapField>
+                      <MapField>
+                        <Name>COUNTYNAME</Name>
+                        <Value>New London</Value>
+                      </MapField>
+                    </MapFields>
+                  </MapPolygon>
+                  <MapPolygon>
+                    <UseCustomPolygonTemplate>false</UseCustomPolygonTemplate>
+                    <MapPolygonTemplate>
+                      <CenterPointOffsetX>0</CenterPointOffsetX>
+                      <CenterPointOffsetY>0</CenterPointOffsetY>
+                      <Style>
+                        <Border>
+                          <Color>Gray</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BackgroundGradientType>None</BackgroundGradientType>
+                        <BackgroundGradientEndColor>LightGrey</BackgroundGradientEndColor>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                      <Hidden>false</Hidden>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <Label />
+                      <ToolTip />
+                      <DataElementLabel />
+                    </MapPolygonTemplate>
+                    <UseCustomCenterPointTemplate>false</UseCustomCenterPointTemplate>
+                    <MapMarkerTemplate>
+                      <MapMarker>
+                        <MapMarkerStyle>Circle</MapMarkerStyle>
+                      </MapMarker>
+                      <Size>10pt</Size>
+                      <Style>
+                        <Border>
+                          <Color>Gray</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BackgroundGradientType>None</BackgroundGradientType>
+                        <BackgroundGradientEndColor>LightGrey</BackgroundGradientEndColor>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                      <Hidden>false</Hidden>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <Label />
+                      <ToolTip />
+                      <DataElementLabel />
+                    </MapMarkerTemplate>
+                    <VectorData>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</VectorData>
+                    <MapFields>
+                      <MapField>
+                        <Name>STATEFP</Name>
+                        <Value>09</Value>
+                      </MapField>
+                      <MapField>
+                        <Name>COUNTYFP</Name>
+                        <Value>015</Value>
+                      </MapField>
+                      <MapField>
+                        <Name>COUNTYNAME</Name>
+                        <Value>Windham</Value>
+                      </MapField>
+                    </MapFields>
+                  </MapPolygon>
+                  <MapPolygon>
+                    <UseCustomPolygonTemplate>false</UseCustomPolygonTemplate>
+                    <MapPolygonTemplate>
+                      <CenterPointOffsetX>0</CenterPointOffsetX>
+                      <CenterPointOffsetY>0</CenterPointOffsetY>
+                      <Style>
+                        <Border>
+                          <Color>Gray</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BackgroundGradientType>None</BackgroundGradientType>
+                        <BackgroundGradientEndColor>LightGrey</BackgroundGradientEndColor>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                      <Hidden>false</Hidden>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <Label />
+                      <ToolTip />
+                      <DataElementLabel />
+                    </MapPolygonTemplate>
+                    <UseCustomCenterPointTemplate>false</UseCustomCenterPointTemplate>
+                    <MapMarkerTemplate>
+                      <MapMarker>
+                        <MapMarkerStyle>Circle</MapMarkerStyle>
+                      </MapMarker>
+                      <Size>10pt</Size>
+                      <Style>
+                        <Border>
+                          <Color>Gray</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BackgroundGradientType>None</BackgroundGradientType>
+                        <BackgroundGradientEndColor>LightGrey</BackgroundGradientEndColor>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                      <Hidden>false</Hidden>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <Label />
+                      <ToolTip />
+                      <DataElementLabel />
+                    </MapMarkerTemplate>
+                    <VectorData>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</VectorData>
+                    <MapFields>
+                      <MapField>
+                        <Name>STATEFP</Name>
+                        <Value>09</Value>
+                      </MapField>
+                      <MapField>
+                        <Name>COUNTYFP</Name>
+                        <Value>005</Value>
+                      </MapField>
+                      <MapField>
+                        <Name>COUNTYNAME</Name>
+                        <Value>Litchfield</Value>
+                      </MapField>
+                    </MapFields>
+                  </MapPolygon>
+                </MapPolygons>
+                <MapFieldDefinitions>
+                  <MapFieldDefinition>
+                    <Name>STATEFP</Name>
+                    <DataType>String</DataType>
+                  </MapFieldDefinition>
+                  <MapFieldDefinition>
+                    <Name>COUNTYFP</Name>
+                    <DataType>String</DataType>
+                  </MapFieldDefinition>
+                  <MapFieldDefinition>
+                    <Name>COUNTYNAME</Name>
+                    <DataType>String</DataType>
+                  </MapFieldDefinition>
+                </MapFieldDefinitions>
+              </MapPolygonLayer>
+            </MapLayers>
+            <MapDistanceScale>
+              <ScaleBorderColor>Gray</ScaleBorderColor>
+              <Position>RightBottom</Position>
+              <DockOutsideViewport>false</DockOutsideViewport>
+              <Hidden>true</Hidden>
+              <ToolTip />
+              <Style>
+                <Border>
+                  <Color>Gray</Color>
+                  <Style>Solid</Style>
+                </Border>
+                <BackgroundColor>White</BackgroundColor>
+                <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+                <BackgroundGradientEndColor>Gainsboro</BackgroundGradientEndColor>
+                <FontSize>8pt</FontSize>
+                <ShadowOffset>1pt</ShadowOffset>
+              </Style>
+              <MapSize>
+                <Width>80</Width>
+                <Height>40</Height>
+                <Unit>Point</Unit>
+              </MapSize>
+              <LeftMargin>2pt</LeftMargin>
+              <RightMargin>2pt</RightMargin>
+              <TopMargin>2pt</TopMargin>
+              <BottomMargin>2pt</BottomMargin>
+            </MapDistanceScale>
+            <MapColorScale>
+              <MapColorScaleTitle>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <Caption />
+              </MapColorScaleTitle>
+              <ColorBarBorderColor>Gray</ColorBarBorderColor>
+              <LabelFormat>#,##0.##</LabelFormat>
+              <HideEndLabels>false</HideEndLabels>
+              <NoDataText>No data</NoDataText>
+              <Position>LeftBottom</Position>
+              <DockOutsideViewport>false</DockOutsideViewport>
+              <Hidden>true</Hidden>
+              <ToolTip />
+              <Style>
+                <Border>
+                  <Color>Gray</Color>
+                  <Style>Solid</Style>
+                </Border>
+                <BackgroundColor>White</BackgroundColor>
+                <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+                <BackgroundGradientEndColor>Gainsboro</BackgroundGradientEndColor>
+                <FontSize>8pt</FontSize>
+                <ShadowOffset>1pt</ShadowOffset>
+              </Style>
+              <LeftMargin>2pt</LeftMargin>
+              <RightMargin>2pt</RightMargin>
+              <TopMargin>2pt</TopMargin>
+              <BottomMargin>2pt</BottomMargin>
+            </MapColorScale>
+            <MapBorderSkin>
+              <Style>
+                <Border />
+                <BackgroundColor>Gray</BackgroundColor>
+                <BackgroundGradientType>None</BackgroundGradientType>
+                <BackgroundGradientEndColor>White</BackgroundGradientEndColor>
+                <Color>White</Color>
+              </Style>
+            </MapBorderSkin>
+            <Height>4in</Height>
+            <Width>6in</Width>
+            <Style>
+              <Border>
+                <Color>Gray</Color>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>White</BackgroundColor>
+            </Style>
+          </Map>
+        </ReportItems>
+        <Height>4in</Height>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Body>
+      <Width>6in</Width>
+      <Page>
+        <LeftMargin>1in</LeftMargin>
+        <RightMargin>1in</RightMargin>
+        <TopMargin>1in</TopMargin>
+        <BottomMargin>1in</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <rd:ReportID>4f011cfb-cd71-4185-aea0-0d3668dbcecd</rd:ReportID>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+</Report>

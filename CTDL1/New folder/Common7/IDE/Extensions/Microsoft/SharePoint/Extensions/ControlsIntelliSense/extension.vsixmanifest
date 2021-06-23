@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010"
+      Version="1.0.0" >
+  <Identifier Id="3BFA0675-110A-42B9-BFB5-2A0445EB74CC">
+    <Name>SharePoint Controls IntelliSense Schema Provider</Name>
+    <Author>Microsoft Corp.</Author>
+    <Version>12.0</Version>
+    <Description xml:space="preserve">SharePoint Controls IntelliSense Schema Provider</Description>
+    <Locale>1033</Locale>
+    <InstalledByMsi>true</InstalledByMsi>
+    <SupportedProducts>
+      <VisualStudio Version="12.0">
+        <Edition>Pro</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+    <SystemComponent>true</SystemComponent>
+  </Identifier>
+  <References />
+  <Content>
+    <MefComponent>Microsoft.VisualStudio.SharePoint.ControlsIntelliSense.dll</MefComponent>
+  </Content>
+</Vsix>

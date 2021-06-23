@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Determine the Scope of Isolated Storage</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Determines the scope of the isolated storage.</Description>
+      <Shortcut>appIsoScope</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.IO.IsolatedStorage</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>varName</ID>
+          <Type>String</Type>
+          <ToolTip>The variable name for the isolated storage.</ToolTip>
+          <Default>isolatedStorage</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim scope = $varName$.Scope]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

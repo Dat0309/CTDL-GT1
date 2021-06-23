@@ -1,0 +1,1315 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<HTML DIR="LTR">
+	<HEAD>
+		<TITLE>Typelib의 클래스 추가 마법사</TITLE>
+		<META NAME="vs_targetSchema" CONTENT="http://schemas.microsoft.com/intellisense/ie5">
+		<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ks_c_5601-1987">
+		<META HTTP-EQUIV="MSThemeCompatible" CONTENT="Yes">
+		<LINK ID="LINKURL" REL="stylesheet" HREF="../../../../../1042/NewStyles.css">
+		<SYMBOL NAME="INTERFACE_NAME" TYPE="text" VALUE="">
+		</SYMBOL>
+		<SYMBOL NAME="HEADER_FILE" TYPE="text" VALUE="">
+		</SYMBOL>
+		<SYMBOL NAME="CLASS_TEXT" TYPE="text" VALUE="">
+		</SYMBOL>
+		<SYMBOL NAME="CHOOSE_CLASS_NAME" TYPE="text" VALUE="">
+		</SYMBOL>
+		<SYMBOL NAME="CHOOSE_FILE_NAME" TYPE="text" VALUE="">
+		</SYMBOL>
+	</HEAD>
+	<BODY BGCOLOR="BUTTONFACE" TOPMARGIN="0" LEFTMARGIN="0" RIGHTMARGIN="0" BOTTOMMARGIN="0" ONLOAD="InitDocument(document);" ONKEYDOWN="OnKey();" ONKEYPRESS="OnPress();">
+		<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="100%">
+			<TR VALIGN="TOP">
+				<TD HEIGHT="79">
+					<!--OPEN OF ALL ENCOMPASSING TABLE ROW ONE//-->
+					<TABLE CLASS="TWO" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+						<COL WIDTH="12">
+						<COL>
+						<COL WIDTH="12">
+						<TR>
+							<TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+								&nbsp;
+							</TD>
+							<TD VALIGN="TOP" HEIGHT="12">
+								&nbsp;
+							</TD>
+							<TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+								&nbsp;
+							</TD>
+							<TD CLASS="IMAGE" VALIGN="BOTTOM" WIDTH="110" ROWSPAN="2">
+								<DIV CLASS="SMALLA" ID="Layer0">
+									<IMG CLASS="SMALLEST" SRC="../../Images/ClTypeLib.gif" WIDTH="63" HEIGHT="63" ALT="" BORDER="0">
+								</DIV>
+							</TD>
+							<TD VALIGN="TOP" HEIGHT="12" WIDTH="6" ROWSPAN="2">
+								&nbsp;
+							</TD>
+						</TR>
+						<TR>
+							<TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+								&nbsp;
+							</TD>
+							<TD VALIGN="TOP" HEIGHT="65">
+								<H4 CLASS="HEAD" ID="HEAD">
+									Typelib의 클래스 추가 마법사 시작
+								</H4>
+								<P CLASS="SUBHEAD" ID="SUBHEAD">
+									형식 라이브러리에서 선택한 인터페이스를 기반으로 프로젝트에 클래스를 
+									추가합니다.
+								</P>
+							</TD>
+							<TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+								&nbsp;
+							</TD>
+						</TR>
+						<TR>
+							<TD VALIGN="TOP" CLASS="RULE" COLSPAN="5" HEIGHT="2">
+								<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+									<TR VALIGN="TOP">
+										<TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW">
+										</TD>
+										<TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW">
+										</TD>
+									</TR>
+								</TABLE>
+							</TD>
+						</TR>
+					</TABLE>
+					<!--CLOSE OF ALL ENCOMPASSING TABLE ROW ONE//-->
+				</TD>
+			</TR>
+			<TR VALIGN="TOP">
+				<TD HEIGHT="100%">
+					<!--OPEN OF ALL ENCOMPASSING TABLE ROW TWO//-->
+					<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+						<COL>
+						<TR>
+							<TD VALIGN="TOP" HEIGHT="100%">
+								<!--OPEN OF CONTENT AND BUTTON TABLE//-->
+								<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+									<COL WIDTH="100%">
+									<TR VALIGN="TOP">
+										<TD HEIGHT="100%">
+											<!--OPEN OF CONTENT//-->
+											<TABLE CLASS="CONTENT" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+												<COL WIDTH="12"><COL WIDTH=100%><COL WIDTH="12"><COL><COL WIDTH="12">
+												<TR>
+													<TD VALIGN="TOP" HEIGHT="12" COLSPAN="5">
+														&nbsp;
+													</TD>
+												</TR>
+												<TR VALIGN="TOP">
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+													<TD VALIGN="TOP" COLSPAN="3">
+														<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+															<COL><COL WIDTH="12"><COL WIDTH="100%">
+															<TR VALIGN="TOP">
+																<TD ALIGN="LEFT">
+																	<SPAN CLASS="itemText" ID="GroupTitle">추가할 클래스 위치:
+																		<BR>
+																		<NOBR><SPAN ID="BYVAL_SPAN" TITLE="레지스트리에서 형식 라이브러리를 검색합니다."><INPUT TYPE="radio" CHECKED NAME="typelibtype" ID="TYPELIB_REG" ACCESSKEY="R" onClick="OnSourceOfTypeLib();">
+																				<LABEL CLASS="UpABit" FOR="TYPELIB_REG" ID="TYPELIB_REG_LABEL">레지스트리(<U>R</U>)</LABEL>
+																			</SPAN><SPAN ID="BYREF_SPAN" TITLE="파일에서 형식 라이브러리를 선택합니다.">
+																				<INPUT TYPE="radio" NAME="typelibtype" ID="TYPELIB_FILE" ACCESSKEY="F" onClick="OnSourceOfTypeLib();">
+																				<LABEL CLASS="UpABit" FOR="TYPELIB_FILE" ID="TYPELIB_FILE_LABEL">파일(<U>F</U>)</LABEL>
+																			</SPAN></NOBR></SPAN>
+																</TD>
+																<TD VALIGN="TOP" WIDTH="12">
+                                                    			  	<IMG SRC="../../../../../1033/Images/spacer.gif" HEIGHT="1" WIDTH="12">
+																</TD>
+																<TD VALIGN="TOP" ALIGN=LEFT>
+																	<SPAN CLASS="itemText">
+																	    <LABEL FOR="REG_TYPELIB_NAME" ID="TYPELIB_NAME_LABEL" TITLE="클래스를 생성할 형식 라이브러리를 선택합니다.">사용 가능한 형식 라이브러리(<U>T</U>):</LABEL>
+																		<BR>
+																		<SELECT CLASS="TwoColumnLongButton" SIZE="1" ID="REG_TYPELIB_NAME" ACCESSKEY="T" TITLE="클래스를 생성할 형식 라이브러리를 선택합니다." VALUE="" onChange="OnTypeLib();" STYLE="WIDTH:100%;"></SELECT>
+																		<SELECT CLASS="TwoColumnLongButton" SIZE="1" ID="FILE_TYPELIB_NAME" ACCESSKEY="T" TITLE="클래스를 생성할 형식 라이브러리를 선택합니다." VALUE="" onChange="OnTypeLib();" STYLE="WIDTH:100%;"></SELECT>
+																	</SPAN>
+																</TD>
+															</TR>
+															<TR VALIGN="TOP">
+																<TD VALIGN="TOP" COLSPAN="3">
+																	<SPAN CLASS="itemTextTop"><LABEL FOR="LOCATION" ID="LOCATION_LABEL" TITLE="선택한 형식 라이브러리의 위치입니다.">위치:</LABEL></SPAN>
+                                                                    <table width=100%><tr><td width=100% VALIGN=BOTTOM>
+																	<INPUT CLASS="itemTextTwoColumnLong" ID="LOCATION" TYPE="TEXT" TITLE="선택한 형식 라이브러리의 위치입니다." onBlur="OnChangeLocation();" onmouseOver="this.title=this.value;" STYLE="WIDTH:100%;">
+                                                                    </td><td VALIGN=BOTTOM>
+																	<BUTTON CLASS="buttonClass3Custom" ID="BrowseTLB" TYPE="BUTTON" TITLE="파일에서 형식 라이브러리를 찾습니다." onClick="OnBrowseForTLB();" onmouseOver="this.title=LOCATION.value;" STYLE="height: 19px;">...</BUTTON> 
+                                                                    </td></tr></table>
+																</TD>
+															</TR>
+														</TABLE>
+													</TD>
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+												</TR>
+												<TR VALIGN="TOP">
+													<TD VALIGN="TOP" HEIGHT="6" COLSPAN="5">
+														&nbsp;
+													</TD>
+												</TR>
+												<TR VALIGN="TOP">
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+													<TD VALIGN="TOP" COLSPAN="3">
+														<TABLE CLASS="FixedSize" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+															<COL WIDTH="50%"><COL WIDTH="12"><COL WIDTH="25"><COL WIDTH="12"><COL WIDTH="50%">
+															<TR>
+																<TD VALIGN="TOP">
+																	<SPAN CLASS="itemText"><LABEL FOR="INTERFACE_NAME" ID="INTERFACE_NAME_LABEL" TITLE="형식 라이브러리에서 생성될 클래스를 선택합니다.">
+																			인터페이스(<U>E</U>):</LABEL>
+																		<BR>
+																		<SELECT CLASS="sideBtn3" ID="INTERFACE_NAME" SIZE="8" ACCESSKEY="E" TITLE="형식 라이브러리에서 생성될 클래스를 선택합니다." onChange="ToggleButtons();" onClick="ToggleButtons();" onDblClick="AddClass(false);" STYLE="WIDTH:100%;"></SELECT>
+																	</SPAN>
+																</TD>
+																<TD VALIGN="TOP" WIDTH="12">
+																	&nbsp;
+																</TD>
+																<TD VALIGN="TOP" ALIGN="MIDDLE" WIDTH="25">
+																	<P CLASS="ElementSpacer22">
+																		&nbsp;
+																	</P>
+																	<BUTTON ID="AddBtn" CLASS="ButtonClass4" ALIGN="CENTER" TITLE="해당 클래스를 생성하려면 인터페이스를 선택한 다음 추가 단추(>)를 클릭하십시오." onClick="AddClass(false);" STYLE="MARGIN-BOTTOM:2PX;">
+																		<B CLASS="BigFont">&rsaquo;</B></BUTTON> <BUTTON ID="AddAllBtn" CLASS="ButtonClass4" ALIGN="CENTER" TITLE="모든 클래스 추가" onClick="AddClass(true);">
+																		<B CLASS="BigFont">&raquo;</B></BUTTON>
+																	<P STYLE="MARGIN-TOP:0PX; MARGIN-BOTTOM:7PX;">
+																	</P>
+																	<BUTTON ID="RemoveBtn" CLASS="ButtonClass4" ALIGN="CENTER" TITLE="클래스 제거" onClick="RemoveClass(false);" STYLE="MARGIN-LEFT:0PX; MARGIN-BOTTOM:2PX;">
+																		<B CLASS="BigFont">&lsaquo;</B></BUTTON> <BUTTON ID="RemoveAllBtn" CLASS="ButtonClass4" ALIGN="CENTER" TITLE="모든 클래스 제거" onClick="RemoveClass(true);" ALIGN="CENTER">
+																		<B CLASS="BigFont">&laquo;</B></BUTTON>
+																</TD>
+																<TD VALIGN="TOP" WIDTH="12">
+																	&nbsp;
+																</TD>
+																<TD VALIGN="TOP">
+																	<SPAN CLASS="itemText"><LABEL FOR="GENERATED_CLASS_NAME" ID="GENERATED_CLASS_NAME_LABEL" TITLE="형식 라이브러리에서 생성될 클래스 목록입니다.">
+																			생성된 클래스(<U>G</U>):</LABEL>
+																		<BR>
+																		<SELECT CLASS="sideBtn3" ID="GENERATED_CLASS_NAME" SIZE="8" ACCESSKEY="G" TITLE="형식 라이브러리에서 생성될 클래스 목록입니다." onChange="OnSelectClass();" STYLE="WIDTH:100%;"></SELECT>
+																	</SPAN>
+																</TD>
+															</TR>
+														</TABLE>
+													</TD>
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+												</TR>
+												<TR VALIGN="TOP">
+													<TD VALIGN="TOP" HEIGHT="3" COLSPAN="5">
+														&nbsp;
+													</TD>
+												</TR>
+												<TR VALIGN="TOP">
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+													<TD VALIGN="TOP" COLSPAN="3">
+													    <TABLE WIDTH=100% >
+														<col width=50%><col width=12><col width=50%>
+            												<TR VALIGN="TOP">
+            													<TD VALIGN="TOP">
+            														<SPAN CLASS="itemText"><LABEL FOR="CHOOSE_CLASS_NAME" ID="CHOOSE_CLASS_NAME_LABEL" TITLE="가져올 디스패치 클래스의 이름을 입력합니다.">클래스(<U>S</U>):</LABEL></SPAN>
+                                            	  	 				<table width=100%><tr><td valign=bottom width=100%>
+        															<INPUT ID="CHOOSE_CLASS_NAME" TYPE="text" ACCESSKEY="S" TITLE="가져올 디스패치 클래스의 이름을 입력합니다." onBlur="OnChangeClassName();" style="WIDTH:100%">
+                                            					  	</td></tr></table>
+            													</TD>
+            													<TD VALIGN="TOP" WIDTH="12">
+            														&nbsp;
+            													</TD>
+            													<TD VALIGN="TOP">
+            														<SPAN CLASS="itemText" ID="HTML_FILE_LABEL"><LABEL FOR="CHOOSE_FILE_NAME" ID="CHOOSE_FILE_NAME_LABEL" TITLE="디스패치 클래스 헤더 파일의 기본 이름입니다.  이름을 편집하거나 찾아보기를 사용하여 다른 파일을 지정할 수 있습니다.">파일(<U>I</U>):</LABEL></SPAN>
+                                            	  	 				<table width=100%><tr><td valign=bottom width=100%>
+    																<INPUT ID="CHOOSE_FILE_NAME" ACCESSKEY="I" TITLE="디스패치 클래스 헤더 파일의 기본 이름입니다.  이름을 편집하거나 찾아보기를 사용하여 다른 파일을 지정할 수 있습니다." TYPE="text" onBlur="OnChangeFileName();" style="WIDTH:100%">
+                                            	  	 				</tr><td><td valign=bottom>
+    																<BUTTON ID="FileBrowseBtn" TYPE="BUTTON" TITLE="헤더 파일을 찾습니다." onClick="OnBrowseHeaderFile();" STYLE="height: 19px;">...</BUTTON>
+                                            					  	</td></tr></table>
+            													</TD>
+            												</TR>
+            											</TABLE>
+        											</TD>
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+        										</TR>
+											</TABLE>
+											<!--CLOSE OF CONTENT//-->
+										</TD>
+									</TR>
+									<TR>
+										<TD VALIGN="TOP" HEIGHT="7" COLSPAN="3">
+											&nbsp;
+										</TD>
+									</TR>
+									<TR VALIGN="BOTTOM">
+										<TD>
+											<!--OPEN OF BUTTON HTML//-->
+											<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+												<COL WIDTH="12">
+												<COL>
+												<COL WIDTH="75">
+												<COL WIDTH="4">
+												<COL WIDTH="75">
+												<COL WIDTH="4">
+												<COL WIDTH="75">
+												<COL WIDTH="12">
+												<TR>
+													<TD VALIGN="TOP" CLASS="RULE" COLSPAN="8" HEIGHT="2">
+														<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+															<TR VALIGN="TOP">
+																<TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW">
+																</TD>
+																<TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW">
+																</TD>
+															</TR>
+														</TABLE>
+													</TD>
+												</TR>
+												<TR>
+													<TD VALIGN="TOP" HEIGHT="11" COLSPAN="8">
+														&nbsp;
+													</TD>
+												</TR>
+												<TR>
+													<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+														&nbsp;
+													</TD>
+													<TD VALIGN="TOP" HEIGHT="23">
+														&nbsp;
+													</TD>
+													<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+														<BUTTON CLASS="BUTTONS" ID="FinishBtn" onClick="OnFinish(document);">마침</BUTTON>
+													</TD>
+													<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+														&nbsp;
+													</TD>
+													<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+														<BUTTON CLASS="BUTTONS" ID="CancelBtn" onClick="window.external.Finish(document, 'cancel');">
+															취소</BUTTON>
+													</TD>
+													<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+														&nbsp;
+													</TD>
+													<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+														<BUTTON CLASS="BUTTONS" ID="HelpBtn" onClick="window.external.OnHelp('vc.codewiz.class.typelib');">
+															도움말</BUTTON>
+													</TD>
+													<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+														&nbsp;
+													</TD>
+												</TR>
+												<TR>
+													<TD VALIGN="TOP" HEIGHT="12" COLSPAN="8">
+														&nbsp;
+													</TD>
+												</TR>
+											</TABLE>
+											<!--CLOSE OF BUTTON HTML//-->
+										</TD>
+									</TR>
+								</TABLE>
+								<!--CLOSE OF CONTENT AND BUTTON TABLE//-->
+							</TD>
+						</TR>
+					</TABLE>
+					<!--CLOSE OF ALL ENCOMPASSING TABLE ROW TWO//-->
+				</TD>
+			</TR>
+		</TABLE>
+	</BODY>
+</HTML>
+<SCRIPT LANGUAGE="JSCRIPT">
+
+var oTypeLibs;
+
+var oInterfaces = document.all.tags("SELECT").item("INTERFACE_NAME");
+
+var oGeneratedClasses = document.all.tags("SELECT").item("GENERATED_CLASS_NAME");
+var Files_Array = new Array();
+var Gen_Interface_Array = new Array();
+var Gen_TypeLibs_Array = new Array();
+
+var collTypeLibs; //pointing to collFileTypeLibs or collRegTypeLibs, depending on context
+
+var collRegTypeLibs;
+var collFileTypeLibs;
+
+var L_TransactionNamePart1_Text = "클래스 추가 중 ";
+var L_TransactionNamePart2_Text = " TypeLib에서";
+var SkipCheck = 1;
+var LastIndex = 0;
+
+function InitDocument(document)
+{
+	setDirection();
+	
+	if (window.external.FindSymbol("DOCUMENT_FIRST_LOAD"))
+	{
+		var L_WizardDialogTitle_Text = "Typelib의 클래스 추가 마법사";
+		window.external.AddSymbol("WIZARD_DIALOG_TITLE", L_WizardDialogTitle_Text);
+		window.external.SetDefaults(document);
+	}
+	CHOOSE_CLASS_NAME.disabled = true;
+	CHOOSE_FILE_NAME.disabled = true;
+	FileBrowseBtn.disabled = true;
+	window.external.Load(document);
+	OnSourceOfTypeLib();
+
+}
+
+function OnSourceOfTypeLib()
+{
+	if(TYPELIB_FILE.checked)
+	{
+		//show the FILE_TYPELIB_NAME SELECT
+		oTypeLibs = document.all.tags("SELECT").item("FILE_TYPELIB_NAME");
+		FILE_TYPELIB_NAME.style.display="inline";
+		REG_TYPELIB_NAME.style.display="none";
+
+		LOCATION_LABEL.disabled = false;
+		LOCATION.disabled = false;
+		LOCATION.value = "";
+		BrowseTLB.disabled = false;
+		if(collFileTypeLibs == null)
+		{
+			collFileTypeLibs = window.external.FileTypeLibs;
+			collTypeLibs = collFileTypeLibs;
+			PopulateTypeLibs();
+		}
+		else
+			collTypeLibs = collFileTypeLibs;
+	}
+	else
+	{
+		//show the REG_TYPELIB_NAME SELECT
+		oTypeLibs = document.all.tags("SELECT").item("REG_TYPELIB_NAME");
+		REG_TYPELIB_NAME.style.display="inline";
+		FILE_TYPELIB_NAME.style.display="none";
+
+		LOCATION_LABEL.disabled = true;
+		LOCATION.disabled = true;
+		BrowseTLB.disabled = true;
+		if(collRegTypeLibs == null)
+		{
+			collRegTypeLibs = window.external.TypeLibs;
+			collTypeLibs = collRegTypeLibs;
+			PopulateTypeLibs();
+		}
+		else
+			collTypeLibs = collRegTypeLibs;
+	}
+
+	oTypeLibs.disabled = (collTypeLibs.Count==0);
+	OnTypeLib();
+	ToggleButtons();
+}
+
+
+function Next(document, linkto)
+{
+	window.external.Next(document, linkto);
+}
+
+function OnFinish(document)
+{
+	if (!oGeneratedClasses.options.length)
+	{
+		var L_AddClassErr_Text = "생성된 클래스 목록에 클래스를 추가해야 합니다.";
+		window.external.ReportError(L_AddClassErr_Text);
+		return;
+	}
+	if (!ValidateInput())
+		return;
+
+	CreateClassText();
+
+	OnWizFinish(document);
+}
+
+function OnSelectClass()
+{
+	var nIndex = oGeneratedClasses.selectedIndex;
+	if (nIndex == -1)
+		return;
+	if (!SkipCheck)
+	{
+		if (!ValidateInput())
+		{
+			oGeneratedClasses.selectedIndex = LastIndex;
+			return;
+		}
+	}
+	LastIndex = nIndex;
+	SkipCheck = 0;
+	var strClassName = oGeneratedClasses.options[nIndex].text;
+	CHOOSE_CLASS_NAME.value = strClassName;
+	CHOOSE_CLASS_NAME.disabled = false;
+	CHOOSE_FILE_NAME.value = Files_Array[nIndex];
+	CHOOSE_FILE_NAME.disabled = false;
+	FileBrowseBtn.disabled = false;
+}
+
+function OnChangeClassName()
+{
+	if (oGeneratedClasses.selectedIndex == -1)
+		return;
+
+	var strNewClassName = CHOOSE_CLASS_NAME.value;
+	oGeneratedClasses.options[oGeneratedClasses.selectedIndex].text = strNewClassName;
+}
+
+function OnChangeFileName()
+{
+	var nIndex = oGeneratedClasses.selectedIndex;
+	if (nIndex == -1)
+		return;
+
+	Files_Array[nIndex] = CHOOSE_FILE_NAME.value;
+}
+
+function PopulateTypeLibs()
+{
+	oTypeLibs.options.length = 0;
+
+	var len = collTypeLibs.Count;
+	for (var i = 0; i < len; i++)
+	{
+		var option = document.createElement("OPTION");
+		var oTypeLib = collTypeLibs.item(i+1);
+		option.text = oTypeLib.Name + "<" + (oTypeLib.Version.length ? oTypeLib.Version : "1.0") + ">";
+		option.value = oTypeLib.Location;
+		oTypeLibs.add(option);
+	}
+}
+      
+function OnTypeLib()
+{
+	oInterfaces.options.length = 0;
+	if (oTypeLibs.options.length == 0)
+	{
+		LOCATION.value = "";
+		return;
+	}
+	if (oTypeLibs.selectedIndex == -1)
+		oTypeLibs.selectedIndex = 0;
+
+	AddAllBtn.disabled = false;
+
+	LOCATION.value = oTypeLibs.options(oTypeLibs.selectedIndex).value;
+	PopulateInterfaces();
+	ToggleButtons();
+}
+
+function PopulateInterfaces()
+{	
+	var oTypeLib = collTypeLibs.item(oTypeLibs.selectedIndex+1);
+	var strTypeLib = oTypeLib.Name;
+	var collInterfaces = oTypeLib.Interfaces;
+	var count = collInterfaces.Count;
+	for (var j = 1; j <= count; j++)
+	{
+	    var item = collInterfaces.item(j);
+	    if(item.Type != einterfaceCustom)
+	    {
+		    var oOption = document.createElement("OPTION");
+		    var strInterface = item.Name;
+		
+		    oOption.value = strInterface;
+		    oOption.text = strInterface;
+		    oInterfaces.add(oOption);
+		}
+	}
+}
+
+function AddClass(bAll)
+{
+	if (oInterfaces.selectedIndex == -1 && !bAll)
+		return;
+
+	if (oTypeLibs.selectedIndex == -1)
+		oTypeLibs.selectedIndex = 0;
+
+	if (oInterfaces.selectedIndex == -1)
+		oInterfaces.selectedIndex = 0;
+
+	var oTypeLib = collTypeLibs.item(oTypeLibs.selectedIndex+1);
+	var i;
+	var len;
+	if(bAll)
+	{
+		i = 0;
+		len = oInterfaces.options.length;
+
+		AddAllBtn.disabled = true;
+
+	}
+	else
+	{
+		i = oInterfaces.selectedIndex;
+		len = i+1;
+	}
+	if (oGeneratedClasses.options.length == 0)
+		SkipCheck = 1;
+	
+	for (; i < len; i++)
+	{
+		var strInterfaceName = oInterfaces.options[i].value;
+		var strClass;
+		if( strInterfaceName.charAt(0) == '_' || strInterfaceName.charAt(0) == 'I' || strInterfaceName.charAt(0) =='i')
+			strClass = "C" + strInterfaceName.substr(1);
+		else
+			strClass = "C" + strInterfaceName;
+
+		if (IsInGeneratedList(strInterfaceName))
+		{
+			if (!bAll)
+			{
+				var L_Err3_Text = "다음 인터페이스에 대한 클래스를 이미 선택했습니다: ";
+				window.external.ReportError(L_Err3_Text + strInterfaceName);
+				return;
+			}
+			continue;
+		}
+		var oOption = document.createElement("OPTION");
+
+		var j = 0;
+		var rootClassName = strClass;
+		while (!window.external.ParentObject.ValidateMember(strClass, vsCMElementClass)
+				|| (nameAlreadyExist(strClass)))
+		{
+			strClass = rootClassName + j;
+			j++;
+		}
+		oOption.text = strClass;
+		oOption.value = strInterfaceName;
+		oGeneratedClasses.add(oOption);
+
+		Files_Array[oGeneratedClasses.options.length-1] = strClass + ".h";
+
+		Gen_Interface_Array[oGeneratedClasses.options.length-1] = oTypeLib.Interfaces.item(strInterfaceName);
+		Gen_TypeLibs_Array[oGeneratedClasses.options.length-1] = oTypeLib;
+	}
+
+	oGeneratedClasses.selectedIndex = oGeneratedClasses.options.length-1;
+	ToggleButtons();
+	OnSelectClass();
+}
+
+function RemoveClass(bAll)
+{
+	if (oGeneratedClasses.selectedIndex == -1 && !bAll)
+		return;
+	SkipCheck = 1;
+	var Index = -1;
+	if (bAll)
+	{
+		oGeneratedClasses.options.length = 0;
+		Files_Array.length = 0;
+		Gen_Interface_Array.length = 0;
+		Gen_TypeLibs_Array.length = 0;
+		CHOOSE_FILE_NAME.value = "";
+		CHOOSE_FILE_NAME.disabled = true;
+		CHOOSE_CLASS_NAME.value = "";
+		CHOOSE_CLASS_NAME.disabled = true;
+		FileBrowseBtn.disabled = true;
+	}
+	else
+	{
+		Index = oGeneratedClasses.selectedIndex;
+		oGeneratedClasses.options.remove(Index);
+
+		Files_Array.splice(Index, 1);
+		Gen_Interface_Array.splice(Index, 1);
+		Gen_TypeLibs_Array.splice(Index, 1);
+		if(Index>0 || oGeneratedClasses.options.length==0)
+			Index = Index - 1;
+	}
+
+	AddAllBtn.disabled = false;
+
+	oGeneratedClasses.selectedIndex = Index;
+	if (Index < 0)
+	{
+		CHOOSE_FILE_NAME.value = "";
+		CHOOSE_FILE_NAME.disabled = true;
+		CHOOSE_CLASS_NAME.value = "";
+		CHOOSE_CLASS_NAME.disabled = true;
+		FileBrowseBtn.disabled = true;
+	}
+	ToggleButtons();
+	OnSelectClass();
+}
+
+function OnChangeLocation()
+{
+	if(LOCATION.value!=null && LOCATION.value!="")
+	{
+		var strLocation = LOCATION.value.toUpperCase();
+		var strOrgLocation = "";
+		if (oTypeLibs.selectedIndex != -1)
+		{
+			strOrgLocation = oTypeLibs.options(oTypeLibs.selectedIndex).value.toUpperCase();
+		}
+		if(strLocation!=strOrgLocation)
+			AddTLBFromFile(LOCATION.value);
+	}
+	else if(oTypeLibs.selectedIndex>=0)
+	{
+		LOCATION.value = oTypeLibs.options(oTypeLibs.selectedIndex).value;
+	}
+}
+
+function OnBrowseForTLB()
+{
+	bValidating = true;
+
+	var strFile;
+	try
+	{
+		L_Title1_Text = "VS 마법사 선택 파일";
+		L_Title2_Text = "TypeLib 파일 (*.exe; *.dll; *.olb; *.tlb; *.ocx)\0*.exe; *.dll; *.olb; *.tlb; *.ocx\0\0";
+		strFile = window.external.GetExistingFileNameViaDlg(L_Title1_Text, "", L_Title2_Text, "");
+	}
+	catch(e)
+	{
+		if (e.number != OLE_E_PROMPTSAVECANCELLED)
+		{
+			var L_ErrMsg3_Text = "OnBrowseForTLB()에 오류가 있습니다.";
+			if (e.description.length != 0)
+			{
+				L_ErrMsg3_Text += ": ";
+				L_ErrMsg3_Text += e.description;
+			}
+			window.external.ReportError(L_ErrMsg3_Text);
+		}
+		bValidating = false;
+		return;
+	}
+
+	bValidating = false;
+
+	AddTLBFromFile(strFile);
+}
+
+function AddTLBFromFile(strFile)
+{
+	var len = collTypeLibs.Count;
+	var bFound = false;
+
+	var strFileUpcase = strFile.toUpperCase();
+	for (i = 0; i < len; i++)
+	{
+		if (oTypeLibs.options(i).value.toUpperCase() == strFileUpcase)
+		{
+			oTypeLibs.selectedIndex = i;
+			bFound = true;
+			break;
+		}
+	}
+	if (!bFound)
+	{
+		//create a new filetypelib collection and add it to the existing collection
+		collFileTypeLibs = window.external.FileTypeLibs(strFile);
+		var addCounts = collFileTypeLibs.Count;
+		if(0==addCounts)
+		{
+			L_Error_NoTLB = "No type library found in file: ";
+			window.external.ReportError(L_Error_NoTLB + strFile);
+			INTERFACE_NAME.focus();
+			return false;
+		}
+		oTypeLibs.disabled = false;
+		var oldCounds = collTypeLibs.Count;
+		for(var i=1; i<=addCounts; i++)
+		{
+			var item = collFileTypeLibs.item(i);
+			collTypeLibs.AddItem(item);
+			//update UI
+			var option = document.createElement("OPTION");
+			option.text = item.Name;
+			option.value = item.Location;
+			oTypeLibs.add(option);
+		}
+		//finally, set the index to the first added type library
+		oTypeLibs.selectedIndex = oldCounds;
+		collFileTypeLibs = collTypeLibs;
+		OnTypeLib();
+	}
+	else
+	{
+		L_ErrorTLBAlreadyInList_Text = ": 이 형식 라이브러리는 이미 목록에 포함되어 있습니다.";
+		window.external.ReportError(strFile + L_ErrorTLBAlreadyInList_Text);
+		INTERFACE_NAME.focus();
+	}
+	return !bFound;
+}
+
+function OnBrowseHeaderFile()
+{
+	var strFile;
+	try
+	{
+		L_Title3_Text = "VS 마법사 선택 파일";
+		L_Title4_Text = "Visual C++ 헤더 파일 (*.h)\0*.h\0\0";
+		strFile = window.external.GetExistingFileNameViaDlg(L_Title3_Text, window.external.FindSymbol("PROJECT_PATH"), L_Title4_Text, CHOOSE_FILE_NAME.value);
+	}
+	catch(e)
+	{
+		if (e.number != OLE_E_PROMPTSAVECANCELLED)
+		{
+			var L_ErrMsg2_Text = "OnBrowseHeaderFile()에 오류가 있습니다.";
+			if (e.description.length != 0)
+			{
+				L_ErrMsg2_Text += ": ";
+				L_ErrMsg2_Text += e.description;
+			}
+			window.external.ReportError(L_ErrMsg2_Text);
+		}
+		return;
+	}
+	CHOOSE_FILE_NAME.value = strFile;
+}
+
+function CreateClassText()
+{
+	var len = oGeneratedClasses.options.length;
+	for (var i = 0; i < len; i++)
+	{
+		var strClassName = oGeneratedClasses.options(i).text;
+		var oInterface = Gen_Interface_Array[i];
+		var oTypeLib = Gen_TypeLibs_Array[i];
+		var strClassText = "";
+
+		if (window.external.ParentObject.ValidateMember(strClassName, vsCMElementClass))
+		{
+			if (oInterface != null && typeof(oInterface) != "undefined")
+			{
+				strClassText = GenerateClassText(oTypeLib, oInterface, strClassName);
+			}
+		}
+
+		window.external.AddSymbol("CLASS_TEXT", strClassText);
+		CreateAndAddFile(strClassName, Files_Array[i], false /*(i==0)*/);
+	}
+}
+
+function GenerateClassText(oTypeLib, oInterface, strClassName)
+{
+	var L_Comment1_Text = "// 컴퓨터에서 형식 라이브러리 마법사의 [클래스 추가]를 사용하여 생성한 IDispatch 래퍼 클래스입니다.\r\n\r\n";
+	var L_Comment2_Text = " 래퍼 클래스\r\n\r\n";
+	var L_Comment3_Text = "// COleDispatchDriver 기본 생성자를 호출합니다.\r\n";
+	var L_Comment4_Text = "// 특성\r\n";
+	var L_Comment5_Text = "// 작업\r\n";
+	var L_Comment6_Text = " 메서드\r\n";
+	var L_Comment7_Text = " 속성\r\n";
+	var strText = L_Comment1_Text;
+	//we need to import the location here. since it may contain \, we should replace them with \\
+	var L_TypeLibLocation_Text = "";
+	var len = oTypeLib.location.length;
+	for (var i = 0;	i < len; i++)
+	{
+		var currChar = oTypeLib.location.charAt(i);
+		if (currChar == '\\')
+		{
+			L_TypeLibLocation_Text += "\\\\";
+		}
+		else
+		{
+			L_TypeLibLocation_Text += currChar;
+		}
+	}
+
+	strText += "#import \"" + L_TypeLibLocation_Text + "\" no_namespace\r\n";
+	strText += "// " + strClassName + L_Comment2_Text;
+	strText += "class " + strClassName + " : public COleDispatchDriver\r\n{\r\npublic:\r\n";
+	strText += "\t" + strClassName + "(){} " + L_Comment3_Text;
+	strText += "\t" + strClassName + "(LPDISPATCH pDispatch) : COleDispatchDriver(pDispatch) {}\r\n";
+	strText += "\t" + strClassName + "(const " + strClassName + "& dispatchSrc) : COleDispatchDriver(dispatchSrc) {}\r\n\r\n";
+	strText += "\t" + L_Comment4_Text + "public:\r\n\r\n" + "\t" + L_Comment5_Text + "public:\r\n\r\n";
+
+	if(oInterface.Name != "IUnknown")
+		strText += "\r\n\t// " + oInterface.Name + L_Comment6_Text + "public:\r\n";
+
+	var oFuncs = oInterface.Functions;
+	var funcCount = oFuncs.Count;
+	for (k = 1; k <= funcCount; k++)
+	{
+		var oFunc = oFuncs.item(k);
+		if(oFunc.Name != "AddRef" && oFunc.Name != "Release" && oFunc.Name != "QueryInterface")
+		{
+			var strReturnType = "HRESULT";
+
+			var strClassText = "";
+			var oParams = oFunc.Parameters;
+			var paramCount = oParams.Count;
+			var funcTypeString = oFunc.TypeString;
+			var funcReturnType = oFunc.ReturnType;
+
+			if (oFunc.InvokeKind.search("PROPERTY") >= 0 && funcTypeString == "HRESULT")
+			{
+				if (oFunc.InvokeKind.search("PUT") >= 0)
+				{
+					funcTypeString = "void";
+					funcReturnType = "VT_EMPTY";
+				}
+				else
+				{
+					var oParam = oParams.item(paramCount);
+					paramCount--;
+
+					var space = oParam.TypeString.indexOf(" ");
+					funcTypeString = (space > 0) ? oParam.TypeString.substr(0, space) : oParam.TypeString;
+
+					var pipe = oParam.VariantType.indexOf("|");
+					funcReturnType = (pipe > 0) ? oParam.VariantType.substr(0, pipe) : oParam.VariantType;
+				}
+			}
+
+			if (funcTypeString != "HRESULT")
+			{
+				strClassText += "\t" + ((funcTypeString == "BSTR") ? "CString" : funcTypeString.replace("VARIANT_BOOL", "BOOL"));
+				strClassText += " ";
+				strClassText += oFunc.Name;
+				strClassText += "(";
+			}
+			else
+			{
+				strClassText += "\t" + "STDMETHOD(";
+				strClassText += oFunc.Name;
+				strClassText += ")(";
+			}
+
+			for (iParam = 1; iParam <= paramCount; iParam++)
+			{
+				var oParam = oParams.item(iParam);
+				if(iParam > 1) 
+					strClassText += ", ";
+				strClassText += (oParam.TypeString == "BSTR") ? "LPCTSTR" : oParam.TypeString.replace("VARIANT_BOOL", "BOOL");
+				if (oParam.VTSType == "VTS_CY" || oParam.VTSType == "VTS_VARIANT")
+					strClassText += "& "; //VARIANT && VTS_CY must be passed by reference
+				else
+					strClassText += " ";
+				if((oFunc.InvokeKind == "PROPERTYPUT" || oFunc.InvokeKind == "PROPERTYPUTREF")
+				&& iParam == paramCount)
+					strClassText += "newValue";
+				else
+					strClassText += oParam.Name;
+			}			
+			strClassText += ")\r\n\t{\r\n\t\t";
+
+			if (funcReturnType != "VT_EMPTY" && funcReturnType != "VT_VOID")
+			{
+				strClassText += ((funcTypeString == "BSTR") ? "CString" : funcTypeString.replace("VARIANT_BOOL", "BOOL"));
+				strClassText += " result;\r\n\t\t";
+			}
+
+			if (paramCount)
+			{
+				strClassText += "static BYTE parms[] = ";
+				for (count = 1; count <= paramCount; count++)
+				{
+					strClassText += oFunc.Parameters.item(count).VTSType;
+					strClassText += " ";
+				}
+				strClassText += ";\r\n\t\t";
+			}
+			
+			strClassText += "InvokeHelper(";
+			strClassText += oFunc.DispID;
+			strClassText += ", DISPATCH_";
+			strClassText += oFunc.InvokeKind;
+			strClassText += ", " + funcReturnType;
+			if (funcReturnType == "VT_EMPTY" || funcReturnType == "VT_VOID")
+				strClassText += ", NULL";
+			else
+				strClassText += ", (void*)&result";
+
+			if (paramCount)
+			{
+				strClassText += ", parms";
+				for (n = 1; n <= paramCount; n++)
+				{
+					var oParam = oParams.item(n);
+					strClassText += ", ";
+					if (oParam.VTSType == "VTS_CY" || oParam.VTSType == "VTS_VARIANT")
+						strClassText += "&"; //VARIANT && VTS_CY must be passed by reference
+					if((oFunc.InvokeKind == "PROPERTYPUT" || oFunc.InvokeKind == "PROPERTYPUTREF")
+					&& n == paramCount)
+						strClassText += "newValue";
+					else
+						strClassText += oParam.Name;
+				}
+				strClassText += ");"
+			}
+			else
+			{
+				strClassText += ", NULL);"
+			}
+			if (funcReturnType != "VT_EMPTY" && funcReturnType != "VT_VOID")
+				strClassText += "\r\n\t\treturn result;";
+
+			strClassText += "\r\n\t}\r\n";
+			strText += strClassText;
+		}
+	}
+
+	strText += "\r\n\t// " + oInterface.Name + L_Comment7_Text + "public:\r\n";
+
+	var oProps = oInterface.Properties;
+	var propCount = oProps.Count;
+
+	var oEnums = oTypeLib.Enums;
+	var nEnumCount = oEnums.Count;
+	var oProp;
+
+	for (n = 1; n <= propCount; n++)
+	{
+		var strPropText = "";
+		oProp = oProps.item(n);
+		strPropText = GetPropText(oProp, oEnums, nEnumCount);
+		strText += strPropText;
+	}
+
+	strText += "\r\n};";
+	return strText;
+}
+
+function IsTypeEnum(strType, oEnums, nEnumCount)
+{
+	for (i = 1; i <=  nEnumCount; i++)
+	{
+		var oEnum = oEnums.item(i);
+		if (strType == oEnum.Name)
+			return true;
+	}
+	return false;
+}
+
+var bPictureRefered = false;
+var bPictureGenerated = false;
+var bOleFontRefered = false;
+var bOleFontGenerated = false;
+
+function GetPropText(oProp, oEnums, nEnumCount)
+{
+	var strPropTxt = "";
+	var strPropType = oProp.Type;
+	var strRetType = strPropType;
+	var strVTType = oProp.VariantType;
+
+	if (IsTypeEnum(strPropType, oEnums, nEnumCount))
+	{
+		strPropType = "long";
+		strRetType = "long";
+	}
+	else if (strVTType == "VT_UNKNOWN")
+	{
+		strPropType = "LPUNKNOWN";
+		strRetType = "LPUNKNOWN";
+	}
+	else
+	{
+		strRetType = GetReturnType(oProp.Type);
+
+		if (strRetType == "CPicture")
+		{
+			bPictureRefered = true;
+			strPropType = "LPDISPATCH";
+		}
+		else if (strRetType == "COleFont")
+		{
+			bOleFontRefered = true;
+			strPropType = "LPDISPATCH";
+		}
+		else
+		{
+			strPropType = strRetType;
+		}
+	}
+	strPropType = ((strPropType == "BSTR") ? "CString" : strPropType.replace("VARIANT_BOOL", "BOOL"));
+
+
+	strPropTxt += strRetType;
+	strPropTxt += " Get";
+	strPropTxt += oProp.Name;
+	strPropTxt += "()\r\n{\r\n\t";
+	strPropTxt += strPropType;
+	strPropTxt += " result;\r\n\tGetProperty(";
+	strPropTxt += oProp.DispID;
+	strPropTxt += ", ";
+	strPropTxt += strVTType;
+
+	if (strRetType == "COleFont" || strRetType == "CPicture")
+	{
+		strPropTxt += ", (void*)&result);\r\n\treturn ";
+		strPropTxt += strRetType;
+		strPropTxt += "(result);\r\n}\r\n";
+	}
+	else
+	{
+		strPropTxt += ", (void*)&result);\r\n\treturn result;\r\n}\r\n";
+	}
+
+	strPropTxt += "void Set";
+	strPropTxt += oProp.Name;
+	strPropTxt += "(";
+	strPropTxt += strPropType;
+	if (oProp.VTSType == "VTS_CY" || oProp.VTSType == "VTS_VARIANT")
+		strPropTxt += " &propVal)\r\n"; //VARIANT && VTS_CY must be passed by reference
+	else
+		strPropTxt += " propVal)\r\n";
+	strPropTxt += "{\r\n\tSetProperty(";
+	strPropTxt += oProp.DispID;
+	strPropTxt += ", ";
+	strPropTxt += strVTType;
+	if (oProp.VTSType == "VTS_CY" || oProp.VTSType == "VTS_VARIANT")
+		strPropTxt += ", &propVal);\r\n}\r\n"; //VARIANT && VTS_CY must be passed by reference
+	else
+		strPropTxt += ", propVal);\r\n}\r\n";
+
+	return strPropTxt;
+}
+
+function GetReturnType(strType)
+{
+	var strRet = strType;
+
+	switch(strType)
+	{
+		case "VARIANT_BOOL":
+			strRet = "BOOL";
+			break;
+		case "BSTR":
+			strRet = "CString";
+			break;
+		case "OLE_COLOR":
+			strRet = "unsigned long";
+			break;
+		case "Font *":
+			strRet = "COleFont";
+			break;
+		case "Picture *":
+			strRet = "CPicture";
+			break;
+	}
+	return strRet;
+}
+
+function IsInGeneratedList(strInterfaceName)
+{
+	var nLen = oGeneratedClasses.options.length;
+	for (n = 0; n < nLen; n++)
+	{
+		var strGeneratedForInterface = oGeneratedClasses.options(n).value;
+		if (strGeneratedForInterface == strInterfaceName)
+			return true;
+	}
+	return false;
+}
+
+function nameAlreadyExist(strClassName)
+{
+	var nLen = oGeneratedClasses.options.length;
+	for (n = 0; n < nLen; n++)
+	{
+		if (oGeneratedClasses.options(n).text == strClassName)
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+function validateGeneratedList(strClassName, pInList)
+{
+	var nLen = oGeneratedClasses.options.length;
+	for (n = 0; n < nLen; n++)
+	{
+		if ( pInList && (n == LastIndex))
+			continue;	
+		if (oGeneratedClasses.options(n).text == strClassName)
+		{
+			var L_ErrMsg_Text = "This class name is used by the interface " + "\"" + oGeneratedClasses.options(n).value + "\".";
+			oErrObj = new Error(L_ErrMsg_Text);
+			SetErrorInfo(oErrObj);				
+			return false;
+		}
+	}
+	return true;
+}
+
+function ToggleButtons()
+{
+	RemoveBtn.disabled = true;
+	RemoveAllBtn.disabled = true;
+
+	var interfaceCount = oInterfaces.options.length;
+	var genInterfaceCount = oGeneratedClasses.options.length;
+
+	if (interfaceCount == 0 )
+	{
+		AddBtn.disabled = true;
+		AddAllBtn.disabled = true;
+	}
+	else if (oInterfaces.selectedIndex == -1)
+	{
+		AddBtn.disabled = true;
+	}
+	else
+	{
+		AddBtn.disabled = false;
+	}
+
+	if (genInterfaceCount)
+	{
+		if (oGeneratedClasses.selectedIndex != -1)
+			RemoveBtn.disabled = false;
+		if (oGeneratedClasses.options.length > 1)
+			RemoveAllBtn.disabled = false;
+	}
+}
+
+function ValidateInput()
+{
+	var oInvalid = null;
+
+	if (!CHOOSE_CLASS_NAME.value.length)
+	{
+		var L_EnterClassNameErr_Text = "클래스 이름을 입력해야 합니다.";
+		oErrObj = new Error(L_EnterClassNameErr_Text);
+		SetErrorInfo(oErrObj);
+		oInvalid = CHOOSE_CLASS_NAME;
+	}
+	else
+	{
+		if (!Validate(CHOOSE_CLASS_NAME))
+			oInvalid = CHOOSE_CLASS_NAME;
+	}
+
+	if (oInvalid == null)
+		if (!Validate(CHOOSE_FILE_NAME))
+			oInvalid = CHOOSE_FILE_NAME;
+
+	if (oInvalid != null)
+	{
+		if(!oInvalid.disabled)
+		{
+			if (gbShowError)
+				window.external.ReportError();
+			else
+				gbShowError = true;
+			oInvalid.focus();
+		}
+		return false;
+	}
+	return true;
+}
+
+var gbShowError = true;
+
+function Validate(obj)
+{
+	var bValid = true;
+	switch(obj.id)
+	{
+		case "CHOOSE_CLASS_NAME":
+			bValid = window.external.ParentObject.ValidateMember(obj.value, vsCMElementClass);
+			if (bValid)
+				bValid = validateGeneratedList(obj.value, true);
+			break;
+		case "CHOOSE_FILE_NAME":
+			gbShowError = bValid = CanUseFileName(obj.value, true);
+			if (bValid)
+				bValid = ValidateFileNameAndEnsureInProject(obj.value, vsCMValidateFileExtCpp);
+			break;
+		default:
+			break;
+	}
+
+	if (typeof(bValid) == "undefined")
+		bValid = false;
+
+	return bValid;
+}
+
+function CreateAndAddFile(strClassName, strHeader, openFile)
+{
+	var oCM;
+
+	try
+	{
+		oCM	= window.external.ProjectObject.CodeModel;
+	}
+	catch(e)
+	{
+		window.external.ReportError();
+		return VS_E_WIZARDBACKBUTTONPRESS;
+	}
+	try
+	{
+		oCM.StartTransaction(L_TransactionNamePart1_Text + strClassName + L_TransactionNamePart2_Text);
+		try
+		{
+			var oProject = window.external.ProjectObject;
+			RenderAddTemplate(window.external, "genclass.h", strHeader, oProject.ProjectItems /*there is no "selObj" to refer, cause we're not in Finish() default.js*/, openFile);
+
+			if (bPictureRefered && !bPictureGenerated)
+			{
+				bPictureGenerated = true;
+				oCM.AddInclude("\"_Picture.h\"", strHeader, vsCMAddPositionEnd);
+				RenderAddTemplate(window.external, "_Picture.h", "_Picture.h", oProject.ProjectItems, false);
+			}
+
+			if (bOleFontRefered && !bOleFontGenerated)
+			{
+				bOleFontGenerated = true;
+				oCM.AddInclude("\"_Font.h\"", strHeader, vsCMAddPositionEnd);
+				RenderAddTemplate(window.external, "_Font.h", "_Font.h", oProject.ProjectItems, false);
+			}
+		}
+		catch(e)
+		{
+			oCM.AbortTransaction();
+
+			var L_ErrMsg1_Text = "OnFinish()에 오류가 있습니다.";
+			if (e.description.length != 0)
+			{
+				L_ErrMsg1_Text += ": ";
+				L_ErrMsg1_Text += e.description;
+			}
+			window.external.ReportError( L_ErrMsg1_Text);
+			return;
+		}
+		oCM.Synchronize();
+		var Class = oCM.Classes.Find(strClassName);
+		if (Class != null)
+		{
+			Class.StartPoint.CreateEditPoint().SmartFormat(Class.EndPoint);
+		}
+
+		oCM.CommitTransaction();
+	}
+	catch(e)
+	{
+		oCM.AbortTransaction();
+
+		var L_ErrMsg2_Text = "OnFinish()에 오류가 있습니다.";
+		if (e.description.length != 0)
+		{
+			L_ErrMsg2_Text += ": ";
+			L_ErrMsg2_Text += e.description;
+		}
+		window.external.ReportError( L_ErrMsg2_Text);
+	}
+}
+
+</SCRIPT>
+<SCRIPT ID="INCLUDE_SCRIPT" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT ID="INCLUDE_COMMON" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT>
+	document.scripts("INCLUDE_SCRIPT").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Script.js";
+	document.scripts("INCLUDE_COMMON").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Common.js";
+</SCRIPT>

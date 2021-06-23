@@ -1,0 +1,146 @@
+﻿.base-container {
+    width: 100%;
+    height: 100%;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: auto auto 15;
+    display: -ms-grid;
+}
+
+.toolbar-float {
+    margin: 0;
+    padding: 0;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: auto auto auto;
+    display: -ms-grid;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    z-index: 1000;
+}
+
+    .toolbar-float .main-information-container {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        -ms-grid-columns: auto auto auto 1fr;
+        -ms-grid-rows: 1fr;
+        display: -ms-grid;
+        background-color: lightyellow; /*[{diagnostics-information-background}]*/
+        border-top: 1px black solid; /*[1px {diagnostics-information-border solid} solid]*/
+        border-bottom: 1px black solid; /*[1px {diagnostics-information-border solid} solid]*/
+        padding: 5px;
+    }
+
+        .toolbar-float .main-information-container .information-icon {
+            -ms-grid-row: 1;
+            -ms-grid-column: 1;
+            background: url("../images/Information_blue.png") no-repeat; /*[url({vs-image-information-icon}) no-repeat]*/
+            background-size: 1.333em 1.333em;
+            width: 1.333em;
+            height: 1.333em;
+            background-position-x: left;
+            background-position-y: left;
+            background-color: transparent;
+        }
+
+        .toolbar-float .main-information-container .dropped-events {
+            -ms-grid-row: 1;
+            -ms-grid-column: 2;
+            color: black; /*[{diagnostics-information-foreground}]*/
+            padding-left: 5px;
+            padding-right: 5px;
+            background-color: transparent;
+        }
+
+        .toolbar-float .main-information-container .information-link {
+            -ms-grid-row: 1;
+            -ms-grid-column: 3;
+            padding-left: 5px;
+            padding-right: 5px;
+            background-color: transparent;
+        }
+
+        .toolbar-float .main-information-container .information-close-div {
+            -ms-grid-row: 1;
+            -ms-grid-column: 4;
+            background-color: transparent;
+            vertical-align: middle;
+            padding-top: 2px;
+        }
+
+        .toolbar-float .main-information-container .information-close-div .information-close {
+            background-color: transparent;
+            font-family: Marlett !important;
+            color: black; /*[{diagnostics-information-foreground}]*/
+            float: right;
+        }
+
+    .toolbar-float .main-toolbar-container {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+    }
+
+    .toolbar-float .main-ruler-container {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+
+.main-container {
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: auto auto;
+    display: -ms-grid;
+    height: 100%;
+    width: 100%;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+}
+
+    .main-container .main-empty {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+
+    .main-container .main-swimlane-container {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+        display: -ms-grid;
+        -ms-grid-columns: 1fr;
+    }
+
+        .main-container .main-swimlane-container .swimlane-container {
+            -ms-grid-row: 1;
+            -ms-grid-column: 1;
+        }
+
+    .main-container .main-swimlane-margin {
+        -ms-grid-row: 4;
+        -ms-grid-column: 1;
+        height: 5px;
+    }
+
+    .main-container .main-scrollbar {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+
+a:link {
+    text-decoration: none;
+    color: lightblue; /*[{diagnostics-information-link-foreground}]*/
+    background-color: transparent;
+}
+
+a:visited {
+    text-decoration: none;
+    color: lightblue; /*[{diagnostics-information-link-foreground}]*/
+    background-color: transparent;
+}
+
+a:hover {
+    text-decoration: none;
+    color: lightblue; /*[{diagnostics-information-link-foreground-hover}]*/
+    background-color: transparent;
+}
+
+a:active {
+    text-decoration: none;
+    color: lightblue; /*[{diagnostics-information-link-foreground-pressed}]*/
+    background-color: transparent;
+}

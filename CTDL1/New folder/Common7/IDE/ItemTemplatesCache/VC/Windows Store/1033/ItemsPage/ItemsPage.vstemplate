@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="1006" />
+    <Description Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="1007" />
+    <Icon Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="4012" />
+    <TemplateID>Microsoft.CPP.WinRT.ItemsPage</TemplateID>
+    <TemplateGroupID>WinRT-Native-6.3</TemplateGroupID>
+    <ProjectType>VC</ProjectType>
+    <NumberOfParentCategoriesToRollUp>0</NumberOfParentCategoriesToRollUp>
+    <DefaultName>ItemsPage.xaml</DefaultName>
+    <ShowByDefault>true</ShowByDefault>
+    <SortOrder>51</SortOrder>
+    <PreviewImage>ItemsPage.png</PreviewImage>
+    <TargetPlatformName>Windows</TargetPlatformName>
+    <RequiredPlatformVersion>6.2.0</RequiredPlatformVersion>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="true" ItemType="Page" SubType="Designer" CustomTool="MSBuild:Compile" TargetFileName="$fileinputname$.xaml">ItemsPage.xaml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.xaml.h">ItemsPage.xaml.h</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.xaml.cpp">ItemsPage.xaml.cpp</ProjectItem>
+
+    <ProjectItem ReplaceParameters="false" TargetFileName="$wizardcommonprefix$ReadMe.txt">ReadMe.txt</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$NavigationHelper.h">NavigationHelper.h</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$NavigationHelper.cpp">NavigationHelper.cpp</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$RelayCommand.h">RelayCommand.h</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$RelayCommand.cpp">RelayCommand.cpp</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$SuspensionManager.h">SuspensionManager.h</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$SuspensionManager.cpp">SuspensionManager.cpp</ProjectItem>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.WinRT.TemplateWizards, Version=12.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.WinRT.TemplateWizards.SmartItem.Wizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <HasWizardSubPath>ItemsPage.xaml.h</HasWizardSubPath>
+    <CommonOptional>ReadMe.txt</CommonOptional>
+    <CommonRequired>NavigationHelper.h</CommonRequired>
+    <CommonRequired>NavigationHelper.cpp</CommonRequired>
+    <CommonRequired>RelayCommand.h</CommonRequired>
+    <CommonRequired>RelayCommand.cpp</CommonRequired>
+    <CommonRequired>SuspensionManager.h</CommonRequired>
+    <CommonRequired>SuspensionManager.cpp</CommonRequired>
+  </WizardData>
+</VSTemplate>

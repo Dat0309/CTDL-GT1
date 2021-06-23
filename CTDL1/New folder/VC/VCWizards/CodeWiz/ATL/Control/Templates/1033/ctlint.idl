@@ -1,0 +1,186 @@
+[
+	object,
+	uuid([!output INTERFACE_IID]),
+[!if INTERFACE_DUAL]
+	dual,
+[!endif]
+[!if AUTOMATION]
+	oleautomation,
+[!endif]
+[!if INTERFACE_DUAL || AUTOMATION]
+	nonextensible,
+[!endif]	
+	pointer_default(unique)
+]
+interface [!output INTERFACE_NAME] : [!if INTERFACE_DUAL]IDispatch[!else]IUnknown[!endif]
+{
+[!if AUTOSIZE]
+	[propput, bindable, requestedit, id(DISPID_AUTOSIZE)]
+	HRESULT AutoSize([in]VARIANT_BOOL vbool);
+	[propget, bindable, requestedit, id(DISPID_AUTOSIZE)]
+	HRESULT AutoSize([out,retval]VARIANT_BOOL* pbool);
+[!endif]
+[!if BACKCOLOR]
+	[propput, bindable, requestedit, id(DISPID_BACKCOLOR)]
+	HRESULT BackColor([in]OLE_COLOR clr);
+	[propget, bindable, requestedit, id(DISPID_BACKCOLOR)]
+	HRESULT BackColor([out,retval]OLE_COLOR* pclr);
+[!endif]
+[!if BACKSTYLE]
+	[propput, bindable, requestedit, id(DISPID_BACKSTYLE)]
+	HRESULT BackStyle([in]long style);
+	[propget, bindable, requestedit, id(DISPID_BACKSTYLE)]
+	HRESULT BackStyle([out,retval]long* pstyle);
+[!endif]
+[!if BORDERCOLOR]
+	[propput, bindable, requestedit, id(DISPID_BORDERCOLOR)]
+	HRESULT BorderColor([in]OLE_COLOR clr);
+	[propget, bindable, requestedit, id(DISPID_BORDERCOLOR)]
+	HRESULT BorderColor([out, retval]OLE_COLOR* pclr);
+[!endif]
+[!if BORDERSTYLE]
+	[propput, bindable, requestedit, id(DISPID_BORDERSTYLE)]
+	HRESULT BorderStyle([in]long style);
+	[propget, bindable, requestedit, id(DISPID_BORDERSTYLE)]
+	HRESULT BorderStyle([out, retval]long* pstyle);
+[!endif]
+[!if BORDERWIDTH]
+	[propput, bindable, requestedit, id(DISPID_BORDERWIDTH)]
+	HRESULT BorderWidth([in]long width);
+	[propget, bindable, requestedit, id(DISPID_BORDERWIDTH)]
+	HRESULT BorderWidth([out, retval]long* width);
+[!endif]
+[!if DRAWMODE]
+	[propput, bindable, requestedit, id(DISPID_DRAWMODE)]
+	HRESULT DrawMode([in]long mode);
+	[propget, bindable, requestedit, id(DISPID_DRAWMODE)]
+	HRESULT DrawMode([out, retval]long* pmode);
+[!endif]
+[!if DRAWSTYLE]
+	[propput, bindable, requestedit, id(DISPID_DRAWSTYLE)]
+	HRESULT DrawStyle([in]long style);
+	[propget, bindable, requestedit, id(DISPID_DRAWSTYLE)]
+	HRESULT DrawStyle([out, retval]long* pstyle);
+[!endif]
+[!if DRAWWIDTH]
+	[propput, bindable, requestedit, id(DISPID_DRAWWIDTH)]
+	HRESULT DrawWidth([in]long width);
+	[propget, bindable, requestedit, id(DISPID_DRAWWIDTH)]
+	HRESULT DrawWidth([out, retval]long* pwidth);
+[!endif]
+[!if FILLCOLOR]
+	[propput, bindable, requestedit, id(DISPID_FILLCOLOR)]
+	HRESULT FillColor([in]OLE_COLOR clr);
+	[propget, bindable, requestedit, id(DISPID_FILLCOLOR)]
+	HRESULT FillColor([out, retval]OLE_COLOR* pclr);
+[!endif]
+[!if FILLSTYLE]
+	[propput, bindable, requestedit, id(DISPID_FILLSTYLE)]
+	HRESULT FillStyle([in]long style);
+	[propget, bindable, requestedit, id(DISPID_FILLSTYLE)]
+	HRESULT FillStyle([out, retval]long* pstyle);
+[!endif]
+[!if FONT]
+	[propputref, bindable, requestedit, id(DISPID_FONT)]
+	HRESULT Font([in]IFontDisp* pFont);
+	[propput, bindable, requestedit, id(DISPID_FONT)]
+	HRESULT Font([in]IFontDisp* pFont);
+	[propget, bindable, requestedit, id(DISPID_FONT)]
+	HRESULT Font([out, retval]IFontDisp** ppFont);
+[!endif]
+[!if FORECOLOR]
+	[propput, bindable, requestedit, id(DISPID_FORECOLOR)]
+	HRESULT ForeColor([in]OLE_COLOR clr);
+	[propget, bindable, requestedit, id(DISPID_FORECOLOR)]
+	HRESULT ForeColor([out,retval]OLE_COLOR* pclr);
+[!endif]
+[!if ENABLED]
+	[propput, bindable, requestedit, id(DISPID_ENABLED)]
+	HRESULT Enabled([in]VARIANT_BOOL vbool);
+	[propget, bindable, requestedit, id(DISPID_ENABLED)]
+	HRESULT Enabled([out,retval]VARIANT_BOOL* pbool);
+[!endif]
+[!if HWND]
+	[propget, bindable, requestedit, id(DISPID_HWND)]
+	HRESULT HWND([out, retval]LONG_PTR* pHWND);
+[!endif]
+[!if TABSTOP]
+	[propput, bindable, requestedit, id(DISPID_TABSTOP)]
+	HRESULT TabStop([in]VARIANT_BOOL vbool);
+	[propget, bindable, requestedit, id(DISPID_TABSTOP)]
+	HRESULT TabStop([out, retval]VARIANT_BOOL* pbool);
+[!endif]
+[!if TEXT]
+	[propput, bindable, requestedit, id(DISPID_TEXT)]
+	HRESULT Text([in]BSTR strText);
+	[propget, bindable, requestedit, id(DISPID_TEXT)]
+	HRESULT Text([out, retval]BSTR* pstrText);
+[!endif]
+[!if CAPTION]
+	[propput, bindable, requestedit, id(DISPID_CAPTION)]
+	HRESULT Caption([in]BSTR strCaption);
+	[propget, bindable, requestedit, id(DISPID_CAPTION)]
+	HRESULT Caption([out,retval]BSTR* pstrCaption);
+[!endif]
+[!if BORDERVISIBLE]
+	[propput, bindable, requestedit, id(DISPID_BORDERVISIBLE)]
+	HRESULT BorderVisible([in]VARIANT_BOOL vbool);
+	[propget, bindable, requestedit, id(DISPID_BORDERVISIBLE)]
+	HRESULT BorderVisible([out, retval]VARIANT_BOOL* pbool);
+[!endif]
+[!if APPEARANCE]
+	[propput, bindable, requestedit, id(DISPID_APPEARANCE)]
+	HRESULT Appearance([in]short nAppearance);
+	[propget, bindable, requestedit, id(DISPID_APPEARANCE)]
+	HRESULT Appearance([out, retval]short* pnAppearance);
+[!endif]
+[!if MOUSEPOINTER]
+	[propput, bindable, requestedit, id(DISPID_MOUSEPOINTER)]
+	HRESULT MousePointer([in]long pointer);
+	[propget, bindable, requestedit, id(DISPID_MOUSEPOINTER)]
+	HRESULT MousePointer([out, retval]long* ppointer);
+[!endif]
+[!if MOUSEICON]
+	[propputref, bindable, requestedit, id(DISPID_MOUSEICON)]
+	HRESULT MouseIcon([in]IPictureDisp* pMouseIcon);
+	[propput, bindable, requestedit, id(DISPID_MOUSEICON)]
+	HRESULT MouseIcon([in]IPictureDisp* pMouseIcon);
+	[propget, id(DISPID_MOUSEICON)]
+	HRESULT MouseIcon([out, retval]IPictureDisp** ppMouseIcon);
+[!endif]
+[!if PICTURE]
+	[propputref, bindable, requestedit, id(DISPID_PICTURE)]
+	HRESULT Picture([in]IPictureDisp* pPicture);
+	[propput, bindable, requestedit, id(DISPID_PICTURE)]
+	HRESULT Picture([in]IPictureDisp* pPicture);
+	[propget, bindable, requestedit, id(DISPID_PICTURE)]
+	HRESULT Picture([out, retval]IPictureDisp** ppPicture);
+[!endif]
+[!if VALID]
+	[propput, bindable, requestedit, id(DISPID_VALID)]
+	HRESULT Valid([in]VARIANT_BOOL vbool);
+	[propget, bindable, requestedit, id(DISPID_VALID)]
+	HRESULT Valid([out, retval]VARIANT_BOOL* pbool);
+[!endif]
+[!if READYSTATE]
+	[propput, bindable, requestedit, id(DISPID_READYSTATE)]
+	HRESULT ReadyState([in]long state);
+	[propget, bindable, requestedit, id(DISPID_READYSTATE)]
+	HRESULT ReadyState([out, retval]long* pstate);
+[!endif]
+};
+
+[!if HTML_CONTROL]
+[
+	object, 
+	dual,
+	nonextensible,
+	uuid([!output INTERFACEUI_IID]),	
+	pointer_default(unique)
+]
+interface [!output INTERFACE_NAME]UI : IDispatch
+{
+	// Example method that will be called by the HTML
+	HRESULT OnClick([in]IDispatch* pdispBody, [in]VARIANT varColor);
+};
+[!endif]

@@ -1,0 +1,2 @@
+﻿CREATE MESSAGE TYPE [$rawname$]
+	VALIDATION = NONE

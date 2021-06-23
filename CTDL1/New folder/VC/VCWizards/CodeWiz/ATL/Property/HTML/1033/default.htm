@@ -1,0 +1,1769 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<HTML DIR="LTR">
+
+<HEAD>
+	<TITLE>Add Property Wizard</TITLE>
+	<META NAME="vs_targetSchema" CONTENT="http://schemas.microsoft.com/intellisense/ie5">
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+	<META HTTP-EQUIV="MSThemeCompatible" CONTENT="Yes">
+	<LINK ID="LINKURL" REL="stylesheet" HREF="../../../../../1033/NewStyles.css">
+
+	<SYMBOL NAME="EXTERNAL_NAME" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="TYPE" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="TYPE_VT" TYPE=text value=""></SYMBOL>
+	<SYMBOL NAME="VARIABLE_NAME" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="NOTIFICATION_FUNCTION" TYPE=text value=""></SYMBOL>
+	<SYMBOL NAME="GET_FUNCTION" TYPE=text value=""></SYMBOL>
+	<SYMBOL NAME="SET_FUNCTION" TYPE=text value=""></SYMBOL>
+	<SYMBOL NAME="STOCK" TYPE=radio VALUE=false></SYMBOL>
+	<SYMBOL NAME="MEMBER_VARIABLE" TYPE=radio VALUE=true></SYMBOL>
+	<SYMBOL NAME="GET_SET" TYPE=radio VALUE=false></SYMBOL>
+	<SYMBOL NAME="STOCK_DISPID" TYPE=text value=""></SYMBOL>
+	<SYMBOL NAME="STOCK_MACRO" TYPE=text value=""></SYMBOL>
+	<SYMBOL NAME="MFC_CLASS" TYPE=bool VALUE=false></SYMBOL>
+	<SYMBOL NAME="MFC_CONTROL" TYPE=bool VALUE=false></SYMBOL>
+	<SYMBOL NAME="MFC_PROJECT" TYPE=bool VALUE=false></SYMBOL>
+	<SYMBOL NAME="RETURN_TYPE" TYPE=text value=""></SYMBOL>
+	<SYMBOL NAME="GENERATE_GET" TYPE=checkbox VALUE=true></SYMBOL>
+	<SYMBOL NAME="GENERATE_PUT" TYPE=checkbox VALUE=true></SYMBOL>
+	<SYMBOL NAME="PROPPUT" TYPE=radio VALUE=true></SYMBOL>
+	<SYMBOL NAME="PROPPUTREF" TYPE=radio VALUE=false></SYMBOL>
+	<SYMBOL NAME="INTERFACE_TYPE" TYPE=text value=""></SYMBOL>
+
+	<SYMBOL NAME="DISPID" TYPE=text value=""></SYMBOL>
+	<SYMBOL NAME="HELP_STRING" TYPE=text value=""></SYMBOL>
+	<SYMBOL NAME="HELP_CONTEXT" TYPE=text value=""></SYMBOL>
+	<SYMBOL NAME="BINDABLE" TYPE=checkbox value=false></SYMBOL>
+	<SYMBOL NAME="DEFAULT_BIND" TYPE=checkbox value=false></SYMBOL>
+	<SYMBOL NAME="DEFAULT_COLLELEM" TYPE=checkbox value=false></SYMBOL>
+	<SYMBOL NAME="DISPLAY_BIND" TYPE=checkbox value=false></SYMBOL>
+	<SYMBOL NAME="HIDDEN" TYPE=checkbox value=false></SYMBOL>
+	<SYMBOL NAME="IMMEDIATE_BIND" TYPE=checkbox value=false></SYMBOL>
+	<SYMBOL NAME="LOCAL" TYPE=checkbox value=false></SYMBOL>
+	<SYMBOL NAME="NON_BROWSABLE" TYPE=checkbox value=false></SYMBOL>
+	<SYMBOL NAME="REQUEST_EDIT" TYPE=checkbox value=false></SYMBOL>
+	<SYMBOL NAME="RESTRICTED" TYPE=checkbox value=false></SYMBOL>
+	<SYMBOL NAME="SOURCE" TYPE=checkbox value=false></SYMBOL>
+
+	<SYMBOL NAME="DEFAULT_PROPERTY" TYPE=checkbox value=false></SYMBOL>
+
+	<SYMBOL NAME="DISPID_DISABLED" TYPE=bool VALUE=false></SYMBOL>
+	<SYMBOL NAME="NUM_PARAMETERS" TYPE=text value=""></SYMBOL>
+	<SYMBOL NAME="FUNCTION_PARAMETERS" TYPE=text value=""></SYMBOL>
+	<SYMBOL NAME="PARAM_TYPE" TYPE=text value=""></SYMBOL>
+	<SYMBOL NAME="PROP_EXISTS" TYPE=bool value=false></SYMBOL>
+
+</HEAD>
+
+<BODY BGCOLOR="BUTTONFACE" TOPMARGIN="0" LEFTMARGIN="0" RIGHTMARGIN="0" BOTTOMMARGIN="0" ONLOAD="InitDocument(document);" ONKEYDOWN="OnKey();" ONKEYPRESS="OnPress();">
+
+<TABLE CLASS="ONE" HEIGHT="100%" WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<COL WIDTH="178">
+	<!--OPEN OF ALL ENCOMPASSING TABLE ROW ONE//-->
+  <TR VALIGN="TOP">
+	<TD HEIGHT="79" WIDTH="100%" COLSPAN=2>
+	 <TABLE CLASS="TWO" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	 <COL WIDTH="12"><COL><COL WIDTH="12">
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+
+	   <TD VALIGN="TOP" HEIGHT="12">
+	  	&nbsp;
+	   </TD>
+
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+
+	   <TD CLASS="IMAGE" VALIGN="BOTTOM" WIDTH="110" ROWSPAN="2">
+		<DIV CLASS="SMALLA" ID="Layer0">
+		 <IMG CLASS="SMALLEST" SRC="..\..\Images\Prop.gif" WIDTH="63" HEIGHT="63" ALT="" BORDER="0">
+		</DIV>
+	   </TD>
+
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="6" ROWSPAN="2">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+
+	   <TD VALIGN="TOP" HEIGHT="65">
+		<H4 CLASS="HEAD" ID="HEAD">Welcome to the Add Property Wizard</H4>
+		<P CLASS="SUBHEAD" ID="SUBHEAD">This wizard adds a property to your interface.</P>
+	   </TD>
+
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+
+	  <TR>
+	   <TD VALIGN="TOP" CLASS="RULE" COLSPAN="5" HEIGHT="2">
+		<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+	  	 <TR VALIGN="TOP">
+	  	  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+	  	  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+	  	 </TR>
+		</TABLE>
+	   </TD>
+	  </TR>
+	 </TABLE>
+	</TD>
+  </TR>
+
+	<!--CLOSE OF INTRODUCTORY INFORMATION TABLE//-->
+
+    <!--OPEN OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+	<TR VALIGN="TOP">
+	<TD CLASS="Three" VALIGN="TOP" HEIGHT="100%" WIDTH="100%">
+	 <TABLE CLASS="fixedSize" HEIGHT="100%" WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+  	  <TR VALIGN="TOP">
+	   <TD CLASS="threeCustom" VALIGN="TOP">
+	   <!--OPEN OF NAVIGATION TABLE//-->
+
+	    <TABLE CLASS="THREE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+		<COL WIDTH="12"><COL><COL WIDTH="1">
+		 <TR>
+	   	  <TD VALIGN="TOP" COLSPAN="3" HEIGHT="12">
+	  		&nbsp;
+		  </TD>
+		 </TR>
+		 <TR>
+	   	  <TD VALIGN="TOP" HEIGHT="100%">
+	  		&nbsp;
+		  </TD>
+	   	  <TD VALIGN="TOP" HEIGHT="100%">
+	   	  <!--OPEN OF NAVIGATIONAL LINKS//-->
+
+		  	<DIV CLASS="LINKSELECTED">
+	 	   	 <SPAN CLASS="VERTLINE1">
+			  <IMG SRC="../../../../../1033/Images/spacer.gif" WIDTH="1" HEIGHT="1" ALT="" BORDER="0">
+			 </SPAN>
+			 <SPAN CLASS="HORILINE1">
+			  <TABLE WIDTH="167" HEIGHT="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			   <TR VALIGN="TOP">
+			    <TD CLASS="DOTTEDLINE" HEIGHT="1">
+				</TD>
+			   </TR>
+			   <TR VALIGN="TOP">
+			    <TD HEIGHT="100%">
+				 <IMG SRC="../../../../../1033/Images/spacer.gif" WIDTH="1" HEIGHT="28" ALT="" BORDER="0">
+			    </TD>
+			   </TR>
+			   <TR VALIGN="TOP">
+			    <TD CLASS="DOTTEDLINE" HEIGHT="1">
+			    </TD>
+			   </TR>
+			  </TABLE>
+			 </SPAN>
+			 <TABLE WIDTH="160" HEIGHT="28" BORDER="0" CELLPADDING="0" CELLSPACING="0" CLASS="LINKTEXTSELECTED">
+			  <TR VALIGN="MIDDLE">
+			   <TD WIDTH="100%">
+				<SPAN ID="Default" TITLE="Specify property names and parameters.">Names</SPAN>
+			   </TD>
+			   <TD WIDTH="4">
+				<IMG SRC="../../../../../1033/Images/spacer.gif" HEIGHT="1" WIDTH="4">
+			   </TD>
+			  </TR>
+			 </TABLE>
+			</DIV>
+
+			<DIV CLASS="LINK">
+			 <TABLE WIDTH="100%" HEIGHT="28" BORDER="0" CELLPADDING="0" CELLSPACING="0" CLASS="LINKTEXT">
+			  <TR VALIGN="MIDDLE">
+	  		   <TD WIDTH="100%">
+				<SPAN CLASS="ACTIVELINK" ID="IDLAttrib" TITLE="Specify any IDL attributes for this property." onClick="if (this.className.toLowerCase() == 'inactivelink') return; Next(document, 'idlattrib.htm');" TABINDEX="1">IDL Attributes</SPAN>
+			   </TD>
+	  		   <TD WIDTH="4">
+			  	<IMG SRC="../../../../../1033/Images/spacer.gif" HEIGHT="1" WIDTH="4">
+			   </TD>
+			  </TR>
+			 </TABLE>
+			</DIV>
+
+	   	  <!--CLOSE OF NAVIGATIONAL LINKS//-->
+		  </TD>
+		  <TD WIDTH="1">
+		   <DIV CLASS="VERTLINE">
+			 <IMG SRC="../../../../../1033/Images/spacer.gif" WIDTH="1" HEIGHT="1" ALT="" BORDER="0">
+		   </DIV>
+		  </TD>
+		 </TR>
+		 </TABLE>
+		</TD>
+	   </TR>
+	   </TABLE>
+
+	   <!--CLOSE OF NAVIGATION TABLE//-->
+	   </TD>
+
+
+	<TD VALIGN="TOP" HEIGHT="100%">
+	   <!--OPEN OF CONTENT AND BUTTON TABLE//-->
+
+	   	<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+		<COL WIDTH="100%">
+		 <TR VALIGN="TOP">
+		  <TD HEIGHT="100%">
+	   	  <!--OPEN OF CONTENT//-->
+
+		  	<TABLE CLASS="CONTENT" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL><COL WIDTH="12">
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="3">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 			 <TR VALIGN="TOP">
+ 			 <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP">
+			   <TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="TABLE-LAYOUT:FIXED; Z-INDEX:2; POSITION:RELATIVE;">
+			    <TR VALIGN="TOP">
+				 <TD WIDTH="196">
+					<SPAN CLASS="itemText" ID="TYPE_LIST_SPAN" TITLE="The data type of the property.">
+					 <LABEL ID="TYPE_LIST_LABEL" FOR="TYPE_LIST">Property t<U>y</U>pe:</LABEL>
+					 <BR>
+					 <OBJECT CLASS="itemText" ID="TYPE_LIST" ACCESSKEY="Y"
+					 CLASSID="CLSID:79eadad6-3f7a-45a6-a75e-dd0b7d70fa43" VIEWASTEXT></OBJECT>
+					</SPAN>
+			  	 </TD>
+				 <TD WIDTH="196" ID="PROPERTY_NAME_SECTION" STYLE="DISPLAY:NONE; PADDING-LEFT:8PX;">
+				 	<SPAN CLASS="itemText" ID="PROPERTY_NAME_SPAN" TITLE="External name of property.">
+					 <LABEL FOR="PROPERTY_NAME" ID="PROPERTY_NAME_LABEL">Pr<U>o</U>perty name:</LABEL>
+					 <BR>
+					 <INPUT CLASS="sideBtn" TYPE="TEXT" ID="PROPERTY_NAME" VALUE="" ACCESSKEY="O"
+					 onPropertyChange="OnPropertyName();">
+					</SPAN>
+				 </TD>
+				 <TD WIDTH="196" ID="STOCK_PROPERTIES_SECTION" STYLE="DISPLAY:BLOCK; PADDING-LEFT:12PX;">
+				 	<SPAN CLASS="itemText" ID="STOCK_PROPERTIES_SPAN" TITLE="Internal name of the property.">
+					 <LABEL FOR="STOCK_PROPERTIES" ID="STOCK_PROPERTIES_LABEL">Pr<U>o</U>perty name:</LABEL>
+					 <BR>
+					 <OBJECT TITLE="Name of property" CLASS="itemText" ACCESSKEY="O" ID="STOCK_PROPERTIES"
+					 CLASSID="CLSID:79eadad6-3f7a-45a6-a75e-dd0b7d70fa43" VIEWASTEXT></OBJECT>
+					</SPAN>
+				 </TD>
+				</TR>
+
+				<TR>
+				 <TD COLSPAN="2" ID="RETURN_TYPE_SECTION" STYLE="DISPLAY:BLOCK; PADDING-TOP:12PX;">
+				 	<SPAN ID="RETURN_TYPE_SPAN" CLASS="itemText" TITLE="Data type returned.">
+					 <LABEL ID="RETURN_TYPE_LABEL" FOR="RETURN_TYPE_LIST">R<U>e</U>turn type:</LABEL>
+					 <BR>
+					 <OBJECT CLASS="itemText" ID="RETURN_TYPE_LIST" ACCESSKEY="E"
+					 CLASSID="CLSID:79eadad6-3f7a-45a6-a75e-dd0b7d70fa43" VIEWASTEXT></OBJECT>
+					 <INPUT CLASS="sideBtn" ID="DISABLED_RETURN_TYPE" TYPE="TEXT" VALUE="HRESULT" DISABLED ACCESSKEY="E"
+				 	 STYLE="DISPLAY:NONE;">
+					</SPAN>
+				 </TD>
+				</TR>
+
+				<TR VALIGN="TOP" ID="FUNCTION_TYPE_LABEL" STYLE="DISPLAY:BLOCK; PADDING-TOP:10PX; PADDING-BOTTOM:2PX;">
+				 <TD COLSPAN="2">
+				 	<SPAN CLASS="itemText" ID="FUNCTION_TYPE_SPAN">Function type:</SPAN>
+				 </TD>
+				</TR>
+
+				<TR VALIGN="TOP" ID="FUNCTION_TYPE_SECTION" STYLE="DISPLAY:BLOCK; PADDING-BOTTOM:-4PX;">
+				 <TD COLSPAN="2">
+				  <TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+				  <TR VALIGN="TOP">
+				   <TD WIDTH="30%">
+				 	<SPAN CLASS="itemText" ID="GENERATE_GET_SPAN" TITLE="Generate Get function.">
+					 <INPUT TYPE="checkbox" ID="GENERATE_GET" ACCESSKEY="G">
+					 <LABEL CLASS="UpABit" FOR="GENERATE_GET" ID="GENERATE_GET_LABEL"><U>G</U>et function</LABEL>
+					</SPAN>
+				   </TD>
+				   <TD STYLE="PADDING-LEFT:12PX;">
+				 	<SPAN CLASS="itemText" ID="GENERATE_PUT_SPAN" TITLE="Generate Put function.">
+					 <INPUT type="checkbox" id="GENERATE_PUT" ACCESSKEY="u" onPropertyChange="OnGeneratePut();">
+					 <LABEL CLASS="UpABit" FOR="GENERATE_PUT" ID="GENERATE_PUT_LABEL">P<U>u</U>t function</LABEL>
+					</SPAN>
+				  </TD>
+				 </TR>
+				 </TABLE>
+				</TD>
+				</TR>
+				</TD>
+				</TR>
+
+				<TR VALIGN="TOP" ID="PUT_FUNCTION_SECTION" STYLE="DISPLAY:BLOCK;">
+				 <TD COLSPAN="2">
+				  <TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+				  <TR VALIGN="TOP">
+				   <TD WIDTH="30%">
+				    &nbsp;
+				   </TD>
+				   <TD STYLE="PADDING-LEFT:12PX;">
+				 	<NOBR>
+					 <SPAN ID="BYVAL_SPAN" TITLE="Pass property by value." CLASS="radioIndent">
+					  <INPUT TYPE="radio" NAME="functiontype" ID="PROPPUT" ACCESSKEY="P">
+					  <LABEL CLASS="UpABit" FOR="PROPPUT" ID="PROPPUT_LABEL"><U>P</U>ropPut</LABEL>
+					 </SPAN>
+					</NOBR>
+					<NOBR>
+					 <SPAN ID="BYREF_SPAN" TITLE="Pass property by reference." CLASS="radioIndent">
+					  <INPUT TYPE="radio" NAME="functiontype" ID="PROPPUTREF" ACCESSKEY="T">
+					  <LABEL CLASS="UpABit" FOR="PROPPUTREF" ID="PROPPUTREF_LABEL">PropPu<U>t</U>Ref</LABEL>
+					 </SPAN>
+					</NOBR>
+				  </TD>
+				 </TR>
+				 </TABLE>
+				</TD>
+				</TR>
+
+				<TR VALIGN="TOP" ID="VARIABLE_NAME_SECTION" STYLE="DISPLAY:BLOCK; PADDING-TOP:16PX; PADDING-BOTTOM:12PX;">
+				 <TD WIDTH="196">
+				 	<SPAN CLASS="itemText" ID="VARIABLE_NAME_SPAN" TITLE="Name of member variable this property is associated with.">
+					 <LABEL ID="VARIABLE_NAME_LABEL" FOR="VARIABLE_NAME"><U>V</U>ariable name:</LABEL>
+					 <BR>
+					 <INPUT CLASS="sideBtn" ID="VARIABLE_NAME" TYPE="TEXT" VALUE="" ACCESSKEY="V">
+					</SPAN>
+				 </TD>
+				 <TD WIDTH="196" STYLE="DISPLAY:BLOCK; PADDING-LEFT:12PX;">
+				 	<SPAN CLASS="itemText" ID="NOTIFICATION_FUNCTION_SPAN" TITLE="Function to call when this property changes.">
+					 <LABEL ID="NOTIFICATION_FUNCTION_LABEL" FOR="NOTIFICATION_FUNCTION">Not<U>i</U>fication function:</LABEL>
+					 <BR>
+					 <INPUT CLASS="sideBtn" ID="NOTIFICATION_FUNCTION" TYPE="TEXT" VALUE="" ACCESSKEY="I">
+					</SPAN>
+				 </TD>
+				</TR>
+
+				<TR VALIGN="TOP" ID="PROPERTY_TYPE_LABEL" STYLE="DISPLAY:BLOCK; PADDING-BOTTOM:2PX;">
+				 <TD COLSPAN="2">
+				 	<SPAN CLASS="itemText" ID="IMPLEMENTATION_TYPE_SPAN">Implementation type:</SPAN>
+				 </TD>
+				</TR>
+
+				<TR VALIGN="TOP" ID="PROPERTY_TYPE_SECTION" STYLE="DISPLAY:BLOCK;">
+				 <TD COLSPAN="2">
+				 	<NOBR>
+					 <SPAN CLASS="itemText" ID="STOCK_SPAN" TITLE="Insert as predefined stock property.">
+					  <INPUT TYPE="radio" ID="STOCK"  NAME="implementation" ACCESSKEY="S" onPropertyChange="OnPropertyType();">
+					  <LABEL CLASS="UpABit" FOR="STOCK" ID="STOCK_LABEL"><U>S</U>tock</LABEL>
+					 </SPAN>
+					</NOBR>
+
+					&nbsp;&nbsp;
+
+				 	<NOBR>
+					 <SPAN CLASS="itemText" ID="MEMBER_VARIABLE_SPAN" TITLE="Create member variable for property.">
+					  <INPUT TYPE="radio" ID="MEMBER_VARIABLE" NAME="implementation" ACCESSKEY="b" onPropertyChange="OnPropertyType();">
+					  <LABEL CLASS="UpABit" FOR="MEMBER_VARIABLE" ID="MEMBER_VARIABLE_LABEL">Mem<U>b</U>er variable</LABEL>
+					 </SPAN>
+					</NOBR>
+
+					&nbsp;&nbsp;
+
+				 	<NOBR>
+					 <SPAN ID="GET_SET_SPAN" title="Insert Get and Set functions." class="itemText">
+					  <INPUT TYPE="radio" ID="GET_SET" NAME="implementation" ACCESSKEY="D" onPropertyChange="OnPropertyType();">
+					  <LABEL CLASS="UpABit" FOR="GET_SET" ID="GET_SET_LABEL">Get/Set metho<U>d</U>s</LABEL>
+					 </SPAN>
+					</NOBR>
+				 </TD>
+				</TR>
+				</TABLE>
+
+				<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" STYLE="POSITION:RELATIVE; TOP:3PX; TABLE-LAYOUT:FIXED; Z-INDEX:2;">
+				 <TR VALIGN="TOP" STYLE="PADDING-TOP:5PX;">
+				  <TD WIDTH="50" ID="PARAM_ATTRIBUTES_SECTION_A">
+					&nbsp;
+				  </TD>
+				  <TD WIDTH="125" STYLE="MARGIN-RIGHT:12PX;">
+				  	<SPAN CLASS="itemText" ID="PARAMETER_TYPE_SPAN" TITLE="Data type of parameter.">
+					 <LABEL ID="PARAMETER_TYPE_LABEL" FOR="PARAMETER_TYPE">Para<U>m</U>eter type:</LABEL>
+					</SPAN>
+				  </TD>
+				  <TD WIDTH="125" STYLE="MARGIN-RIGHT:4PX;">
+				  	<SPAN CLASS="itemText" ID="PARAMETER_NAME_SPAN" TITLE="Name of parameter.">
+					 <LABEL ID="PARAMETER_NAME_LABEL" FOR="PARAMETER_NAME">Parameter <U>n</U>ame:</LABEL>
+					</SPAN>
+				  </TD>
+				  <TD WIDTH="75">
+				  	&nbsp;
+				  </TD>
+				 </TR>
+
+				 <TR VALIGN="TOP" STYLE="PADDING-TOP:4PX;">
+				  <TD ID="PARAM_ATTRIBUTES_SECTION" STYLE="MARGIN-RIGHT:12PX;">
+				  	<SPAN CLASS="itemText" ID="IN_SPAN" TITLE="Indicates that a parameter is to be passed from the calling procedure to the called procedure.">
+					 <INPUT TYPE="checkbox" ID="IN" ACCESSKEY="">
+					 <LABEL CLASS="UpABit" FOR="IN" ID="IN_LABEL">in</LABEL>
+					</SPAN>
+					<BR>
+					<SPAN CLASS="itemText" ID="OUT_SPAN" TITLE="Attribute identifies pointer parameters that are returned from the called procedure to the calling procedure (from the server to the client).">
+					 <INPUT TYPE="checkbox" ID="OUT" ACCESSKEY="">
+					 <LABEL CLASS="UpABit" FOR="OUT" ID="OUT_LABEL">out</LABEL>
+					</SPAN>
+				  </TD>
+				  <TD STYLE="MARGIN-RIGHT:12PX;">
+					 <OBJECT CLASS="itemText" ID="PARAMETER_TYPE" ACCESSKEY="M"
+					CLASSID="CLSID:79eadad6-3f7a-45a6-a75e-dd0b7d70fa43"
+					STYLE="WIDTH:125PX; MARGIN-TOP:-7PX;" VIEWASTEXT>
+					</OBJECT>
+				  </TD>
+				  <TD STYLE="MARGIN-RIGHT:4PX;">
+					<INPUT CLASS="sideBtn" ID="PARAMETER_NAME" TYPE="TEXT" VALUE=""  TITLE="Name of parameter."
+					ACCESSKEY="N" STYLE="WIDTH:136PX;POSITION:RELATIVE; TOP:-4PX;" onPropertyChange="ToggleButtons();">
+				  </TD>
+				  <TD>
+				  	<BUTTON CLASS="ButtonClass2" ID="AddBtn" TITLE="Add Parameter."
+					STYLE="POSITION:RELATIVE; TOP:-10PX; LEFT:7PX;"
+					ACCESSKEY="A" onClick="OnAdd();"><U>A</U>dd</BUTTON>
+				  </TD>
+				 </TR>
+
+				 <TR VALIGN="TOP">
+				  <TD ID="PARAM_ATTRIBUTES_SECTION_B">
+				  	&nbsp;
+				  </TD>
+				  <TD COLSPAN="2" STYLE="MARGIN-RIGHT:4PX;">
+				 	<SELECT MULTIPLE="TRUE" CLASS="sideBtn" SIZE="3" ID="PARAMETERS" TITLE="List of parameters."
+					ACCESSKEY="" STYLE="POSITION:RELATIVE;TOP:-16px; WIDTH:270PX;">
+					</SELECT>
+				  </TD>
+				  <TD VALIGN="TOP">
+				  	<BUTTON ID="LocalRemoveBtn" CLASS="ButtonClass2" TITLE="Remove Parameter." ACCESSKEY="R"
+					STYLE="POSITION:RELATIVE; TOP:-22PX; LEFT:7PX;"
+					onClick="OnRemove();"><U>R</U>emove</BUTTON>
+				  </TD>
+				 </TR>
+
+				 <TR ID="DEFAULT_PROPERTY_SECTION">
+				  <TD COLSPAN="3">
+				  	<SPAN CLASS="itemText" ID="DEFAULT_PROPERTY_SPAN" TITLE="Set property as default." STYLE="POSITION:RELATIVE; TOP:-26PX;">
+					 <INPUT TYPE="checkbox" ID="DEFAULT_PROPERTY" ACCESSKEY="E">
+					 <LABEL CLASS="UpABit" FOR="DEFAULT_PROPERTY" ID="DEFAULT_PROPERTY_LABEL">D<U>e</U>fault property</LABEL>
+					</SPAN>
+				  </TD>
+				 </TR>
+				</TABLE>
+			  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+ 		  	 </TR>
+		 	</TABLE>
+
+	   	  <!--CLOSE OF CONTENT//-->
+		  </TD>
+		 </TR>
+		 <TR VALIGN="BOTTOM">
+		  <TD>
+	   	  <!--OPEN OF BUTTON HTML//-->
+
+		  	<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="12">
+			 <TR>
+  			  <TD VALIGN="TOP" CLASS="RULE" COLSPAN="8" HEIGHT="2">
+				<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+  	 			 <TR VALIGN="TOP">
+  	  			  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+  	  			  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+  	 			 </TR>
+				</TABLE>
+  			  </TD>
+ 			  </TR>
+
+ 			  <TR>
+  			  <TD VALIGN="TOP" HEIGHT="11" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+
+ 			<TR>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" HEIGHT="23">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="FinishBtn" onClick="OnFinish(document);">Finish</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="CancelBtn" onClick="window.external.Finish(document, 'cancel');">Cancel</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="HelpBtn" onClick="window.external.OnHelp('vc.codewiz.prop.overview');">Help</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			</TABLE>
+
+	   	  <!--CLOSE OF BUTTON HTML//-->
+		  </TD>
+		 </TR>
+		</TABLE>
+
+	   <!--CLOSE OF CONTENT AND BUTTON TABLE//-->
+	   </TD>
+	  </TR>
+	 </TABLE>
+
+</BODY>
+</HTML>
+
+<SCRIPT LANGUAGE="JSCRIPT">
+
+var tab_array = new Array();
+tab_array[0] = Default;
+tab_array[1] = IDLAttrib;
+
+var oProject = window.external.ProjectObject;
+var oInterface = window.external.ParentObject;
+
+function InitDocument(document)
+{
+	setDirection();
+
+	var bMFC = false;
+	var bCOleControl = false;
+	var strInterfaceType = false;
+	var bFirstLoad = false;
+
+	if (window.external.FindSymbol("DOCUMENT_FIRST_LOAD"))
+	{
+		var L_WizardDialogTitle_Text = "Add Property Wizard";
+		window.external.AddSymbol("WIZARD_DIALOG_TITLE", L_WizardDialogTitle_Text);
+		var coll = document.all.tags("SYMBOL");
+		var numSymbols = coll.length;
+		for (i = 0; i < numSymbols; i++)
+		{
+			var obj = coll(i);
+			if (typeof(obj.VALUE) == "undefined")
+			{
+				obj.VALUE = getval(obj);
+			}
+		}
+		window.external.SetDefaults(document);
+
+		strInterfaceType = GetInterfaceType(oInterface);
+		window.external.AddSymbol("INTERFACE_TYPE", strInterfaceType);
+
+		var aryClasses = new Array();
+		if (GetInterfaceClass(oProject.CodeModel, oInterface.Name, oInterface.FullName, aryClasses, false))
+		{
+			var oClass = aryClasses[0];
+			if (oClass.IsDerivedFrom("COleControl") && strInterfaceType == "dispinterface")
+			{
+				bMFC = true;
+				bCOleControl = true;
+			}
+			else if (oClass.IsDerivedFrom("CCmdTarget") && strInterfaceType == "dispinterface")
+				bMFC = true;
+		}
+		window.external.AddSymbol("MFC_CLASS", bMFC);
+		window.external.AddSymbol("MFC_CONTROL", bCOleControl);
+		window.external.AddSymbol("MFC_PROJECT", IsMFCProject(oProject, true));
+		bFirstLoad = true;
+	}
+	window.external.Load(document);
+
+	if (!bFirstLoad)
+	{
+		strInterfaceType = window.external.FindSymbol("INTERFACE_TYPE");
+		bMFC = window.external.FindSymbol("MFC_CLASS");
+		bCOleControl = window.external.FindSymbol("MFC_CONTROL");
+	}
+
+	FillTypesList(bMFC, strInterfaceType);
+	PersistControls(bMFC, strInterfaceType);
+
+	if (bMFC)
+		SetUIForMFC(bCOleControl);
+	else
+		SetUIForNonMFC(strInterfaceType);
+
+	ToggleButtons();
+	TYPE_LIST.focus();
+}
+
+function SetUIForNonMFC(strInterfaceType)
+{
+	PROPERTY_NAME_SECTION.style.display = "inline";
+	STOCK_PROPERTIES_SECTION.style.display = "none";
+	if (strInterfaceType == "dispinterface")
+		RETURN_TYPE_SECTION.style.display = "none";
+	VARIABLE_NAME_SECTION.style.display = "none";
+	PROPERTY_TYPE_LABEL.style.display = "none";
+	PROPERTY_TYPE_SECTION.style.display = "none";
+	DEFAULT_PROPERTY_SECTION.style.display = "none";
+
+	if (strInterfaceType == "dispinterface")
+	{
+		var strReturnType = window.external.FindSymbol("RETURN_TYPE");
+		if (strReturnType.length)
+			RETURN_TYPE_LIST.Value = strReturnType;
+		else
+			RETURN_TYPE_LIST.ListIndex = 7; // HRESULT
+	}
+	else
+	{
+		DISABLED_RETURN_TYPE.style.display = "inline";
+		RETURN_TYPE_LIST.style.display = "none";
+		RETURN_TYPE_LABEL.disabled = true;
+	}
+}
+
+function SetUIForMFC(bCOleControl)
+{
+	PARAM_ATTRIBUTES_SECTION.style.display = "none";
+	PARAM_ATTRIBUTES_SECTION_A.style.display = "none";
+	PARAM_ATTRIBUTES_SECTION_B.style.display = "none";
+	FUNCTION_TYPE_LABEL.style.display = "none";
+	FUNCTION_TYPE_SECTION.style.display = "none";
+	PUT_FUNCTION_SECTION.style.display = "none";
+	RETURN_TYPE_SECTION.style.display = "none";
+
+	PARAMETERS.style.top = "0px";
+	PARAMETERS.style.marginTop = "-6px";
+	PARAMETERS.style.marginBottom = "5px";
+	PARAMETERS.style.width = "326px";
+
+	LocalRemoveBtn.style.top = "-12px";
+	LocalRemoveBtn.style.left = "23px";
+
+	AddBtn.style.left = "23px";
+
+	DEFAULT_PROPERTY_SPAN.style.top = "3px";
+
+	PARAMETER_NAME.style.width = "172px";
+	PARAMETER_TYPE.style.width = "144px";
+
+	if (bCOleControl)
+	{
+		for (var nCntr = 0; nCntr < strStockProperties.length; nCntr++)
+			STOCK_PROPERTIES.AddItem(strStockProperties[nCntr]);
+		STOCK_PROPERTIES.InsertItem("", 0);
+		STOCK_PROPERTIES.ListIndex = 0;
+
+		var strExternalName = window.external.FindSymbol("EXTERNAL_NAME");
+		if (strExternalName.length)
+		{
+			STOCK_PROPERTIES.Value = strExternalName;
+			OnStockProperties();
+		}
+	}
+	else
+	{
+		PROPERTY_NAME_SECTION.style.display = "inline";
+		STOCK_PROPERTIES_SECTION.style.display = "none";
+		STOCK_SPAN.disabled = true;
+	}
+
+	// disable "Default Property" checkbox if dispid zero already exist
+	var oFunctions = oInterface.Functions;
+	if (oFunctions)
+	{
+		var bFound = false;
+		for (var nCntr = 1; nCntr <= oFunctions.Count; nCntr++)
+		{
+			var oDispID = oFunctions(nCntr).Attributes.Find("id");
+			if (oDispID && oDispID.Value == "0")
+			{
+				bFound = true;
+				break;
+			}
+		}
+		if (bFound)
+			DEFAULT_PROPERTY_SECTION.disabled = true;
+		else
+		{
+			var oVariables = oInterface.Variables;
+			if (oVariables)
+			{
+				for (var nCntr = 1; nCntr <= oVariables.Count; nCntr++)
+				{
+					var oDispID = oVariables(nCntr).Attributes.Find("id");
+					if (oDispID && oDispID.Value == "0")
+					{
+						bFound = true;
+						break;
+					}
+				}
+				if (bFound)
+					DEFAULT_PROPERTY_SECTION.disabled = true;
+			}
+		}
+	}
+}
+
+function FillTypesList(bMFC, strInterfaceType)
+{
+	var bMFC = window.external.FindSymbol("MFC_CLASS");
+
+	// fill return types and param types listboxes
+	for (var nCntr = 0; nCntr < strTypes.length; nCntr++)
+	{
+		if (-1 == strTypes[nCntr].indexOf("*") ||
+			(strTypes[nCntr].charAt(0) == 'I' &&
+			-1 == strTypes[nCntr].indexOf("**")))
+		{
+			if (!bMFC && strInterfaceType != "dual" && strInterfaceType != "oleautomation")
+				RETURN_TYPE_LIST.AddItem(strTypes[nCntr]);
+			if (strTypes[nCntr] != "void" &&
+				strTypes[nCntr] != "HRESULT")
+				TYPE_LIST.AddItem(strTypes[nCntr]);
+		}
+
+		if (strTypes[nCntr] != "void" &&
+			strTypes[nCntr] != "HRESULT")
+		{
+			if (strInterfaceType != "dispinterface" &&
+				(strTypes[nCntr] == "IFontDisp*" || strTypes[nCntr] == "IPictureDisp*"))
+				continue;
+			PARAMETER_TYPE.AddItem(strTypes[nCntr]);
+		}
+	}
+	TYPE_LIST.InsertItem("", 0);
+	PARAMETER_TYPE.InsertItem("", 0);
+}
+
+function PersistControls(bMFC, strInterfaceType)
+{
+	var nNumParams = window.external.FindSymbol("NUM_PARAMETERS");
+	nNumParams = nNumParams + 0;
+	if (nNumParams)
+	{
+		for (var nCntr = 0; nCntr < nNumParams; nCntr++)
+		{
+			var oOption = document.createElement("OPTION");
+			var strTypeName = window.external.FindSymbol("PARAM_TYPE_NAME" + nCntr);
+			if (bMFC)
+				oOption.value = window.external.FindSymbol("PARAM_VT_TYPE" + nCntr);
+			var strAttrib = window.external.FindSymbol("PARAM_ATTRIB" + nCntr);
+			if (strAttrib.length)
+				strTypeName = "[" + strAttrib + "] " + strTypeName;
+			oOption.text = strTypeName;
+			PARAMETERS.add(oOption);
+		}
+		PARAMETERS.selectedIndex = PARAMETERS.length - 1;
+	}
+
+	if (strInterfaceType == "custom")
+		window.external.AddSymbol("DISPID_DISABLED", true);
+	else
+	{
+		var nDispID = window.external.FindSymbol("DISPID");
+		if (!nDispID.length)
+		{
+			nDispID = GetMaxID(oInterface) + 1;
+			window.external.AddSymbol("DISPID", nDispID);
+		}
+	}
+
+	var strPropType = window.external.FindSymbol("TYPE");
+	if (strPropType.length)
+		TYPE_LIST.Value = strPropType;
+
+	var strParamType = window.external.FindSymbol("PARAM_TYPE");
+	if (strParamType.length)
+		PARAMETER_TYPE.Value = strParamType;
+}
+
+function Next(document, linkto)
+{
+	SaveParams();
+	if ((STOCK_PROPERTIES_SECTION.style.display != "none" && STOCK_PROPERTIES.Value.length) ||
+		(PROPERTY_NAME_SECTION.style.display != "none" && PROPERTY_NAME.value.length))
+	{
+		if (!ValidateInput())
+			return;
+	}
+	window.external.Next(document, linkto);
+}
+
+function OnFinish(document)
+{
+	SaveParams();
+	if (!ValidateInput())
+	{
+		return;
+	}
+	OnWizFinish(document);
+}
+
+function getval(obj)
+{
+	var SymbolValue = "";
+	switch(obj.NAME)
+	{
+		default:
+			SymbolValue = "";
+			break;
+	}
+	return (SymbolValue);
+}
+
+function ValidateParam(strType, strName)
+{
+	if (strType.length == 0)
+	{
+		var L_ErrMsg9_Text = "You must specify a parameter type.";
+		window.external.ReportError(L_ErrMsg9_Text);
+		PARAMETER_TYPE.focus();
+		return false;
+	}
+
+	if (window.external.FindSymbol("MFC_CLASS"))
+	{
+		var strVTS = GetVTS(strType);
+		if (!strVTS)
+		{
+			var L_ErrMsg12_Text = "Parameter type must be a VARIANT-compatible type from the list.";
+			window.external.ReportError(L_ErrMsg12_Text);
+			PARAMETER_TYPE.focus();
+			return false;
+		}
+	}
+	else
+	{
+		try
+		{
+			window.external.CppParseTypeString(strType);
+		}
+		catch(e)
+		{
+			var L_ErrMsg15_Text = "Invalid parameter type";
+			PARAMETER_TYPE.focus();
+			window.external.ReportError(L_ErrMsg15_Text);
+			return false;
+		}
+	}
+
+	if (strName.length == 0)
+	{
+		var L_ErrMsg10_Text = "You must specify a parameter name.";
+		window.external.ReportError(L_ErrMsg10_Text);
+		PARAMETER_NAME.focus;
+		return false;
+	}
+
+	var strParamNames = ExtractParamNames() + "," + strName;
+	var strPropName;
+	if (STOCK_PROPERTIES_SECTION.style.display != "none" && STOCK_PROPERTIES.Value.length)
+		strPropName = STOCK_PROPERTIES.Value;
+	else
+		strPropName = PROPERTY_NAME.value;
+	if(!window.external.dte.VCLanguageManager.ValidateParameterNames(strPropName, strParamNames, vsCMElementFunction))
+	{
+		window.external.ReportError();
+		PARAMETER_NAME.focus();
+		return false;
+	}
+
+	if (!window.external.ProjectObject.CodeModel.IsValidID(strName))
+	{
+		var L_ErrMsg14_Text = "Invalid parameter name.";
+		window.external.ReportError(L_ErrMsg14_Text);
+		PARAMETER_NAME.focus();
+		return false;
+	}
+
+	return true;
+}
+
+function OnAdd()
+{
+	var strType = PARAMETER_TYPE.Value;
+	var strName = PARAMETER_NAME.value;
+
+	if (!ValidateParam(strType, strName))
+		return;
+
+	var strParam, NamePos, NameLength, NameLengthPos;
+	try
+	{
+		NameLengthPos = new VBArray(window.external.CppParseTypeString(strType));
+	}
+	catch(e)
+	{
+		var L_ErrMsg11_Text = "Invalid parameter type";
+		window.external.ReportError(L_ErrMsg11_Text);
+		return;
+	}
+	NamePos = NameLengthPos.getItem(0);
+	NameLength = NameLengthPos.getItem(1);
+	if(NamePos==strType.length)
+	{
+		strParam = strType + " " + strName;
+	}
+	else
+	{
+		strParam = strType.substr(0, NamePos) + " " + strName;
+		strParam += strType.substr(NamePos+NameLength); //always replace eventual name with PARAMETER_NAME.value
+	}
+
+	if (PARAM_ATTRIBUTES_SECTION.style.display != "none")
+	{
+		if (IN.checked || OUT.checked)
+		{
+			var strAttrib = "[";
+			if (IN.checked)
+				strAttrib += "in";
+			if (OUT.checked)
+			{
+				if (strAttrib.length > 1)
+					strAttrib += ",out";
+				else
+					strAttrib += "out";
+			}
+			strAttrib += "]";
+			strParam = strAttrib + " " + strParam;
+		}
+	}
+
+	var oOption = document.createElement("OPTION");
+	oOption.text = strParam;
+	if (window.external.FindSymbol("MFC_CLASS"))
+		oOption.value = GetVTS(PARAMETER_TYPE.Value);
+	PARAMETERS.add(oOption);
+	PARAMETERS.selectedIndex = PARAMETERS.length - 1;
+
+	PARAMETER_NAME.value = "";
+	PARAMETER_TYPE.ListIndex = 0;
+	IN.checked = false;
+	OUT.checked = false;
+
+	ToggleButtons();
+}
+
+function GetVTS(strType)
+{
+	for (var nCntr = 0; nCntr < strTypes.length; nCntr++)
+	{
+		if (strTypes[nCntr] == strType)
+			return vtTypes[nCntr];
+	}
+	return false;
+}
+
+
+function ExtractParamNames()
+{
+	var strParamNames = "";
+
+	var Params = document.all.tags("SELECT").item("PARAMETERS");
+	for(var index=0; index < Params.options.length; index++)
+	{
+		var strParam = Params.options[index].text;
+		var NamePos, NameLength;
+		var NameLengthPos = new VBArray(window.external.CppParseTypeString(strParam));
+		NamePos = NameLengthPos.getItem(0);
+		NameLength = NameLengthPos.getItem(1);
+		if(index!=0)
+			strParamNames += ","
+		strParamNames += strParam.substr(NamePos, NameLength);
+	}
+	return strParamNames;
+}
+
+function OnRemove()
+{
+	if (PARAMETERS.selectedIndex == -1)
+		return;
+
+	var nIndex = PARAMETERS.selectedIndex;
+
+	while (PARAMETERS.selectedIndex != -1)
+	{
+		PARAMETERS.remove(PARAMETERS.selectedIndex);
+	}
+
+	if (PARAMETERS.length)
+		PARAMETERS.selectedIndex = (nIndex < PARAMETERS.length) ? nIndex : PARAMETERS.length-1;
+
+	ToggleButtons();
+}
+
+function GetVT(strType)
+{
+	for (var nCntr = 0; nCntr < strTypes.length; nCntr++)
+	{
+		if (strTypes[nCntr] == strType)
+		{
+			var strVT = vtTypes[nCntr];
+			if (strVT == "VTS_SCODE")
+				return "VT_ERROR";
+			else if (strVT == "VTS_PSCODE")
+				return "VT_ERROR|VT_BYREF";
+			else
+			{
+				strVT = strVT.substr(0,2) + strVT.substr(3);
+				return strVT;
+			}
+		}
+	}
+	return false;
+}
+
+function OnPropertyType()
+{
+	if (!window.external.FindSymbol("MFC_CLASS"))
+		return;
+
+	var strProperty;
+	if (STOCK_PROPERTIES_SECTION.style.display != "none" && STOCK_PROPERTIES.Value.length)
+		strProperty = STOCK_PROPERTIES.Value;
+	else
+		strProperty = PROPERTY_NAME.value;
+
+	window.external.AddSymbol("DISPID_DISABLED", false);
+	if (STOCK.checked)
+	{
+		window.external.AddSymbol("DISPID_DISABLED", true);
+		TYPE_LIST.Enabled = false;
+
+		VARIABLE_NAME_SECTION.disabled = true;
+
+		TYPE_LIST.Value = strStockPropertyType[GetListIndex(STOCK_PROPERTIES)-1];
+		VARIABLE_NAME.value = "";
+		NOTIFICATION_FUNCTION.value = "";
+
+		PARAMETER_NAME.disabled = true;
+		PARAMETER_TYPE.Enabled = false;
+
+		TYPE_LIST_LABEL.disabled = true;
+		PARAMETER_NAME_LABEL.disabled = true;
+		PARAMETER_TYPE_LABEL.disabled = true;
+		PARAMETERS.length = 0;
+	}
+	else if (MEMBER_VARIABLE.checked)
+	{
+		var L_VariableNameLabel_Text = "<u>V</u>ariable name:";
+		VARIABLE_NAME_LABEL.innerHTML = L_VariableNameLabel_Text;
+		var L_VariableNameAccessKey_Text = "v";
+		VARIABLE_NAME.accessKey = L_VariableNameAccessKey_Text;
+		var L_NotificationLabel_Text = "Not<u>i</u>fication function:";
+		NOTIFICATION_FUNCTION_LABEL.innerHTML = L_NotificationLabel_Text;
+		var L_NotificationAccessKey_Text = "i";
+		NOTIFICATION_FUNCTION.accessKey = L_NotificationAccessKey_Text;
+
+		TYPE_LIST.Enabled = true;
+		VARIABLE_NAME_SECTION.disabled = false;
+
+		if (strProperty.length)
+		{
+			VARIABLE_NAME.value = "m_" + strProperty;
+			var L_NotificationFunction1_Text = "On";
+			var L_NotificationFunction2_Text = "Changed";
+			NOTIFICATION_FUNCTION.value = L_NotificationFunction1_Text + strProperty + L_NotificationFunction2_Text;
+		}
+		else
+		{
+			VARIABLE_NAME.value = "";
+			NOTIFICATION_FUNCTION.value = "";
+		}
+
+		PARAMETER_NAME.disabled = true;
+		PARAMETER_TYPE.Enabled = false;
+
+		TYPE_LIST_LABEL.disabled = false;
+		PARAMETER_NAME_LABEL.disabled = true;
+		PARAMETER_TYPE_LABEL.disabled = true;
+		PARAMETERS.length = 0;
+
+		var L_VariableNameTitle_Text = "Name of member variable this property is associated with";
+		VARIABLE_NAME_SPAN.title = L_VariableNameTitle_Text;
+		var L_NotificationFunctionTitle_Text = "Function to call when this property changes";
+		NOTIFICATION_FUNCTION_SPAN.title = L_NotificationFunctionTitle_Text;
+	}
+	else if (GET_SET.checked)
+	{
+		var L_VariableNameLabel2_Text = "<u>G</u>et function:";
+		VARIABLE_NAME_LABEL.innerHTML = L_VariableNameLabel2_Text;
+		var L_VariableNameAccessKey2_Text = "g";
+		VARIABLE_NAME.accessKey = L_VariableNameAccessKey2_Text;
+		var L_NotificationLabel2_Text = "Set funct<u>i</u>on:";
+		NOTIFICATION_FUNCTION_LABEL.innerHTML = L_NotificationLabel2_Text;
+		var L_NotificationAccessKey2_Text = "i";
+		NOTIFICATION_FUNCTION.accessKey = L_NotificationAccessKey2_Text;
+
+		TYPE_LIST.Enabled = true;
+		VARIABLE_NAME_SECTION.disabled = false;
+
+		if (strProperty.length)
+		{
+			var L_VariableName_Text = "Get";
+			VARIABLE_NAME.value = L_VariableName_Text + strProperty;
+			var L_NotificationFunction_Text = "Set";
+			NOTIFICATION_FUNCTION.value = L_NotificationFunction_Text + strProperty;
+		}
+		else
+		{
+			VARIABLE_NAME.value = "";
+			NOTIFICATION_FUNCTION.value = "";
+		}
+
+		PARAMETER_NAME.disabled = false;
+		PARAMETER_TYPE.Enabled = true;
+
+		TYPE_LIST_LABEL.disabled = false;
+		PARAMETER_NAME_LABEL.disabled = false;
+		PARAMETER_TYPE_LABEL.disabled = false;
+
+		var L_VariableNameTitle2_Text = "Function called to get the property";
+		VARIABLE_NAME_SPAN.title = L_VariableNameTitle2_Text;
+		var L_NotificationFunctionTitle2_Text = "Function called to set the property";
+		NOTIFICATION_FUNCTION_SPAN.title = L_NotificationFunctionTitle2_Text;
+	}
+	ToggleButtons();
+}
+
+function OnGeneratePut()
+{
+	if (GENERATE_PUT.checked)
+	{
+		BYVAL_SPAN.disabled = false;
+		BYREF_SPAN.disabled = false;
+	}
+	else
+	{
+		BYVAL_SPAN.disabled = true;
+		BYREF_SPAN.disabled = true;
+	}
+}
+
+function OnPropertyName()
+{
+	window.external.AddSymbol("HELP_STRING", "");
+
+	if (window.external.FindSymbol("MFC_CLASS"))
+		OnPropertyType();
+}
+
+function ValidateInput()
+{
+	var oInvalid = null;
+
+	if (!Validate(TYPE_LIST))
+		oInvalid = TYPE_LIST;
+
+	if (oInvalid == null)
+		if (!Validate(STOCK_PROPERTIES))
+			oInvalid = 	STOCK_PROPERTIES;
+
+	if (oInvalid == null)
+		if (!Validate(PROPERTY_NAME))
+			oInvalid = PROPERTY_NAME;
+
+	if (oInvalid == null)
+		if (!Validate(RETURN_TYPE_LIST))
+			oInvalid = RETURN_TYPE_LIST;
+
+	if (oInvalid == null)
+		if (!Validate(VARIABLE_NAME))
+			return false;  // special case
+
+	if (oInvalid == null)
+		if (!Validate(GENERATE_GET))
+			oInvalid = GENERATE_GET;
+
+	if (oInvalid != null)
+	{
+		window.external.ReportError();
+		oInvalid.focus();
+		return false;
+	}
+	return true;
+}
+
+function Validate(obj)
+{
+	switch(obj.id)
+	{
+		// check Property Type
+		case "TYPE_LIST":
+			if (TYPE_LIST.Value.length == 0)
+			{
+				var L_ErrMsg1_Text = "You must specify a Property Type.";
+				oErrObj = new Error(L_ErrMsg1_Text);
+				SetErrorInfo(oErrObj);
+				return false;
+			}
+
+			if (window.external.FindSymbol("MFC_CLASS"))
+			{
+				var strTypeVT = GetVT(TYPE_LIST.Value);
+				if (!strTypeVT)
+				{
+					var L_ErrMsg3_Text = "Property type must be a VARIANT-compatible type from the list.";
+					oErrObj = new Error(L_ErrMsg3_Text);
+					SetErrorInfo(oErrObj);
+					return false;
+				}
+				window.external.AddSymbol("TYPE_VT", strTypeVT);
+			}
+			else
+			{
+				if (!window.external.dte.VCLanguageManager.ValidateType(TYPE_LIST.Value))
+					return false;
+			}
+
+			window.external.AddSymbol("TYPE", TYPE_LIST.Value);
+			break;
+
+		// check Property Name for MFC Control
+		case "STOCK_PROPERTIES":
+			if (STOCK_PROPERTIES_SECTION.style.display != "none" && STOCK_PROPERTIES.Value.length)
+			{
+				if (!window.external.ParentObject.ValidateMember("get_" + STOCK_PROPERTIES.Value, vsCMElementProperty))
+				{
+					return false;
+				}
+				if (!window.external.ParentObject.ValidateMember("put_" + STOCK_PROPERTIES.Value, vsCMElementProperty))
+				{
+					return false;
+				}
+				window.external.AddSymbol("EXTERNAL_NAME", STOCK_PROPERTIES.Value);
+			}
+			break;
+
+		// check Property Name for non-MFC Control
+		case "PROPERTY_NAME":
+			if (PROPERTY_NAME_SECTION.style.display != "none")
+			{
+				var bMFC = window.external.FindSymbol("MFC_CLASS");
+				if(bMFC || (!bMFC && GENERATE_GET.checked))
+				{
+					if (!window.external.ParentObject.ValidateMember("get_" + PROPERTY_NAME.value, vsCMElementProperty))
+					{
+						return false;
+					}
+					if (!bMFC && !ValidateClassMember("get_" + PROPERTY_NAME.value, vsCMElementFunction))
+						return false;
+
+				}
+				if(bMFC || (!bMFC && GENERATE_PUT.checked))
+				{
+					var strPuterName = (PROPPUT.checked ? "put_" : "putref_") + PROPERTY_NAME.value;
+					if (!window.external.ParentObject.ValidateMember(strPuterName, vsCMElementProperty))
+					{
+						return false;
+					}
+					if (!bMFC && !ValidateClassMember("put_" + PROPERTY_NAME.value, vsCMElementFunction, true))
+						return false;
+				}
+				window.external.AddSymbol("EXTERNAL_NAME", PROPERTY_NAME.value);
+			}
+			break;
+
+		// check Return Type
+		case "RETURN_TYPE_LIST":
+			if (RETURN_TYPE_SECTION.style.display != "none")
+			{
+				if (RETURN_TYPE_LIST.style.display != "none")
+				{
+					if (RETURN_TYPE_LIST.Value.length == 0)
+					{
+						var L_ErrMsg2_Text = "You must specify a return type.";
+						oErrObj = new Error(L_ErrMsg2_Text);
+						SetErrorInfo(oErrObj);
+						return false;
+					}
+
+					if (!window.external.dte.VCLanguageManager.ValidateType(RETURN_TYPE_LIST.Value))
+						return false;
+
+					window.external.AddSymbol("RETURN_TYPE", RETURN_TYPE_LIST.Value);
+				}
+				else
+					window.external.AddSymbol("RETURN_TYPE", DISABLED_RETURN_TYPE.value);
+			}
+			break;
+
+		// check Member Variable/Get Func || Notification Func/Set Func
+		case "VARIABLE_NAME":
+			var bMFC = window.external.FindSymbol("MFC_CLASS");
+			if (bMFC)
+			{
+				if (MEMBER_VARIABLE.checked)
+				{
+					// check variable name
+					if (!ValidateClassMember(VARIABLE_NAME.value, vsCMElementVariable))
+					{
+						VARIABLE_NAME.focus();
+						return false;
+					}
+
+					// check notification function
+					if (NOTIFICATION_FUNCTION.value.length &&
+						!ValidateClassMember(NOTIFICATION_FUNCTION.value, vsCMElementFunction))
+					{
+						NOTIFICATION_FUNCTION.focus();
+						return false;
+					}
+				}
+				else if (GET_SET.checked)
+				{
+					if (!VARIABLE_NAME.value.length && !NOTIFICATION_FUNCTION.value.length)
+					{
+						var L_ErrMsg13_Text = "You must specify to create either a Get or Set function.";
+						oErrObj = new Error(L_ErrMsg13_Text);
+						SetErrorInfo(oErrObj);
+
+						if (!VARIABLE_NAME.value.length)
+							VARIABLE_NAME.focus();
+						else
+							NOTIFICATION_FUNCTION.focus();
+						return false;
+					}
+
+					// check get function
+					if (VARIABLE_NAME.value.length &&
+						!ValidateClassMember(VARIABLE_NAME.value, vsCMElementFunction))
+					{
+						VARIABLE_NAME.focus();
+						return false;
+					}
+					window.external.AddSymbol("GET_FUNCTION", VARIABLE_NAME.value);
+
+					// check set function
+					if (NOTIFICATION_FUNCTION.value.length &&
+						!ValidateClassMember(NOTIFICATION_FUNCTION.value, vsCMElementFunction, true))
+					{
+						NOTIFICATION_FUNCTION.focus();
+						return false;
+					}
+					window.external.AddSymbol("SET_FUNCTION", NOTIFICATION_FUNCTION.value);
+				}
+				else if (STOCK.checked)
+				{
+					window.external.AddSymbol("STOCK_DISPID", strStockDispIDs[GetListIndex(STOCK_PROPERTIES)-1]);
+					window.external.AddSymbol("STOCK_MACRO", strStockMacros[GetListIndex(STOCK_PROPERTIES)-1]);
+				}
+			}
+			break;
+
+		case "GENERATE_GET":
+			if (FUNCTION_TYPE_SECTION.style.display != "none")
+			{
+				window.external.AddSymbol("PROP_EXISTS", false);
+				if (!GENERATE_GET.checked && !GENERATE_PUT.checked)
+				{
+					var L_ErrMsg4_Text = "You must specify whether to generate a get or put function.";
+					oErrObj = new Error(L_ErrMsg4_Text);
+					SetErrorInfo(oErrObj);
+					return false;
+				}
+				// one is unchecked
+				else if (!GENERATE_GET.checked || !GENERATE_PUT.checked)
+				{
+					var oFunction = oInterface.Functions.Find(PROPERTY_NAME.value);
+					if (oFunction)
+					{
+						window.external.AddSymbol("PROP_EXISTS", true);
+						var dispid = oFunction.Attributes.Find("id");
+						if (dispid)
+						{
+							dispid = parseInt(dispid.Value);
+							if (!isNaN(dispid))
+								window.external.AddSymbol("DISPID", dispid);
+						}
+					}
+				}
+			}
+			break;
+
+		default:
+			break;
+	}
+
+	return true;
+}
+
+function ValidateClassMember(strValue, nElementType, bSet)
+{
+	var aryClasses = new Array();
+	if (nElementType == vsCMElementFunction)
+	{
+		var bMFC = window.external.FindSymbol("MFC_CLASS");
+		var strParams = window.external.FindSymbol("FUNCTION_PARAMETERS");
+		strValue += "(" + strParams;
+		if (bSet)
+		{
+			if (strParams.length)
+				strValue += ", ";
+			if (bMFC && TYPE_LIST.Value == "BSTR")
+				strValue += "LPCTSTR";
+			else
+				strValue += TYPE_LIST.Value;
+		}
+		else if (!bMFC)
+		{
+			if (strParams.length)
+				strValue += ", ";
+			strValue += TYPE_LIST.Value + "*";
+		}
+		strValue += ")";
+	}
+	if (GetInterfaceClass(oProject.CodeModel, oInterface.Name, oInterface.FullName, aryClasses, true))
+	{
+		for (var nCntr = 0; nCntr < aryClasses.length; nCntr++)
+		{
+			var oClass = aryClasses[nCntr];
+
+			if(!oClass.ValidateMember(strValue, nElementType))
+			{
+				window.external.ReportError();
+				return false;
+			}
+		}
+	}
+	return true;
+}
+
+function SaveParams()
+{
+	var strFuncParams = "";
+	for (var nCntr = 0; nCntr < PARAMETERS.length; nCntr++)
+	{
+		var strTemp = PARAMETERS.options[nCntr].text;
+		var nIndex = 0;
+		if (strTemp.charAt(0) == '[')
+		{
+			nIndex = strTemp.indexOf(']');
+			window.external.AddSymbol("PARAM_ATTRIB" + nCntr, strTemp.substr(1, nIndex-1));
+			nIndex += 2;
+		}
+		else
+			window.external.AddSymbol("PARAM_ATTRIB" + nCntr, "");
+
+		var strTypeName = strTemp.substr(nIndex);
+		if (strFuncParams.length)
+			strFuncParams += ", ";
+
+		window.external.AddSymbol("PARAM_TYPE_NAME" + nCntr, strTypeName);
+		var bMFC = window.external.FindSymbol("MFC_CLASS");
+		if (bMFC)
+		{
+			var strVtType = PARAMETERS.options[nCntr].value;
+			window.external.AddSymbol("PARAM_VT_TYPE" + nCntr, strVtType);
+
+			if (strTypeName.substr(0, 5) == "BSTR " &&
+				strTypeName.substr(0, 6) != "BSTR *")
+			{
+				strFuncParams += "LPCTSTR " + strTypeName.substr(5);
+			}
+			else
+				strFuncParams += strTypeName;
+		}
+		else
+			strFuncParams += strTypeName;
+	}
+	window.external.AddSymbol("FUNCTION_PARAMETERS", strFuncParams);
+	window.external.AddSymbol("NUM_PARAMETERS", PARAMETERS.length);
+	if (PARAMETER_TYPE.Value.length)
+		window.external.AddSymbol("PARAM_TYPE", PARAMETER_TYPE.Value);
+}
+
+function OnStockProperties()
+{
+	if (GetListIndex(STOCK_PROPERTIES) > 0)
+	{
+		STOCK_SPAN.disabled = false;
+		STOCK.checked = true;
+
+		var strStockProp = STOCK_PROPERTIES.Value.toLowerCase();
+		if (strStockProp == "caption" ||
+			strStockProp == "hwnd" ||
+			strStockProp == "text")
+		{
+			MEMBER_VARIABLE.disabled = true;
+			MEMBER_VARIABLE_LABEL.disabled = true;
+		}
+		else
+		{
+			MEMBER_VARIABLE.disabled = false;
+			MEMBER_VARIABLE_LABEL.disabled = false;
+		}
+
+		OnPropertyType();
+	}
+	else
+	{
+		MEMBER_VARIABLE.disabled = false;
+		MEMBER_VARIABLE_LABEL.disabled = false;
+		STOCK_SPAN.disabled = true;
+		if (STOCK.checked)
+			MEMBER_VARIABLE.checked = true;
+
+		OnPropertyType();
+	}
+	
+	window.external.AddSymbol("HELP_STRING", "");
+}
+
+function ToggleButtons()
+{
+	if (PARAMETER_TYPE.Value.length && PARAMETER_NAME.value.length &&
+		(PROPERTY_TYPE_SECTION.style.display == "none" || (PROPERTY_TYPE_SECTION.style.display != "none" && GET_SET.checked)))
+		AddBtn.disabled = false;
+	else
+		AddBtn.disabled = true;
+
+	if (PARAMETERS.length && PARAMETERS.selectedIndex != -1)
+		LocalRemoveBtn.disabled = false;
+	else
+		LocalRemoveBtn.disabled = true;
+
+	var strParamType = PARAMETER_TYPE.Value;
+	if (strParamType.length &&
+		strParamType.indexOf("*") != -1 &&
+		strParamType != "IDispatch*" &&
+		strParamType != "IFontDisp*" &&
+		strParamType != "IPictureDisp*" &&
+		strParamType != "IUnknown*")
+	{
+		OUT_SPAN.disabled = false;
+	}
+	else
+	{
+		OUT.checked = false;
+		OUT_SPAN.disabled = true;
+	}
+}
+
+function GetListIndex(oList)
+{
+	for (var nCntr = 0; nCntr < oList.Count; nCntr++)
+	{
+		if (oList.Item(nCntr) == oList.Value)
+			return nCntr;
+	}
+	return -1;
+}
+
+var vtTypes = new Array;
+var strTypes = new Array;
+
+ vtTypes[0]		= "VTS_BSTR";
+strTypes[0]		= "BSTR";
+ vtTypes[1]		= "VTS_PBSTR";
+strTypes[1]		= "BSTR*";
+ vtTypes[2]		= "VTS_UI1";
+strTypes[2]		= "BYTE";
+ vtTypes[3]		= "VTS_PUI1";
+strTypes[3]		= "BYTE*";
+ vtTypes[4]		= "VTS_I1";
+strTypes[4]		= "CHAR";
+ vtTypes[5]		= "VTS_PI1";
+strTypes[5]		= "CHAR*";
+ vtTypes[6]		= "VTS_CY";
+strTypes[6]		= "CY";
+ vtTypes[7]		= "VTS_PCY";
+strTypes[7]		= "CY*";
+ vtTypes[8]		= "VTS_DATE";
+strTypes[8]		= "DATE";
+ vtTypes[9]		= "VTS_PDATE";
+strTypes[9]		= "DATE*";
+ vtTypes[10]	= "VTS_R8";
+strTypes[10]	= "DOUBLE";
+ vtTypes[11]	= "VTS_PR8";
+strTypes[11]	= "DOUBLE*";
+ vtTypes[12]	= "VTS_R4";
+strTypes[12]	= "FLOAT";
+ vtTypes[13]	= "VTS_PR4";
+strTypes[13]	= "FLOAT*";
+ vtTypes[14]	= "VTS_HRESULT";
+strTypes[14]	= "HRESULT";
+ vtTypes[15]	= "VTS_DISPATCH";
+strTypes[15]	= "IDispatch*";
+ vtTypes[16]	= "VTS_PDISPATCH";
+strTypes[16]	= "IDispatch**";
+ vtTypes[17]	= "VTS_FONT";
+strTypes[17]	= "IFontDisp*";
+ vtTypes[18]	= "VTS_PICTURE";
+strTypes[18]	= "IPictureDisp*";
+ vtTypes[19]	= "VTS_UNKNOWN";
+strTypes[19]	= "IUnknown*";
+ vtTypes[20]	= "VTS_PUNKNOWN";
+strTypes[20]	= "IUnknown**";
+ vtTypes[21]	= "VTS_I4";
+strTypes[21]	= "LONG";
+ vtTypes[22]	= "VTS_PI4";
+strTypes[22]	= "LONG*";
+ vtTypes[23]	= "VTS_I8";
+strTypes[23]	= "LONGLONG";
+ vtTypes[24]	= "VTS_PI8";
+strTypes[24]	= "LONGLONG*";
+ vtTypes[25]	= "VTS_COLOR";
+strTypes[25]	= "OLE_COLOR";
+ vtTypes[26]	= "VTS_PCOLOR";
+strTypes[26]	= "OLE_COLOR*";
+ vtTypes[27]	= "VTS_XPOS_HIMETRIC";
+strTypes[27]	= "OLE_XPOS_HIMETRIC";
+ vtTypes[28]	= "VTS_PXPOS_HIMETRIC";
+strTypes[28]	= "OLE_XPOS_HIMETRIC*";
+ vtTypes[29]	= "VTS_YPOS_HIMETRIC";
+strTypes[29]	= "OLE_YPOS_HIMETRIC";
+ vtTypes[30]	= "VTS_PYPOS_HIMETRIC";
+strTypes[30]	= "OLE_YPOS_HIMETRIC*";
+ vtTypes[31]	= "VTS_XSIZE_HIMETRIC";
+strTypes[31]	= "OLE_XSIZE_HIMETRIC";
+ vtTypes[32]	= "VTS_PXSIZE_HIMETRIC";
+strTypes[32]	= "OLE_XSIZE_HIMETRIC*";
+ vtTypes[33]	= "VTS_YSIZE_HIMETRIC";
+strTypes[33]	= "OLE_YSIZE_HIMETRIC";
+ vtTypes[34]	= "VTS_PYSIZE_HIMETRIC";
+strTypes[34]	= "OLE_YSIZE_HIMETRIC*";
+ vtTypes[35]	= "VTS_XPOS_PIXELS";
+strTypes[35]	= "OLE_XPOS_PIXELS";
+ vtTypes[36]	= "VTS_PXPOS_PIXELS";
+strTypes[36]	= "OLE_XPOS_PIXELS*";
+ vtTypes[37]	= "VTS_YPOS_PIXELS";
+strTypes[37]	= "OLE_YPOS_PIXELS";
+ vtTypes[38]	= "VTS_PYPOS_PIXELS";
+strTypes[38]	= "OLE_YPOS_PIXELS*";
+ vtTypes[39]	= "VTS_XSIZE_PIXELS";
+strTypes[39]	= "OLE_XSIZE_PIXELS";
+ vtTypes[40]	= "VTS_PXSIZE_PIXELS";
+strTypes[40]	= "OLE_XSIZE_PIXELS*";
+ vtTypes[41]	= "VTS_YSIZE_PIXELS";
+strTypes[41]	= "OLE_YSIZE_PIXELS";
+ vtTypes[42]	= "VTS_PYSIZE_PIXELS";
+strTypes[42]	= "OLE_YSIZE_PIXELS*";
+ vtTypes[43]	= "VTS_HANDLE";
+strTypes[43]	= "OLE_HANDLE";
+ vtTypes[44]	= "VTS_PHANDLE";
+strTypes[44]	= "OLE_HANDLE*";
+ vtTypes[45]	= "VTS_OPTEXCLUSIVE";
+strTypes[45]	= "OLE_OPTEXCLUSIVE";
+ vtTypes[46]	= "VTS_POPTEXCLUSIVE";
+strTypes[46]	= "OLE_OPTEXCLUSIVE*";
+ vtTypes[47]	= "VTS_TRISTATE";
+strTypes[47]	= "OLE_TRISTATE";
+ vtTypes[48]	= "VTS_PTRISTATE";
+strTypes[48]	= "OLE_TRISTATE*";
+ vtTypes[49]	= "VTS_SCODE";
+strTypes[49]	= "SCODE";
+ vtTypes[50]	= "VTS_PSCODE";
+strTypes[50]	= "SCODE*";
+ vtTypes[51]	= "VTS_I2";
+strTypes[51]	= "SHORT";
+ vtTypes[52]	= "VTS_PI2";
+strTypes[52]	= "SHORT*";
+ vtTypes[53]	= "VTS_UI4";
+strTypes[53]	= "ULONG";
+ vtTypes[54]	= "VTS_PUI4";
+strTypes[54]	= "ULONG*";
+ vtTypes[55]	= "VTS_UI8";
+strTypes[55]	= "ULONGLONG";
+ vtTypes[56]	= "VTS_PUI8";
+strTypes[56]	= "ULONGLONG*";
+ vtTypes[57]	= "VTS_UI2";
+strTypes[57]	= "USHORT";
+ vtTypes[58]	= "VTS_PUI2";
+strTypes[58]	= "USHORT*";
+ vtTypes[59]	= "VTS_VARIANT";
+strTypes[59]	= "VARIANT";
+ vtTypes[60]	= "VTS_PVARIANT";
+strTypes[60]	= "VARIANT*";
+ vtTypes[61]	= "VTS_BOOL";
+strTypes[61]	= "VARIANT_BOOL";
+ vtTypes[62]	= "VTS_PBOOL";
+strTypes[62]	= "VARIANT_BOOL*";
+ vtTypes[63]	= "VTS_EMPTY";
+strTypes[63]	= "void";
+
+var strStockProperties = new Array;
+strStockProperties[0] = "Appearance";
+strStockProperties[1] = "BackColor";
+strStockProperties[2] = "BorderStyle";
+strStockProperties[3] = "Caption";
+strStockProperties[4] = "Enabled";
+strStockProperties[5] = "Font";
+strStockProperties[6] = "ForeColor";
+strStockProperties[7] = "hWnd";
+strStockProperties[8] = "ReadyState";
+strStockProperties[9] = "Text";
+
+var strStockPropertyType = new Array;
+strStockPropertyType[0] = "SHORT";
+strStockPropertyType[1] = "OLE_COLOR";
+strStockPropertyType[2] = "SHORT";
+strStockPropertyType[3] = "BSTR";
+strStockPropertyType[4] = "VARIANT_BOOL";
+strStockPropertyType[5] = "IFontDisp*";
+strStockPropertyType[6] = "OLE_COLOR";
+strStockPropertyType[7] = "OLE_HANDLE";
+strStockPropertyType[8] = "LONG";
+strStockPropertyType[9] = "BSTR";
+
+var strStockDispIDs = new Array;
+strStockDispIDs[0] = "DISPID_APPEARANCE";
+strStockDispIDs[1] = "DISPID_BACKCOLOR";
+strStockDispIDs[2] = "DISPID_BORDERSTYLE";
+strStockDispIDs[3] = "DISPID_CAPTION";
+strStockDispIDs[4] = "DISPID_ENABLED";
+strStockDispIDs[5] = "DISPID_FONT";
+strStockDispIDs[6] = "DISPID_FORECOLOR";
+strStockDispIDs[7] = "DISPID_HWND";
+strStockDispIDs[8] = "DISPID_READYSTATE";
+strStockDispIDs[9] = "DISPID_TEXT";
+
+var strStockMacros = new Array;
+strStockMacros[0] = "DISP_STOCKPROP_APPEARANCE";
+strStockMacros[1] = "DISP_STOCKPROP_BACKCOLOR";
+strStockMacros[2] = "DISP_STOCKPROP_BORDERSTYLE";
+strStockMacros[3] = "DISP_STOCKPROP_CAPTION";
+strStockMacros[4] = "DISP_STOCKPROP_ENABLED";
+strStockMacros[5] = "DISP_STOCKPROP_FONT";
+strStockMacros[6] = "DISP_STOCKPROP_FORECOLOR";
+strStockMacros[7] = "DISP_STOCKPROP_HWND";
+strStockMacros[8] = "DISP_STOCKPROP_READYSTATE";
+strStockMacros[9] = "DISP_STOCKPROP_TEXT";
+
+</SCRIPT>
+<SCRIPT ID="INCLUDE_SCRIPT" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT ID="INCLUDE_COMMON" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT>
+	document.scripts("INCLUDE_SCRIPT").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Script.js";
+	document.scripts("INCLUDE_COMMON").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Common.js";
+</SCRIPT>
+
+<SCRIPT FOR="STOCK_PROPERTIES" EVENT="Change">
+	OnStockProperties();
+</SCRIPT>
+
+<SCRIPT FOR="PARAMETER_TYPE" EVENT="Change">
+	ToggleButtons();
+</SCRIPT>
+
+<SCRIPT FOR="TYPE_LIST" EVENT="KeyDown(nKeyCode)">
+	OnWizComboKeyDown(nKeyCode);
+</SCRIPT>
+<SCRIPT FOR="STOCK_PROPERTIES" EVENT="KeyDown(nKeyCode)">
+	OnWizComboKeyDown(nKeyCode);
+</SCRIPT>
+<SCRIPT FOR="RETURN_TYPE_LIST" EVENT="KeyDown(nKeyCode)">
+	OnWizComboKeyDown(nKeyCode);
+</SCRIPT>
+<SCRIPT FOR="PARAMETER_TYPE" EVENT="KeyDown(nKeyCode)">
+	OnWizComboKeyDown(nKeyCode);
+</SCRIPT>

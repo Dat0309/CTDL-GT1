@@ -1,0 +1,26 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>video</Title>
+    <Author>Microsoft Corporation</Author>
+    <Shortcut>video</Shortcut>
+    <Description>Markup snippet for a video with multiple sources</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+      <Declarations>
+          <Literal>
+              <ID>file</ID>
+              <ToolTip>file</ToolTip>
+              <Default>file</Default>
+          </Literal>
+      </Declarations>
+    <Code Language="html"><![CDATA[<video controls="controls">
+  <source src="$file$.mp4"  type="video/mp4" />
+  <source src="$file$.webm" type="video/webm" />
+  <source src="$file$.ogv"  type="video/ogg" />
+</video>$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

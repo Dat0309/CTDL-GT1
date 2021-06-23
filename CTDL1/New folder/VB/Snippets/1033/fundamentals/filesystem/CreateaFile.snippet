@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Create a File </Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Creates a new file.</Description>
+      <Shortcut>filCreateFile</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>Filename</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the file name of the new file.</ToolTip>
+          <Default>"C:\Test.txt"</Default>
+        </Literal>
+        <Literal>
+          <ID>Text</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the text to write to the file.</ToolTip>
+          <Default>"Some text"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[My.Computer.FileSystem.WriteAllText($Filename$, String.Empty, False)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

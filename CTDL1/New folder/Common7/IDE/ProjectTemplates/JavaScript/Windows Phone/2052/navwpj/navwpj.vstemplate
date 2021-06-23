@@ -1,0 +1,47 @@
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>导航应用(Windows Phone)</Name>
+    <Description>已预定义导航控件的 Windows Phone 应用的项目。</Description>
+    <Icon>navwpj.ico</Icon>
+    <ProjectType>JavaScript</ProjectType>
+    <BlendProjectSubType>WJApplication</BlendProjectSubType>
+    <TemplateID>Microsoft.JavaScript.NavWPJ</TemplateID>
+    <BlendTemplateID>Microsoft.Blend.NavPhoneWWA</BlendTemplateID>
+    <BlendTemplateGroupID>HTML (Windows Phone)</BlendTemplateGroupID>
+    <SortOrder>50</SortOrder>
+    <CreateNewFolder>false</CreateNewFolder>
+    <BlendCreateNewFolder>true</BlendCreateNewFolder>
+    <DefaultName>App</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <NumberOfParentCategoriesToRollUp>2</NumberOfParentCategoriesToRollUp>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <TargetPlatformName>WindowsPhoneApp</TargetPlatformName>
+    <RequiredPlatformVersion>6.3.1</RequiredPlatformVersion>
+    <PreviewImage>navwpj.png</PreviewImage>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="Application.jsproj" ReplaceParameters="true">
+      <ProjectItem TargetFileName="js\default.js" ReplaceParameters="true" OpenInEditor="true" BlendOpenInEditor="false">default.js</ProjectItem>
+      <ProjectItem TargetFileName="default.html" ReplaceParameters="true" BlendOpenInEditor="true">default.html</ProjectItem>
+      <ProjectItem TargetFileName="package.appxmanifest" ReplaceParameters="true">package.appxmanifest</ProjectItem>
+      <ProjectItem TargetFileName="css\default.css" ReplaceParameters="true">default.css</ProjectItem>
+      <ProjectItem TargetFileName="css\ui-themed.css">ui-themed.css</ProjectItem>
+      <ProjectItem TargetFileName="css\ui-themed.theme-dark.css">ui-themed.theme-dark.css</ProjectItem>
+      <ProjectItem TargetFileName="css\ui-themed.theme-light.css">ui-themed.theme-light.css</ProjectItem>
+      <ProjectItem TargetFileName="pages\home\home.css" ReplaceParameters="true">homePage.css</ProjectItem>
+      <ProjectItem TargetFileName="pages\home\home.html" ReplaceParameters="true">homePage.html</ProjectItem>
+      <ProjectItem TargetFileName="images\Square150x150Logo.scale-240.png">SquareTile150x150@scale-240.png</ProjectItem>
+      <ProjectItem TargetFileName="images\Square44x44Logo.scale-240.png">SquareTile44x44@scale-240.png</ProjectItem>
+      <ProjectItem TargetFileName="images\Wide310x150Logo.scale-240.png">SquareTile310x150@scale-240.png</ProjectItem>
+      <ProjectItem TargetFileName="images\Square71x71Logo.scale-240.png">SquareTile71x71@scale-240.png</ProjectItem>
+      <ProjectItem TargetFileName="images\SplashScreen.scale-240.png">SplashScreen@scale-240.png</ProjectItem>
+      <ProjectItem TargetFileName="images\StoreLogo.scale-240.png">StoreLogo@scale-240.png</ProjectItem>
+      <ProjectItem TargetFileName="js\navigator.js" ReplaceParameters="true">navigator.js</ProjectItem>
+      <ProjectItem TargetFileName="pages\home\home.js" ReplaceParameters="true">homePage.js</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.WinRT.TemplateWizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.WinRT.TemplateWizards.PhoneAppxWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

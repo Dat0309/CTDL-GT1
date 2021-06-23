@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Define a type comparer to be used in sorting routines.</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Compares two objects and returns a value indicating whether one is less than, equal to, or greater than the other.</Description>
+      <Shortcut>arrComp</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>compareID</ID>
+          <ToolTip>Replace with an identifier for the type of comparer.</ToolTip>
+          <Default>IntegerComparer</Default>
+        </Literal>
+        <Literal>
+          <ID>compType</ID>
+          <ToolTip>Replace with the type of item the comparer compares.</ToolTip>
+          <Default>Integer</Default>
+        </Literal>
+        <Literal>
+          <ID>param1</ID>
+          <ToolTip>Replace with the first object to compare.</ToolTip>
+          <Default>param1</Default>
+        </Literal>
+        <Literal>
+          <ID>param2</ID>
+          <ToolTip>Replace with the second object to compare.</ToolTip>
+          <Default>param2</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="type decl"><![CDATA[     Public Class $compareID$
+        Inherits Comparer(Of $compType$)
+
+        Public Overrides Function Compare(ByVal $param1$ As $compType$, ByVal $param2$ As $compType$) As Integer
+            If $param1$ < $param2$ Then
+        ' result = <0 if param1 < param2
+        Return -1
+            ElseIf $param1$ > $param2$ Then
+        ' result = >0 if param1 > param2
+        Return 1
+            Else
+        ' result = 0 if param1 = param2
+        Return 0
+            End If
+        End Function
+    End Class]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

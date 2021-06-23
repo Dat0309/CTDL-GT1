@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Draw a Filled Ellipse on a Windows Form</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Draws a filled ellipse on a form.</Description>
+      <Shortcut>drawEll</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Drawing.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>color</ID>
+          <Type>System.Drawing.Color</Type>
+          <ToolTip>Replace with the brush color.</ToolTip>
+          <Default>Color.Red</Default>
+        </Object>
+        <Object>
+          <ID>form</ID>
+          <Type>System.Windows.Forms.Form</Type>
+          <ToolTip>Replace with a reference for the form or control to draw the ellipse on.</ToolTip>
+          <Default>Me</Default>
+        </Object>
+        <Literal>
+          <ID>location</ID>
+          <ToolTip>Replace with coordinates for location and size of the ellipse.</ToolTip>
+          <Default>0, 0, 200, 300</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Using brush As New SolidBrush($color$)
+    Using formGraphics = $form$.CreateGraphics()
+        formGraphics.FillEllipse(brush, New Rectangle($location$))
+    End Using
+End Using
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

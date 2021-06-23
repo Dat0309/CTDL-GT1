@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Read Data from a Serial Port</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Reads data from a serial port.</Description>
+      <Shortcut>conReadPort</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+	<Import>
+	  <Namespace>System.Text</Namespace>
+	</Import>
+	<Import>
+	  <Namespace>System.IO.Ports</Namespace>
+	</Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>COM</ID>
+          <ToolTip>Replace with the name of the COM port.</ToolTip>
+          <Default>"COM1"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim buffer As New StringBuilder
+Using comPort = My.Computer.Ports.OpenSerialPort($COM$)
+    Do
+        Dim line = comPort.ReadLine()
+        If line Is Nothing Then
+            Exit Do
+        Else
+            buffer.AppendLine(line)
+        End If
+    Loop
+End Using]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

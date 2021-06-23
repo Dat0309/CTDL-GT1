@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010"
+      Version="1.0.0" >
+  <Identifier Id="CFD22C88-1369-4E6D-9AF0-215C70DDE97D">
+    <Name>SharePoint Business Connectivity Services</Name>
+    <Author>Microsoft Corp.</Author>
+    <Version>12.0</Version>
+    <Description xml:space="preserve">SharePoint Business Connectivity Services Extension</Description>
+    <Locale>1033</Locale>
+    <InstalledByMsi>true</InstalledByMsi>
+    <SupportedProducts>
+      <VisualStudio Version="12.0">
+        <Edition>Pro</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.5" MaxVersion="4.5" />
+    <SystemComponent>true</SystemComponent>
+  </Identifier>
+  <References>
+    <Reference Id="Microsoft.VisualStudio.MPF" MinVersion="10.0">
+      <Name>Visual Studio MPF</Name>
+    </Reference>
+  </References>
+  <Content>
+    <VsPackage>Microsoft.VisualStudio.SharePoint.BusinessConnectivityServices.pkgdef</VsPackage>
+    <MefComponent>Microsoft.VisualStudio.SharePoint.BusinessConnectivityServices.dll</MefComponent>
+  </Content>
+</Vsix>

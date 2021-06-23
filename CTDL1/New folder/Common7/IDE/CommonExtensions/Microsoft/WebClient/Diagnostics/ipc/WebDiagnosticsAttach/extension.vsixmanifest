@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="475D6BB7-2B4C-4FB5-9A0C-2734B8E84AAB">
+    <Name>WebDiagnosticsAttach</Name>
+    <Author>Microsoft</Author>
+    <Version>1.0</Version>
+    <Description xml:space="preserve">Interacts with the debugger to enable diagnostics such as a script console and DOM viewer when debugging Web Apps.</Description>
+    <Locale>1033</Locale>
+    <SupportedProducts>
+      <VisualStudio Version="12.0">
+        <Edition>Pro</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+    <SystemComponent>true</SystemComponent>
+    <InstalledByMsi>true</InstalledByMsi>
+  </Identifier>
+  <References>
+        <Reference Id="Microsoft.VisualStudio.MPF" MinVersion="10.0">
+            <Name>Visual Studio MPF</Name>
+        </Reference>
+  </References>
+
+  <Content>
+    <VsPackage>WebDiagnosticsAttach.pkgdef</VsPackage>
+  </Content>
+</Vsix>

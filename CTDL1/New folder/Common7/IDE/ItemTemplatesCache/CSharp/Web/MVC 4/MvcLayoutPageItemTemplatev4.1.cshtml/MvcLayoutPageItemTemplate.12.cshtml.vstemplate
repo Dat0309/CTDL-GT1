@@ -1,0 +1,22 @@
+﻿<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+    <TemplateData>
+        <DefaultName>_LayoutPage.cshtml</DefaultName>
+        <Name Package="{141DA93E-88A7-45D5-B15B-89117F514D64}" ID="21114"/>
+        <Icon Package="{141DA93E-88A7-45D5-B15B-89117F514D64}" ID="22002"/>
+        <Description Package="{141DA93E-88A7-45D5-B15B-89117F514D64}" ID="21115"/>
+        <ProjectType>CSharp</ProjectType>
+        <SortOrder>4</SortOrder>
+        <NumberOfParentCategoriesToRollUp>2</NumberOfParentCategoriesToRollUp>
+        <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+        <TemplateID>MvcLayoutPageItemTemplate.cshtml.vstemplate.v401</TemplateID>
+        <TemplateGroupID>MVC4</TemplateGroupID>
+        <ShowByDefault>false</ShowByDefault>
+    </TemplateData>
+    <TemplateContent>
+        <CustomParameters>
+            <CustomParameter Name="$language$" Value="C#" />
+        </CustomParameters>
+        <References />
+        <ProjectItem SubType="" TargetFileName="$fileinputname$.cshtml" ReplaceParameters="true">Views\Shared\_LayoutPage.cshtml</ProjectItem>
+    </TemplateContent>
+</VSTemplate>

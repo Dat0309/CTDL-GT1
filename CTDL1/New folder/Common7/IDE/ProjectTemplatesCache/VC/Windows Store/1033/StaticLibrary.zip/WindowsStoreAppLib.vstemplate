@@ -1,0 +1,30 @@
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{1B027A40-8F43-11D0-8D11-00A0C91BC942}" ID="3225" />
+    <Description Package="{1B027A40-8F43-11D0-8D11-00A0C91BC942}" ID="3226" />
+    <Icon Package="{1B027A40-8F43-11D0-8D11-00A0C91BC942}" ID="3232" />
+    <ProjectType>VC</ProjectType>
+    <TemplateGroupID>WinRT-Native</TemplateGroupID>
+    <TemplateID>Microsoft.VisualC.WindowsStoreApp.Lib</TemplateID>
+    <SortOrder>51</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Lib</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <NumberOfParentCategoriesToRollUp>0</NumberOfParentCategoriesToRollUp>
+    <TargetPlatformName>Windows</TargetPlatformName>
+    <RequiredPlatformVersion>6.3.0</RequiredPlatformVersion>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="WindowsStoreAppLib.vcxproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.vcxproj.filters">WindowsStoreAppLib.vcxproj.filters</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.h" OpenInEditor="true">WindowsStoreAppLib.h</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.cpp">WindowsStoreAppLib.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false">pch.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false">pch.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false">targetver.h</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

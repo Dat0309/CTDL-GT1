@@ -1,0 +1,22 @@
+﻿<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+    <TemplateData>
+        <DefaultName>_LayoutPage.vbhtml</DefaultName>
+        <Name Package="{141DA93E-88A7-45D5-B15B-89117F514D64}" ID="21114"/>
+        <Icon Package="{141DA93E-88A7-45D5-B15B-89117F514D64}" ID="22003"/>
+        <Description Package="{141DA93E-88A7-45D5-B15B-89117F514D64}" ID="21121"/>
+        <ProjectType>VisualBasic</ProjectType>
+        <SortOrder>4</SortOrder>
+        <NumberOfParentCategoriesToRollUp>2</NumberOfParentCategoriesToRollUp>
+        <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+        <TemplateID>MvcLayoutPageItemTemplate.vbhtml.vstemplate.v401</TemplateID>
+        <TemplateGroupID>MVC4</TemplateGroupID>
+        <ShowByDefault>false</ShowByDefault>
+    </TemplateData>
+    <TemplateContent>
+        <CustomParameters>
+            <CustomParameter Name="$language$" Value="VB" />
+        </CustomParameters>
+        <References />
+        <ProjectItem SubType="" TargetFileName="$fileinputname$.vbhtml" ReplaceParameters="true">Views\Shared\_LayoutPage.vbhtml</ProjectItem>
+    </TemplateContent>
+</VSTemplate>

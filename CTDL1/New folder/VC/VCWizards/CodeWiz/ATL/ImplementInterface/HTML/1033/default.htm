@@ -1,0 +1,2455 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<HTML DIR="LTR">
+	<HEAD>
+		<TITLE>
+			Implement Interface Wizard
+		</TITLE>
+		<META NAME="vs_targetSchema" CONTENT="http://schemas.microsoft.com/intellisense/ie5">
+		<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+		<META HTTP-EQUIV="MSThemeCompatible" CONTENT="Yes">
+		<LINK ID="LINKURL" REL="stylesheet" HREF="../../../../../1033/NewStyles.css">
+	</HEAD>
+	<BODY BGCOLOR="BUTTONFACE" TOPMARGIN="0" LEFTMARGIN="0" RIGHTMARGIN="0" BOTTOMMARGIN="0" ONLOAD="InitDocument(document);" ONKEYDOWN="if (!bValidating) OnKey();" ONKEYPRESS="if (!bValidating) OnPress();">
+		<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="100%">
+				<TR VALIGN="TOP">
+					<TD HEIGHT="79">
+						<!--OPEN OF ALL ENCOMPASSING TABLE ROW ONE//-->
+						<TABLE CLASS="TWO" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+							<COL WIDTH="12">
+								<COL>
+									<COL WIDTH="12">
+										<TR>
+											<TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+												&nbsp;
+											</TD>
+											<TD VALIGN="TOP" HEIGHT="12">
+												&nbsp;
+											</TD>
+											<TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+												&nbsp;
+											</TD>
+											<TD CLASS="IMAGE" VALIGN="BOTTOM" WIDTH="110" ROWSPAN="2">
+												<DIV CLASS="SMALLA" ID="Layer0">
+													<IMG CLASS="SMALLEST" ID="BANNER_IMAGE" SRC="../../Images/ImpInterface.gif" WIDTH="63" HEIGHT="63" ALT="" BORDER="0">
+												</DIV>
+											</TD>
+											<TD VALIGN="TOP" HEIGHT="12" WIDTH="6" ROWSPAN="2">
+												&nbsp;
+											</TD>
+										</TR>
+										<TR>
+											<TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+												&nbsp;
+											</TD>
+											<TD VALIGN="TOP" HEIGHT="65">
+												<H4 CLASS="HEAD" ID="HEAD">Welcome to the Implement Interface Wizard</H4>
+												<P CLASS="SUBHEAD" ID="SUBHEAD">This wizard implements an interface for your class.</P>
+											</TD>
+											<TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+												&nbsp;
+											</TD>
+										</TR>
+										<TR>
+											<TD VALIGN="TOP" CLASS="RULE" COLSPAN="5" HEIGHT="2">
+												<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+													<TR VALIGN="TOP">
+														<TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+														<TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+													</TR>
+												</TABLE>
+											</TD>
+										</TR>
+						</TABLE>
+						<!--CLOSE OF ALL ENCOMPASSING TABLE ROW ONE//-->
+					</TD>
+				</TR>
+				<TR VALIGN="TOP">
+					<TD HEIGHT="100%">
+						<!--OPEN OF ALL ENCOMPASSING TABLE ROW TWO//-->
+						<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+							<COL>
+								<TR>
+									<TD VALIGN="TOP" HEIGHT="100%">
+										<!--OPEN OF CONTENT AND BUTTON TABLE//-->
+										<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+											<COL WIDTH="100%">
+												<TR VALIGN="TOP">
+													<TD HEIGHT="100%">
+														<!--OPEN OF CONTENT//-->
+														<TABLE CLASS="FixedSize" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+															<COL WIDTH="12"><COL WIDTH="182"><COL WIDTH="12"><COL WIDTH="387"><COL WIDTH="12">
+															<TR>
+															  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="5">
+															  	&nbsp;
+															  </TD>
+															</TR>
+
+															<TR VALIGN="TOP">
+															  <TD VALIGN="TOP" WIDTH="12">
+																&nbsp;
+															  </TD>
+															  <TD VALIGN="TOP" WIDTH="182">
+															  	<SPAN CLASS="itemTextTop" ID="FROM_SPAN">
+																  <LABEL ID="FROM_LABEL">Implement interface from:</LABEL>
+																  <BR>
+																  <NOBR>
+																  <SPAN ID="TYPELIB_PROJECT_SPAN" TITLE="Search for type library in the Project.">
+																	<INPUT TYPE="Radio" CHECKED NAME="TypeLibSource" ID="TYPELIB_PROJECT" ACCESSKEY="P" onClick="OnTypeLibSource();" STYLE="MARGIN-TOP:3PX;">
+																	<LABEL CLASS="UpABit" FOR="TYPELIB_PROJECT" ID="TYPELIB_PROJECT_LABEL"><U>P</U>roject</LABEL>
+																  </SPAN>
+																  </NOBR>
+																  <NOBR>
+																  <SPAN ID="TYPELIB_REG_SPAN" TITLE="Search for type library in the Registry.">
+																    <INPUT TYPE="Radio" NAME="TypeLibSource" ID="TYPELIB_REG" ACCESSKEY="R" onClick="OnTypeLibSource();" STYLE="MARGIN-TOP:3PX;">
+																	<LABEL CLASS="UpABit" FOR="TYPELIB_REG" ID="TYPELIB_REG_LABEL"><U>R</U>egistry</LABEL>
+																  </SPAN>
+																  </NOBR>
+																  <NOBR>
+																  <SPAN ID="TYPELIB_FILE_SPAN" TITLE="Choose the type library from the File">
+																    <INPUT TYPE="Radio" NAME="TypeLibSource" ID="TYPELIB_FILE" ACCESSKEY="L" onClick="OnTypeLibSource();" STYLE="MARGIN-TOP:3PX;">
+																	<LABEL CLASS="UpABit" FOR="TYPELIB_FILE" ID="TYPELIB_FILE_LABEL">Fi<U>l</U>e</LABEL>
+																  </SPAN>
+																  </NOBR>
+																 </SPAN>
+																</TD>
+																<TD VALIGN="TOP" WIDTH="12">
+																	&nbsp;
+																</TD>
+															  	<TD VALIGN="TOP" WIDTH="387">
+															  	  <SPAN CLASS="itemTextTop" TITLE="Select the type library to implement interfaces from." ID="TYPELIB_NAME_SPAN">
+																    <LABEL FOR="REG_TYPELIB_NAME" ID="TYPELIB_NAME_LABEL">Available <U>t</U>ype libraries:</LABEL>
+																	<BR>
+																	<SELECT CLASS="TwoColumnLongButton" DISPLAY="none" SIZE="1" ID="PROJECT_TYPELIB_NAME" ACCESSKEY="T" TITLE="Select the type library to implement interfaces from." VALUE="" onChange="OnTypeLib();" STYLE="WIDTH:387PX;"></SELECT>
+																	<SELECT CLASS="TwoColumnLongButton" DISPLAY="none" SIZE="1" ID="REG_TYPELIB_NAME" ACCESSKEY="T" TITLE="Select the type library to implement interfaces from." VALUE="" onChange="OnTypeLib();" STYLE="WIDTH:387PX;"></SELECT>
+																	<SELECT CLASS="TwoColumnLongButton" DISPLAY="none" SIZE="1" ID="FILE_TYPELIB_NAME" ACCESSKEY="T" TITLE="Select the type library to implement interfaces from." VALUE="" onChange="OnTypeLib();" STYLE="WIDTH:387PX;"></SELECT>
+																  </SPAN>
+  		  	  	   												</TD>
+																<TD VALIGN="TOP" WIDTH="12">
+																	&nbsp;
+																</TD>
+															  </TR>
+
+															  <TR VALIGN="TOP">
+																<TD VALIGN="TOP" HEIGHT="8">
+																</TD>
+															  </TR>
+
+															  <TR VALIGN="TOP">
+																<TD VALIGN="TOP" WIDTH="12">
+																	&nbsp;
+																</TD>
+															  	<TD VALIGN="TOP" COLSPAN="3">
+																  <SPAN CLASS="itemTextTop">
+																    <LABEL FOR="LOCATION" ID="LOCATION_LABEL" TITLE="Location of the selected type library.">L<U>o</U>cation:</LABEL>
+																	<BR>
+																	<INPUT CLASS="TwoColumnLongButton" ID="LOCATION" ACCESSKEY="o" TYPE="TEXT" TITLE="Location of the selected type library." onBlur="OnChangeLocation();" STYLE="WIDTH:557PX;">
+																	<BUTTON CLASS="buttonClass3Custom" ID="BrowseTLB" TITLE="Browse for the type library from the file." onClick="OnBrowseForTLB();">...</BUTTON>
+																  </SPAN>
+																</TD>
+																<TD VALIGN="TOP" WIDTH="12">
+																	&nbsp;
+																</TD>
+															  </TR>
+
+															  <TR VALIGN="TOP">
+																<TD VALIGN="TOP" HEIGHT="15" COLSPAN="5">
+																&nbsp;
+																</TD>
+															  </TR>
+
+															  <TR VALIGN="TOP">
+															    <TD VALIGN="TOP" WIDTH="12">
+																	&nbsp;
+															 	</TD>
+																<TD VALIGN="TOP" COLSPAN="3">
+																  <TABLE CLASS="FixedSize" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+																  <COL WIDTH="265"><COL WIDTH="12"><COL WIDTH="25"><COL WIDTH="12"><COL WIDTH="265">
+																  <TR>
+																    <TD VALIGN="TOP" WIDTH="265">
+																	  <SPAN CLASS="itemText" TITLE="Select interfaces to implement." ID="INTERFACE_NAME_SPAN">
+																	    <LABEL FOR="INTERFACE_NAME" ID="INTERFACE_NAME_LABEL"><U>I</U>nterfaces:</LABEL>
+																	    <BR>
+																	    <SELECT CLASS="sideBtn3" SIZE="8" ID="INTERFACE_NAME" ACCESSKEY="I" onchange="ToggleButtons();" onDblClick="OnAddInterface(false);" TITLE="Select interfaces to implement." STYLE="WIDTH:265PX;"></SELECT>
+																	  </SPAN>
+																	</TD>
+																	<TD VALIGN="TOP" WIDTH="12">
+																		&nbsp;
+																	</TD>
+																	<TD VALIGN="TOP" ALIGN="MIDDLE" WIDTH="25">
+																	  <P CLASS="ElementSpacer22">
+																		&nbsp;
+																	  </P>
+																	  <BUTTON ID="AddBtn" CLASS="ButtonClass4" TITLE="Add interface" onClick="OnAddInterface(false);" ALIGN="CENTER" STYLE="MARGIN-BOTTOM:2PX;"><B CLASS="bigFont">&rsaquo;</B></BUTTON>
+																	  <BUTTON ID="AddAllBtn" CLASS="ButtonClass4" TITLE="Add all interfaces" onClick="OnAddInterface(true);" ALIGN="CENTER"><B CLASS="bigFont">&raquo;</B></BUTTON>
+																	  <P STYLE="MARGIN-TOP:0PX; MARGIN-BOTTOM:7PX;"></P>
+																	  <BUTTON ID="RemoveBtnX" CLASS="ButtonClass4" TITLE="Remove interface" onClick="OnRemoveInterface(false);" ALIGN="CENTER" STYLE="MARGIN-LEFT:0PX; MARGIN-BOTTOM:2PX;"><B CLASS="bigFont">&lsaquo;</B></BUTTON>
+																	  <BUTTON ID="RemoveAllBtn" CLASS="ButtonClass4" TITLE="Remove all interfaces" onClick="OnRemoveInterface(true);" ALIGN="CENTER"><B CLASS="bigFont">&laquo;</B></BUTTON>
+																    </TD>
+																	<TD VALIGN="TOP" WIDTH="12">
+																		&nbsp;
+																	</TD>
+																	<TD VALIGN="TOP" WIDTH="265">
+																	  <SPAN CLASS="itemText" TITLE="List of interfaces which will be generated from the type library." ID="IMPLEMENT_INTERFACE_NAME_SPAN" >
+																		<LABEL FOR="IMPLEMENT_INTERFACE_NAME" ID="IMPLEMENT_INTERFACE_NAME_LABEL">I<U>m</U>plement interfaces:</LABEL>
+																		<BR>
+																		<SELECT CLASS="sideBtn3" SIZE="8" ID="IMPLEMENT_INTERFACE_NAME" ACCESSKEY="M" onchange="ToggleButtons();" onDblClick="OnRemoveInterface(false);" TITLE="List of interfaces which will be generated from the type library." STYLE="WIDTH:265PX;"></SELECT>
+																	  </SPAN>
+																	</TD>
+																  </TR>
+																</TABLE>
+																</TD>
+																<TD VALIGN="TOP" WIDTH="12">
+																	&nbsp;
+																</TD>
+															</TR>
+															<TR>
+																<TD VALIGN="TOP" HEIGHT="100%" COLSPAN="7">
+																	&nbsp;
+																</TD>
+															</TR>
+														</TABLE>
+														<!--CLOSE OF CONTENT//-->
+													</TD>
+												</TR>
+												<TR VALIGN="BOTTOM">
+													<TD>
+														<!--OPEN OF BUTTON HTML//-->
+														<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+															<COL WIDTH="12">
+																<COL>
+																	<COL WIDTH="75">
+																		<COL WIDTH="4">
+																			<COL WIDTH="75">
+																				<COL WIDTH="4">
+																					<COL WIDTH="75">
+																						<COL WIDTH="12">
+																							<TR>
+																								<TD VALIGN="TOP" CLASS="RULE" COLSPAN="8" HEIGHT="2">
+																									<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+																										<TR VALIGN="TOP">
+																											<TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+																											<TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+																										</TR>
+																									</TABLE>
+																								</TD>
+																							</TR>
+																							<TR>
+																								<TD VALIGN="TOP" HEIGHT="11" COLSPAN="8">
+																									&nbsp;
+																								</TD>
+																							</TR>
+																							<TR>
+																								<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+																									&nbsp;
+																								</TD>
+																								<TD VALIGN="TOP" HEIGHT="23">
+																									&nbsp;
+																								</TD>
+																								<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+																									<BUTTON CLASS="BUTTONS" ID="FinishBtn" onClick="OnFinish(document);">
+																										Finish
+																									</BUTTON>
+																								</TD>
+																								<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+																									&nbsp;
+																								</TD>
+																								<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+																									<BUTTON CLASS="BUTTONS" ID="CancelBtn" onClick="window.external.Finish(document, 'cancel');">
+																										Cancel
+																									</BUTTON>
+																								</TD>
+																								<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+																									&nbsp;
+																								</TD>
+																								<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+																									<BUTTON CLASS="BUTTONS" ID="HelpBtn" onClick="ShowHelp();">
+																										Help
+																									</BUTTON>
+																								</TD>
+																								<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+																									&nbsp;
+																								</TD>
+																							</TR>
+																							<TR>
+																								<TD VALIGN="TOP" HEIGHT="12" COLSPAN="8">
+																									&nbsp;
+																								</TD>
+																							</TR>
+														</TABLE>
+														<!--CLOSE OF BUTTON HTML//-->
+													</TD>
+												</TR>
+										</TABLE>
+										<!--CLOSE OF CONTENT AND BUTTON TABLE//-->
+									</TD>
+								</TR>
+						</TABLE>
+						<!--CLOSE OF ALL ENCOMPASSING TABLE ROW TWO//-->
+					</TD>
+				</TR>
+		</TABLE>
+	</BODY>
+</HTML>
+<SCRIPT LANGUAGE="JSCRIPT">
+
+// Implment Interface or Implement Connection Point
+//
+
+var g_bIsImplementInterface = true;
+
+// Keep track of the current source of typelibs
+//
+
+var g_nSourceCodeModel = 0;
+var g_nSourceRegistry = 1;
+var g_nSourceFile = 2;
+var g_nCurrentSource;
+
+// TypeLib collections from each source.
+//
+
+var g_oCodeModelTypeLibs;
+var g_oRegistryTypeLibs;
+var g_oFileTypeLibs;
+
+// Current TypeLibs information
+//
+
+var g_oTypeLibsSelect;
+var g_oTypeLibs;
+
+// Available Interfaces
+//
+// Since they are always from the selected typelib,
+// we only need to remember the interfaces.
+//
+
+var g_aAvailableInterfaces = new Array();
+var g_bAddInterfaceIsValid = false;
+
+// Chosen Interfaces
+//
+// For chosen interfaces, we need to remember the interface and the typelib
+// from which it came.
+//
+
+var g_aChosenInterfaces = new Array();
+var g_aChosenTypeLibs = new Array();
+var g_aChosenSources = new Array();
+
+var L_EmbeddedIDL_Text = "Embedded IDL";
+
+// Project information
+//
+
+var g_oProject;
+var g_oCM;
+var g_strPCH = "";
+var g_oPCHFCM;
+var g_bIsAttributedProject = false;
+var g_strAttributedLIBID = "";
+var g_strAttributedLIBIDName = "";
+var g_strAttributedVersion = "";
+
+// Parent information
+//
+
+var g_oParent;
+var g_oParentFCM;
+var g_oImplementedInterfaces;
+var g_cImplementedInterfaces = 0;
+var g_bIsAttributedParent = false;
+
+
+function InitDocument(document)
+{
+	setDirection();
+
+	g_bIsImplementInterface = "true" == window.external.FindSymbol("IS_IMPLEMENT_INTERFACE");
+
+	if (window.external.FindSymbol("DOCUMENT_FIRST_LOAD"))
+	{
+		if (g_bIsImplementInterface)
+		{
+			var L_WizardDialogTitle_Text = "Implement Interface Wizard";
+			window.external.AddSymbol("WIZARD_DIALOG_TITLE", L_WizardDialogTitle_Text);
+		}
+		else
+		{
+			var L_WizardDialogTitleCP_Text = "Implement Connection Point Wizard";
+			window.external.AddSymbol("WIZARD_DIALOG_TITLE", L_WizardDialogTitleCP_Text);
+		}
+
+		window.external.SetDefaults(document);
+	}
+
+	window.external.Load(document);
+
+	ToggleWizardUI(g_bIsImplementInterface);
+
+	try
+	{
+		g_oProject = window.external.ProjectObject;
+		g_oParent = window.external.ParentObject;
+		g_oCM = g_oProject.CodeModel;
+		g_oParentFCM = g_oParent.ProjectItem.FileCodeModel;
+		g_oImplementedInterfaces = g_oParent.ImplementedInterfaces;
+		g_cImplementedInterfaces = g_oImplementedInterfaces.Count;
+
+		g_strPCH = GetProjectFile(g_oProject, "STDAFX", false, false);
+
+		if (g_strPCH.length)
+		{
+			g_oPCHFCM = g_oProject.Object.Files(g_strPCH).Object.FileCodeModel;
+		}
+
+		g_bIsAttributedProject = g_oCM.Attributes.Count;
+		g_bIsAttributedParent = g_oParent.Attributes.Count;
+
+		if (g_bIsAttributedProject)
+		{
+			var oModule = FindModuleAttribute();
+			if(oModule != null)
+			{
+			    g_strAttributedLIBID = "__LIBID_";
+			    g_strAttributedLIBIDName = oModule.Parameters.Find("name").DefaultExpression;
+			    g_strAttributedVersion = oModule.Parameters.Find("version").DefaultExpression;
+
+			    // Remove surrounding quotes
+			    //
+
+			    g_strAttributedLIBIDName = g_strAttributedLIBIDName.substring(1, g_strAttributedLIBIDName.length - 1);
+			    g_strAttributedVersion = g_strAttributedVersion.substring(1, g_strAttributedVersion.length - 1);
+			}
+		}
+	}
+	catch (e)
+	{
+		if (e.description.length)
+		{
+			e.description = e.description + " in Default.htm, InitDocument().";
+			SetErrorInfo(e);
+		}
+
+		return e.number
+	}
+
+	// If there is not a well-formed attributed library name, don't
+	// do (Project's Interfaces).
+
+	OnTypeLibSource();
+
+	// Do something intelligent about the inital selection.
+	//
+
+	if (!g_aAvailableInterfaces.length)
+	{
+		var cTypeLibs = g_oTypeLibsSelect.options.length;
+
+		// Start at second item (1) to skip "Embedded IDL"
+		//
+
+		for (var iTypeLib = 1; iTypeLib < cTypeLibs; iTypeLib++)
+		{
+			g_oTypeLibsSelect.selectedIndex = iTypeLib;
+			OnTypeLib();
+
+			if (g_aAvailableInterfaces.length)
+			{
+				break;
+			}
+		}
+	}
+
+	// Project does not contain any interfaces,
+	// so select registry.
+	//
+
+	if (!g_aAvailableInterfaces.length)
+	{
+		TYPELIB_REG.checked = true;
+		OnTypeLibSource();
+	}
+}
+
+// module attribute can appear only once on the project
+function FindModuleAttribute()
+{
+	var oClasses = g_oCM.Classes;
+	for(var nCntr = 1; nCntr <= oClasses.Count; nCntr++)
+	{
+	    var oClass = oClasses(nCntr);
+	    var mattr = oClass.Attributes.Find("module");
+
+	    if(mattr)
+	        return mattr;
+	}
+
+	return null;
+}
+
+function ShowHelp()
+{
+	if (g_bIsImplementInterface)
+	{
+		window.external.OnHelp('vc.codewiz.impl.interface.overview');
+	}
+	else
+	{
+		window.external.OnHelp('vc.codewiz.impl.cp.overview');
+	}
+}
+
+function ToggleWizardUI(bImplementInterface)
+{
+	if (bImplementInterface)
+	{
+		// The actual HTML contains the implement interface text & images.
+	}
+	else // Connection Point
+	{
+		var L_ConnectionPointHEAD_Text = "Welcome to the Implement Connection Point Wizard";
+		var L_ConnectionPointSUBHEAD_Text = "This wizard implements a connection point for your class.";
+		var L_ConnectionPointFROMLABEL_Text = "Implement connection point from:";
+		var L_ConnectionPointTYPELIBNAMESPAN_Text = "Select the type library to implement connection points from.";
+		var L_ConnectionPointINTERFACENAMESPAN_Text = "Select connection points to implement.";
+		var L_ConnectionPointINTERFACENAMELABEL_Text = "Source <U>I</U>nterfaces:";
+		var L_ConnectionPointIMPLEMENTINTERFACENAMESPAN_Text = "List of connection points which will be generated from the type library.";
+		var L_ConnectionPointIMPLEMENTINTERFACENAMELABEL_Text = "I<U>m</U>plement connection points:";
+
+		HEAD.innerText = L_ConnectionPointHEAD_Text;
+		SUBHEAD.innerText = L_ConnectionPointSUBHEAD_Text;
+		BANNER_IMAGE.src = "../../Images/ImplementCP.gif";
+
+		FROM_LABEL.innerText = L_ConnectionPointFROMLABEL_Text;
+
+		TYPELIB_NAME_SPAN.title = L_ConnectionPointTYPELIBNAMESPAN_Text;
+		PROJECT_TYPELIB_NAME.title = L_ConnectionPointTYPELIBNAMESPAN_Text;
+		REG_TYPELIB_NAME.title = L_ConnectionPointTYPELIBNAMESPAN_Text;
+		FILE_TYPELIB_NAME.title = L_ConnectionPointTYPELIBNAMESPAN_Text;
+
+		INTERFACE_NAME_SPAN.title = L_ConnectionPointINTERFACENAMESPAN_Text;
+		INTERFACE_NAME_LABEL.innerHTML = L_ConnectionPointINTERFACENAMELABEL_Text;
+
+		IMPLEMENT_INTERFACE_NAME_SPAN.title = L_ConnectionPointIMPLEMENTINTERFACENAMESPAN_Text;
+		IMPLEMENT_INTERFACE_NAME_LABEL.innerHTML = L_ConnectionPointIMPLEMENTINTERFACENAMELABEL_Text;
+	}
+}
+
+function Next(document, linkto)
+{
+	window.external.Next(document, linkto);
+}
+
+function OnFinish(document)
+{
+	try
+	{
+		if (!g_aChosenInterfaces.length)
+		{
+			L_Err1_Text = "Please select an interface to implement";
+			window.external.ReportError(L_Err1_Text);
+			window.focus()
+			return;
+		}
+
+		try
+		{
+			if (g_bIsImplementInterface)
+			{
+				var L_ImplementInterfaceTransactionName_Text = "Implement Interface Wizard";
+				g_oCM.StartTransaction(L_ImplementInterfaceTransactionName_Text);
+				AddImplementInterfaceCode();
+			}
+			else
+			{
+				var L_ConnectionPointTransactionName_Text = "Connection Point Wizard";
+				g_oCM.StartTransaction(L_ConnectionPointTransactionName_Text);
+				AddConnectionPointCode();
+			}
+
+			g_oCM.CommitTransaction();
+		}
+		catch (e)
+		{
+			g_oCM.AbortTransaction();
+
+			if (e.description.length)
+			{
+				SetErrorInfo(e);
+			}
+
+			throw e;
+		}
+		OnWizFinish(document);
+	}
+	catch (e)
+	{
+		var L_ErrOnFinish_Text = "Error in OnFinish";
+		if (e.description.length != 0)
+		{
+			L_ErrOnFinish_Text += ": ";
+			L_ErrOnFinish_Text += e.description;
+		}
+		window.external.ReportError(L_ErrOnFinish_Text);
+	}
+}
+
+// UI
+//
+
+function OnTypeLibSource()
+{
+	if (TYPELIB_PROJECT.checked)
+	{
+		if (!g_oCodeModelTypeLibs)
+		{
+			g_oCodeModelTypeLibs = g_oCM.IDLLibraries;
+		}
+
+		ActivateTypeLibSelect(g_nSourceCodeModel, PROJECT_TYPELIB_NAME, g_oCodeModelTypeLibs);
+	}
+	else if (TYPELIB_FILE.checked)
+	{
+		if (!g_oFileTypeLibs)
+		{
+			g_oFileTypeLibs = window.external.FileTypeLibs;
+		}
+
+		ActivateTypeLibSelect(g_nSourceFile, FILE_TYPELIB_NAME, g_oFileTypeLibs);
+	}
+	else
+	{
+		if (!g_oRegistryTypeLibs)
+		{
+			g_oRegistryTypeLibs = window.external.TypeLibs;
+		}
+
+		ActivateTypeLibSelect(g_nSourceRegistry, REG_TYPELIB_NAME, g_oRegistryTypeLibs);
+	}
+
+	OnTypeLib();
+}
+
+function ActivateTypeLibSelect(nSource, oTypeLibsSelect, oTypeLibs)
+{
+	// Show the newly active select
+	//
+
+	PROJECT_TYPELIB_NAME.style.display = "none";
+	FILE_TYPELIB_NAME.style.display = "none";
+	REG_TYPELIB_NAME.style.display = "none";
+	oTypeLibsSelect.style.display = "inline";
+
+	EnableLocationEdit(g_nSourceFile == nSource);
+
+	if (!oTypeLibsSelect.options.length)
+	{
+		PopulateTypeLibsSelect(nSource, oTypeLibsSelect, oTypeLibs);
+	}
+
+	g_nCurrentSource = nSource;
+	g_oTypeLibsSelect = oTypeLibsSelect;
+	g_oTypeLibs = oTypeLibs;
+
+}
+
+function EnableLocationEdit(bEnable)
+{
+	LOCATION_LABEL.disabled = !bEnable;
+	LOCATION.disabled = !bEnable;
+	BrowseTLB.disabled = !bEnable;
+}
+
+function PopulateTypeLibsSelect(nSource, oTypeLibsSelect, oTypeLibs)
+{
+	var cTypeLibs = oTypeLibs.Count;
+
+	switch (nSource)
+	{
+	case g_nSourceCodeModel :
+
+		var oOption = document.createElement("OPTION");
+		oOption.text = L_EmbeddedIDL_Text;
+		oOption.value = "";
+		oTypeLibsSelect.add(oOption);
+
+		for (var iIDLLibrary = 1; iIDLLibrary <= cTypeLibs; iIDLLibrary++)
+		{
+			var oIDLLibrary = oTypeLibs.Item(iIDLLibrary);
+			var oVersion = oIDLLibrary.Attributes.Find("version");
+			AddTypeLibOption(oTypeLibsSelect, oIDLLibrary, oVersion ? oVersion.Value : "");
+		}
+		break;
+
+	default :
+
+		oTypeLibsSelect.disabled = !cTypeLibs;
+		oTypeLibsSelect.options.length = cTypeLibs;
+
+		for (var iTypeLib = 1; iTypeLib <= cTypeLibs; iTypeLib++)
+		{
+			var oTypeLib = oTypeLibs.Item(iTypeLib);
+			AddTypeLibOptionIndex(oTypeLibsSelect, iTypeLib, oTypeLib, oTypeLib.Version);
+		}
+		break;
+	}
+
+	oTypeLibsSelect.selectedIndex = 0;
+}
+
+function AddTypeLibOption(oTypeLibsSelect, oTypeLib, strVersion)
+{
+ 	var oOption = document.createElement("OPTION");
+	oOption.text = oTypeLib.Name + "<" + (strVersion.length ? strVersion : "1.0") + ">";
+	oOption.value = oTypeLib.Location;
+	oTypeLibsSelect.add(oOption);
+}
+
+function AddTypeLibOptionIndex(oTypeLibsSelect, iTypeLib, oTypeLib, strVersion)
+{
+ 	var oOption = oTypeLibsSelect.options(iTypeLib - 1);
+	oOption.text = oTypeLib.Name + "<" + (strVersion.length ? strVersion : "1.0") + ">";
+	oOption.value = oTypeLib.Location;
+}
+
+function OnTypeLib()
+{
+	INTERFACE_NAME.options.length = 0;
+	g_bAddInterfaceIsValid = true;
+
+	if (!g_oTypeLibsSelect.options.length)
+	{
+		LOCATION.value = "";
+	}
+	else
+	{
+		var iTypeLib = g_oTypeLibsSelect.selectedIndex;
+
+		if (g_nCurrentSource != g_nSourceCodeModel)
+		{
+			if (IsProjectTypeLib(g_oTypeLibs.Item(iTypeLib + 1)))
+			{
+				g_bAddInterfaceIsValid = false;
+			}
+		}
+
+		LOCATION.value = g_oTypeLibsSelect.options(iTypeLib).value;
+		PopulateInterfaces(iTypeLib);
+	}
+
+	ToggleButtons();
+}
+
+function IsProjectTypeLib(oTypeLib)
+{
+	var strTypeLib = oTypeLib.LIBID;
+
+	if (g_strAttributedLIBIDName == strTypeLib)
+	{
+		return true;
+	}
+
+	var cProjectTypeLibs = g_oCodeModelTypeLibs.Count;
+
+	for (var iTypeLib = 1; iTypeLib <= cProjectTypeLibs; iTypeLib++)
+	{
+		if (g_oCodeModelTypeLibs.Item(iTypeLib).Name == strTypeLib)
+		{
+			return true;
+		}
+	}
+
+	return false;
+}
+
+function PopulateInterfaces(iTypeLib)
+{
+	g_aAvailableInterfaces.length = 0;
+
+	switch (g_nCurrentSource)
+	{
+	case g_nSourceCodeModel :
+
+		if (!iTypeLib)
+		{
+			PopulateInterfacesFromNamespace(g_oCM, vsCMLanguageVC);
+		}
+		else
+		{
+			PopulateInterfacesFromIDL(g_oTypeLibs.Item(iTypeLib));
+		}
+		g_aAvailableInterfaces.sort(SortByAlpha);
+		break;
+
+	default :
+
+		PopulateInterfacesFromTypeLib(g_oTypeLibs.Item(iTypeLib + 1));
+		break;
+	}
+
+	var cInterfaces = g_aAvailableInterfaces.length;
+
+	for (var iInterface = 0; iInterface < cInterfaces; iInterface++)
+	{
+		var strInterface = g_aAvailableInterfaces[iInterface].Name;
+
+		if (g_oImplementedInterfaces.Find(strInterface))
+		{
+			g_aAvailableInterfaces.splice(iInterface, 1);
+			iInterface--;
+			cInterfaces--;
+			continue;
+		}
+
+ 		var oOption = document.createElement("OPTION");
+		oOption.text = strInterface;
+		INTERFACE_NAME.add(oOption);
+	}
+
+	INTERFACE_NAME.selectedIndex = 0;
+}
+
+function IsConnectionPointAlreadyImplemented(strInterface)
+{
+	if (g_bIsAttributedParent)
+	{
+		if (g_oParent.BodyText.search("__event __interface " + strInterface) == -1)
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
+
+	var oCPMap = g_oParent.Maps.Find("CONNECTION_POINT");
+
+	if (!oCPMap)
+	{
+		return false;
+	}
+
+	var str__uuidof = "__uuidof(" + strInterface + ")";
+	var strIID_ = "IID_" + strInterface;
+
+	var oEntries = oCPMap.Entries;
+	var cEntries = oEntries.Count;
+
+	for (var iEntry = 1; iEntry <= cEntries; iEntry++)
+	{
+		var oEntry = oEntries.Item(iEntry);
+
+		if (oEntry.Parameters.Find(str__uuidof) || oEntry.Parameters.Find(strIID_))
+		{
+			return true;
+		}
+	}
+
+	return false;
+}
+
+function SortByAlpha(oLeft, oRight)
+{
+	return oLeft.Name.localeCompare(oRight.Name);
+}
+
+
+function PopulateInterfacesFromTypeLib(oTypeLib)
+{
+	var oInterfaces = oTypeLib.Interfaces;
+	var cInterfaces = oInterfaces.Count;
+
+	for (var iInterface = 1; iInterface <= cInterfaces; iInterface++)
+	{
+		var oInterface = oInterfaces.Item(iInterface);
+
+		if (g_bIsImplementInterface || oInterface.Source)
+		{
+			g_aAvailableInterfaces.push(oInterface);
+		}
+	}
+}
+
+function PopulateInterfacesFromIDL(oLibrary)
+{
+	var oInterfaces = oLibrary.Interfaces;
+	var cInterfaces = oInterfaces.Count;
+
+	for (var iInterface = 1; iInterface <= cInterfaces; iInterface++)
+	{
+		g_aAvailableInterfaces.push(oInterfaces.Item(iInterface));
+	}
+
+	PopulateInterfacesFromNamespace(oLibrary.ProjectItem.FileCodeModel, vsCMLanguageIDL);
+}
+
+function PopulateInterfacesFromNamespace(oNamespace, strLanguage)
+{
+	var oInterfaces = oNamespace.Interfaces;
+	var cInterfaces = oInterfaces.Count;
+
+	for (var iInterface = 1; iInterface <= cInterfaces; iInterface++)
+	{
+		var oInterface = oInterfaces.Item(iInterface);
+
+		if (strLanguage == oInterface.Language)
+		{
+			g_aAvailableInterfaces.push(oInterfaces.Item(iInterface));
+		}
+	}
+
+	var oNamespaces = oNamespace.Namespaces;
+	var cNamespaces = oNamespaces.Count;
+
+	for (var iNamespace = 1; iNamespace <= cNamespaces; iNamespace++)
+	{
+		PopulateInterfacesFromNamespace(oNamespaces.Item(iNamespace), strLanguage);
+	}
+}
+
+function ToggleButtons()
+{
+	AddBtn.disabled = INTERFACE_NAME.selectedIndex == -1;
+	AddAllBtn.disabled = !INTERFACE_NAME.options.length;
+	RemoveBtnX.disabled = IMPLEMENT_INTERFACE_NAME.selectedIndex == -1;
+	RemoveAllBtn.disabled = !IMPLEMENT_INTERFACE_NAME.options.length;
+}
+
+function OnAddInterface(bAll)
+{
+	if (!g_bAddInterfaceIsValid)
+	{
+		L_ErrorProjectTypeLib_Text = "You can not implement an interface from the registry that is in a type library built by this project.";
+		window.external.ReportError(L_ErrorProjectTypeLib_Text);
+		return;
+	}
+
+	if (bAll)
+	{
+		var cInterfaces	= g_aAvailableInterfaces.length;
+
+		for (var iInterface = 0; iInterface < cInterfaces; iInterface++)
+		{
+			AddChosenInterface(iInterface, false);
+		}
+	}
+	else if (INTERFACE_NAME.selectedIndex != -1)
+	{
+		AddChosenInterface(INTERFACE_NAME.selectedIndex, true);
+	}
+
+	if (IMPLEMENT_INTERFACE_NAME.selectedIndex == -1)
+	{
+		IMPLEMENT_INTERFACE_NAME.selectedIndex = 0;
+	}
+
+	ToggleButtons();
+}
+
+function AddChosenInterface(iChosen, bErrorIfDuplicate)
+{
+	var oInterface = g_aAvailableInterfaces[iChosen];
+	var strInterface = oInterface.Name;
+
+	var iInsert = IndexInChosen(strInterface);
+
+	if (-1 == iInsert)
+	{
+		if (bErrorIfDuplicate)
+		{
+			L_Err3_Text = "Interface already selected";
+			window.external.ReportError(L_Err3_Text);
+		}
+
+		return;
+	}
+
+	var oOption = document.createElement("OPTION");
+	oOption.value = strInterface;
+
+	var iTypeLib = g_oTypeLibsSelect.selectedIndex;
+
+	if (g_nCurrentSource == g_nSourceCodeModel)
+	{
+		g_aChosenTypeLibs.splice(iInsert, 0, iTypeLib ? g_oTypeLibs.Item(iTypeLib) : 0);
+	}
+	else
+	{
+		g_aChosenTypeLibs.splice(iInsert, 0, g_oTypeLibs.Item(iTypeLib + 1));
+	}
+
+	g_aChosenSources.splice(iInsert, 0, g_nCurrentSource);
+
+	oOption.text = strInterface;
+
+	IMPLEMENT_INTERFACE_NAME.add(oOption, iInsert);
+	g_aChosenInterfaces.splice(iInsert, 0, oInterface);
+}
+
+function IndexInChosen(strChosen)
+{
+	var cInterfaces = g_aChosenInterfaces.length;
+
+	for (var iInterface = 0; iInterface < cInterfaces; iInterface++)
+	{
+		var iCompare = strChosen.localeCompare(g_aChosenInterfaces[iInterface].Name);
+
+		if (!iCompare)
+		{
+			// Already in the list...
+			return -1;
+		}
+		else if (iCompare < 0)
+		{
+			break;
+		}
+	}
+
+	return iInterface;
+}
+
+function OnRemoveInterface(bAll)
+{
+	if (bAll)
+	{
+		IMPLEMENT_INTERFACE_NAME.options.length = 0;
+		g_aChosenInterfaces.length = 0;
+		g_aChosenTypeLibs.length = 0;
+		g_aChosenSources.length = 0;
+	}
+	else if (IMPLEMENT_INTERFACE_NAME.selectedIndex != -1)
+	{
+		var iInterface = IMPLEMENT_INTERFACE_NAME.selectedIndex;
+		IMPLEMENT_INTERFACE_NAME.options.remove(iInterface);
+		g_aChosenInterfaces.splice(iInterface, 1);
+		g_aChosenTypeLibs.splice(iInterface, 1);
+		g_aChosenSources.splice(iInterface, 1);
+
+		// Fix up the selection...
+		//
+
+		if (IMPLEMENT_INTERFACE_NAME.selectedIndex == -1 &&
+			IMPLEMENT_INTERFACE_NAME.options.length)
+		{
+			if (iInterface >= IMPLEMENT_INTERFACE_NAME.options.length)
+			{
+				iInterface = iInterface - 1;
+			}
+
+			IMPLEMENT_INTERFACE_NAME.selectedIndex = iInterface;
+		}
+	}
+
+	ToggleButtons();
+}
+
+function OnChangeLocation()
+{
+	var iSelected = g_oTypeLibsSelect.selectedIndex;
+	var strOriginal = "";
+
+	if (iSelected != -1)
+	{
+		strOriginal = g_oTypeLibsSelect.options(iSelected).value;
+	}
+
+	if (LOCATION.value.toUpperCase() != strOriginal.toUpperCase())
+	{
+		AddTLBFromFile(LOCATION.value);
+	}
+	else
+	{
+		LOCATION.value = strOriginal;
+	}
+}
+
+function OnBrowseForTLB()
+{
+	var strFile;
+
+	try
+	{
+		L_Title1_Text = "VS Wizards Select File";
+		L_Title2_Text = "TypeLib Files (*.exe; *.dll; *.olb; *.tlb; *.ocx)\0*.exe;*.dll;*.olb;*.tlb;*.ocx\0\0";
+		strFile = window.external.GetExistingFileNameViaDlg(L_Title1_Text, "", L_Title2_Text, "");
+	}
+	catch(e)
+	{
+		if (e.number != OLE_E_PROMPTSAVECANCELLED)
+		{
+			L_Err4_Text = "Error in default.htm OnBrowseForTLB()";
+			if (e.description.length != 0)
+			{
+				L_Err4_Text += ": ";
+				L_Err4_Text += e.description;
+			}
+			window.external.ReportError(L_Err4_Text);
+		}
+
+		return;
+	}
+
+	AddTLBFromFile(strFile);
+}
+
+function AddTLBFromFile(strFile)
+{
+	var cTypeLibs = g_oTypeLibsSelect.options.length;
+	var bFound = false;
+	var strFileUpperCase = strFile.toUpperCase();
+
+	for (var iTypeLib = 0; iTypeLib < cTypeLibs; iTypeLib++)
+	{
+		if (g_oTypeLibsSelect.options(iTypeLib).value.toUpperCase() == strFileUpperCase)
+		{
+			g_oTypeLibsSelect.selectedIndex = iTypeLib;
+			bFound = true;
+			break;
+		}
+	}
+
+	if (!bFound)
+	{
+		// Create a new filetypelib collection and add it to the existing collection
+		//
+
+		var oFileTypeLibs = window.external.FileTypeLibs(strFile);
+		var cFileTypeLibs = oFileTypeLibs.Count;
+
+		if (!cFileTypeLibs)
+		{
+			L_ErrorNoTLB_Text = "No type library found in file: ";
+			window.external.ReportError(L_ErrorNoTLB_Text + strFile);
+			window.focus();
+			return false;
+		}
+
+		g_oTypeLibsSelect.disabled = false;
+
+		for (var iFileTypeLib = 1; iFileTypeLib <= cFileTypeLibs; iFileTypeLib++)
+		{
+			var oFileTypeLib = oFileTypeLibs.Item(iFileTypeLib);
+			g_oTypeLibs.AddItem(oFileTypeLib);
+			AddTypeLibOption(g_oTypeLibsSelect, oFileTypeLib, oFileTypeLib.Version);
+		}
+
+		// Finally, set the index to the first added type library
+		//
+
+		g_oTypeLibsSelect.selectedIndex = cTypeLibs;
+		OnTypeLib();
+	}
+	else
+	{
+		L_ErrorTLBAlreadyInList_Text = ": this type library is already included in the list";
+		window.external.ReportError(strFile + L_ErrorTLBAlreadyInList_Text);
+	}
+
+	return !bFound;
+}
+
+//
+// Implement Interface Code Generation
+//
+
+var g_oBasesMap = new ActiveXObject("Scripting.Dictionary");
+var g_oDisambiguationMap = new ActiveXObject("Scripting.Dictionary");
+
+function AddImplementInterfaceCode()
+{
+	var cInterfaces = g_aChosenInterfaces.length;
+	var strMethodStubs = "";
+
+	for (var iInterface = 0; iInterface < cInterfaces; iInterface++)
+	{
+		var nSource = g_aChosenSources[iInterface];
+		var oInterface = g_aChosenInterfaces[iInterface];
+		var oTypeLib = g_aChosenTypeLibs[iInterface];
+
+		if (nSource != g_nSourceCodeModel && einterfaceDual == oInterface.Type)
+		{
+			oInterface.ActiveType = einterfaceCustom;
+		}
+
+		AddIncludeOrImport(nSource, oInterface, oTypeLib);
+		AddBase(nSource, oInterface, oTypeLib);
+		AddMapEntry(nSource, oInterface);
+		strMethodStubs += GenerateMethodStubs(nSource, oInterface, oTypeLib);
+	}
+
+	DisambiguateMapEntries();
+
+	var oEditPoint = g_oParent.EndPointOf(vsCMPartBody, vsCMWhereDefinition).CreateEditPoint()
+	oEditPoint.Insert(strMethodStubs);
+	g_oCM.Synchronize();
+	g_oParent.StartPoint.CreateEditPoint().SmartFormat(g_oParent.EndPoint);
+}
+
+function IsNumber(str)
+{
+	for(var index=0; index<str.length; index++)
+	{
+		if (!(str.charAt(index) >= '0' && str.charAt(index) <= '9'))
+			return false;
+	}
+	return true;
+}
+
+function AddIncludeOrImport(nSource, oInterface, oTypeLib)
+{
+	switch (nSource)
+	{
+	case g_nSourceCodeModel :
+
+		var strInclude = "";
+
+		// If the intefaces selected is part of our project,
+		// we need to determine the correct file to #include
+		//
+
+		if (oTypeLib)
+		{
+			// If there is a typelib, it is an VCCodeIDLLibrary object,
+			// so just get the MIDL compiler tool's output header file
+			// setting.
+			//
+			var oFile = oTypeLib.ProjectItem.Object;
+			var oMidlTool = oFile.FileConfigurations(1).Tool;
+			strInclude = "\"" + oFile.Project.Configurations(1).Evaluate(oMidlTool.HeaderFileName) + "\"";
+		}
+		else
+		{
+			// If there is no typelib object, it must be embedded IDL (using attributed code)
+			// So, we only need to #include the file the interfaces is in.
+			//
+
+			if (oInterface.ProjectItem.Name != g_oParent.ProjectItem.Name)
+			{
+				strInclude = "\"" + oInterface.ProjectItem.Name + "\"";
+			}
+		}
+
+		if (strInclude.length && !g_oParentFCM.Includes.Find(strInclude))
+		{
+			g_oParentFCM.AddInclude(strInclude, vsCMAddPositionEnd);
+		}
+		break;
+
+	default :
+
+		// If we are using #import("Foo.dll"), we do not #include "Foo.h".
+		//
+		var strTypelib = oTypeLib.Location;
+		strTypelibID = strTypelib.substr(strTypelib.lastIndexOf("\\") + 1);
+		var strTLBID;
+		if(IsNumber(strTypelibID))
+		{
+			strTLBID = strTypelibID;
+			strTypelib = strTypelib.substring(0, strTypelib.lastIndexOf("\\"));
+		}
+
+		var strImport = "\"" + strTypelib + "\"";
+
+		if (!g_oPCHFCM.Imports.Find(strImport))
+		{
+			var strAttributes = "";
+			if(strTLBID != null)
+			{
+				strAttributes = "tlbid(" + strTLBID + "), ";
+			}
+			strAttributes += "raw_interfaces_only, raw_native_types, no_namespace, named_guids";
+			strAttributes += ", auto_search";
+			g_oPCHFCM.AddImport(strImport, vsCMAddPositionEnd,  strAttributes);
+		}
+		break;
+	}
+}
+
+function AddBase(nSource, oInterface, oTypeLib)
+{
+	var strBase;
+	var strInterface = oInterface.Name;
+	var bCustom = IsCustomInterface(nSource, oInterface);
+
+	// If parent is attributed, and we are adding an embedded IDL interface...
+	// OR, this is a custom interface (i.e., not derived from IDispatch)
+	//
+
+	if (g_bIsAttributedParent && !oTypeLib)
+	{
+		// When adding an embedded idl interface to an attributed parent,
+		// We will not get the correct object back.
+		//
+		g_oParent.AddBase(strInterface, vsCMAddPositionEnd);
+	}
+	else if (bCustom)
+	{
+		if (!g_oParent.Bases.Find(strInterface))
+		{
+			g_oParent.AddBase(strInterface, vsCMAddPositionEnd);
+		}
+	}
+	else
+	{
+		var strLIBID;
+		var strMajor;
+		var strMinor;
+
+		switch (nSource)
+		{
+		case g_nSourceCodeModel :
+
+			var strVersion;
+
+			if (oTypeLib)
+			{
+				strLIBID = "LIBID_" + oTypeLib.Name;
+				oVersion = oTypeLib.Attributes.Find("version");
+				if (oVersion)
+					strVersion = oVersion.Value;
+				else
+					strVersion = "1.0";
+			}
+			else
+			{
+				// If there is no typelib object, it must be embedded IDL (using attributed code)
+				//
+
+				strLIBID = g_strAttributedLIBID;
+				strVersion = g_strAttributedVersion;
+
+				// Also, for embedded IDL, we need to add __LIBID_
+				//
+
+				var oEditPoint = g_oPCHFCM.EndPoint.CreateEditPoint();
+				var strText = "extern \"C\" const GUID " + strLIBID + ";";
+				var vsFindOptionsBackwards = 128;
+
+				//
+				//if (!oEditPoint.FindPattern(strText, vsFindOptionsBackwards))
+				//{
+					oEditPoint.Insert("\r\n" + strText);
+					g_oCM.Synchronize();
+				//}
+			}
+
+			var iDot = strVersion.indexOf(".");
+			var strMajor = strVersion.substring(0, iDot);
+			var strMinor = strVersion.substr(iDot + 1);
+			break;
+
+		default :
+
+			strLIBID = "LIBID_" + oTypeLib.LIBID;
+			strMajor = oTypeLib.MajorVersion;
+			strMinor = oTypeLib.MinorVersion;
+			break;
+		}
+
+		strBase = "IDispatchImpl<" + strInterface + ", &__uuidof(" + strInterface + ")";
+
+		if (strLIBID != "")
+		{
+			strBase += ", &" + strLIBID;
+			if (strMajor != "")
+			{
+				strBase += ", /* wMajor = */ " + strMajor;
+				if (strMinor != "")
+				{
+					strBase += ", /* wMinor = */ " + strMinor;
+				}
+			}
+		}
+
+		strBase += ">"
+
+
+		if (!g_oParent.Bases.Find(strBase))
+		{
+			g_oParent.AddBase(strBase, vsCMAddPositionEnd);
+		}
+	}
+}
+
+function IsCustomInterface(nSource, oInterface)
+{
+	if (nSource == g_nSourceCodeModel)
+	{
+		var oBases = oInterface.Bases;
+		var cBases = oBases.Count;
+
+		if (!cBases)
+		{
+			return false;
+		}
+		else
+		{
+			oBase = oBases.Item(1);
+
+			if (oBase.Name == "IDispatch")
+			{
+				return false;
+			}
+			else
+			{
+				var oBaseInterface = oBase.Class;
+
+				if (oBaseInterface)
+				{
+					return IsCustomInterface(nSource, oBaseInterface);
+				}
+			}
+		}
+	}
+	else
+	{
+		return oInterface.Type == einterfaceCustom && oInterface.IsDispatchable == false;
+	}
+}
+
+function AddMapEntry(nSource, oInterface)
+{
+	if (g_bIsAttributedParent)
+	{
+		return false;
+	}
+
+	var oMap = g_oParent.Maps.Find("COM");
+
+	if (!oMap)
+	{
+		oMap = g_oParent.AddMap("COM", "", vsCMAddPositionEnd);
+	}
+
+	var oMapItem = oMap.AddEntry("COM_INTERFACE_ENTRY", vsCMAddPositionEnd);
+	var strInterface = oInterface.Name;
+	oMapItem.AddParameter(strInterface, vsCMAddPositionEnd);
+
+	var strBase;
+
+	if (g_nSourceCodeModel == nSource)
+	{
+		var oBases = oInterface.Bases;
+
+		if (oBases.Count)
+		{
+			strBase = oBases.Item(1).FullName;
+		}
+		else
+		{
+			strBase = "IDispatch";
+		}
+	}
+	else
+	{
+		strBase = oInterface.Base;
+	}
+
+	if (!g_oBasesMap.Exists(strBase))
+	{
+		g_oBasesMap.Add(strBase, strInterface);
+	}
+
+	var oMapEntries = oMap.Entries;
+	var cMapEntries = oMapEntries.Count;
+
+	for (var iMapEntry = 1; iMapEntry <= cMapEntries; iMapEntry++)
+	{
+		var oMapEntry = oMapEntries.Item(iMapEntry);
+
+		if (oMapEntry.Name == "COM_INTERFACE_ENTRY" && oMapEntry.Parameters.Item(1).Name == strBase)
+		{
+			if (!g_oDisambiguationMap.Exists(strBase))
+			{
+				g_oDisambiguationMap.Add(strBase, strInterface);
+			}
+			break;
+		}
+	}
+
+	if (g_oBasesMap.Exists(strInterface) && !g_oDisambiguationMap.Exists(strInterface))
+	{
+		g_oDisambiguationMap.Add(strInterface, g_oBasesMap.Item(strInterface));
+	}
+
+	return true;
+}
+
+function DisambiguateMapEntries()
+{
+	if (g_bIsAttributedParent)
+	{
+		return;
+	}
+
+	var oMap = g_oParent.Maps.Find("COM");
+	var oMapEntries = oMap.Entries;
+	var cMapEntries = oMapEntries.Count;
+
+	for (var iMapEntryHack = 1; iMapEntryHack <= cMapEntries; iMapEntryHack++)
+	{
+		oMap = g_oParent.Maps.Find("COM");
+		oMapEntries = oMap.Entries;
+		cMapEntries = oMapEntries.Count;
+
+		for (var iMapEntry = 1; iMapEntry <= cMapEntries; iMapEntry++)
+		{
+			var oMapEntry = oMapEntries.Item(iMapEntry);
+			var strInterface = oMapEntry.Parameters.Item(1).Name;
+
+			if (oMapEntry.Name == "COM_INTERFACE_ENTRY" && g_oDisambiguationMap.Exists(strInterface))
+			{
+				var strUnambiguous = LookupUnambiguousInterface(g_oDisambiguationMap.Item(strInterface));
+				oMapEntry.AddParameter(strUnambiguous, vsCMAddPositionEnd);
+				oMapEntry.Name = "COM_INTERFACE_ENTRY2";
+				break;
+			}
+		}
+	}
+}
+
+function LookupUnambiguousInterface(strInterface)
+{
+	if (!g_oDisambiguationMap.Exists(strInterface))
+	{
+		return strInterface;
+	}
+	else
+	{
+		return LookupUnambiguousInterface(g_oDisambiguationMap.Item(strInterface));
+	}
+}
+
+var g_aMethodPrototypes = new Array();
+
+function GenerateMethodStubs(nSource, oInterface, oTypeLib)
+{
+	var strInterfaceStubs = "";
+
+	if (oInterface.Name != "IUnknown")
+	{
+		strInterfaceStubs += "\r\n// " + oInterface.Name + " Methods\r\npublic:\r\n";
+	}
+
+	var oMethods = oInterface.Functions;
+	var cMethods = oMethods.Count;
+
+	for (var iMethod = 1; iMethod <= cMethods; iMethod++)
+	{
+		var oMethod = oMethods.Item(iMethod);
+		var strMethodName = oMethod.Name;
+
+		if (strMethodName == "AddRef" ||
+			strMethodName == "Release" ||
+			strMethodName == "QueryInterface")
+		{
+			continue;
+		}
+
+		var strMethodStub = "";
+		var strReturnType = oMethod.TypeString;
+		var strMethodPrototype = "";
+
+		if (strReturnType != "HRESULT")
+		{
+			strMethodStub += "STDMETHOD_(" + strReturnType + ", ";
+		}
+		else
+		{
+			strMethodStub += "STDMETHOD(";
+		}
+
+		if (nSource == g_nSourceCodeModel)
+		{
+			var oAttributes = oMethod.Attributes;
+
+			if (oAttributes.Find("propput"))
+			{
+				strMethodStub += "put_";
+				strMethodPrototype += "put_";
+			}
+			else if (oAttributes.Find("propputref"))
+			{
+				strMethodStub += "putref_";
+				strMethodPrototype += "putref_";
+			}
+			else if (oAttributes.Find("propget"))
+			{
+				strMethodStub += "get_";
+				strMethodPrototype += "get_";
+			}
+		}
+
+		strMethodStub += strMethodName;
+		strMethodStub += ")(";
+
+		strMethodPrototype += strMethodName;
+		strMethodPrototype += "(";
+
+		var oParameters = oMethod.Parameters;
+		var cParameters = oParameters.Count;
+
+		for (iParameter = 1; iParameter <= cParameters; iParameter++)
+		{
+			if (iParameter > 1)
+			{
+				strMethodStub += ", ";
+				strMethodPrototype += ", ";
+			}
+
+			var oParameter = oParameters.Item(iParameter);
+			if (oParameter.TypeString.substr(0, 9) == "SAFEARRAY")
+			{
+				var index = oParameter.TypeString.indexOf('(');
+
+				// If parameter type is SAFEARRAY and array element type is specified inside "(...)"
+				// in the idl, we should use "SAFEARRAY *" in the ".h" and ".cpp" files.
+
+				if (index != -1 && (oParameter.TypeString.charAt(10) == ' ') || (index == 10))
+					strMethodStub += "SAFEARRAY *" + oParameter.TypeString.substr(oParameter.TypeString.indexOf(')') + 1);
+				else
+					strMethodStub += oParameter.TypeString;
+			}
+			else
+				strMethodStub += oParameter.TypeString;
+			strMethodStub += " " + oParameter.Name;
+			strMethodPrototype += oParameter.TypeString;
+		}
+
+		strMethodStub += ")";
+		strMethodPrototype += ")";
+
+		var strMethodValidate = strMethodPrototype;
+
+		strMethodPrototype = strReturnType + " " + strMethodPrototype;
+
+		var cMethodPrototypes = g_aMethodPrototypes.length;
+
+		for (var iMethodPrototype = 0; iMethodPrototype < cMethodPrototypes; iMethodPrototype++)
+		{
+			if (window.external.dte.VCLanguageManager.CompareTokenStreams( g_aMethodPrototypes[iMethodPrototype], strMethodPrototype))
+			{
+				break;
+			}
+		}
+
+		if (iMethodPrototype < cMethodPrototypes)
+		{
+			// Already There!
+			//
+
+			strInterfaceStubs += "// Duplicate Method : " + strMethodPrototype + "\r\n";
+			continue;
+		}
+
+		g_aMethodPrototypes.push(strMethodPrototype);
+
+		strMethodStub += "\r\n{\r\n\t";
+
+		try
+		{
+			strMethodStub += oMethod.BodyText;
+		}
+		catch(e)
+		{
+			strMethodStub += GenerateDefaultMethodBody(strReturnType);
+		}
+
+		strMethodStub += "\r\n}\r\n";
+
+		// Check for duplicate methods that pre-existed in the parent
+		//
+
+		if (!g_oParent.ValidateMember(strMethodValidate, vsCMElementFunction, strReturnType))
+		{
+			continue;
+		}
+
+		strInterfaceStubs += strMethodStub;
+	}
+
+	return strInterfaceStubs;
+}
+
+function GenerateDefaultMethodBody(strReturnType)
+{
+	var L_strComment_Text = "// Add your function implementation here.\n";
+	var strMethodBody = "";
+
+	switch(strReturnType)
+	{
+		case "short":
+		case "long":
+		case "OLE_XPOS_HIMETRIC":
+		case "OLE_YPOS_HIMETRIC":
+		case "OLE_XSIZE_HIMETRIC":
+		case "OLE_YSIZE_HIMETRIC":
+		case "OLE_XPOS_PIXELS":
+		case "OLE_YPOS_PIXELS":
+		case "OLE_XSIZE_PIXELS":
+		case "OLE_YSIZE_PIXELS":
+		case "OLE_OPTEXCLUSIVE":
+			strMethodBody += L_strComment_Text;
+			strMethodBody += "return 0;";
+			break;
+
+		case "IDispatch*":
+		case "IFontDisp*":
+		case "IPictureDisp*":
+		case "IUnknown*":
+		case "OLE_HANDLE":
+			strMethodBody += L_strComment_Text;
+			strMethodBody += "return NULL;";
+			break;
+
+		case "float":
+			strMethodBody += L_strComment_Text;
+			strMethodBody += "return 0.0f;";
+			break;
+
+		case "double":
+			strMethodBody += L_strComment_Text;
+			strMethodBody += "return 0.0;";
+			break;
+
+		case "DATE":
+			strMethodBody += L_strComment_Text;
+			strMethodBody += "return (DATE)0;";
+			break;
+
+		case "OLE_COLOR":
+			strMethodBody += L_strComment_Text;
+			strMethodBody += "return RGB(0,0,0);";
+			break;
+
+		case "OLE_TRISTATE":
+			strMethodBody += L_strComment_Text;
+			strMethodBody += "return (DATE)0;";
+			break;
+
+		case "SCODE":
+			strMethodBody += L_strComment_Text;
+			strMethodBody += "return S_OK;";
+			break;
+
+		case "BSTR":
+			strMethodBody += L_strComment_Text;
+			strMethodBody += "return NULL;";
+			break;
+
+		case "CY":
+			strMethodBody += "CURRENCY cyResult = { 0, 0 };\r\n\r\n";
+			strMethodBody += L_strComment_Text;
+			strMethodBody += "return cyResult;";
+			break;
+
+		case "VARIANT":
+			strMethodBody += "VARIANT vaResult;\r\n";
+			strMethodBody += "VariantInit(&vaResult);\r\n\r\n";
+			strMethodBody += L_strComment_Text;
+			strMethodBody += "return vaResult;";
+			break;
+
+		case "VARIANT_BOOL":
+			strMethodBody += L_strComment_Text;
+			strMethodBody += "return VARIANT_TRUE;";
+			break;
+
+		case "HRESULT":
+			strMethodBody += L_strComment_Text;
+			strMethodBody += "return E_NOTIMPL;";
+			break;
+
+		case "void":
+			strMethodBody += L_strComment_Text;
+			break;
+
+		default:
+			strMethodBody += L_strComment_Text;
+			strMethodBody += "return 0;";
+			break;
+	}
+	return strMethodBody;
+}
+
+//
+// Implement Connection Point Code Generation
+//
+
+function AddConnectionPointCode()
+{
+	AddConnectionPointContainerSupport();
+
+	var cInterfaces = g_aChosenInterfaces.length;
+
+	for (var iInterface = 0; iInterface < cInterfaces; iInterface++)
+	{
+		var nSource = g_aChosenSources[iInterface];
+		var oInterface = g_aChosenInterfaces[iInterface];
+		var oTypeLib = g_aChosenTypeLibs[iInterface];
+
+		AddIncludeOrImport(nSource, oInterface, oTypeLib);
+		AddProxyBase(nSource, oInterface, oTypeLib);
+		AddEventOrMapEntry(nSource, oInterface, oTypeLib);
+		AddProxyClassAndInclude(nSource, oInterface, oTypeLib);
+	}
+}
+
+function AddConnectionPointContainerSupport()
+{
+	if (g_bIsAttributedParent)
+	{
+		// For attributed parents, just need to add the event_source("com")
+		// attribute, if it is not already there.
+		//
+
+		var oAttributes = g_oParent.Attributes;
+		var cAttributes = oAttributes.Count;
+
+		for (var iAttribute = 1; iAttribute <= cAttributes; iAttribute++)
+		{
+			if (oAttributes.Item(iAttribute).Name == "event_source" && oAttributes.Item(iAttribute).Parameters.Count > 0)
+			{
+				var oParameter = oAttributes.Item(iAttribute).Parameters.Item(1);
+
+				if (oParameter && (oParameter.DefaultExpression == "com" || oParameter.DefaultExpression == "\"com\""))
+				{
+					// It's already there, we are done.
+					return;
+				}
+			}
+		}
+
+		g_oParent.AddAttribute("event_source", "com", vsCMAddPositionEnd);
+	}
+	else
+	{
+		// For non-attributed parents, we need to add IConnectionPointContainerImpl...
+		//
+
+		if (!g_oParent.IsDerivedFrom("ATL::IConnectionPointContainerImpl<" + g_oParent.Name + ">"))
+		{
+			g_oParent.AddBase("IConnectionPointContainerImpl<" + g_oParent.Name + ">", vsCMAddPositionEnd);
+		}
+
+		var oComMap = g_oParent.Maps.Find("COM");
+
+		if (!oComMap)
+		{
+			oComMap = g_oParent.AddMap("COM", "", vsCMAddPositionEnd);
+		}
+
+		var oEntries = oComMap.Children;
+		var cEntries = oEntries.Count;
+		var bAddEntry = true;
+
+		for (var iEntry = 1; iEntry <= cEntries; iEntry++)
+		{
+			var oEntry = oEntries.Item(iEntry);
+
+			if (oEntry.Name == "COM_INTERFACE_ENTRY")
+			{
+				if (oEntry.Parameters(1) == "IConnectionPointContainer")
+				{
+					bAddEntry = false;
+					break;
+				}
+			}
+		}
+
+		if (bAddEntry)
+		{
+			oComMap.AddEntry("COM_INTERFACE_ENTRY(IConnectionPointContainer)", vsCMAddPositionEnd);
+		}
+
+		if (!g_oParent.Maps.Find("CONNECTION_POINT"))
+		{
+			g_oParent.AddMap("CONNECTION_POINT", "", vsCMAddPositionEnd);
+		}
+	}
+}
+
+function AddProxyBase(nSource, oInterface, oTypeLib)
+{
+	if (g_bIsAttributedParent && !(nSource == g_nSourceCodeModel && oTypeLib))
+	{
+		// When adding an embedded idl interface to an attributed parent, we do not need to add a base.
+		//
+
+		return;
+	}
+
+	var strBase = "CProxy" + oInterface.Name + "<" + g_oParent.Name + ">";
+
+	if (!g_oParent.Bases.Find("ATL::"+strBase))
+	{
+		g_oParent.AddBase(strBase, vsCMAddPositionEnd);
+	}
+}
+
+function AddEventOrMapEntry(nSource, oInterface, oTypeLib)
+{
+	if (g_bIsAttributedParent && !(nSource == g_nSourceCodeModel && oTypeLib))
+	{
+		//we need to check if g_oParent already has this interface.
+		var bInterfaceAlreadyAdded = false;
+		for (var i = 1; i <= g_oParent.Members.Count; i++)
+		{
+			var oMember = g_oParent.Members(i);
+			if (oMember = oInterface)
+			{
+				bInterfaceAlreadyAdded = true;
+				break;
+			}
+		}
+
+		if (!bInterfaceAlreadyAdded)
+		{
+			g_oParent.EndPointOf(vsCMPartBody).CreateEditPoint().Insert("\t__event __interface " + oInterface.Name + ";\r\n");
+		}
+		g_oCM.Synchronize();
+	}
+	else
+	{
+		var oCPMap = g_oParent.Maps.Find("CONNECTION_POINT");
+
+		if (!oCPMap)
+		{
+			oCPMap = g_oParent.AddMap("CONNECTION_POINT", "", vsCMAddPositionEnd);
+		}
+		var oEntryParamStr = "__uuidof(" + oInterface.Name + ")";
+		var oEntryStr = "CONNECTION_POINT_ENTRY(" + oEntryParamStr + ")";
+		var oEntries = oCPMap.Entries;
+		for(var cnt=1; cnt<=oEntries.Count; cnt++)
+		{
+			var oEntry = oEntries.Item(cnt);
+			if(oEntry.Name == "CONNECTION_POINT_ENTRY")
+			{
+				var oParams = oEntry.Parameters;
+				if(oParams.Count>=1)
+				{
+					if(oParams.Item(1).Name == oEntryParamStr)
+					{
+						return;
+					}
+				}
+			}
+		}
+		oCPMap.AddEntry(oEntryStr);
+	}
+}
+
+function AddProxyClassAndInclude(nSource, oInterface, oTypeLib)
+{
+	if (g_bIsAttributedParent && !(nSource == g_nSourceCodeModel && oTypeLib))
+	{
+		return;
+	}
+
+	var strProxyHeaderFile = oInterface.Name + "_CP.H";
+	var strProxyHeaderInclude = '"' + strProxyHeaderFile + '"';
+
+	if (!g_oParentFCM.Includes.Find(strProxyHeaderInclude))
+	{
+		g_oParentFCM.AddInclude(strProxyHeaderInclude, vsCMAddPositionEnd);
+	}
+
+	var oItem;
+
+	if (g_oProject.Object.CanAddFile(strProxyHeaderFile))
+	{
+		var strTemplatesPath = window.external.FindSymbol( "TEMPLATES_PATH" );
+		window.external.RenderTemplate(strTemplatesPath + "\\ProxyHeader.H", strProxyHeaderFile);
+		g_oProject.Object.AddFile(strProxyHeaderFile);
+		oItem = FindProjectItem(g_oProject, strProxyHeaderFile);
+	}
+	else
+	{
+		// The header must already exist.  Delete the existing text.
+		oItem = FindProjectItem(g_oProject, strProxyHeaderFile);
+		oItem.FileCodeModel.StartPoint.CreateEditPoint().Delete(oItem.FileCodeModel.EndPoint);
+	}
+
+	var strClass = "";
+	strClass += GetProxyClassHeader(oInterface);
+	strClass += GetProxyMethodsForInterface(nSource, oInterface);
+	strClass += GetProxyClassFooter();
+
+	var oInsertionPoint = oItem.FileCodeModel.StartPoint.CreateEditPoint();
+	oInsertionPoint.Insert(strClass);
+	g_oCM.Synchronize();
+	g_oProject.Object.Save();
+//	oItem.Object.Save();
+}
+
+function GetProxyClassHeader(oInterface)
+{
+	var strHeader;
+	var strInterface = oInterface.Name;
+	var strIID = "__uuidof(" + strInterface + ")";
+
+	strHeader =
+		"template<class T>\r\n" +
+		"class CProxy" + strInterface + " :\r\n" +
+		"\tpublic ATL::IConnectionPointImpl<T, &" + strIID +  ">\r\n" +
+		"{\r\n" +
+		"public:\r\n";
+
+	return strHeader;
+}
+
+function GetProxyMethodsForInterface(nSource, oInterface)
+{
+	var strProxyMethods = "";
+
+	var oFunctions = oInterface.Functions;
+	var cFunctions = oFunctions.Count;
+
+	for (var iFunction = 1; iFunction <= cFunctions; iFunction++)
+	{
+		var oFunction = oFunctions.Item(iFunction);
+
+		if (oFunction.Name != "AddRef" &&
+			oFunction.Name != "Release" &&
+			oFunction.Name != "QueryInterface")
+		{
+			strProxyMethods += GetProxyMethod(nSource, oInterface, oFunction);
+		}
+	}
+
+	return strProxyMethods;
+}
+
+function GetProxyClassFooter()
+{
+	return "};\r\n\r\n";
+}
+
+function GetProxyMethod(nSource, oInterface, oFunction)
+{
+	var strProxyMethod = "";
+
+	strProxyMethod += "\tHRESULT Fire_" + oFunction.Name + "(";
+
+	var strParameters = ""
+	var oParameters = oFunction.Parameters;
+	var cParameters = oParameters.Count;
+
+	for (var iParameter = 1; iParameter <= cParameters; iParameter++)
+	{
+		var oParameter = oParameters.Item(iParameter);
+
+		strParameters += oParameter.TypeString + " " + oParameter.Name;
+
+		if (iParameter < cParameters)
+		{
+			strParameters += ", ";
+		}
+	}
+
+	strProxyMethod += strParameters;
+	strProxyMethod +=
+		")\r\n"+
+		"\t{\r\n"+
+		"\t\tHRESULT hr = S_OK;\r\n"+
+		"\t\tT * pThis = static_cast<T *>(this);\r\n"+
+		"\t\tint cConnections = m_vec.GetSize();\r\n"+
+		"\r\n";
+
+	strProxyMethod +=
+		"\t\tfor (int iConnection = 0; iConnection < cConnections; iConnection++)\r\n"+
+		"\t\t{\r\n"+
+		"\t\t\tpThis->Lock();\r\n"+
+		"\t\t\tCComPtr<IUnknown> punkConnection = m_vec.GetAt(iConnection);\r\n"+
+		"\t\t\tpThis->Unlock();\r\n\r\n";
+
+	var strDISPID = "";
+
+	if (g_nSourceCodeModel == nSource)
+	{
+	    var oID = oFunction.Attributes.Find("id");
+		if (oID && (oInterface.Type != einterfaceCustom))
+		{
+			strDISPID = oID.Value;
+		}
+	}
+	else
+	{
+	    if(oInterface.Type != einterfaceCustom)
+	    {
+		    strDISPID = oFunction.DispID;
+        }
+	}
+
+	if (strDISPID != "")
+	{
+		var cDISPPARAMS = oParameters.Count;
+		var iRetVal = 0;
+
+		if (cParameters)
+		{
+			if (g_nSourceCodeModel == nSource)
+			{
+				var strFunctionDeclaration = oFunction.DeclarationText;
+
+				if (strFunctionDeclaration.search("retval") >= 0)
+				{
+					// retval must be last.
+					iRetVal = cDISPPARAMS;
+					cDISPPARAMS--;
+				}
+			}
+			else
+			{
+				var oParameter = oParameters.Item(cParameters);
+
+				if (oParameter.Attribute == eparamOutRetval)
+				{
+					// retval must be last.
+					iRetVal = cDISPPARAMS;
+					cDISPPARAMS--;
+				}
+			}
+		}
+
+		strProxyMethod +=
+			"\t\t\tIDispatch * pConnection = static_cast<IDispatch *>(punkConnection.p);\r\n\r\n" +
+			"\t\t\tif (pConnection)\r\n" +
+			"\t\t\t{\r\n";
+
+		var strParametersVar = "NULL";
+
+		if (cDISPPARAMS > 0)
+		{
+			strProxyMethod += "\t\t\t\tCComVariant avarParams[" + cDISPPARAMS + "];\r\n";
+			strParametersVar = "avarParams";
+		}
+
+		// DISPPARAMs are in reverse order.
+		//
+
+		var iDISPPARAM = cDISPPARAMS - 1;
+
+		for (var iParameter = 1; iParameter <= cParameters; iParameter++)
+		{
+			if (iParameter != iRetVal)
+			{
+				var oParameter = oParameters.Item(iParameter);
+				var strVT_TYPE = GetVT(oParameter.TypeString);
+				strProxyMethod += "\t\t\t\tavarParams[" + iDISPPARAM + "]";
+
+				// special case for VARIANT
+				// VARIANT -> params[i] = param
+				// VARIANT * -> params[i].vt = VT_VARIANT | VT_BYREF; params[i].pvarVal = param
+
+				var bIsVariant = (strVT_TYPE.indexOf("VT_VARIANT") != -1);
+				var bIsByRef = strVT_TYPE.indexOf("VT_BYREF") != -1;
+				if (bIsByRef)
+				{
+				  strProxyMethod += bIsVariant ? ".pvarVal" : ".byref";
+				}
+
+                strProxyMethod += " = " + oParameter.Name + ";";
+
+				var strVariant;
+				if(strVT_TYPE && (!bIsVariant || bIsByRef))
+					strProxyMethod += "\r\n\t\t\t\tavarParams[" + iDISPPARAM + "].vt = " + strVT_TYPE + ";";
+				strProxyMethod += "\r\n";
+				iDISPPARAM--;
+			}
+		}
+
+		var bCustom = IsCustomInterface(nSource, oInterface);
+		var strReturnType = "";
+
+		if (!bCustom && iRetVal == 0)
+		{
+			strReturnType = oFunction.TypeString;
+		}
+		else if (iRetVal != 0)
+		{
+			strReturnType = oParameters(iRetVal).TypeString;
+		}
+
+		var strResult;
+		if (strReturnType != "" && strReturnType != "void" && strReturnType != "VOID")
+		{
+			strProxyMethod +="\t\t\t\tCComVariant varResult;\r\n";
+
+			if(iRetVal != 0)
+			{
+			    var oRetValParam = oParameters(iRetVal);
+			    var retValType = GetVT(oRetValParam.TypeString);
+
+			    // [out, retval] parameter always by ref
+			    strProxyMethod += "\t\t\t\tif(" + oRetValParam.Name + ")\r\n";
+			    strProxyMethod += "\t\t\t\t{\r\n";
+			    strProxyMethod +="\t\t\t\t\tvarResult.byref = " + oRetValParam.Name + ";\r\n";
+			    strProxyMethod +="\t\t\t\t\tvarResult.vt = " + retValType + ";\r\n";
+			    strProxyMethod += "\t\t\t\t}\r\n";
+			}
+
+			strProxyMethod += "\r\n";
+			strResult = "&varResult";
+		}
+		else
+		{
+			strResult = "NULL";
+		}
+
+		strProxyMethod +=
+			"\t\t\t\tDISPPARAMS params = { " + strParametersVar + ", NULL, " + cDISPPARAMS + ", 0 };\r\n"+
+			"\t\t\t\thr = pConnection->Invoke(" + strDISPID + ", IID_NULL, LOCALE_USER_DEFAULT, DISPATCH_METHOD, &params, " + strResult + ", NULL, NULL);\r\n" +
+			"\t\t\t}\r\n" +
+			"\t\t}\r\n" +
+			"\t\treturn hr;\r\n";
+	}
+	else
+	{
+		strProxyMethod +=
+			"\t\t\t" + oInterface.Name + " * pConnection = static_cast<" + oInterface.Name + " *>(punkConnection.p);\r\n\r\n" +
+			"\t\t\tif (pConnection)\r\n" +
+			"\t\t\t{\r\n" +
+			"\t\t\t\thr = pConnection->" + oFunction.Name + "(";
+
+		var strParameters = "";
+		for (var iParameter = 1; iParameter <= cParameters; iParameter++)
+		{
+			var oParameter = oParameters.Item(iParameter);
+			strParameters += oParameter.Name;
+
+			if (iParameter < cParameters)
+			{
+				strParameters += ", "
+			}
+		}
+
+		strProxyMethod += strParameters + ");\r\n" +
+			"\t\t\t}\r\n" +
+			"\t\t}\r\n" +
+			"\t\treturn hr;\r\n";
+	}
+
+	strProxyMethod += "\t}\r\n";
+
+	return strProxyMethod;
+}
+
+//copied from methoswiz script
+function GetVT(strType)
+{
+	var strCleanType = "";
+	for (var nChar=0; nChar<strType.length; nChar++)
+	{
+		var strChar = strType.charAt(nChar);
+		if(strChar!=' ')
+			strCleanType += strChar;
+	}
+	for (var nCntr = 0; nCntr < strTypes.length; nCntr++)
+	{
+		if (strTypes[nCntr] == strCleanType)
+		{
+			var strVT = vtTypes[nCntr];
+			if (strVT == "VTS_SCODE")
+				return "VT_ERROR";
+			else if (strVT == "VTS_PSCODE")
+				return "VT_ERROR|VT_BYREF";
+			else
+			{
+                //VTS_<P>XXX --> VT_XXX <|VT_BYREF>
+                if(strVT != "VTS_PICTURE" && strVT.substr(4,1)=='P')
+                    strVT = strVT.substr(0,2) + "_" + strVT.substr(5) + "|VT_BYREF";
+                else
+				    strVT = strVT.substr(0,2) + strVT.substr(3);
+				return strVT;
+			}
+		}
+	}
+
+	return "";
+}
+
+var vtTypes = new Array;
+var strTypes = new Array;
+
+ vtTypes[0]		= "VTS_BSTR";
+strTypes[0]		= "BSTR";
+ vtTypes[1]		= "VTS_PBSTR";
+strTypes[1]		= "BSTR*";
+ vtTypes[2]		= "VTS_UI1";
+strTypes[2]		= "BYTE";
+ vtTypes[3]		= "VTS_PUI1";
+strTypes[3]		= "BYTE*";
+ vtTypes[4]		= "VTS_I1";
+strTypes[4]		= "CHAR";
+ vtTypes[5]		= "VTS_PI1";
+strTypes[5]		= "CHAR*";
+ vtTypes[6]		= "VTS_CY";
+strTypes[6]		= "CY";
+ vtTypes[7]		= "VTS_PCY";
+strTypes[7]		= "CY*";
+ vtTypes[8]		= "VTS_DATE";
+strTypes[8]		= "DATE";
+ vtTypes[9]		= "VTS_PDATE";
+strTypes[9]		= "DATE*";
+ vtTypes[10]	= "VTS_R8";
+strTypes[10]	= "DOUBLE";
+ vtTypes[11]	= "VTS_PR8";
+strTypes[11]	= "DOUBLE*";
+ vtTypes[12]	= "VTS_R4";
+strTypes[12]	= "FLOAT";
+ vtTypes[13]	= "VTS_PR4";
+strTypes[13]	= "FLOAT*";
+ vtTypes[14]	= "VTS_HRESULT";
+strTypes[14]	= "HRESULT";
+ vtTypes[15]	= "VTS_DISPATCH";
+strTypes[15]	= "IDispatch*";
+ vtTypes[16]	= "VTS_PDISPATCH";
+strTypes[16]	= "IDispatch**";
+ vtTypes[17]	= "VTS_FONT";
+strTypes[17]	= "IFontDisp*";
+ vtTypes[18]	= "VTS_PICTURE";
+strTypes[18]	= "IPictureDisp*";
+ vtTypes[19]	= "VTS_UNKNOWN";
+strTypes[19]	= "IUnknown*";
+ vtTypes[20]	= "VTS_PUNKNOWN";
+strTypes[20]	= "IUnknown**";
+ vtTypes[21]	= "VTS_I4";
+strTypes[21]	= "LONG";
+ vtTypes[22]	= "VTS_PI4";
+strTypes[22]	= "LONG*";
+ vtTypes[23]	= "VTS_I8";
+strTypes[23]	= "LONGLONG";
+ vtTypes[24]	= "VTS_PI8";
+strTypes[24]	= "LONGLONG*";
+ vtTypes[25]	= "VTS_COLOR";
+strTypes[25]	= "OLE_COLOR";
+ vtTypes[26]	= "VTS_PCOLOR";
+strTypes[26]	= "OLE_COLOR*";
+ vtTypes[27]	= "VTS_XPOS_HIMETRIC";
+strTypes[27]	= "OLE_XPOS_HIMETRIC";
+ vtTypes[28]	= "VTS_PXPOS_HIMETRIC";
+strTypes[28]	= "OLE_XPOS_HIMETRIC*";
+ vtTypes[29]	= "VTS_YPOS_HIMETRIC";
+strTypes[29]	= "OLE_YPOS_HIMETRIC";
+ vtTypes[30]	= "VTS_PYPOS_HIMETRIC";
+strTypes[30]	= "OLE_YPOS_HIMETRIC*";
+ vtTypes[31]	= "VTS_XSIZE_HIMETRIC";
+strTypes[31]	= "OLE_XSIZE_HIMETRIC";
+ vtTypes[32]	= "VTS_PXSIZE_HIMETRIC";
+strTypes[32]	= "OLE_XSIZE_HIMETRIC*";
+ vtTypes[33]	= "VTS_YSIZE_HIMETRIC";
+strTypes[33]	= "OLE_YSIZE_HIMETRIC";
+ vtTypes[34]	= "VTS_PYSIZE_HIMETRIC";
+strTypes[34]	= "OLE_YSIZE_HIMETRIC*";
+ vtTypes[35]	= "VTS_XPOS_PIXELS";
+strTypes[35]	= "OLE_XPOS_PIXELS";
+ vtTypes[36]	= "VTS_PXPOS_PIXELS";
+strTypes[36]	= "OLE_XPOS_PIXELS*";
+ vtTypes[37]	= "VTS_YPOS_PIXELS";
+strTypes[37]	= "OLE_YPOS_PIXELS";
+ vtTypes[38]	= "VTS_PYPOS_PIXELS";
+strTypes[38]	= "OLE_YPOS_PIXELS*";
+ vtTypes[39]	= "VTS_XSIZE_PIXELS";
+strTypes[39]	= "OLE_XSIZE_PIXELS";
+ vtTypes[40]	= "VTS_PXSIZE_PIXELS";
+strTypes[40]	= "OLE_XSIZE_PIXELS*";
+ vtTypes[41]	= "VTS_YSIZE_PIXELS";
+strTypes[41]	= "OLE_YSIZE_PIXELS";
+ vtTypes[42]	= "VTS_PYSIZE_PIXELS";
+strTypes[42]	= "OLE_YSIZE_PIXELS*";
+ vtTypes[43]	= "VTS_HANDLE";
+strTypes[43]	= "OLE_HANDLE";
+ vtTypes[44]	= "VTS_PHANDLE";
+strTypes[44]	= "OLE_HANDLE*";
+ vtTypes[45]	= "VTS_OPTEXCLUSIVE";
+strTypes[45]	= "OLE_OPTEXCLUSIVE";
+ vtTypes[46]	= "VTS_POPTEXCLUSIVE";
+strTypes[46]	= "OLE_OPTEXCLUSIVE*";
+ vtTypes[47]	= "VTS_TRISTATE";
+strTypes[47]	= "OLE_TRISTATE";
+ vtTypes[48]	= "VTS_PTRISTATE";
+strTypes[48]	= "OLE_TRISTATE*";
+ vtTypes[49]	= "VTS_SCODE";
+strTypes[49]	= "SCODE";
+ vtTypes[50]	= "VTS_PSCODE";
+strTypes[50]	= "SCODE*";
+ vtTypes[51]	= "VTS_I2";
+strTypes[51]	= "SHORT";
+ vtTypes[52]	= "VTS_PI2";
+strTypes[52]	= "SHORT*";
+ vtTypes[53]	= "VTS_UI4";
+strTypes[53]	= "ULONG";
+ vtTypes[54]	= "VTS_PUI4";
+strTypes[54]	= "ULONG*";
+ vtTypes[55]	= "VTS_UI8";
+strTypes[55]	= "ULONGLONG";
+ vtTypes[56]	= "VTS_PUI8";
+strTypes[56]	= "ULONGLONG*";
+ vtTypes[57]	= "VTS_UI2";
+strTypes[57]	= "USHORT";
+ vtTypes[58]	= "VTS_PUI2";
+strTypes[58]	= "USHORT*";
+ vtTypes[59]	= "VTS_VARIANT";
+strTypes[59]	= "VARIANT";
+ vtTypes[60]	= "VTS_PVARIANT";
+strTypes[60]	= "VARIANT*";
+ vtTypes[61]	= "VTS_BOOL";
+strTypes[61]	= "VARIANT_BOOL";
+ vtTypes[62]	= "VTS_PBOOL";
+strTypes[62]	= "VARIANT_BOOL*";
+ vtTypes[63]	= "VTS_BOOL";
+strTypes[63]	= "BOOL";
+ vtTypes[64]	= "VTS_PBOOL";
+strTypes[64]	= "BOOL*";
+ vtTypes[65]	= "VTS_EMPTY";
+strTypes[65]	= "void";
+ vtTypes[66]	= "VTS_I1";
+strTypes[66]	= "unsignedchar";
+ vtTypes[67]	= "VTS_PI1";
+strTypes[67]	= "unsignedchar*";
+ vtTypes[68]	= "VTS_I2";
+strTypes[68]	= "short";
+ vtTypes[69]	= "VTS_PI2";
+strTypes[69]	= "short*";
+ vtTypes[70]	= "VTS_UI2";
+strTypes[70]	= "unsignedshort";
+ vtTypes[71]	= "VTS_PUI2";
+strTypes[71]	= "unsignedshort*";
+ vtTypes[72]	= "VTS_I4";
+strTypes[72]	= "long";
+ vtTypes[73]	= "VTS_PI4";
+strTypes[73]	= "long*";
+ vtTypes[74]	= "VTS_UI4";
+strTypes[74]	= "unsignedlong";
+ vtTypes[75]	= "VTS_PUI4";
+strTypes[75]	= "unsignedlong*";
+ vtTypes[76]	= "VTS_R4";
+strTypes[76]	= "float";
+ vtTypes[77]	= "VTS_PR4";
+strTypes[77]	= "float*";
+ vtTypes[78]	= "VTS_R8";
+strTypes[78]	= "double";
+ vtTypes[79]	= "VTS_PR8";
+strTypes[79]	= "double*";
+ vtTypes[80]	= "VTS_I8";
+strTypes[80]	= "__int64";
+ vtTypes[81]	= "VTS_PI8";
+strTypes[81]	= "__int64*";
+ vtTypes[82]	= "VTS_UI8";
+strTypes[82]	= "unsigned__int64";
+ vtTypes[83]	= "VTS_PUI8";
+strTypes[83]	= "unsigned__int64*";
+
+</SCRIPT>
+<SCRIPT ID="INCLUDE_SCRIPT" LANGUAGE="JSCRIPT">
+</SCRIPT>
+<SCRIPT ID="INCLUDE_COMMON" LANGUAGE="JSCRIPT">
+</SCRIPT>
+<SCRIPT>
+	document.scripts("INCLUDE_SCRIPT").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Script.js";
+	document.scripts("INCLUDE_COMMON").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Common.js";
+</SCRIPT>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Navigate by using XPathNavigator</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Iterates through the nodes of an XDocument by using the XPathNavigator.</Description>
+      <Shortcut>xmlNavDoc</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.XML.Linq.dll</Assembly>          
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Xml.Linq</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Xml.XPath</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>xmlDoc</ID>
+          <Type>XDocument</Type>
+          <ToolTip>Replace with an XDocument instance.</ToolTip>
+          <Default>xmlDoc</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim nav = $xmlDoc$.CreateNavigator()
+
+        nav.MoveToChild(XPathNodeType.Element)
+
+        Dim nodeIterator = nav.SelectChildren(XPathNodeType.Element)
+        While nodeIterator.MoveNext
+            ' Interact with each child node here.
+        End While]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

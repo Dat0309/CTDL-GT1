@@ -1,0 +1,14 @@
+[$RootKey$]
+
+[$RootKey$\Editors]
+
+[$RootKey$\Editors\{1DF2CAD9-B4BE-4C4C-B1DF-58D342876E95}]
+"DisplayName"="#105"
+"Package"="{AC5E9513-8EDF-4966-91CE-31E5569D02CC}"
+@="LightSwitch Designer"
+
+[$RootKey$\Editors\{1DF2CAD9-B4BE-4C4C-B1DF-58D342876E95}\Extensions]
+"lsml"=dword:00000064
+
+[$RootKey$\Editors\{1DF2CAD9-B4BE-4C4C-B1DF-58D342876E95}\LogicalViews]
+"{7651a702-06e5-11d1-8ebd-00a0c90f26ea}"=""

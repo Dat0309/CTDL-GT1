@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="ProjectGroup">
+	<TemplateData>
+		<Name Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="1089" />
+		<Description Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="1090" />
+		<Icon Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="4029" />
+		<DefaultName>HubApp</DefaultName>
+		<TemplateID>Microsoft.CPP.WinRT.SharedHubApplication</TemplateID>
+		<TemplateGroupID>WinRT-Native</TemplateGroupID>
+		<ProjectType>VC</ProjectType>
+		<TargetPlatformName>Windows</TargetPlatformName>
+		<RequiredPlatformVersion>6.3.0</RequiredPlatformVersion>
+		<CreateInPlace>true</CreateInPlace>
+		<CreateNewFolder>true</CreateNewFolder>
+		<LocationField>Enabled</LocationField>
+		<PreviewImage>HubApp.png</PreviewImage>
+		<ProvideDefaultName>true</ProvideDefaultName>
+		<SortOrder>10</SortOrder>
+		<EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+		<NumberOfParentCategoriesToRollUp>2</NumberOfParentCategoriesToRollUp>
+		<PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectCollection>
+			<SolutionFolder Name="$projectname$">
+				<ProjectTemplateLink ProjectName="$projectname$.Shared" CopyParameters="true">
+					Shared\Shared.vstemplate
+				</ProjectTemplateLink>
+				<ProjectTemplateLink ProjectName="$projectname$.Windows" CopyParameters="true">
+					Windows\Windows.vstemplate
+				</ProjectTemplateLink>
+				<ProjectTemplateLink ProjectName="$projectname$.WindowsPhone" CopyParameters="true">
+					WindowsPhone\WindowsPhone.vstemplate
+				</ProjectTemplateLink>
+			</SolutionFolder>
+ 		</ProjectCollection>
+	</TemplateContent>
+</VSTemplate>

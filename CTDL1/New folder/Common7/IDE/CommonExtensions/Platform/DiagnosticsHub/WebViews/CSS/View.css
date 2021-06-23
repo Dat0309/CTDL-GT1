@@ -1,0 +1,22 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    -ms-user-select: none;
+    user-select: none;
+    color: black; /*[{plugin-color}]*/
+    font-size: 9pt; /*[{plugin-font-size}]*/
+    font-family: "Segoe UI", Arial, sans-serif; /*[{plugin-font-family} , Arial, sans-serif]*/
+    background-color: transparent; /*[{plugin-background-color}]*/
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+html, body {
+    -ms-high-contrast-adjust: none;
+    cursor: default;
+}

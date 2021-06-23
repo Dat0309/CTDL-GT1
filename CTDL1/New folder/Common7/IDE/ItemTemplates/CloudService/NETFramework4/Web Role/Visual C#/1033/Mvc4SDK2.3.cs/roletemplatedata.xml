@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RoleTemplateData RoleProjectTargetFramework="4.0" RoleProjectMaxFramework="4.0" MinWindowsAzureToolsVersion="2.3" RoleProjectGuid="01DB50B2-F3D7-4C8F-93C3-C5139BBD34AD">
+    <VsTemplate Name="MvcWebApplicationProjectTemplatev4.1.cs.zip" Language="CSharp" TargetFramework="4.0"/>
+    <ProjectItems>
+        <ProjectItem CustomReplaceableParameters="true">WebRole.cs</ProjectItem>
+    </ProjectItems>
+    <RoleProject Type="Web" />
+</RoleTemplateData>

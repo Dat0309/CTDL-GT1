@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="1038" />
+    <Description Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="1039" />
+    <Icon Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="4023" />
+    <TemplateID>Microsoft.VB.WinRT.ResourceDictionary</TemplateID>
+    <TemplateGroupID>WinRT-Managed</TemplateGroupID>
+    <AppliesTo>VB + WindowsXaml + WindowsXamlResourceDictionary</AppliesTo>
+    <ProjectType>VisualBasic</ProjectType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>Dictionary.xaml</DefaultName>
+    <ShowByDefault>false</ShowByDefault>
+    <SortOrder>70</SortOrder>
+    <TargetPlatformName>Windows</TargetPlatformName>
+    <RequiredPlatformVersion>8</RequiredPlatformVersion>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ItemType="Page" CopyToOutputDirectory="2" ReplaceParameters="true" OpenInEditor="true">ResourceDictionary.xaml</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

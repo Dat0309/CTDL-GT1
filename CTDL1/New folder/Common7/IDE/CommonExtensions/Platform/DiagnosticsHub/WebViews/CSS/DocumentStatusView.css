@@ -1,0 +1,77 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    
+    font-size: 9pt; /*[{plugin-font-size}]*/
+    font-family: "Segoe UI", Arial, sans-serif; /*[{plugin-font-family} , Arial, sans-serif]*/
+    background-color: transparent; 
+}
+
+html, body {
+    height:100%;
+    width:100%;
+    display: -ms-grid;
+    -ms-grid-rows: 1fr;
+    -ms-grid-columns: 1fr;
+}
+
+#content {
+    height:400px;
+    width:400px;
+    margin: auto auto;
+    display: -ms-grid;
+    -ms-grid-rows: 1fr 1fr;
+    -ms-grid-columns: 1fr;
+}
+
+.progress-main {
+    height:100%;
+    width:100%;
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    
+    position:relative;
+
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: black; /*[{plugin-color}]*/
+}
+
+    .progress-main .progress-line {
+         position:absolute; bottom:0;
+         margin: 0 0 5pt 0;
+    }
+
+.progress-line {
+    width: 100%;
+    display: -ms-grid;
+    -ms-grid-rows: 1fr;
+    -ms-grid-columns: 1fr 1fr;
+    margin: 5pt 0 0 0;
+}
+
+.progress-tools {
+    -ms-grid-column: 1;
+    -ms-grid-row: 2;
+    padding: 5pt 0 0 0;
+}
+
+.progress-text {
+    display: block;
+    text-align: right;
+    margin: 0 5pt 0 0;
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: black; /*[{plugin-color}]*/
+}
+
+.progress-bar {
+    width: 200px;
+    -ms-grid-column: 2;
+    -ms-grid-row: 1;
+    margin: 3pt 0 0 0 ;
+    border-color: black; /*[{plugin-color}]*/
+}

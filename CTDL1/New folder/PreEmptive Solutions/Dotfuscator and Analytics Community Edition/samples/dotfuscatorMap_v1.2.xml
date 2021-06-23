@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE dotfuscatorMap SYSTEM "http://www.preemptive.com/dotfuscator/dtd/dotfuscatorMap_v1.2.dtd">
+<dotfuscatorMap version="1.2">
+   <header>
+      <timestamp>Tues Jan 8 19:48:41 EDT 2002</timestamp>
+      <product version="1.2.3.4" user="John Smith" serial="12345">Dotfuscator(tm) Community Edition</product>	
+   </header>		
+
+   <mapping>	
+      <module>
+         <name>MyApp.exe</name>	
+         <!-- 0 or more types -->
+         <type>
+            <!-- exactly one name -->
+            <name>ArgParser/SwitchStatus</name>
+            <!-- 0 or 1 newname, if 0 then it wasn't renamed-->
+            <newname>a</newname>
+         </type>
+         <type>
+            <name>ArgParser</name>
+            <!-- 0 or 1 newname, if 0 then it wasn't renamed -->
+            <newname>f</newname>
+            <methodlist>
+               <!-- 0 or more methods -->
+               <method>
+                  <!-- 0 or 1 signature, if 0 then it's a no-arg signature -->
+                  <signature>void(string[], bool)</signature>
+                  <!-- exactly one name -->
+                  <name>.ctor</name>
+                  <!-- 0 or 1 newname -->
+                  <!-- if 0 then it wasn't renamed -->
+                  <newname>.ctor</newname>
+               </method>
+               <method>
+                  <signature>void(string[])</signature>
+                  <name>.ctor</name>
+                  <!-- newname may explicity equal old name (same as if missing altogether) -->
+                  <newname>.ctor</newname>
+               </method>
+               <method>
+                  <signature>void()</signature>
+                  <name>Parse</name>
+                  <newname>a</newname>
+               </method>
+            </methodlist>
+            <!-- 0 or more fields -->
+            <fieldlist>
+               <field>
+                  <!-- exactly one field type (new name) -->
+                  <signature>string[]</signature>
+                  <!-- exactly one name -->
+                  <name>myField</name>
+                  <!-- 0 or 1 newname -->
+                  <newname>a</newname>
+               </field>
+            </fieldlist>
+           <propertylist>
+             <property>
+                  <!-- exactly one property signature -->
+                  <signature>string</signature>
+                  <!-- exactly one name -->
+                  <name>myProperty</name>
+                  <!-- 0 or 1 newname -->
+                  <newname>a</newname>
+             </property>
+           </propertylist>
+           <eventlist>
+             <event>
+               <!-- exactly one event signature -->
+               <signature>SomeDelegate</signature>
+               <!-- exactly one name -->
+               <name>myEvent</name>
+               <!-- 0 or 1 newname -->
+               <newname>a</newname>
+             </event>
+           </eventlist>
+         </type>
+      </module>		
+   </mapping>	
+      
+   <!-- statistics about the run  -->		
+   <statistics>
+      <statisticline>
+         <description>Total Classes</description>
+         <statistic>2</statistic>
+      </statisticline>
+         
+      <statisticline>
+         <description>Total Methods</description>
+         <statistic>3</statistic>
+      </statisticline>
+
+      <statisticline>
+         <description>Total Fields</description>
+         <statistic>1</statistic>
+      </statisticline>
+
+     <statisticline>
+       <description>Total Properties</description>
+       <statistic>1</statistic>
+     </statisticline>
+
+     <statisticline>
+         <description>Methods Renamed to 'a'</description>
+         <statistic>1</statistic>
+         <statistic>33%</statistic>
+      </statisticline>
+
+      <statisticline>
+         <description>Methods Renamed to 'b'</description>
+         <statistic>0</statistic>
+         <statistic>0%</statistic>
+      </statisticline>
+         
+      <statisticline>
+         <description>Fields Renamed to 'a'</description>
+         <statistic>1</statistic>
+         <statistic>100%</statistic>
+      </statisticline>
+         
+   </statistics>	
+
+</dotfuscatorMap>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Convert an Array of Bytes into a String</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Convert an Array of Bytes into a String</Description>
+      <Shortcut>typeByteStr</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Text</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>Encoding</ID>
+          <Type>System.Text.Encoding</Type>
+          <ToolTip>Replace with the Encoding enumeration value that corresponds to your string.</ToolTip>
+          <Default>Encoding.UTF8</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[Private Function ConvertByteArrayToString(ByVal byteArray As Byte()) As String
+    Dim enc As Encoding = $Encoding$
+    Dim text As String = enc.GetString(byteArray)
+    Return text
+End Function]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

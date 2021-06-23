@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Draw a Pie Chart</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Draws a pie chart.</Description>
+      <Shortcut>drawPie</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Drawing.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>Percent1</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with the percentage of the pie.</ToolTip>
+          <Default>10</Default>
+        </Literal>
+        <Literal>
+          <ID>Percent2</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with the percentage of the pie.</ToolTip>
+          <Default>20</Default>
+        </Literal>
+        <Literal>
+          <ID>Percent3</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with the percentage of the pie.</ToolTip>
+          <Default>70</Default>
+        </Literal>
+        <Literal>
+          <ID>Color1</ID>
+          <Type>Color</Type>
+          <ToolTip>Replace with the color for the section.</ToolTip>
+          <Default>Color.Red</Default>
+        </Literal>
+        <Literal>
+          <ID>Color2</ID>
+          <Type>Color</Type>
+          <ToolTip>Replace with the color for the section.</ToolTip>
+          <Default>Color.CadetBlue</Default>
+        </Literal>
+        <Literal>
+          <ID>Color3</ID>
+          <Type>Color</Type>
+          <ToolTip>Replace with the color for the section.</ToolTip>
+          <Default>Color.Khaki</Default>
+        </Literal>
+        <Literal>
+          <ID>XLocation</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with X coordinate of the drawing location.</ToolTip>
+          <Default>10</Default>
+        </Literal>
+        <Literal>
+          <ID>YLocation</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with Y coordinate of the drawing location.</ToolTip>
+          <Default>10</Default>
+        </Literal>
+        <Literal>
+          <ID>Width</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with width.</ToolTip>
+          <Default>150</Default>
+        </Literal>
+        <Literal>
+          <ID>Height</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with height.</ToolTip>
+          <Default>150</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[    ' Shows how to call the DrawPieChart method
+    Public Sub DrawPieChartHelper()
+        Dim percents = {$Percent1$, $Percent2$, $Percent3$}
+        Dim colors = {$Color1$, $Color2$, $Color3$}
+        Using graphics = Me.CreateGraphics()
+            Dim location As New Point($XLocation$, $YLocation$)
+            Dim size As New Size($Width$, $Height$)
+            DrawPieChart(percents, colors, graphics, location, size)
+        End Using
+    End Sub
+
+
+' Draws a pie chart.
+Public Sub DrawPieChart(ByVal percents() As Integer, ByVal colors() As Color,
+                        ByVal surface As Graphics, ByVal location As Point,
+                        ByVal pieSize As Size)
+    
+    ' Check if sections add up to 100.
+    Dim sum = 0
+    For Each percent In percents
+        sum += percent
+    Next
+
+    If sum <> 100 Then
+        Throw New ArgumentException("Percentages do not add up to 100.")
+    End If
+
+    If percents.Length <> colors.Length Then
+        Throw New ArgumentException("There must be the same number of percents and colors.")
+    End If
+
+    Dim percentTotal = 0
+    For percent = 0 To percents.Length() - 1
+        Using brush As New SolidBrush(colors(percent))
+            surface.FillPie(brush,
+                            New Rectangle(location, pieSize),
+                            CSng(percentTotal * 360 / 100),
+                            CSng(percents(percent) * 360 / 100))
+        End Using
+        
+        percentTotal += percents(percent)
+    Next
+    Return
+End Sub]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

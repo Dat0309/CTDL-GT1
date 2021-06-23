@@ -1,0 +1,31 @@
+﻿[$RootKey$\Packages\{00a9524f-427f-46ee-8a20-615c25ecbe6f}]
+@="SqlStudio Profile Package"
+"Assembly"="Microsoft.VisualStudio.Data.Tools.Package.SqlProfile, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"Class"="Microsoft.VisualStudio.Data.Tools.Package.SqlProfile.UI.DataPackageProfile"
+"CodeBase"="$RootFolder$Common7\IDE\Extensions\Microsoft\SQLDB\Microsoft.VisualStudio.Data.Tools.Package.SqlProfile.dll"
+"CompanyName"="Microsoft Corporation"
+"ID"=dword:00000065
+"InprocServer32"="$WinDir$\SYSTEM32\MSCOREE.DLL"
+"ProductName"="Microsoft SQL Server Data Tools, Profile"
+
+[$RootKey$\BindingPaths\{00a9524f-427f-46ee-8a20-615c25ecbe6f}]
+"$RootFolder$Common7\IDE\Extensions\Microsoft\SQLDB"=""
+"$RootFolder$Common7\IDE\Extensions\Microsoft\SQLEditor"=""
+"$RootFolder$Common7\IDE\Extensions\Microsoft\SQLDB\Dac\120"=""
+
+[$RootKey$\AppCommandLine\sqldbaction]
+"Arguments"="1"
+"DemandLoad"=dword:00000001
+"HelpString"="#110"
+"Package"="{00a9524f-427f-46ee-8a20-615c25ecbe6f}"
+
+[$RootKey$\Menus]
+"{00a9524f-427f-46ee-8a20-615c25ecbe6f}"=", Menus.ctmenu, 1"
+
+[$RootKey$\Services\{008BBF6E-A99D-4ECF-9308-B98E9A8F9F59}]
+@="{00a9524f-427f-46ee-8a20-615c25ecbe6f}"
+"Name"="IHostShutdownService"
+
+[$RootKey$\Services\{0001F087-0DD0-417F-BC26-96FD1A2768BD}]
+@="{00a9524f-427f-46ee-8a20-615c25ecbe6f}"
+"Name"="IVsDatabaseEvents"

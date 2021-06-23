@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="9339CEF9-B884-45E9-B017-71AAA590E2FA">
+    <Name>PowerProfiler</Name>
+    <Author>Microsoft</Author>
+    <Version>1.0</Version>
+    <Description xml:space="preserve">Host tool window for Energy Profiler tool</Description>
+    <Locale>1033</Locale>
+    <SupportedProducts>
+      <VisualStudio Version="12.0">
+        <Edition>Ultimate</Edition>
+        <Edition>Premium</Edition>
+        <Edition>Pro</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+    <SystemComponent>true</SystemComponent>
+    <InstalledByMsi>true</InstalledByMsi>
+  </Identifier>
+  <References>
+    <Reference Id="Microsoft.VisualStudio.MPF" MinVersion="10.0">
+        <Name>Visual Studio MPF</Name>
+    </Reference>
+  </References>
+  <Content>
+    <CustomExtension Type="Microsoft.VisualStudio.DiagnosticsHub.XmlDefinition">PowerProfiler.hub.xml</CustomExtension>
+  </Content>
+</Vsix>

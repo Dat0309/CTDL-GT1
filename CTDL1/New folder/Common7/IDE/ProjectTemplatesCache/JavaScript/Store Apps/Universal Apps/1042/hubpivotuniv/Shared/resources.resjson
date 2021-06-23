@@ -1,0 +1,24 @@
+﻿// Windows 앱 지역화에 대한 자세한 내용은 http://go.microsoft.com/fwlink/?LinkId=212836을 참조하십시오.
+
+{
+    "Section1": "섹션 1",
+	"Section1Title": "섹션 1 제목",
+    "Section1Subtext": "Lorem ipsum dolor sit amet",
+    "Section1Description": "Lorem ipsum dolor sit amet, consectetur ising elit, sed diam nonummy nibh uismod tincidunt ut laoreet suscipit lobortis nisl ut wisi quipexerci quis consequat minim veniam, quis nostrud. exerci tation ullam corper.",
+
+    "Section2": "섹션 2",
+    "Section2ItemTitle": "항목 제목",
+    "Section2ItemSubtitle": "항목 부제목",
+    "Section2Subtext": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.",
+    "Section2Description": "Lorem ipsum dolor sit amet, consectetur ising elit, sed diam nonummy nibh uismod tincidunt ut laoreet suscipit lobortis nisl ut wisi quipexerci quis consequat minim veniam, quis nostrud. exerci tation ullam corper.",
+    
+    "Section3": "섹션 3",
+	"Section3ItemTitle": "항목 제목",
+	"Section3Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+    
+    "Section4": "섹션 4",
+    "Section4Description": "Lorem ipsum dolor sit amet, consectetur ising elit, sed diam nonummy nibh uismod tincidunt ut laoreet suscipit lobortis nisl ut wisi quipexerci quis consequat minim veniam, quis nostrud. exerci tation ullam corper.",
+
+    "DescriptionText": "Lorem ipsum dolor sit amet:",
+    "SectionSubtitle": "섹션 부제목"
+}

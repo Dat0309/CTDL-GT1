@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem 
+    Type="Microsoft.VisualStudio.SharePoint.Workflow4CustomActivity"
+    DefaultFile="$ProjectItemName$.xaml" 
+    FeatureReceiverClass="Microsoft.SharePoint.WorkflowServices.SPCustomActionPackagingFeatureReceiver"
+    FeatureReceiverAssembly="Microsoft.SharePoint.WorkflowServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="$ProjectItemName$\" Type="ElementManifest" />
+    <ProjectItemFile Source="$ProjectItemName$.xaml" Target="$ProjectItemName$\" Type="ElementFile" />
+$if$ ("$IsSharePointSolution$" == "TRUE")    <ProjectItemFile Source="$ProjectItemName$.actions4" Target="$ProjectItemName$\" Type="ElementFile" />
+$endif$  </Files>
+  <ExtensionData>
+    <ExtensionDataItem Key="CustomActivityItemTemplateFileName" Value="$CustomActivityItemTemplateFileName$" />
+    <ExtensionDataItem Key="CustomActionItemTemplateFileName" Value="$CustomActionItemTemplateFileName$" />
+  </ExtensionData>
+</ProjectItem>

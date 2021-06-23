@@ -1,0 +1,880 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<html dir="LTR">
+<head>
+	<title>MFC アプリケーション ウィザード</title>
+	<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+	<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+	<meta http-equiv="MSThemeCompatible" content="Yes">
+	<link id="LINKURL" rel="stylesheet" href="../../../../../1041/NewStyles.css">
+</head>
+<body bgcolor="BUTTONFACE" topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0"
+	onload="InitDocument(document);" onkeydown="if (!bValidating) OnKey();" onkeypress="if (!bValidating) OnPress();">
+	<table class="ONE" height="100%" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<col class="LinkPane">
+		<col>
+		<!--OPEN OF INTRODUCTORY INFORMATION TABLE//-->
+		<tr valign="TOP">
+			<td height="79" width="100%" colspan="2">
+				<table class="TWO" border="0" cellpadding="0" cellspacing="0">
+					<col width="12">
+					<col>
+					<col width="12">
+					<tr>
+						<td valign="TOP" height="12" width="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="12" width="12">
+							&nbsp;
+						</td>
+						<td class="IMAGE" valign="BOTTOM" width="110" rowspan="2">
+							<div class="SMALLA" id="DB_SUPPORT_NONE_IMAGE">
+								<img class="SMALL" src="../../Images/DatabaseNone.gif" width="98" height="70" alt=""
+									border="0">
+							</div>
+							<div class="SMALL" id="DB_SUPPORT_HEADER_ONLY_IMAGE">
+								<img class="SMALL" src="../../Images/HeaderOnly.gif" width="98" height="70" alt=""
+									border="0">
+							</div>
+							<div class="SMALL" id="DB_VIEW_NO_FILE_IMAGE">
+								<img class="SMALL" src="../../Images/DatabaseWithout.gif" width="98" height="70"
+									alt="" border="0">
+							</div>
+							<div class="SMALL" id="DB_VIEW_WITH_FILE_IMAGE">
+								<img class="SMALL" src="../../Images/DatabaseWith.gif" width="98" height="70" alt=""
+									border="0">
+							</div>
+						</td>
+						<td valign="TOP" height="12" width="6" rowspan="2">
+							&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td valign="TOP" height="65" width="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="65">
+							<h4 class="HEAD" id="HEAD">データベース サポート</h4>
+							<p class="SUBHEAD" id="SUBHEAD">
+								データ ソースをすべて含むデータベース サポートを指定します。</p>
+						</td>
+						<td valign="TOP" height="65" width="12">
+							&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td valign="TOP" class="RULE" colspan="5" height="2">
+							<table border="0" width="100%" height="1" cellpadding="0" cellspacing="0">
+								<tr valign="TOP">
+									<td height="1" width="100%" bgcolor="BUTTONSHADOW">
+									</td>
+									<td height="1" width="1" bgcolor="WINDOW">
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<!--CLOSE OF INTRODUCTORY INFORMATION TABLE//-->
+		<!--OPEN OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+		<tr valign="TOP">
+			<td class="Three" valign="TOP" height="100%" width="100%">
+				<table class="fixedSize" height="100%" width="100%" border="0" cellpadding="0" cellspacing="0">
+					<tr valign="TOP">
+						<td class="threeCustom" valign="TOP">
+							<!--OPEN OF NAVIGATION TABLE//-->
+							<table class="THREE" border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col>
+								<col width="1">
+								<tr>
+									<td valign="TOP" colspan="3" height="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="100%">
+										&nbsp;
+									</td>
+									<td valign="TOP" height="100%">
+										<!--OPEN OF NAVIGATIONAL LINKS//-->
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="Default" title="選択項目の概要です。"
+															onclick="Next(document, 'Default.htm');" tabindex="1">概要</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="AppType" title="アプリケーションのドキュメント/ビュー アーキテクチャのサポート、言語、およびインターフェイス形式を指定します。"
+															onclick="Next(document, 'AppType.htm');" tabindex="2">アプリケーションの種類</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXTINDENT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="CompoundDoc" title="OLE コンテナー、またはサーバー オプションおよびアクティブ ドキュメントのサポートを指定します。"
+															onclick="onClick(this);" tabindex="3">複合ドキュメント サポート</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXTINDENT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="DocTemp" title="新しいドキュメントの作成に使用する、アプリケーションのドキュメント テンプレートの値を指定します。"
+															onclick="onClick(this);" tabindex="4">ドキュメント テンプレート プロパティ</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINKSELECTED">
+											<span class="VERTLINE1">
+												<img src="../../../../../1033/Images/spacer.gif" width="1" height="1" alt="" border="0">
+											</span><span class="HORILINE1">
+												<table width="167" height="100%" border="0" cellpadding="0" cellspacing="0">
+													<tr valign="TOP">
+														<td class="DOTTEDLINE" height="1">
+														</td>
+													</tr>
+													<tr valign="TOP">
+														<td height="100%">
+															<img src="../../../../../1033/Images/spacer.gif" width="165" height="28" alt="" border="0">
+														</td>
+													</tr>
+													<tr valign="TOP">
+														<td class="DOTTEDLINE" height="1">
+														</td>
+													</tr>
+												</table>
+											</span>
+											<table width="160" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXTSELECTED">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span id="DBSupport" title="データ ソースをすべて含むデータベース サポートを指定します。">データベース
+															サポート</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="UIFeatures" title="アプリケーションの外観を設定します。"
+															onclick="Next(document, 'UIFeatures.htm');" tabindex="5">ユーザー インターフェイス機能</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="Advanced" title="アプリケーションに追加するサポートを指定します。"
+															onclick="Next(document, 'Advanced.htm');" tabindex="6">高度な機能</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="GeneratedClasses" title="生成されたクラスを確認し、アプリケーションの基底クラスを指定します。"
+															onclick="Next(document, 'GeneratedClasses.htm');" tabindex="7">生成されたクラス</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<!--CLOSE OF NAVIGATIONAL LINKS//-->
+									</td>
+									<td width="1">
+										<div class="VERTLINE">
+											<img src="../../../../../1033/Images/spacer.gif" width="1" height="1" alt="" border="0">
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				<!--CLOSE OF NAVIGATION TABLE//-->
+			</td>
+			<td valign="TOP" height="100%">
+				<!--OPEN OF CONTENT AND BUTTON TABLE//-->
+				<table class="ONE" border="0" cellpadding="0" cellspacing="0">
+					<col width="100%">
+					<tr valign="TOP">
+						<td height="100%">
+							<!--OPEN OF CONTENT//-->
+							<table class="CONTENT" border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col>
+								<col width="12">
+								<col>
+								<col width="12">
+								<tr>
+									<td valign="TOP" height="12" colspan="5">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP">
+										<span class="itemTextTop" id="FILE_EXTENSION_TEXT" title="データベース サポートのレベルを指定します。">
+											<label id="SELECT_DB_SUPPORT_TEXT" for="FILE_EXTENSION">
+												データ ベースサポート:</label>
+											<p class="Spacer">
+												&nbsp;</p>
+											<input type="radio" class="radio" name="dbsupport" id="DB_SUPPORT_NONE" accesskey="n"
+												title="データベースをサポートしません (既定値)。" onpropertychange="OnDBSupport(this);">
+											<div class="itemTextRadioB" id="SELECT_NO_DB_TEXT" title="データベースをサポートしません (既定値)。">
+												<label id="NO_DB_TEXT" for="DB_SUPPORT_NONE">
+													なし(<u>N</u>)</label>
+											</div>
+											<br>
+											<input type="radio" class="radio" name="dbsupport" id="DB_SUPPORT_HEADER_ONLY" accesskey="o"
+												title="ドキュメントおよびビューの中に、データベースまたはレコードセット オブジェクトを保存します。"
+												onpropertychange="OnDBSupport(this);">
+											<div class="itemTextRadioB" id="SELECT_HEADER_ONLY_TEXT" title="ドキュメントおよびビューの中に、データベースまたはレコードセット オブジェクトを保存します。">
+												<label id="HEADER_ONLY_TEXT" for="DB_SUPPORT_HEADER_ONLY">
+													ヘッダー ファイルのみ(<u>O</u>)</label>
+											</div>
+											<br>
+											<input type="radio" class="radio" name="dbsupport" id="DB_VIEW_NO_FILE" accesskey="v"
+												title="データベース ドキュメント サポートおよび複数のレコードセット ビューを指定します。シリアル化はサポートしません。"
+												onpropertychange="OnDBSupport(this);">
+											<div class="itemTextRadioB" id="db_no_file_title" title="データベース ドキュメント サポートおよび複数のレコードセット ビューを指定します。シリアル化はサポートしません。">
+												<label id="NO_FILES_TEXT" for="DB_VIEW_NO_FILE">
+													ファイル サポートのないデータベース ビュー(<u>V</u>)</label>
+											</div>
+											<br>
+											<input type="radio" class="radio" name="dbsupport" id="DB_VIEW_WITH_FILE" accesskey="t"
+												title="シリアル化およびドキュメントに関連したメニュー コマンドを含むフル データベース ドキュメント サポートです。"
+												onpropertychange="OnDBSupport(this);">
+											<div class="itemTextRadioB" id="db_with_file_title" title="シリアル化およびドキュメントに関連したメニュー コマンドを含むフル データベース ドキュメント サポートです。">
+												<label id="WITH_FILES_TEXT" for="DB_VIEW_WITH_FILE">
+													ファイル サポートのあるデータベース ビュー(<u>T</u>)</label>
+											</div>
+										</span>
+										<p class="ElementSpacer7">
+											&nbsp;</p>
+										<span class="itemText" id="sctype" title="クライアントの種類を指定します。">
+											<label id="SELECT_CLIENT_TEXT" for="FILE_EXTENSION">
+												クライアントの種類:</label>
+											<p class="Spacer">
+												&nbsp;</p>
+											<input type="radio" class="radio" name="odbcsupport" id="DB_SUPPORT_OLEDB" accesskey="l"
+												title="OLEDB クライアントを指定します。" onpropertychange="OnODBCSupport(this);">
+											<div class="itemTextRadioB" title="OLEDB クライアントを指定します。" id="db_oledb">
+												<label id="OLE_DB_TEXT" for="DB_SUPPORT_OLEDB">
+													OLE DB(<u>L</u>)</label>
+											</div>
+											<br>
+											<input type="radio" class="radio" name="odbcsupport" id="DB_SUPPORT_ODBC" accesskey="d"
+												title="ODBC クライアントを指定します。" onpropertychange="OnODBCSupport(this);">
+											<div class="itemTextRadioB" title="ODBC クライアントを指定します。" id="db_odbc">
+												<label id="ODBC_TEXT" for="DB_SUPPORT_ODBC">
+													ODBC(<u>D</u>)</label>
+											</div>
+										</span>
+										<p class="ElementSpacer18">
+											&nbsp;</p>
+										<span class="itemText" id="sdstitle">データ ソース:
+											<p class="Spacer">
+												&nbsp;</p>
+											<button style="line-height: 120%;" id="DatSupBtn" disabled accesskey="s" type="BUTTON"
+												value="Data Source" title="データベース ビューで、既存のデータベースをアプリケーションのデータ ソースとして指定します。"
+												onclick="SelectDataSource();">
+												データ ソース(<u>S</u>)...</button>
+										</span>
+									</td>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP">
+										<span class="itemTextTop" title="">
+											<input class="CheckBox" type="checkbox" id="ATTRIBUTED" accesskey="a" title="OLEDB データ ソースにアクセス可能な、OLEDB 属性クラスを作成します。"
+												class="SINGLECHECKBOX">
+											<div class="itemTextCheckboxA" title="OLEDB データ ソースにアクセス可能な、OLEDB 属性クラスを作成します。"
+												id="ATTRIBUTED_TITLE">
+												<label id="ATTRIBUTED_TEXT" for="ATTRIBUTED">
+													属性データベース クラスを生成する(<u>A</u>)</label>
+											</div>
+										</span>
+										<p class="ElementSpacer">
+											&nbsp;</p>
+										<span class="itemText" title="ユーザーのテーブルのすべての列に自動的にバインドします。" id="AUT_ID">
+											<input class="CheckBox" type="checkbox" id="BIND_ALL_COLUMNS" accesskey="b" title=""
+												class="SINGLECHECKBOX">
+											<div class="itemTextCheckboxA" title="ユーザーのテーブルのすべての列に自動的にバインドします。"
+												id="BINDCOLUMNSTITLE">
+												<label id="BIND_ALL_TEXT" for="BIND_ALL_COLUMNS">
+													すべての列をバインド(<u>B</u>)</label>
+											</div>
+										</span>
+										<p class="ElementSpacer18">
+											&nbsp;</p>
+										<span id="recordsetType" class="itemText">
+											<label id="SELECT_TYPE_TEXT" for="recordsetType">
+												種類:</label>
+											<p class="Spacer">
+												&nbsp;</p>
+											<input type="radio" class="radio" name="type" id="DYNASET" accesskey="y" title="レコードセットは常にデータ ソースと同期します。">
+											<div class="itemTextRadioB" title="レコードセットは常にデータ ソースと同期します。"
+												id="AUT_ID1">
+												<label id="DYNASET_TEXT" for="DYNASET">
+													ダイナセット(<u>Y</u>)</label>
+											</div>
+											<br>
+											<input type="radio" class="radio" name="type" id="SNAPSHOT" accesskey="p" title="レコードセットはスナップショットが作成されたときに存在したデータのスタティック ビューを反映します。">
+											<div class="itemTextRadioB" title="レコードセットはスナップショットが作成されたときに存在したデータのスタティック ビューを反映します。"
+												id="AUT_ID2">
+												<label id="SNAPSHOT_TEXT" for="SNAPSHOT">
+													スナップショット(<u>P</u>)</label>
+											</div>
+										</span>
+										<p class="ElementSpacer">
+											&nbsp;</p>
+										<span class="itemText" title=""><span class="SideBtnHidden" id="DB_SUPPORT_INFO"
+											title="" readonly>
+											<label id="DB_SUPPORT_INFO_TEXT" for="DB_SUPPORT_INFO">
+											</label>
+										</span></span>
+									</td>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+								</tr>
+							</table>
+							<!--CLOSE OF CONTENT//-->
+						</td>
+					</tr>
+					<tr valign="BOTTOM">
+						<td>
+							<!--OPEN OF BUTTON HTML//-->
+							<table border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col>
+								<col width="75">
+								<col width="4">
+								<col width="75">
+								<col width="4">
+								<col width="75">
+								<col width="12">
+								<tr>
+									<td valign="TOP" class="RULE" colspan="8" height="2">
+										<table border="0" width="100%" height="1" cellpadding="0" cellspacing="0">
+											<tr valign="TOP">
+												<td height="1" width="100%" bgcolor="BUTTONSHADOW">
+												</td>
+												<td height="1" width="1" bgcolor="WINDOW">
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="11" colspan="8">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="MIDDLE" height="23" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP" height="23">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="FinishBtn" onclick="OnFinish(document);">
+											完了</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="4">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="CancelBtn" onclick="window.external.Finish(document, 'cancel');">
+											キャンセル</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="4">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="HelpBtn" onclick="window.external.OnHelp('vc.appwiz.mfc.exe.database');">
+											ヘルプ</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="12" colspan="8">
+										&nbsp;
+									</td>
+								</tr>
+							</table>
+							<!--CLOSE OF BUTTON HTML//-->
+						</td>
+					</tr>
+				</table>
+				<!--CLOSE OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+<script language="JSCRIPT">
+
+var bDataSourceDlg = false;
+
+var tab_array = new Array();
+tab_array[0] = Default;
+tab_array[1] = AppType;
+tab_array[2] = CompoundDoc;
+tab_array[3] = DocTemp;
+tab_array[4] = DBSupport;
+tab_array[5] = UIFeatures;
+tab_array[6] = Advanced;
+tab_array[7] = GeneratedClasses;
+
+var Initializing = true;
+
+function InitDocument(document)
+{
+	Initializing = true;
+	setDirection();
+	DB_SUPPORT_NONE.focus();
+	var strConnectionString = window.external.FindSymbol("DB_CONNECTION_STRING" ); 
+	//Preserve the connection string.
+	
+	InitTabs();
+	recordsetType.disabled = true;
+	SNAPSHOT.disabled = true;
+	DYNASET.disabled = true;
+	DB_SUPPORT_OLEDB.disabled = false;
+	db_oledb.disabled = false;
+	DB_SUPPORT_ODBC.disabled = false;
+	db_odbc.disabled = false;
+	sctype.disabled = false;
+	window.external.Load(document);
+	DB_VIEW_NO_FILE.disabled = false;
+	db_no_file_title.disabled = false;
+	DB_VIEW_WITH_FILE.disabled = false;
+	db_with_file_title.disabled = false;
+	ATTRIBUTED.disabled = true;
+	ATTRIBUTED_TITLE.disabled = true;
+	BIND_ALL_COLUMNS.disabled = true;
+	BINDCOLUMNSTITLE.disabled = true;
+	if (!window.external.FindSymbol("DOCVIEW") || window.external.IsSymbolDisabled("DOCVIEW"))
+	{
+		DB_VIEW_NO_FILE.disabled = true;
+		db_no_file_title.disabled = true;
+		DB_VIEW_WITH_FILE.disabled = true;
+		db_with_file_title.disabled = true;
+		MouseOut(DatSupBtn);
+	}
+	else
+	{
+		if ( DB_VIEW_WITH_FILE.checked || DB_VIEW_NO_FILE.checked ) 
+		{
+			if( DB_SUPPORT_ODBC.checked )
+			{
+				recordsetType.disabled = false;
+				SNAPSHOT.disabled = false;
+				DYNASET.disabled = false;
+				BIND_ALL_COLUMNS.disabled = false;
+				BINDCOLUMNSTITLE.disabled = false;
+			}
+			else
+			{
+				ATTRIBUTED_TITLE.disabled = false;
+				ATTRIBUTED.disabled = false;
+			}
+		}
+	}
+
+	if (DB_SUPPORT_NONE.checked)
+	{
+		DB_SUPPORT_OLEDB.disabled = true;
+		db_oledb.disabled = true;
+		DB_SUPPORT_ODBC.disabled = true;
+		db_odbc.disabled = true;
+		sctype.disabled = true;
+	}
+	window.external.AddSymbol("DB_CONNECTION_STRING", strConnectionString ); 
+	// restore the connection string
+	ToggleImage();
+	Initializing = false;
+}
+
+function InitTabs()
+{
+	MouseOut(CompoundDoc);
+	MouseOut(DocTemp);
+}
+
+function Next(document, linkto)
+{
+	if (!CheckDBSupport())
+		return;
+
+	if (!CheckDataSource())
+		return;
+
+	window.external.Next(document, linkto);
+}
+
+function onClick(obj)
+{
+	if (obj == null || typeof(obj) == "undefined")
+		return;
+
+	if (obj.id == "CompoundDoc")
+	{
+		if (window.external.FindSymbol("DOCVIEW") && !window.external.IsSymbolDisabled("DOCVIEW"))
+		{ 
+			Next(document, "CompoundDoc.htm"); 
+		}
+	}
+	if (obj.id == "DocTemp")
+	{
+		if (window.external.FindSymbol("DOCVIEW") && !window.external.IsSymbolDisabled("DOCVIEW"))
+		{ 
+			Next(document, "DocTemp.htm"); 
+		}
+	}
+}
+
+function CheckDBSupport()
+{
+	if (DB_VIEW_NO_FILE.checked && window.external.FindSymbol("APP_TYPE_MDI"))
+	{
+		var L_Prompt1_Text = "ファイル サポートなしでデータベース ビューを選択すると、シングル ドキュメント インターフェイスを使用しなければならなくなります。続行しますか?";
+		if (window.external.YesNoAlert(L_Prompt1_Text))
+		{
+			window.external.AddSymbol("APP_TYPE_MDI", false);
+			window.external.AddSymbol("APP_TYPE_SDI", true);
+			if (window.external.FindSymbol("MAIN_FRAME_BASE_CLASS") == "CMDIFrameWndEx")
+				window.external.AddSymbol("MAIN_FRAME_BASE_CLASS", "CFrameWndEx");
+			else
+				window.external.AddSymbol("MAIN_FRAME_BASE_CLASS", "CFrameWnd");
+			return true;
+		}
+		else
+		{
+			DB_VIEW_NO_FILE.checked = false;
+			DB_VIEW_WITH_FILE.checked = true;
+			return false;
+		}
+	}
+
+	return true;
+}
+
+function CheckDataSource()
+{
+	if (window.external.FindSymbol("DB_CONNECTION_STRING") == "" && (DB_VIEW_WITH_FILE.checked || DB_VIEW_NO_FILE.checked))
+	{
+		var L_ErrMsg1_Text = "データベース ビューを選択した場合は、データ ソースを指定する必要があります。";
+		window.external.ReportError( L_ErrMsg1_Text );
+		return false;
+	}
+
+	if (DB_VIEW_WITH_FILE.checked || DB_VIEW_NO_FILE.checked)
+	{
+		if (!IsValidConnectionString(ATTRIBUTED.checked))
+		{
+			return;
+		}
+	}
+
+	return true;
+}
+
+function OnFinish(document)
+{
+	if (!CheckDBSupport())
+		return;
+
+	if (!CheckDataSource())
+		return;
+
+	if (window.external.FindSymbol("ACTIVE_DOC_SERVER"))
+	{
+		if (window.external.FindSymbol("FILE_EXTENSION") == "")
+		{
+			var L_ErrMsg2_Text = "ドキュメント テンプレート プロパティ ページで、ドキュメント ファイル拡張子を指定してください。";
+			window.external.ReportError( L_ErrMsg2_Text );
+			return;
+		}
+	}
+	OnWizFinish(document);
+}
+
+function OnODBCSupport(obj)
+{
+	DB_SUPPORT_INFO.value = "";
+	window.external.AddSymbol("DB_CONNECTION_STRING", "" );
+	ATTRIBUTED.disabled = true;
+	ATTRIBUTED_TITLE.disabled = true;
+
+	recordsetType.disabled = true;
+	SNAPSHOT.disabled = true;
+	DYNASET.disabled = true;
+	BIND_ALL_COLUMNS.disabled = true;
+	BINDCOLUMNSTITLE.disabled = true;
+
+	if( DB_VIEW_WITH_FILE.checked || DB_VIEW_NO_FILE.checked )
+	{
+		if (DB_SUPPORT_OLEDB.checked)
+		{
+			window.external.AddSymbol("OLEDB", true);
+			window.external.AddSymbol("ODBC", false);
+			window.external.AddSymbol("OLEDB_RECORD_VIEW", true);
+			window.external.AddSymbol("ODBC_RECORD_VIEW", false);
+			if (!Initializing) window.external.AddSymbol("VIEW_BASE_CLASS", "COleDBRecordView");
+			window.external.AddSymbol("LIST_VIEW", false);
+			ATTRIBUTED.disabled = false;
+			ATTRIBUTED_TITLE.disabled = false;
+		}
+		else
+		{
+			window.external.AddSymbol("OLEDB", false);
+			window.external.AddSymbol("ODBC", true);
+			window.external.AddSymbol("OLEDB_RECORD_VIEW", false);
+			window.external.AddSymbol("ODBC_RECORD_VIEW", true);
+			if (!Initializing) window.external.AddSymbol("VIEW_BASE_CLASS", "CRecordView");
+			window.external.AddSymbol("LIST_VIEW", false);
+			recordsetType.disabled = false;
+			SNAPSHOT.disabled = false;
+			DYNASET.disabled = false;
+			BIND_ALL_COLUMNS.disabled = false;
+			BINDCOLUMNSTITLE.disabled = false;
+		}
+	}
+	MouseOut(DatSupBtn);
+}
+
+function OnDBSupport(obj)
+{
+	if (obj.id == "DB_VIEW_NO_FILE")
+	{
+		if (!CheckDBSupport())
+			return;
+	}
+
+	DB_SUPPORT_OLEDB.disabled = false;
+	db_oledb.disabled = false;
+	DB_SUPPORT_ODBC.disabled = false;
+	db_odbc.disabled = false;
+	sctype.disabled = false;
+	DB_SUPPORT_INFO.disabled = false;
+	ATTRIBUTED.disabled = false;
+	BIND_ALL_COLUMNS.disabled = true;
+	BINDCOLUMNSTITLE.disabled = true;
+
+	if (DB_VIEW_WITH_FILE.checked || DB_VIEW_NO_FILE.checked)
+	{
+		if( DB_SUPPORT_ODBC.checked )
+		{
+			DB_SUPPORT_OLEDB.checked = false;
+			DB_SUPPORT_ODBC.checked = true;
+			window.external.AddSymbol("OLEDB", false);
+			window.external.AddSymbol("ODBC", true);
+			window.external.AddSymbol("OLEDB_RECORD_VIEW", false);
+			window.external.AddSymbol("ODBC_RECORD_VIEW", true);
+			window.external.AddSymbol("LIST_VIEW", false);
+			if (!Initializing) window.external.AddSymbol("VIEW_BASE_CLASS", "CRecordView");
+			BIND_ALL_COLUMNS.disabled = false;
+			BINDCOLUMNSTITLE.disabled = false;
+		}
+		else
+		{
+			DB_SUPPORT_OLEDB.checked = true;
+			DB_SUPPORT_ODBC.checked = false;
+			window.external.AddSymbol("OLEDB", true);
+			window.external.AddSymbol("ODBC", false);
+			window.external.AddSymbol("OLEDB_RECORD_VIEW", true);
+			window.external.AddSymbol("ODBC_RECORD_VIEW", false);
+			window.external.AddSymbol("LIST_VIEW", false);
+			if (!Initializing) window.external.AddSymbol("VIEW_BASE_CLASS", "COleDBRecordView");
+		}
+	}
+	else if( DB_SUPPORT_HEADER_ONLY.checked )
+	{
+		window.external.AddSymbol("OLEDB", false);
+		window.external.AddSymbol("ODBC", false);
+		window.external.AddSymbol("OLEDB_RECORD_VIEW", false);
+		window.external.AddSymbol("ODBC_RECORD_VIEW", false);
+
+		if (!Initializing)
+		{
+			if (window.external.FindSymbol("LIST_VIEW"))
+				window.external.AddSymbol("VIEW_BASE_CLASS", "CListView");
+			else
+				window.external.AddSymbol("VIEW_BASE_CLASS", "CView");
+		}
+
+		DB_SUPPORT_INFO.disabled = true;
+		ATTRIBUTED.disabled = true;
+		recordsetType.disabled = true;
+		SNAPSHOT.disabled = true;
+		DYNASET.disabled = true;
+		BIND_ALL_COLUMNS.disabled = true;
+		BINDCOLUMNSTITLE.disabled = true;
+	}
+	else
+	{
+		window.external.AddSymbol("OLEDB", false);
+		window.external.AddSymbol("ODBC", false);
+		window.external.AddSymbol("OLEDB_RECORD_VIEW", false);
+		window.external.AddSymbol("ODBC_RECORD_VIEW", false);
+
+		if (!Initializing)
+		{
+			if (window.external.FindSymbol("LIST_VIEW"))
+				window.external.AddSymbol("VIEW_BASE_CLASS", "CListView");
+			else
+				window.external.AddSymbol("VIEW_BASE_CLASS", "CView");
+		}
+
+		DB_SUPPORT_INFO.disabled = true;
+		ATTRIBUTED.disabled = true;
+		recordsetType.disabled = true;
+		SNAPSHOT.disabled = true;
+		DYNASET.disabled = true;
+		BIND_ALL_COLUMNS.disabled = true;
+		BINDCOLUMNSTITLE.disabled = true;
+
+		DB_SUPPORT_OLEDB.disabled = true;
+		db_oledb.disabled = true;
+		DB_SUPPORT_ODBC.disabled = true;
+		db_odbc.disabled = true;
+		sctype.disabled = true;
+	}
+
+	MouseOut(DatSupBtn);
+	ToggleImage();
+}
+
+function SelectDataSource()
+{
+	try
+	{
+		if (DB_VIEW_WITH_FILE.checked || DB_VIEW_NO_FILE.checked)
+		{
+			bDataSourceDlg = true;
+			var L_Message1_Text = "データ ソースを選択しました。";
+			if( DB_SUPPORT_OLEDB.checked )
+			{
+				if (window.external.SelectDataSource() != "")
+				{
+					DB_SUPPORT_INFO.value = L_Message1_Text;
+				}
+				if (!IsValidConnectionString(ATTRIBUTED.checked)) {
+					window.external.AddSymbol("DB_CONNECTION_STRING","");
+					return;
+				}
+			}
+			else
+			{
+				if (window.external.SelectODBCDatabase() != "")
+				{
+					DB_SUPPORT_INFO.value = L_Message1_Text;
+				}
+			}
+			bDataSourceDlg = false;
+		}
+	}
+	catch(e)
+	{
+		L_Err_Text = "SelectDataSource() のエラーです。";
+		if (e.description.length != 0)
+		{
+			L_Err_Text += ": ";
+			L_Err_Text += e.description;
+		}
+		window.external.ReportError(L_Err_Text);
+		return;
+	}
+}
+
+function ToggleImage()
+{
+	DB_SUPPORT_NONE_IMAGE.style.display = "none"; 
+	DB_SUPPORT_HEADER_ONLY_IMAGE.style.display = "none"; 
+	DB_VIEW_NO_FILE_IMAGE.style.display = "none"; 
+	DB_VIEW_WITH_FILE_IMAGE.style.display = "none"; 
+
+	if (DB_SUPPORT_NONE.checked)
+	{
+		DB_SUPPORT_NONE_IMAGE.style.display = "block"; 
+		return;
+	}
+	if (DB_SUPPORT_HEADER_ONLY.checked)
+	{
+		DB_SUPPORT_HEADER_ONLY_IMAGE.style.display = "block"; 
+		return;
+	}
+	if (DB_VIEW_NO_FILE.checked)
+	{
+		DB_VIEW_NO_FILE_IMAGE.style.display = "block"; 
+		return;
+	}
+	if (DB_VIEW_WITH_FILE.checked)
+		DB_VIEW_WITH_FILE_IMAGE.style.display = "block"; 
+}
+
+</script>
+
+<script id="INCLUDE_SCRIPT" language="JSCRIPT"></script>
+
+<script id="INCLUDE_COMMON" language="JSCRIPT"></script>
+
+<script>
+	document.scripts("INCLUDE_SCRIPT").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Script.js";
+	document.scripts("INCLUDE_COMMON").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Common.js";
+</script>

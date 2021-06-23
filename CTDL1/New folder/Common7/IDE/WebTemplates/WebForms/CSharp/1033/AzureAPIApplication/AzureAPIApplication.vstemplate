@@ -1,0 +1,67 @@
+﻿<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name Package="{349c5850-65df-11da-9384-00065b846f21}" ID="1013" />
+    <Description Package="{349c5850-65df-11da-9384-00065b846f21}" ID="1014" />
+    <Icon Package="{349c5850-65df-11da-9384-00065b846f21}" ID="9001" />
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>Web</ProjectSubType>
+    <TemplateGroupID>Web</TemplateGroupID>
+    <TemplateID>Microsoft.WAP.CSharp.AzureAPIApplication</TemplateID>
+    <SortOrder>5</SortOrder>
+    <RequiredFrameworkVersion>4.5</RequiredFrameworkVersion>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>AzureAPIApp</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="AzureAPIApplication.csproj" ReplaceParameters="true">
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+      <Folder Name="App_Data" TargetFolderName="App_Data"/>
+      <Folder Name="App_Start" TargetFolderName="App_Start">
+        <ProjectItem ReplaceParameters="true" TargetFileName="SwaggerConfig.cs">SwaggerConfig.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="WebApiConfig.cs">WebApiConfig.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Controllers" TargetFolderName="Controllers">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ValuesController.cs">ValuesController.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Metadata" TargetFolderName="Metadata">
+        <Folder Name="DeploymentTemplates" TargetFolderName="DeploymentTemplates">
+          <ProjectItem ReplaceParameters="true" TargetFileName="apiappconfig.azureresource.json">apiappconfig.azureresource.json</ProjectItem>
+        </Folder>
+      </Folder>
+      <Folder Name="Models" TargetFolderName="Models"/>
+      <ProjectItem ReplaceParameters="true" TargetFileName="apiapp.json">apiapp.json</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax.cs">Global.asax.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax">Global.asax</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.config">Web.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.Debug.config">Web.Debug.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.Release.config">Web.Release.config</ProjectItem>
+      <ProjectItem ReplaceParameters="false" OpenInWebBrowser="true" TargetFileName="Project_Readme.html">Project_Readme.html</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <packages repository="registry" keyName="WebFormsVS12" isPreunzipped="true">
+      <package id="Newtonsoft.Json" version="6.0.4" skipAssemblyReferences="true" />
+      <package id="Microsoft.AspNet.WebApi" version="5.2.3" skipAssemblyReferences="true" />
+      <package id="Microsoft.AspNet.WebApi.Client" version="5.2.3" skipAssemblyReferences="true" />
+      <package id="Microsoft.AspNet.WebApi.Core" version="5.2.3" skipAssemblyReferences="true" />
+      <package id="Microsoft.AspNet.WebApi.WebHost" version="5.2.3" skipAssemblyReferences="true" />
+      <package id="Microsoft.Web.Infrastructure" version="1.0.0.0" skipAssemblyReferences="true" />
+      <package id="WebActivatorEx" version="2.0.6" skipAssemblyReferences="true" />
+      <package id="Swashbuckle.Core" version="5.0.0" skipAssemblyReferences="true" />
+      <package id="Swashbuckle" version="5.0.0" skipAssemblyReferences="true" />
+      <package id="System.IdentityModel.Tokens.Jwt" version="4.0.0" skipAssemblyReferences="true" />
+      <package id="Microsoft.Azure.AppService.ApiApps.Service" version="0.9.16" skipAssemblyReferences="true" />
+     
+    </packages>
+  </WizardData>
+</VSTemplate>

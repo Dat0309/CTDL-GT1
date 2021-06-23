@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Display query results in a WinForm grid</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Displays the results from a query in a WinForm DataGridView control.</Description>
+      <Shortcut>qWinForm</Shortcut>
+    </Header>
+    <Snippet>
+       <Declarations>
+        <Literal>
+          <ID>queryResult</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the query.</ToolTip>
+          <Default>query</Default>
+        </Literal>
+        <Literal>
+          <ID>item</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the range variable that represents an item from your data source.</ToolTip>
+          <Default>process</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSource</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the identifier for your data source.</ToolTip>
+          <Default>System.Diagnostics.Process.GetProcesses()</Default>
+        </Literal>
+        <Literal>
+          <ID>field1</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the identifer for the first field you want to retrieve from your data source.</ToolTip>
+          <Default>ProcessName</Default>
+        </Literal>
+        <Literal>
+          <ID>field2</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the identifer for the second field you want to retrieve from your data source.</ToolTip>
+          <Default>MainWindowTitle</Default>
+        </Literal>
+        <Literal>
+          <ID>alias</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the alias you want to give to this data.</ToolTip>
+          <Default>WindowTitle</Default>
+        </Literal>
+        <Literal>
+          <ID>gridview</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the identifer of the GridView being used to display the data on the form.</ToolTip>
+          <Default>dataGridView1</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $queryResult$ = From $item$ In $dataSource$ _
+                    Select $item$.$field1$, $alias$ = $item$.$field2$ _
+                    Order By $field1$
+
+        ' This assumes the gridview is already on your form.
+        $gridview$.DataSource = $queryResult$.ToList()]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

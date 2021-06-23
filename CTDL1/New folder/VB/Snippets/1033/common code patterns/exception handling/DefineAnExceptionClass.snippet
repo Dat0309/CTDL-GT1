@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Define An Exception Class</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Provides a basic implementation for a new exception class.</Description>
+      <Keywords>
+		  <Keyword>Exception</Keyword>
+		  <Keyword>Error</Keyword>
+		  <Keyword>Handling</Keyword>
+      </Keywords>
+      <Shortcut>Except</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>exceptionName</ID>
+          <ToolTip>Rename class to description of exception.</ToolTip>
+          <Default>ProblemException</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="type decl"><![CDATA[Public Class $ExceptionName$
+    Inherits System.Exception
+
+    Public Sub New(ByVal message As String)
+        MyBase.New(message)
+    End Sub
+
+    Public Sub New(ByVal message As String, ByVal inner As Exception)
+        MyBase.New(message, inner)
+    End Sub
+End Class]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

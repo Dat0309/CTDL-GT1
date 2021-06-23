@@ -1,0 +1,13 @@
+[$Initialization$]
+"ApplicationExtensionsFolder" = "$ShellFolder$\Common7\IDE\VsGraphicsExtensions"
+"PkgDefSearchPath"       = "$ApplicationExtensionsFolder$; \
+                            $ShellFolder$\Common7\IDE\CommonExtensions\Platform; \
+							$ShellFolder$\Common7\IDE\CommonExtensions\Microsoft\Editor; \
+							$ShellFolder$\Common7\IDE\CommonExtensions\Microsoft\VSLog; \
+							$ShellFolder$\Common7\IDE\CommonExtensions\Microsoft\VC; \
+							$ShellFolder$\Common7\IDE\CommonExtensions\Microsoft\TailoredProjectServices; \
+							$ShellFolder$\Common7\IDE\CommonExtensions\Microsoft\Connected; \
+                            $ShellFolder$\Common7\IDE\VsGd.Application.pkgdef; \
+                            $ShellFolder$\Common7\IDE\VsGd.Admin.pkgdef; \
+                            $ShellFolder$\Common7\IDE\Extensions\Microsoft\VsGraphics;"
+"RegistryRoot"           = "Software\Microsoft\VsGraphics\12.0"

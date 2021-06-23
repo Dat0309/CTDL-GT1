@@ -1,0 +1,74 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="380" />
+    <Description Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="381" />
+    <Icon Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="205" />
+    <TemplateID>SharePoint15CustomActivity_VB_ITEM</TemplateID>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+    <ProjectType>VisualBasic</ProjectType>
+    <SortOrder>75</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>Activity</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <CreateInPlace>true</CreateInPlace>
+    <TemplateGroupID>SharePointItemTemplateGroupID</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Core</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Activities</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Data</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Runtime.Serialization</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.ServiceModel.Activities</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Xaml</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Xml</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Xml.Linq</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>Microsoft.Activities</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>Microsoft.SharePoint.DesignTime.Activities, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>PresentationFramework</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ProjectItemName$\SharePointProjectItem.spdata" OpenInEditor="false">SharePointActivity.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ProjectItemName$\$SafeActivityName$.xaml" OpenInEditor="true">Activity1.xaml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ProjectItemName$\Elements.xml" OpenInEditor="false">Elements.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ProjectItemName$\$SafeActivityName$.actions4" OpenInEditor="false" ItemType="None">Actions1.actions4</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="SharePointProjectTemplateAttributes" Value="ProjectItem"/>
+      <CustomParameter Name="SharePointProjectParentFilter" Value="General;ProjectItem"/>
+      <CustomParameter Name="SharePointProjectProjectModeFilter" Value="Customization"/>
+      <CustomParameter Name="$CustomActivityItemTemplateFileName$" Value="SharePoint15CustomActivityItem.zip"/>
+      <CustomParameter Name="$CustomActionItemTemplateFileName$" Value="SharePoint15CustomActionItem.zip"/>
+      <CustomParameter Name="$loc_actions4_comment$" _locID="$loc_actions4_comment$" _locAttrData="Value" Value="Define the UI widgets SharePoint designer should use for configuring this action" />
+      <CustomParameter Name="$loc_actions4_sentence$" _locID="$loc_actions4_sentence$" _locAttrData="Value" Value="Enter sentence for workflow action" />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.ActivityWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <DefaultName>Script.psm1</DefaultName>
+    <Name Package="{8d6fdf26-c2d9-43d0-866a-f2af71f19813}" ID="520" />
+    <Description Package="{8d6fdf26-c2d9-43d0-866a-f2af71f19813}" ID="521" />
+    <Icon Package="{8d6fdf26-c2d9-43d0-866a-f2af71f19813}" ID="522" />
+    <ProjectType>PowerShell</ProjectType>
+    <TemplateID>PowerShellTools.PowerShell.PowerShellScriptModule</TemplateID>
+    <TemplateGroupID>PowerShellTools.PowerShell</TemplateGroupID>
+    <AppliesTo>PowerShell | (!PowerShell)</AppliesTo>
+    <SortOrder>151</SortOrder>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true">Script.psm1</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

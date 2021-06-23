@@ -1,0 +1,31 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{9D2881F7-F482-416C-8D64-CA83326250B9}" ID="46" />
+    <Description Package="{9D2881F7-F482-416C-8D64-CA83326250B9}" ID="52" />
+    <Icon Package="{9D2881F7-F482-416C-8D64-CA83326250B9}" ID="104" />
+    <ProjectType>CSharp</ProjectType>
+    <TemplateGroupID>WorkflowItemTemplateGroupID</TemplateGroupID>
+    <TemplateID>SequentialWorkflowCodeSeparation</TemplateID>
+    <ShowByDefault>false</ShowByDefault>
+    <SortOrder>20</SortOrder>
+    <DefaultName>Workflow.xoml</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem ReplaceParameters="true" SubType="Component">Workflow.xoml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.$fileinputextension$.cs">Workflow.xoml.cs</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

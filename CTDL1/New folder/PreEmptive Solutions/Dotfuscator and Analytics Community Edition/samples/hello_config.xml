@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE dotfuscator SYSTEM "http://www.preemptive.com/dotfuscator/dtd/dotfuscator_v2.3.dtd">
+<dotfuscator version="2.3">
+  <!--This is application generated code. Do not edit manually.-->
+  <input>
+    <asmlist>
+      <inputassembly refid="2820e99c-d7d3-40ef-8141-ea0aecd5176e">
+        <option>honoroas</option>
+        <option>stripoa</option>
+        <file dir="${configdir}" name="HelloWorld.exe" />
+      </inputassembly>
+    </asmlist>
+  </input>
+  <output>
+    <file dir="${configdir}\Dotfuscated" />
+  </output>
+  <renaming>
+    <option>xmlserialization</option>
+    <mapping>
+      <mapoutput overwrite="true">
+        <file dir="${configdir}\Dotfuscated" name="Map.xml" />
+      </mapoutput>
+    </mapping>
+    <referencerulelist>
+      <referencerule rulekey="{2B7E7C8C-A39A-4db8-9DFC-6AFD38509061}" />
+      <referencerule rulekey="{229FD6F8-5BCC-427b-8F72-A7A413ECDF1A}" />
+      <referencerule rulekey="{7D9C8B02-2383-420f-8740-A9760394C2C1}" />
+    </referencerulelist>
+  </renaming>
+  <sos mergeruntime="true">
+    <option>sendanalytics</option>
+    <option>dontsendtamper</option>
+  </sos>
+  <extattributes>
+    <extattribute name="PreEmptive.Attributes.TeardownAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="HelloWorld.Hello">
+        <method name="Main" signature="void(string[])" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.SetupAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="HelloWorld.Hello">
+        <method name="Main" signature="void(string[])" />
+      </type>
+      <propertylist>
+        <property name="OptInSourceElement" value="Method" />
+        <property name="CustomEndpoint" value="" />
+        <property name="UseSSL" value="False" />
+        <property name="InstanceIdSourceOwner" value="" />
+        <property name="OptInSourceOwner" value="HelloWorld.Hello" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="InstanceIdSourceElement" value="None" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="InstanceIdSourceName" value="" />
+        <property name="OptInSourceName" value="OptIn" />
+        <property name="ExtendedKeySourceOwner" value="" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="HelloWorld.Friendly">
+        <method name="SayGoodbye" signature="void(string)" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="FeatureEventType" value="Tick" />
+        <property name="Name" value="SayGoodbye" />
+        <property name="ExtendedKeySourceElement" value="None" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.FeatureAttribute">
+      <codetransformlist>
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <type name="HelloWorld.Friendly">
+        <method name="SayHello" signature="void()" />
+      </type>
+      <propertylist>
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="FeatureEventType" value="Tick" />
+        <property name="Name" value="SayHello" />
+        <property name="ExtendedKeySourceElement" value="None" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.BusinessAttribute">
+      <codetransformlist>
+        <codetransform name="sosruntime" />
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <assembly>
+        <file dir="${configdir}" name="HelloWorld.exe" />
+      </assembly>
+      <propertylist>
+        <property name="CompanyName" value="Hello. Inc" />
+        <property name="CompanyKey" value="7d2b02e0-064d-49a0-bc1b-4be4381c62d3" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.BinaryAttribute">
+      <codetransformlist>
+        <codetransform name="sosruntime" />
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <assembly>
+        <file dir="${configdir}" name="HelloWorld.exe" />
+      </assembly>
+      <propertylist>
+        <property name="Guid" value="a256b1d4-52f0-40f3-8b7c-22b8a9696837" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.ApplicationAttribute">
+      <codetransformlist>
+        <codetransform name="sosruntime" />
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <assembly>
+        <file dir="${configdir}" name="HelloWorld.exe" />
+      </assembly>
+      <propertylist>
+        <property name="ApplicationType" value="" />
+        <property name="Guid" value="1cb9969e-d76b-4846-8524-4e76750bafc5" />
+        <property name="Name" value="" />
+        <property name="Version" value="" />
+      </propertylist>
+    </extattribute>
+    <extattribute name="PreEmptive.Attributes.ExceptionTrackAttribute">
+      <codetransformlist>
+        <codetransform name="sosruntime" />
+        <codetransform name="analytics" />
+      </codetransformlist>
+      <assembly>
+        <file dir="${configdir}" name="HelloWorld.exe" />
+      </assembly>
+      <propertylist>
+        <property name="ReportInfoSourceOwner" value="" />
+        <property name="ReportInfoSourceElement" value="DefaultAction" />
+        <property name="SendReport" value="True" />
+        <property name="ExtendedKeySourceOwner" value="" />
+        <property name="ExtendedKeySourceElement" value="None" />
+        <property name="ExceptionNotificationSinkOwner" value="" />
+        <property name="ExtendedKeyMethodArguments" value="" />
+        <property name="ExtendedKeySourceName" value="" />
+        <property name="ExceptionNotificationSinkName" value="" />
+        <property name="ExceptionType" value="Unhandled" />
+        <property name="ExceptionNotificationSinkElement" value="None" />
+        <property name="ReportInfoSourceName" value="" />
+        <property name="PrivacyPolicyURI" value="http://www.preemptive.com/ceprivacy" />
+      </propertylist>
+    </extattribute>
+  </extattributes>
+  <smartobfuscation>
+    <smartobfuscationreport verbosity="all" overwrite="false" />
+  </smartobfuscation>
+</dotfuscator>

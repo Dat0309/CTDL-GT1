@@ -1,0 +1,721 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<html dir="LTR">
+<head>
+	<title>MFC 응용 프로그램 마법사</title>
+	<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+	<meta http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+	<meta http-equiv="MSThemeCompatible" content="Yes">
+	<link id="LINKURL" rel="stylesheet" href="../../../../../1042/NewStyles.css">
+</head>
+<body bgcolor="BUTTONFACE" topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0"
+	onload="InitDocument(document);" onkeydown="if (!bValidating) OnKey();" onkeypress="if (!bValidating) OnPress();">
+	<table class="ONE" height="100%" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<col class="LinkPane">
+		<col>
+		<!--OPEN OF INTRODUCTORY INFORMATION TABLE//-->
+		<tr valign="TOP">
+			<td height="79" width="100%" colspan="2">
+				<table class="TWO" border="0" cellpadding="0" cellspacing="0">
+					<col width="12">
+					<col>
+					<col width="12">
+					<tr>
+						<td valign="TOP" height="12" width="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="12" width="12">
+							&nbsp;
+						</td>
+						<td class="IMAGE" valign="BOTTOM" width="110" rowspan="2">
+							<div class="SMALLA" id="SINGLE_DOC_IMAGE">
+								<img class="SMALL" src="../../Images/DocTemplateString.gif" width="98" height="70"
+									alt="" border="0">
+							</div>
+						</td>
+						<td valign="TOP" height="12" width="6" rowspan="2">
+							&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td valign="TOP" height="65" width="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="65">
+							<h4 class="HEAD" id="HEAD">문서 템플릿 속성</h4>
+							<p class="SUBHEAD" id="SUBHEAD">
+								새 문서를 만들 때 사용할 응용 프로그램의 문서 템플릿 값을
+								지정합니다.</p>
+						</td>
+						<td valign="TOP" height="65" width="12">
+							&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td valign="TOP" class="RULE" colspan="5" height="2">
+							<table border="0" width="100%" height="1" cellpadding="0" cellspacing="0">
+								<tr valign="TOP">
+									<td height="1" width="100%" bgcolor="BUTTONSHADOW">
+									</td>
+									<td height="1" width="1" bgcolor="WINDOW">
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<!--CLOSE OF INTRODUCTORY INFORMATION TABLE//-->
+		<!--OPEN OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+		<tr valign="TOP">
+			<td class="Three" valign="TOP" height="100%" width="100%">
+				<table class="fixedSize" height="100%" width="100%" border="0" cellpadding="0" cellspacing="0">
+					<tr valign="TOP">
+						<td class="threeCustom" valign="TOP">
+							<!--OPEN OF NAVIGATION TABLE//-->
+							<table class="THREE" border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col>
+								<col width="1">
+								<tr>
+									<td valign="TOP" colspan="3" height="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="100%">
+										&nbsp;
+									</td>
+									<td valign="TOP" height="100%">
+										<!--OPEN OF NAVIGATIONAL LINKS//-->
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="Default" title="현재 설정을 요약하여 보여 줍니다."
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } Next(document, 'Default.htm');"
+															tabindex="1">개요</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="AppType" title="응용 프로그램에 대해 문서/뷰 아키텍처 지원 여부, 언어 및 인터페이스 스타일 옵션을 지정합니다."
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } Next(document, 'AppType.htm');"
+															tabindex="2">응용 프로그램 종류</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXTINDENT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="CompoundDoc" title="OLE 컨테이너 또는 서버 옵션, 그리고 액티브 문서 지원 여부를 지정합니다."
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } onClick(this);"
+															tabindex="3">복합 문서 지원</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINKSELECTED">
+											<span class="VERTLINE1">
+												<img src="../../../../../1033/Images/spacer.gif" width="1" height="1" alt="" border="0">
+											</span><span class="HORILINE1">
+												<table width="167" height="100%" border="0" cellpadding="0" cellspacing="0">
+													<tr valign="TOP">
+														<td class="DOTTEDLINE" height="1">
+														</td>
+													</tr>
+													<tr valign="TOP">
+														<td height="100%">
+															<img src="../../../../../1033/Images/spacer.gif" width="165" height="28" alt="" border="0">
+														</td>
+													</tr>
+													<tr valign="TOP">
+														<td class="DOTTEDLINE" height="1">
+														</td>
+													</tr>
+												</table>
+											</span>
+											<table width="160" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXTSELECTEDINDENT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span id="DocTemp" title="새 문서를 만들 때 사용할 응용 프로그램의 문서 템플릿 값을 지정합니다.">
+															문서 템플릿 속성</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="DBSupport" title="모든 데이터 소스를 포함하는 데이터베이스 지원을 지정합니다."
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } onClick(this);"
+															tabindex="4">데이터베이스 지원</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="UIFeatures" title="응용 프로그램의 모양 및 느낌을 조절하는 옵션을 지정합니다."
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } Next(document, 'UIFeatures.htm');"
+															tabindex="5">사용자 인터페이스 기능</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="Advanced" title="응용 프로그램에 추가로 포함할 기능을 지정합니다."
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } Next(document, 'Advanced.htm');"
+															tabindex="6">고급 기능</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="GeneratedClasses" title="생성된 클래스를 검토하고 응용 프로그램의 기본 클래스를 지정합니다."
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } Next(document, 'GeneratedClasses.htm');"
+															tabindex="7">생성된 클래스</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<!--CLOSE OF NAVIGATIONAL LINKS//-->
+									</td>
+									<td width="1">
+										<div class="VERTLINE">
+											<img src="../../../../../1033/Images/spacer.gif" width="1" height="1" alt="" border="0">
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				<!--CLOSE OF NAVIGATION TABLE//-->
+			</td>
+			<td valign="TOP" height="100%">
+				<!--OPEN OF CONTENT AND BUTTON TABLE//-->
+				<table class="ONE" border="0" cellpadding="0" cellspacing="0">
+					<col width="100%">
+					<tr valign="TOP">
+						<td height="100%">
+							<!--OPEN OF CONTENT//-->
+							<table class="CONTENT" border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col width="398">
+								<col width="12">
+								<tr>
+									<td valign="TOP" height="9" colspan="3">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP">
+										<table class="FixedSize" border="0" cellpadding="0" cellspacing="0">
+											<col width="193">
+											<col width="12">
+											<col width="193">
+											<tr>
+												<td valign="TOP">
+													<span class="itemText" id="FILE_EXTENSION_TEXT" title="응용 프로그램 문서의 파일 확장명입니다.">
+														<label id="EXTENSION_TEXT" for="FILE_EXTENSION">파일 확장명(<u>X</u>):</label>
+														<br>
+														<input class="sideBtn" type="text" name="FileExt" id="FILE_EXTENSION" accesskey="x"
+															onpropertychange="ExtensionChanged(true);" title="응용 프로그램 문서의 파일 확장명입니다. 권장되는 확장명 형식은 '문서 형식-회사'입니다(예: 'xlsx-microsoft')."
+															tabindex="8">
+													</span>
+												</td>
+												<td valign="TOP" width="12">
+													&nbsp;
+												</td>
+												<td valign="TOP">
+													<span class="itemText" id="DOCTYPE_WILDCARD_TEXT" title="&quot;워크시트(*.xls)&quot;와 같은 문서 형식 및 와일드카드 필터입니다.">
+														<label id="FILTER_TEXT" for="FILTER_NAME">필터 이름(<u>N</u>):</label>
+														<br>
+														<input class="sideBtn" type="text" name="FilterName" id="FILTER_NAME" accesskey="n"
+															title="&quot;워크시트(*.xls)&quot;와 같은 문서 형식 및 와일드카드 필터입니다."
+															tabindex="9">
+													</span>
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="17" colspan="3">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP">
+										<span class="itemText" id="preview_handler_title">
+											<input class="CheckBox" type="checkbox" id="PREVIEW_HANDLER" accesskey="R" title="미리 보기 처리기 지원을 사용하도록 설정합니다. 문서 데이터가 탐색기의 미리 보기 창에 표시됩니다.  파일 확장명을 제공해야 합니다.  해당 처리기를 포함하기 위해 별도의 ATL DLL 프로젝트가 만들어집니다."
+												class="SINGLECHECKBOX" tabindex="10">
+											<div class="itemTextCheckboxA" id="SELECT_PREVIEW_HANDLER_TEXT" title="미리 보기 처리기 지원을 사용하도록 설정합니다. 문서 데이터가 탐색기의 미리 보기 창에 표시됩니다.  파일 확장명을 제공해야 합니다.  해당 처리기를 포함하기 위해 별도의 ATL DLL 프로젝트가 만들어집니다.">
+												<label id="PREVIEW_HANDLER_TEXT" for="PREVIEW_HANDLER">파일 형식에 대한 미리 보기 처리기 지원(<u>R</u>)</label>
+											</div>
+										</span>
+										<p class="ElementSpacer2">
+											&nbsp;</p>
+										<span class="itemText" id="thumbnail_handler_title">
+											<input class="CheckBox" type="checkbox" id="THUMBNAIL_HANDLER" accesskey="U" title="검색 및 축소판 그림 처리기에서 호출되고 응용 프로그램 코드를 DLL에 구현된 처리기 코드와 공유하도록 허용하는 CDocument 및 CView 파생 클래스의 코드를 생성합니다.  파일 확장명을 제공해야 합니다.  해당 처리기를 포함하기 위해 별도의 ATL DLL 프로젝트가 만들어집니다."
+												class="SINGLECHECKBOX" tabindex="11">
+											<div class="itemTextCheckboxA" id="SELECT_THUMBNAIL_HANDLER_TEXT" title="축소판 그림 처리기에서 호출되고 응용 프로그램 코드를 DLL에 구현된 처리기 코드와 공유하도록 허용하는 CDocument 및 CView 파생 클래스의 코드를 생성합니다.  파일 확장명을 제공해야 합니다.  해당 처리기를 포함하기 위해 별도의 ATL DLL 프로젝트가 만들어집니다.">
+												<label id="THUMBNAIL_HANDLER_TEXT" for="THUMBNAIL_HANDLER">파일 형식에 대한 축소판 그림 처리기 지원(<u>U</u>)</label>
+											</div>
+										</span>
+										<p class="ElementSpacer2">
+											&nbsp;</p>
+										<span class="itemText" id="search_handler_title">
+											<input class="CheckBox" type="checkbox" id="SEARCH_HANDLER" accesskey="E" title="검색 및 축소판 그림 처리기에서 호출되고 응용 프로그램 코드를 DLL에 구현된 처리기 코드와 공유하도록 허용하는 CDocument 및 CView 파생 클래스의 코드를 생성합니다.  파일 확장명을 제공해야 합니다.  해당 처리기를 포함하기 위해 별도의 ATL DLL 프로젝트가 만들어집니다."
+												class="SINGLECHECKBOX" tabindex="11">
+											<div class="itemTextCheckboxA" id="SELECT_SEARCH_HANDLER_TEXT" title="검색 처리기에서 호출되고 응용 프로그램 코드를 DLL에 구현된 처리기 코드와 공유하도록 허용하는 CDocument 및 CView 파생 클래스의 코드를 생성합니다.  파일 확장명을 제공해야 합니다.  해당 처리기를 포함하기 위해 별도의 ATL DLL 프로젝트가 만들어집니다.">
+												<label id="SEARCH_HANDLER_TEXT" for="SEARCH_HANDLER">파일 형식에 대한 검색 처리기 지원(<u>E</u>)</label>
+											</div>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="17" colspan="3">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP">
+										<table class="FixedSize" border="0" cellpadding="0" cellspacing="0">
+											<col width="193">
+											<col width="12">
+											<col width="193">
+											<tr>
+												<td valign="TOP">
+													<span class="itemText" id="MAIN_FRAME_CAPTION_TEXT" title="주 응용 프로그램 프레임의 맨 위에 표시되는 텍스트며, 일반적으로 응용 프로그램의 이름입니다.">
+														<label id="MAIN_FRAME_TEXT" for="MAIN_FRAME_CAPTION">주 프레임 캡션(<u>P</u>):</label>
+														<br>
+														<input class="sideBtn" type="text" name="MainFrCap" id="MAIN_FRAME_CAPTION" accesskey="p"
+															title="주 응용 프로그램 프레임의 맨 위에 표시되는 텍스트며, 일반적으로 응용 프로그램의 이름입니다."
+															tabindex="12">
+													</span>
+													<p class="ElementSpacer2">
+														&nbsp;</p>
+													<span class="itemText" id="ROOT_NAME_TEXT" title="새 문서 파일의 루트 이름이며, 기본값은 &quot;프로젝트&quot;입니다.">
+														<label id="DOC_TYPE_TEXT" for="DOC_TYPE_NAME">문서 형식 이름(<u>T</u>):</label>
+														<br>
+														<input class="sideBtn" type="text" name="DocTypeName" id="DOC_TYPE_NAME" accesskey="t"
+															title="새 문서 파일의 루트 이름이며 기본값은 &quot;제목 없음&quot;입니다." tabindex="14">
+													</span>
+													<p class="ElementSpacer2">
+														&nbsp;</p>
+													<span class="itemText" id="SHORT_NAME_TEXT" title="&quot;워크시트&quot;와 같이 문서 형식의 약식 이름입니다.">
+														<label id="NEW_SHORT_NAME_TEXT" for="FILE_NEW_NAME_SHORT">파일의 새 약식 이름(<u>S</u>):</label>
+														<br>
+														<input class="sideBtn" type="text" name="FileNameShort" id="FILE_NEW_NAME_SHORT"
+															accesskey="s" title="&quot;워크시트&quot;와 같이 문서 형식의 약식 이름입니다."
+															tabindex="16">
+													</span>
+												</td>
+												<td valign="TOP" width="12">
+													&nbsp;
+												</td>
+												<td valign="TOP">
+													<span class="itemText" id="IDENTIFIER_TEXT" title="Windows 등록 데이터베이스에 저장될 문서 형식의 식별자입니다.">
+														<label id="ID_TEXT" for="FILE_TYPE_ID">파일 형식 ID(<u>I</u>):</label>
+														<br>
+														<input class="sideBtn" type="text" name="FileID" id="FILE_TYPE_ID" accesskey="i"
+															title="Windows 등록 데이터베이스에 저장될 문서 형식의 식별자입니다."
+															tabindex="13">
+													</span>
+													<p class="ElementSpacer2">
+														&nbsp;</p>
+													<span class="itemText" id="DOC_NAME_TEXT" title="Windows 등록 데이터베이스에 저장될 문서 형식의 이름입니다.">
+														<label id="LONG_NAME_TEXT" for="FILE_NEW_NAME_LONG">파일 형식의 긴 이름(<u>L</u>):</label>
+														<br>
+														<input class="sideBtn" type="text" name="FileNameLong" id="FILE_NEW_NAME_LONG" accesskey="l"
+															title="Windows 등록 데이터베이스에 저장될 문서 형식의 이름입니다."
+															tabindex="15">
+													</span>
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="100%" colspan="3">
+										&nbsp;
+									</td>
+								</tr>
+							</table>
+							<!--CLOSE OF CONTENT//-->
+						</td>
+					</tr>
+					<tr valign="BOTTOM">
+						<td>
+							<!--OPEN OF BUTTON HTML//-->
+							<table border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col>
+								<col width="75">
+								<col width="4">
+								<col width="75">
+								<col width="4">
+								<col width="75">
+								<col width="12">
+								<tr>
+									<td valign="TOP" class="RULE" colspan="8" height="2">
+										<table border="0" width="100%" height="1" cellpadding="0" cellspacing="0">
+											<tr valign="TOP">
+												<td height="1" width="100%" bgcolor="BUTTONSHADOW">
+												</td>
+												<td height="1" width="1" bgcolor="WINDOW">
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="11" colspan="8">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="MIDDLE" height="23" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP" height="23">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="FinishBtn" onclick="OnFinish(document);">
+											마침</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="4">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="CancelBtn" onclick="window.external.Finish(document, 'cancel');">
+											취소</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="4">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="HelpBtn" onclick="window.external.OnHelp('vc.appwiz.mfc.exe.doctemp');">
+											도움말</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="12" colspan="8">
+										&nbsp;
+									</td>
+								</tr>
+							</table>
+							<!--CLOSE OF BUTTON HTML//-->
+						</td>
+					</tr>
+				</table>
+				<!--CLOSE OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+<script language="JSCRIPT">
+
+	var tab_array = new Array();
+	tab_array[0] = Default;
+	tab_array[1] = AppType;
+	tab_array[2] = CompoundDoc;
+	tab_array[3] = DocTemp;
+	tab_array[4] = DBSupport;
+	tab_array[5] = UIFeatures;
+	tab_array[6] = Advanced;
+	tab_array[7] = GeneratedClasses;
+
+	var ProjName = window.external.FindSymbol("PROJECT_NAME");
+
+	function InitDocument(document) {
+		setDirection();
+		InitTabs();
+		window.external.Load(document);
+
+		var max = new Number;
+		max = window.external.FindSymbol("MAX_DOC_TYPE_NAME");
+		DOC_TYPE_NAME.maxLength = max;
+
+		max = window.external.FindSymbol("MAX_FILE_NEW_NAME_SHORT");
+		FILE_NEW_NAME_SHORT.maxLength = max;
+
+		max = window.external.FindSymbol("MAX_FILE_TYPE_ID");
+		FILE_TYPE_ID.maxLength = max;
+
+		max = window.external.FindSymbol("MAX_FILE_NEW_NAME_LONG");
+		FILE_NEW_NAME_LONG.maxLength = max;
+
+		max = window.external.FindSymbol("MAX_FILTER_NAME");
+		FILTER_NAME.maxLength = max;
+
+		ExtensionChanged(false);
+	}
+
+	function InitTabs() {
+		MouseOut(DBSupport);
+		MouseOut(CompoundDoc);
+	}
+
+	function Next(document, linkto) {
+		window.external.Next(document, linkto);
+	}
+
+	function onClick(obj) {
+		if (obj == null || typeof (obj) == "undefined") {
+			return;
+		}
+
+		if (obj.id == "DBSupport") {
+			if (!window.external.FindSymbol("APP_TYPE_DLG")) {
+				Next(document, "DBSupport.htm");
+			}
+		}
+
+		if (obj.id == "CompoundDoc") {
+			if (window.external.FindSymbol("DOCVIEW") && !window.external.IsSymbolDisabled("DOCVIEW")) {
+				Next(document, "CompoundDoc.htm");
+			}
+		}
+	}
+
+	function CheckDataSource() {
+		if (window.external.FindSymbol("DB_CONNECTION_STRING") == "" && (window.external.FindSymbol("OLEDB") || window.external.FindSymbol("ODBC"))) {
+			L_Err1_Text = "데이터베이스 뷰를 선택한 경우 데이터 소스를 지정해야 합니다.";
+			window.external.ReportError(L_Err1_Text);
+			return false;
+		}
+
+		return true;
+	}
+
+	function OnFinish(document) {
+		bValidating = true;
+		if (!ValidateInput()) {
+			bValidating = false;
+			return;
+		}
+
+		if (!CheckDataSource())
+			return;
+
+		if (window.external.FindSymbol("ACTIVE_DOC_SERVER")) {
+			var strExtension = window.external.FindSymbol("FILE_EXTENSION");
+			if (strExtension == "") {
+				L_Err2_Text = "액티브 문서 서버 옵션을 선택했습니다.  문서 파일 확장명을 지정해야 합니다.";
+				window.external.ReportError(L_Err2_Text);
+				FILE_EXTENSION.focus();
+				return;
+			}
+		}
+
+		OnWizFinish(document);
+	}
+
+	function ExtensionChanged(fValueChanged) {
+		var strExtension = TrimStr(FILE_EXTENSION.value);
+		window.external.AddSymbol("FILE_EXTENSION", strExtension);
+		if (strExtension == "") {
+			FILTER_NAME.value = strExtension;
+			window.external.AddSymbol("HAS_SUFFIX", false);
+			PREVIEW_HANDLER.checked = false;
+			PREVIEW_HANDLER.disabled = true;
+			PREVIEW_HANDLER_TEXT.disabled = true;
+			THUMBNAIL_HANDLER.checked = false;
+			THUMBNAIL_HANDLER.disabled = true;
+			THUMBNAIL_HANDLER_TEXT.disabled = true;
+			SEARCH_HANDLER.checked = false;
+			SEARCH_HANDLER.disabled = true;
+			SEARCH_HANDLER_TEXT.disabled = true;
+		}
+		else {
+			if (fValueChanged) {
+				FILTER_NAME.value = ProjName + " Files (*." + strExtension + ")";
+			}
+			window.external.AddSymbol("HAS_SUFFIX", true);
+			PREVIEW_HANDLER.disabled = false;
+			PREVIEW_HANDLER_TEXT.disabled = false;
+			THUMBNAIL_HANDLER.disabled = false;
+			THUMBNAIL_HANDLER_TEXT.disabled = false;
+			SEARCH_HANDLER.disabled = false;
+			SEARCH_HANDLER_TEXT.disabled = false;
+		}
+	}
+
+	function ValidateInput() {
+		var oInvalid = null;
+
+		if (!Validate(FILE_EXTENSION)) {
+			oInvalid = FILE_EXTENSION;
+		}
+
+		if (oInvalid == null) {
+			if (!Validate(FILE_TYPE_ID)) {
+				oInvalid = FILE_TYPE_ID;
+			}
+		}
+
+		if (oInvalid == null) {
+			if (!Validate(DOC_TYPE_NAME)) {
+				oInvalid = DOC_TYPE_NAME;
+			}
+		}
+
+		if (oInvalid == null) {
+			if (!Validate(FILTER_NAME)) {
+				oInvalid = FILTER_NAME;
+			}
+		}
+
+		if (oInvalid == null) {
+			if (!Validate(FILE_NEW_NAME_SHORT)) {
+				oInvalid = FILE_NEW_NAME_SHORT;
+			}
+		}
+
+		if (oInvalid == null) {
+			if (!Validate(FILE_NEW_NAME_LONG)) {
+				oInvalid = FILE_NEW_NAME_LONG;
+			}
+		}
+
+		if (oInvalid != null) {
+			window.external.ReportError();
+			oInvalid.focus();
+			return false;
+		}
+		return true;
+	}
+
+	function ValidateFileExtension(strExt) {
+		if (strExt.length == 0 && (PREVIEW_HANDLER.checked || THUMBNAIL_HANDLER.checked || SEARCH_HANDLER.checked)) {
+			L_Err4_Text = "미리 보기 처리기 지원을 사용하도록 설정하는 경우 파일 확장명은 비워 둘 수 없습니다.";
+			oErrObj = new Error(L_Err4_Text);
+			SetErrorInfo(oErrObj);
+			return false;
+		}
+
+		if (!ValidateExtension(strExt) || !window.external.dte.VCLanguageManager.ValidateFileName(strExt, vsCMValidateFileExtNone)) {
+			L_Err5_Text = "파일 확장명이 잘못되었습니다.  확장명에는 공백이나 <>.\"\\/|:?* 문자가 포함될 수 없습니다.";
+			oErrObj = new Error(L_Err5_Text);
+			SetErrorInfo(oErrObj);
+			return false;
+		}
+
+		return true;
+	}
+
+	function ValidateExtension(strExt) {
+		if (strExt.indexOf("<") >= 0 || strExt.indexOf(">") >= 0 || strExt.indexOf("\"") >= 0 || strExt.indexOf(" ") >= 0 ||
+		strExt.indexOf("/") >= 0 || strExt.indexOf("\\") >= 0 || strExt.indexOf("|") >= 0 || strExt.indexOf(":") >= 0 ||
+		strExt.indexOf("?") >= 0 || strExt.indexOf("*") >= 0 || strExt.indexOf(".") >= 0) {
+			return false;
+		}
+
+		return true;
+	}
+
+	function Validate(obj) {
+		var bValid = true;
+		switch (obj.id) {
+			case "FILE_EXTENSION":
+				{
+					if (!FILE_EXTENSION.value.length && !PREVIEW_HANDLER.checked && !THUMBNAIL_HANDLER.checked && !SEARCH_HANDLER.checked) {
+						bValid = true;
+						break;
+					}
+					bValid = ValidateFileExtension(obj.value);
+					break;
+				}
+			case "DOC_TYPE_NAME":
+				bValid = window.external.dte.VCLanguageManager.ValidateQualifiedName(obj.value);
+				break;
+			case "FILE_TYPE_ID":
+				bValid = window.external.IsValidProgID(obj.value);
+				break;
+			default:
+				break;
+		}
+
+		if (typeof (bValid) == "undefined")
+			bValid = false;
+
+		return bValid;
+	}
+
+</script>
+
+<script id="INCLUDE_SCRIPT" language="JSCRIPT"></script>
+
+<script id="INCLUDE_COMMON" language="JSCRIPT"></script>
+
+<script>
+	document.scripts("INCLUDE_SCRIPT").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Script.js";
+	document.scripts("INCLUDE_COMMON").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Common.js";
+</script>
+

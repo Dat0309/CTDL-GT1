@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Add Menu Items to Windows Forms</Title>
+      <Author>Microsoft Corporation</Author>
+		<Description>Adds menu items to an existing menu.</Description>
+      <Shortcut>menuAddItems</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>secondDropDownName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with text for the second dropdown item in the menu. Use "&amp;" to create accelerator keys.</ToolTip>
+          <Default>"&amp;Second Item"</Default>
+        </Literal>
+        <Literal>
+          <ID>firstDropDownName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with text for the first dropdown item in the menu. Use "&amp;" to create accelerator keys.</ToolTip>
+          <Default>"&amp;First Item"</Default>
+        </Literal>
+        <Literal>
+          <ID>menuStripName</ID>
+          <Type>MenuStrip</Type>
+          <ToolTip>Replace with a MenuStrip on your form.</ToolTip>
+          <Default>MenuStrip1</Default>
+        </Literal>
+        <Literal>
+          <ID>menuName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the name of the added menu. </ToolTip>
+          <Default>"&amp;Menu Name"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim addedMenuStripItem As New ToolStripMenuItem
+Dim firstDropDownItem As New ToolStripMenuItem
+Dim secondDropDownItem As New ToolStripMenuItem
+
+addedMenuStripItem.Text = $menuName$
+firstDropDownItem.Text = $firstDropDownName$
+secondDropDownItem.Text = $secondDropDownName$
+
+$menuStripName$.Items.Add(addedMenuStripItem)
+
+addedMenuStripItem.DropDownItems.Add(firstDropDownItem)
+addedMenuStripItem.DropDownItems.Add(secondDropDownItem)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

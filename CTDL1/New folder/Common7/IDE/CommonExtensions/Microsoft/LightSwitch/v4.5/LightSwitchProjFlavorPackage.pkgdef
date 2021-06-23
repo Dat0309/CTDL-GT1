@@ -1,0 +1,25 @@
+[$RootKey$]
+
+[$RootKey$\Packages]
+
+[$RootKey$\Packages\{B6758CFE-3B0F-4ED1-B07E-EDB68C524528}]
+"Assembly"="Microsoft.LightSwitch.Design.Package, Version=12.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"Class"="Microsoft.LightSwitch.VSIntegration.Project.ProjectFlavor.ProjectFlavorPackage"
+"CodeBase"="$ProgramFiles$\Microsoft SDKs\LightSwitch\v4.5\Design\Microsoft.LightSwitch.Design.Package.dll"
+"CompanyName"="Microsoft Corporation"
+"ID"=dword:00000064
+"InProcServer32"="$System$\mscoree.dll"
+"MinEdition"="Standard"
+"ProductName"="LightSwitch Project Flavor"
+"ProductVersion"="4.5"
+@="Microsoft.LightSwitch.VSIntegration.Project.ProjectFlavor.ProjectFlavorPackage, Microsoft.LightSwitch.Design.Package, Version=12.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+
+[$RootKey$\Packages\{B6758CFE-3B0F-4ED1-B07E-EDB68C524528}\SatelliteDll]
+"DllName"="Microsoft.LightSwitch.Design.ProjectUI.dll"
+"Path"="$ProgramFiles$\Microsoft SDKs\LightSwitch\v4.5\Design"
+
+[$RootKey$\Projects]
+
+[$RootKey$\Projects\{8BB0C5E8-0616-4F60-8E55-A43933E57E9C}]
+"Package"="{B6758CFE-3B0F-4ED1-B07E-EDB68C524528}"
+@="ProjectFlavorFactory"

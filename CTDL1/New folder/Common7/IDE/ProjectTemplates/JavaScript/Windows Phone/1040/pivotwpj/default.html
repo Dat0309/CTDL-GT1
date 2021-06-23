@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>$safeprojectname$</title>
+    
+    <!-- Riferimenti WinJS -->
+    <!-- In fase di esecuzione, ui-themed.css viene risolto in ui-themed.light.css o ui-themed.dark.css 
+    in base all'impostazione del tema dell'utente. Fa parte della funzionalità di caricamento risorse MRT. -->
+    <link href="/css/ui-themed.css" rel="stylesheet" />
+    <script src="//Microsoft.Phone.WinJS.2.1/js/base.js"></script>
+    <script src="//Microsoft.Phone.WinJS.2.1/js/ui.js"></script>
+
+    <!-- Riferimenti PhonePivotApp -->
+    <link href="/css/phone.css" rel="stylesheet" />
+    <script src="/js/data.js"></script>
+    <script src="/js/navigator.js"></script>
+    <script src="/js/default.js"></script>
+</head>
+<body class="phone">
+    <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/hub/hub.html'}"></div>
+    <!-- <div id="appbar" data-win-control="WinJS.UI.AppBar">
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmd', label:'Command', icon:'placeholder'}" type="button"></button>
+    </div> -->
+
+</body>
+</html>

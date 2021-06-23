@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Import Schema from a String</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Imports an XML schema from a string into an Excel schema map.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Excel.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Excel = Microsoft.Office.Interop.Excel</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>rootElement</ID>
+          <Type>System.String</Type>
+          <ToolTip>Replace with the root element of the XML schema.  Argument can be ignored if the schema contains only one root element.</ToolTip>
+          <Default>"rootElementName"</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>schema</ID>
+          <Type>System.String</Type>
+          <ToolTip>Replace with an XML schema stored in a string variable.</ToolTip>
+          <Default>"schemaString"</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>xmlMap</ID>
+          <Type>Microsoft.Office.Interop.Excel.XmlMap</Type>
+          <ToolTip>Replace with a variable to hold the new XmlMap object.</ToolTip>
+          <Default>xmlMap</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>workbook</ID>
+          <Type>Microsoft.Office.Interop.Excel.Workbook</Type>
+          <ToolTip>Replace with the workbook to add the XML schema map to.</ToolTip>
+          <Default>workbook</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="CSharp" Kind="" Delimiter="$"><![CDATA[
+Microsoft.Office.Interop.Excel.XmlMap $xmlMap$ = $workbook$.XmlMaps.Add($schema$, $rootElement$);
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

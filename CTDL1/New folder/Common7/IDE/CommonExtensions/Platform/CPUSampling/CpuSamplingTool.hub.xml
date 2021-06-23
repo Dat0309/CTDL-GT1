@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Components xmlns="urn:diagnosticshub-components-definition-1-4">
+
+  <ToolComponent>
+    <Id>96F1F3E8-F762-4CD2-8ED9-68EC25C2C722</Id>
+    <ResourceBaseName>CpuSamplingResources</ResourceBaseName>
+    <Name ResourceId="ResourceId_ToolName" />
+    <Description ResourceId="ResourceId_ToolDescription" />
+    <HostOSVersion MinVersion="6.2" />
+    
+    <SupportedTargets>
+      <!-- JavaScript Windows Store Apps -->
+      <VisualStudio DebuggerContext="LocalOrRemote">
+        <ProjectType>262852c6-cd72-467d-83fe-5eeb1973a190</ProjectType>
+        <TargetPlatform Name="Windows"/>
+        <TargetPlatform Name="WindowsPhone" MinOSVersion="8.1"/>
+      </VisualStudio>
+      <!-- C# Windows Store Apps -->
+      <VisualStudio DebuggerContext="LocalOrRemote">
+        <ProjectType>BC8A1FFA-BEE3-4634-8014-F334798102B3</ProjectType>
+        <ProjectType>FAE04EC0-301F-11D3-BF4B-00C04F79EFBC</ProjectType>
+        <TargetPlatform Name="Windows"/>
+      </VisualStudio>
+      <!-- C# Windows Phone 8.1 Store App -->
+      <VisualStudio DebuggerContext="RemoteOnly">
+        <ProjectType>76F1466A-8B6D-4E39-A767-685A06062A39</ProjectType>
+        <ProjectType>FAE04EC0-301F-11D3-BF4B-00C04F79EFBC</ProjectType>
+        <TargetPlatform Name="WindowsPhone" MinOSVersion="8.1"/>
+      </VisualStudio>
+      <!-- C# Desktop Projects -->
+      <!-- C# WPF Apps - C# GUID && WPF GUID -->
+      <VisualStudio DebuggerContext="LocalOnly">
+        <ProjectType>60dc8134-eba5-43b8-bcc9-bb4bc16c2548</ProjectType>
+        <ProjectType>FAE04EC0-301F-11D3-BF4B-00C04F79EFBC</ProjectType>
+        <TargetPlatform Name="Windows" />
+      </VisualStudio>
+      <!-- C# Projects - C# GUID (Console apps, etc. )-->
+      <VisualStudio DebuggerContext="LocalOnly">
+        <ProjectType>FAE04EC0-301F-11D3-BF4B-00C04F79EFBC</ProjectType>
+        <TargetPlatform Name="Windows"/>
+      </VisualStudio>
+      <!-- VB Windows Store Apps -->
+      <VisualStudio DebuggerContext="LocalOrRemote">
+        <ProjectType>BC8A1FFA-BEE3-4634-8014-F334798102B3</ProjectType>
+        <ProjectType>F184B08F-C81C-45F6-A57F-5ABD9991F28F</ProjectType>
+        <TargetPlatform Name="Windows"/>
+      </VisualStudio>
+      <!-- VB Windows Phone 8.1 Store App -->
+      <VisualStudio DebuggerContext="RemoteOnly">
+        <ProjectType>76F1466A-8B6D-4E39-A767-685A06062A39</ProjectType>
+        <ProjectType>F184B08F-C81C-45F6-A57F-5ABD9991F28F</ProjectType>
+        <TargetPlatform Name="WindowsPhone" MinOSVersion="8.1"/>
+      </VisualStudio>
+      <!-- VB Desktop Projects -->
+      <!-- VB WPF Apps - VB GUID && WPF GUID -->
+      <VisualStudio DebuggerContext="LocalOnly">
+        <ProjectType>F184B08F-C81C-45F6-A57F-5ABD9991F28F</ProjectType>
+        <ProjectType>60dc8134-eba5-43b8-bcc9-bb4bc16c2548</ProjectType>
+        <TargetPlatform Name="Windows"/>
+      </VisualStudio>
+      <!-- VB Projects - VB GUID (Console apps, etc.) -->
+      <VisualStudio DebuggerContext="LocalOnly">
+        <ProjectType>F184B08F-C81C-45F6-A57F-5ABD9991F28F</ProjectType>
+        <TargetPlatform Name="Windows"/>
+      </VisualStudio>
+      <!-- C++ -->
+      <VisualStudio DebuggerContext="LocalOrRemote">
+        <ProjectType>8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942</ProjectType>
+        <TargetPlatform Name="Windows"/>
+        <TargetPlatform Name="WindowsPhone" MinOSVersion="8.1"/>
+      </VisualStudio>
+      <WindowsStoreApp>
+        <TargetPlatform Name="Windows" Attach="LocalOrRemote" Launch="LocalOrRemote"/>
+      </WindowsStoreApp>
+      <Process Attach="LocalOnly" Installed="Unsupported"/>
+    <InternetExplorer MinVersion="11.0">
+      <TargetPlatform Name="Windows" Attach="Unsupported" Launch="LocalOrRemote" MinOSVersion="6.1" />
+      <TargetPlatform Name="WindowsPhone" Attach="Unsupported" Launch="RemoteOnly" MinOSVersion="6.3"/>
+    </InternetExplorer>
+    </SupportedTargets>
+    <EnabledCollectors>
+      <StandardCollector CollectSymbolInformation="true">
+        <!-- Windows Kernel Trace -->
+        <EtwProvider Id="9E814AAD-3204-11D2-9A82-006008A86939" FilterByProcessId="true">
+          <!-- process -->
+          <Keyword>0x00000001</Keyword>
+          <!-- thread -->
+          <Keyword>0x00000002</Keyword>
+          <!-- img -->
+          <Keyword>0x00000004</Keyword>
+          <!-- profile -->
+          <Keyword CollectStacks="true">0x01000000</Keyword>
+        </EtwProvider>
+        <!-- CLR Runtime Provider -->
+        <EtwProvider Id="e13c0d23-ccbc-4e12-931b-d9cc2eee27e4" FilterByProcessId="true" Level="Verbose">
+          <!-- Binder -->
+          <Keyword>0x4</Keyword>
+          <!-- Loader: Logging when modules actually get loaded and unloaded. -->
+          <Keyword>0x8</Keyword>
+          <!-- Jit: Logging when Just In Time (JIT) compilation occurs. -->
+          <Keyword>0x10</Keyword>
+          <!-- NGEN: Logging when precompiled native (NGEN) images are loaded. -->
+          <Keyword>0x20</Keyword>
+          <!-- ILToNativeMap: Log events associated with IL to native code map for JITted method. -->
+          <Keyword>0x20000</Keyword>
+          <!-- OverrideAndSuppressNgenEvents: Suppress extremely expensive Ngen events on newer CLRs which support Ngen PDBs.-->
+          <Keyword>0x40000</Keyword>
+        </EtwProvider>
+        <EtwProvider Id="57277741-3638-4A4B-BDBA-0AC6E45DA56C" FilterByProcessId="true">
+          <!-- JScriptRuntime -->    
+          <Keyword>0x1</Keyword>
+          <!-- JScriptStartRundown -->
+          <Keyword>0x2</Keyword>
+        </EtwProvider>
+      </StandardCollector>
+    </EnabledCollectors>
+    <DataWarehouse>
+      <CustomAnalyzers>
+        <Location Arch="Amd64" LocalDllRelativePath="amd64\DiagnosticsHub.CpuSamplingAnalyzer.dll" />
+        <Location Arch="X86" LocalDllRelativePath="x86\DiagnosticsHub.CpuSamplingAnalyzer.dll" />
+        <Analyzer Clsid="DCA8B3EF-28C5-4B08-BAFC-B072F8AA9277"/>
+      </CustomAnalyzers>
+      <StandardAnalyzers>
+        <Analyzer Clsid="66EDDDF1-2277-40F3-983A-6FF57A433ECB"/>
+      </StandardAnalyzers>
+    </DataWarehouse>
+    <Views>
+      <StandardSwimLane Destination="CollectionAndAnalysis" >
+          <Title ResourceId="CpuGraphTitle" />
+          <Description ResourceId="CpuGraphDescription" />
+          <JsonConfiguration>
+          {
+            "Series": [
+              {
+                "SeriesType": "Line",
+                "Legend": "CpuGraphLineSeries",
+                "DataSource": {
+                  "CounterId": "DiagnosticsHub.Counters.Process.CPU",
+                  "AnalyzerId": "66EDDDF1-2277-40F3-983A-6FF57A433ECB"
+                }
+              }
+            ],
+            "MinValue": 0,
+            "MaxValue": 100,
+            "IsScaleFixed" : true,
+            "Unit": "CpuGraphUnit"
+          }
+          </JsonConfiguration>
+          <Resources>
+            <JavaScriptResource JavaScriptKey="CpuGraphLineSeries" ResourceId="CpuGraphLineSeries" />
+            <JavaScriptResource JavaScriptKey="CpuGraphUnit" ResourceId="CpuGraphUnit" />
+          </Resources>
+          <CollectionDataSources>
+            <ProcessCounterDataSource CounterId="CPU"></ProcessCounterDataSource>
+          </CollectionDataSources>
+      </StandardSwimLane>
+      <DetailsView Destination="Analysis" Id="DCA8B3EF-17B4-4B08-BAFC-B072F8AA9277">
+        <Title ResourceId="CpuViewTitle" ></Title>
+        <Description ResourceId="CpuViewDescription"></Description>
+        <ScriptedControl>
+          <Manifest>WebViews\CpuView.manifest.json</Manifest>
+        </ScriptedControl>
+      </DetailsView>
+    </Views>
+  </ToolComponent>
+</Components>

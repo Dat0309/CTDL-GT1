@@ -1,0 +1,41 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>listbox</Title>
+    <Author>Microsoft Corporation</Author>
+    <Shortcut>listbox</Shortcut>
+    <AlternativeShortcuts>
+      <Shortcut>dropdownlist</Shortcut>
+      <Shortcut>checkboxlist</Shortcut>
+      <Shortcut>radiobuttonlist</Shortcut>
+      <Shortcut Value="listbox">asp:listbox</Shortcut>
+      <Shortcut Value="dropdownlist">asp:dropdownlist</Shortcut>
+      <Shortcut Value="checkboxlist">asp:checkboxlist</Shortcut>
+      <Shortcut Value="radiobuttonlist">asp:radiobuttonlist</Shortcut>
+    </AlternativeShortcuts>
+    <Description>Markup snippet for a list control</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <FileExtensions>
+      aspx;master;ascx
+    </FileExtensions>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>text1</ID>
+        <ToolTip>text1</ToolTip>
+        <Default>text1</Default>
+      </Literal>
+      <Literal>
+        <ID>text2</ID>
+        <ToolTip>text2</ToolTip>
+        <Default>text2</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="html"><![CDATA[<asp:$shortcut$ runat="server">
+    <asp:listitem text="$text1$" />
+    <asp:listitem text="$text2$" />
+</asp:$shortcut$>$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

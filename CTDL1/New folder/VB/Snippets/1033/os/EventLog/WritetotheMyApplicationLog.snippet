@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Write to the My.Application Log </Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Writes a string to the application event log on the local computer.</Description>
+      <Keywords>
+      </Keywords>
+      <Shortcut>evWriteLog</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>message</ID>
+          <Type />
+          <ToolTip>Replace with a message to be written.</ToolTip>
+          <Default>"An entry to the Application event log."</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[My.Application.Log.WriteEntry($message$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

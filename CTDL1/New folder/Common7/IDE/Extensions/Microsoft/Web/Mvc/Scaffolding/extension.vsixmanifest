@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="Microsoft.AspNet.Scaffolding.Mvc.5.0">
+    <Name>Microsoft Visual Studio ASP.NET MVC 5 Scaffolding</Name>
+    <Author>Microsoft Corporation</Author>
+    <Version>5.0</Version>
+    <Description>Microsoft Visual Studio ASP.NET MVC 5 Scaffolding</Description>
+    <Locale>1033</Locale>
+    <SupportedProducts>
+      <VisualStudio Version="12.0">
+        <Edition>Pro</Edition>
+        <Edition>VWDExpress</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SystemComponent>true</SystemComponent>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.5" />
+  </Identifier>
+
+  <References />
+
+  <Content>
+    <MefComponent>Microsoft.AspNet.Scaffolding.Mvc.5.0.dll</MefComponent>
+  </Content>
+</Vsix>

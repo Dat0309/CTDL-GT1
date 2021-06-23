@@ -1,0 +1,45 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="406" />
+    <Description Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="335" />
+    <Icon Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="247" />
+    <TemplateID>SharePoint15Workflow4AssociationForm_CS_ITEM</TemplateID>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>104</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>AssociationForm.aspx</DefaultName>
+    <TemplateGroupID>SharePointItemTemplateGroupID</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.$fileinputextension$">AssociationForm.aspx</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="SharePointProjectParentFilter" Value="ProjectItem"/>
+      <CustomParameter Name="SharePointProjectProjectModeFilter" Value="SharePointApp;Customization"/>
+      <CustomParameter Name="SharePointRequiredItemFilter" Value="Microsoft.VisualStudio.SharePoint.Workflow4;Microsoft.VisualStudio.SharePoint.Workflow4App"/>
+      <CustomParameter Name="$loc_AddNewAssociationComment$" _locID="$loc_AddNewAssociationComment$" _locAttrData="Value" Value="Add new workflow association" />
+      <CustomParameter Name="$loc_AssocFormCodeSampleComment$" _locID="$loc_AssocFormCodeSampleComment$" _locAttrData="Value" Value="The following sample code creates a simple custom workflow association form that allows users to &#xD;&#xA;    set workflow parameter values when adding or editing a list workflow association." />
+      <CustomParameter Name="$loc_AssociationExistsOrSubscribeComment$" _locID="$loc_AssociationExistsOrSubscribeComment$" _locAttrData="Value" Value="If workflow association exists, then we will update its subscription information. Otherwise, it's a new association, and we will add the new subscription." />
+      <CustomParameter Name="$loc_checkTaskListOOTBComment$" _locID="$loc_checkTaskListOOTBComment$" _locAttrData="Value" Value="Check if task list contains the OOTB SharePoint 2013 Workflow Task content type" />
+      <CustomParameter Name="$loc_ErrorComment$" _locID="$loc_ErrorComment$" _locAttrData="Value" Value="Error occured" />
+      <CustomParameter Name="$loc_GetHistoryListComment$" _locID="$loc_GetHistoryListComment$" _locAttrData="Value" Value="Get history list" />
+      <CustomParameter Name="$loc_GetInputValuesComment$" _locID="$loc_GetInputValuesComment$" _locAttrData="Value" Value="Get form input values and set workflow in-argument values" />
+      <CustomParameter Name="$loc_needToCreateNewHistoryListComment$" _locID="$loc_needToCreateNewHistoryListComment$" _locAttrData="Value" Value="Need to create new history list for the association" />
+      <CustomParameter Name="$loc_needToCreateNewTaskListComment$" _locID="$loc_needToCreateNewTaskListComment$" _locAttrData="Value" Value="Need to create new task list for the association" />
+      <CustomParameter Name="$loc_PublishComment$" _locID="$loc_PublishComment$" _locAttrData="Value" Value="Publish" />
+      <CustomParameter Name="$loc_ResolveUsersComment$" _locID="$loc_ResolveUsersComment$" _locAttrData="Value" Value="Resolve users in user fields before running validation" />
+      <CustomParameter Name="$loc_SaveButtonClickComment$" _locID="$loc_SaveButtonClickComment$" _locAttrData="Value" Value="Entry point from Save button click" />
+      <CustomParameter Name="$loc_SaveWorkflowAssociationComment$" _locID="$loc_SaveWorkflowAssociationComment$" _locAttrData="Value" Value="Save workflow association" />
+      <CustomParameter Name="$loc_setHistoryListComment$" _locID="$loc_setHistoryListComment$" _locAttrData="Value" Value="Set history list id. If new list, create new first." />
+      <CustomParameter Name="$loc_setTaskListComment$" _locID="$loc_setTaskListComment$" _locAttrData="Value" Value="Set task list id. If new list, create new first." />
+      <CustomParameter Name="$loc_SuccessComment$" _locID="$loc_SuccessComment$" _locAttrData="Value" Value="Success" />
+      <CustomParameter Name="$loc_UpdateAssocFormUrlComment$" _locID="$loc_UpdateAssocFormUrlComment$" _locAttrData="Value" Value="IMPORTANT NOTE: &#xD;&#xA;        Be sure to update the AssociationUrl property value to the URL of the custom association form.  &#xD;&#xA;        The AssociationUrl property can be updated from the workflow's property grid." />
+      <CustomParameter Name="$loc_UpdateSubscriptionComment$" _locID="$loc_UpdateSubscriptionComment$" _locAttrData="Value" Value="Updating an existing subscription" />
+      <CustomParameter Name="$loc_ValidationErrorsComment$" _locID="$loc_ValidationErrorsComment$" _locAttrData="Value" Value="Validation errors, don't submit the form yet." />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.Workflow4AssociationWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="C0EEC361-5196-46F8-A997-A4DC75703FA9">
+    <Name>GetPythonToolsTemplate</Name>
+    <Description></Description>
+    <Author>Microsoft</Author>
+    <Version>0.0</Version>
+    <Locale>1033</Locale>
+    <AllUsers>true</AllUsers>
+    <InstalledByMsi>false</InstalledByMsi>
+    <SystemComponent>true</SystemComponent>
+    <SupportedProducts>
+      <VisualStudio Version="12.0">
+        <Edition>Ultimate</Edition>
+        <Edition>Premium</Edition>
+        <Edition>Pro</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" />
+  </Identifier>
+  <Content>
+    <VsPackage>Microsoft.PythonTools.RedirectionTemplate.pkgdef</VsPackage>
+  </Content>
+</Vsix>

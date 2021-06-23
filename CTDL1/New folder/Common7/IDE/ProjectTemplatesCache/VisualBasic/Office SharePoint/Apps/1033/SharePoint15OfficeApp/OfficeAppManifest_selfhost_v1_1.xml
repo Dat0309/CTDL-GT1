@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Created:cb85b80c-f585-40ff-8bfc-12ff4d0e34a9-->
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="$OfficeAppType$">
+  <Id>$guid8$</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>$loc_ProviderName$</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="$projectname$" />
+  <Description DefaultValue="$projectname$"/>
+  <Hosts>
+$if$ ("$HostExcel$" == "TRUE")    <Host Name="Workbook" />
+$endif$$if$ ("$HostPowerPoint$" == "TRUE")    <Host Name="Presentation" />
+$endif$$if$ ("$HostProject$" == "TRUE")    <Host Name="Project" />
+$endif$$if$ ("$HostWord$" == "TRUE")    <Host Name="Document" />
+$endif$$if$ ("$HostAccess$" == "TRUE")    <Host Name="Database" />
+$endif$$if$ ("$HostOutlook$" == "TRUE")    <Host Name="Mailbox" />
+$endif$  </Hosts>
+$if$ ("$OfficeAppType$" == "MailApp")  <Requirements>
+    <Sets>
+      <Set Name="MailBox" MinVersion="1.1" />
+    </Sets>
+  </Requirements>
+$endif$$if$ ("$ContentAppType$" == "ContentAppVisualization")  <Requirements>
+    <Sets>
+      <Set Name="TableBindings" MinVersion="1.1" />
+    </Sets>
+  </Requirements>
+$endif$$if$ ("$OfficeAppType$" != "MailApp")  <DefaultSettings>
+    <SourceLocation DefaultValue="$OfficeAppStartPage$" />
+$endif$$if$ ("$OfficeAppType$" == "ContentApp")    <RequestedWidth>400</RequestedWidth>
+    <RequestedHeight>400</RequestedHeight>
+$endif$$if$ ("$OfficeAppType$" != "MailApp")  </DefaultSettings>
+$endif$$if$ ("$OfficeAppType$" == "MailApp")  <FormSettings>
+$endif$$if$ ("$ReadEnabled$" == "TRUE")    <Form xsi:type="ItemRead">
+      <DesktopSettings>
+        <SourceLocation DefaultValue="$OfficeAppStartPageRead$"/>
+        <RequestedHeight>250</RequestedHeight>
+      </DesktopSettings>
+    </Form>
+$endif$$if$ ("$EditEnabled$" == "TRUE")    <Form xsi:type="ItemEdit">
+      <DesktopSettings>
+        <SourceLocation DefaultValue="$OfficeAppStartPageCompose$"/>
+      </DesktopSettings>
+    </Form>
+$endif$$if$ ("$OfficeAppType$" == "MailApp")  </FormSettings>
+$endif$$if$ ("$WriteItem$" == "TRUE")  <Permissions>ReadWriteItem</Permissions>
+$endif$$if$ ("$WriteItem$" == "FALSE")  <Permissions>ReadItem</Permissions>
+$endif$$if$ ("$OfficeAppType$" != "MailApp")  <Permissions>ReadWriteDocument</Permissions>
+$endif$$if$ ("$OfficeAppType$" == "MailApp")  <Rule xsi:type="RuleCollection" Mode="Or">
+$endif$$if$ ("$RuleMessageWrite$" == "TRUE")    <Rule xsi:type="ItemIs" ItemType="Message" FormType="Edit" />
+$endif$$if$ ("$RuleAppointmentWrite$" == "TRUE")    <Rule xsi:type="ItemIs" ItemType="Appointment" FormType="Edit" />
+$endif$$if$ ("$RuleMessageRead$" == "TRUE")    <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read" />
+$endif$$if$ ("$RuleAppointmentRead$" == "TRUE")    <Rule xsi:type="ItemIs" ItemType="Appointment" FormType="Read" />
+$endif$$if$ ("$OfficeAppType$" == "MailApp")  </Rule>
+  <DisableEntityHighlighting>false</DisableEntityHighlighting>
+$endif$</OfficeApp>

@@ -1,0 +1,892 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<HTML DIR="LTR">
+
+<HEAD>
+<TITLE>Add Member Function Wizard</TITLE>
+	<META NAME="vs_targetSchema" CONTENT="http://schemas.microsoft.com/intellisense/ie5">
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+	<META HTTP-EQUIV="MSThemeCompatible" CONTENT="Yes">
+	<LINK ID="LINKURL" REL="stylesheet" HREF="../../../../../1033/NewStyles.css">
+	<SYMBOL NAME="RETURN_TYPE" TYPE=text VALUE="void"></SYMBOL>
+	<SYMBOL NAME="FUNCTION_NAME" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="FUNCTION_FULLNAME" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="PARAMETER_TYPE" TYPE=text VALUE="int"></SYMBOL>
+	<SYMBOL NAME="PARAMETER_NAME" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="ACCESS" TYPE="select-one" VALUE=1></SYMBOL>
+	<SYMBOL NAME="STATIC" TYPE=checkbox VALUE=false></SYMBOL>
+	<SYMBOL NAME="VIRTUAL" TYPE=checkbox VALUE=false></SYMBOL>
+	<SYMBOL NAME="PURE" TYPE=checkbox VALUE=false></SYMBOL>
+	<SYMBOL NAME="INLINE" TYPE=checkbox VALUE=false></SYMBOL>
+	<SYMBOL NAME="IMPL_FILE" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="COMMENT" TYPE=text VALUE=""></SYMBOL>
+</HEAD>
+
+<BODY BGCOLOR="BUTTONFACE" TOPMARGIN="0" LEFTMARGIN="0" RIGHTMARGIN="0" BOTTOMMARGIN="0" ONLOAD="InitDocument(document);" ONKEYDOWN="OnKey();" ONKEYPRESS="OnPress()">
+
+<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<COL WIDTH="100%">
+  <TR VALIGN="TOP">
+	<TD HEIGHT="79">
+	<!--OPEN OF ALL ENCOMPASSING TABLE ROW ONE//-->
+	 <TABLE CLASS="TWO" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	 <COL WIDTH="12"><COL><COL WIDTH="12">
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD CLASS="IMAGE" VALIGN="BOTTOM" WIDTH="110" ROWSPAN="2">
+		<DIV ID="Layer0">
+		 <IMG CLASS="SMALLEST" SRC="..\..\Images\method.gif" WIDTH="63" HEIGHT="63" ALT="" BORDER="0">
+		</DIV>
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="6" ROWSPAN="2">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+	 
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="65">
+		<H4 CLASS="HEAD" ID="HEAD">Welcome to the Add Member Function Wizard</H4>
+		<P CLASS="SUBHEAD" ID="SUBHEAD">This wizard adds a member function to a class, struct, or union.</P>
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+	 
+	  <TR>
+	   <TD VALIGN="TOP" CLASS="RULE" COLSPAN="5" HEIGHT="2">
+		<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+	  	 <TR VALIGN="TOP">
+	  	  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+	  	  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+	  	 </TR>
+		</TABLE>
+	   </TD>
+	  </TR>
+	 </TABLE>
+	 
+	<!--CLOSE OF ALL ENCOMPASSING TABLE ROW ONE//-->
+	</TD>
+	</TR>
+	<TR VALIGN="TOP">
+	<TD HEIGHT="100%">
+	<!--OPEN OF ALL ENCOMPASSING TABLE ROW TWO//-->
+	
+	 <TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	 <COL>
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="100%">
+	   <!--OPEN OF CONTENT AND BUTTON TABLE//-->
+	   
+	   	<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+		<COL WIDTH="100%">
+		 <TR VALIGN="TOP">
+		  <TD HEIGHT="100%">
+	   	  <!--OPEN OF CONTENT//-->
+		  
+		  	<TABLE CLASS="CONTENT" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL WIDTH="185"><COL WIDTH="12"><COL WIDTH="185"><COL WIDTH="12"><COL WIDTH="185"><COL WIDTH="12">
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="7">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP">
+ 				<SPAN CLASS="itemTextTop" TITLE="Select or enter the function's return type." ID="AUT_ID" >
+	  		 		 <LABEL FOR="ReturnType" ID="ReturnType_LABEL">Return t<U>y</U>pe:</LABEL>
+	  	 			 <BR>
+	  	 			 <INPUT CLASS="sideBtnThreeColumn" ID="RETURN_TYPE" TITLE="Select or enter the function's return type." TYPE="hidden"></INPUT>
+					 <OBJECT CLASS="itemTextThreeColumn" ID="ReturnType" ACCESSKEY="Y" onblur="SetFunctionSignature();" 
+                  	 CLASSID="CLSID:79eadad6-3f7a-45a6-a75e-dd0b7d70fa43" VIEWASTEXT></OBJECT>
+				</SPAN>
+  			  </TD>
+  			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP">
+ 				<SPAN CLASS="itemTextTop" TITLE="Enter the name of the function to be generated." ID="AUT_ID1" >
+	  		 		 <LABEL FOR="FUNCTION_NAME" ID="FUNCTION_NAME_LABEL">F<U>u</U>nction name:</LABEL>
+	  	 			 <BR>
+	  	 			 <INPUT CLASS="sideBtnThreeColumn" ID="FUNCTION_NAME" ACCESSKEY="U" TITLE="Enter the name of the function to be generated." TYPE="text" onPropertychange="OnFunctionName();">
+				</SPAN>
+  			  </TD>
+  			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="13" COLSPAN="7">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			 
+ 			 <TR VALIGN="TOP">
+ 			 <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP">
+			  	<SPAN CLASS="itemText" TITLE="Select or enter the data type of the parameter to add to the parameter list." ID="AUT_ID2" >
+				 <LABEL FOR="ParameterType" ID="ParameterType_LABEL">Parame<U>t</U>er type:</LABEL>
+				 <BR>
+				 <INPUT CLASS="SideBtnThreeColumn" ID="PARAMETER_TYPE" TYPE="HIDDEN" TITLE="Select or enter the data type of the parameter to add to the parameter list."></INPUT>
+				 <OBJECT CLASS="itemTextThreeColumn" ID="ParameterType" ACCESSKEY="T" CLASSID="CLSID:79eadad6-3f7a-45a6-a75e-dd0b7d70fa43" VIEWASTEXT></OBJECT>
+				</SPAN>
+			  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+			  <TD VALIGN="TOP">
+				<SPAN CLASS="itemText" TITLE="Enter the parameter name to add to the parameter list." ID="AUT_ID3" >
+	  		 		 <LABEL FOR="PARAMETER_NAME" ID="PARAMETER_NAME_LABEL">Parameter <U>n</U>ame:</LABEL>
+	  	 			 <BR>
+	  	 			 <INPUT CLASS="sideBtnThreeColumn" ID="PARAMETER_NAME" ACCESSKEY="N" TITLE="Enter the parameter name to add to the parameter list." TYPE="text" onPropertychange="ToggleButtons(); SetFunctionSignature();" >
+					 <BUTTON ID="AddBtn" TITLE="Add parameter" CLASS="buttonClass2" ACCESSKEY="A" onClick="AddParameter();" type=button><U>A</U>dd</BUTTON>
+					 <SPAN CLASS="Spacer8"></SPAN>
+					 <BUTTON ID="RemoveBtn" TITLE="Remove parameter" CLASS="buttonClass2" ACCESSKEY="R" onClick="RemoveParameter();" type=button><U>R</U>emove</BUTTON>
+				</SPAN>
+  		  	  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+			  <TD VALIGN="TOP">
+ 				<SPAN CLASS="itemText" ID="PARAMETER_LIST_SPAN" TITLE="List of function parameters.">
+					<LABEL FOR="PARAMETER_LIST" ID="PARAMETER_LIST_LABEL">Parameter <U>l</U>ist:</LABEL>
+					<BR>
+					<SELECT CLASS="SideBtnThreeColumn" SIZE="3" ID="PARAMETER_LIST" ACCESSKEY="L" TITLE="" VALUE="void" TITLE="List of function parameters.">
+					</SELECT>
+				</SPAN>
+  		  	  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+ 		  	 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="8" COLSPAN="7">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			 
+ 			 <TR VALIGN="TOP">
+ 			 <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP">
+				<SPAN CLASS="itemText" TITLE="Selet the type of access for the function." ID="AUT_ID4" >
+					 <LABEL FOR="ACCESS" ID="Access_LABEL">Acc<U>e</U>ss:</LABEL>
+					 <BR>
+					 <SELECT CLASS="SideBtnThreeColumn" SIZE="1" ID="ACCESS" ACCESSKEY="e" TITLE="Selet the type of access for the function." VALUE="1"> 
+					  <-- vsCMAccessPublic = 1 -->
+					  <OPTION VALUE="1" ID="PUBLIC_OPTION" SELECTED>public</OPTION>
+					  <-- vsCMAccessProtected = 8  -->
+					  <OPTION VALUE="8" ID="PROTECTED_OPTION">protected</OPTION>
+					  <-- vsCMAccessPrivate = 2  -->
+					  <OPTION VALUE="2" ID="PRIVATE_OPTION">private</OPTION>
+					 </SELECT>
+				</SPAN>
+			  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+			  <TD VALIGN="TOP">
+				<NOBR>
+				 <SPAN CLASS="itemText" TITLE="Generate a static function." ID="AUT_ID5"  STYLE="MARGIN-TOP:2PX;">
+					 <INPUT TYPE="checkbox" ID="STATIC" ACCESSKEY="S" TITLE="Generate a static function." onClick="OnFunctionType(this);" CHECKED>
+					 <LABEL FOR="STATIC" ID="STATIC_LABEL"><U>S</U>tatic</LABEL>
+				 </SPAN>
+				</NOBR>
+				 <NOBR>
+				 <SPAN CLASS="itemText" TITLE="Generate a virtual function." ID="AUT_ID6"  STYLE="MARGIN-TOP:2PX;">
+					 <INPUT TYPE="checkbox" ID="VIRTUAL" ACCESSKEY="V" TITLE="Generate a virtual function." onClick="OnFunctionType(this);" CHECKED>
+					 <LABEL FOR="VIRTUAL" ID="VIRTUAL_LABEL"><U>V</U>irtual</LABEL>
+				 </SPAN>
+				</NOBR>
+				<NOBR>
+				 <SPAN CLASS="itemText" TITLE="Generate a pure function." ID="AUT_ID7"  STYLE="MARGIN-TOP:2PX;">
+					<INPUT TYPE="checkbox" ID="PURE" ACCESSKEY="P" TITLE="Generate a pure function." onClick="OnFunctionType(this);" CHECKED>
+					<LABEL FOR="PURE" ID="PURE_LABEL"><U>P</U>ure</LABEL>
+				</SPAN>
+				</NOBR>
+				<NOBR>
+				 <SPAN CLASS="itemText" TITLE="Generate an inline function." ID="AUT_ID8"  STYLE="MARGIN-TOP:2px">
+					<INPUT TYPE="checkbox" ID="INLINE" ACCESSKEY="I" TITLE="Generate an inline function." onClick="OnFunctionType(this);" CHECKED>		
+					<LABEL FOR="INLINE" ID="INLINE_LABEL"><U>I</U>nline</LABEL>
+				</SPAN>
+				</NOBR>
+  		  	  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+			  <TD VALIGN="TOP">
+				<NOBR>
+				  <SPAN ID="impl_file_title" CLASS="itemText" TITLE="The name of the file where the function will be implemented.">
+				    <LABEL FOR="IMPL_FILE" ID="IMPL_FILE_LABEL">.cpp <U>f</U>ile:</LABEL>
+					<BR>
+					<INPUT CLASS="sideBtn21" TYPE="text" ID="IMPL_FILE" ACCESSKEY="F" TITLE="The name of the file where the function will be implemented.">
+				  	<BUTTON CLASS="buttonClass3Custom" ID="BrowseBtn" TYPE="BUTTON" TITLE="Browse for the implementation file" onClick="OnBrowseImplFile();">...</BUTTON>
+				  </SPAN>
+				</NOBR>
+  		  	  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+ 		  	 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="4" COLSPAN="7">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			 
+ 			 <TR VALIGN="TOP">
+ 			 <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" COLSPAN="5">
+				<SPAN CLASS="itemText" TITLE="The comment which appears above the function declaration." ID="AUT_ID9" >
+				    <NOBR>
+					 <LABEL FOR="COMMENT" ID="COMMENT_LABEL">Co<U>m</U>ment (// notation not required):</LABEL>
+					</NOBR>
+					<BR>
+					<INPUT CLASS="COMMENT" TYPE="text" ID="COMMENT" ACCESSKEY="m" TITLE="The comment which appears above the function declaration.">
+				</SPAN>
+			  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+ 		  	 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="7">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			 
+ 			 <TR VALIGN="TOP">
+ 			 <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" COLSPAN="5">
+				<SPAN CLASS="itemText" TITLE="The generated function signature." ID="AUT_ID10"  DISABLED>
+				    <NOBR>
+					 <LABEL FOR="FUNCTION_SIGNATURE" ID="FUNCTION_SIGNATURE_LABEL">Function signature:</LABEL>
+					</NOBR>
+					<BR>
+					<INPUT CLASS="COMMENT" TYPE="text" ID="FUNCTION_SIGNATURE" TITLE="The generated function signature." READONLY DISABLED>
+				</SPAN>
+			  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+ 			 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="100%" COLSPAN="7">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+		 	</TABLE>
+			
+	   	  <!--CLOSE OF CONTENT//-->
+		  </TD>
+		 </TR>
+		 <TR VALIGN="BOTTOM">
+		  <TD>
+	   	  <!--OPEN OF BUTTON HTML//-->
+		  
+		  	<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="12">
+			 <TR>
+  			  <TD VALIGN="TOP" CLASS="RULE" COLSPAN="8" HEIGHT="2">
+				<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+  	 			 <TR VALIGN="TOP">
+  	  			  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+  	  			  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+  	 			 </TR>
+				</TABLE>
+  			  </TD>
+ 			  </TR>
+ 
+ 			  <TR>
+  			  <TD VALIGN="TOP" HEIGHT="11" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 
+ 			<TR>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" HEIGHT="23">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="FinishBtn" onClick="OnFinish(document);">Finish</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="CancelBtn" onClick="window.external.Finish(document, 'cancel');">Cancel</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="HelpBtn" onClick="window.external.OnHelp('vc.codewiz.function.overview');">Help</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			</TABLE>
+			
+	   	  <!--CLOSE OF BUTTON HTML//-->
+		  </TD>
+		 </TR>
+		</TABLE>
+	
+	   <!--CLOSE OF CONTENT AND BUTTON TABLE//-->
+	   </TD>
+	  </TR>
+	 </TABLE>
+	
+	<!--CLOSE OF ALL ENCOMPASSING TABLE ROW TWO//-->
+	</TD>
+  </TR>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<SCRIPT LANGUAGE="JSCRIPT">
+
+var strParameters = "";
+var tab_array = new Array();
+
+function InitDocument(document)
+{	
+	setDirection();
+	
+	if (window.external.FindSymbol("DOCUMENT_FIRST_LOAD"))
+	{
+		var L_WizardDialogTitle_Text = "Add Member Function Wizard";
+		window.external.AddSymbol("WIZARD_DIALOG_TITLE", L_WizardDialogTitle_Text);
+		window.external.SetDefaults(document);
+	}
+
+	window.external.Load(document);
+
+	// Disable virtual checkbox for unions
+	if(window.external.ParentKind == vsCMElementUnion)
+	{
+		VIRTUAL.disabled = true;
+		VIRTUAL_LABEL.disabled = true;
+		PURE.disabled = true;
+		PURE_LABEL.disabled = true;
+	}
+
+	// Find the file of first implementation of member function and make it default
+	var impl = window.external.ParentObject.Functions;
+	var strModule;
+	for (var item = 1; item <= impl.Count && !strModule; item++)
+		strModule = impl(item).Location(vsCMWhereDefault);
+
+	if (!strModule)
+		strModule = window.external.ParentObject.Location(vsCMWhereDeclaration); // Just the class declaration file, if we did not find any function definition
+
+	if (strModule)
+	{
+		// Extract just the file name
+		var strFileName = strModule.substr(strModule.lastIndexOf('\\')+1);
+
+		var dotIndex = strFileName.lastIndexOf('.');
+		var strExtention = strFileName.substr(dotIndex).toUpperCase();
+		if(strExtention==".CPP")
+		{
+			IMPL_FILE.value = strFileName;
+			window.external.AddSymbol("IMPL_FILE_FULL_PATH", strModule);
+			window.external.AddSymbol("IMPL_FILE_DIR", strModule.substr(0, strModule.lastIndexOf('\\')));
+		}
+    }
+
+	PopulateReturnTypes();
+	PopulateParamTypes();
+
+	ReturnType.ListIndex = 5;
+	ParameterType.ListIndex = 4;
+
+	SetFunctionSignature();
+	ReturnType.focus();
+	ToggleButtons();
+}
+
+function Next(document, linkto)
+{
+	window.external.Next(document, linkto);
+}
+
+function OnFinish(document)
+{
+	RETURN_TYPE.value = ReturnType.Value;
+	PARAMETER_TYPE.value = ParameterType.Value;
+
+	window.external.AddSymbol("IMPL_FILE_FULL_PATH", IMPL_FILE.value);
+	var strDirectory = IMPL_FILE.value.substr(0, IMPL_FILE.value.lastIndexOf('\\'));
+	if (strDirectory != "")
+		window.external.AddSymbol("IMPL_FILE_DIR", strDirectory);
+
+	if (!ValidateInput())
+		return;
+
+	OnWizFinish(document);
+}
+
+function OnBrowseImplFile()
+{
+	var strFile;
+	try
+	{
+		L_Title1_Text = "VS Wizards Select File";
+		L_Title2_Text = "Visual C++ Files (*.cpp;*.h;*.inl;*.c)\0*.cpp;*.h;*.inl;*.c\0\0";
+		strFile = window.external.GetOpenFileNameViaDlg(L_Title1_Text, window.external.FindSymbol("IMPL_FILE_DIR"), L_Title2_Text, IMPL_FILE.value);
+	}
+	catch(e)
+	{
+		if (e.number != OLE_E_PROMPTSAVECANCELLED)
+		{
+			L_Err1_Text = "Error in OnBrowseImplFile()";
+			if (e.description.length != 0)
+			{
+				L_Err1_Text += ": ";
+				L_Err1_Text += e.description;
+			}
+			window.external.ReportError(L_Err1_Text);
+		}
+		return;
+	}
+	IMPL_FILE.value = strFile;
+}
+
+function PopulateReturnTypes()
+{
+	ReturnType.Clear();
+
+	ReturnType.AddItem("bool");
+	ReturnType.AddItem("char");
+	ReturnType.AddItem("double");
+	ReturnType.AddItem("float");
+	ReturnType.AddItem("HRESULT");
+	ReturnType.AddItem("int");
+	ReturnType.AddItem("long");
+	ReturnType.AddItem("long double");
+	ReturnType.AddItem("short");
+	ReturnType.AddItem("unsigned char");
+	ReturnType.AddItem("unsigned int");
+	ReturnType.AddItem("unsigned long");
+	ReturnType.AddItem("void");
+}
+
+function PopulateParamTypes()
+{
+	ParameterType.Clear();
+
+	ParameterType.AddItem("bool");
+	ParameterType.AddItem("char");
+	ParameterType.AddItem("double");
+	ParameterType.AddItem("float");
+	ParameterType.AddItem("int");
+	ParameterType.AddItem("long");
+	ParameterType.AddItem("long double");
+	ParameterType.AddItem("short");
+	ParameterType.AddItem("unsigned char");
+	ParameterType.AddItem("unsigned int");
+	ParameterType.AddItem("unsigned long");
+}
+
+function OnFunctionName()
+{
+	SetFunctionSignature();
+}
+
+function OnFunctionType(obj)
+{
+	if (obj.id == "STATIC" && STATIC.checked)
+	{	
+		// Static cannot be virtual or pure
+		VIRTUAL.checked = false;
+		PURE.checked = false;
+		INLINE.disabled = false;
+		INLINE_LABEL.disabled = false;
+		IMPL_FILE.disabled = false;
+		impl_file_title.disabled = false;
+		BrowseBtn.disabled = false;
+	}
+	else if (obj.id == "VIRTUAL")
+	{
+		if (VIRTUAL.checked)
+		{
+			STATIC.checked = false;
+		}
+		else
+		{
+			PURE.checked = false;
+					
+			// Re-enable the virtual and inline checkboxes
+			// and other related stuff that may have been disabled by PURE
+			INLINE.disabled = false;
+			INLINE_LABEL.disabled = false;
+			IMPL_FILE.disabled = false;
+			impl_file_title.disabled = false;
+			BrowseBtn.disabled = false;
+		}
+	}
+	else if (obj.id == "INLINE")
+	{
+		var bInline = INLINE.checked;
+		IMPL_FILE.disabled = bInline;
+		impl_file_title.disabled = bInline;
+		BrowseBtn.disabled = bInline;
+	}
+	else if (obj.id == "PURE") 
+	{
+		if (PURE.checked)
+		{
+			// If it is pure, then it is not static and has to be virtual
+			STATIC.checked = false;
+			VIRTUAL.checked = true;
+
+			// Inline has no meaning (no body for pure) so uncheck and disable
+			// it and other related stuff
+			INLINE.checked = false;
+			INLINE.disabled = true;
+			INLINE_LABEL.disabled = true;
+			IMPL_FILE.disabled = true;
+			impl_file_title.disabled = true;
+			BrowseBtn.disabled = true;
+		}
+		else
+		{
+			// Re-enable the virtual and inline checkboxes
+			// and other related stuff
+			INLINE.disabled = false;
+			INLINE_LABEL.disabled = false;
+			IMPL_FILE.disabled = false;
+			impl_file_title.disabled = false;
+			BrowseBtn.disabled = false;
+		}
+	}
+
+	SetFunctionSignature();
+}
+
+function SetFunctionSignature()
+{
+	var strVal = "";
+
+	if (STATIC.checked)
+		strVal = "static ";
+
+	if (VIRTUAL.checked)
+		strVal = "virtual ";
+
+	strVal += ReturnType.Value;
+
+	if (strParameters == "")
+	{
+		if (PURE.checked)
+			strVal += " " + FUNCTION_NAME.value + "() = 0";
+		else
+			strVal += " " + FUNCTION_NAME.value + "()";
+	}
+	else
+	{
+		if (PURE.checked)
+			strVal += " " + FUNCTION_NAME.value + "(" + strParameters + ") = 0";
+		else
+			strVal += " " + FUNCTION_NAME.value + "(" + strParameters + ")";
+	}
+
+	FUNCTION_SIGNATURE.value = strVal;
+}
+
+function AddParameter()
+{
+	PARAMETER_TYPE.value = ParameterType.Value;
+	if (ParameterType.Value == "" || ParameterType.Value == "void" )
+	{
+		L_Err2_Text = "Invalid value";
+		window.external.ReportError(L_Err2_Text);
+		ParameterType.focus();
+		return;
+	}
+
+	var strName = PARAMETER_NAME.value;
+
+	var bEmpty = true;
+	for (i = 0; i < strName.length; i++)
+	{
+		if (strName.substr(i, 1) != " ")
+		{
+			bEmpty = false;
+			break;
+		}
+	}
+
+	if (strName.length == 0 || bEmpty)
+	{
+		L_Err3_Text = "You must specify a name.";
+		window.external.ReportError(L_Err3_Text);
+		PARAMETER_NAME.focus;
+		return;
+	}
+
+	var strParamNames = ExtractParamNames() + "," + strName;
+	if(!window.external.dte.VCLanguageManager.ValidateParameterNames(FUNCTION_NAME.value, strParamNames, vsCMElementFunction))
+	{
+		window.external.ReportError();
+		PARAMETER_NAME.focus();
+		return;
+	}
+
+	var strParam, NamePos, NameLength, NameLengthPos;
+	try
+	{
+		NameLengthPos = new VBArray(window.external.CppParseTypeString(ParameterType.Value));
+	}
+	catch(e)
+	{
+		L_Err4_Text = "Invalid parameter type";
+		window.external.ReportError(L_Err4_Text);
+		ParameterType.focus();
+		return;		
+	}
+	NamePos = NameLengthPos.getItem(0);
+	NameLength = NameLengthPos.getItem(1);
+	if(NamePos==ParameterType.Value.length)
+	{
+		strParam = ParameterType.Value + " " + strName;
+	}
+	else
+	{
+		strParam = ParameterType.Value.substr(0, NamePos) + " " + strName;
+		strParam += ParameterType.Value.substr(NamePos+NameLength); //always replace eventual name with PARAMETER_NAME.value
+	}
+	if (strParameters == "")
+		strParameters = strParam
+	else
+		strParameters += (", " + strParam);
+
+	PARAMETER_NAME.value = "";
+
+	var Params = document.all.tags("SELECT").item("PARAMETER_LIST");
+	var Opt = document.createElement("OPTION");
+	Opt.value = strParam;
+	Opt.text = strParam;
+	Params.add(Opt);
+	Params.selectedIndex = Params.length - 1;
+
+	SetFunctionSignature();
+	ToggleButtons();
+	ParameterType.focus();
+}
+
+function ExtractParamNames()
+{
+	var strParamNames = "";
+
+	var Params = document.all.tags("SELECT").item("PARAMETER_LIST");
+	for(var index=0; index < Params.options.length; index++)
+	{
+		var strParam = Params.options[index].value;
+		
+		var NamePos, NameLength;
+		var NameLengthPos = new VBArray(window.external.CppParseTypeString(strParam));
+		NamePos = NameLengthPos.getItem(0);
+		NameLength = NameLengthPos.getItem(1);
+		if(index!=0)
+			strParamNames += ","
+		strParamNames += strParam.substr(NamePos, NameLength);
+	}
+	return strParamNames;
+}
+
+function RemoveParameter()
+{
+	var Params = document.all.tags("SELECT").item("PARAMETER_LIST");
+	var len = Params.options.length;
+	if (!len)
+		return;
+
+	if (Params.selectedIndex == -1)
+		return;
+
+	var nIndex = Params.selectedIndex;
+
+	Params.remove(Params.selectedIndex);
+
+	if (Params.options.length)
+		Params.selectedIndex = (nIndex < Params.length) ? nIndex : Params.length-1;
+
+	strParameters = "";
+	for(var nParam=0; nParam < Params.length; nParam++)
+	{
+		if(nParam!=0)
+			strParameters += ", ";
+		strParameters += Params.options[nParam].value;
+	}
+
+	SetFunctionSignature();
+	ToggleButtons();
+}
+
+function ValidateInput()
+{
+	var oInvalid = null;
+	
+	var strType = TrimStr(RETURN_TYPE.value);	
+
+	if (strType == "")
+	{
+		strType = "void";
+	}
+		
+	var strFuncName = FUNCTION_NAME;
+	strFuncName.value = TrimStr(strFuncName.value);	
+	if (!Validate(strFuncName))
+		oInvalid = FUNCTION_NAME;
+
+	if (oInvalid == null && !INLINE.checked && !PURE.checked)
+	{
+		if (IMPL_FILE.value != "")
+		{
+			if (!Validate(IMPL_FILE))
+				oInvalid = IMPL_FILE;
+		}
+	}
+
+	if (oInvalid != null)
+	{
+		window.external.ReportError();
+		oInvalid.focus();
+		return false;
+	}
+	
+	RETURN_TYPE.value = strType;
+	FUNCTION_NAME.value = strFuncName.value;
+	return true;
+}
+
+function Validate(obj)
+{
+	try
+	{
+		var bValid = true;
+		switch(obj.id)
+		{
+			case "FUNCTION_NAME":
+			{
+				var strNameWithParamList = FUNCTION_NAME.value + "(" + strParameters + ")";
+				window.external.AddSymbol("FUNCTION_FULLNAME", strNameWithParamList);
+				bValid = window.external.ParentObject.ValidateMember(strNameWithParamList, vsCMElementFunction, RETURN_TYPE.value);
+				if (bValid)
+					bValid = window.external.dte.VCLanguageManager.ValidateParameterNames(obj.value, ExtractParamNames(), vsCMElementFunction);
+				break;
+			}
+			case "IMPL_FILE":
+				bValid = ValidateFileNameAndEnsureInProject(obj.value, vsCMValidateFileExtCppSource);
+				break;
+			default:
+				break;
+		}
+
+		if (typeof(bValid) == "undefined")
+			bValid = false;
+
+		return bValid;
+	}
+	catch(e)
+	{
+		window.external.SetErrorInfo(e.description);
+		return false;
+	}
+}
+
+function ToggleButtons()
+{
+	if (ParameterType.Value.length && PARAMETER_NAME.value.length)
+	{
+		AddBtn.disabled = false;
+	}
+	else
+	{
+		AddBtn.disabled = true;
+	}
+	if (PARAMETER_LIST.options.length && PARAMETER_LIST.selectedIndex != -1)
+	{
+		RemoveBtn.disabled = false;
+	}
+	else
+	{
+		RemoveBtn.disabled = true;
+	}
+}
+
+</SCRIPT>
+<SCRIPT ID="INCLUDE_SCRIPT" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT ID="INCLUDE_COMMON" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT>
+	document.scripts("INCLUDE_SCRIPT").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Script.js";
+	document.scripts("INCLUDE_COMMON").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Common.js";
+</SCRIPT>
+
+<SCRIPT FOR="ReturnType" EVENT="Change">
+	SetFunctionSignature();
+</SCRIPT>
+
+<SCRIPT FOR="ReturnType" EVENT="KeyDown(nKeyCode)">
+	OnWizComboKeyDown(nKeyCode);
+</SCRIPT>
+
+<SCRIPT FOR="ParameterType" EVENT="Change">
+	ToggleButtons();
+</SCRIPT>
+
+<SCRIPT FOR="ParameterType" EVENT="KeyDown(nKeyCode)">
+	OnWizComboKeyDown(nKeyCode);
+</SCRIPT>
+

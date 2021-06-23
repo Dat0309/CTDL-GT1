@@ -1,0 +1,14 @@
+[$RootKey$\Packages\{006b829c-9b02-48de-a22e-c1896ebe3403}]
+@="IntellisensehostingEngine Package"
+"InprocServer32"="$RootFolder$Common7\IDE\Extensions\Microsoft\SQLDB\Microsoft.VisualStudio.Data.Tools.SqlCLRIntellisenseHostingEngine.dll"
+"CompanyName"="Microsoft Corporation"
+"ProductName"="Microsoft SQL Server Data Tools - Intellisense Package"
+"ProductVersion"="12.0"
+"ID"=dword:00000065
+
+[$RootKey$\Packages\{006b829c-9b02-48de-a22e-c1896ebe3403}\SatelliteDll]
+"DllName"="Microsoft.VisualStudio.Data.Tools.SqlCLRIntellisenseHostingEngineUI.dll"
+"Path"="$RootFolder$Common7\IDE\Extensions\Microsoft\SQLDB"
+
+[$RootKey$\Menus]
+"{006b829c-9b02-48de-a22e-c1896ebe3403}"=", 1000, 1"

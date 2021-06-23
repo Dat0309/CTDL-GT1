@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Protect a Chart</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Protects an Excel chart object.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Excel.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Excel = Microsoft.Office.Interop.Excel</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>protectDrawingObjects</ID>
+          <Type></Type>
+          <ToolTip>Replace with a Boolean value. True to protect shapes in the worksheet.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>protectContents</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True or empty protects all locked cells in the worksheet.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>userInterfaceOnly</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True to allow code behind the document to alter its contents.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>scenarios</ID>
+          <Type>System.Object</Type>
+          <ToolTip />
+          <Default>scenarios</Default>
+          <Function />
+        </Literal>
+        <Object Editable="true">
+          <ID>password</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the password to protect the worksheet with.</ToolTip>
+          <Default>"Password"</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>chart</ID>
+          <Type>Microsoft.Office.Interop.Excel.Chart</Type>
+          <ToolTip>Replace with the chart to protect.</ToolTip>
+          <Default>chart</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="" Delimiter="$"><![CDATA[
+$chart$.Protect( $password$, _
+				 $protectDrawingObjects$, _
+				 $protectContents$, 
+				 $scenarios$, _
+				 $userInterfaceOnly$)
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+            xmlns="urn:Microsoft.Data.Tools.Schema.StaticCodeAnalysis" 
+            elementFormDefault="qualified" 
+            attributeFormDefault="unqualified" 
+            targetNamespace="urn:Microsoft.Data.Tools.Schema.StaticCodeAnalysis">
+  <xsd:element name="StaticCodeAnalysis">
+    <xsd:complexType>
+      <xsd:sequence minOccurs="0">
+        <xsd:element name="SuppressedFile" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="SuppressedRule" minOccurs="0" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:attribute name="Category" type="xsd:string" use="required"/>
+                  <xsd:attribute name="RuleId" type="xsd:string" use="required"/>
+                  <xsd:attribute name="Justification" type="xsd:string" use="optional"/>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="FilePath" type="xsd:string" use="required"/>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="version" type="xsd:unsignedByte" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Print specific child elements in XML data to the console</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Prints specific child elements in XML data to the console.</Description>
+      <Shortcut>xmlPrnt</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.XML.Linq.dll</Assembly>          
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Xml.Linq</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>XELEM</ID>
+          <Type>XElement</Type>
+          <ToolTip>Replace this with an XElement instance.</ToolTip>
+          <Default>Book</Default>
+        </Literal>
+        <Literal>
+          <ID>AxisExpr</ID>
+          <Type>String</Type>
+          <ToolTip>Replace this with your axis expression.</ToolTip>
+          <Default>&lt;rss&gt;.&lt;child&gt;.&lt;item&gt;</Default>
+        </Literal>       
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[For Each item In $XELEM$.$AxisExpr$
+            Console.WriteLine(item)
+        Next
+      ]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

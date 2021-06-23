@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <TemplateID>Microsoft.CPP.WinRT.AAP.DirectXApp.Windows</TemplateID>
+    <ProjectType>VC</ProjectType>
+    <DefaultName>App</DefaultName>
+    <TargetPlatformName>Windows</TargetPlatformName>
+    <RequiredPlatformVersion>8.1</RequiredPlatformVersion>
+    <CreateInPlace>true</CreateInPlace>
+    <CreateNewFolder>false</CreateNewFolder>
+    <SortOrder>50</SortOrder>
+    <Hidden>true</Hidden>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <SpecialTemplateType>EmptyNode</SpecialTemplateType>
+    <AppliesTo>DirectXApp</AppliesTo>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="Windows.vcxproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.vcxproj.filters">Windows.vcxproj.filters</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Package.appxmanifest">Package-native.appxmanifest</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="App.cpp">App.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="App.h">App.h</ProjectItem>
+
+      <ProjectItem ReplaceParameters="true" TargetFileName="Common\DeviceResources.cpp">DeviceResources.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Common\DeviceResources.h">DeviceResources.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Common\DirectXHelper.h">DirectXHelper.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Common\StepTimer.h">StepTimer.h</ProjectItem>
+
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true" TargetFileName="$sharedbaseprojectname$Main.cpp">Main.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true" TargetFileName="$sharedbaseprojectname$Main.h">Main.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="pch.cpp">pch.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="pch.h">pch.h</ProjectItem>
+
+      <ProjectItem ReplaceParameters="true" TargetFileName="Content\Sample3DSceneRenderer.cpp">Sample3DSceneRenderer.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Content\Sample3DSceneRenderer.h">Sample3DSceneRenderer.h</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Content\SampleFpsTextRenderer.cpp">SampleFpsTextRenderer.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Content\SampleFpsTextRenderer.h">SampleFpsTextRenderer.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Content\SamplePixelShader.hlsl">SamplePixelShader.hlsl</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Content\SampleVertexShader.hlsl">SampleVertexShader.hlsl</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Content\ShaderStructures.h">ShaderStructures.h</ProjectItem>
+
+      <ProjectItem ReplaceParameters="false" TargetFileName="Assets\Logo.png">Logo.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Assets\SmallLogo.png">SmallLogo.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Assets\SplashScreen.png">SplashScreen.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Assets\StoreLogo.png">StoreLogo.png</ProjectItem>
+
+      <ProjectItem ReplaceParameters="false" TargetFileName="$projectname$_TemporaryKey.pfx" BlendDoNotCreate="true">Application_TemporaryKey.pfx</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.WinRT.TemplateWizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.WinRT.TemplateWizards.CreateProjectCertificate.Wizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

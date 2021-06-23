@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Italicize a Range</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Sets the Italic attribute of a range in a Word document.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Word.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Word = Microsoft.Office.Interop.Word</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>italicValue</ID>
+          <Type>System.Int</Type>
+          <ToolTip>Replace with the integer value for the Italic attribute. Use -1 for true, 0 for false, and Word.WdConstants.wdToggle to toggle the current setting.</ToolTip>
+          <Default>1</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>range</ID>
+          <Type>Microsoft.Office.Interop.Word.Range</Type>
+          <ToolTip>Replace with the range to set the Italic attribute for.</ToolTip>
+          <Default>range</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="CSharp" Kind="" Delimiter="$"><![CDATA[
+$range$.Font.Italic = $italicValue$;
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,40 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="388" />
+    <Description Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="389" />
+    <Icon Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="245" />
+    <TemplateID>SharePoint16ContentApp_CS_ITEM</TemplateID>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>240</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>ContentApp</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <CreateInPlace>true</CreateInPlace>
+    <TemplateGroupID>SharePointItemTemplateGroupID</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$Manifest\SharePointProjectItem.spdata" OpenInEditor="false">SharePointContentApp.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$Manifest\$fileinputname$.xml" OpenInEditor="false">OfficeAppManifest_v1_0.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$Manifest\$fileinputname$.xml" OpenInEditor="false">OfficeAppManifest_v1_1.xml</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="SharePointProjectTemplateAttributes" Value="ProjectItem"/>
+      <CustomParameter Name="SharePointProjectParentFilter" Value="General"/>
+      <CustomParameter Name="SharePointProjectProjectModeFilter" Value="OfficeApp"/>
+      <CustomParameter Name="$OfficeAppType$" Value="ContentApp"/>
+      <CustomParameter Name="$OfficeAppTypeFixed$" Value="TRUE"/>
+      <CustomParameter Name="$OfficeMailAppEnabled$" Value="FALSE"/>
+      <CustomParameter Name="$OfficeContentAccessEnabled$" Value="TRUE"/>
+      <CustomParameter Name="$OfficeProjectEnabled$" Value="FALSE"/>
+      <CustomParameter Name="$ProjectItemName$" Value="$fileinputname$"/>
+      <CustomParameter Name="$ContentAppBasicWebFormItemTemplateName$" Value="SharePoint16ContentAppBasicWebFormItem.zip"/>
+      <CustomParameter Name="$ContentAppVisualizationWebFormItemTemplateName$" Value="SharePoint16ContentAppVisualizationWebFormItem.zip"/>
+      <CustomParameter Name="$loc_ProviderName$" _locID="$loc_ProviderName$" _locAttrData="Value" Value="[Provider name]" />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.OfficeAppProjectItemWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Set the Font Color for a Range</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Sets the font color for the text in a Word range.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Word.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Word = Microsoft.Office.Interop.Word</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>color</ID>
+          <Type>Word.WdColor</Type>
+          <ToolTip>Replace with the color to use. One of the Word.WdColor values.</ToolTip>
+          <Default>wdColorAutomatic</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>range</ID>
+          <Type>Microsoft.Office.Interop.Word.Range</Type>
+          <ToolTip>Replace with the range to set the font color for.</ToolTip>
+          <Default>range</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="" Delimiter="$"><![CDATA[
+$range$.Font.Color = Word.WdColor.$color$
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Continue a Windows Service </Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Uses the ServiceController component to continue a paused service.</Description>
+      <Shortcut>servCont</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.ServiceProcess.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.ServiceProcess</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>serviceName</ID>
+          <ToolTip>Replace with the name of the service that needs to be continued.</ToolTip>
+          <Default>"IISAdmin"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim controller As New ServiceController($serviceName$)
+If controller.Status = ServiceControllerStatus.Paused Then
+    controller.Continue()
+End If]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

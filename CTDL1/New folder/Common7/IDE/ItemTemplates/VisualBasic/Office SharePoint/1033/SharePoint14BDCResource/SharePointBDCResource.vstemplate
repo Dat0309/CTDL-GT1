@@ -1,0 +1,30 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <Name Package="{D162022B-0058-4622-B6C2-03D6F60B2CFA}" ID="305" />
+        <Description Package="{D162022B-0058-4622-B6C2-03D6F60B2CFA}" ID="304" />
+        <Icon Package="{D162022B-0058-4622-B6C2-03D6F60B2CFA}" ID="202" />
+        <TemplateID>SharePoint14BDCResource_VB</TemplateID>
+        <RequiredFrameworkVersion>3.5</RequiredFrameworkVersion>
+        <ProjectType>VisualBasic</ProjectType>
+        <SortOrder>120</SortOrder>
+        <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+        <DefaultName>BdcResource.bdcr</DefaultName>
+        <ProvideDefaultName>true</ProvideDefaultName>
+        <CreateInPlace>true</CreateInPlace>
+        <TemplateGroupID>SharePointItemTemplateGroupID</TemplateGroupID>
+        <ShowByDefault>false</ShowByDefault>
+    </TemplateData>
+    <TemplateContent>
+        <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.bdcr">SharePointBDCResource.bdcr</ProjectItem>
+        <CustomParameters>
+            <CustomParameter Name="SharePointProjectParentFilter" Value="ProjectItem"/>
+
+            <!-- localization tag -->
+            <CustomParameter Name="$loc_BdcrModelComment$" _locID="$loc_BdcrModelComment$" _locAttrData="Value" Value="TODO: Replace the $ModelName$ and $LobSystemName$ with your model name and LobSystem name respectively." />
+        </CustomParameters>
+    </TemplateContent>
+    <WizardExtension>
+        <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+        <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.GenericWizard</FullClassName>
+    </WizardExtension>
+</VSTemplate>

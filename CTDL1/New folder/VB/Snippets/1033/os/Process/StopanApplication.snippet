@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Stop an Application </Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Stops a running application.</Description>
+      <Keywords>
+      </Keywords>
+      <Shortcut>procStop</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Diagnostics</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>appName</ID>
+          <Type />
+          <ToolTip>Replace with the name of the process to be stopped.</ToolTip>
+          <Default>"notepad"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim processList() As Process
+
+processList = Process.GetProcessesByName($appName$)        
+For Each proc As Process In processList
+            If MsgBox("Terminate " & proc.ProcessName & "?", MsgBoxStyle.YesNo, "Terminate?") = MsgBoxResult.Yes Then
+                proc.Kill()
+            End If
+        Next]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

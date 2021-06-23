@@ -1,0 +1,55 @@
+﻿<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name Package="{1B027A40-8F43-11D0-8D11-00A0C91BC942}" ID="3248" />
+    <Description Package="{1B027A40-8F43-11D0-8D11-00A0C91BC942}" ID="3249" />
+    <ProjectType>VC</ProjectType>
+    <ProjectSubType>WindowsPhone</ProjectSubType>
+    <TemplateID>Microsoft.WindowsPhone.CSharp.D3DInteropApp</TemplateID>
+    <TemplateGroupID>Windows Phone</TemplateGroupID>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>$projectname$App</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+        <LocationField>Enabled</LocationField>
+    <Hidden>true</Hidden>
+    <TargetPlatformName>WindowsPhone</TargetPlatformName>
+    <RequiredPlatformVersion>6.3.0</RequiredPlatformVersion>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$projectname$.csproj" File="D3DInteropApp.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true">Package.appxmanifest</ProjectItem>
+      <ProjectItem ReplaceParameters="true">App.xaml</ProjectItem>
+      <ProjectItem ReplaceParameters="true">App.xaml.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true">MainPage.xaml</ProjectItem>
+      <ProjectItem ReplaceParameters="true">MainPage.xaml.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">LocalizedStrings.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Properties\AppManifest.xml</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Properties\AssemblyInfo.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Properties\WMAppManifest.xml</ProjectItem>
+      <ProjectItem ReplaceParameters="false">Resources\AppResources.resx</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Resources\AppResources.Designer.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false">Assets\ApplicationIcon.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false">Assets\AlignmentGrid.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false">Assets\BadgeLogo.scale-240.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false">Assets\Logo.scale-240.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false">Assets\SplashScreen.scale-240.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false">Assets\SquareTile150x150.scale-240.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false">Assets\SquareTile71x71.scale-240.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false">Assets\StoreLogo.scale-240.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false">Assets\WideLogo.scale-240.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false">Assets\Tiles\FlipCycleTileLarge.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false">Assets\Tiles\FlipCycleTileMedium.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false">Assets\Tiles\FlipCycleTileSmall.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false">Assets\Tiles\IconicTileMediumLarge.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false">Assets\Tiles\IconicTileSmall.png</ProjectItem>
+    </Project>
+  </TemplateContent>
+    <WizardExtension>
+        <Assembly>Microsoft.VisualStudio.WinRT.TemplateWizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+        <FullClassName>Microsoft.VisualStudio.WinRT.TemplateWizards.PhoneAppxWizard</FullClassName>
+    </WizardExtension>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SmartDevice.ProjectSystem.Base, Version=12.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SmartDevice.ProjectSystem.Wizards.ProjectTemplateWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

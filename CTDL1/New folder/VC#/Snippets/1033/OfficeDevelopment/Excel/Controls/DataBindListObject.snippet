@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Bind Data to a List Object</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Binds data to an Excel ListObject control through a BindingSource object.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Excel.dll</Assembly>
+          <Url></Url>
+        </Reference>
+        <Reference>
+          <Assembly>Microsoft.Office.Tools.Excel.dll</Assembly>
+          <Url></Url>
+        </Reference>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Excel = Microsoft.Office.Interop.Excel</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Office.Tools.Excel</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>dataMember</ID>
+          <Type>System.String</Type>
+          <ToolTip>Replace with the member of the data source to bind to, if needed. Can also be set as the second parameter of the SetDataBinding method.</ToolTip>
+          <Default>"dataMember"</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>mappedColumns</ID>
+          <Type>System.String[]</Type>
+          <ToolTip>Replace with the names of columns in the data member that you want to display in the ListObject control.  To add an unmapped column, include an empty string in the array.</ToolTip>
+          <Default>"mappedColumns"</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>bindingSource</ID>
+          <Type>System.Windows.Forms.BindingSource</Type>
+          <ToolTip>Replace with a binding source to use to set up the data binding.</ToolTip>
+          <Default>bindingSource</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>list</ID>
+          <Type>Microsoft.Office.Tools.Excel.ListObject</Type>
+          <ToolTip>Replace with the list object to data bind to.</ToolTip>
+          <Default>list</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="CSharp" Kind="" Delimiter="$"><![CDATA[
+$list$.SetDataBinding($bindingSource$, $dataMember$, $mappedColumns$);		]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

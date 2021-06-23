@@ -1,0 +1,17 @@
+[$RootKey$]
+
+[$RootKey$\CLSID]
+
+[$RootKey$\CLSID\{A553AD0B-2F9E-4BCE-95B3-9A1F7074BC27}]
+@="Microsoft.VisualStudio.Web.Publish.DeployPropertyPageComClass"
+"InprocServer32"="$WinDir$\SYSTEM32\MSCOREE.DLL"
+"Class"="Microsoft.VisualStudio.Web.Publish.DeployPropertyPageComClass"
+"CodeBase"="$PackageFolder$\Microsoft.VisualStudio.Web.Publish.dll"
+"ThreadingModel"="Both"
+
+[$RootKey$\CLSID\{9AB2347D-948D-4CD2-8DBE-F15F0EF78ED3}]
+@="Microsoft.VisualStudio.Web.Publish.DatabaseDeployPropertyPageComClass"
+"InprocServer32"="$WinDir$\SYSTEM32\MSCOREE.DLL"
+"Class"="Microsoft.VisualStudio.Web.Publish.DatabaseDeployPropertyPageComClass"
+"CodeBase"="$PackageFolder$\Microsoft.VisualStudio.Web.Publish.dll"
+"ThreadingModel"="Both"

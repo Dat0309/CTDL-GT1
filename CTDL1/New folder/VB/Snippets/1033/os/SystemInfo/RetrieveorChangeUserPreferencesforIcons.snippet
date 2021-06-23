@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Retrieve User Preferences for Icons</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Retrieves the user preferences for icon display properties.</Description>
+      <Shortcut>sysIcon</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Drawing.dll</Assembly>
+          <Url />
+        </Reference>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+          <Url />
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Drawing</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim size = SystemInformation.IconSize
+Dim spacingSize = SystemInformation.IconSpacingSize
+Dim horizontalSpace = SystemInformation.IconHorizontalSpacing
+Dim verticalSpace = SystemInformation.IconVerticalSpacing]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

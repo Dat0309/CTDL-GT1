@@ -1,0 +1,44 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="367" />
+    <Description Package ="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID ="368" />
+    <Icon Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="241" />
+    <TemplateID>SharePoint14SilverlightWebPart_CS_ITEM</TemplateID>
+    <FrameworkVersion>3.5</FrameworkVersion>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>10</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>SilverlightWebPart</DefaultName>
+    <TemplateGroupID>SharePointItemTemplateGroupID</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>Microsoft.SharePoint</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$/SharePointProjectItem.spdata" OpenInEditor="false">Default.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$/$fileinputname$.webpart" OpenInEditor="true">Default.webpart</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$/Elements.xml" OpenInEditor="false">Default.xml</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="SharePointProjectTemplateAttributes" Value="ProjectItem"/>
+      <CustomParameter Name="SharePointProjectParentFilter" Value="General;ProjectItem"/>
+      <CustomParameter Name="$import_error_message$" Value="$Resources:core,ImportErrorMessage;" />
+      <CustomParameter Name="$webpart_classname$" Value="$safeitemrootname$" />
+      <CustomParameter Name="$webpart_title$" Value="$projectname$ - $fileinputname$" />
+      <CustomParameter Name="$webpart_url$" Value="$projectname$_$fileinputname$.webpart" />
+      <CustomParameter Name="$xap_url$" Value="SiteAssets/$projectname$/$fileinputname$/$SilverlightXapFile$" />
+      <CustomParameter Name="$webpart_xap_url$" Value="$SiteCollectionUrl$SiteAssets/$projectname$/$fileinputname$/$SilverlightXapFile$" />
+      <CustomParameter Name="$ProjectItemName$" Value="$fileinputname$"/>
+      <CustomParameter Name="$loc_webpart_description$" _locID="$loc_webpart_description$" _locAttrData="Value" Value="My Silverlight Web Part" />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.SilverlightWebPartItemWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

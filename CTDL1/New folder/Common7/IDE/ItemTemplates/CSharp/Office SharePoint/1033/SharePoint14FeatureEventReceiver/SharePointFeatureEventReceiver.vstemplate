@@ -1,0 +1,27 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{540DCB6B-915E-4a16-A7D8-838D154377A8}" ID="501"/>
+    <Description Package="{540DCB6B-915E-4a16-A7D8-838D154377A8}" ID="502"/>
+    <Icon Package="{540DCB6B-915E-4a16-A7D8-838D154377A8}" ID="503"/>
+    <TemplateID>SharePoint14FeatureEventReceiver_CS_ITEM</TemplateID>
+    <ProjectType>CSharp</ProjectType>
+    <DefaultName>FeatureEventReceiver.cs</DefaultName>
+    <Hidden>true</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem TargetFileName="$fileinputname$.cs" ReplaceParameters="true" OpenInEditor="false">FeatureEventReceiver.cs</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="$loc_ClassComment$" _locID="$loc_ClassComment$" _locAttrData="Value" Value="This class handles events raised during feature activation, deactivation, installation, uninstallation, and upgrade." />
+      <CustomParameter Name="$loc_ClassGuidComment$" _locID="$loc_ClassGuidComment$" _locAttrData="Value" Value="The GUID attached to this class may be used during packaging and should not be modified." />
+      <CustomParameter Name="$loc_FeatureActivatedComment$" _locID="$loc_FeatureActivatedComment$" _locAttrData="Value" Value="Uncomment the method below to handle the event raised after a feature has been activated." />
+      <CustomParameter Name="$loc_FeatureDeactivatingComment$" _locID="$loc_FeatureDeactivatingComment$" _locAttrData="Value" Value="Uncomment the method below to handle the event raised before a feature is deactivated." />
+      <CustomParameter Name="$loc_FeatureInstalledComment$" _locID="$loc_FeatureInstalledComment$" _locAttrData="Value" Value="Uncomment the method below to handle the event raised after a feature has been installed." />
+      <CustomParameter Name="$loc_FeatureUninstallingComment$" _locID="$loc_FeatureUninstallingComment$" _locAttrData="Value" Value="Uncomment the method below to handle the event raised before a feature is uninstalled." />
+      <CustomParameter Name="$loc_FeatureUpgradingComment$" _locID="$loc_FeatureUpgradingComment$" _locAttrData="Value" Value="Uncomment the method below to handle the event raised when a feature is upgrading." />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.GenericWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Display an Animated GIF</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Displays an animated GIF.</Description>
+      <Shortcut>drawGif</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Drawing.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>pic</ID>
+          <Type>PictureBox</Type>
+          <ToolTip>Replace with PictureBox</ToolTip>
+          <Default>PictureBox1</Default>
+        </Object>
+        <Literal>
+          <ID>image</ID>
+          <ToolTip>Replace with image filename.</ToolTip>
+          <Default>"test.gif"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[$pic$.Image = Image.FromFile($image$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

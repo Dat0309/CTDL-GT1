@@ -1,0 +1,21 @@
+﻿<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+    <TemplateData>
+        <DefaultName>Empty.vbhtml</DefaultName>
+        <Name>Empty Page (Razor v2)</Name>
+        <Description>Empty Page with Razor syntax (VBHTML)</Description>
+        <Icon>vbhtmlfile.11.ico</Icon>
+        <ProjectType>Web</ProjectType>
+        <ProjectSubType>VisualBasic</ProjectSubType>
+        <SortOrder>11</SortOrder>
+        <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+        <TemplateID>Razor2EmptyPage.vbhtml.vstemplate</TemplateID>
+    </TemplateData>
+    <TemplateContent>
+        <References />
+        <ProjectItem SubType="" TargetFileName="$fileinputname$.vbhtml" ReplaceParameters="true">Empty.vbhtml</ProjectItem>
+    </TemplateContent>
+    <WizardExtension>
+        <Assembly>Microsoft.VisualStudio.Html.Package, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+        <FullClassName>Microsoft.VisualStudio.Web.Razor.TemplateWizard</FullClassName>
+    </WizardExtension>
+</VSTemplate>

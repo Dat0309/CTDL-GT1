@@ -1,0 +1,21 @@
+{
+    "start_url": "Views\\UnsupportedVersion\\UnsupportedVersion.html",
+    "domain": "http://microsoft.com",
+    "name":"Memory Profiler UnsupportedVersion",
+    "version":"1.0",
+    "resource_aliases": {
+        "Resources": {
+            "path": "Views\\UnsupportedVersion\\Resources\\Resources",
+            "is_default": true 
+        }
+    },
+    "vs": {
+        "theme_token_aliases": {
+            "plugin-memory-error-text": {
+                "category": "A5441C8F-ED08-40E1-AB04-BA3281D84770",
+                "key_type": "ForegroundColor",
+                "name": "SnapshotTileErrorText"
+            }
+        }
+    }
+}

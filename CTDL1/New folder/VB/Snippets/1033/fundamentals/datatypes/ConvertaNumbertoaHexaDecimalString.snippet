@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Convert a Number to a Hexadecimal String</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Returns the hexadecimal representation of an integer.</Description>
+      <Shortcut>typeHex</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>Number</ID>
+          <Type />
+          <ToolTip>Replace with an integer.</ToolTip>
+          <Default>48</Default>
+          <Function />
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim hexString As String = $Number$.ToString("X")]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,32 @@
+﻿.BPT-ScriptErrorMessageIcon {
+    background-image: url('../common/images/critical.png');   /*[url({plugin-image-icon-dom-explorer-critical})]*/
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    float: left;
+    vertical-align: middle;
+    margin-top: 6px;
+}
+
+/* Override part of this rule from toolbar.css */
+.BPT-SearchBox-Border {
+    margin-right: 6px;
+    margin-top: 1px;
+}
+
+.BPT-Toolbar .selectElementButton {
+    background-image: url('images/Inspect_32x.png');  /*[url({plugin-image-icon-dom-explorer-inspect-32x})]*/
+    background-size: 16px 16px;
+}
+
+.BPT-Toolbar .showLayoutButton {
+    background-image: url('images/ShowLayout_32x.png');  /*[url({plugin-image-icon-dom-explorer-show-layout-32x})]*/
+    background-size: 16px 16px;
+}
+
+.BPT-Toolbar .refreshButton {
+    background-image: url('images/Refresh_32x.png');  /*[url({plugin-image-icon-dom-explorer-refresh-32x})]*/
+    background-size: 16px 16px;
+}

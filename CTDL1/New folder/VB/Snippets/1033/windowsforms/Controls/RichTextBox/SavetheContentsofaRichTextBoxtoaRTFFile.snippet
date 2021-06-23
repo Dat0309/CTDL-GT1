@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Save the Contents of a RichTextBox to a RTF File</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Saves the content of the RichText box to a RTF file.</Description>
+      <Shortcut>richSave</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+          <Url />
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>RTFControl</ID>
+          <Type>System.Windows.Forms.RichTextBox</Type>
+          <ToolTip>Replace with a RichTextBox control on your form.</ToolTip>
+          <Default>RichTextBox1</Default>
+        </Object>
+        <Literal>
+          <ID>Filename</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the file name.</ToolTip>
+          <Default>"FileName.rtf"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[$RTFControl$.SaveFile($Filename$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

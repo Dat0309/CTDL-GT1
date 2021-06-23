@@ -1,0 +1,24 @@
+// Creates registry keys to setup WCF Data Services Single File Generator (Core)
+
+[$RootKey$\Generators\{164B10B9-B200-11D0-8C61-00A0C91E29D5}\.datasvcmap]
+@="DataServicesCoreClientGenerator"
+
+[$RootKey$\Generators\{FAE04EC1-301F-11D3-BF4B-00C04F79EFBC}\.datasvcmap]
+@="DataServicesCoreClientGenerator"
+
+[$RootKey$\CLSID\{45D0D4C5-4117-401C-AC9F-C284EAED90AB}]
+"Class"="Microsoft.VSDesigner.DataServices.Core.DataServicesClientSingleFileGeneratorCore"
+"CodeBase"="$ShellFolder$\Common7\IDE\PrivateAssemblies\DataServices\Microsoft.VSDesigner.DataServices.Core.dll"
+"InprocServer32"="$System$\mscoree.dll"
+"ThreadingModel"="Both"
+@="WCF Data Services client-side single file generator"
+
+[$RootKey$\Generators\{164B10B9-B200-11D0-8C61-00A0C91E29D5}\DataServicesCoreClientGenerator]
+"CLSID"="{45D0D4C5-4117-401C-AC9F-C284EAED90AB}"
+"GeneratesDesignTimeSource"=dword:00000001
+@="Microsoft VB Code Generator for WCF Data Services"
+
+[$RootKey$\Generators\{FAE04EC1-301F-11D3-BF4B-00C04F79EFBC}\DataServicesCoreClientGenerator]
+"CLSID"="{45D0D4C5-4117-401C-AC9F-C284EAED90AB}"
+"GeneratesDesignTimeSource"=dword:00000001
+@="Microsoft C# Code Generator for WCF Data Services"

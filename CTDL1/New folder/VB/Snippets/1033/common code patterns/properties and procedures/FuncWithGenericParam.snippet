@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Define a Function with Generic Parameters</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Defines a Function that uses Generic parameters.</Description>
+      <Shortcut>FuncGeneric</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>FunctionName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with function name.</ToolTip>
+          <Default>MyFunction</Default>
+        </Literal>
+        <Literal>
+          <ID>ReturnType</ID>
+          <Type></Type>
+          <ToolTip>Replace with return type.</ToolTip>
+          <Default>Integer</Default>
+        </Literal>
+        <Literal>
+          <ID>ReturnValue</ID>
+          <Type></Type>
+          <ToolTip>Replace with the return value.</ToolTip>
+          <Default>0</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[Function $FunctionName$(Of T)() As $ReturnType$
+    Return $ReturnValue$
+End Function]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Set the Style for a Range</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Sets the style for a range in a Word document.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Word.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Word = Microsoft.Office.Interop.Word</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>styleIdValue</ID>
+          <Type>Word.WdBuiltinStyle</Type>
+          <ToolTip>Replace with a name of a style, or one of the Word.WdBuiltInStyle values.</ToolTip>
+          <Default>wdStyleNormal</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>styleId</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a variable to hold the styleId value.</ToolTip>
+          <Default>styleId</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>style</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a variable to hold the style object returned from the Styles collection.</ToolTip>
+          <Default>style</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>document</ID>
+          <Type>Microsoft.Office.Interop.Word.Document</Type>
+          <ToolTip>Replace with the document that the range is in.</ToolTip>
+          <Default>document</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>range</ID>
+          <Type>Microsoft.Office.Interop.Word.Range</Type>
+          <ToolTip>Replace with the range to apply the style to.</ToolTip>
+          <Default>range</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="CSharp" Kind="" Delimiter="$"><![CDATA[
+object $styleId$ = Word.WdBuiltinStyle.$styleIdValue$;
+object $style$ = $document$.Styles.get_Item(ref $styleId$);
+$range$.set_Style(ref $style$);
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

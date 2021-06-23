@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Paged Media" standard-reference="http://www.w3.org/TR/css3-page/" status="WD" pub-date="2006-10-10">
+
+  <CssProperty _locID="fit"
+               _locAttrData="description, syntax"
+               version="3.0"
+               browsers="none"
+               restriction="enum"
+               description="Gives a hint for how to scale a replaced element if neither its 'width' nor its 'height' property is 'auto'."
+               syntax="Comma-separated list of 'fit' keywords where 'fit' = fill | hidden | meet | slice"
+               standard-reference="http://www.w3.org/TR/css3-page/#fit">
+
+    <entry _locID="fit_fill"
+           _locAttrData="description"
+           value="fill"
+           description="Scale the object's height and width independently so that the content just touches all edges of the containing box." />
+    <entry _locID="fit_hidden"
+           _locAttrData="description"
+           value="hidden"
+           description="Do not scale the object." />
+    <entry _locID="fit_meet"
+           _locAttrData="description"
+           value="meet"
+           description="Make the object as large as possible with its width &lt;= 'width' and height &lt;= 'height', while preserving its aspect ratio. Position the object as for the 'hidden' value." />
+    <entry _locID="fit_slice"
+           _locAttrData="description"
+           value="slice"
+           description="Make the object as small as possible with its width &gt;= 'width' and height &gt;= 'height', while preserving its aspect ratio. Position the object as for the 'hidden' value." />
+  </CssProperty>
+
+  <CssProperty _locID="fit-position"
+               _locAttrData="description"
+               version="3.0"
+               browsers="none"
+               type="background-position"
+               restriction="percentage, length"
+               description="Gives a hint for how to scale a replaced element if neither its 'width' nor its 'height' property is 'auto'."
+               syntax="[ [&lt;percentage&gt; | &lt;length&gt; ]{1,2} | [ [top | center | bottom] || [left | center | right] ] ] | auto"
+               standard-reference="http://www.w3.org/TR/css3-page/#fit">
+
+    <entry _locID="fit-position_fill"
+           _locAttrData="description"
+           value="fill" description="Scale the object's height and width independently so that the content just touches all edges of the containing box." />
+    <entry _locID="fit-position_hidden"
+           _locAttrData="description"
+           value="hidden" description="Do not scale the object." />
+    <entry _locID="fit-position_meet"
+           _locAttrData="description"
+           value="meet" description="Make the object as large as possible with its width &lt;= 'width' and height &lt;= 'height', while preserving its aspect ratio. Position the object as for the 'hidden' value." />
+    <entry _locID="fit-position_slice"
+           _locAttrData="description"
+           value="slice" description="Make the object as small as possible with its width &gt;= 'width' and height &gt;= 'height', while preserving its aspect ratio. Position the object as for the 'hidden' value." />
+  </CssProperty>
+
+  <CssProperty _locID="image-orientation"
+               _locAttrData="description"
+               version="3.0"
+               browsers="none"
+               restriction="angle"
+               syntax="auto | &lt;angle&gt;"
+               description="Rotates an image in the clockwise direction"
+               standard-reference="http://www.w3.org/TR/css3-page/#image-orientation">
+
+    <entry _locID="image-orientation_auto"
+           _locAttrData="description"
+           value="auto" description="The image will be set to the orientation of the page" />
+  </CssProperty>
+
+  <CssProperty _locID="page"
+               _locAttrData="description"
+               version="3.0"
+               browsers="none"
+               restriction="identifier"
+               syntax="auto | &lt;identifier&gt;"
+               description="Specifies a particular type of page where an element SHOULD be displayed"
+               standard-reference="http://www.w3.org/TR/css3-page/#page">
+
+    <entry value="auto" />
+  </CssProperty>
+
+  <CssPropertyValue type="page-size" version="3.0">
+    <entry _locID="page-size-val_A5"
+           _locAttrData="description"
+           value="A5"
+           description="ISO A5 media: 148mm wide and 210 mm high" />
+    <entry _locID="page-size-val_A4"
+           _locAttrData="description"
+           value="A4"
+           description="IS0 A4 media: 210 mm wide and 297 mm high" />
+    <entry _locID="page-size-val_A3"
+           _locAttrData="description"
+           value="A3"
+           description="ISO A3 media: 297mm wide and 420mm high" />
+    <entry _locID="page-size-val_B5"
+           _locAttrData="description"
+           value="B5"
+           description="ISO B5 media: 176mm wide by 250mm high" />
+    <entry _locID="page-size-val_B4"
+           _locAttrData="description"
+           value="B4"
+           description="ISO B4 media: 250mm wide by 353mm high" />
+    <entry _locID="page-size-val_letter"
+           _locAttrData="description"
+           value="letter"
+           description="North American letter media: 8.5 inches wide and 11 inches high" />
+    <entry _locID="page-size-val_legal"
+           _locAttrData="description"
+           value="legal"
+           description="North American legal: 8.5 inches wide by 14 inches high" />
+    <entry _locID="page-size-val_ledger"
+           _locAttrData="description"
+           value="ledger"
+           description="North American ledger: 11 inches wide by 17 inches high" />
+  </CssPropertyValue>
+
+  <CssProperty _locID="page-break-before"
+               _locAttrData="description"
+               version="2.0"
+               browsers="all"
+               restriction="enum"
+               syntax="table { $(name): always; }"
+               description="Defines rules for page breaks before an element."
+               standard-reference="http://www.w3.org/TR/CSS2/page.html#propdef-page-break-before">
+
+    <entry _locID="page-break-before_always"
+           _locAttrData="description"
+           value="always"
+           description="Always force a page break before the generated box." />
+    <entry _locID="page-break-before_auto"
+           _locAttrData="description"
+           value="auto"
+           description="Neither force nor forbid a page break before the generated box." />
+    <entry _locID="page-break-before_avoid"
+           _locAttrData="description"
+           value="avoid"
+           description="Avoid a page break before the generated box." />
+    <entry _locID="page-break-before_left"
+           _locAttrData="description"
+           value="left"
+           description="Force one or two page breaks before the generated box so that the next page is formatted as a left page." />
+    <entry _locID="page-break-before_right"
+           _locAttrData="description"
+           value="right"
+           description="Force one or two page breaks before the generated box so that the next page is formatted as a right page." />
+  </CssProperty>
+
+  <CssProperty _locID="page-break-after"
+               _locAttrData="description"
+               version="2.0"
+               browsers="all"
+               restriction="enum"
+               syntax="table { $(name): always; }"
+               description="Defines rules for page breaks after an element."
+               standard-reference="http://www.w3.org/TR/CSS2/page.html#propdef-page-break-after">
+
+    <entry _locID="page-break-after_always"
+           _locAttrData="description"
+           value="always"
+           description="Always force a page break after the generated box." />
+    <entry _locID="page-break-after_auto"
+           _locAttrData="description"
+           value="auto"
+           description="Neither force nor forbid a page break after generated box." />
+    <entry _locID="page-break-after_avoid"
+           _locAttrData="description"
+           value="avoid"
+           description="Avoid a page break after the generated box." />
+    <entry _locID="page-break-after_left"
+           _locAttrData="description"
+           value="left"
+           description="Force one or two page breaks after the generated box so that the next page is formatted as a left page." />
+    <entry _locID="page-break-after_right"
+           _locAttrData="description"
+           value="right"
+           description="Force one or two page breaks after the generated box so that the next page is formatted as a right page." />
+  </CssProperty>
+
+  <CssProperty _locID="page-break-inside"
+               _locAttrData="description"
+               version="2.0"
+               browsers="C,IE8,O7,S1.3"
+               restriction="enum"
+               syntax="table { $(name): avoid; }"
+               description="Defines rules for page breaks inside an element."
+               standard-reference="http://www.w3.org/TR/CSS2/page.html#propdef-page-break-inside">
+
+    <entry _locID="page-break-inside_auto"
+           _locAttrData="description"
+           value="auto"
+           description="Neither force nor forbid a page break inside the generated box." />
+    <entry _locID="page-break-inside_avoid"
+           _locAttrData="description"
+           value="avoid"
+           description="Avoid a page break inside the generated box." />
+  </CssProperty>
+
+  <CssProperty _locID="orphans"
+               _locAttrData="description"
+               version="2.0"
+               browsers="C,IE8,O7,S1.3"
+               restriction="integer"
+               description="Specifies the minimum number of lines in a block element that must be left at the bottom of a page."
+               syntax="&lt;integer&gt;"
+               standard-reference="http://www.w3.org/TR/CSS2/page.html#propdef-orphans" />
+
+  <CssProperty _locID="widows"
+              _locAttrData="description"
+              version="2.0"
+               browsers="C,IE8,O9.5,S1"
+              restriction="integer"
+              description="Specifies the minimum number of lines in a block element that must be left at the top of a page."
+              syntax="&lt;integer&gt;"
+              standard-reference="http://www.w3.org/TR/CSS2/page.html#propdef-widows" />
+
+  <CssAtDirective name="page"
+              _locID="page-rule"
+              _locAttrData="description"
+              version="2.0"
+              include-root-directives="false"
+              syntax="@page"
+              description="Directive defines various page parameters."
+              standard-reference="http://www.w3.org/TR/css3-page/#page-box-page-rule">
+
+    <CssPseudo name=":right"
+               _locID="right-page-selector"
+               _locAttrData="description"
+               version="2.0"
+               type="pseudo-class"
+               syntax="@page :right { margin-left: 4cm; }"
+               description="When printing double-sided documents, the page boxes on left and right pages may be different. This can be expressed through CSS pseudo-classes defined in the  page context."
+               standard-reference="http://www.w3.org/TR/css3-page/#left-right-first" />
+
+    <CssPseudo name=":left"
+               _locID="left-page-selector"
+               _locAttrData="description"
+               version="2.0"
+               type="pseudo-class"
+               syntax="@page :left { margin-left: 4cm; }"
+               description="When printing double-sided documents, the page boxes on left and right pages may be different. This can be expressed through CSS pseudo-classes defined in the  page context."
+               standard-reference="http://www.w3.org/TR/css3-page/#left-right-first" />
+
+    <CssPseudo name=":first"
+               _locID="first-page-selector"
+               _locAttrData="description"
+               version="2.0"
+               type="pseudo-class"
+               syntax="@page :first { margin-left: 4cm; }"
+               description="When printing double-sided documents, the page boxes on left and right pages may be different. This can be expressed through CSS pseudo-classes defined in the  page context."
+               standard-reference="http://www.w3.org/TR/css3-page/#left-right-first" />
+
+    <CssProperty _locID="size"
+                 version="2.1"
+                 browsers="C,O8"
+                 type="page-size"
+                 restriction="length"
+                 syntax="&lt;length&gt;{1,2} | auto | [ &lt;page-size&gt; || [ portrait | landscape] ]"
+                 standard-reference="http://www.w3.org/TR/css3-page/#page-size-prop">
+
+      <entry _locID="size_auto"
+             _locAttrData="description"
+             value="auto"
+             description="The page box will be set to the size and orientation of the page sheet chosen by the UA." />
+      <entry _locID="size_portrait"
+             _locAttrData="description"
+             value="portrait"
+             description="Specifies that the page's content be printed in landscape orientation." />
+      <entry _locID="size_landscape"
+             _locAttrData="description"
+             value="landscape"
+             description="Specifies that the page's content be printed in portrait orientation." />
+    </CssProperty>
+
+    <CssProperty _locID="marks"
+                 _locAttrData="description"
+                 version="2.0-2.0"
+                 browsers="none"
+                 restriction="enum"
+                 description="Provides paged media with crop marks to allow printouts to be cropped and aligned.">
+
+      <entry _locID="marks_crop"
+             _locAttrData="description"
+             value="crop"
+             description="Crop marks will be printed on the page." />
+      <entry _locID="marks_"
+             _locAttrData="description"
+             value="cross" description="Registration marks will be printed on the page." />
+      <entry _locID="marks_"
+             _locAttrData="description"
+             value="none" description="No crop or registration marks will be printed on the page." />
+    </CssProperty>
+
+    <CssAtDirective name="top-left"
+                    _locID="top-left-page-rule"
+                    _locAttrData="description"
+                    version="3"
+                    browsers="none"
+                    description="A variable-width box within the area defined by the top margin and adjoining the top-left-corner margin box."
+                    standard-reference="http://www.w3.org/TR/css3-page/#page-box" />
+
+    <CssAtDirective name="top-left-corner"
+                    _locID="top-left-corner-page-rule"
+                    _locAttrData="description"
+                    version="3"
+                    browsers="none"
+                    description="A fixed-size box filling the area defined by the intersection of the top and left margins of the page box."
+                    standard-reference="http://www.w3.org/TR/css3-page/#page-box" />
+
+    <CssAtDirective name="top-center"
+                    _locID="top-center-page-rule"
+                    _locAttrData="description"
+                    version="3"
+                    browsers="none"
+                    description="A variable-width box within the area defined by the top margin, centered on the page area, and between the top-left and top-right margin boxes."
+                    standard-reference="http://www.w3.org/TR/css3-page/#page-box" />
+
+    <CssAtDirective name="top-right"
+                    _locID="top-right-page-rule"
+                    _locAttrData="description"
+                    version="3"
+                    browsers="none"
+                    description="A variable-width box within the area defined by the top margin and adjoining the top-right-corner margin box."
+                    standard-reference="http://www.w3.org/TR/css3-page/#page-box" />
+
+    <CssAtDirective name="top-right-corner"
+                    _locID="top-right-corner-page-rule"
+                    _locAttrData="description"
+                    version="3"
+                    browsers="none"
+                    description="A box filling the area defined by the intersection of the top and right margins of the page box."
+                    standard-reference="http://www.w3.org/TR/css3-page/#page-box" />
+
+    <CssAtDirective name="left-top"
+                    _locID="left-top-page-rule"
+                    _locAttrData="description"
+                    version="3"
+                    browsers="none"
+                    description="A variable-height box within the area defined by the left margin and adjacent to the bottom of the top-left-corner."
+                    standard-reference="http://www.w3.org/TR/css3-page/#page-box" />
+
+    <CssAtDirective name="left-middle"
+                    _locID="left-middle-page-rule"
+                    _locAttrData="description"
+                    version="3"
+                    browsers="none"
+                    description="A variable-height box in the area defined by the left margin, centered on the page area, and between the left-top and left-bottom margin boxes."
+                    standard-reference="http://www.w3.org/TR/css3-page/#page-box" />
+
+    <CssAtDirective name="left-bottom"
+                    _locID="left-bottom-page-rule"
+                    _locAttrData="description"
+                    version="3"
+                    browsers="none"
+                    description="A variable-height box within the area defined by the left margin and adjacent to the top of the bottom-left-corner."
+                    standard-reference="http://www.w3.org/TR/css3-page/#page-box" />
+
+    <CssAtDirective name="right-top"
+                    _locID="right-top-page-rule"
+                    _locAttrData="description"
+                    version="3"
+                    browsers="none"
+                    description="A variable-height box within the area defined by the right margin and adjacent to the bottom of the top-right-corner."
+                    standard-reference="http://www.w3.org/TR/css3-page/#page-box" />
+
+    <CssAtDirective name="right-middle"
+                    _locID="right-middle-page-rule"
+                    _locAttrData="description"
+                    version="3"
+                    browsers="none"
+                    description="A variable-height box in the area defined by the right margin, centered on the page area, and between the right-top and right-bottom margin boxes."
+                    standard-reference="http://www.w3.org/TR/css3-page/#page-box" />
+
+    <CssAtDirective name="right-bottom"
+                    _locID="right-bottom-page-rule"
+                    _locAttrData="description"
+                    version="3"
+                    browsers="none"
+                    description="A variable-height box within the area defined by the right margin and adjacent to the top of the bottom-right-corner."
+                    standard-reference="http://www.w3.org/TR/css3-page/#page-box" />
+
+    <CssAtDirective name="bottom-left-corner"
+                    _locID="bottom-left-corner-page-rule"
+                    _locAttrData="description"
+                    version="3"
+                    browsers="none"
+                    description="A box filling the area defined by the intersection of the bottom and left margins of the page box."
+                    standard-reference="http://www.w3.org/TR/css3-page/#page-box" />
+
+    <CssAtDirective name="bottom-left"
+                    _locID="bottom-left-page-rule"
+                    _locAttrData="description"
+                    version="3"
+                    browsers="none"
+                    description="A variable-width box within the area defined by the bottom margin and adjoining the bottom-left-corner margin box."
+                    standard-reference="http://www.w3.org/TR/css3-page/#page-box" />
+
+    <CssAtDirective name="bottom-center"
+                    _locID="bottom-center-page-rule"
+                    _locAttrData="description"
+                    version="3"
+                    browsers="none"
+                    description="A variable-width box within the area defined by the bottom margin, centered on the page area, and between the bottom-left and bottom-right margin boxes."
+                    standard-reference="http://www.w3.org/TR/css3-page/#page-box" />
+
+    <CssAtDirective name="bottom-right"
+                    _locID="bottom-right-page-rule"
+                    _locAttrData="description"
+                    version="3"
+                    browsers="none"
+                    description="A variable-width box within the area defined by the bottom margin and adjoining the bottom-right corner margin box."
+                    standard-reference="http://www.w3.org/TR/css3-page/#page-box" />
+
+    <CssAtDirective name="bottom-right-corner"
+                    _locID="bottom-center-page-rule"
+                    _locAttrData="description"
+                    version="3"
+                    browsers="none"
+                    description="A box filling the area defined by the intersection of the bottom and right margins of the page box."
+                    standard-reference="http://www.w3.org/TR/css3-page/#page-box" />
+
+  </CssAtDirective>
+
+</CssModule>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Determine the Span between Two Times </Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Calculates the difference in seconds between two times in the same day, and also constructs a TimeSpan value for that difference.</Description>
+      <Keywords>
+      </Keywords>
+      <Shortcut>typeTime</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>timeValue</ID>
+          <Type>
+          </Type>
+          <ToolTip>Replace with a Date literal, a Date variable, or a method that returns a Date.</ToolTip>
+          <Default>Today</Default>
+        </Literal>
+        <Literal>
+          <ID>timeValue2</ID>
+          <Type>
+          </Type>
+          <ToolTip>Replace with a Date literal, a Date variable, or a method that returns a Date.</ToolTip>
+          <Default>Now</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim oldTime As Date = $timeValue$
+Dim newTime As Date = $timeValue2$
+
+' You can also determine the difference in times in other units.
+Dim difference As TimeSpan = newTime - oldTime
+Dim differenceInSeconds As Double = difference.TotalSeconds
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text\html" />
+    <link href="grid.css" type="text/css" rel="stylesheet" data-plugin-theme="true" />
+    <link href="CSS/CpuUsageTreeGrid.css" type="text/css" rel="stylesheet" data-plugin-theme="true" />
+    <link href="CSS/DropDownOptions.css" type="text/css" rel="stylesheet" data-plugin-theme="true" />
+    <script src="Scripts/plugin.js"></script>
+    <script src="Scripts/DiagnosticsHub.js"></script>
+    <script src="BptDiagnosticCommon/JSTreeGridControl.js"></script>
+    <script src="BptDiagnosticCommon/MicrosoftAjax-4.0.0.0.debug.js"></script>
+    <script src="Scripts/CpuUsage.js"></script>
+    <title>CPU Usage</title>
+</head>
+
+<body>
+    <div class="cpu-usage-body">
+        <div class="cpu-usage-container">
+            <div class="cpu-usage-main" id="mainContainer">
+                <div class="cpu-usage-toolbar" id="toolbarForm">
+                    <div class="create-report">
+                        <div class="create-report-button" id="buttonCreateDetailedReport"></div>
+                    </div>
+                    <div class="thread-filter" id="filterContainer">
+                    </div>
+                    <div class="search-container">
+                        <div class="search-input">
+                            <input class="search-textbox" id="inputSearch" type="search" />
+                        </div>
+                        <div class="search-submit">
+                            <div class="search-submit-button" />
+                        </div>
+                    </div>
+                    <div class="search-option" id="searchOptions">
+                    </div>
+                </div>
+            </div>
+            <div id="gridContainer" class="main-gridcontainer"></div>
+        </div>
+        <div class="cpu-usage-container-overlay">
+            <div id="progress-container" class="progress-container">
+                <div id="progressMessage" class="progress progress-hidden"><!-- Processing data --></div>
+                <div>
+                    <progress id="progressBar" class="progress progress-hidden" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var cpuUsageTreeGrid = null;
+        (function () {
+            window.addEventListener("DOMContentLoaded", function () {
+                Plugin.addEventListener("pluginready", pluginLoaded);
+            });
+
+            function pluginLoaded() {
+                Plugin.Tooltip.defaultTooltipContentToHTML = false;
+                try {
+                    cpuUsageTreeGrid = new Microsoft.VisualStudio.DiagnosticsHub.CpuUsageTreeGrid({ containerId: "gridContainer" });
+                    cpuUsageTreeGrid.render();
+                } catch (e) {
+                    alert(e.message);
+                }
+            }
+        })();
+    </script>
+</body>
+</html>

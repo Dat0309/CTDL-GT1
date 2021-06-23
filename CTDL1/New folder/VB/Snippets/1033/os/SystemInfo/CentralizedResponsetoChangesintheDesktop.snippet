@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Respond to changes to Windows User preferences</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Demonstrates how to handle changes made to the Windows user's preferences</Description>
+      <Shortcut>sysChgPref</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.Win32</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="VB" Kind="method decl"><![CDATA[    Dim WithEvents systemEvent As SystemEvents
+
+    Private Sub systemEvent_UserPreferenceChanged(ByVal sender As System.Object, ByVal e As UserPreferenceChangedEventArgs) Handles systemEvent.UserPreferenceChanged
+        Select Case e.Category
+            Case UserPreferenceCategory.Accessibility
+
+            Case UserPreferenceCategory.Color
+
+            Case UserPreferenceCategory.Desktop
+
+            Case UserPreferenceCategory.General
+
+            Case UserPreferenceCategory.Icon
+
+            Case UserPreferenceCategory.Keyboard
+
+            Case UserPreferenceCategory.Locale
+
+            Case UserPreferenceCategory.Menu
+
+            Case UserPreferenceCategory.Mouse
+
+            Case UserPreferenceCategory.Policy
+
+            Case UserPreferenceCategory.Power
+
+            Case UserPreferenceCategory.Screensaver
+
+            Case UserPreferenceCategory.VisualStyle
+
+            Case UserPreferenceCategory.Window
+            Case Else
+        End Select
+    End Sub]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

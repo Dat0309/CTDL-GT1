@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Generate Multiline String Literals </Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Constructs a string literal that is three lines long.</Description>
+      <Keywords>
+      </Keywords>
+      <Shortcut>typeMulti</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim longString As String
+longString = _
+    "This is the first line of my string." & Environment.NewLine & 
+    "This is the second line of my string." & Environment.NewLine &
+    "This is the third line of my string."]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,6 @@
+﻿// Ausführliche Informationen zum Lokalisieren einer Windows-App finden Sie unter: http://go.microsoft.com/fwlink/?LinkId=212836
+
+{
+    "greeting"              : "Hallo Welt!",
+    "_greeting.comment"     : "Dies ist ein Kommentar für den Lokalisierer"
+}

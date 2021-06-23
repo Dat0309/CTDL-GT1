@@ -1,0 +1,6 @@
+﻿// Para obtener más detalles sobre cómo buscar una aplicación de Windows, visite: http://go.microsoft.com/fwlink/?LinkId=212836
+
+{
+    "greeting"              : "Hola a todos",
+    "_greeting.comment"     : "Este es un comentario para el localizador"
+}

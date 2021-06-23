@@ -1,0 +1,18 @@
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{CB22EE0E-4072-4ae7-96E2-90FCCF879544}" ID="1025"/>
+    <Description Package="{CB22EE0E-4072-4ae7-96E2-90FCCF879544}" ID="1026"/>
+    <Icon Package="{CB22EE0E-4072-4ae7-96E2-90FCCF879544}" ID="9019"/>
+    <TemplateID>Microsoft.Silverlight.CSharp.ResourceDictionary</TemplateID>
+    <TemplateGroupID>Silverlight</TemplateGroupID>
+    <ProjectType>CSharp</ProjectType>
+    <ShowByDefault>false</ShowByDefault>
+    <SortOrder>15</SortOrder>
+    <RequiredFrameworkVersion>3.0</RequiredFrameworkVersion>
+    <DefaultName>Dictionary.xaml</DefaultName>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.xaml">SilverlightResourceDictionary.xaml</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

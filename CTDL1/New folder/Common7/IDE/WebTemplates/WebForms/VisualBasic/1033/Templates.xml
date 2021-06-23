@@ -1,0 +1,612 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TemplateDefinition Name="Web Forms" Order="10">
+  <UI> 
+    <Template Name="Empty" BaseTemplateID="Microsoft.WAP.VisualBasic.EmptyWebApplication" Order="10">
+      <Icon>Resources\Icon1.ico</Icon>
+      <PreviewImage>Resources\Icon1.ico</PreviewImage>
+      <Summary>An empty project template for creating ASP.NET applications. This template does not have any content in it.</Summary>
+      <Description>An empty project template for creating ASP.NET applications. This template does not have any content in it.</Description>
+      <UnitTest DefaultBaseTemplateID ="Microsoft.UnitTest.VisualBasic.EmptyTestProject" />
+      <Options>
+        <Authentication Default="NoAuth">
+          <NoAuth />
+        </Authentication>
+        <TemplateReferences>
+          <WebForms/>
+          <MVC />
+          <WebAPI />
+        </TemplateReferences>
+        <AzureResources>
+          <AzureWebsite />
+          <AzureVirtualMachine />
+        </AzureResources>
+      </Options>
+    </Template>
+
+    <Template Name="Web Forms" BaseTemplateID="Microsoft.WAP.VisualBasic.WebFormsBasic" Order="20">
+      <Icon>Resources\Icon1.ico</Icon>
+      <PreviewImage>Resources\Icon1.ico</PreviewImage>
+      <Summary>A project template for creating ASP.NET Web Forms applications. ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model. A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.</Summary>
+      <Description>A project template for creating ASP.NET Web Forms applications. ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model. A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.</Description>
+      <UnitTest DefaultBaseTemplateID ="Microsoft.UnitTest.VisualBasic.EmptyTestProject" />
+      <Options>
+        <Authentication Default="IndividualAuth">
+          <NoAuth />
+          <WindowsAuth />
+          <IndividualAuth />
+          <OrgAuth />
+        </Authentication>
+        <TemplateReferences>
+          <WebForms Required="true"/>
+          <MVC />
+          <WebAPI />
+        </TemplateReferences>
+        <AzureResources>
+          <AzureWebsite />
+          <AzureVirtualMachine />
+        </AzureResources>
+      </Options>
+    </Template>
+  </UI>
+
+  <BaseTemplates>
+    <BaseTemplate ID="Microsoft.WAP.VisualBasic.EmptyWebApplication"
+              VSTemplatePath="EmptyWebApplication\EmptyWebApplication.vstemplate">
+      <ApplyRules>
+        <RunRule RuleID="global.MVC" Option="MVC" />
+      </ApplyRules>
+      <ApplyRules>
+        <RunRule RuleID="global.WebAPI" Option="WebAPI" />
+      </ApplyRules>
+      <ApplyRules>
+        <RunRule RuleID="global.WebForms" Option="WebForms" />
+      </ApplyRules>
+      <ApplyRules>
+        <RunRule RuleID="EmptyAddWebFormsMVC" Option="WebForms,MVC" />
+      </ApplyRules>
+      <ApplyRules>
+        <RunRule RuleID="EmptyAddWebFormsWebAPI" Option="WebForms,WebAPI" />
+      </ApplyRules>
+      <ApplyRules>
+        <RunRule RuleID="EmptyAddMVCWebAPI" Option="MVC,WebAPI" />
+      </ApplyRules>
+      <ApplyRules>
+        <RunRule RuleID="EmptyAddMVCWebAPI" Option="WebForms,MVC,WebAPI" />
+      </ApplyRules>
+
+    </BaseTemplate>
+    <BaseTemplate ID="Microsoft.WAP.VisualBasic.WebFormsBasic"
+              VSTemplatePath="WebFormsBasic\WebFormsBasic.vstemplate"
+              NugetPackageKey="WebFormsVS12">
+      <!--Global Rules should always run first-->
+      <ApplyRules>
+        <RunRule RuleID="global.MVC" Option="MVC" />
+      </ApplyRules>
+      <ApplyRules>
+        <RunRule RuleID="global.WebAPI" Option="WebAPI" />
+      </ApplyRules>
+      
+      <ApplyRules Option="IndividualAuth">
+        <RunRule RuleID="IndividualAuth"/>
+        <RunRule RuleID="WebFormsIndividualAuthMVC" Option="MVC" />
+        <RunRule RuleID="WebFormsIndividualAuthWebAPI" Option="WebAPI" />
+        <RunRule RuleID="WebFormsIndividualAuthMVCWebAPI" Option="MVC,WebAPI" />
+        <RunRule RuleID="IndividualAuthNugetPackages" />
+      </ApplyRules>
+
+      <ApplyRules Option="OrgAuth">
+        <ApplyRules Option="OnPrem">
+          <RunRule RuleID="OrgAuthOnPrem" />
+          <RunRule RuleID="WebFormsOrgAuthOnPremMVC" Option="MVC" />
+          <RunRule RuleID="WebFormsOrgAuthOnPremWebAPI" Option="WebAPI" />
+          <RunRule RuleID="WebFormsOrgAuthOnPremWebAPI" Option="MVC,WebAPI" />
+          <RunRule RuleID="OrgAuthNugetPackages" />
+        </ApplyRules>
+        <ApplyRules Option="SSO">
+          <RunRule RuleID="OrgAuthSSO" />
+          <RunRule RuleID="WebFormsOrgAuthSSOMVC" Option="MVC" />
+          <RunRule RuleID="WebFormsOrgAuthSSOWebAPI" Option="WebAPI" />
+          <RunRule RuleID="WebFormsOrgAuthSSOMVCWebAPI" Option="MVC,WebAPI" />
+          <RunRule RuleID="OrgAuthNugetPackages" />
+        </ApplyRules>
+        <ApplyRules Option="SSOR">
+          <RunRule RuleID="OrgAuthSSOR" />
+          <RunRule RuleID="WebFormsOrgAuthSSOMVC" Option="MVC" />
+          <RunRule RuleID="WebFormsOrgAuthSSOWebAPI" Option="WebAPI" />
+          <RunRule RuleID="WebFormsOrgAuthSSOMVCWebAPI" Option="MVC,WebAPI" />
+          <RunRule RuleID="OrgAuthNugetPackages" />
+          <RunRule RuleID="OrgAuthADReadNugetPackages" />
+        </ApplyRules>
+        <ApplyRules Option="SSOW">
+          <RunRule RuleID="OrgAuthSSOR" />
+          <RunRule RuleID="WebFormsOrgAuthSSOMVC" Option="MVC" />
+          <RunRule RuleID="WebFormsOrgAuthSSOWebAPI" Option="WebAPI" />
+          <RunRule RuleID="WebFormsOrgAuthSSOMVCWebAPI" Option="MVC,WebAPI" />
+          <RunRule RuleID="OrgAuthNugetPackages" />
+          <RunRule RuleID="OrgAuthADReadNugetPackages" />
+        </ApplyRules>
+        <ApplyRules Option="MultiOrg">
+          <RunRule RuleID="OrgAuthMulti" />
+          <RunRule RuleID="WebFormsOrgAuthMultiMVC" Option="MVC" />
+          <RunRule RuleID="WebFormsOrgAuthMultiWebAPI" Option="WebAPI" />
+          <RunRule RuleID="WebFormsOrgAuthMultiMVCWebAPI" Option="MVC,WebAPI" />
+          <RunRule RuleID="OrgAuthNugetPackages" />
+        </ApplyRules>
+        <ApplyRules Option="MultiOrgR">
+          <RunRule RuleID="OrgAuthMultiR" />
+          <RunRule RuleID="WebFormsOrgAuthMultiRMVC" Option="MVC" />
+          <RunRule RuleID="WebFormsOrgAuthMultiRWebAPI" Option="WebAPI" />
+          <RunRule RuleID="WebFormsOrgAuthMultiRMVCWebAPI" Option="MVC,WebAPI" />
+          <RunRule RuleID="OrgAuthNugetPackages" />
+          <RunRule RuleID="OrgAuthADReadNugetPackages" />
+        </ApplyRules>
+        <ApplyRules Option="MultiOrgW">
+          <RunRule RuleID="OrgAuthMultiR" />
+          <RunRule RuleID="WebFormsOrgAuthMultiRMVC" Option="MVC" />
+          <RunRule RuleID="WebFormsOrgAuthMultiRWebAPI" Option="WebAPI" />
+          <RunRule RuleID="WebFormsOrgAuthMultiRMVCWebAPI" Option="MVC,WebAPI" />
+          <RunRule RuleID="OrgAuthNugetPackages" />
+          <RunRule RuleID="OrgAuthADReadNugetPackages" />
+        </ApplyRules>
+      </ApplyRules>
+
+      <ApplyRules Option="WindowsAuth">
+        <RunRule RuleID="WindowsAuth"/>
+        <RunRule RuleID="WebFormsWindowsAuthMVC" Option="MVC" />
+        <RunRule RuleID="WebFormsWindowsAuthWebAPI" Option="WebAPI" />
+        <RunRule RuleID="WebFormsWindowsAuthMVCWebAPI" Option="MVC,WebAPI" />
+      </ApplyRules>
+
+      <ApplyRules Option="NoAuth">
+        <RunRule RuleID="WebFormsNoAuthMVC" Option="MVC" />
+        <RunRule RuleID="WebFormsNoAuthWebAPI" Option="WebAPI" />
+        <RunRule RuleID="WebFormsNoAuthMVCWebAPI" Option="MVC,WebAPI" />
+      </ApplyRules>
+      
+    </BaseTemplate>
+    <BaseTemplate ID="Microsoft.UnitTest.VisualBasic.EmptyTestProject"
+             VSTemplatePath="EmptyTestProject\EmptyTestProject.vstemplate">
+    </BaseTemplate>
+  </BaseTemplates>
+
+  <Rules>
+
+    <Rule ID="OrgAuthOnPrem">
+      <AddReference Name="System.IdentityModel" />
+      <AddReference Name="System.IdentityModel.Services" />
+      <ReplaceFile Source="Rules\WebFormsBasic.OnPrem\web.config"  Destination="web.config"/>
+      <AddFile Source="Rules\WebFormsBasic.OnPrem\App_Start\IdentityConfig.vb"  Destination="App_Start\IdentityConfig.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OnPrem\Site.Master"  Destination="Site.Master"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OnPrem\Site.Master.vb"  Destination="Site.Master.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OnPrem\Site.Master.designer.vb"  Destination="Site.Master.designer.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.SSO\Global.asax.vb"  Destination="Global.asax.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.SSO\Account\SignOut.aspx"  Destination="Account\SignOut.aspx"/>
+      <AddFile Source="Rules\WebFormsBasic.SSO\Account\SignOut.aspx.vb"  Destination="Account\SignOut.aspx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.SSO\Account\SignOut.aspx.designer.vb"  Destination="Account\SignOut.aspx.designer.vb"/>
+    </Rule>
+
+    <Rule ID="OrgAuthSSO">
+      <AddReference Name="System.IdentityModel" />
+      <AddReference Name="System.IdentityModel.Services" />
+      <ReplaceFile Source="Rules\WebFormsBasic.SSO\web.config"  Destination="web.config"/>
+      <AddFile Source="Rules\WebFormsBasic.SSO\App_Start\IdentityConfig.vb"  Destination="App_Start\IdentityConfig.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.SSO\Utils\DatabaseIssuerNameRegistry.vb"  Destination="Utils\DatabaseIssuerNameRegistry.vb"/>      
+      <ReplaceFile Source="Rules\WebFormsBasic.SSO\Site.Master"  Destination="Site.Master"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.SSO\Site.Master.vb"  Destination="Site.Master.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.SSO\Site.Master.designer.vb"  Destination="Site.Master.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.SSO\Models\TenantDbContext.vb"  Destination="Models\TenantDbContext.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.SSO\Models\TenantRegistrationModels.vb"  Destination="Models\TenantRegistrationModels.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.SSO\Global.asax.vb"  Destination="Global.asax.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.SSO\Account\SignOut.aspx"  Destination="Account\SignOut.aspx"/>
+      <AddFile Source="Rules\WebFormsBasic.SSO\Account\SignOut.aspx.vb"  Destination="Account\SignOut.aspx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.SSO\Account\SignOut.aspx.designer.vb"  Destination="Account\SignOut.aspx.designer.vb"/>
+    </Rule>
+    
+    <Rule ID="OrgAuthSSOR">
+      <AddReference Name="System.IdentityModel" />
+      <AddReference Name="System.IdentityModel.Services" />
+      <AddReference Name="System.Net" />
+      <AddReference Name="System.Net.Http" />
+      <ReplaceFile Source="Rules\WebFormsBasic.SSOR\web.config"  Destination="web.config"/>
+      <AddFile Source="Rules\WebFormsBasic.SSO\App_Start\IdentityConfig.vb"  Destination="App_Start\IdentityConfig.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.SSO\Utils\DatabaseIssuerNameRegistry.vb"  Destination="Utils\DatabaseIssuerNameRegistry.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.SSOR\Site.Master"  Destination="Site.Master"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.SSOR\Site.Master.vb"  Destination="Site.Master.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.SSOR\Site.Master.designer.vb"  Destination="Site.Master.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.SSOR\UserInfo.aspx"  Destination="UserInfo.aspx"/>
+      <AddFile Source="Rules\WebFormsBasic.SSOR\UserInfo.aspx.vb"  Destination="UserInfo.aspx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.SSOR\UserInfo.aspx.designer.vb"  Destination="UserInfo.aspx.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.SSOR\Account\SignOut.aspx"  Destination="Account\SignOut.aspx"/>
+      <AddFile Source="Rules\WebFormsBasic.SSOR\Account\SignOut.aspx.vb"  Destination="Account\SignOut.aspx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.SSOR\Account\SignOut.aspx.designer.vb"  Destination="Account\SignOut.aspx.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.SSO\Models\TenantDbContext.vb"  Destination="Models\TenantDbContext.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.SSO\Models\TenantRegistrationModels.vb"  Destination="Models\TenantRegistrationModels.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.SSOR\Models\UserViewModel.vb"  Destination="Models\UserViewModel.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.SSOR\Global.asax.vb"  Destination="Global.asax.vb"/>
+    </Rule>
+
+    <Rule ID="OrgAuthMulti">
+      <AddReference Name="System.IdentityModel" />
+      <AddReference Name="System.IdentityModel.Services" />
+      <ReplaceFile Source="Rules\WebFormsBasic.Multi\web.config"  Destination="web.config"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\App_Start\IdentityConfig.vb"  Destination="App_Start\IdentityConfig.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Account\SignIn.aspx"  Destination="Account\SignIn.aspx"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Account\SignIn.aspx.vb"  Destination="Account\SignIn.aspx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Account\SignIn.aspx.designer.vb"  Destination="Account\SignIn.aspx.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Account\SignOut.aspx"  Destination="Account\SignOut.aspx"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Account\SignOut.aspx.vb"  Destination="Account\SignOut.aspx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Account\SignOut.aspx.designer.vb"  Destination="Account\SignOut.aspx.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Tenant\SignUp.aspx"  Destination="Tenant\SignUp.aspx"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Tenant\SignUp.aspx.vb"  Destination="Tenant\SignUp.aspx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Tenant\SignUp.aspx.designer.vb"  Destination="Tenant\SignUp.aspx.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Tenant\SignUpCallback.aspx"  Destination="Tenant\SignUpCallback.aspx"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Tenant\SignUpCallback.aspx.vb"  Destination="Tenant\SignUpCallback.aspx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Tenant\SignUpCallback.aspx.designer.vb"  Destination="Tenant\SignUpCallback.aspx.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Utils\DatabaseIssuerNameRegistry.vb"  Destination="Utils\DatabaseIssuerNameRegistry.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.Multi\Site.Master"  Destination="Site.Master"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.Multi\Site.Master.vb"  Destination="Site.Master.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.Multi\Site.Master.designer.vb"  Destination="Site.Master.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Models\TenantDbContext.vb"  Destination="Models\TenantDbContext.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Models\TenantRegistrationModels.vb"  Destination="Models\TenantRegistrationModels.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.Multi\Global.asax.vb"  Destination="Global.asax.vb"/>
+    </Rule>
+    
+    <Rule ID="OrgAuthMultiR">
+      <AddReference Name="System.IdentityModel" />
+      <AddReference Name="System.IdentityModel.Services" />
+      <AddReference Name="System.Net" />
+      <AddReference Name="System.Net.Http" />
+      <ReplaceFile Source="Rules\WebFormsBasic.MultiR\web.config"  Destination="web.config"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\App_Start\IdentityConfig.vb"  Destination="App_Start\IdentityConfig.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Account\SignIn.aspx"  Destination="Account\SignIn.aspx"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Account\SignIn.aspx.vb"  Destination="Account\SignIn.aspx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Account\SignIn.aspx.designer.vb"  Destination="Account\SignIn.aspx.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Account\SignOut.aspx"  Destination="Account\SignOut.aspx"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Account\SignOut.aspx.vb"  Destination="Account\SignOut.aspx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Account\SignOut.aspx.designer.vb"  Destination="Account\SignOut.aspx.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Tenant\SignUp.aspx"  Destination="Tenant\SignUp.aspx"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Tenant\SignUp.aspx.vb"  Destination="Tenant\SignUp.aspx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Tenant\SignUp.aspx.designer.vb"  Destination="Tenant\SignUp.aspx.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Tenant\SignUpCallback.aspx"  Destination="Tenant\SignUpCallback.aspx"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Tenant\SignUpCallback.aspx.vb"  Destination="Tenant\SignUpCallback.aspx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Tenant\SignUpCallback.aspx.designer.vb"  Destination="Tenant\SignUpCallback.aspx.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Utils\DatabaseIssuerNameRegistry.vb"  Destination="Utils\DatabaseIssuerNameRegistry.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.SSOR\UserInfo.aspx"  Destination="UserInfo.aspx"/>
+      <AddFile Source="Rules\WebFormsBasic.SSOR\UserInfo.aspx.vb"  Destination="UserInfo.aspx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.SSOR\UserInfo.aspx.designer.vb"  Destination="UserInfo.aspx.designer.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.MultiR\Site.Master"  Destination="Site.Master"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.Multi\Site.Master.vb"  Destination="Site.Master.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.Multi\Site.Master.designer.vb"  Destination="Site.Master.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Models\TenantDbContext.vb"  Destination="Models\TenantDbContext.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.Multi\Models\TenantRegistrationModels.vb"  Destination="Models\TenantRegistrationModels.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.SSOR\Models\UserViewModel.vb"  Destination="Models\UserViewModel.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.Multi\Global.asax.vb"  Destination="Global.asax.vb"/>
+    </Rule>
+
+    <Rule ID="OrgAuthADReadNugetPackages">
+      <AddNugetPackages NugetPackageKey="WebFormsVS12" SkipAssemblyReferences="true" IsPreUnzipped="true">
+          <Package ID="Microsoft.IdentityModel.Clients.ActiveDirectory" Version="1.0.0" >
+              <References>
+                  <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory" HintPath="$nugetpackagesfolder$Microsoft.IdentityModel.Clients.ActiveDirectory.1.0.0\lib\net40\Microsoft.IdentityModel.Clients.ActiveDirectory.dll"/>
+              </References>
+          </Package>
+      </AddNugetPackages>
+    </Rule>    
+
+    <Rule ID="OrgAuthNugetPackages">
+      <AddNugetPackages NugetPackageKey="WebFormsVS12" SkipAssemblyReferences="true" IsPreUnzipped="true">
+        <Package ID="EntityFramework" Version="6.1.3">
+          <References>
+            <Reference Include="EntityFramework" HintPath="$nugetpackagesfolder$EntityFramework.6.1.3\lib\net45\EntityFramework.dll"/>
+            <Reference Include="EntityFramework.SqlServer" HintPath="$nugetpackagesfolder$EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll"/>
+          </References>
+        </Package>
+        <Package ID="Microsoft.AspNet.Identity.Core" Version="2.2.1">
+          <References>
+            <Reference Include="Microsoft.AspNet.Identity.Core" HintPath="$nugetpackagesfolder$Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll"/>
+          </References>
+        </Package>
+        <Package ID="Microsoft.AspNet.Identity.EntityFramework" Version="2.2.1">
+          <References>
+            <Reference Include="Microsoft.AspNet.Identity.EntityFramework" HintPath="$nugetpackagesfolder$Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll" />
+          </References>
+        </Package>
+        <Package ID="System.IdentityModel.Tokens.ValidatingIssuerNameRegistry" Version="4.5.1">
+          <References>
+            <Reference Include="System.IdentityModel.Tokens.ValidatingIssuerNameRegistry" HintPath="$nugetpackagesfolder$System.IdentityModel.Tokens.ValidatingIssuerNameRegistry.4.5.1\lib\net45\System.IdentityModel.Tokens.ValidatingIssuerNameRegistry.dll" />
+          </References>
+        </Package>
+       
+      </AddNugetPackages>
+    </Rule>
+
+    <Rule ID="IndividualAuth">
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\AddPhoneNumber.aspx"  Destination="Account\AddPhoneNumber.aspx"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\AddPhoneNumber.aspx.vb"  Destination="Account\AddPhoneNumber.aspx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\AddPhoneNumber.aspx.designer.vb"  Destination="Account\AddPhoneNumber.aspx.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\Confirm.aspx"  Destination="Account\Confirm.aspx"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\Confirm.aspx.vb"  Destination="Account\Confirm.aspx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\Confirm.aspx.designer.vb"  Destination="Account\Confirm.aspx.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\Forgot.aspx"  Destination="Account\Forgot.aspx"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\Forgot.aspx.vb"  Destination="Account\Forgot.aspx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\Forgot.aspx.designer.vb"  Destination="Account\Forgot.aspx.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\Lockout.aspx"  Destination="Account\Lockout.aspx"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\Lockout.aspx.vb"  Destination="Account\Lockout.aspx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\Lockout.aspx.designer.vb"  Destination="Account\Lockout.aspx.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\Login.aspx"  Destination="Account\Login.aspx"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\Login.aspx.vb"  Destination="Account\Login.aspx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\Login.aspx.designer.vb"  Destination="Account\Login.aspx.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\Manage.aspx"  Destination="Account\Manage.aspx"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\Manage.aspx.vb"  Destination="Account\Manage.aspx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\Manage.aspx.designer.vb"  Destination="Account\Manage.aspx.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\ManageLogins.aspx"  Destination="Account\ManageLogins.aspx"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\ManageLogins.aspx.vb"  Destination="Account\ManageLogins.aspx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\ManageLogins.aspx.designer.vb"  Destination="Account\ManageLogins.aspx.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\ManagePassword.aspx"  Destination="Account\ManagePassword.aspx"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\ManagePassword.aspx.vb"  Destination="Account\ManagePassword.aspx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\ManagePassword.aspx.designer.vb"  Destination="Account\ManagePassword.aspx.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\OpenAuthProviders.ascx"  Destination="Account\OpenAuthProviders.ascx"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\OpenAuthProviders.ascx.vb"  Destination="Account\OpenAuthProviders.ascx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\OpenAuthProviders.ascx.designer.vb"  Destination="Account\OpenAuthProviders.ascx.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\Register.aspx"  Destination="Account\Register.aspx"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\Register.aspx.vb"  Destination="Account\Register.aspx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\Register.aspx.designer.vb"  Destination="Account\Register.aspx.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\RegisterExternalLogin.aspx"  Destination="Account\RegisterExternalLogin.aspx"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\RegisterExternalLogin.aspx.vb"  Destination="Account\RegisterExternalLogin.aspx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\RegisterExternalLogin.aspx.designer.vb"  Destination="Account\RegisterExternalLogin.aspx.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\ResetPassword.aspx"  Destination="Account\ResetPassword.aspx"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\ResetPassword.aspx.vb"  Destination="Account\ResetPassword.aspx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\ResetPassword.aspx.designer.vb"  Destination="Account\ResetPassword.aspx.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\ResetPasswordConfirmation.aspx"  Destination="Account\ResetPasswordConfirmation.aspx"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\ResetPasswordConfirmation.aspx.vb"  Destination="Account\ResetPasswordConfirmation.aspx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\ResetPasswordConfirmation.aspx.designer.vb"  Destination="Account\ResetPasswordConfirmation.aspx.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\TwoFactorAuthenticationSignIn.aspx"  Destination="Account\TwoFactorAuthenticationSignIn.aspx"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\TwoFactorAuthenticationSignIn.aspx.vb"  Destination="Account\TwoFactorAuthenticationSignIn.aspx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\TwoFactorAuthenticationSignIn.aspx.designer.vb"  Destination="Account\TwoFactorAuthenticationSignIn.aspx.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\VerifyPhoneNumber.aspx"  Destination="Account\VerifyPhoneNumber.aspx"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\VerifyPhoneNumber.aspx.vb"  Destination="Account\VerifyPhoneNumber.aspx.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\VerifyPhoneNumber.aspx.designer.vb"  Destination="Account\VerifyPhoneNumber.aspx.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Account\Web.config"  Destination="Account\Web.config"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\App_Start\Startup.Auth.vb"  Destination="App_Start\Startup.Auth.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\App_Start\IdentityConfig.vb"  Destination="App_Start\IdentityConfig.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Models\IdentityModels.vb"  Destination="Models\IdentityModels.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.IndividualAuth\Content\Site.css"  Destination="Content\Site.css"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.IndividualAuth\Global.asax.vb"  Destination="Global.asax.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.IndividualAuth\Site.Master"  Destination="Site.Master"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.IndividualAuth\Site.Master.vb"  Destination="Site.Master.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.IndividualAuth\Site.Master.designer.vb"  Destination="Site.Master.designer.vb"/>
+      <AddFile Source="Rules\WebFormsBasic.IndividualAuth\Startup.vb"  Destination="Startup.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.IndividualAuth\Web.config"  Destination="Web.config"/>
+    </Rule>
+    
+    <Rule ID="IndividualAuthNugetPackages">      
+      <AddNugetPackages NugetPackageKey="WebFormsVS12" SkipAssemblyReferences="true" IsPreUnzipped="true">
+        <Package ID="EntityFramework" Version="6.1.3">
+          <References>
+            <Reference Include="EntityFramework" HintPath="$nugetpackagesfolder$EntityFramework.6.1.3\lib\net45\EntityFramework.dll"/>
+            <Reference Include="EntityFramework.SqlServer" HintPath="$nugetpackagesfolder$EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll"/>
+          </References>
+        </Package>
+        <Package ID="Microsoft.AspNet.Identity.Core" Version="2.2.1">
+          <References>
+            <Reference Include="Microsoft.AspNet.Identity.Core" HintPath="$nugetpackagesfolder$Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll"/>
+          </References>
+        </Package>
+        <Package ID="Microsoft.AspNet.Identity.Owin" Version="2.2.1">
+          <References>
+            <Reference Include="Microsoft.AspNet.Identity.Owin" HintPath="$nugetpackagesfolder$Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll"/>
+          </References>
+        </Package>
+        <Package ID="Microsoft.AspNet.Identity.EntityFramework" Version="2.2.1">
+          <References>
+            <Reference Include="Microsoft.AspNet.Identity.EntityFramework" HintPath="$nugetpackagesfolder$Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll" />
+          </References>
+        </Package>
+        <Package ID="Microsoft.AspNet.Providers.Core" Version="2.0.0">
+          <References>
+            <Reference Include="System.Web.Providers" HintPath="$nugetpackagesfolder$Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll" />
+          </References>
+        </Package>
+        <Package ID="Microsoft.Owin" Version="3.0.1">
+          <References>
+            <Reference Include="Microsoft.Owin" HintPath="$nugetpackagesfolder$Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll"/>
+          </References>
+        </Package>
+        <Package ID="Microsoft.Owin.Host.SystemWeb" Version="3.0.1">
+          <References>
+            <Reference Include="Microsoft.Owin.Host.SystemWeb" HintPath="$nugetpackagesfolder$Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll" />
+          </References>
+        </Package>
+        <Package ID="Microsoft.Owin.Security" Version="3.0.1">
+          <References>
+            <Reference Include="Microsoft.Owin.Security" HintPath="$nugetpackagesfolder$Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll"/>
+          </References>
+        </Package>
+        <Package ID="Microsoft.Owin.Security.Facebook" Version="3.0.1">
+          <References>
+            <Reference Include="Microsoft.Owin.Security.Facebook" HintPath="$nugetpackagesfolder$Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll" />
+          </References>
+        </Package>
+        <Package ID="Microsoft.Owin.Security.Cookies" Version="3.0.1">
+          <References>
+            <Reference Include="Microsoft.Owin.Security.Cookies" HintPath="$nugetpackagesfolder$Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll"/>
+          </References>
+        </Package>
+        <Package ID="Microsoft.Owin.Security.Google" Version="3.0.1">
+          <References>
+            <Reference Include="Microsoft.Owin.Security.Google" HintPath="$nugetpackagesfolder$Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll"/>
+          </References>
+        </Package>
+        <Package ID="Microsoft.Owin.Security.Twitter" Version="3.0.1">
+          <References>
+            <Reference Include="Microsoft.Owin.Security.Twitter" HintPath="$nugetpackagesfolder$Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll"/>
+          </References>
+        </Package>
+        <Package ID="Microsoft.Owin.Security.MicrosoftAccount" Version="3.0.1">
+          <References>
+            <Reference Include="Microsoft.Owin.Security.MicrosoftAccount" HintPath="$nugetpackagesfolder$Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll"/>
+          </References>
+        </Package>
+        <Package ID="Owin" Version="1.0">
+          <References>
+            <Reference Include="Owin" HintPath="$nugetpackagesfolder$Owin.1.0\lib\net40\Owin.dll"/>
+          </References>
+        </Package>
+        <Package ID="Microsoft.Owin.Security.OAuth" Version="3.0.1">
+          <References>
+            <Reference Include="Microsoft.Owin.Security.OAuth" HintPath="$nugetpackagesfolder$Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll"/>
+          </References>
+        </Package>
+       
+      </AddNugetPackages>
+    </Rule>
+    <Rule ID="WindowsAuth">
+      <ReplaceFile Source="Rules\WebFormsBasic.WindowsAuth\Site.Master"  Destination="Site.Master"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.WindowsAuth\Web.config"  Destination="Web.config"/>
+    </Rule>
+    <Rule ID="WebForms">
+      <AddFolder Name="App_Data"/>
+      <AddFolder Name="Models"/>
+      <AddFile Destination="Global.asax" Source="Rules\WebForms\Global.asax"/>
+      <AddFile Destination="Global.asax.vb" Source="Rules\WebForms\Global.asax.vb"/>
+    </Rule>
+    <Rule ID="EmptyAddWebFormsMVC">
+      <ReplaceFile Source="Rules\Empty\WebFormsMVC\Global.asax"  Destination="Global.asax"/>
+      <ReplaceFile Source="Rules\Empty\WebFormsMVC\Global.asax.vb"  Destination="Global.asax.vb"/>
+      <ReplaceFile Source="Rules\Empty\WebFormsMVC\web.config"  Destination="web.config"/>
+    </Rule>
+    <Rule ID="EmptyAddWebFormsWebAPI">
+      <ReplaceFile Source="Rules\Empty\WebFormsWebAPI\Global.asax"  Destination="Global.asax"/>
+      <ReplaceFile Source="Rules\Empty\WebFormsWebAPI\Global.asax.vb"  Destination="Global.asax.vb"/>
+      <ReplaceFile Source="Rules\Empty\WebFormsWebAPI\web.config"  Destination="web.config"/>
+    </Rule>
+    <Rule ID="EmptyAddMVCWebAPI">
+      <ReplaceFile Source="Rules\Empty\WebFormsMVCWebAPI\Global.asax"  Destination="Global.asax"/>
+      <ReplaceFile Source="Rules\Empty\WebFormsMVCWebAPI\Global.asax.vb"  Destination="Global.asax.vb"/>
+      <ReplaceFile Source="Rules\Empty\WebFormsMVCWebAPI\web.config"  Destination="web.config"/>
+    </Rule>
+    <Rule ID="WebFormsIndividualAuthMVC">
+      <ReplaceFile Source="Rules\WebFormsBasic.IndividualAuth.MVCWebAPI\App_Start\RouteConfig.vb"  Destination="App_Start\RouteConfig.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.IndividualAuth.MVC\Global.asax.vb"  Destination="Global.asax.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.IndividualAuth.MVC\web.config"  Destination="web.config"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.MVC\Views\web.config"  Destination="Views\web.config"/>            
+    </Rule>
+    <Rule ID="WebFormsIndividualAuthWebAPI">
+      <ReplaceFile Source="Rules\WebFormsBasic.IndividualAuth.WebAPI\Global.asax.vb"  Destination="Global.asax.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.IndividualAuth.WebAPI\web.config"  Destination="web.config"/>
+    </Rule>
+    <Rule ID="WebFormsIndividualAuthMVCWebAPI">
+      <ReplaceFile Source="Rules\WebFormsBasic.IndividualAuth.MVCWebAPI\App_Start\RouteConfig.vb"  Destination="App_Start\RouteConfig.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.IndividualAuth.MVCWebAPI\Global.asax.vb"  Destination="Global.asax.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.IndividualAuth.MVCWebAPI\web.config"  Destination="web.config"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.MVC\Views\web.config"  Destination="Views\web.config"/>
+    </Rule>
+    <Rule ID="WebFormsWindowsAuthMVC">
+      <ReplaceFile Source="Rules\WebFormsBasic.WindowsAuth.MVCWebAPI\App_Start\RouteConfig.vb"  Destination="App_Start\RouteConfig.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.WindowsAuth.MVC\Global.asax.vb"  Destination="Global.asax.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.WindowsAuth.MVC\web.config"  Destination="web.config"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.MVC\Views\web.config"  Destination="Views\web.config"/>
+    </Rule>
+    <Rule ID="WebFormsWindowsAuthWebAPI">
+      <ReplaceFile Source="Rules\WebFormsBasic.WindowsAuth.WebAPI\Global.asax.vb"  Destination="Global.asax.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.WindowsAuth.WebAPI\web.config"  Destination="web.config"/>
+    </Rule>
+    <Rule ID="WebFormsWindowsAuthMVCWebAPI">
+      <ReplaceFile Source="Rules\WebFormsBasic.WindowsAuth.MVCWebAPI\App_Start\RouteConfig.vb"  Destination="App_Start\RouteConfig.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.WindowsAuth.MVCWebAPI\Global.asax.vb"  Destination="Global.asax.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.WindowsAuth.MVCWebAPI\web.config"  Destination="web.config"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.MVC\Views\web.config"  Destination="Views\web.config"/>
+    </Rule>
+    <Rule ID="WebFormsNoAuthMVC">
+      <ReplaceFile Source="Rules\WebFormsBasic.NoAuth.MVCWebAPI\App_Start\RouteConfig.vb"  Destination="App_Start\RouteConfig.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.NoAuth.MVC\Global.asax.vb"  Destination="Global.asax.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.NoAuth.MVC\web.config"  Destination="web.config"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.MVC\Views\web.config"  Destination="Views\web.config"/>
+    </Rule>
+    <Rule ID="WebFormsNoAuthWebAPI">
+      <ReplaceFile Source="Rules\WebFormsBasic.NoAuth.WebAPI\Global.asax.vb"  Destination="Global.asax.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.NoAuth.WebAPI\web.config"  Destination="web.config"/>
+    </Rule>
+    <Rule ID="WebFormsNoAuthMVCWebAPI">
+      <ReplaceFile Source="Rules\WebFormsBasic.NoAuth.MVCWebAPI\App_Start\RouteConfig.vb"  Destination="App_Start\RouteConfig.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.NoAuth.MVCWebAPI\Global.asax.vb"  Destination="Global.asax.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.NoAuth.MVCWebAPI\web.config"  Destination="web.config"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.MVC\Views\web.config"  Destination="Views\web.config"/>
+    </Rule>
+
+
+    <Rule ID="WebFormsOrgAuthSSOMVC">
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthSSO.MVC\App_Start\IdentityConfig.vb"  Destination="App_Start\IdentityConfig.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthSSO.MVC\App_Start\RouteConfig.vb"  Destination="App_Start\RouteConfig.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthSSO.MVC\Global.asax.vb"  Destination="Global.asax.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthSSO.MVC\web.config"  Destination="web.config"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.MVC\Views\web.config"  Destination="Views\web.config"/>
+    </Rule>
+    <Rule ID="WebFormsOrgAuthSSOWebAPI">
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthSSO.WebAPI\Global.asax.vb"  Destination="Global.asax.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthSSO.WebAPI\web.config"  Destination="web.config"/>
+    </Rule>
+    <Rule ID="WebFormsOrgAuthSSOMVCWebAPI">
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthSSO.MVC\App_Start\IdentityConfig.vb"  Destination="App_Start\IdentityConfig.vb"/>    
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthSSO.MVCWebAPI\App_Start\RouteConfig.vb"  Destination="App_Start\RouteConfig.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthSSO.MVCWebAPI\Global.asax.vb"  Destination="Global.asax.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthSSO.MVCWebAPI\web.config"  Destination="web.config"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.MVC\Views\web.config"  Destination="Views\web.config"/>
+    </Rule>    
+
+    <Rule ID="WebFormsOrgAuthOnPremMVC">
+      <ReplaceFile Source="Rules\WebFormsBasic.OnPrem.MVC\App_Start\IdentityConfig.vb"  Destination="App_Start\IdentityConfig.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthSSO.MVC\App_Start\RouteConfig.vb"  Destination="App_Start\RouteConfig.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthSSO.MVC\Global.asax.vb"  Destination="Global.asax.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OnPrem.MVC\web.config"  Destination="web.config"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.MVC\Views\web.config"  Destination="Views\web.config"/>
+    </Rule>
+    <Rule ID="WebFormsOrgAuthOnPremWebAPI">
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthSSO.WebAPI\Global.asax.vb"  Destination="Global.asax.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OnPrem.WebAPI\web.config"  Destination="web.config"/>
+    </Rule>
+    <Rule ID="WebFormsOrgAuthOnPremMVCWebAPI">
+      <ReplaceFile Source="Rules\WebFormsBasic.OnPrem.MVC\App_Start\IdentityConfig.vb"  Destination="App_Start\IdentityConfig.vb"/>    
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthSSO.MVCWebAPI\App_Start\RouteConfig.vb"  Destination="App_Start\RouteConfig.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthSSO.MVCWebAPI\Global.asax.vb"  Destination="Global.asax.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OnPrem.MVCWebAPI\web.config"  Destination="web.config"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.MVC\Views\web.config"  Destination="Views\web.config"/>
+    </Rule>    
+    <Rule ID="WebFormsOrgAuthMultiMVC">
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthMulti.MVC\App_Start\IdentityConfig.vb"  Destination="App_Start\IdentityConfig.vb"/>    
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthMulti.MVC\App_Start\RouteConfig.vb"  Destination="App_Start\RouteConfig.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthMulti.MVC\Global.asax.vb"  Destination="Global.asax.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthMulti.MVC\web.config"  Destination="web.config"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.MVC\Views\web.config"  Destination="Views\web.config"/>
+    </Rule>
+    <Rule ID="WebFormsOrgAuthMultiWebAPI">
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthMulti.WebAPI\Global.asax.vb"  Destination="Global.asax.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthMulti.WebAPI\web.config"  Destination="web.config"/>
+    </Rule>
+    <Rule ID="WebFormsOrgAuthMultiMVCWebAPI">
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthMulti.MVC\App_Start\IdentityConfig.vb"  Destination="App_Start\IdentityConfig.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthMulti.MVCWebAPI\App_Start\RouteConfig.vb"  Destination="App_Start\RouteConfig.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthMulti.MVCWebAPI\Global.asax.vb"  Destination="Global.asax.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthMulti.MVCWebAPI\web.config"  Destination="web.config"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.MVC\Views\web.config"  Destination="Views\web.config"/>
+    </Rule>
+    <Rule ID="WebFormsOrgAuthMultiRMVC">
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthMulti.MVC\App_Start\IdentityConfig.vb"  Destination="App_Start\IdentityConfig.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthMultiR.MVC\App_Start\RouteConfig.vb"  Destination="App_Start\RouteConfig.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthMultiR.MVC\Global.asax.vb"  Destination="Global.asax.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthMultiR.MVC\web.config"  Destination="web.config"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.MVC\Views\web.config"  Destination="Views\web.config"/>
+    </Rule>
+    <Rule ID="WebFormsOrgAuthMultiRWebAPI">
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthMultiR.WebAPI\Global.asax.vb"  Destination="Global.asax.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthMultiR.WebAPI\web.config"  Destination="web.config"/>
+    </Rule>
+    <Rule ID="WebFormsOrgAuthMultiRMVCWebAPI">
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthMulti.MVC\App_Start\IdentityConfig.vb"  Destination="App_Start\IdentityConfig.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthMultiR.MVCWebAPI\App_Start\RouteConfig.vb"  Destination="App_Start\RouteConfig.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthMultiR.MVCWebAPI\Global.asax.vb"  Destination="Global.asax.vb"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.OrgAuthMultiR.MVCWebAPI\web.config"  Destination="web.config"/>
+      <ReplaceFile Source="Rules\WebFormsBasic.MVC\Views\web.config"  Destination="Views\web.config"/>
+    </Rule>
+  </Rules>
+</TemplateDefinition>

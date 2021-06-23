@@ -1,0 +1,63 @@
+// [!output SAFE_IDL_NAME].idl : ActiveX 控制項專案的類型程式庫來源。
+
+// 這個檔案會由 MIDL 編譯器工具處理，
+// 以產生類型程式庫 ([!output SAFE_IDL_NAME].tlb)。
+// [!output PROJECT_NAME].ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid([!output LIBID_REGISTRY_FORMAT]), version(1.0),
+  control ]
+library [!output LIB_NAME]Lib
+{
+	importlib(STDOLE_TLB);
+
+	//  [!output CONTROL_CLASS] 的主要分派介面
+	[ 
+		uuid([!output PRIMARY_IID_REGISTRY_FORMAT])	
+	]
+	dispinterface _D[!output SAFE_PROJECT_IDENTIFIER_NAME]
+	{
+		properties:
+[!if ASYNC_PROPERTY_LOAD]
+			[id(DISPID_READYSTATE), readonly] long ReadyState;
+[!endif]
+		methods:
+[!if ABOUT_BOX]
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+[!endif]
+	};
+
+	//  [!output CONTROL_CLASS] 的事件分派介面
+
+	[ 
+		uuid([!output EVENT_IID_REGISTRY_FORMAT])	
+	]
+	dispinterface _D[!output SAFE_PROJECT_IDENTIFIER_NAME]Events
+	{
+		properties:
+			//  事件介面沒有屬性
+
+		methods:
+[!if ASYNC_PROPERTY_LOAD]
+			[id(DISPID_READYSTATECHANGE)] void ReadyStateChange();
+[!endif]
+	};
+
+	//  [!output CONTROL_CLASS] 的類別資訊
+	[
+[!if RUNTIME_LICENSE]
+		uuid([!output CONTROL_CLSID]), licensed
+[!else]	
+		uuid([!output CONTROL_CLSID])
+[!endif]	
+	]
+	coclass [!output LIB_NAME]
+	{
+		[default] dispinterface _D[!output SAFE_PROJECT_IDENTIFIER_NAME];
+		[default, source] dispinterface _D[!output SAFE_PROJECT_IDENTIFIER_NAME]Events;
+	};
+
+};

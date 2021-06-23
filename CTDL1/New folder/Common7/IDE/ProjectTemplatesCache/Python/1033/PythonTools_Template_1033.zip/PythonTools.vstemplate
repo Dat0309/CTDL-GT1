@@ -1,0 +1,24 @@
+﻿<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <TemplateID>GetPythonTools</TemplateID>
+    <Name>Get Python Tools for Visual Studio</Name>
+    <Description>To create Python projects, you will need to install Python Tools for Visual Studio.</Description>
+    <ProjectType>Python</ProjectType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <CreateNewFolder>false</CreateNewFolder>
+    <DefaultName>PythonToolsLinks</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <Icon>PythonApplication.ico</Icon>
+    <SortOrder>0</SortOrder>
+    <PromptForSaveOnCreation>false</PromptForSaveOnCreation>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Hidden>false</Hidden>
+  </TemplateData>
+  <TemplateContent>
+      <Project File="emptyproject.csproj" ReplaceParameters="true">
+      <ProjectItem OpenInWebBrowser="true">PythonTools.html</ProjectItem>
+      <ProjectItem>VSLogo.png</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

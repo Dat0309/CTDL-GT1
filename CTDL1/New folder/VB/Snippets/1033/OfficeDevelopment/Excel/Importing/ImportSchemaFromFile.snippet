@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Import Schema from File</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Imports an XML schema from a file into an Excel schema map.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Excel.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Excel = Microsoft.Office.Interop.Excel</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>pathToSchema</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the complete path to an XML schema file.</ToolTip>
+          <Default>@"C:\Schemas\TestSchema.xsd"</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>rootElement</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the root element of the XML schema.</ToolTip>
+          <Default>"RootElementName"</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>xmlMap</ID>
+          <Type>Microsoft.Office.Interop.Excel.XmlMap</Type>
+          <ToolTip>Replace with a variable to hold the new XmlMap object.</ToolTip>
+          <Default>xmlMap</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>workbook</ID>
+          <Type>Microsoft.Office.Interop.Excel.Workbook</Type>
+          <ToolTip>Replace with the workbook to add the XML schema map to.</ToolTip>
+          <Default>workbook</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="" Delimiter="$"><![CDATA[
+Dim $xmlMap$ As Excel.XmlMap = $workbook$.XmlMaps.Add($pathToSchema$, $rootElement$)
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

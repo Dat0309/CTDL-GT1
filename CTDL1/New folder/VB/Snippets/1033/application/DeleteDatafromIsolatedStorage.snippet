@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Delete File from Isolated Storage</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Deletes file from isolated storage.</Description>
+      <Shortcut>appIsoDel</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.IO.IsolatedStorage</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>varName</ID>
+          <Type>String</Type>
+          <ToolTip>The variable name for the isolated storage.</ToolTip>
+          <Default>isolatedStorage</Default>
+        </Object>
+        <Literal>
+          <ID>pathToFile</ID>
+          <Type>String</Type>
+          <ToolTip>The full path to file in isolated storage.</ToolTip>
+          <Default>"FullPath\FileName.txt"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[
+        Dim $varName$ = IsolatedStorageFile.GetStore(IsolatedStorageScope.User Or IsolatedStorageScope.Assembly Or IsolatedStorageScope.Domain, Nothing, Nothing)
+        $varName$.DeleteFile($pathToFile$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

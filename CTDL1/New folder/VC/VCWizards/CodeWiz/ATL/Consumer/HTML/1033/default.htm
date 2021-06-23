@@ -1,0 +1,567 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<HTML DIR="LTR">
+
+<HEAD>
+	<TITLE>ATL OLE DB Consumer Wizard</TITLE>
+	<META NAME="vs_targetSchema" CONTENT="http://schemas.microsoft.com/intellisense/ie5">
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+	<META HTTP-EQUIV="MSThemeCompatible" CONTENT="Yes">
+	<LINK ID="LINKURL" REL="stylesheet" HREF="../../../../../1033/NewStyles.css">
+
+	<SYMBOL NAME="CLASS_NAME" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="HEADER_FILE" TYPE=text VALUE=""></SYMBOL>
+
+	<SYMBOL NAME="ATTRIBUTED" TYPE=checkbox VALUE=false></SYMBOL>
+
+	<SYMBOL NAME="SUPPORT_CHANGE" TYPE=checkbox VALUE=false></SYMBOL>
+	<SYMBOL NAME="SUPPORT_INSERT" TYPE=checkbox VALUE=false></SYMBOL>
+	<SYMBOL NAME="SUPPORT_DELETE" TYPE=checkbox VALUE=false></SYMBOL>
+
+	<SYMBOL NAME="TYPE_TABLE" TYPE=radio VALUE=false></SYMBOL>
+	<SYMBOL NAME="TYPE_COMMAND" TYPE=radio VALUE=true></SYMBOL>
+
+	<SYMBOL NAME="DB_CONNECTION_STRING" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="DB_TABLE" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="DB_SCHEMA" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="DB_CLASS_NAME" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="DB_STORED_PROCEDURE" TYPE=bool VALUE=false></SYMBOL>
+	<SYMBOL NAME="DTL_CODE" TYPE=text VALUE=""></SYMBOL>
+</HEAD>
+
+<BODY BGCOLOR="BUTTONFACE" TOPMARGIN="0" LEFTMARGIN="0" RIGHTMARGIN="0" BOTTOMMARGIN="0" ONLOAD="InitDocument(document);" ONKEYDOWN="OnKey();" ONKEYPRESS="OnPress();">
+
+<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<COL WIDTH="100%">
+  <TR VALIGN="TOP">
+	<TD HEIGHT="79">
+	<!--OPEN OF ALL ENCOMPASSING TABLE ROW ONE//-->
+	 <TABLE CLASS="TWO" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	 <COL WIDTH="12"><COL><COL WIDTH="12">
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+
+	   <TD VALIGN="TOP" HEIGHT="12">
+	  	&nbsp;
+	   </TD>
+
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+
+	   <TD CLASS="IMAGE" VALIGN="BOTTOM" WIDTH="110" ROWSPAN="2">
+		<DIV CLASS="SMALLA" ID="Layer0">
+		 <IMG CLASS="SMALLEST" SRC="..\..\Images\ATL_Consumer.gif" WIDTH="63" HEIGHT="63" ALT="" BORDER="0">
+		</DIV>
+	   </TD>
+
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="6" ROWSPAN="2">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+
+	   <TD VALIGN="TOP" HEIGHT="65">
+		<H4 CLASS="HEAD" ID="HEAD">Welcome to the ATL OLE DB Consumer Wizard</H4>
+		<P CLASS="SUBHEAD" ID="SUBHEAD">This wizard will help you make a connection to an OLE DB database. Click the <B>Data Source</B> button to select the database provider and specify the database connection information.</P>
+	   </TD>
+
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+
+	  <TR>
+	   <TD VALIGN="TOP" CLASS="RULE" COLSPAN="5" HEIGHT="2">
+		<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+	  	 <TR VALIGN="TOP">
+	  	  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+	  	  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+	  	 </TR>
+		</TABLE>
+	   </TD>
+	  </TR>
+	 </TABLE>
+
+	<!--CLOSE OF ALL ENCOMPASSING TABLE ROW ONE//-->
+	</TD>
+	</TR>
+	<TR VALIGN="TOP">
+	<TD HEIGHT="100%">
+	<!--OPEN OF ALL ENCOMPASSING TABLE ROW TWO//-->
+
+	 <TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	 <COL>
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="100%">
+	   <!--OPEN OF CONTENT AND BUTTON TABLE//-->
+
+	   	<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+		<COL WIDTH="100%">
+		 <TR VALIGN="TOP">
+		  <TD HEIGHT="100%">
+	   	  <!--OPEN OF CONTENT//-->
+
+		  	<TABLE CLASS="CONTENT" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL WIDTH="185"><COL WIDTH="12"><COL WIDTH="185"><COL WIDTH="12"><COL WIDTH="185"><COL WIDTH="12">
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="7">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+
+			 <TR>
+  			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" COLSPAN="5">
+   				<SPAN CLASS="itemTextTop" ID="DATA_SOURCE_SPAN">Data source:
+	  				 <P CLASS="Spacer">&nbsp;</P>
+	  				 <BUTTON ID="DATA_SOURCE_LABEL" ACCESSKEY="S" TYPE="BUTTON" TITLE="Browse for a data source." onClick="OnSelectDataSource();">Data <U>S</U>ource...</BUTTON>
+				</SPAN>
+  		  	  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+ 		  	 </TR>
+
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="8" COLSPAN="7">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+
+			 <TR>
+  			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP">
+  				<SPAN CLASS="itemText" TITLE="Name of new class that will be created." ID="CLASS_NAME_TITLE">
+	  	 			 <LABEL FOR="CLASS_NAME" ID="CLASS_NAME_LABEL">C<U>l</U>ass:</LABEL>
+	  	 			 <BR>
+	  	 			 <INPUT CLASS="sideBtnThreeColumn" ID="CLASS_NAME" ACCESSKEY="L" TITLE="Name of new class that will be created." TYPE="text">
+				</SPAN>
+  		  	  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+  			  <TD VALIGN="TOP">
+			  	<NOBR>
+				 <SPAN CLASS="itemText" TITLE="Name of header file where class will be defined." ID="HEADER_FILE_TITLE">
+	  	 			 <LABEL FOR="HEADER_FILE" ID="HEADER_FILE_LABEL">.h fil<U>e</U>:</LABEL>
+	  	 			 <BR>
+	  	 			 <INPUT CLASS="sideBtn21" ID="HEADER_FILE" ACCESSKEY="E" TITLE="Name of header file where class will be defined." TYPE="text">
+				 <BUTTON CLASS="buttonClass3Custom" ID="BrowseHeaderBtn" TYPE="BUTTON" TITLE="Browse for header file." onClick="OnBrowseHeaderFile();">...</BUTTON>
+				 </SPAN>
+				</NOBR>
+			  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+  			  <TD VALIGN="MIDDLE">
+			  	<SPAN CLASS="itemText" ID="ATTRIBUTED_TITLE" TITLE="Generated code will use attributes.">
+	  				 <INPUT CLASS="CheckBox" TYPE="checkbox" ID="ATTRIBUTED" ACCESSKEY="A" TITLE="Generated code will use attributes." STYLE="POSITION:RELATIVE; TOP:.1EM;">
+	  	 			 <DIV CLASS="itemTextCheckboxA" ID="ATTRIBUTED_DIV" TITLE="Generated code will use attributes.">
+		  			  <LABEL FOR="ATTRIBUTED" ID="ATTRIBUTED_LABEL"><U>A</U>ttributed</LABEL>
+	  	 			 </DIV>
+				</SPAN>
+			  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+ 		  	 </TR>
+
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="7">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+
+ 			 <TR VALIGN="TOP">
+ 			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP">
+ 				<SPAN CLASS="itemTextIndent1" ID="TYPE_SPAN">Type:
+					 <P CLASS="Spacer">&nbsp;</P>
+
+	  				 <SPAN ID="TYPE_TABLE_TITLE">
+	  				 <INPUT TYPE="radio" CLASS="Radio" ACCESSKEY="T" TITLE="Generates code to directly access a simple rowset (one with no parameters)." NAME="type" ID="TYPE_TABLE">
+	  	 			 <DIV CLASS="itemTextRadioB" ID="TYPE_TABLE_DIV" TITLE="Generates code to directly access a simple rowset (one with no parameters).">
+	      			  <LABEL FOR="TYPE_TABLE" ID="TYPE_TABLE_LABEL"><U>T</U>able</LABEL>
+	  	 			 </DIV>
+					 </SPAN>
+
+					 <BR>
+
+					 <SPAN ID="TYPE_COMMAND_TITLE">
+	  				 <INPUT TYPE="radio" CLASS="Radio" ACCESSKEY="O" TITLE="Generates code that provides methods to set and execute a command. Use this class when you need to perform a parameter-based operation or execute a command." NAME="type" ID="TYPE_COMMAND">
+	  	 			 <DIV CLASS="itemTextRadioB" ID="TYPE_COMMAND_DIV" TITLE="Generates code that provides methods to set and execute a command. Use this class when you need to perform a parameter-based operation or execute a command.">
+	      			  <LABEL FOR="TYPE_COMMAND" ID="TYPE_COMMAND_LABEL">C<U>o</U>mmand</LABEL>
+	  	 			 </DIV>
+					 </SPAN>
+				</SPAN>
+			  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+  			  <TD VALIGN="TOP" COLSPAN="3">
+ 				<SPAN CLASS="itemTextIndent1" ID="SUPPORT_SPAN">Support:
+					 <P CLASS="Spacer">&nbsp;</P>
+	  				 <SPAN ID="SUPPORT_CHANGE_TITLE">
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="SUPPORT_CHANGE" ACCESSKEY="G" TITLE="Can modify items in rowset.">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="SUPPORT_CHANGE_DIV" TITLE="Can modify items in rowset.">
+		  			  <LABEL FOR="SUPPORT_CHANGE" ID="SUPPORT_CHANGE_LABEL">Chan<U>g</U>e</LABEL>
+	  	 			 </DIV>
+					 </SPAN>
+
+	  				 <BR>
+
+	  				 <SPAN ID="SUPPORT_INSERT_TITLE">
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="SUPPORT_INSERT" ACCESSKEY="I" TITLE="Can insert items into rowset.">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="SUPPORT_INSERT_DIV" TITLE="Can insert items into rowset.">
+		  			  <LABEL FOR="SUPPORT_INSERT" ID="SUPPORT_INSERT_LABEL"><U>I</U>nsert</LABEL>
+	  	 			 </DIV>
+					 </SPAN>
+
+	  				 <BR>
+
+	  				 <SPAN ID="SUPPORT_INSERT_TITLE">
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="SUPPORT_DELETE" ACCESSKEY="D" TITLE="Can delete items from rowset.">
+	  			 	 <DIV CLASS="itemTextCheckboxB" ID="SUPPORT_DELETE_DIV" TITLE="Can delete items from rowset.">
+		  			  <LABEL FOR="SUPPORT_DELETE" ID="SUPPORT_DELETE_LABEL"><U>D</U>elete</LABEL>
+   	  	 			 </DIV>
+					 </SPAN>
+				</SPAN>
+			  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+ 		  	 </TR>
+
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="100%" COLSPAN="7">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+		 	</TABLE>
+
+	   	  <!--CLOSE OF CONTENT//-->
+		  </TD>
+		 </TR>
+		 <TR VALIGN="BOTTOM">
+		  <TD>
+	   	  <!--OPEN OF BUTTON HTML//-->
+
+		  	<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="12">
+			 <TR>
+  			  <TD VALIGN="TOP" CLASS="RULE" COLSPAN="8" HEIGHT="2">
+				<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+  	 			 <TR VALIGN="TOP">
+  	  			  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+  	  			  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+  	 			 </TR>
+				</TABLE>
+  			  </TD>
+ 			  </TR>
+
+ 			  <TR>
+  			  <TD VALIGN="TOP" HEIGHT="11" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+
+ 			<TR>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" HEIGHT="23">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="FinishBtn" onClick="OnFinish(document);">Finish</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="CancelBtn" onClick="window.external.Finish(document, 'cancel');">Cancel</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="HelpBtn" onClick="window.external.OnHelp('vc.codewiz.class.atl.consumer.overview');">Help</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			</TABLE>
+
+	   	  <!--CLOSE OF BUTTON HTML//-->
+		  </TD>
+		 </TR>
+		</TABLE>
+
+	   <!--CLOSE OF CONTENT AND BUTTON TABLE//-->
+	   </TD>
+	  </TR>
+	 </TABLE>
+
+	<!--CLOSE OF ALL ENCOMPASSING TABLE ROW TWO//-->
+	</TD>
+  </TR>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<SCRIPT LANGUAGE="JSCRIPT">
+
+var tab_array = new Array();
+
+function InitDocument(document)
+{
+	setDirection();
+
+	if (window.external.FindSymbol("DOCUMENT_FIRST_LOAD"))
+	{
+		var L_WizardDialogTitle_Text = "ATL OLEDB Consumer Wizard";
+		window.external.AddSymbol("WIZARD_DIALOG_TITLE", L_WizardDialogTitle_Text);
+		window.external.SetDefaults(document);
+	}
+	window.external.Load(document);
+
+	if (IsAttributedProject(window.external))
+	{
+	        ATTRIBUTED.checked = true;
+	} 
+	else 
+	{
+		ATTRIBUTED.checked = false;
+	}
+
+	// Attributed ATL is deprecated starting with Orcas
+	ATTRIBUTED.disabled = true;
+	ATTRIBUTED_LABEL.disabled = true;
+
+	CLASS_NAME.disabled = true;
+	CLASS_NAME_LABEL.disabled = true;
+	HEADER_FILE.disabled = true;
+	HEADER_FILE_LABEL.disabled = true;
+	BrowseHeaderBtn.disabled = true;
+}
+
+function OnSelectDataSource()
+{
+	try
+	{
+		var strConnectString = window.external.SelectDataSource();
+	}
+	catch(e)
+	{
+		var L_ErrMsg_Text = "Error in SelectDataSource()";
+		if (e.description.length != 0)
+		{
+			L_ErrMsg_Text += ": ";
+			L_ErrMsg_Text += e.description;
+		}
+		window.external.ReportError(L_ErrMsg_Text);
+		return;
+	}
+	if (!IsValidConnectionString(ATTRIBUTED.checked)) {
+		window.external.AddSymbol("DB_CONNECTION_STRING","");
+		window.external.AddSymbol("DB_CLASS_NAME","");
+		return;
+	}
+	var strClassName = window.external.FindSymbol("DB_CLASS_NAME");
+	if (strConnectString.length > 1 && strClassName.length > 1)
+	{
+		// ensure that the class name and header file are valid
+		var bValid = false;
+		var strTempClassName = strClassName;
+		var strTempHeaderFile = strTempClassName.substr(1) + ".h";
+		var namePostfix = 1;
+		while( ! bValid )
+		{
+			bValid = true;
+			var strEmpty = "";
+			if( ! window.external.ParentObject.ValidateMember(strTempClassName, vsCMElementClass, strEmpty) )
+			{
+				bValid = false;
+			}
+
+			if( ! ValidateFileNameAndEnsureInProject(strTempHeaderFile, vsCMValidateFileExtCpp) )
+			{
+				bValid = false;
+			}
+
+			if (!bValid)
+			{
+				strTempClassName = strClassName + namePostfix;
+				strTempHeaderFile = strTempClassName.substr(1) + ".h";
+				namePostfix++;
+			}
+		}
+
+		CLASS_NAME.value = strTempClassName;
+		HEADER_FILE.value = strTempHeaderFile;
+		CLASS_NAME.disabled = false;
+		HEADER_FILE.disabled = false;
+		BrowseHeaderBtn.disabled = false;
+		CLASS_NAME_LABEL.disabled = false;
+		HEADER_FILE_LABEL.disabled = false;
+
+		var bStoredProc = window.external.FindSymbol("DB_STORED_PROCEDURE");
+		if (bStoredProc)
+		{
+			SUPPORT_CHANGE.disabled = true;
+			SUPPORT_CHANGE_LABEL.disabled = true;
+			SUPPORT_INSERT.disabled = true;
+			SUPPORT_INSERT_LABEL.disabled = true;
+			SUPPORT_DELETE.disabled = true;
+			SUPPORT_DELETE_LABEL.disabled = true;
+			TYPE_TABLE.disabled = true;
+			TYPE_TABLE_LABEL.disabled = true;
+			TYPE_COMMAND.disabled = true;
+			TYPE_COMMAND_LABEL.disabled = true;
+		}
+		else
+		{
+			SUPPORT_CHANGE.disabled = false;
+			SUPPORT_CHANGE_LABEL.disabled = false;
+			SUPPORT_INSERT.disabled = false;
+			SUPPORT_INSERT_LABEL.disabled = false;
+			SUPPORT_DELETE.disabled = false;
+			SUPPORT_DELETE_LABEL.disabled = false;
+			TYPE_TABLE.disabled = false;
+			TYPE_TABLE_LABEL.disabled = false;
+			TYPE_COMMAND.disabled = false;
+			TYPE_COMMAND_LABEL.disabled = false;
+		}
+	}
+}
+
+function Next(document, linkto)
+{
+	ATTRIBUTED.disabled = false;
+	window.external.Next(document, linkto);
+}
+
+function OnFinish(document)
+{
+	if (window.external.FindSymbol("DB_CLASS_NAME") == "")
+	{
+		var L_ErrMsg1_Text = "Please select a datasource";
+		window.external.ReportError(L_ErrMsg1_Text);
+		return;
+	}
+
+	if (!ValidateInput())
+		return;
+	
+	ATTRIBUTED.disabled = false;
+	OnWizFinish(document);
+}
+
+function OnBrowseHeaderFile()
+{
+	var strFile;
+	try
+	{
+		var L_Prompt1_Text = "VS Wizards Select File";
+		var L_Prompt2_Text = "Visual C++ Header Files (*.h)\0*.h\0\0";
+		strFile = window.external.GetOpenFileNameViaDlg( L_Prompt1_Text, window.external.FindSymbol("PROJECT_PATH"), L_Prompt2_Text, HEADER_FILE.value);
+	}
+	catch(e)
+	{
+		if (e.number != OLE_E_PROMPTSAVECANCELLED)
+		{
+			var L_ErrMsg2_Text = "Error in OnBrowseHeaderFile()";
+			if (e.description.length != 0)
+			{
+				L_ErrMsg2_Text += ": ";
+				L_ErrMsg2_Text += e.description;
+			}
+			window.external.ReportError( L_ErrMsg2_Text);
+		}
+		return;
+	}
+	HEADER_FILE.value = strFile;
+}
+
+function ValidateInput()
+{
+	var oInvalid = null;
+
+	if (!CLASS_NAME.disabled)
+		if (!Validate(CLASS_NAME))
+			oInvalid = CLASS_NAME;
+
+	if (oInvalid == null && !HEADER_FILE.disabled)
+		if (!Validate(HEADER_FILE))
+			oInvalid = HEADER_FILE;
+
+	if (oInvalid != null)
+	{
+		if (gbShowError)
+			window.external.ReportError();
+		else
+			gbShowError = true;
+		oInvalid.focus();
+		return false;
+	}
+
+	if (!IsValidConnectionString(ATTRIBUTED.checked)) {
+		return false;
+	}
+
+	return true;
+}
+
+var gbShowError = true;
+
+function Validate(obj)
+{
+	var bValid = true;
+	switch(obj.id)
+	{
+		case "CLASS_NAME":
+			bValid = window.external.ParentObject.ValidateMember(CLASS_NAME.value, vsCMElementClass);
+			break;
+		case "HEADER_FILE":
+			gbShowError = bValid = CanUseFileName(HEADER_FILE.value, true);
+			if (!bValid)
+				break;
+			bValid = ValidateFileNameAndEnsureInProject(HEADER_FILE.value, vsCMValidateFileExtCpp);
+			break;
+		default:
+			break;
+	}
+
+	if (typeof(bValid) == "undefined")
+		bValid = false;
+
+	return bValid;
+}
+
+</SCRIPT>
+<SCRIPT ID="INCLUDE_SCRIPT" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT ID="INCLUDE_COMMON" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT>
+	document.scripts("INCLUDE_SCRIPT").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Script.js";
+	document.scripts("INCLUDE_COMMON").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Common.js";
+</SCRIPT>

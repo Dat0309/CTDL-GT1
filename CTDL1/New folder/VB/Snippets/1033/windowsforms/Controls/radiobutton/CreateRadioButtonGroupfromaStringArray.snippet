@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Create a RadioButton Group from a String Array</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Creates a Group of RadioButtons from an Array of Strings.</Description>
+      <Shortcut>rbString</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Windows.Forms</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Drawing</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>array</ID>
+          <ToolTip>Replace with your String Array.</ToolTip>
+          <Default>names</Default>
+        </Literal>
+        <Literal>
+          <ID>topY</ID>
+          <ToolTip>Replace with y value of the topmost RadioButton's position.</ToolTip>
+          <Default>30</Default>
+        </Literal>
+        <Literal>
+          <ID>x</ID>
+          <ToolTip>Replace with the x value of the RadioButton positions.</ToolTip>
+          <Default>10</Default>
+        </Literal>
+        <Literal>
+          <ID>spacing</ID>
+          <ToolTip>Replace with the spacing between the RadioButton positions.</ToolTip>
+          <Default>30</Default>
+        </Literal>
+        <Object>
+          <ID>groupBoxName</ID>
+          <Type>GroupBox</Type>
+          <ToolTip>Replace with GroupBox on your form, that the RadioButtons will be contained in.</ToolTip>
+          <Default>GroupBox1</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim radio As RadioButton
+Dim y As Integer = $topY$
+
+For Each button As String In $array$
+    radio = New RadioButton()
+    With radio
+        .Location = New Point($x$, y)
+		.Text = button
+    End With
+    y += $spacing$
+    Me.$groupBoxName$.Controls.Add(radio)
+Next]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,87 @@
+// [!output SAFE_IDL_NAME].idl : [!output PROJECT_NAME] 的 IDL 來源
+//
+
+// 這個檔案會由 MIDL 工具處理
+// 以產生類型程式庫 ([!output SAFE_IDL_NAME].tlb) 和封送處理程式碼。
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[!if PREVIEW_HANDLER]
+[
+	object,
+	uuid([!output IID_PREVIEW]),
+	pointer_default(unique)
+]
+interface IPreview : IUnknown
+{
+};
+
+[!endif]
+[!if THUMBNAIL_HANDLER]
+[
+	object,
+	uuid([!output IID_THUMBNAIL]),
+	pointer_default(unique)
+]
+interface IThumbnail : IUnknown
+{
+};
+
+[!endif]
+[!if SEARCH_HANDLER]
+[
+	object,
+	uuid([!output IID_SEARCH]),
+	pointer_default(unique)
+]
+interface ISearch : IUnknown
+{
+};
+
+[!endif]
+[
+	uuid([!output LIBID_REGISTRY_FORMAT]),
+	version(1.0),
+]
+library [!output LIB_NAME]Lib
+{
+	importlib("stdole2.tlb");
+[!if PREVIEW_HANDLER]
+	[
+		uuid([!output CLSID_PREVIEW])
+	]
+	coclass Preview
+	{
+		[default] interface IPreviewHandler;
+	};
+[!endif]
+[!if THUMBNAIL_HANDLER]
+	[
+		uuid([!output CLSID_THUMBNAIL])
+	]
+	coclass Thumbnail
+	{
+		[default] interface IThumbnailProvider;
+	};
+[!endif]
+[!if SEARCH_HANDLER]
+	[
+		uuid([!output CLSID_SEARCH])
+	]
+	coclass Search
+	{
+		[default] interface IFilter;
+	};
+[!endif]
+};
+
+[!if PREVIEW_HANDLER]
+import "shobjidl.idl";
+[!endif]
+[!if THUMBNAIL_HANDLER]
+import "thumbcache.idl";
+[!endif]
+[!if SEARCH_HANDLER]
+import "filter.idl";
+[!endif]

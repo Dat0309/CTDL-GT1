@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Add a Windows Forms Control at Run Time</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Creates a new instance of a Windows forms TextBox control at run time.</Description>
+      <Shortcut>formAdd</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Drawing.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>text</ID>
+          <Type>String</Type>
+          <ToolTip>The text to be displayed in the Windows Forms control.</ToolTip>
+          <Default>"TextBox1"</Default>
+        </Literal>
+        <Literal>
+          <ID>locationX</ID>
+          <Type>Integer</Type>
+          <ToolTip>The X coordinate of control's location.</ToolTip>
+          <Default>64</Default>
+        </Literal>
+        <Literal>
+          <ID>locationY</ID>
+          <Type>Integer</Type>
+          <ToolTip>The Y coordinate of the control's location.</ToolTip>
+          <Default>40</Default>
+        </Literal>
+        <Literal>
+          <ID>width</ID>
+          <Type>Integer</Type>
+          <ToolTip>The width of control.</ToolTip>
+          <Default>100</Default>
+        </Literal>
+        <Literal>
+          <ID>height</ID>
+          <Type>Integer</Type>
+          <ToolTip>The height of control.</ToolTip>
+          <Default>20</Default>
+        </Literal>
+        <Object>
+          <ID>controlType</ID>
+          <Type>Control</Type>
+          <ToolTip>Replace with the Type of control to add.</ToolTip>
+          <Default>TextBox</Default>
+        </Object>
+        <Literal>
+          <ID>controlName</ID>
+          <Type>String</Type>
+          <ToolTip>The variable name of the control.</ToolTip>
+          <Default>TextBox1</Default>
+        </Literal>
+        <Literal>
+          <ID>tabIndex</ID>
+          <Type>Integer</Type>
+          <ToolTip>The the tab order value.</ToolTip>
+          <Default>0</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[    Dim $controlName$ As New $controlType$()
+    With $controlName$
+        .Location = New Point($locationX$, $locationY$)
+        .Size = New Size($width$, $height$)
+        .TabIndex = $tabIndex$
+        .Text = $text$
+    End With
+    Controls.Add($controlName$)
+
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

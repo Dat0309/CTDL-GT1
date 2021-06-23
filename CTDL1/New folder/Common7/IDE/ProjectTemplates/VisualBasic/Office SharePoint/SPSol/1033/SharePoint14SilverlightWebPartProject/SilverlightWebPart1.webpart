@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="Microsoft.SharePoint.WebPartPages.SilverlightWebPart, Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">$webpart_title$</property>
+        <property name="Description" type="string">$loc_webpart_description$</property>
+        <property name="Height" type="unit">300px</property>
+        <property name="Width" type="unit">400px</property>
+        <property name="Url" type="string">$webpart_xap_url$</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

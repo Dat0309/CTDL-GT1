@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Copy a Directory</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Copies a directory and all its files and subdirectories.</Description>
+      <Shortcut>filCopyDir</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>sourceDir</ID>
+          <ToolTip>Replace with directory to copy.</ToolTip>
+          <Default>"C:\SourceDirectory"</Default>
+        </Literal>
+        <Literal>
+          <ID>destDirectory</ID>
+          <ToolTip>Replace with directory to copy to.</ToolTip>
+          <Default>"D:\DestinationDirectory"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[My.Computer.FileSystem.CopyDirectory($sourceDir$, $destDirectory$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

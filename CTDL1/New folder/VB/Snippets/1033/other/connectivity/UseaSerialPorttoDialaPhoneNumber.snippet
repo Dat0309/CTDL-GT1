@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Use a SerialPort to Dial a Phone Number</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Uses a SerialPort to dial a phone number.</Description>
+      <Shortcut>condialser</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.IO.Ports</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>com</ID>
+          <ToolTip>Replace with name of the COM port for the modem.</ToolTip>
+          <Default>"COM1"</Default>
+        </Literal>
+        <Literal>
+          <ID>baud</ID>
+          <ToolTip>Replace with baud rate.</ToolTip>
+          <Default>2400</Default>
+        </Literal>
+        <Literal>
+          <ID>dial</ID>
+          <ToolTip>Replace with dialing command String.</ToolTip>
+          <Default>"ATDT 206-555-1000"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Using comPort = My.Computer.Ports.OpenSerialPort($Com$, $Baud$)
+    comPort.DtrEnable = True
+    comPort.Write($Dial$ & vbCrLf)
+
+    ' All data transfer code goes here.
+
+End Using]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

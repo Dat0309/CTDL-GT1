@@ -1,0 +1,4 @@
+﻿1>------ Build started: Project: 1914775_DinhTrongDat_Lab02, Configuration: Debug Win32 ------
+1>  program.cpp
+1>  1914775_DinhTrongDat_Lab02.vcxproj -> D:\CTDL1\1914775_DinhTrongDat_Lab02\Debug\1914775_DinhTrongDat_Lab02.exe
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========

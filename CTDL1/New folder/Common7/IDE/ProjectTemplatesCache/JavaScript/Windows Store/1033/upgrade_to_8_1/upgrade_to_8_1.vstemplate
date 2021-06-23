@@ -1,0 +1,32 @@
+﻿<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name _locID="JSP_Project_Upgrade_To_8_1_Name">Install Windows 8.1</Name>
+    <Description _locID="JSP_Project_Upgrade_To_8_1_Desc">Windows Store app development is only supported on Windows 8.1 or higher</Description>
+    <Icon>JavaScriptFileWin8.ico</Icon>
+    <ProjectType>JavaScript</ProjectType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <CreateNewFolder>false</CreateNewFolder>
+    <TemplateID>Microsoft.JavaScript.UpgradeTo8.1</TemplateID>
+    <DefaultName>InstallWindows8.1</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <SortOrder>100</SortOrder>
+    <PromptForSaveOnCreation>false</PromptForSaveOnCreation>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Hidden>false</Hidden>
+    <MaxOSVersion>6.2</MaxOSVersion>
+    <TargetPlatformName>Windows</TargetPlatformName>
+    <RequiredPlatformVersion>6.2</RequiredPlatformVersion>
+  </TemplateData>
+
+  <TemplateContent>
+    <CustomParameters>
+      <CustomParameter Name="htmlRelPath" Value="ProjectTemplates\JavaScript\Windows Store\$LCID$\upgrade_to_8_1\Install Windows 8.1.html" />
+    </CustomParameters>
+  </TemplateContent>
+
+  <WizardExtension> 
+    <Assembly>Microsoft.VisualStudio.VsipSupport.PlaceholderProject, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly> 
+    <FullClassName>Microsoft.VisualStudio.VsipSupport.WizardExtension</FullClassName> 
+  </WizardExtension>
+</VSTemplate>

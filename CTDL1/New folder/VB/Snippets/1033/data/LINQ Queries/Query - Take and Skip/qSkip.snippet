@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Skip</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>A query that skips the first n elements of a set of ordered results.</Description>
+      <Shortcut>qSkip</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>queryResult</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the query.</ToolTip>
+          <Default>query</Default>
+        </Literal>
+        <Literal>
+          <ID>item</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the variable that represents an item from your data source.</ToolTip>
+          <Default>fruit</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSource</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the idetnfier for your data source.</ToolTip>
+          <Default>New String() {"apple", "orange", "pear", "banana", "strawberry", "blueberry"}</Default>
+        </Literal>
+        <Literal>
+          <ID>orderField</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the field to order the query by.</ToolTip>
+          <Default>Length</Default>
+        </Literal>
+        <Literal>
+          <ID>orderDirection</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the direction in which the field is ordered (Ascending/Descending).</ToolTip>
+          <Default>Descending</Default>
+        </Literal>
+        <Literal>
+          <ID>skipCount</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with an Integer that indicates the number of elements to skip.</ToolTip>
+          <Default>3</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $queryResult$ = From $item$ In $dataSource$ _
+                    Order By $item$.$orderField$ $orderDirection$ _
+                    Skip $skipCount$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

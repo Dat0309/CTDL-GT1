@@ -1,0 +1,1336 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<HTML DIR="LTR">
+
+<HEAD>
+	<TITLE>Asistente para aplicaciones MFC</TITLE>
+	<META NAME="vs_targetSchema" CONTENT="http://schemas.microsoft.com/intellisense/ie5">
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+	<META HTTP-EQUIV="MSThemeCompatible" CONTENT="Yes">
+	<LINK ID="LINKURL" REL="stylesheet" HREF="../../../../../3082/NewStyles.css">
+		
+	<SYMBOL NAME="MAX_DOC_TYPE_NAME" TYPE="num" VALUE=15></SYMBOL>
+	<SYMBOL NAME="MAX_FILE_NEW_NAME_SHORT" TYPE="num" VALUE=15></SYMBOL>
+	<SYMBOL NAME="MAX_FILE_TYPE_ID" TYPE="num" VALUE=39></SYMBOL>
+	<SYMBOL NAME="MAX_FILE_NEW_NAME_LONG" TYPE="num" VALUE=40></SYMBOL>
+	<SYMBOL NAME="MAX_FILTER_NAME" TYPE="num" VALUE=100></SYMBOL>
+
+	<SYMBOL NAME="SAFE_PROJECT_IDENTIFIER_NAME" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="UPPER_CASE_SAFE_PROJECT_IDENTIFIER_NAME" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="PROJECT_NAME_OEM" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="LIB_NAME" TYPE="text"></SYMBOL>
+
+	<SYMBOL NAME="APP_CLASS" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="APP_BASE_CLASS" TYPE="text" VALUE="CWinAppEx"></SYMBOL>
+	<SYMBOL NAME="APP_HEADER" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="APP_IMPL" TYPE="text"></SYMBOL>
+
+	<SYMBOL NAME="DOC_CLASS" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="DOC_BASE_CLASS" TYPE="text" VALUE="CDocument"></SYMBOL> 
+	<SYMBOL NAME="DOC_HEADER" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="DOC_IMPL" TYPE="text"></SYMBOL>
+
+	<SYMBOL NAME="VIEW_CLASS" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="VIEW_BASE_CLASS" TYPE="text" VALUE="CView"></SYMBOL> 
+	<SYMBOL NAME="VIEW_HEADER" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="VIEW_IMPL" TYPE="text"></SYMBOL>
+
+	<SYMBOL NAME="MAIN_FRAME_CLASS" TYPE="text" VALUE="CMainFrame"></SYMBOL>
+	<SYMBOL NAME="MAIN_FRAME_HEADER" TYPE="text" VALUE="MainFrm.h"></SYMBOL>
+	<SYMBOL NAME="MAIN_FRAME_IMPL" TYPE="text" VALUE="MainFrm.cpp"></SYMBOL>
+	<SYMBOL NAME="MAIN_FRAME_BASE_CLASS" TYPE="text" VALUE="CMDIFrameWndEx"></SYMBOL>
+
+	<SYMBOL NAME="CHILD_FRAME_CLASS" TYPE="text" VALUE="CChildFrame"></SYMBOL>
+	<SYMBOL NAME="CHILD_FRAME_HEADER" TYPE="text" VALUE="ChildFrm.h"></SYMBOL>
+	<SYMBOL NAME="CHILD_FRAME_IMPL" TYPE="text" VALUE="ChildFrm.cpp"></SYMBOL>
+	<SYMBOL NAME="CHILD_FRAME_BASE_CLASS" TYPE="text" VALUE="CMDIChildWndEx"></SYMBOL>
+
+	<SYMBOL NAME="ROWSET_CLASS" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="ROWSET_HEADER" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="ROWSET_IMPL" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="ROWSET_CLASS_CODE" TYPE="text" VALUE=""></SYMBOL>
+	<SYMBOL NAME="ROWSET_CLASS_ODBC_DECL" TYPE="text" VALUE=""></SYMBOL>
+	<SYMBOL NAME="ROWSET_CLASS_ODBC_IMPL" TYPE="text" VALUE=""></SYMBOL>	
+	<SYMBOL NAME="ROWSET_CLASS_VARIABLE_NAME" TYPE="text"></SYMBOL>
+
+	<SYMBOL NAME="DIALOG_CLASS" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="DIALOG_BASE_CLASS" TYPE="text" VALUE="CDialogEx"></SYMBOL>
+	<SYMBOL NAME="DIALOG_HEADER" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="DIALOG_IMPL" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="DIALOG_TITLE" TYPE="text"></SYMBOL>
+
+	<SYMBOL NAME="DIALOG_AUTO_PROXY_CLASS" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="DIALOG_AUTO_PROXY_BASE_CLASS" TYPE="text" VALUE="CCmdTarget"></SYMBOL>
+	<SYMBOL NAME="DIALOG_AUTO_PROXY_HEADER" TYPE="text" VALUE="DlgProxy.h"></SYMBOL>
+	<SYMBOL NAME="DIALOG_AUTO_PROXY_IMPL" TYPE="text" VALUE="DlgProxy.cpp"></SYMBOL>
+
+	<SYMBOL NAME="CONTAINER_ITEM_CLASS" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="CONTAINER_ITEM_BASE_CLASS" TYPE="text" VALUE="COleClientItem"></SYMBOL>
+	<SYMBOL NAME="CONTAINER_ITEM_HEADER" TYPE="text" VALUE="CntrItem.h"></SYMBOL>
+	<SYMBOL NAME="CONTAINER_ITEM_IMPL" TYPE="text" VALUE="CntrItem.cpp"></SYMBOL>
+
+	<SYMBOL NAME="SERVER_ITEM_CLASS" TYPE="text"></SYMBOL>	
+	<SYMBOL NAME="SERVER_ITEM_BASE_CLASS" TYPE="text" VALUE="COleServerItem"></SYMBOL>
+	<SYMBOL NAME="SERVER_ITEM_HEADER" TYPE="text" VALUE="SrvrItem.h"></SYMBOL>
+	<SYMBOL NAME="SERVER_ITEM_IMPL" TYPE="text" VALUE="SrvrItem.cpp"></SYMBOL>
+
+	<SYMBOL NAME="INPLACE_FRAME_CLASS" TYPE="text" VALUE="CInPlaceFrame"></SYMBOL>
+	<SYMBOL NAME="INPLACE_FRAME_BASE_CLASS" TYPE="text" VALUE="COleIPFrameWndEx"></SYMBOL>
+	<SYMBOL NAME="INPLACE_FRAME_HEADER" TYPE="text" VALUE="IpFrame.h"></SYMBOL>
+	<SYMBOL NAME="INPLACE_FRAME_IMPL" TYPE="text" VALUE="IpFrame.cpp"></SYMBOL>
+
+	<SYMBOL NAME="TREE_VIEW_CLASS" TYPE="text" VALUE="CLeftView"></SYMBOL>
+	<SYMBOL NAME="TREE_VIEW_BASE_CLASS" TYPE="text" VALUE="CTreeView"></SYMBOL>
+	<SYMBOL NAME="TREE_VIEW_HEADER" TYPE="text" VALUE="LeftView.h"></SYMBOL>
+	<SYMBOL NAME="TREE_VIEW_IMPL" TYPE="text" VALUE="LeftView.cpp"></SYMBOL>
+
+	<SYMBOL NAME="WND_VIEW_CLASS" TYPE="text" VALUE="CChildView"></SYMBOL>
+	<SYMBOL NAME="WND_VIEW_BASE_CLASS" TYPE="text" VALUE="CWnd"></SYMBOL>
+	<SYMBOL NAME="WND_VIEW_HEADER" TYPE="text" VALUE="ChildView.h"></SYMBOL>
+	<SYMBOL NAME="WND_VIEW_IMPL" TYPE="text" VALUE="ChildView.cpp"></SYMBOL>
+
+	<SYMBOL NAME="HELP_FILTER" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="HTMLHELP_FILTER" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="HTMLHELP_TOPICSFILTER" TYPE="text"></SYMBOL>
+
+	<SYMBOL NAME="MRU_SIZE" TYPE=select-one VALUE=4></SYMBOL>
+
+	<SYMBOL NAME="VISUAL_STYLE_COMBO" TYPE=select-one VALUE=VS2008_LOOK></SYMBOL>
+
+	<SYMBOL NAME="APPLICATION_LOOK_VALUE" TYPE="text" VALUE="ID_VIEW_APPLOOK_VS_2008"></SYMBOL>
+	<SYMBOL NAME="USE_VISUAL_MANAGER" TYPE="checkbox" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="VISUAL_MANAGER" TYPE=text VALUE="CMFCVisualManagerVS2008"></SYMBOL>
+	<SYMBOL NAME="USE_VISUAL_STYLE" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="VISUAL_STYLE" TYPE=text VALUE="Office2007_LunaBlue"></SYMBOL>
+	<SYMBOL NAME="ENABLE_VISUAL_STYLE_SWITCHING" TYPE="checkbox" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="VISUAL_MANAGER_WINDOWS_7" TYPE="checkbox" VALUE="false"></SYMBOL>
+
+	<SYMBOL NAME="LANGUAGE" TYPE=select-one VALUE=""></SYMBOL>
+	<SYMBOL NAME="LANGUAGE_NAME" TYPE=text></SYMBOL>
+
+	<SYMBOL NAME="TOOLBAR_EXTCHAR_TRANSLATE" TYPE="checkbox" VALUE="false"></SYMBOL>
+
+	<SYMBOL NAME="DOCUMENT_TEMPLATE_STRINGS" TYPE="checkbox" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="FILTER_NAME" TYPE="text" VALUE=""></SYMBOL>
+	<SYMBOL NAME="FILE_EXTENSION" TYPE="text" VALUE=""></SYMBOL>
+	<SYMBOL NAME="FILE_TYPE_ID" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="MAIN_FRAME_CAPTION" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="DOC_TYPE_NAME" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="FILE_NEW_NAME_SHORT" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="FILE_NEW_NAME_LONG" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="OLEDB" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="ODBC" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="SNAPSHOT" TYPE="radio" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="DYNASET" TYPE="radio" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="BIND_ALL_COLUMNS" TYPE="checkbox" VALUE="true"></SYMBOL>
+
+	<SYMBOL NAME="CLASS_NAMES" TYPE="text" VALUE=""></SYMBOL>
+	<SYMBOL NAME="BASES" TYPE="text" VALUE=""></SYMBOL>
+
+	<SYMBOL NAME="APP_TYPE_SDI" TYPE="radio" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="APP_TYPE_MTLD" TYPE="radio" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="APP_TYPE_MDI" TYPE="radio" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="APP_TYPE_DLG" TYPE="radio" VALUE="false"></SYMBOL>
+
+	<SYMBOL NAME="APP_TYPE_TABBED_MDI" TYPE="checkbox" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="HTML_DIALOG" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="NO_MFC_CONTROLS" TYPE="checkbox" VALUE="false"></SYMBOL>
+
+	<SYMBOL NAME="DOCVIEW" TYPE="checkbox" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="SDL_CHECK" TYPE="checkbox" VALUE="true"></SYMBOL>
+
+	<SYMBOL NAME="TOOLBAR_NONE" TYPE="radio" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="DOCKING_TOOLBAR" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="TOOLBAR_STYLE_REBAR" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="MENUBAR_TOOLBAR" TYPE="radio" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="TOOLBAR_CUST_USER" TYPE="checkbox" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="TOOLBAR_CUST_PERSONAL" TYPE="checkbox" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="RIBBON_TOOLBAR" TYPE="radio" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="LAST_SELECTED_UI" TYPE="text" VALUE="MENUBAR"></SYMBOL>
+
+	<SYMBOL NAME="USE_STANDARD_MENU_TOOLBAR" TYPE="checkbox" VALUE="false"></SYMBOL>
+
+	<SYMBOL NAME="STATUS_BAR" TYPE="checkbox" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="PRINTING" TYPE="checkbox" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="HELPSTYLE_HTML" TYPE="radio" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="PROJECT_STYLE_MFCSTD" TYPE="radio" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="PROJECT_STYLE_EXPLORER" TYPE="radio" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="PROJECT_STYLE_VISUALSTUDIO" TYPE="radio" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="PROJECT_STYLE_OFFICE" TYPE="radio" VALUE="false"></SYMBOL>
+
+	<SYMBOL NAME="MAIN_FRAME_STYLE_FLAGS" TYPE="text" VALUE=""></SYMBOL>
+	<SYMBOL NAME="MAIN_FRAME_DEFAULT_STYLES" TYPE="checkbox" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="MAIN_FRAME" TYPE="checkbox" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="MAIN_FRAME_THICK_FRAME" TYPE="checkbox" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="MAIN_FRAME_MINIMIZE_BOX" TYPE="checkbox" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="MAIN_FRAME_MAXIMIZE_BOX" TYPE="checkbox" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="MAIN_FRAME_SYSTEM_MENU" TYPE="checkbox" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="MAIN_FRAME_MINIMIZED" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="MAIN_FRAME_MAXIMIZED" TYPE="checkbox" VALUE="false"></SYMBOL>
+
+	<SYMBOL NAME="CHILD_FRAME_STYLE_FLAGS" TYPE="text" VALUE=""></SYMBOL>
+	<SYMBOL NAME="CHILD_FRAME_DEFAULT_STYLES" TYPE="checkbox" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="CHILD_FRAME" TYPE="checkbox" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="CHILD_FRAME_MINIMIZE_BOX" TYPE="checkbox" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="CHILD_FRAME_MAXIMIZE_BOX" TYPE="checkbox" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="CHILD_FRAME_MINIMIZED" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="CHILD_FRAME_MAXIMIZED" TYPE="checkbox" VALUE="false"></SYMBOL>
+	
+	<SYMBOL NAME="SPLITTER" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="ABOUT_BOX" TYPE="checkbox" VALUE="true"></SYMBOL>
+
+	<SYMBOL NAME="DB_SUPPORT_ODBC" TYPE="radio" VALUE="false"></SYMBOL> 
+	<SYMBOL NAME="DB_SUPPORT_OLEDB" TYPE="radio" VALUE="true"></SYMBOL> 
+	<SYMBOL NAME="DB_SUPPORT_NONE" TYPE="radio" VALUE="true"></SYMBOL> 
+	<SYMBOL NAME="DB_SUPPORT_HEADER_ONLY" TYPE="radio" VALUE="false"></SYMBOL> 
+	<SYMBOL NAME="DB_VIEW_WITH_FILE" TYPE="radio" VALUE="false"></SYMBOL> 
+	<SYMBOL NAME="DB_VIEW_NO_FILE" TYPE="radio" VALUE="false"></SYMBOL> 
+
+	<SYMBOL NAME="AUTOMATION" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="ACTIVEX_CONTROLS" TYPE="checkbox" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="MAPI" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="SOCKETS" TYPE="checkbox" VALUE="false"></SYMBOL>
+
+	<SYMBOL NAME="ADV_DOCKING_EXPLORER" TYPE="checkbox" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="ADV_DOCKING_OUTPUT" TYPE="checkbox" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="ADV_DOCKING_PROPERTIES" TYPE="checkbox" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="ADV_DOCKING_NAVIGATION" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="ADV_DOCKING_CAPTION" TYPE="checkbox" VALUE="false"></SYMBOL>
+
+	<SYMBOL NAME="PANE_MENUS_ACTIVATE" TYPE="checkbox" VALUE="false"></SYMBOL>
+
+	<SYMBOL NAME="TREE_VIEW" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="LIST_VIEW" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="HTML_VIEW" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="HTML_EDITVIEW" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="RICH_EDIT_VIEW" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="EDIT_VIEW" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="FORM_VIEW" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="SCROLL_VIEW" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="OLEDB_RECORD_VIEW" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="ODBC_RECORD_VIEW" TYPE="checkbox" VALUE="false"></SYMBOL>
+
+	<SYMBOL NAME="COMPOUND_DOC_NONE" TYPE="checkbox" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="CONTAINER" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="MINI_SERVER" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="FULL_SERVER" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="CONTAINER_SERVER" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="ACTIVE_DOC_CONTAINER" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="ACTIVE_DOC_SERVER" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="SUPPORT_COMPOUND_FILES" TYPE="checkbox" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="CONTAINER_FOR_RICHEDIT" TYPE="checkbox" VALUE="false"></SYMBOL>
+
+	<SYMBOL NAME="DISPIID_REGISTRY_FORMAT" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="DISPIID_STATIC_CONST_GUID_FORMAT" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="APP_CLSID_STATIC_CONST_GUID_FORMAT" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="APP_CLSID_REGISTRY_FORMAT" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="APP_CLSID_IMPLEMENT_OLECREATE_FORMAT" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="LIBID_REGISTRY_FORMAT" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="LIBID_STATIC_CONST_GUID_FORMAT" TYPE="text"></SYMBOL>
+
+	<SYMBOL NAME="HAS_SUFFIX" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="DO_KANA" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="HELP_PATH" TYPE="text" VALUE="hlp"></SYMBOL>
+	<SYMBOL NAME="RES_PATH" TYPE="text" VALUE="res"></SYMBOL>
+	<SYMBOL NAME="MFC_INC_PATH" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="HM_NOTE" TYPE="text" VALUE=""></SYMBOL>
+	<SYMBOL NAME="HM_FILE" TYPE="text"></SYMBOL>
+	<SYMBOL NAME="HM_FILE_OEM" TYPE="text"></SYMBOL>
+
+	<SYMBOL NAME="ATL_SUPPORT" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="YEAR" TYPE="text"></SYMBOL>
+
+	<SYMBOL NAME="APP_TYPE_SUMMARY" TYPE="text" VALUE=""></SYMBOL>
+	<SYMBOL NAME="DB_SUPPORT_SUMMARY" TYPE="text" VALUE=""></SYMBOL>
+	<SYMBOL NAME="COMPOUND_DOC_SUMMARY" TYPE=text VALUE=""></SYMBOL>
+
+	<SYMBOL NAME="ATTRIBUTED" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="DB_CONNECTION_STRING" TYPE="text" VALUE=""></SYMBOL>
+
+	<SYMBOL NAME="DYNAMIC_MFC" TYPE="radio" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="STATIC_MFC" TYPE="radio" VALUE="false"></SYMBOL>
+
+	<SYMBOL NAME="ACCESSIBILITY" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="MANIFEST" TYPE="checkbox" VALUE="true"></SYMBOL>
+
+	<SYMBOL NAME="RESTART_MGR_SUPPORT" TYPE="checkbox" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="RESTART_MGR_SUPPORT_RESTART" TYPE="checkbox" VALUE="true"></SYMBOL>
+	<SYMBOL NAME="RESTART_MGR_SUPPORT_RECOVERY" TYPE="checkbox" VALUE="true"></SYMBOL>
+
+	<SYMBOL NAME="PREVIEW_HANDLER" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="SEARCH_HANDLER" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="THUMBNAIL_HANDLER" TYPE="checkbox" VALUE="false"></SYMBOL>
+</HEAD>
+
+<BODY BGCOLOR="BUTTONFACE" TOPMARGIN="0" LEFTMARGIN="0" RIGHTMARGIN="0" BOTTOMMARGIN="0" ONLOAD="InitDocument(document);" ONKEYDOWN="if (!bValidating) OnKey();" ONKEYPRESS="if (!bValidating) OnPress();">
+
+<TABLE CLASS="ONE" HEIGHT="100%" WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<COL CLASS="LinkPane"><COL>
+
+  <!--OPEN OF INTRODUCTORY INFORMATION TABLE//-->
+  <TR VALIGN="TOP">
+	<TD HEIGHT="79" WIDTH="100%" COLSPAN="2">
+	 <TABLE CLASS="TWO" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	 <COL WIDTH="12"><COL><COL WIDTH="12">
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD CLASS="IMAGE" VALIGN="BOTTOM" WIDTH="110" ROWSPAN="2">
+		<DIV CLASS="SMALLA" ID="Layer0">
+		 <IMG CLASS="SMALLEST" SRC="..\..\Images\MFC_Color.gif" WIDTH="63" HEIGHT="63" ALT="" BORDER="0">
+		</DIV>
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="6" ROWSPAN="2">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+	 
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="65">
+		<H4 CLASS="HEAD" ID="HEAD">Asistente para aplicaciones MFC</H4>
+		<P CLASS="SUBHEAD" ID="SUBHEAD">Este asistente genera un proyecto de aplicación MFC con las propiedades que se especifiquen.</P>
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+	 
+	  <TR>
+	   <TD VALIGN="TOP" CLASS="RULE" COLSPAN="5" HEIGHT="2">
+		<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+	  	 <TR VALIGN="TOP">
+	  	  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+	  	  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+	  	 </TR>
+		</TABLE>
+	   </TD>
+	  </TR>
+	 </TABLE>
+	</TD>
+  </TR>
+  <!--CLOSE OF INTRODUCTORY INFORMATION TABLE//-->
+
+  <!--OPEN OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+  <TR VALIGN="TOP">
+	<TD CLASS="Three" VALIGN="TOP" HEIGHT="100%" WIDTH="100%">
+	 <TABLE CLASS="fixedSize" HEIGHT="100%" WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+  	  <TR VALIGN="TOP">
+	   <TD CLASS="threeCustom" VALIGN="TOP">
+	   <!--OPEN OF NAVIGATION TABLE//-->
+	
+	    <TABLE CLASS="THREE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+		<COL WIDTH="12"><COL><COL WIDTH="1">
+		 <TR>
+	   	  <TD VALIGN="TOP" COLSPAN="3" HEIGHT="12">
+	  		&nbsp;
+		  </TD>
+		 </TR>
+		 <TR>
+	   	  <TD VALIGN="TOP" HEIGHT="100%">
+	  		&nbsp;
+		  </TD>
+	   	  <TD VALIGN="TOP" HEIGHT="100%">
+	   	  <!--OPEN OF NAVIGATIONAL LINKS//-->
+
+		  	<DIV CLASS="LINKSELECTED">
+	 	   	 <SPAN CLASS="VERTLINE1">
+			  <IMG SRC="../../../../../1033/Images/spacer.gif" WIDTH="1" HEIGHT="1" ALT="" BORDER="0">
+			 </SPAN>
+			 <SPAN CLASS="HORILINE1">
+			  <TABLE WIDTH="167" HEIGHT="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			   <TR VALIGN="TOP">
+			    <TD CLASS="DOTTEDLINE" HEIGHT="1">
+				</TD>
+			   </TR>
+			   <TR VALIGN="TOP">
+			    <TD HEIGHT="100%">
+				 <IMG SRC="../../../../../1033/Images/spacer.gif" WIDTH="165" HEIGHT="28" ALT="" BORDER="0">
+			    </TD>
+			   </TR>
+			   <TR VALIGN="TOP">
+			    <TD CLASS="DOTTEDLINE" HEIGHT="1">
+			    </TD>
+			   </TR>
+			  </TABLE>
+			 </SPAN>
+			 <TABLE WIDTH="160" HEIGHT="28" BORDER="0" CELLPADDING="0" CELLSPACING="0" CLASS="LINKTEXTSELECTED">
+			  <TR VALIGN="MIDDLE">
+			   <TD WIDTH="100%">
+				<SPAN ID="Default" TITLE="Ver información general de las selecciones">Información general</SPAN>
+			   </TD>
+			   <TD WIDTH="4">
+				<IMG SRC="../../../../../1033/Images/spacer.gif" HEIGHT="1" WIDTH="4">
+			   </TD>
+			  </TR>
+			 </TABLE>
+			</DIV>
+	  		
+			<DIV CLASS="LINK">
+			 <TABLE WIDTH="100%" HEIGHT="28" BORDER="0" CELLPADDING="0" CELLSPACING="0" CLASS="LINKTEXT">
+			  <TR VALIGN="MIDDLE">
+	  		   <TD WIDTH="100%">
+				<SPAN CLASS="ACTIVELINK" ID="AppType" TITLE="Especificar las opciones de compatibilidad con la arquitectura documento/vista, del lenguaje y del estilo de la interfaz para la aplicación" onClick="Next(document, 'AppType.htm');" TABINDEX="1">Tipo de aplicación</SPAN>
+			   </TD>
+	  		   <TD WIDTH="4">
+			  	<IMG SRC="../../../../../1033/Images/spacer.gif" HEIGHT="1" WIDTH="4">
+			   </TD>
+			  </TR>
+			 </TABLE>
+			</DIV>
+	  		
+			<DIV CLASS="LINK">
+			 <TABLE WIDTH="100%" HEIGHT="28" BORDER="0" CELLPADDING="0" CELLSPACING="0" CLASS="LINKTEXTINDENT">
+			  <TR VALIGN="MIDDLE">
+	  		   <TD WIDTH="100%">
+				<SPAN CLASS="ACTIVELINK" ID="CompoundDoc" TITLE="Especificar opciones de servidor o de contenedor OLE y compatibilidad con documentos activos" onClick="onClick(this);" TABINDEX="2">Compatib. doc. compuestos</SPAN>
+			   </TD>
+	  		   <TD WIDTH="4">
+			  	<IMG SRC="../../../../../1033/Images/spacer.gif" HEIGHT="1" WIDTH="4">
+			   </TD>
+			  </TR>
+			 </TABLE>
+			</DIV>
+	  		
+			<DIV CLASS="LINK">
+			 <TABLE WIDTH="100%" HEIGHT="28" BORDER="0" CELLPADDING="0" CELLSPACING="0" CLASS="LINKTEXTINDENT">
+			  <TR VALIGN="MIDDLE">
+	  		   <TD WIDTH="100%">
+				<SPAN CLASS="ACTIVELINK" ID="DocTemp" TITLE="Especificar los valores para la plantilla del documento de la aplicación que desee utilizar cuando cree un documento" onClick="onClick(this);" TABINDEX="3">Prop. plantilla documento</SPAN>
+			   </TD>
+	  		   <TD WIDTH="4">
+			  	<IMG SRC="../../../../../1033/Images/spacer.gif" HEIGHT="1" WIDTH="4">
+			   </TD>
+			  </TR>
+			 </TABLE>
+			</DIV>
+	  		
+			<DIV CLASS="LINK">
+			 <TABLE WIDTH="100%" HEIGHT="28" BORDER="0" CELLPADDING="0" CELLSPACING="0" CLASS="LINKTEXT">
+			  <TR VALIGN="MIDDLE">
+	  		   <TD WIDTH="100%">
+				<SPAN CLASS="ACTIVELINK" ID="DBSupport" TITLE="Especificar compatibilidad con bases de datos, incluido cualquier origen de código fuente" onClick="onClick(this);" TABINDEX="4">Compatib. con bases de datos</SPAN>
+			   </TD>
+	  		   <TD WIDTH="4">
+			  	<IMG SRC="../../../../../1033/Images/spacer.gif" HEIGHT="1" WIDTH="4">
+			   </TD>
+			  </TR>
+			 </TABLE>
+			</DIV>
+	  		
+			<DIV CLASS="LINK">
+			 <TABLE WIDTH="100%" HEIGHT="28" BORDER="0" CELLPADDING="0" CELLSPACING="0" CLASS="LINKTEXT">
+			  <TR VALIGN="MIDDLE">
+	  		   <TD WIDTH="100%">
+				<SPAN CLASS="ACTIVELINK" ID="UIFeatures" TITLE="Especificar opciones que controlan la apariencia de la aplicación" onClick="Next(document, 'UIFeatures.htm');" TABINDEX="5">Caract. de la interfaz de usuario</SPAN>
+			   </TD>
+	  		   <TD WIDTH="4">
+			  	<IMG SRC="../../../../../1033/Images/spacer.gif" HEIGHT="1" WIDTH="4">
+			   </TD>
+			  </TR>
+			 </TABLE>
+			</DIV>
+	  		
+			<DIV CLASS="LINK">
+			 <TABLE WIDTH="100%" HEIGHT="28" BORDER="0" CELLPADDING="0" CELLSPACING="0" CLASS="LINKTEXT">
+			  <TR VALIGN="MIDDLE">
+	  		   <TD WIDTH="100%">
+				<SPAN CLASS="ACTIVELINK" ID="Advanced" TITLE="Especificar compatibilidad adicional para incorporar a la aplicación" onClick="Next(document, 'Advanced.htm');" TABINDEX="6">Características avanzadas</SPAN>
+			   </TD>
+	  		   <TD WIDTH="4">
+			  	<IMG SRC="../../../../../1033/Images/spacer.gif" HEIGHT="1" WIDTH="4">
+			   </TD>
+			  </TR>
+			 </TABLE>
+			</DIV>
+	  		
+			<DIV CLASS="LINK">
+			 <TABLE WIDTH="100%" HEIGHT="28" BORDER="0" CELLPADDING="0" CELLSPACING="0" CLASS="LINKTEXT">
+			  <TR VALIGN="MIDDLE">
+	  		   <TD WIDTH="100%">
+				<SPAN CLASS="ACTIVELINK" ID="GeneratedClasses" TITLE="Revisar las clases generadas y especificar las clases base para la aplicación" onClick="Next(document, 'GeneratedClasses.htm');" TABINDEX="7">Clases generadas</SPAN>
+			   </TD>
+	  		   <TD WIDTH="4">
+			  	<IMG SRC="../../../../../1033/Images/spacer.gif" HEIGHT="1" WIDTH="4">
+			   </TD>
+			  </TR>
+			 </TABLE>
+			</DIV>
+			
+	   	  <!--CLOSE OF NAVIGATIONAL LINKS//-->
+		  </TD>
+		  <TD WIDTH="1">
+		   <DIV CLASS="VERTLINE">
+			 <IMG SRC="../../../../../1033/Images/spacer.gif" WIDTH="1" HEIGHT="1" ALT="" BORDER="0">
+		   </DIV>
+		  </TD>
+		 </TR>
+		 </TABLE>
+		</TD>
+	   </TR>
+	   </TABLE>
+			
+	   <!--CLOSE OF NAVIGATION TABLE//-->
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="100%">
+	   <!--OPEN OF CONTENT AND BUTTON TABLE//-->
+	   
+	   	<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+		<COL WIDTH="100%">
+		 <TR VALIGN="TOP">
+		  <TD HEIGHT="100%">
+	   	  <!--OPEN OF CONTENT//-->
+		  
+		  	<TABLE CLASS="CONTENT" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL WIDTH="100%"><COL WIDTH="12">
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="3">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 			 <TR>
+ 			 <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP">
+ 				<SPAN CLASS="ItemTextTop" ID="PROJECT_SETTINGS">Configuración del proyecto actual:</SPAN>
+					
+				<UL>
+	  	 			 <LI CLASS="LIST">
+		  			  <SPAN CLASS="SideBtnHidden" ID="APP_TYPE_SUMMARY" TITLE="">	
+		   				<LABEL FOR="APP_TYPE_SUMMARY"></LABEL>
+		  			  </SPAN>
+	  	 			 </LI>
+	  	 			 <LI CLASS="LIST">
+		  			  <SPAN CLASS="SideBtnHidden" ID="DB_SUPPORT_SUMMARY" TITLE="">
+		   				<LABEL FOR="DB_SUPPORT_SUMMARY"></LABEL>
+		  			  </SPAN>
+	  	 			 </LI>
+	  	 			 <LI CLASS="LIST">
+		  			  <SPAN CLASS="SideBtnHidden" ID="COMPOUND_DOC_SUMMARY" TITLE="">
+		   				<LABEL FOR="COMPOUND_DOC_SUMMARY"></LABEL>
+		  			  </SPAN>
+	  	 			  </LI>
+	  	 			 <LI CLASS="LIST">
+		  			  <SPAN CLASS="SideBtnHidden" ID="TOOLBAR_SUMMARY" TITLE="">
+		   				<LABEL FOR="TOOLBAR_SUMMARY"></LABEL>
+		  			  </SPAN>
+	  	 			  </LI>
+	  	 			 <LI CLASS="LIST">
+		  			  <SPAN CLASS="SideBtnHidden" ID="VISUAL_STYLE_SUMMARY" TITLE="">
+		   				<LABEL FOR="VISUAL_STYLE_SUMMARY"></LABEL>
+		  			  </SPAN>
+	  	 			  </LI>
+	  	 			 <LI CLASS="LIST">
+		  			  <SPAN CLASS="SideBtnHidden" ID="PROJECT_STYLE_SUMMARY" TITLE="">
+		   				<LABEL FOR="PROJECT_STYLE_SUMMARY"></LABEL>
+		  			  </SPAN>
+	  	 			  </LI>
+	  	 			 <LI CLASS="LIST">
+		  			  <SPAN CLASS="SideBtnHidden" ID="RESTART_MANAGER_SUMMARY" TITLE="">
+		   				<LABEL FOR="RESTART_MANAGER_SUMMARY"></LABEL>
+		  			  </SPAN>
+	  	 			  </LI>
+	  	 			 <LI CLASS="LIST">
+		  			  <SPAN CLASS="SideBtnHidden" ID="FILE_TYPE_SUMMARY" TITLE="">
+		   				<LABEL FOR="FILE_TYPE_SUMMARY"></LABEL>
+		  			  </SPAN>
+	  	 			  </LI>
+				</UL>
+				
+	  			<SPAN CLASS="ItemText" ID="FinishText">Haga clic en <B>Finalizar</B> desde cualquier ventana para aceptar la configuración actual.</SPAN>
+	
+				<P CLASS="ElementSpacer2">&nbsp;</P>
+					 
+              	<SPAN CLASS="ItemText" ID="README_REMINDER" TITLE="">Después de crear el proyecto, consulte su archivo readme.txt para obtener información acerca de las características de dicho proyecto y de los archivos que se generan.</SPAN>
+  		  	  </TD>
+  
+ 		  	 </TR>
+		 	</TABLE>
+			
+	   	  <!--CLOSE OF CONTENT//-->
+		  </TD>
+		 </TR>
+		 <TR VALIGN="BOTTOM">
+		  <TD>
+	   	  <!--OPEN OF BUTTON HTML//-->
+		  
+		  	<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="12">
+			 <TR>
+  			  <TD VALIGN="TOP" CLASS="RULE" COLSPAN="8" HEIGHT="2">
+				<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+  	 			 <TR VALIGN="TOP">
+  	  			  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+  	  			  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+  	 			 </TR>
+				</TABLE>
+  			  </TD>
+ 			  </TR>
+ 
+ 			  <TR>
+  			  <TD VALIGN="TOP" HEIGHT="11" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 
+ 			<TR>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" HEIGHT="23">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="FinishBtn" onClick="OnFinish(document);">Finalizar</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="CancelBtn" onClick="window.external.Finish(document, 'cancel');">Cancelar</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="HelpBtn" onClick="window.external.OnHelp('vc.appwiz.mfc.exe.overview');">Ayuda</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			</TABLE>
+			
+	   	  <!--CLOSE OF BUTTON HTML//-->
+		  </TD>
+		 </TR>
+		</TABLE>
+	
+  	<!--CLOSE OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+ 	</TD>
+  </TR>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<SCRIPT LANGUAGE="JSCRIPT">
+
+var tab_array = new Array();
+tab_array[0] = Default;
+tab_array[1] = AppType;
+tab_array[2] = CompoundDoc;
+tab_array[3] = DocTemp;
+tab_array[4] = DBSupport;
+tab_array[5] = UIFeatures;
+tab_array[6] = Advanced;
+tab_array[7] = GeneratedClasses;
+
+function InitDocument(document)
+{
+    if (!window.external.FindSymbol("NOT_FIRST_RUN"))
+    {
+//        if (IsUnicodeString(window.external.FindSymbol("PROJECT_NAME")))
+//        {
+//            window.external.AddSymbol("UNICODE", true);
+//        }
+        window.external.AddSymbol("NOT_FIRST_RUN", true);
+    }
+	    
+
+	setDirection();
+	
+	if (window.external.FindSymbol("DOCUMENT_FIRST_LOAD"))
+	{
+		var L_WizardDialogTitle_Text = "Asistente para aplicaciones MFC";
+		window.external.AddSymbol("WIZARD_DIALOG_TITLE", L_WizardDialogTitle_Text);
+		var strProjName = window.external.FindSymbol("PROJECT_NAME");
+		var coll = document.all.tags("SYMBOL");
+		var numSymbols = coll.length;
+		for (i = 0; i < numSymbols; i++)
+		{
+			var obj = coll(i);
+			if (typeof(obj.VALUE) == "undefined")
+			{
+				obj.VALUE = getval(obj, strProjName);
+			}
+		}
+		window.external.SetDefaults(document);
+
+		var strLCID = window.external.FindSymbol("LCID");
+
+		// fix up the templates path for the locale
+		var strCurrentTemplatesPath = window.external.FindSymbol("TEMPLATES_PATH");
+		var nIndex = strCurrentTemplatesPath.lastIndexOf("\\");
+		var strSubstr = strCurrentTemplatesPath.substr(0, nIndex);
+		var strNewTemplatesPath = strSubstr + "\\" + strLCID;
+		// LCID of system may be a language for which templates do not exist. So
+		// check for folder; if it does not exist, fall back to English templates.
+		var oFSO = new ActiveXObject("Scripting.FileSystemObject");
+		if (!oFSO.FolderExists(strNewTemplatesPath)) {
+			strNewTemplatesPath = strSubstr + "\\1033";
+			SetLocaleForResources("1033");
+		}
+		else {
+			SetLocaleForResources(window.external.GetHostLocale());
+		}
+
+		window.external.AddSymbol("TEMPLATES_PATH", strNewTemplatesPath);
+
+		CreateGuids();
+	}
+	InitTabs();
+	window.external.Load(document);
+
+	InitControls();
+}
+
+function InitTabs()
+{
+	MouseOut(DBSupport);
+	MouseOut(CompoundDoc);
+	MouseOut(DocTemp);
+}
+
+function Next(document, linkto)
+{
+	window.external.Next(document, linkto);
+}
+
+function onClick(obj)
+{
+	if (obj == null || typeof(obj) == "undefined")
+		return;
+
+	if (obj.id == "DBSupport")
+	{
+		if (!window.external.FindSymbol("APP_TYPE_DLG"))
+		{ 
+			Next(document, "DBSupport.htm"); 
+		}
+	}
+	if (obj.id == "CompoundDoc")
+	{
+		if (window.external.FindSymbol("DOCVIEW") && !window.external.IsSymbolDisabled("DOCVIEW"))
+		{ 
+			Next(document, "CompoundDoc.htm"); 
+		}
+	}
+	if (obj.id == "DocTemp")
+	{
+		if (window.external.FindSymbol("DOCVIEW") && !window.external.IsSymbolDisabled("DOCVIEW"))
+		{ 
+			Next(document, "DocTemp.htm"); 
+		}
+	}
+}
+
+function CreateGuids()
+{
+	var strGuid = window.external.CreateGuid();
+
+	var strVal = window.external.FormatGuid(strGuid, 0);
+	window.external.AddSymbol("DISPIID_REGISTRY_FORMAT", strVal);
+	strVal = window.external.FormatGuid(strGuid, 2);
+	window.external.AddSymbol("DISPIID_STATIC_CONST_GUID_FORMAT", strVal);
+
+	strGuid = window.external.CreateGuid();
+
+	strVal = window.external.FormatGuid(strGuid, 0);
+	window.external.AddSymbol("APP_CLSID_REGISTRY_FORMAT", strVal);
+	strVal = window.external.FormatGuid(strGuid, 1);
+	window.external.AddSymbol("APP_CLSID_IMPLEMENT_OLECREATE_FORMAT", strVal);
+	strVal = window.external.FormatGuid(strGuid, 2);
+	window.external.AddSymbol("APP_CLSID_STATIC_CONST_GUID_FORMAT", strVal);
+
+	strGuid = window.external.CreateGuid();
+
+	strVal = window.external.FormatGuid(strGuid, 0);
+	window.external.AddSymbol("LIBID_REGISTRY_FORMAT", strVal);
+	strVal = window.external.FormatGuid(strGuid, 2);
+	window.external.AddSymbol("LIBID_STATIC_CONST_GUID_FORMAT", strVal);
+}
+
+function InitControls()
+{
+	if (window.external.FindSymbol("APP_TYPE_SDI"))
+	{
+		L_SINGLEDOC_Text = "Interfaz de un único documento (SDI)";
+		APP_TYPE_SUMMARY.innerText = L_SINGLEDOC_Text;
+	}
+	else
+	{
+		if (window.external.FindSymbol("APP_TYPE_TABBED_MDI"))
+		{
+			L_MULTIDOC_TABBED_Text = "Interfaz de varios documentos con fichas (MDI)";
+			APP_TYPE_SUMMARY.innerText = L_MULTIDOC_TABBED_Text;
+		}
+		else
+		{
+			if (window.external.FindSymbol("APP_TYPE_MDI"))
+			{
+				L_MULTIDOC_Text = "Interfaz de varios documentos (MDI)";
+				APP_TYPE_SUMMARY.innerText = L_MULTIDOC_Text;
+			}
+			else
+			{
+				if (window.external.FindSymbol("APP_TYPE_MTLD"))
+				{
+					L_MULTITOPLEVEL_Text = "Múltiples documentos de nivel superior";
+					APP_TYPE_SUMMARY.innerText = L_MULTITOPLEVEL_Text;
+				}
+				else 
+				{
+					L_DIALOGBASED_Text = "Basado en cuadros de diálogo";
+					APP_TYPE_SUMMARY.innerText = L_DIALOGBASED_Text;
+				}
+			}
+		}
+	}
+
+	if (window.external.FindSymbol("DB_SUPPORT_NONE"))
+	{
+		L_NODBSUPPORT_Text = "Sin compatibilidad con bases de datos";
+		DB_SUPPORT_SUMMARY.innerText = L_NODBSUPPORT_Text;
+	}
+	else
+	{
+		if (window.external.FindSymbol("DB_SUPPORT_HEADER_ONLY"))
+		{
+			L_BASICDBSUPPORT_Text = "Compatibilidad con bases de datos básica";
+			DB_SUPPORT_SUMMARY.innerText = L_BASICDBSUPPORT_Text;
+		}
+		else
+		{
+			if (window.external.FindSymbol("DB_VIEW_NO_FILE"))
+			{
+				L_DBVIEWNOFILE_Text = "Vista de base de datos sin compatibilidad con archivos";
+				DB_SUPPORT_SUMMARY.innerText = L_DBVIEWNOFILE_Text;
+			}
+			else
+			{
+				L_DBVIEWWITHFILE_Text = "Vista de base de datos con compatibilidad con archivos";
+				DB_SUPPORT_SUMMARY.innerText = L_DBVIEWWITHFILE_Text;
+			}
+		}
+	}
+
+	if (window.external.FindSymbol("COMPOUND_DOC_NONE"))
+	{
+		L_NOCOMPDOCSUPPORT_Text = "Sin compatibilidad con documentos compuestos";
+		COMPOUND_DOC_SUMMARY.innerText = L_NOCOMPDOCSUPPORT_Text;
+	}
+	else
+	{
+		if (window.external.FindSymbol("CONTAINER"))
+		{
+			L_COMPDOCCONTAINER_Text = "Contenedor de documentos compuestos";
+			COMPOUND_DOC_SUMMARY.innerText = L_COMPDOCCONTAINER_Text;
+		}
+		else
+		{
+			if (window.external.FindSymbol("MINI_SERVER"))
+			{
+				L_COMPDOCMINI_Text = "Miniservidor de documentos compuestos";
+				COMPOUND_DOC_SUMMARY.innerText = L_COMPDOCMINI_Text;
+			}
+			else
+			{
+				if (window.external.FindSymbol("FULL_SERVER"))
+				{
+					L_COMPDOCFULLSERV_Text = "Servidor completo de documentos compuestos";
+					COMPOUND_DOC_SUMMARY.innerText = L_COMPDOCFULLSERV_Text;
+				}
+				else
+				{
+					L_COMPDOCBOTH_Text = "Servidor y contenedor de documentos compuestos";
+					COMPOUND_DOC_SUMMARY.innerText = L_COMPDOCBOTH_Text;
+				}
+			}
+		}
+	}
+
+	if (window.external.FindSymbol("TOOLBAR_STYLE_REBAR"))
+	{
+		L_TOOLBAR_SUMMARY_BROWSER_Text = "Interfaz de barra de herramientas con estilo de explorador";
+		TOOLBAR_SUMMARY.innerText = L_TOOLBAR_SUMMARY_BROWSER_Text;
+	}
+	else
+	{
+		if (window.external.FindSymbol("DOCKING_TOOLBAR"))
+		{
+			L_TOOLBAR_SUMMARY_DOCKING_Text = "Interfaz de barra de herramientas acoplable clásica";
+			TOOLBAR_SUMMARY.innerText = L_TOOLBAR_SUMMARY_DOCKING_Text;
+		}
+		else
+		{
+			if (window.external.FindSymbol("TOOLBAR_NONE"))
+			{
+				L_TOOLBAR_SUMMARY_NONE_Text = "Solo interfaz de menús clásico, sin barra de herramientas";
+				TOOLBAR_SUMMARY.innerText = L_TOOLBAR_SUMMARY_NONE_Text;
+			}
+			else
+			{
+				if (window.external.FindSymbol("MENUBAR_TOOLBAR"))
+				{
+					L_TOOLBAR_SUMMARY_MENUBAR_Text = "Interfaz de barra de menús y barra de herramientas personalizable";
+					TOOLBAR_SUMMARY.innerText = L_TOOLBAR_SUMMARY_MENUBAR_Text;
+				}
+				else
+				{
+					L_TOOLBAR_SUMMARY_RIBBON_Text = "Interfaz de cinta de opciones (estilo de Office 2007)";
+					TOOLBAR_SUMMARY.innerText = L_TOOLBAR_SUMMARY_RIBBON_Text;
+				}
+			}
+		}
+	}
+
+	if (!window.external.FindSymbol("USE_VISUAL_MANAGER"))
+	{
+		L_VISUAL_STYLE_SUMMARY_DEFAULT_Text = "Apariencia de aplicación MFC predeterminada";
+		VISUAL_STYLE_SUMMARY.innerText = L_VISUAL_STYLE_SUMMARY_DEFAULT_Text;
+	}
+	else
+	{
+		if (window.external.FindSymbol("VISUAL_MANAGER") == "CMFCVisualManagerWindows")
+		{
+			L_VISUAL_STYLE_SUMMARY_NATIVE_Text = "Apariencia de aplicación con un tema nativo de Windows";
+			VISUAL_STYLE_SUMMARY.innerText = L_VISUAL_STYLE_SUMMARY_NATIVE_Text;
+		}
+		else
+		{
+			if (window.external.FindSymbol("VISUAL_MANAGER") == "CMFCVisualManagerOfficeXP")
+			{
+				L_VISUAL_STYLE_SUMMARY_OFFICEXP_Text = "Apariencia de aplicación de Office XP";
+				VISUAL_STYLE_SUMMARY.innerText = L_VISUAL_STYLE_SUMMARY_OFFICEXP_Text;
+			}
+			else
+			{
+				if (window.external.FindSymbol("VISUAL_MANAGER") == "CMFCVisualManagerOffice2003")
+				{
+					L_VISUAL_STYLE_SUMMARY_OFFICE2003_Text = "Apariencia de aplicación de Office 2003";
+					VISUAL_STYLE_SUMMARY.innerText = L_VISUAL_STYLE_SUMMARY_OFFICE2003_Text;
+				}
+				else
+				{
+					if (window.external.FindSymbol("VISUAL_MANAGER") == "CMFCVisualManagerVS2005")
+					{
+						L_VISUAL_STYLE_SUMMARY_VS2005_Text = "Apariencia de aplicación de Visual Studio 2005";
+						VISUAL_STYLE_SUMMARY.innerText = L_VISUAL_STYLE_SUMMARY_VS2005_Text;
+					}
+					else
+					{
+						if (window.external.FindSymbol("VISUAL_MANAGER") == "CMFCVisualManagerVS2008")
+						{
+							L_VISUAL_STYLE_SUMMARY_VS2008_Text = "Apariencia de aplicación de Visual Studio 2008";
+							VISUAL_STYLE_SUMMARY.innerText = L_VISUAL_STYLE_SUMMARY_VS2008_Text;
+						}
+						else
+						{
+							if (window.external.FindSymbol("VISUAL_MANAGER") == "CMFCVisualManagerWindows7")
+							{
+								L_VISUAL_STYLE_SUMMARY_WINDOWS7_Text = "Apariencia de aplicación de Windows 7";
+								VISUAL_STYLE_SUMMARY.innerText = L_VISUAL_STYLE_SUMMARY_WINDOWS7_Text;
+							}
+							else
+							{
+								if (window.external.FindSymbol("VISUAL_STYLE") == "Office2007_LunaBlue")
+								{
+									L_VISUAL_STYLE_SUMMARY_OFF2007BLUE_Text = "Apariencia de aplicación de Office 2007 (tema azul)";
+									VISUAL_STYLE_SUMMARY.innerText = L_VISUAL_STYLE_SUMMARY_OFF2007BLUE_Text;
+								}
+								else
+								{
+									if (window.external.FindSymbol("VISUAL_STYLE") == "Office2007_ObsidianBlack")
+									{
+										L_VISUAL_STYLE_SUMMARY_OFF2007BLACK_Text = "Apariencia de aplicación de Office 2007 (tema negro)";
+										VISUAL_STYLE_SUMMARY.innerText = L_VISUAL_STYLE_SUMMARY_OFF2007BLACK_Text;
+									}
+									else
+									{
+										if (window.external.FindSymbol("VISUAL_STYLE") == "Office2007_Silver")
+										{
+											L_VISUAL_STYLE_SUMMARY_OFF2007SILVER_Text = "Apariencia de aplicación de Office 2007 (tema plateado)";
+											VISUAL_STYLE_SUMMARY.innerText = L_VISUAL_STYLE_SUMMARY_OFF2007SILVER_Text;
+										}
+										else
+										{
+											L_VISUAL_STYLE_SUMMARY_OFF2007AQUA_Text = "Apariencia de aplicación de Office 2007 (tema aguamarina)";
+											VISUAL_STYLE_SUMMARY.innerText = L_VISUAL_STYLE_SUMMARY_OFF2007AQUA_Text;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	if (window.external.FindSymbol("PROJECT_STYLE_MFCSTD"))
+	{
+		L_PROJECT_STYLE_SUMMARY_STANDARD_Text = "Estilo de proyecto MFC estándar";
+		PROJECT_STYLE_SUMMARY.innerText = L_PROJECT_STYLE_SUMMARY_STANDARD_Text;
+	}
+	else
+	{
+		if (window.external.FindSymbol("PROJECT_STYLE_EXPLORER"))
+		{
+			L_PROJECT_STYLE_SUMMARY_EXPLORER_Text = "Estilo de proyecto del Explorador de archivos";
+			PROJECT_STYLE_SUMMARY.innerText = L_PROJECT_STYLE_SUMMARY_EXPLORER_Text;
+		}
+		else
+		{
+			if (window.external.FindSymbol("PROJECT_STYLE_VISUALSTUDIO"))
+			{
+				L_PROJECT_STYLE_SUMMARY_VISUALSTUDIO_Text = "Estilo de proyecto de Visual Studio (con paneles Explorador, Resultados y Propiedades)";
+				PROJECT_STYLE_SUMMARY.innerText = L_PROJECT_STYLE_SUMMARY_VISUALSTUDIO_Text;
+			}
+			else
+			{
+				L_PROJECT_STYLE_SUMMARY_OFFICE_Text = "Estilo de proyecto de Office (con panel de navegación y barra de título)";
+				PROJECT_STYLE_SUMMARY.innerText = L_PROJECT_STYLE_SUMMARY_OFFICE_Text;
+			}
+		}
+	}
+
+	if (!window.external.FindSymbol("RESTART_MGR_SUPPORT"))
+	{
+		L_NO_RESTART_MANAGER_SUPPORT_Text = "No admitir el Administrador de reinicio";
+		RESTART_MANAGER_SUMMARY.innerText = L_NO_RESTART_MANAGER_SUPPORT_Text;
+	}
+	else
+	{
+		if (window.external.FindSymbol("RESTART_MGR_SUPPORT_RESTART") && window.external.FindSymbol("RESTART_MGR_SUPPORT_RECOVERY"))
+		{
+			L_RESTART_MANAGER_AUTOSAVE_RECOVERY_Text = "Admitir el Administrador de reinicio (volver a abrir documentos, recuperación de aplicaciones)";
+			RESTART_MANAGER_SUMMARY.innerText = L_RESTART_MANAGER_AUTOSAVE_RECOVERY_Text;
+		}
+		else
+		{
+			if (window.external.FindSymbol("RESTART_MGR_SUPPORT_RESTART"))
+			{
+				L_RESTART_MANAGER_AUTOSAVE_Text = "Admitir Administrador de reinicio (volver a abrir documentos)";
+				RESTART_MANAGER_SUMMARY.innerText = L_RESTART_MANAGER_AUTOSAVE_Text;
+			}
+			else
+			{
+				L_RESTART_MANAGER_RECOVERY_Text = "Compatibilidad con el Administrador de reinicio";
+				RESTART_MANAGER_SUMMARY.innerText = L_RESTART_MANAGER_RECOVERY_Text;
+			}
+		}
+	}
+
+	FILE_TYPE_SUMMARY.parentNode.style.display = 'none';
+	if (window.external.FindSymbol("PREVIEW_HANDLER") && !window.external.IsSymbolDisabled("PREVIEW_HANDLER") &&
+			window.external.FindSymbol("THUMBNAIL_HANDLER") && !window.external.IsSymbolDisabled("THUMBNAIL_HANDLER") &&
+			window.external.FindSymbol("SEARCH_HANDLER") && !window.external.IsSymbolDisabled("SEARCH_HANDLER")) {
+		var L_FILE_TYPE_SUMMARY_PreviewThumbnailSearch_Text = "Tipos de archivo admitidos en biblioteca DLL ATL (controladores de vista previa, miniaturas y búsqueda)";
+		FILE_TYPE_SUMMARY.innerText = L_FILE_TYPE_SUMMARY_PreviewThumbnailSearch_Text;
+		FILE_TYPE_SUMMARY.parentNode.style.display = 'block';
+	}
+	else if (window.external.FindSymbol("PREVIEW_HANDLER") && !window.external.IsSymbolDisabled("PREVIEW_HANDLER") &&
+			window.external.FindSymbol("SEARCH_HANDLER") && !window.external.IsSymbolDisabled("SEARCH_HANDLER")) {
+		var L_FILE_TYPE_SUMMARY_PreviewSearch_Text = "Tipos de archivo admitidos en biblioteca DLL ATL (controladores de vista previa y búsqueda)";
+		FILE_TYPE_SUMMARY.innerText = L_FILE_TYPE_SUMMARY_PreviewSearch_Text;
+		FILE_TYPE_SUMMARY.parentNode.style.display = 'block';
+	}
+	else if (window.external.FindSymbol("PREVIEW_HANDLER") && !window.external.IsSymbolDisabled("PREVIEW_HANDLER") &&
+			window.external.FindSymbol("THUMBNAIL_HANDLER") && !window.external.IsSymbolDisabled("THUMBNAIL_HANDLER")) {
+		var L_FILE_TYPE_SUMMARY_PreviewThumbnail_Text = "Tipos de archivo admitidos en biblioteca DLL ATL (controladores de vista previa y miniaturas)";
+		FILE_TYPE_SUMMARY.innerText = L_FILE_TYPE_SUMMARY_PreviewThumbnail_Text;
+		FILE_TYPE_SUMMARY.parentNode.style.display = 'block';
+	}
+	else if (window.external.FindSymbol("THUMBNAIL_HANDLER") && !window.external.IsSymbolDisabled("THUMBNAIL_HANDLER") &&
+			window.external.FindSymbol("SEARCH_HANDLER") && !window.external.IsSymbolDisabled("SEARCH_HANDLER")) {
+		var L_FILE_TYPE_SUMMARY_ThumbnailSearch_Text = "Tipos de archivo admitidos en biblioteca DLL ATL (controladores de miniaturas y búsqueda)";
+		FILE_TYPE_SUMMARY.innerText = L_FILE_TYPE_SUMMARY_ThumbnailSearch_Text;
+		FILE_TYPE_SUMMARY.parentNode.style.display = 'block';
+	}
+	else if (window.external.FindSymbol("PREVIEW_HANDLER") && !window.external.IsSymbolDisabled("PREVIEW_HANDLER")) {
+		var L_FILE_TYPE_SUMMARY_Preview_Text = "Tipos de archivo admitidos en biblioteca DLL ATL (controlador de vista previa)";
+		FILE_TYPE_SUMMARY.innerText = L_FILE_TYPE_SUMMARY_Preview_Text;
+		FILE_TYPE_SUMMARY.parentNode.style.display = 'block';
+	}
+	else if (window.external.FindSymbol("THUMBNAIL_HANDLER") && !window.external.IsSymbolDisabled("THUMBNAIL_HANDLER")) {
+		var L_FILE_TYPE_SUMMARY_Thumbnail_Text = "Tipos de archivo admitidos en biblioteca DLL ATL (controlador de miniaturas)";
+		FILE_TYPE_SUMMARY.innerText = L_FILE_TYPE_SUMMARY_Thumbnail_Text;
+		FILE_TYPE_SUMMARY.parentNode.style.display = 'block';
+	}
+	else if (window.external.FindSymbol("SEARCH_HANDLER") && !window.external.IsSymbolDisabled("SEARCH_HANDLER")) {
+		var L_FILE_TYPE_SUMMARY_Search_Text = "Tipos de archivo admitidos en biblioteca DLL ATL (controlador de búsqueda)";
+		FILE_TYPE_SUMMARY.innerText = L_FILE_TYPE_SUMMARY_Search_Text;
+		FILE_TYPE_SUMMARY.parentNode.style.display = 'block';
+	}
+}
+
+function CheckDataSource()
+{
+	if (window.external.FindSymbol("DB_CONNECTION_STRING") == "" && window.external.FindSymbol("OLEDB"))
+	{
+		L_Err1_Text = "Debe especificar un origen de datos cuando seleccione la opción de vista de base de datos";
+		window.external.ReportError(L_Err1_Text);
+		return false;
+	}
+	return true;
+}
+
+function OnFinish(document)
+{
+	if (!CheckDataSource())
+		return;
+
+	if (window.external.FindSymbol("ACTIVE_DOC_SERVER"))
+	{
+		var strExtension = window.external.FindSymbol("FILE_EXTENSION");
+		if (strExtension == "")
+		{
+			L_NoDocFileSpecified_Text = "Debe especificar una extensión de archivo de documento en la página Propiedades de plantilla de documento.";
+			window.external.ReportError(L_NoDocFileSpecified_Text);
+			return;
+		}
+	}
+	OnWizFinish(document);
+}
+
+function GetValidFileTypeID(strProjName)
+{
+	var strFileTypeID = "";
+
+	var len = strProjName.length;
+	for (l = 0; l < len; l++)
+	{
+		if (strProjName.substring(l, l+1) != " " && strProjName.substring(l, l+1) != "_")
+		{
+			strFileTypeID += strProjName.substring(l, l+1);
+		}
+	}
+	return strFileTypeID;
+}
+
+
+function getval(obj, strProjName)
+{
+	var SymbolValue = "";
+	switch(obj.NAME)
+	{
+		case "MAIN_FRAME_CAPTION":
+		case "DIALOG_TITLE":
+			SymbolValue = strProjName; 
+			break;
+		case "SAFE_PROJECT_IDENTIFIER_NAME":
+			SymbolValue	= CreateIdentifierSafeName(strProjName);
+			break;
+		case "FILE_NEW_NAME_SHORT":
+			if (strProjName.length >= 15)
+				SymbolValue = strProjName.substr(0, 15);
+			else
+				SymbolValue = strProjName;
+			break;
+		case "PROJECT_NAME_OEM":
+			SymbolValue = window.external.ConvertAnsiToOEM(strProjName);
+			break;
+		case  "LIB_NAME":
+			{
+				var strSafeLibName = CreateIdentifierSafeName(strProjName);
+				for (n = 0; n < 10; n++)
+				{
+					if (strSafeLibName.substr(0,1) == n.toString())
+						strSafeLibName = "My" + strSafeLibName;
+				}
+				SymbolValue = strSafeLibName;
+			}
+			break;
+		case "APP_HEADER":
+			SymbolValue = strProjName + ".h"; 
+			break;
+		case "APP_IMPL":
+			SymbolValue = strProjName + ".cpp"; 
+			break;
+		case "DOC_TYPE_NAME":
+			{
+				SymbolValue = CreateSafeName(strProjName);
+				
+				// truncate to 15
+				if (SymbolValue.length > 15)
+					SymbolValue = SymbolValue.substr(0, 15);
+					
+				// if ProjectXXX, strip out numbers at the end
+				if (SymbolValue.substr(0, 7).toUpperCase() == "PROJECT")
+				{
+					// convert to numeric
+					var x = SymbolValue.substr(7) - 0;
+					
+					// if conversion worked
+					if (!isNaN(x))
+						SymbolValue = SymbolValue.substr(0, 7);
+				}
+			}
+			break;
+		case "UPPER_CASE_SAFE_PROJECT_IDENTIFIER_NAME":
+			{
+				SymbolValue = (CreateSafeName(strProjName)).toUpperCase();
+			}
+			break;
+		case  "APP_CLASS":
+			{
+				var strSafeProjName = CreateIdentifierSafeName(strProjName);
+				SymbolValue = ConstructClassName(strSafeProjName, "App");
+			}
+			break;
+		case "FILE_TYPE_ID":
+			{
+				var strFileTypeID = GetValidFileTypeID(CreateSafeName(strProjName));
+				if (strFileTypeID.length >= 39)
+					SymbolValue = strFileTypeID.substr(0, 39) + ".Document"; 
+				else
+					SymbolValue = strFileTypeID + ".Document"; 
+			}
+			break;
+		case "FILE_NEW_NAME_LONG":
+			{
+				if (strProjName.length >= 40)
+					SymbolValue = strProjName.substr(0, 40) + ".Document"; 
+				else
+					SymbolValue = strProjName + ".Document"; 
+			}
+			break;
+		case  "DOC_CLASS":
+			{
+				var strSafeProjName = CreateIdentifierSafeName(strProjName);
+				SymbolValue = ConstructClassName(strSafeProjName, "Doc");
+			}
+			break;
+		case  "DOC_HEADER":
+			SymbolValue = strProjName + "Doc.h"; 
+			break;
+		case  "DOC_IMPL":
+			SymbolValue = strProjName + "Doc.cpp"; 
+			break;
+		case  "VIEW_CLASS":
+			{
+				var strSafeProjName = CreateIdentifierSafeName(strProjName);
+				SymbolValue = ConstructClassName(strSafeProjName, "View");
+			}
+			break;
+		case  "VIEW_HEADER":
+			SymbolValue = strProjName + "View.h"; 
+			break;
+		case  "VIEW_IMPL":
+			SymbolValue = strProjName + "View.cpp"; 
+			break;
+		case  "DIALOG_CLASS":
+			{
+				var strSafeProjName = CreateIdentifierSafeName(strProjName);
+				SymbolValue = ConstructClassName(strSafeProjName, "Dlg");
+				window.external.AddSymbol("DIALOG_CLASS", SymbolValue);
+			}
+			break;
+		case  "DIALOG_HEADER":
+			SymbolValue = strProjName + "Dlg.h"; 
+			break;
+		case  "DIALOG_IMPL":
+			SymbolValue = strProjName + "Dlg.cpp"; 
+			break;
+		case  "ROWSET_CLASS":
+			{
+				var strSafeProjName = CreateIdentifierSafeName(strProjName);
+				SymbolValue = ConstructClassName(strSafeProjName, "Set");
+			}
+			break;
+		case  "ROWSET_CLASS_VARIABLE_NAME":
+			{
+				var strSafeProjName = CreateIdentifierSafeName(strProjName);
+				SymbolValue = "m_" + strSafeProjName + "Set"; 
+			}
+			break;
+		case  "ROWSET_HEADER":
+			SymbolValue = strProjName + "Set.h"; 
+			break;
+		case  "ROWSET_IMPL":
+			SymbolValue = strProjName + "Set.cpp"; 
+			break;
+		case  "SERVER_ITEM_CLASS":
+			{
+				var strSafeProjName = CreateIdentifierSafeName(strProjName);
+				SymbolValue = ConstructClassName(strSafeProjName, "SrvrItem");
+			}
+			break;
+		case  "CONTAINER_ITEM_CLASS":
+			{
+				var strSafeProjName = CreateIdentifierSafeName(strProjName);
+				SymbolValue = ConstructClassName(strSafeProjName, "CntrItem");
+			}
+			break;
+		case  "DIALOG_AUTO_PROXY_CLASS":
+			var strDlgClass = window.external.FindSymbol("DIALOG_CLASS");
+			SymbolValue = strDlgClass + "AutoProxy"; 
+			break;
+		case  "HELP_FILTER":
+			SymbolValue = "rtf;cnt"; 
+			break;
+		case  "HTMLHELP_FILTER":
+			SymbolValue = "hhp;hhc;hhk;gif;jpg"; 
+			break;
+		case  "HTMLHELP_TOPICSFILTER":
+			SymbolValue = "htm;html"; 
+			break;
+		case  "MFC_INC_PATH":
+			{
+				var strVCDir = window.external.FindSymbol("PRODUCT_INSTALLATION_DIR");
+				SymbolValue = strVCDir + "ATLMFC\\include";
+			}
+			break;
+		case  "HM_FILE":
+			SymbolValue = strProjName;
+			break;
+		case  "HM_FILE_OEM":
+			SymbolValue = window.external.ConvertAnsiToOEM(strProjName);
+			break;
+		case  "YEAR":
+			{
+				d = new Date();
+				SymbolValue = d.getFullYear().toString();
+			}
+			break;
+		case "LANGUAGE_NAME":
+			SymbolValue = window.external.FindSymbol("LANGUAGE");
+			break;
+		default:
+			SymbolValue = "";
+			break;
+	}
+	return (SymbolValue);
+}
+
+</SCRIPT>
+<SCRIPT ID="INCLUDE_SCRIPT" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT ID="INCLUDE_COMMON" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT>
+	document.scripts("INCLUDE_SCRIPT").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Script.js";
+	document.scripts("INCLUDE_COMMON").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Common.js";
+</SCRIPT>
+

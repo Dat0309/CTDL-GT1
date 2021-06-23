@@ -1,0 +1,429 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<HTML DIR="LTR">
+
+<HEAD>
+	<TITLE>ATL Dialog Wizard</TITLE>
+	<META NAME="vs_targetSchema" CONTENT="http://schemas.microsoft.com/intellisense/ie5">
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+	<META HTTP-EQUIV="MSThemeCompatible" CONTENT="Yes">
+	<LINK ID="LINKURL" REL="stylesheet" HREF="../../../../../1033/NewStyles.css">
+
+	<SYMBOL NAME="SHORT_NAME" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="CLASS_NAME" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="HEADER_FILE" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="IMPL_FILE" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="HEADER_FILE_VALID" TYPE=bool VALUE=false></SYMBOL>
+	<SYMBOL NAME="IMPL_FILE_VALID" TYPE=bool VALUE=false></SYMBOL>
+</HEAD>
+
+<BODY BGCOLOR="BUTTONFACE" TOPMARGIN="0" LEFTMARGIN="0" RIGHTMARGIN="0" BOTTOMMARGIN="0" ONLOAD="InitDocument(document);" ONKEYDOWN="OnKey();" ONKEYPRESS="OnPress();">
+
+<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<COL WIDTH="100%">
+  <TR VALIGN="TOP">
+	<TD HEIGHT="79">
+	<!--OPEN OF ALL ENCOMPASSING TABLE ROW ONE//-->
+	 <TABLE CLASS="TWO" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	 <COL WIDTH="12"><COL><COL WIDTH="12">
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD CLASS="IMAGE" VALIGN="BOTTOM" WIDTH="110" ROWSPAN="2">
+		<DIV CLASS="SMALLA" ID="Layer0">
+		 <IMG CLASS="SMALLEST" SRC="..\..\Images\ATL_DLG.gif" WIDTH="63" HEIGHT="63" ALT="" BORDER="0">
+		</DIV>
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="6" ROWSPAN="2">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+	 
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="65">
+		<H4 CLASS="HEAD" ID="HEAD">Welcome to the ATL Dialog Wizard</H4>
+		<P CLASS="SUBHEAD" ID="SUBHEAD">This wizard adds an object to your project that implements a dialog box.</P>
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+	 
+	  <TR>
+	   <TD VALIGN="TOP" CLASS="RULE" COLSPAN="5" HEIGHT="2">
+		<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+	  	 <TR VALIGN="TOP">
+	  	  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+	  	  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+	  	 </TR>
+		</TABLE>
+	   </TD>
+	  </TR>
+	 </TABLE>
+	 
+	<!--CLOSE OF ALL ENCOMPASSING TABLE ROW ONE//-->
+	</TD>
+	</TR>
+	<TR VALIGN="TOP">
+	<TD HEIGHT="100%">
+	<!--OPEN OF ALL ENCOMPASSING TABLE ROW TWO//-->
+	
+	 <TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	 <COL>
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="100%">
+	   <!--OPEN OF CONTENT AND BUTTON TABLE//-->
+	   
+	   	<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+		<COL WIDTH="100%">
+		 <TR VALIGN="TOP">
+		  <TD HEIGHT="100%">
+	   	  <!--OPEN OF CONTENT//-->
+		  
+		  	<TABLE CLASS="FixedSize" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL WIDTH="185"><COL WIDTH="12"><COL WIDTH="185"><COL WIDTH="12"><COL WIDTH="185"><COL WIDTH="12">
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="7">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 			 <TR VALIGN="TOP">
+ 			 <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP">
+ 				<SPAN CLASS="itemText" ID="SHORT_NAME_TITLE" TITLE="The value in this field is used as a base for all other fields in this tab.">
+	  		 		 <LABEL FOR="SHORT_NAME" ID="SHORT_NAME_LABEL"><U>S</U>hort name:</LABEL>
+	  	 			 <BR>
+	  	 			 <INPUT CLASS="sideBtnThreeColumn" ID="SHORT_NAME" ACCESSKEY="S" TYPE="text" onPropertyChange="OnShortName();" TABINDEX="1">
+				</SPAN>
+					 
+				<P CLASS="ElementSpacer2">&nbsp;</P>
+					
+				<NOBR>
+				 <SPAN CLASS="itemText" ID="IMPL_FILE_TITLE" TITLE="Name of implementation file for this class.">
+	  		 		 <LABEL FOR="IMPL_FILE" ID="IMPL_FILE_LABEL">.c<U>p</U>p file:</LABEL>
+	  	 			 <BR>
+	  	 			 <INPUT CLASS="sideBtn2ThreeColumn" ID="IMPL_FILE" ACCESSKEY="P" TYPE="text" onPropertyChange="window.external.AddSymbol('IMPL_FILE_VALID', false)" TABINDEX="5">
+				 </SPAN>
+				 <BUTTON CLASS="buttonClass3" ID="BrowseBtnImpl" ACCESSKEY="" TYPE="BUTTON" TITLE="Browse for implementation file" onClick="OnBrowseImplFile();" TABINDEX="6">...</BUTTON>
+				</NOBR>
+			  </TD>
+  
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+			  
+			  <TD VALIGN="TOP"> 
+ 				<SPAN CLASS="itemText" ID="CLASS_NAME_TITLE" TITLE="Name of new class that will be created.">
+	  		 		 <LABEL FOR="CLASS_NAME" ID="CLASS_NAME_LABEL">C<U>l</U>ass:</LABEL>
+	  	 			 <BR>
+	  	 			 <INPUT CLASS="sideBtnThreeColumn" ID="CLASS_NAME" ACCESSKEY="L" TYPE="text" TABINDEX="2">
+				</SPAN>
+  		  	  </TD>
+  
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+			  
+			  <TD VALIGN="TOP"> 
+ 				<NOBR>
+				 <SPAN CLASS="itemText" ID="HEADER_FILE_TITLE" TITLE="Name of header file where class will be defined.">
+	  		 		 <LABEL FOR="HEADER_FILE" ID="HEADER_FILE_LABEL">.h fil<U>e</U>:</LABEL>
+	  	 			 <BR>
+	  	 			 <INPUT CLASS="sideBtn2ThreeColumn" ID="HEADER_FILE" ACCESSKEY="E" TYPE="text" onPropertyChange="window.external.AddSymbol('HEADER_FILE_VALID', false)" TABINDEX="3">
+	  			 </SPAN>
+				 <BUTTON CLASS="buttonClass3" ID="BrowseBtnHeader" ACCESSKEY="" TYPE="BUTTON" TITLE="Browse for header file" onClick="OnBrowseHeaderFile();" TABINDEX="4">...</BUTTON>
+				</NOBR>
+  		  	  </TD>
+  
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+ 		  	 </TR>
+		 	</TABLE>
+			
+	   	  <!--CLOSE OF CONTENT//-->
+		  </TD>
+		 </TR>
+		 <TR VALIGN="BOTTOM">
+		  <TD>
+	   	  <!--OPEN OF BUTTON HTML//-->
+		  
+		  	<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="12">
+			 <TR>
+  			  <TD VALIGN="TOP" CLASS="RULE" COLSPAN="8" HEIGHT="2">
+				<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+  	 			 <TR VALIGN="TOP">
+  	  			  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+  	  			  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+  	 			 </TR>
+				</TABLE>
+  			  </TD>
+ 			  </TR>
+ 
+ 			  <TR>
+  			  <TD VALIGN="TOP" HEIGHT="11" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 
+ 			<TR>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" HEIGHT="23">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="FinishBtn" onClick="OnFinish(document);">Finish</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="CancelBtn" onClick="window.external.Finish(document, 'cancel');">Cancel</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="HelpBtn" onClick="window.external.OnHelp('vc.codewiz.class.atl.dlg.overview');">Help</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			</TABLE>
+			
+	   	  <!--CLOSE OF BUTTON HTML//-->
+		  </TD>
+		 </TR>
+		</TABLE>
+	
+	   <!--CLOSE OF CONTENT AND BUTTON TABLE//-->
+	   </TD>
+	  </TR>
+	 </TABLE>
+	
+	<!--CLOSE OF ALL ENCOMPASSING TABLE ROW TWO//-->
+	</TD>
+  </TR>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<SCRIPT LANGUAGE="JSCRIPT">
+
+var tab_array = new Array();
+
+function InitDocument(document)
+{
+	setDirection();
+	if (window.external.FindSymbol("DOCUMENT_FIRST_LOAD"))
+	{
+		var L_WizardDialogTitle_Text = "ATL Dialog Wizard";
+		window.external.AddSymbol("WIZARD_DIALOG_TITLE", L_WizardDialogTitle_Text);
+		SetLocaleForResources(window.external.GetHostLocale());
+		window.external.SetDefaults(document);
+	}
+
+	window.external.Load(document);
+}
+
+function Next(document, linkto)
+{
+	window.external.Next(document, linkto);
+}
+
+function OnFinish(document)
+{
+	if (!ValidateInput())
+		return;
+
+	OnWizFinish(document);
+}
+
+function OnShortName()
+{
+	var strShortName = SHORT_NAME.value;
+	if (strShortName.length)
+	{
+		CLASS_NAME.value = "C" + strShortName;
+		HEADER_FILE.value = strShortName + ".h";
+		IMPL_FILE.value = strShortName + ".cpp";
+	}
+	else
+	{
+		CLASS_NAME.value = "";
+		HEADER_FILE.value = "";
+		IMPL_FILE.value = "";
+	}
+}
+
+function OnBrowseHeaderFile()
+{
+	var strFile;
+	try
+	{
+		L_Title1_Text = "VS Wizards Select File";
+		L_Title2_Text = "Visual C++ Header Files (*.h)\0*.h\0\0";
+		strFile = window.external.GetOpenFileNameViaDlg(L_Title1_Text, window.external.FindSymbol("PROJECT_PATH"), L_Title2_Text, HEADER_FILE.value);
+	}
+	catch(e)
+	{
+		if (e.number != OLE_E_PROMPTSAVECANCELLED)
+		{
+			var L_ErrMsg2_Text = "Error in OnBrowseHeaderFile()";
+			if (e.description.length != 0)
+			{
+				L_ErrMsg2_Text += ": ";
+				L_ErrMsg2_Text += e.description;
+			}
+			window.external.ReportError(L_ErrMsg2_Text);
+		}
+		return;
+	}
+	HEADER_FILE.value = strFile;
+}
+
+function OnBrowseImplFile()
+{
+	var strFile;
+	try
+	{
+		L_Title3_Text = "VS Wizards Select File";
+		L_Title4_Text = "Visual C++ Files (*.cpp;*.h;*.inl;*.c)\0*.cpp;*.h;*.inl;*.c\0\0";
+		strFile = window.external.GetOpenFileNameViaDlg(L_Title3_Text, window.external.FindSymbol("PROJECT_PATH"), L_Title4_Text, IMPL_FILE.value);
+	}
+	catch(e)
+	{
+		if (e.number != OLE_E_PROMPTSAVECANCELLED)
+		{
+			var L_ErrMsg3_Text = "Error in OnBrowseImplFile()";
+			if (e.description.length != 0)
+			{
+				L_ErrMsg3_Text += ": ";
+				L_ErrMsg3_Text += e.description;
+			}
+			window.external.ReportError(L_ErrMsg3_Text);
+		}
+		return;
+	}
+	IMPL_FILE.value = strFile;
+}
+
+function ValidateInput()
+{
+	var oInvalid = null;
+
+	if (!Validate(SHORT_NAME))
+		oInvalid = SHORT_NAME;
+
+	if (oInvalid == null)
+		if (!Validate(CLASS_NAME))
+			oInvalid = CLASS_NAME;
+
+	if (oInvalid == null)
+		if (!Validate(HEADER_FILE))
+			oInvalid = HEADER_FILE;
+
+	if (oInvalid == null)
+		if (!Validate(IMPL_FILE))
+			oInvalid = IMPL_FILE;
+
+	if (oInvalid != null)
+	{
+		if (gbShowError)
+			window.external.ReportError();
+		else
+			gbShowError = true;
+		oInvalid.focus();
+		return false;
+	}
+	return true;
+}
+
+var gbShowError = true;
+
+function Validate(obj)
+{
+	var bValid = true;
+
+	switch(obj.id)
+	{
+		case "SHORT_NAME":
+			bValid = window.external.ProjectObject.CodeModel.IsValidID(obj.value);
+			break;
+		case "CLASS_NAME":
+			bValid = window.external.ParentObject.ValidateMember(obj.value, vsCMElementClass);
+			break;
+		case "HEADER_FILE":
+			if (!window.external.FindSymbol("HEADER_FILE_VALID"))
+			{
+				gbShowError = bValid = CanUseFileName(obj.value, true);
+				if (!bValid)
+					break;
+				window.external.AddSymbol("HEADER_FILE_VALID", true)
+			}
+			bValid = ValidateFileNameAndEnsureInProject(obj.value, vsCMValidateFileExtCpp);
+			if (!bValid)
+				break;
+			if (HEADER_FILE.value == IMPL_FILE.value)
+			{
+				var L_ErrMsg_Text = "Header and implementation files cannot have the same name.";
+				oErrObj = new Error(L_ErrMsg_Text);
+				SetErrorInfo(oErrObj);
+				bValid = false;
+			}
+			break;
+		case "IMPL_FILE":
+			if (!window.external.FindSymbol("IMPL_FILE_VALID"))
+			{
+				gbShowError = bValid = CanUseFileName(obj.value);
+				if (!bValid)
+					break;
+				window.external.AddSymbol("IMPL_FILE_VALID", true)
+			}
+			bValid = ValidateFileNameAndEnsureInProject(obj.value, vsCMValidateFileExtCppSource);
+			break;
+		default:
+			break;
+	}
+
+	if (typeof(bValid) == "undefined")
+		bValid = false;
+
+	return bValid;
+}
+
+</SCRIPT>
+<SCRIPT ID="INCLUDE_SCRIPT" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT ID="INCLUDE_COMMON" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT>
+	document.scripts("INCLUDE_SCRIPT").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Script.js";
+	document.scripts("INCLUDE_COMMON").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Common.js";
+</SCRIPT>

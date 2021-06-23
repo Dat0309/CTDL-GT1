@@ -1,0 +1,5 @@
+﻿$loc_SampleFileComment1$
+
+$loc_SampleFileComment2$
+
+$loc_SampleFileComment3$

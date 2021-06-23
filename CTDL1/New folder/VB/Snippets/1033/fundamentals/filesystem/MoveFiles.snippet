@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Move Files</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Moves a file to a new directory.</Description>
+      <Shortcut>filMoveFile</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>oldFilePath</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the full path of the file to be moved.</ToolTip>
+          <Default>"C:\OldDirectory\File.txt"</Default>
+        </Literal>
+        <Literal>
+          <ID>newFilePath</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the new path for the file.</ToolTip>
+          <Default>"c:\NewDirectory\File.txt"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[My.Computer.FileSystem.MoveFile($oldFilePath$, $newFilePath$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

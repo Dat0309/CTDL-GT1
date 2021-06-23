@@ -1,0 +1,12 @@
+<PackageLanguagePackManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="1b11efe-37ad-45dd-a8f9-a540a6ed7bcb" Version="2.5" Language="es-ES" Publisher="Microsoft" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011"/>
+    <DisplayName xml:space="preserve" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">Application Insights Tools para Visual Studio</DisplayName>
+    <Description xml:space="preserve" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">Obtenga visibilidad en su aplicación mediante Application Insights desde Visual Studio.</Description>
+    <MoreInfo xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">http://go.microsoft.com/fwlink/?LinkID=403142</MoreInfo>
+    <GettingStartedGuide xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">http://go.microsoft.com/fwlink/?LinkID=403142</GettingStartedGuide>
+    <ReleaseNotes xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">http://go.microsoft.com/fwlink/?LinkID=510709</ReleaseNotes>
+    <Icon xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">ApplicationInsights_32x.png</Icon>
+    <PreviewImage xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">ApplicationInsights_200x.png</PreviewImage>
+  </Metadata>
+</PackageLanguagePackManifest>

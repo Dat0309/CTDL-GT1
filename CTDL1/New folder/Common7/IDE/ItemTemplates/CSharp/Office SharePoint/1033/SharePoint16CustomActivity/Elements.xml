@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="$ProjectItemName$" Url="Workflows/$ProjectItemName$" Path="$ProjectItemName$">
+    <File Url="$ProjectItemName$.xaml" Type="Ghostable" DoGUIDFixUp="TRUE" $if$ ("$IsSharePointSolution$" != "TRUE")ReplaceContent="TRUE" $endif$/>
+$if$ ("$IsSharePointSolution$" == "TRUE")    <File Url="$ProjectItemName$.actions4" Type="Ghostable" />
+$endif$  </Module>
+</Elements>

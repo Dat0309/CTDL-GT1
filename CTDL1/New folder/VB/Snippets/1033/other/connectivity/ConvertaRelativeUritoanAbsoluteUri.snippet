@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Convert a Relative Uri to an Absolute Uri</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Converts a relative Uri to an absolute Uri.</Description>
+      <Shortcut>conConv</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>uri1</ID>
+          <Type />
+          <ToolTip>Replace with base URI.</ToolTip>
+          <Default>"http://www.contoso.com/"</Default>
+          <Function />
+        </Literal>
+        <Literal>
+          <ID>uri2</ID>
+          <Type />
+          <ToolTip>Replace with relative URI.</ToolTip>
+          <Default>"images/index.htm?id=null"</Default>
+          <Function />
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim baseUri As New Uri($uri1$)
+Dim relativeUri As New Uri($uri2$)
+
+' Compose absolute Uri using the base and the relative Uri.
+Dim absoluteUri As New Uri(baseUri, relativeUri)
+
+Dim absolute = absoluteUri.AbsolutePath]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,47 @@
+﻿.itemContainer {
+    box-sizing: border-box;
+    color: #000000; /*[{plugin-color}]*/
+    font-family: Segoe UI, Tahoma, Arial, Verdana; /*[{plugin-font-family}]*/
+    font-size: 12px; /*[{plugin-font-size}]*/
+    height: 1.5em;
+    margin: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+
+.itemContainerHover {
+    color: #1e1e1e; /*[{plugin-treeview-content-mouseover-color}]*/
+    background-color: #cccedb; /*[{plugin-treeview-content-mouseover-background-color}]*/
+}
+
+.itemCollapsed {
+    background: url("images/itemCollapsedIcon.png") no-repeat !important; /*[url({vs-image-icon-tree-collapsed}) no-repeat !important]*/
+    height: 11px;
+    left: 0;
+    position: absolute;
+    top: 0.3em;
+    width: 11px;
+    z-index: 100;
+}
+
+.itemExpanded {
+    background: url("images/itemExpandedIcon.png") no-repeat !important; /*[url({vs-image-icon-tree-expanded}) no-repeat !important]*/
+    height: 11px;
+    left: 0;
+    position: absolute;
+    top: 0.3em;
+    width: 11px;
+    z-index: 100;
+}
+
+.itemSelected {
+    color: #1e1e1e; /*[{plugin-treeview-content-inactive-selected-color}]*/
+    background-color: #cccedb; /*[{plugin-treeview-content-inactive-selected-background-color}]*/
+}
+
+.itemSelectedActive {
+    color: #1e1e1e; /*[{plugin-treeview-content-selected-color}]*/
+    background-color: #3399ff; /*[{plugin-treeview-content-selected-background-color}]*/
+}
+

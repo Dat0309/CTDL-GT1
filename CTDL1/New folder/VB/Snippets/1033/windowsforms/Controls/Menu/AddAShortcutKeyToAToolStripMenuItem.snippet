@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Add a Shortcut Key to a ToolStripMenuItem</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Add a shortcut to a ToolStripMenuItem. </Description>
+      <Shortcut>menuAddShort</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+		<Import>
+		  <Namespace>System.Windows.Forms.Keys</Namespace>
+		</Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>menuItemName</ID>
+          <Type>ToolStripMenuItem</Type>
+          <ToolTip>Replace with a dropdown menu item on your form.</ToolTip>
+          <Default>ToolStripMenuItem1</Default>
+        </Object>
+        <Object>
+          <ID>shortcutKey</ID>
+          <Type>Keys</Type>
+          <ToolTip>Replace with the shortcut key you want to use.</ToolTip>
+          <Default>F6</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[$menuItemName$.ShortcutKeys = $shortcutKey$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

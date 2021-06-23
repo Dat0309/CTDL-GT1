@@ -1,0 +1,6 @@
+VSWIZARD 7.0
+Wizard=VsWizard.VsWizardEngine.12.0
+Param="WIZARD_NAME = TypeLib"
+Param="RELATIVE_PATH = VCWizards\CodeWiz\MFC"
+Param="PREPROCESS_FUNCTION = CanAddMFCClass"
+Param="WIZARD_ID = 13"

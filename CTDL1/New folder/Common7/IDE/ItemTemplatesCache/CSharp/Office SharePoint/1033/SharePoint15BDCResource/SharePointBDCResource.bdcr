@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- $loc_BdcrModelComment$ -->
+<Model xmlns="http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="$ModelName$">
+    <LobSystems>
+        <LobSystem Name="$LobSystemName$">
+        </LobSystem>
+    </LobSystems>
+</Model> 

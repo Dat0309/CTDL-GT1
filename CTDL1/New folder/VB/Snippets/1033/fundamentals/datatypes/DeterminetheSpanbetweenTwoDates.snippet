@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Determine the Span between Two Dates </Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Calculates the difference in days between two dates and also constructs a TimeSpan value for that difference.</Description>
+      <Keywords>
+      </Keywords>
+      <Shortcut>typeDate</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>dateLiteral</ID>
+          <Type />
+          <ToolTip>Replace with a date literal, a date variable, or a method that returns a date.</ToolTip>
+          <Default>#1/1/2002#</Default>
+        </Literal>
+        <Literal>
+          <ID>dateLiteral2</ID>
+          <Type />
+          <ToolTip>Replace with a date literal, a date variable, or a method that returns a date.</ToolTip>
+          <Default>Now</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim oldDate As Date = $dateLiteral$
+Dim newDate As Date = $dateLiteral2$
+
+' You can also determine the difference in times in other units.
+Dim difference As TimeSpan = newTime - oldTime
+Dim differenceInDays As Double = difference.TotalDays]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

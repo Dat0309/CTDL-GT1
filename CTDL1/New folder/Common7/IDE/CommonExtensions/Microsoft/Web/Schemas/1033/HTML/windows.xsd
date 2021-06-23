@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<xsd:schema xmlns='http://schemas.microsoft.com/intellisense/windows'
+      xmlns:xsd='http://www.w3.org/2001/XMLSchema'
+      targetNamespace='http://schemas.microsoft.com/intellisense/windows'
+      xmlns:vs='http://schemas.microsoft.com/Visual-Studio-Intellisense'
+      vs:ishtmlschema="true"
+      vs:isserverschema="false"
+      vs:htmlflavor="5.0"
+      vs:SuccinctFriendlyName="Windows App"
+      vs:issupplemental="true"
+      vs:customattrprefix="data-">
+
+  <xsd:annotation>
+    <xsd:documentation>
+      Microsoft Visual Studio supplemental schema for Windows UI
+    </xsd:documentation>
+  </xsd:annotation>
+
+  <xsd:element name="___all___">
+    <xsd:complexType>
+      <xsd:attribute name="data-win-control" vs:requiredprojectcapabilities="WindowsAppContainer" vs:datawincontrol="true" />
+      <xsd:attribute name="data-win-options" vs:requiredprojectcapabilities="WindowsAppContainer" />
+      <xsd:attribute name="data-win-bind" vs:requiredprojectcapabilities="WindowsAppContainer" />
+      <xsd:attribute name="data-win-bindsource" vs:requiredprojectcapabilities="WindowsAppContainer" />
+      <xsd:attribute name="data-win-res" vs:requiredprojectcapabilities="WindowsAppContainer" />
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

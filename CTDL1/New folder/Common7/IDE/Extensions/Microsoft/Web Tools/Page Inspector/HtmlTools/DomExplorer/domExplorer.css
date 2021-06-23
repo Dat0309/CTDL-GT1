@@ -1,0 +1,275 @@
+.BPT-WarnMessage {
+    color: #808080; /*[{VSFONTCOLOR_CONSOLE_WARNING}]*/
+    padding-left: 21px;
+    margin-top: 2px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-image: url('../common/warnIcon.png');
+}
+
+.BPT-ScriptErrorMessage {
+    color: #ff0000; /*[{VSFONTCOLOR_CONSOLE_ERROR}]*/
+    padding-left: 21px;
+    margin-top: 2px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-image: url('../common/errorIcon.png');
+}
+
+/* Css styling for the tree view and html elements */
+#tree {
+    margin-top: 5px;
+}
+      
+/* Css styling for panes */      
+.BPT-HorizontalPane {
+    height: 100%;
+    padding-top: 2.18em;
+    box-sizing: border-box;
+}
+            
+.BPT-HorizontalPane .BPT-Pane {
+    float: left;
+    position: relative;
+}
+            
+.BPT-HorizontalPane-Left {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_EDITOR}]*/
+    color: #000000; /*[{VSFONTCOLOR_EDITOR}]*/
+}
+            
+.BPT-HorizontalPane-Right {
+    position: absolute;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_EDITOR}]*/
+    color: #000000; /*[{VSFONTCOLOR_EDITOR}]*/
+}
+
+.BPT-HorizontalPane-Right-Content {
+    position: relative;
+    top: 1.8em;
+    left: 4px;
+    width: calc(100% - 4px);
+    height: calc(100% - 1.8em);
+    overflow: auto;
+}
+
+.BPT-HorizontalPane-Right-Content > div > *:not(.BPT-Toolbar) {
+    font-family: "Consolas", Lucida Console, monospace; /*[{VSFONTFAMILY_EDITOR} , Lucida Console, monospace]*/
+    font-size: 9pt; /*[{VSFONTSIZE_EDITOR}]*/
+}
+
+.BPT-HorizontalPane-Right-Tab-ToolbarContainer {
+    position: relative;
+    top: calc(2.18em + 4px);
+    width: 100%;
+    height: calc(100% - 2.18em - 4px);
+}
+
+.BPT-HorizontalPane-Right-Tab-ToolbarContainer > .BPT-Toolbar {
+/*+VWD
+    top: calc(2.18em + 1.8em + 4px);
+*/    
+/*+VWD*/
+    top: 1.8em;
+/*-VWD*/
+}
+
+/*+VWD*/
+.BPT-HorizontalPane-SubTab {
+    position: relative; 
+    height: 100%; 
+    overflow: auto;
+}
+/*-VWD*/
+
+.BPT-HorizontalPane-Right-Tab {
+    display:none;
+}
+
+.BPT-DataTree-Container {
+    margin-top: 5px;
+}
+
+#stylesView .BPT-DataTree > .BPT-DataTreeItem-ChildCollection > .BPT-DataTreeItem,
+#traceStylesView .BPT-DataTree > .BPT-DataTreeItem-ChildCollection > .BPT-DataTreeItem {
+    margin-bottom: 2px;
+}
+
+.BPT-HTML-InlinedTag {
+    font-style:italic;
+}
+
+.BPT-Pane-Divider {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index:100;
+    height: 100%;
+    width: 4px;
+    background-color: #D1D1D2; /*[{VSCOLOR_ENVIRONMENT_BACKGROUND_GRADIENTBEGIN}]*/
+    cursor: w-resize;
+}
+
+.BPT-HorizontalPane-Right .BPT-Toolbar {
+    font-family: "Segoe UI", Arial, Sans-Serif; /*[{VSFONTFAMILY_ENVIRONMENT} , Arial, Sans-Serif]*/
+    font-size: 9pt; /*[{VSFONTSIZE_ENVIRONMENT}]*/
+    font-weight: "normal"; /*[{VSFONTWEIGHT_ENVIRONMENT}]*/
+    color: #000000; /*[{VSCOLOR_TOOLWINDOW_TEXT}]*/   
+}
+
+/* CSS styling for the tab and resizable pane controls */
+.BPT-Tabbar {
+    position: fixed;
+    width: 100%;
+    height: 1.8em;
+    background-color: #D1D1D2;  /*[{VSCOLOR_ENVIRONMENT_BACKGROUND_GRADIENTBEGIN}]*/
+    border-left: 2px solid #D1D1D2;  /*[2px solid {VSCOLOR_ENVIRONMENT_BACKGROUND_GRADIENTBEGIN}]*/
+    white-space: nowrap;
+}
+       
+.BPT-Tabbar .BPT-Tab-Item {
+    height: 1.8em;
+    padding-left: 8px;
+    padding-right: 8px;
+    display: table-cell;
+    cursor: default;
+    vertical-align: middle;
+}
+
+.BPT-Tabbar ::selection { 
+    background: transparent; 
+}
+            
+.BPT-Tabbar .BPT-Tab-Item-Active {
+    background-color: #FFFFFF; /*[{VSCOLOR_FILETAB_SELECTED_GRADIENTTOP}]*/
+    color: #000000; /*[{VSCOLOR_FILETAB_SELECTEDTEXT}]*/
+}
+
+.BPT-ToolWindow-NoFocus  .BPT-Tab-Item-Active {
+    background-color: #E7E7E8; /*[{VSCOLOR_FILETAB_INACTIVE_GRADIENTTOP}]*/
+    color: #535354; /*[{VSCOLOR_FILETAB_INACTIVE_TEXT}]*/
+}
+
+.BPT-Tabbar .BPT-Tab-Item-Inactive {
+    background-color: #D1D1D2; /*[{VSCOLOR_ENVIRONMENT_BACKGROUND}]*/
+    color: #535354; /*[{VSCOLOR_FILETAB_INACTIVE_TEXT}]*/
+}
+
+.BPT-Tabbar .BPT-Tab-Item-Inactive:hover {
+    background-color: #E7E7E8; /*[{VSCOLOR_FILETAB_HOT_GRADIENTTOP}]*/
+    color: #000000; /*[{VSCOLOR_FILETAB_HOT_TEXT}]*/
+}
+
+.BPT-Tab-Item:focus {
+    outline:0;
+}
+
+.BPT-DataTreeItem-ChildCollection {
+    display: block;
+}
+
+body.BPT-ToolWindow-NoFocus .BPT-HtmlTree-Container:focus .BPT-HtmlTreeItem-Selected,
+body.BPT-ToolWindow-NoFocus .BPT-HtmlTree-Container-KeepSelection .BPT-HtmlTreeItem-Selected {
+    border-left-color: #BFCDDB; /*[{VSFONTCOLORBACKGROUND_INACTIVE_SELECTED_TEXT}]*/
+}
+
+body.BPT-ToolWindow-NoFocus .BPT-HtmlTree-Container:focus .BPT-HtmlTreeItem-Selected > .BPT-HtmlTreeItem-Header,
+body.BPT-ToolWindow-NoFocus .BPT-HtmlTree-Container-KeepSelection .BPT-HtmlTreeItem-Selected > .BPT-HtmlTreeItem-Header {
+    background: rgba(191, 205, 219, 0.25); /*[{VSFONTCOLORBACKGROUND_INACTIVE_SELECTED_TEXT rgba(0.25)}]*/
+    border-color: #BFCDDB; /*[{VSFONTCOLORBACKGROUND_INACTIVE_SELECTED_TEXT}]*/
+}
+
+.BPT-ColorThumbnail {
+    display: inline-block;
+    vertical-align: middle;
+    width: 12px;
+    height: 12px;
+    margin: 0 2px 0 2px;
+    border: 1px solid black; /*[1px solid {VSFONTCOLOR_EDITOR}]*/
+}
+
+.BPT-ToolbarLabel .BPT-FileLink {
+    margin-top: -1px;
+    margin-left: 4px;
+    max-width: 12em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Css styling for the editing box */
+input.BPT-EditBox {
+    font-family: "Consolas", Lucida Console, monospace; /*[{VSFONTFAMILY_EDITOR} , Lucida Console, monospace]*/
+    font-size: 9pt; /*[{VSFONTSIZE_EDITOR}]*/
+    font-weight: "normal"; /*[{VSFONTWEIGHT_HTML_ATTRIBUTE_VALUE}]*/
+    color: #000000; /*[{VSFONTCOLOR_HTML_ATTRIBUTE_VALUE}]*/
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_EDITOR}]*/
+    margin: -2px 0 -2px 0;
+    border: 1px solid #000000; /*[1px solid {VSFONTCOLOR_HTML_ATTRIBUTE_VALUE}]*/
+    box-shadow: 2px 2px 2px rgba(0, 0, 255, 0.25); /*[2px 2px 2px {VSFONTCOLOR_HTML_ATTRIBUTE_VALUE rgba(0.25)}]*/
+}
+
+/* Css styling for editable text sections */
+.BPT-DataTreeItem-Value > .BPT-HTML-CSS-Value[data-uid],
+.BPT-DataTreeItem-Value > .BPT-HTML-Value[data-uid],
+.BPT-HTML-Value[data-attrName],
+.BPT-HTML-Text {
+    cursor: text;
+}
+
+::selection {
+	background-color: rgba(0, 0, 255, 0.5); /*[{VSFONTCOLORBACKGROUND_SELECTED_TEXT rgba(0.5)}]*/
+}
+
+/*+VWD*/
+#callStackTabButton {
+    position: relative;
+}
+
+    #callStackTabButton .overlay {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+    }
+
+.callStackTabHighlight {
+    border-bottom: 2px solid pink; /*[2px solid {PAGEINSPECTOR_DYNAMIC_ELEMENT}]*/
+}
+
+#callStackView .BPT-DataTree-Container {
+    font-family: "Segoe UI", Arial, Sans-Serif; /*[{VSFONTFAMILY_ENVIRONMENT} , Arial, Sans-Serif]*/
+    font-size: 9pt; /*[{VSFONTSIZE_ENVIRONMENT}]*/
+    font-weight: "normal"; /*[{VSFONTWEIGHT_ENVIRONMENT}]*/
+    color: #000000; /*[{VSCOLOR_TOOLWINDOW_TEXT}]*/   
+    margin-top: -2px;
+}
+
+#callstackMessages {
+    padding: 0.5em;
+    font-family: "Segoe UI", Arial, Sans-Serif; /*[{VSFONTFAMILY_ENVIRONMENT} , Arial, Sans-Serif]*/
+    font-size: 9pt; /*[{VSFONTSIZE_ENVIRONMENT}]*/
+}
+
+#callstackFeatureDisabled .enableLink {
+    cursor: pointer;
+    color: blue; /*[{VSCOLOR_PANEL_HYPERLINK}]*/
+}
+
+#callstackFeatureDisabled .enableLink:hover {
+    text-decoration: underline;
+}
+
+.BPT-HTML-JS-Library-Root, .BPT-HTML-JS-Library {
+    color: #666;
+}
+
+/*-VWD*/

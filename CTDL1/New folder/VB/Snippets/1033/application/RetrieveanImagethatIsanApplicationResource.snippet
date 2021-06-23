@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Retrieve an Image that Is an Application Resource</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Assigns an image resource in the My Application designer to the PictureBox1's Image property.</Description>
+      <Shortcut>appImage</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>pictureBox</ID>
+          <Type>PictureBox</Type>
+          <ToolTip>The PictureBox object displaying the image resource.</ToolTip>
+          <Default>PictureBox1</Default>
+        </Object>
+        <Object>
+          <ID>resourceName</ID>
+          <Type>Object</Type>
+          <ToolTip>Replace with resource name created in the My.Application designer.</ToolTip>
+          <Default>ImageResource</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[$pictureBox$.Image = My.Resources.$resourceName$
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

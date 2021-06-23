@@ -1,0 +1,41 @@
+[$RootKey$\Help]
+"AskAQuestionUrl"="http://go.microsoft.com/fwlink/?LinkId=149052&clcid=%VSSPV_LCID_HEX%"
+"SendFeedbackUrl"="http://go.microsoft.com/fwlink/?LinkId=149053&clcid=%VSSPV_LCID_HEX%"
+[$RootKey$\DiagnosticsProviders\{9FF69326-DD81-4E95-9AA5-FB66FF7A43C0}]
+@="#13035"
+"Package"="{DA9FB551-C724-11d0-AE1F-00A0C90FFFC3}"
+[$RootKey$\DiagnosticsProviders\{9FF69326-DD81-4E95-9AA5-FB66FF7A43C0}\Views\0]
+"ViewFactory"="{08AD9D3F-5023-4BF1-905E-AAA0EC595941}"
+"View"=dword:00000004
+[$RootKey$\DiagnosticsProviders\{4911FED0-9934-4B69-AD68-19578792376C}]
+@="#13034"
+"Package"="{DA9FB551-C724-11d0-AE1F-00A0C90FFFC3}"
+[$RootKey$\DiagnosticsProviders\{2B919E73-CDE4-4357-9567-7777B0F3D13E}]
+@="#13036"
+"Package"="{DA9FB551-C724-11d0-AE1F-00A0C90FFFC3}"
+[$RootKey$\DiagnosticsProviders\{2B919E73-CDE4-4357-9567-7777B0F3D13E}\Views\0]
+"ViewFactory"="{08AD9D3F-5023-4BF1-905E-AAA0EC595941}"
+"View"=dword:00000005
+[$RootKey$\DiagnosticsProviders\{3EBAFB43-D756-4BAF-BAA7-307801835167}]
+@="#14379"
+"Package"="{DA9FB551-C724-11d0-AE1F-00A0C90FFFC3}"
+[$RootKey$\StartPage]
+"NewsChannel"="http://go.microsoft.com/fwlink/?linkid=87676&clcid=%VSSPV_LCID_HEX%"
+[$RootKey$\Projects\{AA11600A-52BD-49B1-86B1-B5F35331F9FA}]
+"Language(VsTemplate)"="Extensibility"
+"DisplayProjectType(VsTemplate)"="#14341"
+"Package"="{4DB90D39-D5C9-4E11-85D3-C77668F19CC4}"
+"ProjectTemplatesDir"="$ShellFolder$\Common7\IDE\Extensibility Projects"
+[$RootKey$\NewProjectTemplates\TemplateDirs\{4DB90D39-D5C9-4E11-85D3-C77668F19CC4}\/1]
+@="#14341"
+"SortPriority"=dword:00000050
+"Folder"="{DCF2A94A-45B0-11D1-ADBF-00C04FB6BE4C}"
+"TemplatesDir"="$ShellFolder$\Common7\IDE\Extensibility Projects"
+[$RootKey$\Packages\{4DB90D39-D5C9-4E11-85D3-C77668F19CC4}\SatelliteDll]
+"DllName"="msenvui.dll"
+"Path"="$ShellFolder$\Common7\IDE"
+[$RootKey$\ToolsOptionsPages\Environment\Add-in Security]
+"Page"="{3D78C475-633E-4856-BC54-374543911C73}"
+"Package"="{DA9FB551-C724-11D0-AE1F-00A0C90FFFC3}"
+"Keywords"="#14986"
+@="#14639"

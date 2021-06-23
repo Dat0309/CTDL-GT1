@@ -1,0 +1,20 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="375" />
+    <TemplateID>SharePoint16ClientWebPartPageForWeb_CS_ITEM</TemplateID>
+    <ProjectType>CSharp</ProjectType>
+    <Hidden>true</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem TargetFileName="$fileinputname$.aspx.cs" ReplaceParameters="true" OpenInEditor="false">Default.aspx.cs</ProjectItem>
+    <ProjectItem TargetFileName="$fileinputname$.aspx.designer.cs" ReplaceParameters="true" OpenInEditor="false">Default.aspx.designer.cs</ProjectItem>
+    <ProjectItem TargetFileName="$fileinputname$.aspx" ReplaceParameters="true" OpenInEditor="true">Default.aspx</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="$loc_client_web_part_page_script_comment_1$" _locID="$loc_client_web_part_page_script_comment_1$" _locAttrData="Value" Value="Set the style of the client web part page to be consistent with the host web." />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.GenericWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

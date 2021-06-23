@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Spell Check a Document</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Checks the spelling in a Word document.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Word.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Word = Microsoft.Office.Interop.Word</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>ignoreUppercase</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True to ignore words that are ALL UPPERCASE. If this argument is omitted, the current value of the IgnoreUppercase property is used.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>alwaysSuggest</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolen value. True for Word to always suggest alternative spellings. If this argument is omitted, the current value of the SuggestSpellingCorrections property is used.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>customDictionary10</ID>
+          <Type>Dictionary</Type>
+          <ToolTip>Replace with either an expression that returns a Dictionary or the file name of an additional custom dictionary. You can specify as many as nine additional dictionaries.</ToolTip>
+          <Default>customDictionary10</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>customDictionary</ID>
+          <Type>Dictionary</Type>
+          <ToolTip>Replace with either an expression that returns a Dictionary object or the file name of the custom dictionary. Optional. Leave empty to omit.</ToolTip>
+          <Default>customDictionary</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>document</ID>
+          <Type>Microsoft.Office.Interop.Word.Document</Type>
+          <ToolTip>Replace with the document to check the spelling in.</ToolTip>
+          <Default>document</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>customDictionary2</ID>
+          <Type>Dictionary</Type>
+          <ToolTip>Replace with either an expression that returns a Dictionary or the file name of an additional custom dictionary. You can specify as many as nine additional dictionaries.</ToolTip>
+          <Default>customDictionary2</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>customDictionary3</ID>
+          <Type>Dictionary</Type>
+          <ToolTip>Replace with either an expression that returns a Dictionary or the file name of an additional custom dictionary. You can specify as many as nine additional dictionaries.</ToolTip>
+          <Default>customDictionary3</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>customDictionary4</ID>
+          <Type>Dictionary</Type>
+          <ToolTip>Replace with either an expression that returns a Dictionary or the file name of an additional custom dictionary. You can specify as many as nine additional dictionaries.</ToolTip>
+          <Default>customDictionary4</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>customDictionary5</ID>
+          <Type>Dictionary</Type>
+          <ToolTip>Replace with either an expression that returns a Dictionary or the file name of an additional custom dictionary. You can specify as many as nine additional dictionaries.</ToolTip>
+          <Default>customDictionary5</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>customDictionary6</ID>
+          <Type>Dictionary</Type>
+          <ToolTip>Replace with either an expression that returns a Dictionary or the file name of an additional custom dictionary. You can specify as many as nine additional dictionaries.</ToolTip>
+          <Default>customDictionary6</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>customDictionary7</ID>
+          <Type>Dictionary</Type>
+          <ToolTip>Replace with either an expression that returns a Dictionary or the file name of an additional custom dictionary. You can specify as many as nine additional dictionaries.</ToolTip>
+          <Default>customDictionary7</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>customDictionary8</ID>
+          <Type>Dictionary</Type>
+          <ToolTip>Replace with either an expression that returns a Dictionary or the file name of an additional custom dictionary. You can specify as many as nine additional dictionaries.</ToolTip>
+          <Default>customDictionary8</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>customDictionary9</ID>
+          <Type>Dictionary</Type>
+          <ToolTip>Replace with either an expression that returns a Dictionary or the file name of an additional custom dictionary. You can specify as many as nine additional dictionaries.</ToolTip>
+          <Default>customDictionary9</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="" Delimiter="$"><![CDATA[
+$document$.CheckSpelling( CustomDictionary:=$customDictionary$, _
+						  IgnoreUppercase:=$ignoreUppercase$, _ 
+						  AlwaysSuggest:=$alwaysSuggest$ _
+						  CustomDictionary2:=$customDictionary2$, _
+						  CustomDictionary3:=$customDictionary3$, _
+						  CustomDictionary4:=$customDictionary4$, _
+						  CustomDictionary5:=$customDictionary5$, _
+						  CustomDictionary6:=$customDictionary6$, _
+						  CustomDictionary7:=$customDictionary7$, _
+						  CustomDictionary8:=$customDictionary8$, _
+						  CustomDictionary9:=$customDictionary9$, _
+						  CustomDictionary10:=$customDictionary10$,);
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

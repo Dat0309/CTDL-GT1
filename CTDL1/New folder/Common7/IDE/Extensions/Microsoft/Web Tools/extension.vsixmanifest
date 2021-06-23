@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="0AC2ABB1-6383-4608-BA51-B58A23DD9E8A" Version="12.5.60612.0" Language="en-US" Publisher="Microsoft" />
+    <Icon>icon32.png</Icon>
+    <DisplayName>Microsoft ASP.NET and Web Tools</DisplayName>
+    <Description xml:space="preserve">Provides the latest Web Developer Tools for ASP.NET</Description>
+    <Tags>Visual Studio Web Developer Tools</Tags>
+  </Metadata>
+  <Installation InstalledByMsi="true" AllUsers="true">
+    <InstallationTarget Id="Microsoft.VisualStudio.IntegratedShell" Version="11.0" />
+  </Installation>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.Assembly" Path="Languages\Microsoft.JSON.Core.dll" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="Languages\Microsoft.VisualStudio.JSON.Package.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="Page Inspector\Microsoft.Microsoft.VisualStudio.MEFComponent.Web.PageInspector.VsPackage.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="Publish\Microsoft.VisualStudio.Web.Publish.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="Publish\VSPropertyPage_Reg.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="PasteJsonAsClasses\PasteJsonAsClasses.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="Project\Microsoft.VisualStudio.Web.Project.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="Scaffolding\Microsoft.AspNet.Scaffolding.VSExtension.12.0.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="WindowsAzure\Microsoft.VisualStudio.Web.WindowsAzure.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="Page Inspector\Microsoft.VisualStudio.Web.PageInspector.Package.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="Languages\Microsoft.VisualStudio.JavaScript.Web.Extensions.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="Languages\Microsoft.JSON.Editor.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="Languages\Microsoft.VisualStudio.JSON.Package.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="Languages\Microsoft.VisualStudio.Web.Extensions.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="Publish\Microsoft.VisualStudio.Web.Publish.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="PasteJsonAsClasses\Microsoft.VisualStudio.Web.PasteJson.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="Scaffolding\Microsoft.AspNet.Scaffolding.12.0.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="Scaffolding\Microsoft.AspNet.Scaffolding.EntityFramework.12.0.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="Scaffolding\Microsoft.AspNet.Scaffolding.VSExtension.12.0.dll" />
+  </Assets>
+</PackageManifest>

@@ -1,0 +1,5 @@
+﻿<Action Name="$safeitemname$" ClassName="$ProjectNamespace$.$SafeActivityName$" Category="Custom" AppliesTo="all">
+  <RuleDesigner Sentence="$loc_actions4_sentence$">
+    <!-- $loc_actions4_comment$ -->
+  </RuleDesigner>
+</Action>

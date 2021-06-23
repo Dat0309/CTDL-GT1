@@ -1,0 +1,35 @@
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>LightSwitch CSharp Client project template</Name>
+    <Description>Project template for LightSwitch CSharp subproject</Description>
+    <Icon Package="{e1ca83b9-2035-465f-8a04-737358829f65}" ID="3100" />
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>LightSwitch</ProjectSubType>
+    <TemplateID>Microsoft.LightSwitch.BlankClientProject.SL.CS.V4</TemplateID>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Client</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <RequiredFrameworkVersion>4.5</RequiredFrameworkVersion>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <Hidden>true</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <CustomParameters>
+      <CustomParameter Name="$ClientProjectName$" />
+      <CustomParameter Name="$ClientProjectSuffix$" Value="" />
+      <CustomParameter Name="$ServerProjectReference$" />
+    </CustomParameters>
+    <Project File="Client.csproj" ReplaceParameters="true">
+      <!-- Client project -->
+      <ProjectItem TargetFileName="Properties\AssemblyInfo.cs" ReplaceParameters="true">Client.AssemblyInfo.cs</ProjectItem>
+      <ProjectItem TargetFileName="Properties\Client.lsml" ReplaceParameters="true">Client.lsml</ProjectItem>
+      <ProjectItem TargetFileName="Properties\AppManifest.xml" ReplaceParameters="true">AppManifest.xml</ProjectItem>
+      <ProjectItem TargetFileName="Properties\OutOfBrowserSettings.xml" ReplaceParameters="true">OutOfBrowserSettings.xml</ProjectItem>
+      <ProjectItem TargetFileName="Properties\Config.xml" ReplaceParameters="true">Config.xml</ProjectItem>
+      <ProjectItem TargetFileName="default.htm" ReplaceParameters="true">default.htm</ProjectItem>
+      <ProjectItem TargetFileName="Silverlight.js">Silverlight.js</ProjectItem>
+      <Folder Name="Screens\"/>
+    </Project>
+  </TemplateContent>
+ 
+</VSTemplate>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Write to a Binary File</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Writes bytes to a binary file.</Description>
+      <Shortcut>filWriteBin</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>byteArray</ID>
+          <Type>Object</Type>
+          <ToolTip>Replace with Byte().</ToolTip>
+          <Default>{244, 123, 56, 34}</Default>
+        </Literal>
+        <Literal>
+          <ID>FileName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with filename and path.</ToolTip>
+          <Default>"C:\Output.bin"</Default>
+        </Literal>
+        <Literal>
+          <ID>IsAppend</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Choose "True" to append to the file, or "False" to overwrite the file.</ToolTip>
+          <Default>True</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim fileContents() As Byte = $byteArray$
+My.Computer.FileSystem.WriteAllBytes($FileName$, fileContents, $IsAppend$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Find a Menu Item</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Finds a menu item in a Word or Excel command bar.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>office.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Office = Microsoft.Office.Core</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>controlType</ID>
+          <Type>Office.MsoControlType</Type>
+          <ToolTip>Replace with the type of control to find. One of the Office.MsoControlType values, or leave empty to omit.</ToolTip>
+          <Default>msoControlPopup</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>controlId</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with the identifier of the control, for built-in items. For custom menu items, use the ID at creation or leave empty.</ToolTip>
+          <Default>1234</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>controlTag</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the tag value of the control, or leave empty to omit.</ToolTip>
+          <Default>"ControlTag"</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>visible</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True to search only visible controls.</ToolTip>
+          <Default>False</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>recursive</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True to search the supplied command bar and all sub-command bars. This parameter is ignored if a CommandBars collection is used.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>menuItem</ID>
+          <Type>Microsoft.Office.Core.CommandBarControl</Type>
+          <ToolTip>Replace with a variable to hold the menu item. If the menu item is not found, it will be set to null.</ToolTip>
+          <Default>menuItem</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>commandBar</ID>
+          <Type>Microsoft.Office.Core.CommandBar</Type>
+          <ToolTip>Replace with the command bar to search. Can also be a CommandBars collection.</ToolTip>
+          <Default>commandBar</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="" Delimiter="$"><![CDATA[
+$menuItem$ = $commandBar$.FindControl( Type:=$controlType$, _
+									   Id:=$controlId$, _
+									   Tag:=$controlTag$, _
+									   Visible:=$visible$, _
+									   Recursive:=$recursive$)
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

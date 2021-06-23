@@ -1,0 +1,20 @@
+﻿[OPTIONS]
+CONTENTS=main_index
+TITLE=[!output PROJECT_NAME] 控制項說明
+COMPRESS=true
+WARNING=2
+HLP=[!output PROJECT_NAME].hlp
+ERRORLOG=[!output PROJECT_NAME].log
+
+[FILES]
+hlp\[!output PROJECT_NAME].rtf
+
+[BITMAPS]
+; miscellaneous
+hlp\Bullet.bmp
+
+[ALIAS]
+HIDD_ABOUTBOX_[!output UPPER_CASE_SAFE_PROJECT_IDENTIFIER_NAME] = HID_APP_ABOUT_[!output UPPER_CASE_SAFE_PROJECT_IDENTIFIER_NAME]
+
+[MAP]
+#include &lt;hlp\[!output HM_FILE].hm>

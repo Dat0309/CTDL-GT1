@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Add a Menu Item</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Adds a menu item to an Office menu.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Office.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Office = Microsoft.Office.Core</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>controlType</ID>
+          <Type>Office.MsoControlType</Type>
+          <ToolTip>Replace with the type of control to add to the command bar. One of the Office.MsoControlType values.</ToolTip>
+          <Default>msoControlPopup</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>position</ID>
+          <Type>System.Int</Type>
+          <ToolTip>Replace with a number that indicates the position of the new control on the command bar. The new control is inserted before the control at this position. If this argument is omitted, the control is added at the end of the specified command bar.</ToolTip>
+          <Default>1</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>temporary</ID>
+          <Type>System.Bool</Type>
+          <ToolTip>Replace with a Boolean value. True to delete the menu item when the workbook is closed. Word ignores this parameter. Set the CustomizationContext property of the Word document to control the object lifetime in Word.</ToolTip>
+          <Default>true</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>controlTag</ID>
+          <Type>System.String</Type>
+          <ToolTip>Replace with a unique tag value.</ToolTip>
+          <Default>"Control Tag"</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>id</ID>
+          <Type>System.Int</Type>
+          <ToolTip>Rplace with an integer that specifies a built-in control. If the value of this argument is 1, or if this argument is omitted, a blank custom control of the specified type will be added to the command bar.</ToolTip>
+          <Default>1234</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>parameter</ID>
+          <Type>Variant</Type>
+          <ToolTip>For built-in controls, this argument is used by the container application to run the command. For custom controls, you can use this argument to send information to Visual Basic procedures, or you can use it to store information about the control (similar to a second Tag property value).</ToolTip>
+          <Default>parameter</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>menuItem</ID>
+          <Type>Microsoft.Office.Core.CommandBarControl</Type>
+          <ToolTip>Replace with a variable to hold the new menu item.</ToolTip>
+          <Default>menuItem</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>CommandBar</ID>
+          <Type>Microsoft.Office.Core.CommandBar</Type>
+          <ToolTip>Replace with the command bar to add the menu item to.</ToolTip>
+          <Default>CommandBar</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="CSharp" Kind="" Delimiter="$"><![CDATA[
+$menuItem$ = $CommandBar$.Controls.Add( Type:Office.MsoControlType.$controlType$, 
+										Id:$id$, 
+										Parameter:$parameter$, 
+										Before:$position$, 
+										Temporary:$temporary$);
+$menuItem$.Tag = $controlTag$;
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

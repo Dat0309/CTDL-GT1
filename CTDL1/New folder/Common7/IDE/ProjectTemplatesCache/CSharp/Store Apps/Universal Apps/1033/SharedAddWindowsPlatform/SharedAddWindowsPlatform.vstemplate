@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+	<TemplateData>
+		<TemplateID>Microsoft.CS.WinRT.SharedAddWindowsPlatform</TemplateID>
+		<TemplateGroupID>WinRT-Managed</TemplateGroupID>
+		<ProjectType>CSharp</ProjectType>
+		<TargetPlatformName>Windows</TargetPlatformName>
+		<RequiredPlatformVersion>8.1</RequiredPlatformVersion>
+		<CreateInPlace>true</CreateInPlace>
+		<CreateNewFolder>false</CreateNewFolder>
+		<ProvideDefaultName>true</ProvideDefaultName>
+		<PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+		<Hidden>true</Hidden>
+		<SpecialTemplateType>EmptyNode</SpecialTemplateType>
+		<AppliesTo>App</AppliesTo>
+	</TemplateData>
+	<TemplateContent>
+		<Project File="Windows.Application.Windows.csproj" ReplaceParameters="true">
+			<Folder Name="Assets">
+				<ProjectItem ReplaceParameters="false" TargetFileName="Logo.scale-100.png">Logo.png</ProjectItem>
+				<ProjectItem ReplaceParameters="false" TargetFileName="SmallLogo.scale-100.png">SmallLogo.png</ProjectItem>
+				<ProjectItem ReplaceParameters="false" TargetFileName="SplashScreen.scale-100.png">SplashScreen.png</ProjectItem>
+				<ProjectItem ReplaceParameters="false" TargetFileName="StoreLogo.scale-100.png">StoreLogo.png</ProjectItem>
+			</Folder>
+			<Folder Name="Properties">
+				<ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">Windows.AssemblyInfo.cs</ProjectItem>
+			</Folder>
+			<ProjectItem ReplaceParameters="true" TargetFileName="App.xaml">Windows.App.xaml</ProjectItem>
+			<ProjectItem ReplaceParameters="true" OpenInEditor="true" BlendOpenInEditor="false" TargetFileName="App.xaml.cs">Windows.App.xaml.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true" TargetFileName="MainPage.xaml">Windows.MainPage.xaml</ProjectItem>
+			<ProjectItem ReplaceParameters="true" TargetFileName="MainPage.xaml.cs">Windows.MainPage.xaml.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true" TargetFileName="Package.appxmanifest">Package-managed.appxmanifest</ProjectItem>
+			<ProjectItem ReplaceParameters="false" TargetFileName="$projectname$_TemporaryKey.pfx" BlendDoNotCreate="true">Windows.TemporaryKey.pfx</ProjectItem>
+		</Project>
+	</TemplateContent>
+	<WizardExtension>
+		<Assembly>Microsoft.VisualStudio.WinRT.TemplateWizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+		<FullClassName>Microsoft.VisualStudio.WinRT.TemplateWizards.CreateProjectCertificate.Wizard</FullClassName>
+	</WizardExtension>
+</VSTemplate>

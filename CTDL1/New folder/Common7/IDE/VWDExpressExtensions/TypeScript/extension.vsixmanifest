@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="Microsoft.TypeScript.3D12078A-1A3F-4AFF-8B70-0037C0F580CD">
+    <Name>TypeScript for Microsoft Visual Studio</Name>
+    <Author>Microsoft</Author>
+    <Version>1.0.5.0</Version>
+    <Description xml:space="preserve">Language service for TypeScript</Description>
+    <Locale>1033</Locale>
+    <AllUsers>true</AllUsers>
+    <License>TypeScript_License.rtf</License>
+    <InstalledByMsi>true</InstalledByMsi>
+    <SystemComponent>true</SystemComponent>
+    <SupportedProducts>
+      <VisualStudio Version="10.0">
+        <Edition>Pro</Edition>
+        <Edition>VWDExpress</Edition>
+      </VisualStudio>
+      <VisualStudio Version="11.0">
+        <Edition>Pro</Edition>
+        <Edition>VWDExpress</Edition>
+      </VisualStudio>
+      <VisualStudio Version="12.0">
+        <Edition>Pro</Edition>
+        <Edition>VWDExpress</Edition>
+        <Edition>VSWinExpress</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+  </Identifier>
+  <References />
+  <Content>
+    <VsPackage>|%CurrentProject%;PkgdefProjectOutputGroup|</VsPackage>
+    <MefComponent>TypeScriptLanguageService.dll</MefComponent>
+    <ProjectTemplate>PT</ProjectTemplate>
+    <ItemTemplate>IT</ItemTemplate>
+  </Content>
+</Vsix>

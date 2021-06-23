@@ -1,0 +1,28 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="ProjectGroup">
+  <TemplateData>
+    <Name Package="{7D4626A3-18C3-43A4-A66C-169D1D609803}" ID="1136" />
+    <Description Package="{7D4626A3-18C3-43A4-A66C-169D1D609803}" ID="1137" />
+    <ProjectType>VC</ProjectType>
+    <TemplateID>Microsoft.WindowsPhone.VC.PhoneDirect3DXamlApp.Project</TemplateID>
+    <TemplateGroupID>Windows Phone</TemplateGroupID>
+    <SortOrder>1110</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>PhoneDirect3DXamlApp</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <TargetPlatformName>Windows Phone</TargetPlatformName>
+    <!--<RequiredPlatformVersion>8</RequiredPlatformVersion>-->
+    <Icon>__TemplateIcon.ico</Icon>
+    <PreviewImage>preview.png</PreviewImage>
+    <Hidden>true</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+      <ProjectTemplateLink ProjectName="$projectname$">Direct3DBackgroundInterop\Direct3DBackgroundInterop.vstemplate</ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$projectname$Component">Direct3DBackgroundComponent\Direct3DBackgroundComponent.vstemplate</ProjectTemplateLink>
+    </ProjectCollection>
+  </TemplateContent>
+</VSTemplate>

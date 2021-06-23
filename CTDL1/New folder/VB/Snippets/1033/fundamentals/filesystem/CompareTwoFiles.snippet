@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Compare Two Files</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Compares two files.</Description>
+      <Shortcut>filComp</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.IO</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="VB" Kind="method decl"><![CDATA[Private Function CompareFiles(ByVal file1 As String, ByVal file2 As String) As Boolean
+        ' Set to true if the files are equal; false otherwise
+        Dim filesAreEqual As Boolean = False
+
+        With My.Computer.FileSystem
+            ' Ensure that the files are the same length before comparing them line by line.
+            If .GetFileInfo(file1).Length = .GetFileInfo(file2).Length Then
+                Using file1Reader As New FileStream(file1, FileMode.Open), _
+                      file2Reader As New FileStream(file2, FileMode.Open)
+                    Dim byte1 As Integer = file1Reader.ReadByte()
+                    Dim byte2 As Integer = file2Reader.ReadByte()
+                    ' If byte1 or byte2 is a negative value, we have reached the end of the file.
+                    While byte1 >= 0 AndAlso byte2 >= 0
+                        If (byte1 <> byte2) Then
+                            filesAreEqual = False
+                            Exit While
+                        Else
+                            filesAreEqual = True
+                        End If
+                        ' Read the next byte.
+                        byte1 = file1Reader.ReadByte()
+                        byte2 = file2Reader.ReadByte()
+                    End While
+                End Using
+            End If
+        End With
+
+        Return filesAreEqual
+    End Function]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

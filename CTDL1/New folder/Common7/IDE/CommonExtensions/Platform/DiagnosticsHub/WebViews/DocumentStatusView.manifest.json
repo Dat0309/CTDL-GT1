@@ -1,0 +1,14 @@
+﻿{
+    "start_url": "DocumentStatusView.html",
+    "domain": "http://microsoft.com",
+    "name": "DocumentStatusView",
+    "file_aliases": {
+        "DiagnosticsHub.DataWarehouseHost": {}
+    },
+    "resource_aliases": {
+        "DiagnosticsHubResources": {
+            "path": "DiagnosticsHub.Javascript.ScriptResources",
+            "is_default": true
+        }
+    }
+}

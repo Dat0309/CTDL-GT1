@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<xsd:schema xmlns='http://schemas.microsoft.com/intellisense/angular'
+      xmlns:xsd='http://www.w3.org/2001/XMLSchema'
+      targetNamespace='http://schemas.microsoft.com/intellisense/angular'
+      xmlns:vs='http://schemas.microsoft.com/Visual-Studio-Intellisense'
+      vs:ishtmlschema="true"
+      vs:isserverschema="false"
+      vs:htmlflavor="5.0"
+      vs:SuccinctFriendlyName="AngularJS"
+      vs:issupplemental="true"
+      vs:customattrprefix="ng-"
+      vs:addattributesfromusage="true">
+
+  <xsd:annotation>
+    <xsd:documentation>
+      Microsoft Visual Studio schema for AngularJS
+    </xsd:documentation>
+  </xsd:annotation>
+
+  <xsd:element name="___all___">
+    <xsd:complexType>
+      <xsd:attribute name="ng-animate" vs:category="Angular" />
+      <xsd:attribute name="ng-app" vs:category="Angular" vs:standalone="anyvalue" />
+      <xsd:attribute name="ng-bind" vs:category="Angular" />
+      <xsd:attribute name="ng-bind-html" vs:category="Angular" />
+      <xsd:attribute name="ng-bind-template" vs:category="Angular" />
+      <xsd:attribute name="ng-change" vs:category="Angular" />
+      <xsd:attribute name="ng-class" vs:category="Angular" />
+      <xsd:attribute name="ng-class-even" vs:category="Angular" />
+      <xsd:attribute name="ng-class-odd" vs:category="Angular" />
+      <xsd:attribute name="ng-click" vs:category="Angular" />
+      <xsd:attribute name="ng-cloak" vs:category="Angular" vs:standalone="true" />
+      <xsd:attribute name="ng-controller" vs:category="Angular" />
+      <xsd:attribute name="ng-dblclick" vs:category="Angular" />
+      <xsd:attribute name="ng-form" vs:category="Angular" />
+      <xsd:attribute name="ng-hide" vs:category="Angular" />
+      <xsd:attribute name="ng-include" vs:category="Angular" />
+      <xsd:attribute name="ng-init" vs:category="Angular" />
+      <xsd:attribute name="ng-keydown" vs:category="Angular" />
+      <xsd:attribute name="ng-keypress" vs:category="Angular" />
+      <xsd:attribute name="ng-keyup" vs:category="Angular" />
+      <xsd:attribute name="ng-message" vs:category="Angular" />
+      <xsd:attribute name="ng-messages" vs:category="Angular" />
+      <xsd:attribute name="ng-model" vs:category="Angular" vs:standalone="anyvalue" />
+      <xsd:attribute name="ng-mousedown" vs:category="Angular" />
+      <xsd:attribute name="ng-mouseenter" vs:category="Angular" />
+      <xsd:attribute name="ng-mouseleave" vs:category="Angular" />
+      <xsd:attribute name="ng-mousemove" vs:category="Angular" />
+      <xsd:attribute name="ng-mouseover" vs:category="Angular" />
+      <xsd:attribute name="ng-mouseup" vs:category="Angular" />
+      <xsd:attribute name="ng-non-bindable" vs:category="Angular" vs:standalone="true" />
+      <xsd:attribute name="ng-open" vs:category="Angular" />
+      <xsd:attribute name="ng-options" vs:category="Angular" />
+      <xsd:attribute name="ng-pluralize" vs:category="Angular" />
+      <xsd:attribute name="ng-repeat" vs:category="Angular" />
+      <xsd:attribute name="ng-required" vs:category="Angular" />
+      <xsd:attribute name="ng-show" vs:category="Angular" />
+      <xsd:attribute name="ng-style" vs:category="Angular" />
+      <xsd:attribute name="ng-swipe-left" vs:category="Angular" />
+      <xsd:attribute name="ng-swipe-right" vs:category="Angular" />
+      <xsd:attribute name="ng-switch" vs:category="Angular" vs:standalone="true" />
+      <xsd:attribute name="ng-switch-when" vs:category="Angular" />
+      <xsd:attribute name="ng-transclude" vs:category="Angular" vs:standalone="true" />
+      <xsd:attribute name="ng-trim" vs:category="Angular" vs:standalone="true" />
+      <xsd:attribute name="ng-view" vs:category="Angular" vs:standalone="true" />
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="input" type="formelements" />
+  <xsd:element name="button" type="formelements" />
+  <xsd:element name="select" type="formelements" />
+  <xsd:element name="textarea" type="formelements" />
+
+  <xsd:complexType name="formelements">
+    <xsd:attribute name="ng-checked" vs:category="Angular" />
+    <xsd:attribute name="ng-disabled" vs:category="Angular" />
+    <xsd:attribute name="ng-list" vs:category="Angular" />
+    <xsd:attribute name="ng-maxlength" vs:category="Angular" type="xsd:nonNegativeInteger" />
+    <xsd:attribute name="ng-minlength" vs:category="Angular" type="xsd:nonNegativeInteger" />
+    <xsd:attribute name="ng-multiple" vs:category="Angular" />
+    <xsd:attribute name="ng-readonly" vs:category="Angular" vs:standalone="true" />
+    <xsd:attribute name="ng-false-value" vs:category="Angular" />
+    <xsd:attribute name="ng-true-value" vs:category="Angular" />
+    <xsd:attribute name="ng-pattern" vs:category="Angular" />
+  </xsd:complexType>
+
+  <xsd:element name="form">
+    <xsd:complexType>
+      <xsd:attribute name="ng-dirty" vs:category="Angular" vs:standalone="true" />
+      <xsd:attribute name="ng-invalid" vs:category="Angular" vs:standalone="true" />
+      <xsd:attribute name="ng-pristine" vs:category="Angular" vs:standalone="true" />
+      <xsd:attribute name="ng-submit" vs:category="Angular" />
+      <xsd:attribute name="ng-valid" vs:category="Angular" vs:standalone="true" />
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="option">
+    <xsd:complexType>
+      <xsd:attribute name="ng-selected" vs:category="Angular" />
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="html">
+    <xsd:complexType>
+      <xsd:attribute name="ng-csp" vs:category="Angular" vs:standalone="true" />
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="a">
+    <xsd:complexType>
+      <xsd:attribute name="ng-href" vs:category="Angular" />
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="img">
+    <xsd:complexType>
+      <xsd:attribute name="ng-src" vs:category="Angular" />
+      <xsd:attribute name="ng-srcset" vs:category="Angular" />
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

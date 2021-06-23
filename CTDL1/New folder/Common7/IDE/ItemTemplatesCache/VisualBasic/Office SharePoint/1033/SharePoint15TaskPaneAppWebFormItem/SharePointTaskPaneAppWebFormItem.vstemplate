@@ -1,0 +1,67 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    
+    <TemplateID>SharePoint15TaskPaneAppWebFormItem_VB_ITEM</TemplateID>
+    <ProjectType>VisualBasic</ProjectType>
+    <DefaultName>WebForm.aspx</DefaultName>
+    <Hidden>true</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="Content\SharePointProjectItem.spdata">Content\SharePointProjectItem_sharepoint.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="Images\SharePointProjectItem.spdata">Images\SharePointProjectItem_sharepoint.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="$fileinputname$\SharePointProjectItem.spdata">SharePointTaskPaneAppWebFormItem\SharePointTaskPaneAppWebFormItem_sharepoint.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="Scripts\SharePointProjectItem.spdata">Scripts\SharePointProjectItem_sharepoint.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="Content\Elements.xml">Content\Elements_sharepoint.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="Content\Office.css">Content\Office.css</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="Images\Elements.xml">Images\Elements_sharepoint.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="false" OpenInEditor="false" TargetFileName="Images\Close.png">Images\Close.png</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="$fileinputname$\Elements.xml">SharePointTaskPaneAppWebFormItem\Elements_sharepoint.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="$fileinputname$\App.css">SharePointTaskPaneAppWebFormItem\App.css</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="$fileinputname$\Home\Home.css">SharePointTaskPaneAppWebFormItem\Home\Home.css</ProjectItem>
+
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="$fileinputname$\App.js">SharePointTaskPaneAppWebFormItem\App.js</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="$fileinputname$\Home\Home.js">SharePointTaskPaneAppWebFormItem\Home\Home.js</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="true" TargetFileName="$fileinputname$\Home\Home.html">SharePointTaskPaneAppWebFormItem\Home\Home.html</ProjectItem>
+
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="Scripts\Elements.xml">Scripts\Elements_sharepoint.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="Scripts\_officeintellisense.js">Scripts\_officeintellisense.js</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="Scripts\Office\MicrosoftAjax.js">Scripts\Office\MicrosoftAjax.js</ProjectItem>
+
+    <CustomParameters>
+      <CustomParameter Name="$JQueryJsPath$" Value="$JQueryJsPath$"/>
+      <CustomParameter Name="$MicrosoftAjaxJsPath$" Value="$MicrosoftAjaxJsPath$"/>
+      <CustomParameter Name="$OfficeJsPath$" Value="$OfficeJsPath$"/>
+      <CustomParameter Name="$loc_app_css_1$" _locID="$loc_app_css_1$" _locAttrData="Value" Value="Common app styling" />
+      <CustomParameter Name="$loc_app_css_2$" _locID="$loc_app_css_2$" _locAttrData="Value" Value="Fixed header height" />
+      <CustomParameter Name="$loc_app_css_3$" _locID="$loc_app_css_3$" _locAttrData="Value" Value="Disable scrollbars for header" />
+      <CustomParameter Name="$loc_app_css_4$" _locID="$loc_app_css_4$" _locAttrData="Value" Value="Same value as #content-header's height" />
+      <CustomParameter Name="$loc_app_css_5$" _locID="$loc_app_css_5$" _locAttrData="Value" Value="Enable scrollbars within main content section" />
+      <CustomParameter Name="$loc_app_css_6$" _locID="$loc_app_css_6$" _locAttrData="Value" Value="Hidden until invoked" />
+      <CustomParameter Name="$loc_app_initialize$" _locID="$loc_app_initialize$" _locAttrData="Value" Value="Common initialization function (to be called from each page)" />
+      <CustomParameter Name="$loc_app_js_summary$" _locID="$loc_app_js_summary$" _locAttrData="Value" Value="Common app functionality" />
+      <CustomParameter Name="$loc_app_showNotification$" _locID="$loc_app_showNotification$" _locAttrData="Value" Value="After initialization, expose a common notification function" />
+      <CustomParameter Name="$loc_home_button$" _locID="$loc_home_button$" _locAttrData="Value" Value="Get data from selection" />
+      <CustomParameter Name="$loc_home_css$" _locID="$loc_home_css$" _locAttrData="Value" Value="Page-specific styling" />
+      <CustomParameter Name="$loc_home_error$" _locID="$loc_home_error$" _locAttrData="Value" Value="Error:" />
+      <CustomParameter Name="$loc_home_getDataFromSelection$" _locID="$loc_home_getDataFromSelection$" _locAttrData="Value" Value="Reads data from current document selection and displays a notification" />
+      <CustomParameter Name="$loc_home_initialize$" _locID="$loc_home_initialize$" _locAttrData="Value" Value="The initialize function must be run each time a new page is loaded" />
+      <CustomParameter Name="$loc_home_label1$" _locID="$loc_home_label1$" _locAttrData="Value" Value="Add home screen content here." />
+      <CustomParameter Name="$loc_home_label2$" _locID="$loc_home_label2$" _locAttrData="Value" Value="For example:" />
+      <CustomParameter Name="$loc_home_link$" _locID="$loc_home_link$" _locAttrData="Value" Value="Find more samples online..." />
+      <CustomParameter Name="$loc_home_NotificationTitle$" _locID="$loc_home_NotificationTitle$" _locAttrData="Value" Value="The selected text is:" />
+      <CustomParameter Name="$loc_home_scripts$" _locID="$loc_home_scripts$" _locAttrData="Value" Value="To enable offline debugging using a local reference to Office.js, use:" />
+      <CustomParameter Name="$loc_home_title$" _locID="$loc_home_title$" _locAttrData="Value" Value="Welcome" />
+      <CustomParameter Name="$loc_office_css_1$" _locID="$loc_office_css_1$" _locAttrData="Value" Value="Office CSS library" />
+      <CustomParameter Name="$loc_office_css_2$" _locID="$loc_office_css_2$" _locAttrData="Value" Value="Version: 1.0.2.0" />
+      <CustomParameter Name="$loc_office_css_3$" _locID="$loc_office_css_3$" _locAttrData="Value" Value="Base" />
+      <CustomParameter Name="$loc_office_css_4$" _locID="$loc_office_css_4$" _locAttrData="Value" Value="Typography" />
+      <CustomParameter Name="$loc_office_css_5$" _locID="$loc_office_css_5$" _locAttrData="Value" Value="General" />
+      <CustomParameter Name="$loc_office_css_6$" _locID="$loc_office_css_6$" _locAttrData="Value" Value="Forms" />
+      <CustomParameter Name="$loc_office_css_7$" _locID="$loc_office_css_7$" _locAttrData="Value" Value="Scrollbars" />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.OfficeAppWebFormProjectItemWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

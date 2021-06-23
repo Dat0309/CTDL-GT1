@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Draw a Shape with Gradient Fill</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Draws a shape with gradient fill.</Description>
+      <Shortcut>drawGrad</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Windows.Forms</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Drawing</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing.Drawing2D</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>x</ID>
+          <ToolTip>Replace with x-coorditnate of the left side of the rectangle.</ToolTip>
+          <Default>0</Default>
+        </Literal>
+        <Literal>
+          <ID>y</ID>
+          <ToolTip>Replace with y-coorditnate of the top of the rectangle.</ToolTip>
+          <Default>0</Default>
+        </Literal>
+        <Literal>
+          <ID>width</ID>
+          <ToolTip>Replace with width of the rectangle.</ToolTip>
+          <Default>100</Default>
+        </Literal>
+        <Literal>
+          <ID>height</ID>
+          <ToolTip>Replace with the height of the rectangle.</ToolTip>
+          <Default>100</Default>
+        </Literal>
+        <Literal>
+          <ID>color1</ID>
+          <ToolTip>Replace with the first color of the gradient.</ToolTip>
+          <Default>Color.Blue</Default>
+        </Literal>
+        <Literal>
+          <ID>color2</ID>
+          <ToolTip>Replace with the second color of the gradient.</ToolTip>
+          <Default>Color.Black</Default>
+        </Literal>
+        <Literal>
+          <ID>form</ID>
+          <Type>Form</Type>
+          <ToolTip>Replace with form or control to draw the shape on</ToolTip>
+          <Default>Me</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[    Dim rect As New Rectangle($x$, $y$, $width$, $height$)
+    Using gc = $form$.CreateGraphics()
+        Using gradientBrush As New LinearGradientBrush(rect, $color1$, $color2$, LinearGradientMode.Horizontal)
+            gc.FillRectangle(gradientBrush, rect)
+        End Using
+    End Using
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

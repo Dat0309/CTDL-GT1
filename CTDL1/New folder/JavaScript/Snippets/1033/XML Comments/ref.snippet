@@ -1,0 +1,21 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>ref</Title>
+    <Author>Microsoft Corporation</Author>
+    <Shortcut>ref</Shortcut>
+    <Description>Code snippet for a reference XML comment</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>path</ID>
+        <ToolTip>Path to script file</ToolTip>
+        <Default>pathto/script.js</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="JavaScript"><![CDATA[/// <reference path="$path$"/>$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="ProjectGroup">
+  <TemplateData>
+    <Name>허브/피벗 앱(유니버셜 응용 프로그램)</Name>
+    <Description>허브 컨트롤을 사용하는 3페이지로 구성된 Windows용 유니버설 응용 프로그램과 피벗 컨트롤 및 Windows 런타임을 사용하는 Windows Phone 앱용 프로젝트입니다. 전용 페이지에 그룹 및 항목 세부 정보가 표시됩니다.</Description>
+    <Icon>hubpivotuniv.ico</Icon>
+    <TemplateID>Microsoft.JavaScript.HubPivotUniv</TemplateID>
+    <BlendTemplateID>Microsoft.Blend.HubPivotUniversalWWA</BlendTemplateID>
+    <BlendTemplateGroupID>HTML (Universal)</BlendTemplateGroupID>
+    <BlendProjectSubType>WJApplication</BlendProjectSubType>
+    <ProjectType>JavaScript</ProjectType>
+    <DefaultName>HubPivotSharedApp</DefaultName>
+    <TargetPlatformName>Windows</TargetPlatformName>
+    <RequiredPlatformVersion>6.3.1</RequiredPlatformVersion>
+    <CreateInPlace>true</CreateInPlace>
+    <PreviewImage>hubpivotuniv.png</PreviewImage>
+    <CreateNewFolder>true</CreateNewFolder>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <SortOrder>10</SortOrder>
+    <BlendCreateNewFolder>true</BlendCreateNewFolder>
+    <NumberOfParentCategoriesToRollUp>2</NumberOfParentCategoriesToRollUp>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+      <SolutionFolder Name="SharedApp">
+        <ProjectTemplateLink ProjectName="$safeprojectname$.Shared" CopyParameters="true">Shared\hubpivotuniv.Shared.vstemplate</ProjectTemplateLink>
+        <ProjectTemplateLink ProjectName="$safeprojectname$.Windows" CopyParameters="true">Store\hubpivotuniv.Store.vstemplate</ProjectTemplateLink>
+        <ProjectTemplateLink ProjectName="$safeprojectname$.WindowsPhone" CopyParameters="true">Phone\hubpivotuniv.Phone.vstemplate</ProjectTemplateLink>
+      </SolutionFolder>
+    </ProjectCollection>
+  </TemplateContent>
+</VSTemplate>

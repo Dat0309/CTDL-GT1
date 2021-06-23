@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Create a Bitmap at Run Time</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Creates and fills a Bitmap object and displays it in an existing Windows Forms PictureBox control.</Description>
+      <Shortcut>drawBitmap</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Drawing.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>Width</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with width, in pixels, of the bitmap.</ToolTip>
+          <Default>10</Default>
+        </Literal>
+        <Literal>
+          <ID>Height</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with height, in pixels, of the bitmap.</ToolTip>
+          <Default>10</Default>
+        </Literal>
+        <Literal>
+          <ID>pixelColor</ID>
+          <Type>System.Drawing.Color</Type>
+          <ToolTip>Replace with background color for the bitmap.</ToolTip>
+          <Default>Color.White</Default>
+        </Literal>
+        <Object>
+          <ID>control</ID>
+          <Type>PictureBox</Type>
+          <ToolTip>Replace with a Control.</ToolTip>
+          <Default>PictureBox1</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim flag As New Bitmap($Width$, $Height$)
+Dim x As Integer
+Dim y As Integer
+' Make the entire bitmap white.
+For x = 0 To flag.Height - 1
+    For y = 0 To flag.Width - 1
+        flag.SetPixel(x, y, $pixelColor$)
+    Next
+Next
+
+' Draw a diagonal red stripe.
+For x = 0 To flag.Height - 1
+    flag.SetPixel(x, x, Color.Red)
+Next
+$control$.Image = flag
+
+
+            ]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

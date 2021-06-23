@@ -1,0 +1,82 @@
+[$RootKey$\InstalledProducts]
+
+[$RootKey$\InstalledProducts\Microsoft LightSwitch]
+"LogoID"="#300"
+"Package"="{272EA915-68EE-4AFD-99A4-1286126565EC}"
+"ProductDetails"="#2003"
+"UseVSProductID"=dword:00000001
+@="#2002"
+
+[$RootKey$\Menus]
+"{272EA915-68EE-4AFD-99A4-1286126565EC}"=",1000,1"
+
+[$RootKey$\Packages]
+
+[$RootKey$\Packages\{272EA915-68EE-4AFD-99A4-1286126565EC}]
+"Assembly"="Microsoft.LightSwitch.Design.Package, Version=12.1.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"Class"="Microsoft.LightSwitch.VisualStudioIntegration.DesignerPackage.DesignerHostPackage"
+"CodeBase"="$ProgramFiles$\Microsoft SDKs\LightSwitch\v4.5\Design\Microsoft.LightSwitch.Design.Package.dll"
+"CompanyName"="Microsoft Corporation"
+"ID"=dword:00000064
+"InProcServer32"="$System$\mscoree.dll"
+"MinEdition"="Standard"
+"ProductName"="LightSwitch Designer Hosting package"
+"ProductVersion"="4.5"
+@="LightSwitch Designer Hosting package"
+
+[$RootKey$\Packages\{272EA915-68EE-4AFD-99A4-1286126565EC}\SatelliteDll]
+"DllName"="Microsoft.LightSwitch.Design.PackageUI.dll"
+"Path"="$ProgramFiles$\Microsoft SDKs\LightSwitch\v4.5\Design"
+
+[$RootKey$\Packages\{40945F46-894A-4EBE-9B69-8357F2ACD384}]
+"Assembly"="Microsoft.LightSwitch.Design.Package, Version=12.1.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"Class"="Microsoft.LightSwitch.VisualStudioIntegration.DesignerPackage.AssemblyResolverPackage"
+"CodeBase"="$ProgramFiles$\Microsoft SDKs\LightSwitch\v4.5\Design\Microsoft.LightSwitch.Design.Package.dll"
+"CompanyName"="Microsoft Corporation"
+"ID"=dword:00000064
+"InProcServer32"="$System$\mscoree.dll"
+"MinEdition"="Standard"
+"ProductName"="LightSwitch Assembly Resolver Package"
+"ProductVersion"="4.5"
+@="LightSwitch Assembly Resolver Package"
+
+[$RootKey$\BindingPaths\{272EA915-68EE-4AFD-99A4-1286126565EC}]
+"$ProgramFiles$\Microsoft SQL Server\110\DAC\Bin"=""
+
+; Bug 926956:LightSwitch projects fail to load if SSDT for SQL 2014 is installed
+; The temporary fix is to add a devenv.exe.config setting to specify where SSDT 10.3 is located, so LightSwitch can find it correctly.
+; These four entries should be removed when Work Item 927681 is completed.
+[$RootKey$\RuntimeConfiguration\dependentAssembly\codeBase\{1B513482-AC7E-4AFB-8770-CACD333DC5A4}]
+"Name"="Microsoft.SqlServer.Dac.Extensions"
+"PublicKeyToken"="b03f5f7f11d50a3a"
+"Culture"="neutral"
+"Version"="10.3.0.0"
+"CodeBase"="$ProgramFiles$\Microsoft SQL Server\110\DAC\bin\Microsoft.SqlServer.Dac.Extensions.dll"
+
+[$RootKey$\RuntimeConfiguration\dependentAssembly\codeBase\{0347DB76-448F-461D-8A7F-C4FC5CA7BCFE}]
+"Name"="Microsoft.Data.Tools.Schema.Sql"
+"PublicKeyToken"="b03f5f7f11d50a3a"
+"Culture"="neutral"
+"Version"="10.3.0.0"
+"CodeBase"="$ProgramFiles$\Microsoft SQL Server\110\DAC\bin\Microsoft.Data.Tools.Schema.Sql.dll"
+
+[$RootKey$\RuntimeConfiguration\dependentAssembly\codeBase\{808FCF3C-D0D1-413F-A887-4A44522DE50C}]
+"Name"="Microsoft.SqlServer.Dac"
+"PublicKeyToken"="b03f5f7f11d50a3a"
+"Culture"="neutral"
+"Version"="10.3.0.0"
+"CodeBase"="$ProgramFiles$\Microsoft SQL Server\110\DAC\bin\Microsoft.SqlServer.Dac.dll"
+
+[$RootKey$\RuntimeConfiguration\dependentAssembly\codeBase\{E9D78D30-16B9-4C48-81DD-3F7F6F68F3D2}]
+"Name"="Microsoft.Data.Tools.Utilities"
+"PublicKeyToken"="b03f5f7f11d50a3a"
+"Culture"="neutral"
+"Version"="10.3.0.0"
+"CodeBase"="$ProgramFiles$\Microsoft SQL Server\110\DAC\bin\Microsoft.Data.Tools.Utilities.dll"
+
+[$RootKey$\ToolWindows\{3A0B91DE-2DBF-486B-A513-623DFB6D0885}]
+@="{272EA915-68EE-4AFD-99A4-1286126565EC}"
+"Style"="MDI"
+"Name"="Microsoft.LightSwitch.VisualStudioIntegration.DesignerPackage.SpecialDesignerToolWindow"
+"DontForceCreate"=dword:00000001
+"DocumentLikeTool"=dword:00000001

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Query over an inline array</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>A query over an array that is declared inside the query.</Description>
+      <Shortcut>qArrayIn</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>queryResult</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the query.</ToolTip>
+          <Default>query</Default>
+        </Literal>
+        <Literal>
+          <ID>item</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the variable that represents an item from your data source.</ToolTip>
+          <Default>process</Default>
+        </Literal>
+        <Literal>
+          <ID>condition</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the condition for your Where clause.</ToolTip>
+          <Default>>= 50</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $queryResult$ = From $item$ In New Integer() {50, 42, 76, 93, 65, 51, 79} _
+                     Where $item$ $condition$ _
+                     Order By $item$ _
+                     Select $item$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="C4D3BC8D-48FB-495D-BCA3-9539975C0B18" Version="12.0.41012.0" Language="en-us" Publisher="Microsoft Corporation"/>
+    <DisplayName>Microsoft SQL Server Data Tools</DisplayName>
+    <Description>Microsoft SQL Server Data Tools</Description>
+  </Metadata>
+  <Installation Scope="ProductExtension" AllUsers="true" InstalledByMsi="true">
+	<InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="12.0" ProductUpdate="true"/>
+	<InstallationTarget Id="Microsoft.VisualStudio.VWDExpress" Version="12.0" ProductUpdate="true"/>
+	<InstallationTarget Id="Microsoft.VisualStudio.VSWinDesktopExpress" Version="12.0" ProductUpdate="true"/>
+  </Installation>
+  <Dependencies/>
+  <Assets/>
+</PackageManifest>

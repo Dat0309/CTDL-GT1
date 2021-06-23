@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Show Totals Row of List Object</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Show or hide the totals row of an Excel ListObject control.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Excel.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Excel = Microsoft.Office.Interop.Excel</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>value</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True to show the totals row.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>list</ID>
+          <Type>Microsoft.Office.Interop.Excel.ListObject</Type>
+          <ToolTip>Replace with the list object to show or hide the totals row on.</ToolTip>
+          <Default>list</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="" Delimiter="$"><![CDATA[
+$list$.ShowTotals = $value$
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

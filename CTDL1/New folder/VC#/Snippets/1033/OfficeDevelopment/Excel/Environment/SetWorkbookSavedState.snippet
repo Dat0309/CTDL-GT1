@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Set Workbook Saved State</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Sets the saved state of an Excel workbook.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Excel.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Excel = Microsoft.Office.Interop.Excel</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>savedState</ID>
+          <Type>System.Bool</Type>
+          <ToolTip>Replace with a Boolean value. True to mark the document as saved.</ToolTip>
+          <Default>true</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>workbook</ID>
+          <Type>Microsoft.Office.Interop.Excel.Workbook</Type>
+          <ToolTip>Replace with the workbook to set the saved state for.</ToolTip>
+          <Default>workbook</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="CSharp" Kind="" Delimiter="$"><![CDATA[
+$workbook$.Saved = $savedState$;
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

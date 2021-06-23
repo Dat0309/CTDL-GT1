@@ -1,0 +1,724 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<html dir="LTR">
+<head>
+	<title>Assistant Application MFC</title>
+	<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="MSThemeCompatible" content="Yes">
+	<link id="LINKURL" rel="stylesheet" href="../../../../../1036/NewStyles.css">
+</head>
+<body bgcolor="BUTTONFACE" topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0"
+	onload="InitDocument(document);" onkeydown="if (!bValidating) OnKey();" onkeypress="if (!bValidating) OnPress();">
+	<table class="ONE" height="100%" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<col class="LinkPane">
+		<col>
+		<!--OPEN OF INTRODUCTORY INFORMATION TABLE//-->
+		<tr valign="TOP">
+			<td height="79" width="100%" colspan="2">
+				<table class="TWO" border="0" cellpadding="0" cellspacing="0">
+					<col width="12">
+					<col>
+					<col width="12">
+					<tr>
+						<td valign="TOP" height="12" width="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="12" width="12">
+							&nbsp;
+						</td>
+						<td class="IMAGE" valign="BOTTOM" width="110" rowspan="2">
+							<div class="SMALLA" id="COMP_DOC_NONE_IMAGE">
+								<img class="SMALL" src="../../Images/None.gif" width="98" height="70" alt="" border="0">
+							</div>
+							<div class="SMALL" id="CONTAINER_IMAGE">
+								<img class="SMALL" src="../../Images/Container.gif" width="92" height="70" alt=""
+									border="0">
+							</div>
+							<div class="SMALL" id="MINI_SERVER_IMAGE">
+								<img class="SMALL" src="../../Images/MiniServer.gif" width="110" height="70" alt=""
+									border="0">
+							</div>
+							<div class="SMALL" id="FULL_SERVER_IMAGE">
+								<img class="SMALL" src="../../Images/FullServer.gif" width="103" height="70" alt=""
+									border="0">
+							</div>
+							<div class="SMALL" id="CONTAINER_SERVER_IMAGE">
+								<img class="SMALL" src="../../Images/ContainerAndServer.gif" width="103" height="70"
+									alt="" border="0">
+							</div>
+						</td>
+						<td valign="TOP" height="12" width="6" rowspan="2">
+							&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td valign="TOP" height="65" width="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="65">
+							<h4 class="HEAD" id="HEAD">Prise en charge des documents composés</h4>
+							<p class="SUBHEAD" id="SUBHEAD">
+								Spécifie les options de conteneur ou de serveur OLE et la prise en charge des documents actifs.</p>
+						</td>
+						<td valign="TOP" height="65" width="12">
+							&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td valign="TOP" class="RULE" colspan="5" height="2">
+							<table border="0" width="100%" height="1" cellpadding="0" cellspacing="0">
+								<tr valign="TOP">
+									<td height="1" width="100%" bgcolor="BUTTONSHADOW">
+									</td>
+									<td height="1" width="1" bgcolor="WINDOW">
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<!--CLOSE OF INTRODUCTORY INFORMATION TABLE//-->
+		<!--OPEN OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+		<tr valign="TOP">
+			<td class="Three" valign="TOP" height="100%" width="100%">
+				<table class="fixedSize" height="100%" width="100%" border="0" cellpadding="0" cellspacing="0">
+					<tr valign="TOP">
+						<td class="threeCustom" valign="TOP">
+							<!--OPEN OF NAVIGATION TABLE//-->
+							<table class="THREE" border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col>
+								<col width="1">
+								<tr>
+									<td valign="TOP" colspan="3" height="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="100%">
+										&nbsp;
+									</td>
+									<td valign="TOP" height="100%">
+										<!--OPEN OF NAVIGATIONAL LINKS//-->
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="Default" title="Présente une vue d'ensemble des sélections."
+															onclick="Next(document, 'Default.htm');" tabindex="1">Vue d'ensemble</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="AppType" title="Spécifie la prise en charge de l'architecture Document/Vue, la langue et les options de style de l'interface de votre application."
+															onclick="Next(document, 'AppType.htm');" tabindex="2">Type d'application</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINKSELECTED">
+											<span class="VERTLINE1">
+												<img src="../../../../../1033/Images/spacer.gif" width="1" height="1" alt="" border="0">
+											</span><span class="HORILINE1">
+												<table width="167" height="100%" border="0" cellpadding="0" cellspacing="0">
+													<tr valign="TOP">
+														<td class="DOTTEDLINE" height="1">
+														</td>
+													</tr>
+													<tr valign="TOP">
+														<td height="100%">
+															<img src="../../../../../1033/Images/spacer.gif" width="165" height="28" alt="" border="0">
+														</td>
+													</tr>
+													<tr valign="TOP">
+														<td class="DOTTEDLINE" height="1">
+														</td>
+													</tr>
+												</table>
+											</span>
+											<table width="160" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXTSELECTEDINDENT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span id="CompoundDoc" title="Spécifie les options de conteneur ou de serveur OLE et la prise en charge des documents actifs.">
+															Prise en charge doc. composés</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXTINDENT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="DocTemp" title="Spécifiez les valeurs que le modèle de document de votre application utilisera lors de la création d'un document."
+															onclick="onClick(this);" tabindex="3">Propriétés du modèle de document</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="DBSupport" title="Spécifie la prise en charge des bases de données et, s'il y a lieu, la source de données."
+															onclick="onClick(this);" tabindex="4">Prise en charge des bases de données</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="UIFeatures" title="Personnalise l'apparence de votre application à l'aide des options suivantes."
+															onclick="Next(document, 'UIFeatures.htm');" tabindex="5">Fonctionnalités interface util.</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="Advanced" title="Spécifie les prises en charge supplémentaires à intégrer dans votre application."
+															onclick="Next(document, 'Advanced.htm');" tabindex="6">Fonctionnalités avancées</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="GeneratedClasses" title="Vérifie les classes générées et spécifie les classes de base de votre application."
+															onclick="Next(document, 'GeneratedClasses.htm');" tabindex="7">Classes générées</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<!--CLOSE OF NAVIGATIONAL LINKS//-->
+									</td>
+									<td width="1">
+										<div class="VERTLINE">
+											<img src="../../../../../1033/Images/spacer.gif" width="1" height="1" alt="" border="0">
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				<!--CLOSE OF NAVIGATION TABLE//-->
+			</td>
+			<td valign="TOP" height="100%">
+				<!--OPEN OF CONTENT AND BUTTON TABLE//-->
+				<table class="ONE" border="0" cellpadding="0" cellspacing="0">
+					<col width="100%">
+					<tr valign="TOP">
+						<td height="100%">
+							<!--OPEN OF CONTENT//-->
+							<table class="CONTENT" border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col>
+								<col width="12">
+								<col>
+								<col width="12">
+								<tr>
+									<td valign="TOP" height="12" colspan="5">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP">
+										<span class="itemTextTop" id="support_title">Prise en charge des documents composés :
+											<p class="Spacer">
+												&nbsp;</p>
+											<input type="radio" class="radio" name="compounddoc" id="COMPOUND_DOC_NONE" accesskey="a"
+												title="Sélectionne l'absence de prise en charge OLE." onclick="OnCompoundDoc(this);">
+											<div class="itemTextRadioB" id="NO_OLE_SUPPORT_TEXT" title="Sélectionne l'absence de prise en charge OLE.">
+												<label id="NO_OLE_TEXT" for="COMPOUND_DOC_NONE">
+													<U>A</U>ucun</label>
+											</div>
+											<br>
+											<input type="radio" class="radio" name="compounddoc" id="CONTAINER" accesskey="o"
+												title="Sélectionnez cette option pour incorporer ou lier des éléments dans des documents, de façon que les utilisateurs puissent les modifier directement."
+												onclick="OnCompoundDoc(this);">
+											<div class="itemTextRadioB" id="SELECT_CONT_TEXT" title="Sélectionnez cette option pour incorporer ou lier des éléments dans des documents, de façon que les utilisateurs puissent les modifier directement.">
+												<label id="CONT_TEXT" for="CONTAINER">
+													C<u>o</u>nteneur</label>
+											</div>
+											<br>
+											<input type="radio" class="radio" name="compounddoc" id="MINI_SERVER" accesskey="m"
+												title="Application serveur qui doit être lancée par un conteneur ; ne peut pas s'exécuter comme une application autonome. Ne prend en charge que les éléments incorporés."
+												onclick="OnCompoundDoc(this);">
+											<div class="itemTextRadioB" id="SELECT_MINI_TEXT" title="Application serveur qui doit être lancée par un conteneur ; ne peut pas s'exécuter comme une application autonome. Ne prend en charge que les éléments incorporés.">
+												<label id="MINI_TEXT" for="MINI_SERVER">
+													<u>M</u>ini-serveur</label>
+											</div>
+											<br>
+											<input type="radio" class="radio" name="compounddoc" id="FULL_SERVER" accesskey="v"
+												title="Peut soit s'exécuter comme une application autonome, soit être lancée par une application conteneur. Prend en charge les éléments incorporés et les éléments liés."
+												onclick="OnCompoundDoc(this);">
+											<div class="itemTextRadioB" id="SELECT_FULLSERV_TEXT" title="Peut soit s'exécuter comme une application autonome, soit être lancée par une application conteneur. Prend en charge les éléments incorporés et les éléments liés.">
+												<label id="FULLSERV_TEXT" for="FULL_SERVER">
+													Ser<u>v</u>eur complet</label>
+											</div>
+											<br>
+											<input type="radio" class="radio" name="compounddoc" id="CONTAINER_SERVER" accesskey="s"
+												title="Se comporte comme un conteneur et un serveur complet." onclick="OnCompoundDoc(this);">
+											<div class="itemTextRadioB" id="SELECT_BOTH_TEXT" title="Se comporte comme un conteneur et un serveur complet.">
+												<label id="BOTH_TEXT" for="CONTAINER_SERVER">
+													Conteneur/<u>S</u>erveur complet</label>
+											</div>
+										</span>
+									</td>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP">
+										<span class="itemTextTop" id="options_title">Options supplémentaires :
+											<p class="Spacer">
+												&nbsp;</p>
+											<input type="checkbox" class="CheckBoxA" id="ACTIVE_DOC_SERVER" accesskey="r" title="Spécifie que votre application est un serveur local OLE capable de créer et de gérer des documents actifs. Requiert une extension de fichier."
+												disabled onclick="OnActiveDocServer();">
+											<div class="itemTextCheckboxB" id="active_doc_server_title" title="Spécifie que votre application est un serveur local OLE capable de créer et de gérer des documents actifs. Requiert une extension de fichier.">
+												<label id="ACTIVE_DOC_SERVER_TEXT" for="ACTIVE_DOC_SERVER">
+													Se<u>r</u>veur de documents actifs</label>
+											</div>
+											<br>
+											<input type="checkbox" class="CheckBoxA" id="ACTIVE_DOC_CONTAINER" accesskey="d"
+												title="Spécifie que votre application contient des documents actifs dans son frame et permet aux serveurs de fusionner leurs composants d'interface utilisateur avec le conteneur."
+												disabled onpropertychange="OnActiveDocContainer();">
+											<div class="itemTextCheckboxB" id="active_doc_container_title" title="Spécifie que votre application contient des documents actifs dans son frame et permet aux serveurs de fusionner leurs composants d'interface utilisateur avec le conteneur.">
+												<label id="ACTIVE_DOC_CONTAINER_TEXT" for="ACTIVE_DOC_CONTAINER">
+													Conteneur de <u>d</u>ocuments actifs</label>
+											</div>
+											<br>
+											<input type="checkbox" class="CheckBoxA" id="SUPPORT_COMPOUND_FILES" accesskey="p"
+												title="Utilise le modèle de stockage structuré actif pour faciliter le transfert des données et le stockage des documents OLE."
+												disabled>
+											<div class="itemTextCheckboxB" id="support_compound_files_title" title="Utilise le modèle de stockage structuré actif pour faciliter le transfert des données et le stockage des documents OLE.">
+												<label id="COMPOUND_FILES_TEXT" for="SUPPORT_COMPOUND_FILES">
+													<u>P</u>rise en charge des fichiers composés</label>
+											</div>
+										</span>
+									</td>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+								</tr>
+							</table>
+							<!--CLOSE OF CONTENT//-->
+						</td>
+					</tr>
+					<tr valign="BOTTOM">
+						<td>
+							<!--OPEN OF BUTTON HTML//-->
+							<table border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col>
+								<col width="75">
+								<col width="4">
+								<col width="75">
+								<col width="4">
+								<col width="75">
+								<col width="12">
+								<tr>
+									<td valign="TOP" class="RULE" colspan="8" height="2">
+										<table border="0" width="100%" height="1" cellpadding="0" cellspacing="0">
+											<tr valign="TOP">
+												<td height="1" width="100%" bgcolor="BUTTONSHADOW">
+												</td>
+												<td height="1" width="1" bgcolor="WINDOW">
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="11" colspan="8">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="MIDDLE" height="23" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP" height="23">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="FinishBtn" onclick="OnFinish(document);">
+											Terminer</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="4">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="CancelBtn" onclick="window.external.Finish(document, 'cancel');">
+											Annuler</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="4">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="HelpBtn" onclick="window.external.OnHelp('vc.appwiz.mfc.exe.compdoc');">
+											Aide</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="12" colspan="8">
+										&nbsp;
+									</td>
+								</tr>
+							</table>
+							<!--CLOSE OF BUTTON HTML//-->
+						</td>
+					</tr>
+				</table>
+				<!--CLOSE OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+<script language="JSCRIPT">
+
+var tab_array = new Array();
+tab_array[0] = Default;
+tab_array[1] = AppType;
+tab_array[2] = CompoundDoc;
+tab_array[3] = DocTemp;
+tab_array[4] = DBSupport;
+tab_array[5] = UIFeatures;
+tab_array[6] = Advanced;
+tab_array[7] = GeneratedClasses;
+
+function InitDocument(document)
+{
+	setDirection();
+	COMPOUND_DOC_NONE.focus();
+	window.external.Load(document);
+	InitTabs();
+	InitControls();
+	ToggleImage();	
+}
+
+function InitTabs()
+{
+	MouseOut(DBSupport);
+	MouseOut(DocTemp);
+}
+
+function Next(document, linkto)
+{
+	if (!CheckCompDoc())
+		return;
+
+	window.external.Next(document, linkto);
+}
+
+function onClick(obj)
+{
+	if (obj == null || typeof(obj) == "undefined")
+		return;
+
+	if (obj.id == "DBSupport")
+	{
+		if (!window.external.FindSymbol("APP_TYPE_DLG"))
+		{ 
+			Next(document, "DBSupport.htm"); 
+		}
+	}
+	if (obj.id == "DocTemp")
+	{
+		if (window.external.FindSymbol("DOCVIEW") && !window.external.IsSymbolDisabled("DOCVIEW"))
+		{ 
+			Next(document, "DocTemp.htm"); 
+		}
+	}
+}
+
+function InitControls()
+{
+	// CRichEditView must have container support so disable other options
+	if (window.external.FindSymbol("RICH_EDIT_VIEW"))
+	{
+		COMPOUND_DOC_NONE.disabled = true;
+		NO_OLE_TEXT.disabled = true;
+		MINI_SERVER.disabled = true;
+		MINI_TEXT.disabled = true;
+		FULL_SERVER.disabled = true;
+		FULLSERV_TEXT.disabled = true;
+	}
+	else
+	{
+		COMPOUND_DOC_NONE.disabled = false;
+		NO_OLE_TEXT.disabled = false;
+		MINI_SERVER.disabled = false;
+		MINI_TEXT.disabled = false;
+		FULL_SERVER.disabled = false;
+		FULLSERV_TEXT.disabled = false;
+	}
+	UpdateCompoundDoc();
+}
+
+function CheckDataSource()
+{
+	if (window.external.FindSymbol("DB_CONNECTION_STRING") == "" && ( window.external.FindSymbol("OLEDB") || window.external.FindSymbol("ODBC")))
+	{
+		L_WARNING1_Text = "Vous devez spécifier une source de données lorsque l'option de vue de base de données est sélectionnée";
+		window.external.ReportError(L_WARNING1_Text);
+		return false;
+	}
+	return true;
+}
+
+function OnFinish(document)
+{
+	if (!CheckDataSource())
+		return;
+
+	if (!CheckCompDoc())
+		return;
+
+	if (!CheckActiveDoc())
+		return;
+
+	OnWizFinish(document);
+}
+
+function CheckActiveDoc()
+{
+	if (window.external.FindSymbol("FILE_EXTENSION") == "" && ACTIVE_DOC_SERVER.checked && !ACTIVE_DOC_SERVER.disabled)
+	{
+		L_WARNING2_Text = "Un serveur de documents actifs requiert une extension de fichier de document. Entrez-la dans la page Propriétés du modèle de document.";
+		window.external.ReportError(L_WARNING2_Text);
+		return false;
+	}
+	return true;
+}
+
+function CheckCompDoc()
+{
+	if (CONTAINER.checked || CONTAINER_SERVER.checked)
+	{
+		var strViewBase = window.external.FindSymbol("VIEW_BASE_CLASS");
+		if (strViewBase == "CHtmlView" || strViewBase == "CEditView" || strViewBase == "CHtmlEditView")
+		{
+			L_PART1_Text = "Un conteneur OLE ou un conteneur/serveur ne peut pas avoir "; 
+			L_PART2_Text = " comme classe de base. L'Assistant va changer la classe de base de la vue en CView";
+
+			if (window.external.YesNoAlert(L_PART1_Text + strViewBase +  L_PART2_Text))
+				window.external.AddSymbol("VIEW_BASE_CLASS", "CView");
+			else
+				return false;
+		}
+	}
+	return true;
+}
+
+function OnCompoundDoc(obj)
+{
+	if (obj.id == "CONTAINER" || obj.id == "CONTAINER_SERVER")
+	{
+		if (!CheckCompDoc())
+			return;
+	}
+
+	UpdateCompoundDoc();
+
+	if (obj.id != "COMPOUND_DOC_NONE" && obj.id != "CONTAINER")
+		CheckActiveDoc();
+
+	ToggleImage();
+}
+
+function UpdateCompoundDoc()
+{
+	ACTIVE_DOC_SERVER.disabled = true;
+	active_doc_server_title.disabled = true;
+	ACTIVE_DOC_CONTAINER.disabled = true;
+	active_doc_container_title.disabled = true;
+	SUPPORT_COMPOUND_FILES.disabled = true;
+	support_compound_files_title.disabled = true;
+	options_title.disabled = true;
+
+	if (!COMPOUND_DOC_NONE.checked)
+	{
+		options_title.disabled = false;
+		SUPPORT_COMPOUND_FILES.disabled = false;
+		support_compound_files_title.disabled = false;
+	}
+	else
+		window.external.AddSymbol("DOC_BASE_CLASS", "CDocument");
+
+	var bRichEditView = window.external.FindSymbol("RICH_EDIT_VIEW");
+
+	if (CONTAINER.checked)
+	{
+		if (bRichEditView)
+			window.external.AddSymbol("DOC_BASE_CLASS", "CRichEditDoc");
+		else
+		{
+			ACTIVE_DOC_CONTAINER.disabled = false;
+			active_doc_container_title.disabled = false;
+			window.external.AddSymbol("DOC_BASE_CLASS", "COleDocument");
+		}
+	}
+	if (MINI_SERVER.checked || FULL_SERVER.checked)
+	{
+		ACTIVE_DOC_SERVER.disabled = false;
+		active_doc_server_title.disabled = false;
+		if (window.external.FindSymbol("USE_STANDARD_MENU_TOOLBAR") == true)
+		{
+			window.external.AddSymbol("DOC_BASE_CLASS", "COleServerDoc");
+		}
+		else
+		{
+			window.external.AddSymbol("DOC_BASE_CLASS", "COleServerDocEx");
+		}
+	}
+	if (CONTAINER_SERVER.checked)
+	{
+		ACTIVE_DOC_SERVER.disabled = false;
+		active_doc_server_title.disabled = false;
+		if (bRichEditView)
+			window.external.AddSymbol("DOC_BASE_CLASS", "CRichEditDoc");
+		else
+		{
+			ACTIVE_DOC_CONTAINER.disabled = false;
+			active_doc_container_title.disabled = false;
+			if (window.external.FindSymbol("USE_STANDARD_MENU_TOOLBAR") == true)
+			{
+				window.external.AddSymbol("DOC_BASE_CLASS", "COleServerDoc");
+			}
+			else
+			{
+				window.external.AddSymbol("DOC_BASE_CLASS", "COleServerDocEx");
+			}
+		}
+	}
+}
+
+function OnActiveDocContainer()
+{
+	if (ACTIVE_DOC_CONTAINER.checked && !ACTIVE_DOC_CONTAINER.disabled)
+		window.external.AddSymbol("CONTAINER_ITEM_BASE_CLASS", "COleDocObjectItem");
+	else if (window.external.FindSymbol("RICH_EDIT_VIEW"))
+		window.external.AddSymbol("CONTAINER_ITEM_BASE_CLASS", "CRichEditCntrItem");
+	else
+		window.external.AddSymbol("CONTAINER_ITEM_BASE_CLASS", "COleClientItem");
+}
+
+function OnActiveDocServer()
+{
+	if (ACTIVE_DOC_SERVER.checked && !ACTIVE_DOC_SERVER.disabled)
+	{
+		window.external.AddSymbol("SERVER_ITEM_BASE_CLASS", "CDocObjectServerItem");
+		if (window.external.FindSymbol("USE_STANDARD_MENU_TOOLBAR") == true)
+		{
+			window.external.AddSymbol("INPLACE_FRAME_BASE_CLASS", "COleDocIPFrameWnd");
+		}
+		else
+		{
+			window.external.AddSymbol("INPLACE_FRAME_BASE_CLASS", "COleDocIPFrameWndEx");
+		}
+	}
+	else
+	{
+		window.external.AddSymbol("SERVER_ITEM_BASE_CLASS", "COleServerItem");
+		if (window.external.FindSymbol("USE_STANDARD_MENU_TOOLBAR") == true)
+		{
+			window.external.AddSymbol("INPLACE_FRAME_BASE_CLASS", "COleIPFrameWnd");
+		}
+		else
+		{
+			window.external.AddSymbol("INPLACE_FRAME_BASE_CLASS", "COleIPFrameWndEx");
+		}
+	}
+	CheckActiveDoc();
+}
+
+function ToggleImage()
+{
+	COMP_DOC_NONE_IMAGE.style.display = "none";
+	CONTAINER_IMAGE.style.display = "none";
+	MINI_SERVER_IMAGE.style.display = "none";
+	FULL_SERVER_IMAGE.style.display = "none";
+	CONTAINER_SERVER_IMAGE.style.display = "none";
+
+	if (COMPOUND_DOC_NONE.checked)
+	{
+		COMP_DOC_NONE_IMAGE.style.display = "block";
+		return;
+	}
+	if (CONTAINER.checked)
+	{
+		CONTAINER_IMAGE.style.display = "block";
+		return;
+	}
+	if (MINI_SERVER.checked)
+	{
+		MINI_SERVER_IMAGE.style.display = "block";
+		return;
+	}
+	if (FULL_SERVER.checked)
+	{
+		FULL_SERVER_IMAGE.style.display = "block";
+		return;
+	}
+	if (CONTAINER_SERVER.checked)
+		CONTAINER_SERVER_IMAGE.style.display = "block";
+}
+
+</script>
+
+<script id="INCLUDE_SCRIPT" language="JSCRIPT"></script>
+
+<script id="INCLUDE_COMMON" language="JSCRIPT"></script>
+
+<script>
+	document.scripts("INCLUDE_SCRIPT").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Script.js";
+	document.scripts("INCLUDE_COMMON").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Common.js";
+</script>
+

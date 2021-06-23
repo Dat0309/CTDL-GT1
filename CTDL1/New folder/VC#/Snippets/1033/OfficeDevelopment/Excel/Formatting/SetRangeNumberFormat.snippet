@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Set the Number Format of a Range</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Sets the number format of an Excel Range object.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Excel.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Excel = Microsoft.Office.Interop.Excel</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>positiveFormat</ID>
+          <Type></Type>
+          <ToolTip>Replace with the format for positive numbers.</ToolTip>
+          <Default>#,###.00</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>negativeFormat</ID>
+          <Type></Type>
+          <ToolTip>Replace with the format for negative numbers. Optional.</ToolTip>
+          <Default>[Red](#,###.00)</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>zeroFormat</ID>
+          <Type></Type>
+          <ToolTip>Replace with the format for zeros. Optional.</ToolTip>
+          <Default>0.00</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>stringFormat</ID>
+          <Type></Type>
+          <ToolTip>Replace with the format for strings. Optional.</ToolTip>
+          <Default>General</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>range</ID>
+          <Type>Microsoft.Office.Interop.Excel.Range</Type>
+          <ToolTip>Replace with the range to apply the number format to.</ToolTip>
+          <Default>range</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="CSharp" Kind="" Delimiter="$"><![CDATA[
+$range$.NumberFormat = "$positiveFormat$;$negativeFormat$;$zeroFormat$;$stringFormat$";
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,14 @@
+; [!output PROJECT_NAME].def : 宣告 DLL 的模組參數。
+
+LIBRARY
+
+EXPORTS
+    ; 明確匯出可置於此
+[!if DLL_TYPE_REGULAR || DLL_TYPE_REGULAR_STATIC]
+[!if AUTOMATION]
+	DllCanUnloadNow     PRIVATE
+	DllGetClassObject   PRIVATE
+	DllRegisterServer   PRIVATE
+	DllUnregisterServer PRIVATE
+[!endif]
+[!endif]

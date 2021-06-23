@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Read a file in the My Documents folder</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Reads the contents of a text file in the My Documents folder into a single string.</Description>
+      <Shortcut>filReadMy</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>filename</ID>
+          <ToolTip>Replace with the file name.</ToolTip>
+          <Default>"test.txt"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim fullFilePath As String
+Dim fileContents As String
+With My.Computer.FileSystem
+    fullFilePath = .CombinePath(.SpecialDirectories.MyDocuments, $filename$)
+    fileContents = .ReadAllText(fullFilePath)
+End With]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

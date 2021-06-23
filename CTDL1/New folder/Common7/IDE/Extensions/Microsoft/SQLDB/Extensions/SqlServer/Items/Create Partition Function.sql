@@ -1,0 +1,6 @@
+﻿CREATE PARTITION FUNCTION [$rawname$]
+	(
+		int
+	)
+	AS RANGE LEFT
+	FOR VALUES (1,100,1000)

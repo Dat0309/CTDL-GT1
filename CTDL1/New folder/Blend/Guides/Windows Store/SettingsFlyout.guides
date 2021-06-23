@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<ProjectItemGuides xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" TargetFile="">
+  <GuideModels>
+    <GuideModel>
+      <Guides>
+        <Guide Alignment="Left" Position="40" />
+        <Guide Alignment="Left" Position="291" />
+        <Guide Alignment="Top" Position="80" />
+        <Guide Alignment="Top" Position="133" />
+        <Guide Alignment="Top" Position="153" />
+      </Guides>
+    </GuideModel>
+  </GuideModels>
+</ProjectItemGuides>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Add an element to an XML document</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Adds a new element to an XDocument instance.</Description>
+      <Shortcut>xmlAdd</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Xml.Linq.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Xml.Linq</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>Element</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the name of the new element.</ToolTip>
+          <Default>newElement</Default>
+        </Literal>
+        <Literal>
+          <ID>Value</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the text of the new element.</ToolTip>
+          <Default>Value</Default>
+        </Literal>
+        <Object>
+          <ID>XmlDoc</ID>
+          <Type>XDocument</Type>
+          <ToolTip>Replace with an XDocument instance.</ToolTip>
+          <Default>xmlDoc</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[ $XmlDoc$.Add(<$Element$>$Value$</$Element$>)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

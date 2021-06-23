@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="$fileinputnamecompose$">
+    <File Path="$fileinputnamecompose$\Home\Home.css" Url="$fileinputnamecompose$/Home/Home.css" ReplaceContent="TRUE" />
+    <File Path="$fileinputnamecompose$\Home\Home.html" Url="$fileinputnamecompose$/Home/Home.html" ReplaceContent="TRUE" />
+    <File Path="$fileinputnamecompose$\Home\Home.js" Url="$fileinputnamecompose$/Home/Home.js" ReplaceContent="TRUE" />
+    <File Path="$fileinputnamecompose$\App.css" Url="$fileinputnamecompose$/App.css" ReplaceContent="TRUE" />
+    <File Path="$fileinputnamecompose$\App.js" Url="$fileinputnamecompose$/App.js" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

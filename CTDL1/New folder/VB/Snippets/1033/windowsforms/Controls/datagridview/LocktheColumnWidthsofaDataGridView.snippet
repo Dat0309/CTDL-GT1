@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Lock the Column Widths of a DataGridView</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Locks the column widths of a DataGridView.</Description>
+      <Shortcut>gridLock</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Windows.Forms</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>grid</ID>
+          <Type>DataGridView</Type>
+          <ToolTip>Replace with a DataGridView from your form.</ToolTip>
+          <Default>DataGridView1</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[$grid$.AllowUserToResizeColumns = False]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,275 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="323" />
+    <Description Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="324" />
+    <Icon Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="208" />
+    <TemplateID>SharePoint15EventReceiver_CS_ITEM</TemplateID>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>50</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>EventReceiver</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <CreateInPlace>true</CreateInPlace>
+    <TemplateGroupID>SharePointItemTemplateGroupID</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>Microsoft.SharePoint</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\SharePointProjectItem.spdata" OpenInEditor="false" >SharePointEventReceiver.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\$fileinputname$.cs">SharePointEventReceiver.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Elements.xml">Elements.xml</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="SharePointProjectTemplateAttributes" Value="ProjectItem"/>
+      <CustomParameter Name="SharePointProjectParentFilter" Value="General;ProjectItem"/>
+      <CustomParameter Name="$ProjectItemClassName$" Value="$rootname$"/>
+      <CustomParameter Name="$subnamespace$" Value="$rootname$"/>
+      <CustomParameter Name="$ProjectItemName$" Value="$fileinputname$"/>
+      <CustomParameter Name="$fullnamespace$" Value="$rootnamespace$.$subnamespace$"/>
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.EventReceiverProjectItemWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+  <Data DefaultEventClassId="ItemEventReceiver" xmlns="http://schemas.microsoft.com/internal/VisualStudio/SharePoint/EventGen.xsd">
+    <Events xmlns="http://schemas.microsoft.com/internal/VisualStudio/SharePoint/EventGen.xsd">
+      <EventClass Class="SPListEventReceiver" Id="ListEventReceiver" SourceExtensionType="Microsoft.VisualStudio.SharePoint.SiteDefinition">
+        <Event Id="FieldAdded" Method="FieldAdded">
+          <Parameters>
+            <Parameter Name="properties" Type="SPListEventProperties"/>
+          </Parameters>
+        </Event>
+        <Event Id="FieldAdding" Method="FieldAdding">
+          <Parameters>
+            <Parameter Name="properties" Type="SPListEventProperties"/>
+          </Parameters>
+        </Event>
+        <Event Id="FieldDeleted" Method="FieldDeleted">
+          <Parameters>
+            <Parameter Name="properties" Type="SPListEventProperties"/>
+          </Parameters>
+        </Event>
+        <Event Id="FieldDeleting" Method="FieldDeleting">
+          <Parameters>
+            <Parameter Name="properties" Type="SPListEventProperties"/>
+          </Parameters>
+        </Event>
+        <Event Id="FieldUpdated" Method="FieldUpdated">
+          <Parameters>
+            <Parameter Name="properties" Type="SPListEventProperties"/>
+          </Parameters>
+        </Event>
+        <Event Id="FieldUpdating" Method="FieldUpdating">
+          <Parameters>
+            <Parameter Name="properties" Type="SPListEventProperties"/>
+          </Parameters>
+        </Event>
+        <Event Id="ListAdding" Method="ListAdding">
+          <Parameters>
+            <Parameter Name="properties" Type="SPListEventProperties"/>
+          </Parameters>
+        </Event>
+        <Event Id="ListDeleting" Method="ListDeleting">
+          <Parameters>
+            <Parameter Name="properties" Type="SPListEventProperties"/>
+          </Parameters>
+        </Event>
+        <Event Id="ListAdded" Method="ListAdded">
+          <Parameters>
+            <Parameter Name="properties" Type="SPListEventProperties"/>
+          </Parameters>
+        </Event>
+        <Event Id="ListDeleted" Method="ListDeleted">
+          <Parameters>
+            <Parameter Name="properties" Type="SPListEventProperties"/>
+          </Parameters>
+        </Event>
+      </EventClass>
+      <EventClass Class="SPItemEventReceiver" Id="ItemEventReceiver" SourceExtensionType="Microsoft.VisualStudio.SharePoint.ListDefinition">
+        <Event Id="ItemAdding" Method="ItemAdding">
+          <Parameters>
+            <Parameter Name="properties" Type="SPItemEventProperties"/>
+          </Parameters>
+        </Event>
+        <Event Id="ItemUpdating" Method="ItemUpdating">
+          <Parameters>
+            <Parameter Name="properties" Type="SPItemEventProperties"/>
+          </Parameters>
+        </Event>
+        <Event Id="ItemDeleting" Method="ItemDeleting">
+          <Parameters>
+            <Parameter Name="properties" Type="SPItemEventProperties"/>
+          </Parameters>
+        </Event>
+        <Event Id="ItemCheckingIn" Method="ItemCheckingIn">
+          <Parameters>
+            <Parameter Name="properties" Type="SPItemEventProperties"/>
+          </Parameters>
+        </Event>
+        <Event Id="ItemCheckingOut" Method="ItemCheckingOut">
+          <Parameters>
+            <Parameter Name="properties" Type="SPItemEventProperties"/>
+          </Parameters>
+        </Event>
+        <Event Id="ItemUncheckingOut" Method="ItemUncheckingOut">
+          <Parameters>
+            <Parameter Name="properties" Type="SPItemEventProperties"/>
+          </Parameters>
+        </Event>
+        <Event Id="ItemAttachmentAdding" Method="ItemAttachmentAdding">
+          <Parameters>
+            <Parameter Name="properties" Type="SPItemEventProperties"/>
+          </Parameters>
+        </Event>
+        <Event Id="ItemAttachmentDeleting" Method="ItemAttachmentDeleting">
+          <Parameters>
+            <Parameter Name="properties" Type="SPItemEventProperties"/>
+          </Parameters>
+        </Event>
+        <Event Id="ItemFileMoving" Method="ItemFileMoving">
+          <Parameters>
+            <Parameter Name="properties" Type="SPItemEventProperties" />
+          </Parameters>
+        </Event>
+        <Event Id="ItemAdded" Method="ItemAdded">
+          <Parameters>
+            <Parameter Name="properties" Type="SPItemEventProperties" />
+          </Parameters>
+        </Event>
+        <Event Id="ItemUpdated" Method="ItemUpdated">
+          <Parameters>
+            <Parameter Name="properties" Type="SPItemEventProperties" />
+          </Parameters>
+        </Event>
+        <Event Id="ItemDeleted" Method="ItemDeleted">
+          <Parameters>
+            <Parameter Name="properties" Type="SPItemEventProperties" />
+          </Parameters>
+        </Event>
+        <Event Id="ItemCheckedIn" Method="ItemCheckedIn">
+          <Parameters>
+            <Parameter Name="properties" Type="SPItemEventProperties" />
+          </Parameters>
+        </Event>
+        <Event Id="ItemCheckedOut" Method="ItemCheckedOut">
+          <Parameters>
+            <Parameter Name="properties" Type="SPItemEventProperties" />
+          </Parameters>
+        </Event>
+        <Event Id="ItemUncheckedOut" Method="ItemUncheckedOut">
+          <Parameters>
+            <Parameter Name="properties" Type="SPItemEventProperties" />
+          </Parameters>
+        </Event>
+        <Event Id="ItemAttachmentAdded" Method="ItemAttachmentAdded">
+          <Parameters>
+            <Parameter Name="properties" Type="SPItemEventProperties" />
+          </Parameters>
+        </Event>
+        <Event Id="ItemAttachmentDeleted" Method="ItemAttachmentDeleted">
+          <Parameters>
+            <Parameter Name="properties" Type="SPItemEventProperties" />
+          </Parameters>
+        </Event>
+        <Event Id="ItemFileMoved" Method="ItemFileMoved">
+          <Parameters>
+            <Parameter Name="properties" Type="SPItemEventProperties" />
+          </Parameters>
+        </Event>
+        <Event Id="ItemFileConverted" Method="ItemFileConverted">
+          <Parameters>
+            <Parameter Name="properties" Type="SPItemEventProperties" />
+          </Parameters>
+        </Event>
+        <Event Id="ContextEvent" Method="ContextEvent">
+          <Parameters>
+            <Parameter Name="properties" Type="SPItemEventProperties" />
+          </Parameters>
+        </Event>
+      </EventClass>
+      <EventClass Class="SPEmailEventReceiver" Id="EmailEventReceiver" SourceExtensionType="Microsoft.VisualStudio.SharePoint.ListDefinition">
+        <Event Id="EmailReceived" Method="EmailReceived">
+          <Parameters>
+            <Parameter Name="list" Type="SPList" />
+            <Parameter Name="emailMessage" Type="SPEmailMessage" />
+            <Parameter Name="receiverData" Type="String" />
+          </Parameters>
+        </Event>
+      </EventClass>
+      <EventClass Class="SPWebEventReceiver" Id="WebEventReceiver" SourceExtensionType="Microsoft.VisualStudio.SharePoint.SiteDefinition">
+        <Event Id="SiteDeleting" Method="SiteDeleting">
+          <Parameters>
+            <Parameter Name="properties" Type="SPWebEventProperties" />
+          </Parameters>
+        </Event>
+        <Event Id="WebDeleting" Method="WebDeleting">
+          <Parameters>
+            <Parameter Name="properties" Type="SPWebEventProperties" />
+          </Parameters>
+        </Event>
+        <Event Id="WebMoving" Method="WebMoving">
+          <Parameters>
+            <Parameter Name="properties" Type="SPWebEventProperties" />
+          </Parameters>
+        </Event>
+        <Event Id="WebAdding" Method="WebAdding">
+          <Parameters>
+            <Parameter Name="properties" Type="SPWebEventProperties" />
+          </Parameters>
+        </Event>
+        <Event Id="SiteDeleted" Method="SiteDeleted">
+          <Parameters>
+            <Parameter Name="properties" Type="SPWebEventProperties" />
+          </Parameters>
+        </Event>
+        <Event Id="WebDeleted" Method="WebDeleted">
+          <Parameters>
+            <Parameter Name="properties" Type="SPWebEventProperties" />
+          </Parameters>
+        </Event>
+        <Event Id="WebMoved" Method="WebMoved">
+          <Parameters>
+            <Parameter Name="properties" Type="SPWebEventProperties" />
+          </Parameters>
+        </Event>
+        <Event Id="WebProvisioned" Method="WebProvisioned">
+          <Parameters>
+            <Parameter Name="properties" Type="SPWebEventProperties" />
+          </Parameters>
+        </Event>
+      </EventClass>
+      <EventClass Class="SPWorkflowEventReceiver" Id="WorkflowEventReceiver" SourceExtensionType="Microsoft.VisualStudio.SharePoint.ListDefinition">
+        <Event Id="WorkflowStarting" Method="WorkflowStarting">
+          <Parameters>
+            <Parameter Name="properties" Type="SPWorkflowEventProperties" />
+          </Parameters>
+        </Event>
+        <Event Id="WorkflowStarted" Method="WorkflowStarted">
+          <Parameters>
+            <Parameter Name="properties" Type="SPWorkflowEventProperties" />
+          </Parameters>
+        </Event>
+        <Event Id="WorkflowPostponed" Method="WorkflowPostponed">
+          <Parameters>
+            <Parameter Name="properties" Type="SPWorkflowEventProperties" />
+          </Parameters>
+        </Event>
+        <Event Id="WorkflowCompleted" Method="WorkflowCompleted">
+          <Parameters>
+            <Parameter Name="properties" Type="SPWorkflowEventProperties" />
+          </Parameters>
+        </Event>
+      </EventClass>
+    </Events>
+  </Data>
+  </WizardData>
+</VSTemplate>

@@ -1,0 +1,20 @@
+﻿/* $loc_script_Visualization_DataBinding_css_comment1$ */
+
+#content-main {
+    bottom: 50px; /* $loc_script_Visualization_DataBinding_css_comment2$ */
+}
+
+    #content-main button {
+        margin-top: 10px;
+        width: 200px;
+    }
+
+#content-footer {
+    background-color: #cecece;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* $loc_script_Visualization_DataBinding_css_comment3$ */
+    overflow: hidden; /* $loc_script_Visualization_DataBinding_css_comment4$ */
+}

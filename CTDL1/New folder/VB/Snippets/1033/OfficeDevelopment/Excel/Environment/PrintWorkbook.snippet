@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Print a Workbook</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Prints a workbook to the specified printer or to a file.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Excel.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Excel = Microsoft.Office.Interop.Excel</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>fromPage</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with the first page to print. Leave empty to print from the start.</ToolTip>
+          <Default>1</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>toPage</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with the last page to print. Leave empty to print to the end.</ToolTip>
+          <Default>10</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>copies</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with the number of copies to print. If empty, one copy will be printed.</ToolTip>
+          <Default>1</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>preview</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. If true, the print preview dialog will be invoked first.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>activePrinter</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the name of the printer to use. Leave empty to go to the default printer.</ToolTip>
+          <Default>"MyPrinter"</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>printToFile</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. If true, the workbook will print to a file.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>collate</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. If true, multiple copies will be collated.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>fileName</ID>
+          <Type>String</Type>
+          <ToolTip>If printToFile is true, replace with the file name to print to.</ToolTip>
+          <Default>"FileName"</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>workbook</ID>
+          <Type>Microsoft.Office.Interop.Excel.Workbook</Type>
+          <ToolTip>Replace with the workbook to print.</ToolTip>
+          <Default>workbook</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="" Delimiter="$"><![CDATA[
+$workbook$.PrintOut( From:=$fromPage$, _
+					 To:=$toPage$, _
+					 Copies:=$copies$, _
+					 Preview:=$preview$, _
+					 ActivePrinter:=$activePrinter$, _
+					 PrintToFile:=$printToFile$, _
+					 Collate:=$collate$, _
+					 PrToFileName:=$fileName$)
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

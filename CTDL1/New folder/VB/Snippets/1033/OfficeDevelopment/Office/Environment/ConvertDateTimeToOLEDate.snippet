@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Convert DateTime to OLE Date</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Converts a System.DateTime object to an OLE formatted date.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations>
+        <Object Editable="true">
+          <ID>oleDate</ID>
+          <Type>Double</Type>
+          <ToolTip>Replace with a variable to hold the result of the format conversion.</ToolTip>
+          <Default>2.25</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>dateTime</ID>
+          <Type>System.DateTime</Type>
+          <ToolTip>Replace with the System.DateTime object to convert to the OLE format.</ToolTip>
+          <Default>dateTime</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="" Delimiter="$"><![CDATA[
+Dim $oleDate$ as Double
+$oleDate$ = $dateTime$.ToOADate()
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

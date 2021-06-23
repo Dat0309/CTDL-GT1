@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Retrieve User Preferences for Menus</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Retrieves several menu settings.</Description>
+      <Shortcut>sysMenu</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Drawing.dll</Assembly>
+          <Url />
+        </Reference>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+          <Url />
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim barSize = SystemInformation.MenuBarButtonSize
+Dim buttonSize = SystemInformation.MenuButtonSize
+Dim checkSize = SystemInformation.MenuCheckSize
+Dim menuFont = SystemInformation.MenuFont
+Dim height = SystemInformation.MenuHeight
+Dim delay = SystemInformation.MenuShowDelay]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

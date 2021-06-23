@@ -1,0 +1,20 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+}
+
+body {
+    height:100%;
+    width:100%;
+}
+
+.graphDiv {
+    width:100%; 
+    height:100%;
+}
+
+.line-separator{
+height:1px;
+background:black;
+}

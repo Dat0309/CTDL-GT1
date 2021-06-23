@@ -1,0 +1,28 @@
+[$RootKey$\Editors\{8281C572-2171-45AA-A642-7D8BC1662F1C}\Extensions]
+"htm"=dword:00000031
+"html"=dword:00000031
+
+[$RootKey$\Editors\{C76D83F8-A489-11D0-8195-00A0C91BBEE3}\Extensions]
+"htm"=dword:00000031
+"html"=dword:00000031
+
+[$RootKey$\Languages\File Extensions\.htm]
+"unused"="HTML"
+@="{58E975A0-F8FE-11D2-A6AE-00104BCC7269}"
+
+[$RootKey$\Languages\File Extensions\.html]
+"unused"="HTML"
+@="{58E975A0-F8FE-11D2-A6AE-00104BCC7269}"
+
+[$RootKey$\Languages\Language Services\HTMLX]
+"WindowsAppFallback"="0"
+
+; The default editor for any HTML document unless the extension is specified
+[$RootKey$\Debugger\DynamicScriptDocumentEditor\HTML]
+"LanguageServiceId"="{9BBFD173-9770-47DC-B191-651B7FF493CD}"
+"EditorType"="{40D31677-CBC0-4297-A9EF-89D907823A98}"
+
+; Editor for aspx
+[$RootKey$\Debugger\DynamicScriptDocumentEditor\HTML\.aspx]
+"LanguageServiceId"="{58E975A0-F8FE-11D2-A6AE-00104BCC7269}"
+"EditorType"="{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"

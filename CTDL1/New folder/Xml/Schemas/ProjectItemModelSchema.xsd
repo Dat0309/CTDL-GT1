@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema
+  attributeFormDefault="unqualified"
+  elementFormDefault="qualified"
+  xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel"
+  targetNamespace="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ProjectItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice minOccurs="1" maxOccurs="1">
+          <xs:element name="Files" type="FileCollectionType"/>
+          <xs:element name="ProjectItemFolder" type="ProjectItemFolderType"/>
+        </xs:choice>
+        <xs:element name="SafeControls" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SafeControl" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="Name" type="xs:string" />
+                  <xs:attribute name="Assembly" type="xs:string" />
+                  <xs:attribute name="Namespace" type="xs:string" />
+                  <xs:attribute name="TypeName" type="xs:string" />
+                  <xs:attribute name="IsSafe" type="xs:boolean" />
+                  <xs:attribute name="IsSafeAgainstScript" type="xs:boolean" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FeatureProperties" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FeatureProperty" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="Key" type="xs:string" use="required"  />
+                  <xs:attribute name="Value" type="xs:string" use="required"  />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FeatureActivationDependencies" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FeatureActivationDependency" minOccurs="0" maxOccurs="unbounded">
+                <xs:simpleType>
+                  <xs:restriction base ="GUID" />
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ExtensionData" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ExtensionDataItem" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="Key" type="xs:string" use="required" />
+                  <xs:attribute name="Value" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="DefaultFile" type="xs:string" />
+      <xs:attribute name="Type" type="xs:string" use="required" />
+      <xs:attribute name="FeatureReceiverClass" type="xs:string" />
+      <xs:attribute name="FeatureReceiverAssembly" type="xs:string" />
+      <xs:attribute name="SupportedTrustLevels" type="xs:string" />
+      <xs:attribute name="SupportedDeploymentScopes" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="FileCollectionType">
+    <xs:sequence>
+      <xs:element name="ProjectItemFile" minOccurs="0" maxOccurs="unbounded" type="ProjectItemFileType"/>
+      <xs:element name="ProjectOutputFile" minOccurs="0" maxOccurs="unbounded" type="ProjectOutputFileType"/>
+      <xs:element name="ProjectItemVirtualFile" minOccurs="0" maxOccurs="unbounded" type="ProjectItemVirtualFileType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProjectItemFolderType">
+    <xs:attribute name="Target" type="xs:string" use="required" />
+    <xs:attribute name="Type" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="ProjectItemFileType">
+    <xs:attribute name="Source" type="xs:string" use="required" />
+    <xs:attribute name="Target" type="xs:string" />
+    <xs:attribute name="Type" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="ProjectOutputFileType">
+    <xs:attribute name="ProjectId" type="xs:string" use="required" />
+    <xs:attribute name="ProjectPath" type="xs:string" use="required" />
+    <xs:attribute name="Target" type="xs:string" />
+    <xs:attribute name="Type" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="ProjectItemVirtualFileType">
+    <xs:attribute name="Source" type="xs:string" use="required" />
+    <xs:attribute name="Target" type="xs:string" />
+    <xs:attribute name="GroupId" type="xs:string" />
+    <xs:attribute name="Type" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:simpleType name="GUID">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

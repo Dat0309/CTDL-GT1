@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Create a Triangle Shape using a GraphicsPath Object</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Draws a triangle by connecting a series of points.</Description>
+      <Shortcut>drawTri</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Drawing.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing.Drawing2D</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>Location1</ID>
+          <ToolTip>Replace with starting coordinates of the first line segment.</ToolTip>
+          <Default>0, 0</Default>
+        </Literal>
+        <Literal>
+          <ID>Location2</ID>
+          <ToolTip>Replace with starting coordinates of the second line segment.</ToolTip>
+          <Default>100, 0</Default>
+        </Literal>
+        <Literal>
+          <ID>Location3</ID>
+          <ToolTip>Replace with starting coordinates of the third line segment.</ToolTip>
+          <Default>100, 100</Default>
+        </Literal>
+        <Literal>
+          <ID>Location4</ID>
+          <ToolTip>Replace with starting coordinates of the fourth line segment.</ToolTip>
+          <Default>0, 0</Default>
+        </Literal>
+        <Object>
+          <ID>PictureBox</ID>
+          <Type>System.Windows.Forms.PictureBox</Type>
+          <ToolTip>Replace with an object that has a CreateGraphics method.</ToolTip>
+          <Default>PictureBox1</Default>
+        </Object>
+        <Object>
+          <ID>Pen</ID>
+          <Type>System.Drawing.Pen</Type>
+          <ToolTip>Replace with a pen.</ToolTip>
+          <Default>Pens.Black</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim path As New GraphicsPath()
+Dim points() As Point = { _
+    New Point($Location1$), _
+    New Point($Location2$), _
+    New Point($Location3$), _
+    New Point($Location4$)}
+path.AddLines(points)
+
+Dim surface As Graphics = $PictureBox$.CreateGraphics
+surface.DrawPath($Pen$, path)
+            ]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

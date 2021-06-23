@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Protect a Document</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Sets the protection properties for a Word document.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Word.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Word = Microsoft.Office.Interop.Word</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>noResetValue</ID>
+          <Type>System.Bool</Type>
+          <ToolTip>Replace with a Boolean value. False to reset form fields to their default values; true to retain the current form field values if the document is protected. If Type is not wdAllowOnlyFormFields, the NoReset argument is ignored.</ToolTip>
+          <Default>true</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>passwordValue</ID>
+          <Type>System.String</Type>
+          <ToolTip>Replace with the password required to remove protection from the document. Leave blank to omit a password.</ToolTip>
+          <Default>"Password"</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>useIRMValue</ID>
+          <Type>System.Bool</Type>
+          <ToolTip>Replace with a value that specifies whether to use Information Rights Management (IRM) when protecting the document from changes.</ToolTip>
+          <Default>true</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>enforceStyleLockValue</ID>
+          <Type>System.Bool</Type>
+          <ToolTip>Replace with a value that specifies whether formatting restrictions are enforced in a protected document.</ToolTip>
+          <Default>true</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>protectionType</ID>
+          <Type>Word.WdProtectionType</Type>
+          <ToolTip>Replace with the protection type for the document. One of the Word.WdProtectionType values.</ToolTip>
+          <Default>wdAllowOnlyReading</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>noReset</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a variable to hold the noReset value.</ToolTip>
+          <Default>noReset</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>password</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a variable to hold the password value.</ToolTip>
+          <Default>password</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>useIRM</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a variable to hold the useIRM value.</ToolTip>
+          <Default>useIRM</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>enforceStyleLock</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a variable to hold the enforceStyleLock value.</ToolTip>
+          <Default>enforceStyleLock</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>document</ID>
+          <Type>Microsoft.Office.Interop.Word.Document</Type>
+          <ToolTip>Replace with the document to protect.</ToolTip>
+          <Default>document</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="CSharp" Kind="" Delimiter="$"><![CDATA[
+object $noReset$ = $noResetValue$;
+object $password$ = $passwordValue$;
+object $useIRM$ = $useIRMValue$;
+object $enforceStyleLock$ = $enforceStyleLockValue$;
+
+$document$.Protect( Word.WdProtectionType.$protectionType$, 
+					NoReset:$noReset$, 
+					Password:$password$, 
+					UseIRM:$useIRM$, 
+					EnforceStyleLock:$enforceStyleLock$);
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

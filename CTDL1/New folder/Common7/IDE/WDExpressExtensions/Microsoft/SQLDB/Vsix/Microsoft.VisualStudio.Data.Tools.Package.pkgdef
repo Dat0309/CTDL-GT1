@@ -1,0 +1,315 @@
+[$RootKey$\Packages\{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}]
+@="Microsoft SQL Server Data Tools"
+"Assembly"="Microsoft.VisualStudio.Data.Tools.Package, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"Class"="Microsoft.VisualStudio.Data.Tools.Package.UI.DataPackage"
+"CodeBase"="$RootFolder$Common7\IDE\Extensions\Microsoft\SQLDB\Microsoft.VisualStudio.Data.Tools.Package.dll"
+"CompanyName"="Microsoft Corporation"
+"ID"=dword:00000065
+"InprocServer32"="%SystemRoot%\\system32\\mscoree.dll"
+"ProductName"="Microsoft SQL Server Data Tools"
+
+[$RootKey$\BindingPaths\{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}]
+"$RootFolder$Common7\IDE\Extensions\Microsoft\SQLDB"=""
+"$RootFolder$Common7\IDE\Extensions\Microsoft\SQLEditor"=""
+"$RootFolder$Common7\IDE\Extensions\Microsoft\SQLDB\Dac\120"=""
+
+[$RootKey$\InstalledProducts\Microsoft SQL Server Data Tools]
+@="#100"
+"Package"="{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}"
+"ProductDetails"="#102"
+"PID"="12.0.41012.0"
+"LogoID"="#398"
+
+[$RootKey$\Projects\{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}]
+@="Microsoft SQL Server Data Tools"
+"DisplayName"="Microsoft SQL Server Data Tools"
+"DisplayProjectFileExtensions"="#210"
+"Package"="{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}"
+"DefaultProjectExtension"="sqlproj"
+"PossibleProjectExtensions"="sqlproj"
+"ProjectTemplatesDir"="$RootFolder$Common7\IDE\Extensions\Microsoft\SQLDB\ProjectTemplates\SSDT\"
+"Language(VsTemplate)"="SQLDB"
+
+[$RootKey$\Projects\{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}\AddItemTemplates]
+
+[$RootKey$\Projects\{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}\AddItemTemplates\TemplateDirs]
+
+[$RootKey$\Projects\{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}\AddItemTemplates\TemplateDirs\{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}]
+
+[$RootKey$\Projects\{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}\AddItemTemplates\TemplateDirs\{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}\1]
+@="#508"
+"TemplatesDir"="$RootFolder$Common7\IDE\Extensions\Microsoft\SQLDB\ItemTemplates\"
+"SortPriority"=dword:00000032
+
+[$RootKey$\NewProjectTemplates\TemplateDirs\{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}\/1]
+@="#1302"
+"DeveloperActivity"="SqlServer"
+"SortPriority"=dword:0000001F
+"TemplatesDir"="$RootFolder$Common7\IDE\Extensions\Microsoft\SQLDB\ProjectTemplates\SSDT\"
+
+[$RootKey$\Editors\{00E9D2E3-9044-47D1-978C-BE2825249219}]
+@="Schema Compare"
+"DisplayName"="#106"
+"Package"="{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}"
+"CommonPhysicalViewAttributes"=dword:00000000
+
+[$RootKey$\Editors\{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}]
+@="Query Results"
+"DisplayName"="#129"
+"Package"="{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}"
+"CommonPhysicalViewAttributes"=dword:00000000
+
+[$RootKey$\Editors\{00E9D2E3-9044-47D1-978C-BE2825249219}\Extensions]
+"scmp"=dword:00000042
+
+[$RootKey$\Editors\{00E9D2E3-9044-47D1-978C-BE2825249219}\LogicalViews]
+"{7651A702-06E5-11D1-8EBD-00A0C90F26EA}"=""
+
+[$RootKey$\Editors\{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}\LogicalViews]
+"{7651A703-06E5-11D1-8EBD-00A0C90F26EA}"=""
+
+[$RootKey$\Services\{F63D550D-00BB-440B-B57C-5F750BDC8A81}]
+@="{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}"
+"Name"="SSSDTDebugProjectService"
+
+[$RootKey$\Services\{4398F2E3-CD43-4CD3-AC59-894250E7BBF6}]
+@="{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}"
+"Name"="SOnlineMetadataCache"
+
+[$RootKey$\Menus]
+"{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}"=", Menus.ctmenu, 1"
+
+[$RootKey$\ToolsOptionsPages\SQL Server Tools]
+@="#184"
+"Package"="{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}"
+
+[$RootKey$\ToolsOptionsPages\SQL Server Tools\General]
+@="#211"
+"Package"="{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}"
+"Page"="{000CE8DF-39CB-47F7-8FFE-047DB354E987}"
+
+[$RootKey$\AutomationProperties\SQL Server Tools\General]
+"Name"="SQL Server Tools.General"
+"Package"="{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}"
+
+[$RootKey$\ToolsOptionsPages\SQL Server Tools\Online Editing]
+@="#212"
+"Package"="{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}"
+"Page"="{0CEF8E75-0396-498B-A411-FC67F6782E9A}"
+
+[$RootKey$\AutomationProperties\SQL Server Tools\Online Editing]
+"Name"="SQL Server Tools.Online Editing"
+"Package"="{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}"
+
+[$RootKey$\UserSettings\SQL Server Tools]
+@="184"
+"Description"="207"
+"Package"="{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}"
+"Category"="{408013CC-A42E-4AFF-B7B3-89212BE1FF56}"
+"VSSettingsMigration"=dword:00000001
+
+[$RootKey$\UserSettings\SQL Server Tools\General]
+@="182"
+"Description"="201"
+"Package"="{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}"
+"Category"="{8BE3C777-99E5-4BBE-B223-45E57B6B52AE}"
+"VSSettingsMigration"=dword:00000001
+
+[$RootKey$\UserSettings\SQL Server Tools\Online Editing]
+@="#212"
+"Description"="#2443"
+"Package"="{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}"
+"Category"="{0CEF8E75-0396-498B-A411-FC67F6782E9A}"
+"VSSettingsMigration"=dword:00000001
+
+[$RootKey$\UserSettings\SQL Server Tools\Database Errors and Warnings]
+@="#211"
+"Description"="#2442"
+"Package"="{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}"
+"Category"="{000CE8DF-39CB-47F7-8FFE-047DB354E987}"
+"VSSettingsMigration"=dword:00000001
+
+[$RootKey$\ToolWindows\{0038D243-39E6-4004-8532-13C6802D97B2}]
+@="{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}"
+"Name"="Microsoft.VisualStudio.Data.Tools.Package.DBProEventMonitor.DBProEventMonitorToolWindow"
+"Style"="Tabbed"
+"Window"="{34E76E81-EE4A-11D0-AE2E-00A0C90FFFC3}"
+
+[$RootKey$\ToolWindows\{007A3A6B-B5B2-454D-A2BD-CF929F989BE2}]
+@="{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}"
+"Name"="Microsoft.VisualStudio.Data.Tools.Package.Project.Features.DataToolsOperationsToolWindow"
+"Style"="Tabbed"
+"Window"="{34E76E81-EE4A-11D0-AE2E-00A0C90FFFC3}"
+
+[$RootKey$\CLSID\{00842D0C-FDD6-4e3b-9E21-0C263F4B6EC2}]
+"InprocServer32"="$RootFolder$Common7\IDE\Extensions\Microsoft\SQLDB\Microsoft.VisualStudio.Data.Tools.SqlCLRIntellisenseHostingEngine.dll"
+@="CSharpCodeProvider IntellisenseProvider"
+
+[$RootKey$\CLSID\{ED6A86A6-38A2-41CB-8AF7-68C1876BBA87}]
+"InprocServer32"="$RootFolder$Common7\IDE\Extensions\Microsoft\SQLDB\Microsoft.VisualStudio.Data.Tools.SqlCLRIntellisenseHostingEngine.dll"
+@="CSharpCodeProvider IntellisenseProvider SP1"
+
+[$RootKey$\CLSID\{00B799FA-B147-4999-A86E-1F37765E6FB5}]
+"InprocServer32"="$RootFolder$Common7\IDE\Extensions\Microsoft\SQLDB\Microsoft.VisualStudio.Data.Tools.SqlCLRIntellisenseHostingEngine.dll"
+@="VbCodeProvider IntellisenseProvider"
+
+[$RootKey$\CLSID\{008B9AF8-091D-4BA5-95E1-5F3479DF8FCC}]
+@="Microsoft.VisualStudio.Data.Tools.Package.Project.PropertyPages.PropertyPageProjectSqlClrComClass"
+"InprocServer32"="%SystemRoot%\\system32\\mscoree.dll"
+"Class"="Microsoft.VisualStudio.Data.Tools.Package.Project.PropertyPages.PropertyPageProjectSqlClrComClass"
+"Assembly"="Microsoft.VisualStudio.Data.Tools.Package, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"ThreadingModel"="Both"
+
+[$RootKey$\CLSID\{7EFD4D20-FF83-4E79-9A2A-5BBCD1D9E512}]
+@="Microsoft.VisualStudio.Data.Tools.Package.Project.PropertyPages.PropertyPageBuildSettingsHostComClass"
+"InprocServer32"="%SystemRoot%\\system32\\mscoree.dll"
+"Class"="Microsoft.VisualStudio.Data.Tools.Package.Project.PropertyPages.PropertyPageBuildSettingsHostComClass"
+"Assembly"="Microsoft.VisualStudio.Data.Tools.Package, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"ThreadingModel"="Both"
+
+[$RootKey$\CLSID\{00106176-FA71-458F-A7BA-EDF89DF82AD3}]
+@="Microsoft.VisualStudio.Data.Tools.Package.Project.PropertyPages.PropertyPageBuildComClass"
+"InprocServer32"="%SystemRoot%\\system32\\mscoree.dll"
+"Class"="Microsoft.VisualStudio.Data.Tools.Package.Project.PropertyPages.PropertyPageBuildComClass"
+"Assembly"="Microsoft.VisualStudio.Data.Tools.Package, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"ThreadingModel"="Both"
+
+[$RootKey$\CLSID\{00E535DF-A381-47C4-9F08-E251E155B1F6}]
+@="Microsoft.VisualStudio.Data.Tools.Package.Project.PropertyPages.PropertyPageProjectReferencePathsComClass"
+"InprocServer32"="%SystemRoot%\\system32\\mscoree.dll"
+"Class"="Microsoft.VisualStudio.Data.Tools.Package.Project.PropertyPages.PropertyPageProjectReferencePathsComClass"
+"Assembly"="Microsoft.VisualStudio.Data.Tools.Package, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"ThreadingModel"="Both"
+
+[$RootKey$\CLSID\{095629FD-033B-4016-B7F4-86E02165F0BB}]
+@="Microsoft.VisualStudio.Data.Tools.Package.Project.PropertyPages.ProjectPropertyPageDebugComClass"
+"InprocServer32"="%SystemRoot%\\system32\\mscoree.dll"
+"Class"="Microsoft.VisualStudio.Data.Tools.Package.Project.PropertyPages.ProjectPropertyPageDebugComClass"
+"Assembly"="Microsoft.VisualStudio.Data.Tools.Package, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"ThreadingModel"="Both"
+
+[$RootKey$\CLSID\{0052CD62-2A64-4B4B-8FEA-EC3B08802C72}]
+@="Microsoft.VisualStudio.Data.Tools.Package.Project.PropertyPages.ProjectPropertyPageBuildEventsComClass"
+"InprocServer32"="%SystemRoot%\\system32\\mscoree.dll"
+"Class"="Microsoft.VisualStudio.Data.Tools.Package.Project.PropertyPages.ProjectPropertyPageBuildEventsComClass"
+"Assembly"="Microsoft.VisualStudio.Data.Tools.Package, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"ThreadingModel"="Both"
+
+[$RootKey$\CLSID\{00B23921-511F-4980-AEDA-6164920EFB3C}]
+@="Microsoft.VisualStudio.Data.Tools.Package.StaticCodeAnalysis.PropertyPage.PropertyPageStaticCodeAnalysisComClass"
+"InprocServer32"="%SystemRoot%\\system32\\mscoree.dll"
+"Class"="Microsoft.VisualStudio.Data.Tools.Package.StaticCodeAnalysis.PropertyPage.PropertyPageStaticCodeAnalysisComClass"
+"Assembly"="Microsoft.VisualStudio.Data.Tools.Package, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"ThreadingModel"="Both"
+
+[$RootKey$\CLSID\{00B44106-B4B7-477F-9B7A-D8178DAA2023}]
+@="Microsoft.VisualStudio.Data.Tools.Package.Project.TemplateWizard"
+"InprocServer32"="%SystemRoot%\\system32\\mscoree.dll"
+"Class"="Microsoft.VisualStudio.Data.Tools.Package.Project.TemplateWizard"
+"Assembly"="Microsoft.VisualStudio.Data.Tools.Package, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"ThreadingModel"="Both"
+
+[$RootKey$\CLSID\{0032459B-05D4-453A-8918-372D533C7E42}]
+@="Microsoft.VisualStudio.Data.Tools.Package.Project.PropertyPages.PropertyPageProjectSettingsComClass"
+"InprocServer32"="%SystemRoot%\\system32\\mscoree.dll"
+"Class"="Microsoft.VisualStudio.Data.Tools.Package.Project.PropertyPages.PropertyPageProjectSettingsComClass"
+"Assembly"="Microsoft.VisualStudio.Data.Tools.Package, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"ThreadingModel"="Both"
+
+[$RootKey$\CLSID\{004AF6C6-AA5B-4367-86DF-153F9F79D6FC}]
+@="Microsoft.VisualStudio.Data.Tools.Package.Project.PropertyPages.PropertyPageSqlCmdVariablesComClass"
+"InprocServer32"="%SystemRoot%\\system32\\mscoree.dll"
+"Class"="Microsoft.VisualStudio.Data.Tools.Package.Project.PropertyPages.PropertyPageSqlCmdVariablesComClass"
+"Assembly"="Microsoft.VisualStudio.Data.Tools.Package, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"ThreadingModel"="Both"
+
+[$RootKey$\ShellFileAssociations\.sqlproj]
+@="VisualStudio.sqlproj.12.0"
+
+[$RootKey$\BindingPaths\{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}]
+"$RootFolder$Common7\IDE\Extensions\Microsoft\SQLDB"=""
+"$RootFolder$Common7\IDE\Extensions\Microsoft\SQLEditor"=""
+"$RootFolder$Common7\IDE\Extensions\Microsoft\SQLDB\Dac\120"=""
+
+[$RootKey$\BindingPaths\{4CB078B7-1C2D-4D5A-985D-AE92DC91459A}]
+"$ProgramFiles$\Common Files\Microsoft Shared\SQL Server Developer Tools\120"=""
+
+[$RootKey$\BindingPaths\{93D6FE71-80CD-4A17-AC1F-1EBA46DDFB14}]
+"$ProgramFiles$\Common Files\Microsoft Shared\SQL Debugging\120"=""
+
+[$RootKey$\Services\{33c78f10-fb16-423c-850d-c44f3c78c736}]
+@="{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}"
+"Name"="ISqlServerObjectExplorerService"
+
+[$RootKey$\Services\{A5392196-68CF-4A64-A723-25F5EDEEF9A3}]
+@="{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}"
+"Name"="ISqlServerObjectExplorerService2"
+
+[$RootKey$\Services\{889BF1F2-D7AA-4869-9A03-D357F15ED839}]
+@="{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}"
+"Name"="ISqlDbService"
+
+[$RootKey$\Services\{3CA95A44-FEAB-4CC3-B1D9-C0BDC3CC69A1}]
+@="{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}"
+"Name"="IDatabaseNodeFactoryService"
+
+[$RootKey$\Projects\{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}\AddItemTemplates\TemplateDirs\{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}]
+[$RootKey$\Projects\{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}\AddItemTemplates\TemplateDirs\{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}\2]
+@="#500"
+"TemplatesDir"="$RootFolder$Common7\IDE\Extensions\Microsoft\SQLDB\Extensions\SqlServer\ItemTemplates\"
+"SortPriority"=dword:00000014
+
+[$RootKey$\MSBuild\SafeImports]
+"SqlStudio1"="$ProgramFiles$\MSBuild\Microsoft\VisualStudio\v12.0\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets"
+
+
+[$RootKey$\Editors\{6733A975-78A1-470C-A55A-FBEE19F5874B}]
+@="SQL Editor Selector"
+"DisplayName"="#762"
+"Package"="{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}"
+"CommonPhysicalViewAttributes"=dword:00000002
+
+[$RootKey$\Editors\{6733A975-78A1-470C-A55A-FBEE19F5874B}\Extensions]
+"sql"=dword:00000096
+
+[$RootKey$\Editors\{6733A975-78A1-470C-A55A-FBEE19F5874B}\LogicalViews]
+"{7651A700-06E5-11D1-8EBD-00A0C90F26EA}"=""
+"{7651A701-06E5-11D1-8EBD-00A0C90F26EA}"=""
+"{7651A702-06E5-11D1-8EBD-00A0C90F26EA}"=""
+"{7651A703-06E5-11D1-8EBD-00A0C90F26EA}"=""
+
+[$RootKey$\Projects\{006AC3C3-E446-4C8A-B35F-CBA0E2238D60}]
+@="Microsoft SQL Server Data Tools Upgrade Factory"
+"DisplayName"="Microsoft SQL Server Data Tools Upgrade Factory"
+"DisplayProjectFileExtensions"="#213"
+"Package"="{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}"
+"DefaultProjectExtension"="dbproj"
+"PossibleProjectExtensions"="dbproj;dbp"
+"ProjectTemplatesDir"=".\NullPath"
+"Language(VsTemplate)"="Database"
+
+[$RootKey$\Projects\{c252feb5-a946-4202-b1d4-9916a0590387}]
+@="Microsoft SQL Server Data Tools Upgrade Factory for VDT Project Flavors"
+"Package"="{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}"
+
+[$RootKey$\Generators\{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}\.tt]
+@="TextTemplatingFileGenerator"
+
+[$RootKey$\Generators\{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}\TextTemplatingFileGenerator]
+@="Generator that uses the Text Templating engine"
+"CLSID"="{b9c665d2-0451-4ae2-a38c-443b85d634f2}"
+"GeneratesDesignTimeSource"=dword:00000001
+
+[$RootKey$\Generators\{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}\TextTemplatingFilePreprocessor]
+@="Generator that uses the Text Templating engine to preprocess a template"
+"CLSID"="{F56DB4B6-C280-40F1-855D-5DA0ED7BD270}"
+"GeneratesDesignTimeSource"=dword:00000001
+
+[$RootKey$\CommonAzureTools\ServerExplorerNodes\{c252feb5-a946-4202-b1d4-9916a0590999}]
+"Assembly"="Microsoft.VisualStudio.Data.Tools.Package, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"ClassName"="Microsoft.VisualStudio.Data.Tools.Package.ServerExplorer.SqlAzureNode"
+
+[$RootKey$\TextTemplating\DirectiveProcessors\SqlModelDirectiveProcessor]
+"Assembly"="Microsoft.VisualStudio.Data.Tools.Package, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"Class"="Microsoft.VisualStudio.Data.Tools.Package.Project.Internal.SqlModelDirectiveProcessor"
+@="A directive processor that provides access to SQL Server Data Tools Project Model"

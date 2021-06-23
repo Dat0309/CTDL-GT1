@@ -1,0 +1,844 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<HTML DIR="LTR">
+
+<HEAD>
+	<TITLE>イベント追加ウィザード</TITLE>
+	<META NAME="vs_targetSchema" CONTENT="http://schemas.microsoft.com/intellisense/ie5">
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=shift_jis">
+	<META HTTP-EQUIV="MSThemeCompatible" CONTENT="Yes">
+	<LINK ID="LINKURL" REL="stylesheet" HREF="../../../../../1041/NewStyles.css">
+	<SYMBOL NAME="EXTERNAL_NAME" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="INTERNAL_NAME" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="STOCK" TYPE=radio VALUE=false></SYMBOL>
+	<SYMBOL NAME="CUSTOM" TYPE=radio VALUE=false></SYMBOL>
+	<SYMBOL NAME="STOCK_DISPID" TYPE=text value=""></SYMBOL>
+	<SYMBOL NAME="STOCK_MACRO" TYPE=text value=""></SYMBOL>
+	<SYMBOL NAME="INTERFACE_NAME" TYPE=text value=""></SYMBOL>
+</HEAD>
+
+<BODY BGCOLOR="BUTTONFACE" TOPMARGIN="0" LEFTMARGIN="0" RIGHTMARGIN="0" BOTTOMMARGIN="0" ONLOAD="InitDocument(document);" ONKEYDOWN="OnKey();" ONKEYPRESS="OnPress();">
+
+<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<COL WIDTH="100%">
+  <TR VALIGN="TOP">
+	<TD HEIGHT="79">
+	<!--OPEN OF ALL ENCOMPASSING TABLE ROW ONE//-->
+	 <TABLE CLASS="TWO" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	 <COL WIDTH="12"><COL><COL WIDTH="12">
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD CLASS="IMAGE" VALIGN="BOTTOM" WIDTH="110" ROWSPAN="2">
+		<DIV CLASS="SMALLA" ID="Layer0">
+		 <IMG CLASS="SMALLEST" SRC="..\..\Images\Event.gif" WIDTH="63" HEIGHT="63" ALT="" BORDER="0">
+		</DIV>
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="6" ROWSPAN="2">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+	 
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="65">
+		<H4 CLASS="HEAD" ID="HEAD">イベント追加ウィザードへようこそ</H4>
+		<P CLASS="SUBHEAD" ID="SUBHEAD">このウィザードは、クラスに接続ポイント イベントを追加します。</P>
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+	 
+	  <TR>
+	   <TD VALIGN="TOP" CLASS="RULE" COLSPAN="5" HEIGHT="2">
+		<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+	  	 <TR VALIGN="TOP">
+	  	  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+	  	  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+	  	 </TR>
+		</TABLE>
+	   </TD>
+	  </TR>
+	 </TABLE>
+	 
+	<!--CLOSE OF ALL ENCOMPASSING TABLE ROW ONE//-->
+	</TD>
+	</TR>
+	<TR VALIGN="TOP">
+	<TD HEIGHT="100%">
+	<!--OPEN OF ALL ENCOMPASSING TABLE ROW TWO//-->
+	
+	 <TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	 <COL>
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="100%">
+	   <!--OPEN OF CONTENT AND BUTTON TABLE//-->
+	   
+	   	<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+		<COL WIDTH="100%">
+		 <TR VALIGN="TOP">
+		  <TD HEIGHT="100%">
+	   	  <!--OPEN OF CONTENT//-->
+		  
+		  	<TABLE CLASS="CONTENT" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL WIDTH="185"><COL WIDTH="12"><COL WIDTH="185"><COL WIDTH="12"><COL WIDTH="185"><COL WIDTH="12">
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="7">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			 
+ 			 <TR VALIGN="TOP">
+ 			 <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP">
+			  	<SPAN CLASS="itemTextTop" ID="STOCK_EVENTS_SPAN" TITLE="オートメーション クライアントが、クラスからイベントを要求するときに使用する名前を表示します。名前を入力するか、リストから選択してください。">
+			  	 <LABEL FOR="STOCK_EVENTS" ID="STOCK_EVENTS_LABEL">イベント名(<U>E</U>):</LABEL>
+				 <BR>
+				 <OBJECT CLASS="itemTextThreeColumn" ACCESSKEY="E" CLASSID="CLSID:79eadad6-3f7a-45a6-a75e-dd0b7d70fa43" 
+				  ID="STOCK_EVENTS" TITLE="オートメーション クライアントが、クラスからイベントを要求するときに使用する名前を表示します。名前を入力するか、リストから選択してください。" VIEWASTEXT></OBJECT>
+				</SPAN>
+			  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+			  <TD VALIGN="TOP">
+ 				<SPAN CLASS="itemTextTop" ID="EVENT_TYPE_SPAN">イベントの種類:
+					 <P CLASS="Spacer">&nbsp;</P>
+	
+	  				 <INPUT TYPE="radio" CLASS="Radio" NAME="implementation" ID="STOCK" ACCESSKEY="S" TITLE="定義済みのストック イベントとして挿入します。" onPropertyChange="OnEventType();">
+	  	 			 <DIV CLASS="itemTextRadioB">
+		  			  <LABEL FOR="STOCK" ID="STOCK_LABEL" TITLE="定義済みのストック イベントとして挿入します。">ストック(<U>S</U>)</LABEL>
+	  	 			 </DIV>
+	  				 <BR>
+	  			 	 <INPUT TYPE="radio" CLASS="Radio" NAME="implementation" ID="CUSTOM" ACCESSKEY="U" TITLE="カスタム イベントとして挿入します。">
+	  	 			 <DIV CLASS="itemTextRadioB">
+		  			  <LABEL FOR="CUSTOM" ID="CUSTOM_LABEL" TITLE="カスタム イベントとして挿入します。">カスタム(<U>U</U>)</LABEL>
+	  	 			 </DIV>
+				</SPAN>
+  		  	  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+			  <TD VALIGN="TOP">
+			  	<SPAN CLASS="itemTextTop" ID="INTERNAL_NAME_SPAN" TITLE="イベントを送るメンバー関数の名前を表示します。">
+			  	 <LABEL ID="INTERNAL_NAME_LABEL" FOR="INTERNAL_NAME">内部名(<U>I</U>):</LABEL>
+				 <BR>
+				 <INPUT CLASS="sideBtnThreeColumn" ID="INTERNAL_NAME" ACCESSKEY="I" TYPE="text" VALUE="" TITLE="イベントを送るメンバー関数の名前を表示します。" STYLE="HEIGHT:21PX;">
+				</SPAN>
+  		  	  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+ 		  	 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="21" COLSPAN="7">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			 
+ 			 <TR VALIGN="TOP">
+ 			 <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP">
+			  	<SPAN CLASS="itemText" ID="DATA_TYPE_SPAN" TITLE="パラメーターのデータ型です。">
+			  	 <LABEL FOR="PARAMETER_TYPE" ID="PARAMETER_TYPE_LABEL">パラメーターの型(<u>Y</u>):</LABEL>
+				 <BR>
+				 <SELECT CLASS="sideBtnThreeColumn" ID="PARAMETER_TYPE" SIZE="1" ACCESSKEY="Y" TITLE="パラメーターのデータ型です。" onPropertyChange="ToggleButtons();">
+					<OPTION></OPTION>
+				 </SELECT>
+				</SPAN>
+			  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+			  <TD VALIGN="TOP">
+				<SPAN CLASS="itemText">
+	  		 		 <LABEL FOR="PARAMETER_NAME" ID="PARAMETER_NAME_LABEL" TITLE="追加するパラメーターの名前です。">パラメーター名(<u>N</u>):</LABEL>
+	  	 			 <BR>
+	  	 			 <INPUT CLASS="sideBtnThreeColumn" ID="PARAMETER_NAME" ACCESSKEY="N" TITLE="追加するパラメーターの名前です。" TYPE="text" TITLE="追加するパラメーターの名前です。" onPropertyChange="ToggleButtons();">
+					 <BUTTON ID="AddBtn" TITLE="パラメーターを追加します。" CLASS="buttonClass2" ACCESSKEY="A" onClick="OnAdd();">追加(<u>A</u>)</BUTTON>
+					 <SPAN CLASS="Spacer8"></SPAN>
+					 <BUTTON ID="RemoveBtn" TITLE="パラメーターを削除します。" CLASS="buttonClass2" ACCESSKEY="r" onClick="OnRemove();">削除(<u>R</u>)</BUTTON>
+				</SPAN>
+  		  	  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+			  <TD VALIGN="TOP">
+ 				<SPAN CLASS="itemText" ID="PARAMETERS_SPAN" TITLE="パラメーターの一覧です。">
+					<LABEL FOR="PARAMETERS" ID="PARAMETERS_LABEL">パラメーターの一覧(<U>P</U>):</LABEL>
+					<BR>
+					<SELECT CLASS="SideBtnThreeColumn" SIZE="3" ID="PARAMETERS" ACCESSKEY="P" TITLE="パラメーターの一覧です。">
+					</SELECT>
+				</SPAN>
+  		  	  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+ 		  	 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="100%" COLSPAN="7">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+		 	</TABLE>
+			
+	   	  <!--CLOSE OF CONTENT//-->
+		  </TD>
+		 </TR>
+		 <TR VALIGN="BOTTOM">
+		  <TD>
+	   	  <!--OPEN OF BUTTON HTML//-->
+		  
+		  	<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="12">
+			 <TR>
+  			  <TD VALIGN="TOP" CLASS="RULE" COLSPAN="8" HEIGHT="2">
+				<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+  	 			 <TR VALIGN="TOP">
+  	  			  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+  	  			  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+  	 			 </TR>
+				</TABLE>
+  			  </TD>
+ 			  </TR>
+ 
+ 			  <TR>
+  			  <TD VALIGN="TOP" HEIGHT="11" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 
+ 			<TR>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" HEIGHT="23">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="FinishBtn" onClick="OnFinish(document);">完了</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="CancelBtn" onClick="window.external.Finish(document, 'cancel');">キャンセル</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="HelpBtn" onClick="window.external.OnHelp('vc.codewiz.event.overview');">ヘルプ</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			</TABLE>
+			
+	   	  <!--CLOSE OF BUTTON HTML//-->
+		  </TD>
+		 </TR>
+		</TABLE>
+	
+	   <!--CLOSE OF CONTENT AND BUTTON TABLE//-->
+	   </TD>
+	  </TR>
+	 </TABLE>
+	
+	<!--CLOSE OF ALL ENCOMPASSING TABLE ROW TWO//-->
+	</TD>
+	</TR>
+	</TABLE>
+
+</BODY>
+</HTML>
+
+<SCRIPT LANGUAGE="JSCRIPT">
+
+var tab_array = new Array();
+var gbStockParams = false;
+
+function InitDocument(document)
+{	
+	setDirection();
+	
+	if (window.external.FindSymbol("DOCUMENT_FIRST_LOAD"))
+	{
+		var L_WizardDialogTitle_Text = "イベント追加ウィザード";
+		window.external.AddSymbol("WIZARD_DIALOG_TITLE", L_WizardDialogTitle_Text);
+		window.external.SetDefaults(document);
+	}
+
+	window.external.Load(document);
+
+	for (var nCntr = 0; nCntr < strTypes.length; nCntr++)
+	{
+		if (strTypes[nCntr] == "void")
+			continue;
+
+		var oOption = document.createElement("OPTION");
+		oOption.text = strTypes[nCntr];
+		PARAMETER_TYPE.add(oOption);
+	}
+
+	for (var nCntr = 0; nCntr < strStockEvents.length; nCntr++)
+		STOCK_EVENTS.AddItem(strStockEvents[nCntr]);
+	STOCK_EVENTS.InsertItem("", 0);
+	
+	CUSTOM.disabled = true;
+	STOCK.disabled = true;
+	ToggleButtons();
+}
+
+function Next(document, linkto)
+{
+	window.external.Next(document, linkto);
+}
+
+function OnFinish(document)
+{
+	try
+	{
+		var oClass = window.external.ParentObject;
+		var oMap = oClass.Maps.Find("EVENT");
+
+		if (!oMap)
+		{
+			var L_ErrMsg2_Text = "クラスは EVENT マップを含まなければなりません。";
+			window.external.ReportError(L_ErrMsg2_Text);
+			return;
+		}
+
+		// get event interface
+		var oInterface = false;
+		// get file name where event map is located
+		var strFileName = oMap.Location(vsCMWhereDefault);
+		strFileName = strFileName.substr(strFileName.lastIndexOf("\\")+1);
+		// get Variables collection
+		var oProj = window.external.ProjectObject;
+		var oVariables = oProj.Object.Files(strFileName).Object.FileCodeModel.Variables;
+		for (var nCntr = 1; nCntr <= oVariables.Count; nCntr++)
+		{
+			// get global event IID
+			var oVariable = oVariables(nCntr);
+			if ((oVariable.TypeString == "const IID")
+				&& (oVariable.Name.substr(0, 5) == "IID_D")
+				&& (oVariable.Name.substr(oVariable.Name.length-6, 6) == "Events"))
+			{
+				var strInterface = oVariable.Name.substr(3);
+				if (oProj.CodeModel.IDLLibraries.Count > 0)
+					oInterface = oProj.CodeModel.IDLLibraries(1).Interfaces.Find(strInterface);
+				if (oInterface)
+					window.external.AddSymbol("INTERFACE_NAME", strInterface);
+				break;
+			}
+		}
+		if (!oInterface)
+		{
+			var L_ErrMsg3_Text = "イベント インターフェイスが見つかりません。";
+			window.external.ReportError(L_ErrMsg3_Text);
+			return;
+		}
+
+		if (!oInterface.ValidateMember(STOCK_EVENTS.Value, vsCMElementFunction))
+		{
+			window.external.ReportError();
+			STOCK_EVENTS.focus();
+			return;
+		}
+
+		if (!STOCK.disabled && STOCK.checked)
+		{ 
+			var eventMap = window.external.ParentObject.Maps.Find("EVENT");
+			if ( eventMap.Entries.Find( strStockEventMacros[GetEventIndex(STOCK_EVENTS.Value)] )  )
+			{	
+				var L_EventExists_Text = "ストック イベントは既に定義されています。";
+				window.external.ReportError(L_EventExists_Text);
+				STOCK_EVENTS.focus();
+				return;
+			}
+		}
+		window.external.AddSymbol("EXTERNAL_NAME", STOCK_EVENTS.Value);
+
+		var strParams = "";
+		for (var nCntr = 0; nCntr < PARAMETERS.length; nCntr++)
+		{
+			var strTemp = PARAMETERS.options[nCntr].text;
+			var strType = strTemp.substr(0, strTemp.indexOf(" "));
+			var strName = strTemp.substr(strTemp.indexOf(" ")+1);
+
+			if (strParams.length)
+				strParams += ", ";
+			if (strType == "BSTR")
+				strParams += "LPCTSTR " + strName;
+			else
+				strParams += strTemp;
+
+			window.external.AddSymbol("PARAM_TYPE" + nCntr, strType);
+			window.external.AddSymbol("PARAM_NAME" + nCntr, strName);
+			var strVtType = PARAMETERS.options[nCntr].value;
+			window.external.AddSymbol("PARAM_VT_TYPE" + nCntr, strVtType);
+		}
+		strParams = "(" + strParams + ")";
+		window.external.AddSymbol("NUM_PARAMETERS", PARAMETERS.length);
+
+		if (STOCK.disabled || (!STOCK.disabled && !STOCK.checked))
+		{
+			if (!window.external.ParentObject.ValidateMember(INTERNAL_NAME.value + strParams, vsCMElementFunction))
+			{
+				window.external.ReportError();
+				INTERNAL_NAME.focus();
+				return;
+			}
+		}
+
+		if (!STOCK.disabled && STOCK.checked)
+		{
+			window.external.AddSymbol("STOCK_DISPID", strStockEventDispIDs[GetEventIndex(STOCK_EVENTS.Value)]);
+			window.external.AddSymbol("STOCK_MACRO", strStockEventMacros[GetEventIndex(STOCK_EVENTS.Value)]);
+		}
+
+		OnWizFinish(document);
+	}
+	catch(e)
+	{
+		var L_ErrOnFinish_Text = "OnFinish でエラーが発生しました";
+		if (e.description.length != 0)
+		{
+			L_ErrOnFinish_Text += ": ";
+			L_ErrOnFinish_Text += e.description;
+		}
+		window.external.ReportError(L_ErrOnFinish_Text);
+	}
+}
+
+function OnExternalName()
+{
+	var strExternalName = EXTERNAL_NAME.value;
+	if (strExternalName.length)
+		INTERNAL_NAME.value = "Fire" + strExternalName;
+	else
+		INTERNAL_NAME.value = "";
+}
+
+function ValidateParam(strType, strName)
+{
+	if (strType.length == 0)
+	{
+		var L_ErrMsg9_Text = "パラメーターの型を指定してください。";
+		window.external.ReportError(L_ErrMsg9_Text);
+		PARAMETER_TYPE.focus();
+		return false;
+	}	
+
+	if (strName.length == 0)
+	{
+		var L_ErrMsg10_Text = "パラメーター名を指定してください。";
+		window.external.ReportError(L_ErrMsg10_Text);
+		PARAMETER_NAME.focus;
+		return false;
+	}
+
+	var strParamNames = ExtractParamNames() + "," + strName;
+	if(!window.external.dte.VCLanguageManager.ValidateParameterNames(STOCK_EVENTS.Value, strParamNames, vsCMElementFunction))
+	{
+		window.external.ReportError();
+		PARAMETER_NAME.focus();
+		return false;
+	}
+
+	if (!window.external.ProjectObject.CodeModel.IsValidID(strName))
+	{
+		var L_ErrMsg11_Text = "パラメーター名が無効です。";
+		window.external.ReportError(L_ErrMsg11_Text);
+		PARAMETER_NAME.focus();
+		return false;
+	}
+
+	return true;
+}
+
+function OnAdd()
+{	
+	var strType = PARAMETER_TYPE.options[PARAMETER_TYPE.selectedIndex].text;
+	var strName = PARAMETER_NAME.value;
+
+	if (!ValidateParam(strType, strName))
+		return;
+
+	var oOption = document.createElement("OPTION");
+	oOption.value = vtTypes[PARAMETER_TYPE.selectedIndex-1];
+	oOption.text = strType + " " + strName;
+	PARAMETERS.add(oOption);
+	PARAMETERS.selectedIndex = PARAMETERS.length - 1;
+
+	PARAMETER_TYPE.selectedIndex = 0;
+	PARAMETER_NAME.value = "";
+	ToggleButtons();
+}
+
+function OnRemove()
+{
+	if (PARAMETERS.selectedIndex == -1)
+		return;
+
+	var nIndex = PARAMETERS.selectedIndex;
+
+	while (PARAMETERS.selectedIndex != -1)
+		PARAMETERS.remove(PARAMETERS.selectedIndex);
+	
+	if (PARAMETERS.length != 0)
+		PARAMETERS.selectedIndex = (nIndex < PARAMETERS.length) ? nIndex : PARAMETERS.length-1;
+	ToggleButtons();
+}
+
+function GetVTS(strType)
+{
+	for (var nCntr = 0; nCntr < strTypes.length; nCntr++)
+	{
+		if (strTypes[nCntr] == strType)
+			return vtTypes[nCntr];
+	}
+}
+
+function UpdateParamList()
+{
+	PARAMETERS.length = 0;
+
+	var strEventParams = strStockEventParams[GetEventIndex(STOCK_EVENTS.Value)];
+	if (strEventParams.length)
+	{
+		var aryParams = strEventParams.split(",");
+		for (var nCntr = 0; nCntr < aryParams.length; nCntr++)
+		{
+			var oOption = document.createElement("OPTION");
+			oOption.text = aryParams[nCntr];
+			oOption.value = GetVTS(aryParams[nCntr].substr(0, aryParams[nCntr].indexOf(" ")));
+			PARAMETERS.add(oOption);
+		}
+		gbStockParams = true;
+	}
+}
+
+function OnEventType()
+{
+	if (STOCK.checked)
+		EnableDisableControls(true);
+	else
+	{
+		EnableDisableControls(false);
+		// Clear parameters list
+		PARAMETERS.length = 0;
+		gbStockParams = false;
+	}
+}
+
+function EnableDisableControls(bStock)
+{
+	if (bStock)
+	{
+		INTERNAL_NAME.disabled = true;
+		PARAMETER_NAME.disabled = true;
+		PARAMETER_TYPE.disabled = true;
+		INTERNAL_NAME_LABEL.disabled = true;
+		PARAMETER_NAME_LABEL.disabled = true;
+		PARAMETER_TYPE_LABEL.disabled = true;
+
+		UpdateParamList();
+		INTERNAL_NAME.value = "";
+	}
+	else
+	{
+		INTERNAL_NAME.disabled = false;
+		PARAMETER_NAME.disabled = false;
+		PARAMETER_TYPE.disabled = false;
+		INTERNAL_NAME_LABEL.disabled = false;
+		PARAMETER_NAME_LABEL.disabled = false;
+		PARAMETER_TYPE_LABEL.disabled = false;
+
+		INTERNAL_NAME.value = STOCK_EVENTS.Value;
+	}
+	ToggleButtons();
+}
+
+function ToggleButtons()
+{
+	if (PARAMETER_NAME.value.length && PARAMETER_TYPE.selectedIndex
+		&& PARAMETER_TYPE.options[PARAMETER_TYPE.selectedIndex].text.length
+		&& (STOCK.disabled || (!STOCK.disabled && !STOCK.checked)))
+		AddBtn.disabled = false;
+	else
+		AddBtn.disabled = true;
+	if (PARAMETERS.length && PARAMETERS.selectedIndex != -1)
+		RemoveBtn.disabled = false;
+	else
+		RemoveBtn.disabled = true;
+}
+
+function GetEventIndex(strEvent)
+{
+	for (var nCntr = 0; nCntr < strStockEvents.length; nCntr++)
+	{
+		if (strEvent == strStockEvents[nCntr])
+			return nCntr;
+	}
+	return -1;
+}
+
+function ExtractParamNames()
+{
+	var strParamNames = "";
+
+	var Params = document.all.tags("SELECT").item("PARAMETERS");
+	for(var index=0; index < Params.options.length; index++)
+	{
+		var strParam = Params.options[index].text;
+		var NamePos, NameLength;
+		var NameLengthPos = new VBArray(window.external.CppParseTypeString(strParam));
+		NamePos = NameLengthPos.getItem(0);
+		NameLength = NameLengthPos.getItem(1);
+		if(index!=0)
+			strParamNames += ","
+		strParamNames += strParam.substr(NamePos, NameLength);
+	}
+	return strParamNames;
+}
+
+var vtTypes = new Array;
+var strTypes = new Array;
+
+ vtTypes[0]		= "VTS_BSTR";
+strTypes[0]		= "BSTR";
+ vtTypes[1]		= "VTS_PBSTR";
+strTypes[1]		= "BSTR*";
+ vtTypes[2]		= "VTS_UI1";
+strTypes[2]		= "BYTE";
+ vtTypes[3]		= "VTS_PUI1";
+strTypes[3]		= "BYTE*";
+ vtTypes[4]		= "VTS_I1";
+strTypes[4]		= "CHAR";
+ vtTypes[5]		= "VTS_PI1";
+strTypes[5]		= "CHAR*";
+ vtTypes[6]		= "VTS_CY";
+strTypes[6]		= "CY";
+ vtTypes[7]		= "VTS_PCY";
+strTypes[7]		= "CY*";
+ vtTypes[8]		= "VTS_DATE";
+strTypes[8]		= "DATE";
+ vtTypes[9]		= "VTS_PDATE";
+strTypes[9]		= "DATE*";
+ vtTypes[10]	= "VTS_R8";
+strTypes[10]	= "DOUBLE";
+ vtTypes[11]	= "VTS_PR8";
+strTypes[11]	= "DOUBLE*";
+ vtTypes[12]	= "VTS_R4";
+strTypes[12]	= "FLOAT";
+ vtTypes[13]	= "VTS_PR4";
+strTypes[13]	= "FLOAT*";
+ vtTypes[14]	= "VTS_DISPATCH";
+strTypes[14]	= "IDispatch*";
+ vtTypes[15]	= "VTS_PDISPATCH";
+strTypes[15]	= "IDispatch**";
+ vtTypes[16]	= "VTS_FONT";
+strTypes[16]	= "IFontDisp*";
+ vtTypes[17]	= "VTS_PICTURE";
+strTypes[17]	= "IPictureDisp*";
+ vtTypes[18]	= "VTS_UNKNOWN";
+strTypes[18]	= "IUnknown*";
+ vtTypes[19]	= "VTS_PUNKNOWN";
+strTypes[19]	= "IUnknown**";
+ vtTypes[20]	= "VTS_I4";
+strTypes[20]	= "LONG";
+ vtTypes[21]	= "VTS_PI4";
+strTypes[21]	= "LONG*";
+ vtTypes[22]	= "VTS_I8";    
+strTypes[22]	= "LONGLONG";
+ vtTypes[23]	= "VTS_PI8";   
+strTypes[23]	= "LONGLONG*";
+ vtTypes[24]	= "VTS_COLOR";
+strTypes[24]	= "OLE_COLOR";
+ vtTypes[25]	= "VTS_PCOLOR";
+strTypes[25]	= "OLE_COLOR*";
+ vtTypes[26]	= "VTS_XPOS_HIMETRIC";
+strTypes[26]	= "OLE_XPOS_HIMETRIC";
+ vtTypes[27]	= "VTS_PXPOS_HIMETRIC";
+strTypes[27]	= "OLE_XPOS_HIMETRIC*";
+ vtTypes[28]	= "VTS_YPOS_HIMETRIC";
+strTypes[28]	= "OLE_YPOS_HIMETRIC";
+ vtTypes[29]	= "VTS_PYPOS_HIMETRIC";
+strTypes[29]	= "OLE_YPOS_HIMETRIC*";
+ vtTypes[30]	= "VTS_XSIZE_HIMETRIC";
+strTypes[30]	= "OLE_XSIZE_HIMETRIC";
+ vtTypes[31]	= "VTS_PXSIZE_HIMETRIC";
+strTypes[31]	= "OLE_XSIZE_HIMETRIC*";
+ vtTypes[32]	= "VTS_YSIZE_HIMETRIC";
+strTypes[32]	= "OLE_YSIZE_HIMETRIC";
+ vtTypes[33]	= "VTS_PYSIZE_HIMETRIC";
+strTypes[33]	= "OLE_YSIZE_HIMETRIC*";
+ vtTypes[34]	= "VTS_XPOS_PIXELS";
+strTypes[34]	= "OLE_XPOS_PIXELS";
+ vtTypes[35]	= "VTS_PXPOS_PIXELS";
+strTypes[35]	= "OLE_XPOS_PIXELS*";
+ vtTypes[36]	= "VTS_YPOS_PIXELS";
+strTypes[36]	= "OLE_YPOS_PIXELS";
+ vtTypes[37]	= "VTS_PYPOS_PIXELS";
+strTypes[37]	= "OLE_YPOS_PIXELS*";
+ vtTypes[38]	= "VTS_XSIZE_PIXELS";
+strTypes[38]	= "OLE_XSIZE_PIXELS";
+ vtTypes[39]	= "VTS_PXSIZE_PIXELS";
+strTypes[39]	= "OLE_XSIZE_PIXELS*";
+ vtTypes[40]	= "VTS_YSIZE_PIXELS";
+strTypes[40]	= "OLE_YSIZE_PIXELS";
+ vtTypes[41]	= "VTS_PYSIZE_PIXELS";
+strTypes[41]	= "OLE_YSIZE_PIXELS*";
+ vtTypes[42]	= "VTS_HANDLE";
+strTypes[42]	= "OLE_HANDLE";
+ vtTypes[43]	= "VTS_PHANDLE";
+strTypes[43]	= "OLE_HANDLE*";
+ vtTypes[44]	= "VTS_OPTEXCLUSIVE";
+strTypes[44]	= "OLE_OPTEXCLUSIVE";
+ vtTypes[45]	= "VTS_POPTEXCLUSIVE";
+strTypes[45]	= "OLE_OPTEXCLUSIVE*";
+ vtTypes[46]	= "VTS_TRISTATE";
+strTypes[46]	= "OLE_TRISTATE";
+ vtTypes[47]	= "VTS_PTRISTATE";
+strTypes[47]	= "OLE_TRISTATE*";
+ vtTypes[48]	= "VTS_SCODE";
+strTypes[48]	= "SCODE";
+ vtTypes[49]	= "VTS_PSCODE";
+strTypes[49]	= "SCODE*";
+ vtTypes[50]	= "VTS_I2";
+strTypes[50]	= "SHORT";
+ vtTypes[51]	= "VTS_PI2";
+strTypes[51]	= "SHORT*";
+ vtTypes[52]	= "VTS_UI4";   
+strTypes[52]	= "ULONG";
+ vtTypes[53]	= "VTS_PUI4";  
+strTypes[53]	= "ULONG*";
+ vtTypes[54]	= "VTS_UI8"; 
+strTypes[54]	= "ULONGLONG";
+ vtTypes[55]	= "VTS_PUI8";
+strTypes[55]	= "ULONGLONG*";
+ vtTypes[56]	= "VTS_UI2";
+strTypes[56]	= "USHORT";
+ vtTypes[57]	= "VTS_PUI2";
+strTypes[57]	= "USHORT*";
+ vtTypes[58]	= "VTS_VARIANT";
+strTypes[58]	= "VARIANT";
+ vtTypes[59]	= "VTS_PVARIANT";
+strTypes[59]	= "VARIANT*";
+ vtTypes[60]	= "VTS_BOOL";
+strTypes[60]	= "VARIANT_BOOL";
+ vtTypes[61]	= "VTS_PBOOL";
+strTypes[61]	= "VARIANT_BOOL*";
+ vtTypes[62]	= "VTS_EMPTY";
+strTypes[62]	= "void";
+
+var strStockEvents = new Array;
+strStockEvents[0] = "Click";
+strStockEvents[1] = "DblClick";
+strStockEvents[2] = "Error";
+strStockEvents[3] = "KeyDown";
+strStockEvents[4] = "KeyPress";
+strStockEvents[5] = "KeyUp";
+strStockEvents[6] = "MouseDown";
+strStockEvents[7] = "MouseMove";
+strStockEvents[8] = "MouseUp";
+strStockEvents[9] = "ReadyStateChange";
+
+var strStockEventParams = new Array;
+strStockEventParams[0] = "";
+strStockEventParams[1] = "";
+strStockEventParams[2] = "SHORT Number,BSTR* Description,SCODE Scode,BSTR Source,BSTR HelpFile,LONG HelpContext,VARIANT_BOOL* CancelDisplay";
+strStockEventParams[3] = "SHORT* KeyCode,SHORT Shift";
+strStockEventParams[4] = "SHORT* KeyAscii";
+strStockEventParams[5] = "SHORT* KeyCode,SHORT Shift";
+strStockEventParams[6] = "SHORT Button,SHORT Shift,OLE_XPOS_PIXELS x,OLE_YPOS_PIXELS y";
+strStockEventParams[7] = "SHORT Button,SHORT Shift,OLE_XPOS_PIXELS x,OLE_YPOS_PIXELS y";
+strStockEventParams[8] = "SHORT Button,SHORT Shift,OLE_XPOS_PIXELS x,OLE_YPOS_PIXELS y";
+strStockEventParams[9] = "";
+
+var strStockEventMacros = new Array;
+strStockEventMacros[0] = "EVENT_STOCK_CLICK";
+strStockEventMacros[1] = "EVENT_STOCK_DBLCLICK";
+strStockEventMacros[2] = "EVENT_STOCK_ERROREVENT";
+strStockEventMacros[3] = "EVENT_STOCK_KEYDOWN";
+strStockEventMacros[4] = "EVENT_STOCK_KEYPRESS";
+strStockEventMacros[5] = "EVENT_STOCK_KEYUP";
+strStockEventMacros[6] = "EVENT_STOCK_MOUSEDOWN";
+strStockEventMacros[7] = "EVENT_STOCK_MOUSEMOVE";
+strStockEventMacros[8] = "EVENT_STOCK_MOUSEUP";
+strStockEventMacros[9] = "EVENT_STOCK_READYSTATECHANGE";
+
+var strStockEventDispIDs = new Array;
+strStockEventDispIDs[0] = "DISPID_CLICK";
+strStockEventDispIDs[1] = "DISPID_DBLCLICK";
+strStockEventDispIDs[2] = "DISPID_ERROREVENT";
+strStockEventDispIDs[3] = "DISPID_KEYDOWN";
+strStockEventDispIDs[4] = "DISPID_KEYPRESS";
+strStockEventDispIDs[5] = "DISPID_KEYUP";
+strStockEventDispIDs[6] = "DISPID_MOUSEDOWN";
+strStockEventDispIDs[7] = "DISPID_MOUSEMOVE";
+strStockEventDispIDs[8] = "DISPID_MOUSEUP";
+strStockEventDispIDs[9] = "DISPID_READYSTATECHANGE";
+
+</SCRIPT>
+
+<SCRIPT FOR="STOCK_EVENTS" EVENT="Change">	
+	if (GetEventIndex(STOCK_EVENTS.Value) != -1)
+	{
+		CUSTOM.disabled = false;
+		STOCK.disabled = false;
+		STOCK.checked = true;
+		EnableDisableControls(true);
+	}
+	else
+	{
+		if (gbStockParams)
+		{
+			PARAMETERS.length = 0;
+			gbStockParams = false;
+		}
+		CUSTOM.disabled = true;
+		STOCK.disabled = true;
+		EnableDisableControls(false);
+	}
+</SCRIPT>
+
+<SCRIPT FOR="STOCK_EVENTS" EVENT="KeyDown(nKeyCode)">
+	OnWizComboKeyDown(nKeyCode);
+</SCRIPT>
+<SCRIPT ID="INCLUDE_SCRIPT" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT ID="INCLUDE_COMMON" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT>
+	document.scripts("INCLUDE_SCRIPT").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Script.js";
+	document.scripts("INCLUDE_COMMON").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Common.js";
+</SCRIPT>

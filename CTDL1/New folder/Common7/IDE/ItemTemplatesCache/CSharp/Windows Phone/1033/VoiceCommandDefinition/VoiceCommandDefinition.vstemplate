@@ -1,0 +1,19 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <DefaultName>VoiceCommandDefinition.xml</DefaultName>
+    <Name Package="{7D4626A3-18C3-43A4-A66C-169D1D609803}" ID="1130" />
+    <Description Package="{7D4626A3-18C3-43A4-A66C-169D1D609803}" ID="1131" />
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>WindowsPhone</ProjectSubType>
+    <TemplateID>Microsoft.WindowsPhone.CSharp.VoiceCommandDefinition</TemplateID>
+    <TemplateGroupID>Windows Phone</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+    <SortOrder>16</SortOrder>
+    <Icon>__TemplateIcon.ico</Icon>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+  </TemplateData>
+  <TemplateContent>
+    <References />
+    <ProjectItem TargetFileName="$fileinputname$.xml" ReplaceParameters="true" OpenInEditor="true">VoiceCommandDefinition.xml</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

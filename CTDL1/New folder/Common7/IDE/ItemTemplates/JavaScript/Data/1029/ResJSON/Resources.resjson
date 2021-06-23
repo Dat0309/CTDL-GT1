@@ -1,0 +1,6 @@
+﻿// Pro podrobnosti o lokalizaci aplikace systému Windows, viz: http://go.microsoft.com/fwlink/?LinkId=212836
+
+{
+    "greeting"              : "Hello World!",
+    "_greeting.comment"     : "Toto je komentář pro lokalizátora"
+}

@@ -1,0 +1,27 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>form</Title>
+    <Author>Microsoft Corporation</Author>
+    <Shortcut>form</Shortcut>
+    <Description>Markup snippet for a HTML form</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>action</ID>
+        <ToolTip>Specifies where to send the form-data when a form is submitted</ToolTip>
+        <Default>/</Default>
+      </Literal>
+      <Literal>
+        <ID>method</ID>
+        <ToolTip>Specifies how to send form-data</ToolTip>
+        <Default>post</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="html"><![CDATA[<form action="$action$" method="$method$">$selected$$end$</form>]]></Code>
+  </Snippet>
+</CodeSnippet>

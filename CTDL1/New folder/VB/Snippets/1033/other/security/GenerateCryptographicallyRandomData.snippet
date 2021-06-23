@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Generate Cryptographically Random Data</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Generates cryptographically random data.</Description>
+      <Shortcut>secRanNum</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Security.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Security.Cryptography</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>count</ID>
+          <Type>Integer</Type>
+          <ToolTip>The size of the byte array of random data.</ToolTip>
+          <Default>8</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim randomNumGen As RandomNumberGenerator = RNGCryptoServiceProvider.Create()
+Dim randomBytes($count$) As Byte
+
+randomNumGen.GetBytes(randomBytes)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,52 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+    <TemplateData>
+        <DefaultName>Activity.xaml</DefaultName>
+        <Name Package="{AAFFDC1E-A1C7-47bc-B3DC-9E685DF3959B}" ID="208" />
+        <Description Package="{AAFFDC1E-A1C7-47bc-B3DC-9E685DF3959B}" ID="209" />
+        <TemplateID>Microsoft.CSharp.Activity</TemplateID>
+        <ProjectType>CSharp</ProjectType>
+        <Icon>__TemplateIcon.ico</Icon>
+        <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+        <SortOrder>110</SortOrder>
+        <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    </TemplateData>
+    <TemplateContent>
+        <References>
+            <Reference>
+                <Assembly>Microsoft.CSharp</Assembly>
+            </Reference>
+            <Reference>
+                <Assembly>System</Assembly>
+            </Reference>
+            <Reference>
+                <Assembly>System.Activities</Assembly>
+            </Reference>
+            <Reference>
+                <Assembly>System.Core</Assembly>
+            </Reference>
+            <Reference>
+                <Assembly>System.Data</Assembly>
+            </Reference>
+            <Reference>
+                <Assembly>System.ServiceModel</Assembly>
+            </Reference>
+            <Reference>
+                <Assembly>System.ServiceModel.Activities</Assembly>
+            </Reference>
+            <Reference>
+                <Assembly>System.Xaml</Assembly>
+            </Reference>
+            <Reference>
+                <Assembly>System.Xml</Assembly>
+            </Reference>
+            <Reference>
+                <Assembly>System.Xml.Linq</Assembly>
+            </Reference>
+        </References>
+        <ProjectItem SubType="Designer" ItemType="XamlAppdef" TargetFileName="$fileinputname$.xaml" ReplaceParameters="true">Activity.xaml</ProjectItem>
+    </TemplateContent>
+    <WizardExtension>
+    	<Assembly>Microsoft.VisualStudio.Activities, Version=12.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</Assembly>
+    	<FullClassName>Microsoft.VisualStudio.Activities.Wizard.ItemTemplateWizard</FullClassName>
+    </WizardExtension>
+</VSTemplate>

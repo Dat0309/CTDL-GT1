@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Retrieve Message Labels</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Retrieves and array of messages and creates an array of the message labels.</Description>
+      <Shortcut>mqLabels</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Messaging.dll</Assembly>
+          <Url />
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Messaging</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>QueueName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the queue path. The "." represents the local computer.</ToolTip>
+          <Default>".\QueueName"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim queue As New MessageQueue($QueueName$)
+Dim msg() As Message
+msg = queue.GetAllMessages()
+
+Dim labels(msg.Length - 1) As String
+For index As Integer = 0 To msg.Length - 1
+    labels(index) = msg(index).Label
+Next]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

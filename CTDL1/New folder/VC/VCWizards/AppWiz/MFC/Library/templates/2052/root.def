@@ -1,0 +1,14 @@
+; [!output PROJECT_NAME].def : 声明 DLL 的模块参数。
+
+LIBRARY
+
+EXPORTS
+    ; 此处可以是显式导出
+[!if DLL_TYPE_REGULAR || DLL_TYPE_REGULAR_STATIC]
+[!if AUTOMATION]
+	DllCanUnloadNow     PRIVATE
+	DllGetClassObject   PRIVATE
+	DllRegisterServer   PRIVATE
+	DllUnregisterServer PRIVATE
+[!endif]
+[!endif]

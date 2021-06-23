@@ -1,0 +1,14 @@
+﻿Build started 22/04/2020 8:27:57 SA.
+     1>Project "D:\CTDL1\lab7_1D\lab7_1D\lab7_1D.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\CTDL1\New folder\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt program.cpp
+         program.cpp
+     1>d:\ctdl1\lab7_1d\lab7_1d\menu.h(37): warning C4101: 'kq' : unreferenced local variable
+     1>d:\ctdl1\lab7_1d\lab7_1d\menu.h(36): warning C4101: 'filename' : unreferenced local variable
+     1>d:\ctdl1\lab7_1d\lab7_1d\program.cpp(43): error C2664: 'void XuLyMenu(int,NODE)' : cannot convert argument 2 from 'LLIST' to 'NODE'
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>Done Building Project "D:\CTDL1\lab7_1D\lab7_1D\lab7_1D.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:04.60

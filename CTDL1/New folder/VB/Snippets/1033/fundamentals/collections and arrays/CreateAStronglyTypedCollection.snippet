@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Create a list with items of a single type.</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Creates a collection to hold a specific type of items.</Description>
+      <Shortcut>colCreate</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Replace with the type of items the collection should hold.</ToolTip>
+          <Default>String</Default>
+        </Literal>
+        <Literal>
+          <ID>storageVar</ID>
+          <ToolTip>Replace with an identifier for the backing storage.</ToolTip>
+          <Default>names</Default>
+        </Literal>
+        <Literal>
+          <ID>item</ID>
+          <ToolTip>Replace with an item to fill the collection with. </ToolTip>
+          <Default>"John"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[' Backing storage -- a generic list
+Dim $storageVar$ As New List(Of $type$)() 
+
+' Add an item to the Collection
+$storageVar$.Add($item$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

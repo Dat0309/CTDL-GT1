@@ -1,0 +1,14 @@
+svg11-flat.dtd (available from a link at http://www.w3.org/TR/SVG/svgdtd.html)
+represents the dtd from which the svg.xsd was generated. 
+
+The w3's svg.xsd file (www.w3.org/TR/2002/WD-SVG11-20020108/SVG.xsd) is outdated, 
+and evidently not updated as the dtd changes. 
+
+I tried several tools to generate the svg schema from the dtd. I tried trang, dtd2xsd, xmlpad, etc
+without great results. I ended up using the VS converter (it ends up being pretty large, but
+it's something we may eventually be able to have optimized)
+
+So, when a new version of the dtd is published, convert it in VS and the only manual changes
+you'll need to make are to the targetnamespace on the schema (vs puts in a tempuri), 
+change the imports to reference xlink.xsd and xml.xsd locally, and pull out the 
+inline svg complexType to a global type (this is what the html_5 and xhtml_5 schemas reference).

@@ -1,0 +1,32 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="407" />
+    <Description Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="408" />
+    <Icon Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="409" />
+    <TemplateID>SharePoint15SearchConfiguration_CS_ITEM</TemplateID>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>270</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>SearchConfiguration</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <CreateInPlace>true</CreateInPlace>
+    <TemplateGroupID>SharePointItemTemplateGroupID</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\SharePointProjectItem.spdata" OpenInEditor="false">SharePointSearchConfiguration.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Elements.xml" >Elements.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\SearchConfigurationSettings.xml" OpenInEditor="true" >SearchConfigurationSettings.xml</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="SharePointProjectTemplateAttributes" Value="ProjectItem"/>
+      <CustomParameter Name="SharePointProjectParentFilter" Value="General;ProjectItem"/>
+      <CustomParameter Name="SharePointProjectProjectModeFilter" Value="SharePointApp"/>
+      <CustomParameter Name="$ProjectItemName$" Value="$fileinputname$"/>
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.SearchConfigurationItemWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

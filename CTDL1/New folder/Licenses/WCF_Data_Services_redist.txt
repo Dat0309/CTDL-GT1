@@ -1,0 +1,7 @@
+As per the Microsoft WCF Data Services EULA, the following assemblies can be redistributed:
+
+Microsoft.Data.Services.dll
+Microsoft.Data.Services.Client.dll
+Microsoft.Data.OData.dll
+Microsoft.Data.Edm.dll
+System.Spatial.dll

@@ -1,0 +1,591 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Fonts" standard-reference="http://www.w3.org/TR/css3-fonts/" status="WD" pub-date="2011-10-04">
+
+  <CssAtDirective name="font-face"
+                  _locID="font-face-rule"
+                  _locAttrData="description"
+                  version="3.0"
+                  browsers="all"
+                  include-root-properties="false"
+                  include-root-directives="false"
+                  syntax="@font-face { &lt;font-description&gt; }"
+                  description="Allows for linking to fonts that are automatically activated when needed. This permits authors to work around the limitation of 'web-safe' fonts, allowing for consistent rendering independent of the fonts available in a given user's environment."
+                  standard-reference="http://www.w3.org/TR/css3-fonts/#the-font-face-rule">
+
+    <CssProperty ref="font" />
+    <CssProperty ref="font-family" />
+    <CssProperty ref="font-size" />
+    <CssProperty ref="font-variant" />
+    <CssProperty ref="font-weight" />
+    <CssProperty ref="font-style" />
+    <CssProperty ref="font-size-adjust" />
+    <CssProperty ref="font-stretch" />
+
+    <CssProperty _locID="src"
+                 _locAttrData="description"
+                 version="3.0"
+                 restriction="enum, string, url, identifier"
+                 syntax="src: url(font.woff) format('woff');"
+                 description="specifies the resource containing font data. It is required, whether the font is downloadable or locally installed. It's value is a prioritized, comma-separated list of external references or locally installed font face names."
+                 standard-reference="http://www.w3.org/TR/css3-fonts/#src-desc">
+
+      <entry value="url()" />
+      <entry value="local()" />
+      <entry _locID="src_formatTT"
+             _locAttrData="description"
+             value="format('truetype')"
+             description="TrueType font." />
+      <entry _locID="src_formatOT"
+             _locAttrData="description"
+             value="format('opentype')"
+             description="OpenType font." />
+      <entry _locID="src_formatWOFF"
+             _locAttrData="description"
+             value="format('woff')"
+             description="WOFF font (Web Open Font Format)." />
+      <entry _locID="src_formatEOT"
+             _locAttrData="description"
+             value="format('embedded-opentype')"
+             description="Embedded OpenType font." />
+      <entry _locID="src_formatSVG"
+             _locAttrData="description"
+             value="format('svg')"
+             description="SVG font." />
+    </CssProperty>
+
+    <CssProperty _locID="unicode-range"
+                 _locAttrData="description"
+                 version="3.0"
+                 restriction="unicode-range"
+                 description="Range of Unicode characters supported by a given font. Initial value is U+0-10FFFF"
+                 syntax="'urange' [, 'urange']*"
+                 standard-reference="http://www.w3.org/TR/css3-fonts/#unicode-range" />
+
+  </CssAtDirective>
+
+  <CssProperty _locID="font-weight"
+               _locAttrData="description"
+               version="1.0"
+               restriction="enum"
+               type="font-weight"
+               syntax="th { $(name): bold; }"
+               description="Specifies weight of glyphs in the font, their degree of blackness or stroke thickness."
+               standard-reference="http://www.w3.org/TR/css3-fonts/#font-weight-the-font-weight-property" />
+    
+  <CssPropertyValue type="font-weight">
+    <entry _locID="font-weight_bold"
+           _locAttrData="description"
+           value="bold"
+           description="Same as 700" />
+    <entry _locID="font-weight_bolder"
+           _locAttrData="description"
+           value="bolder"
+           description="Specifies the weight of the face bolder than the inherited value." />
+    <entry _locID="font-weight_lighter"
+           _locAttrData="description"
+           value="lighter"
+           description="Specifies the weight of the face lighter than the inherited value." />
+    <entry _locID="font-weight_normal"
+           _locAttrData="description"
+           value="normal"
+           description="Same as 400" />
+    <entry _locID="font-weight_100"
+           _locAttrData="description"
+           value="100"
+           description="Thin" />
+    <entry _locID="font-weight_200"
+           _locAttrData="description"
+           value="200"
+           description="Extra Light (Ultra Light)" />
+    <entry _locID="font-weight_300"
+           _locAttrData="description"
+           value="300"
+           description="Light" />
+    <entry _locID="font-weight_400"
+           _locAttrData="description"
+           value="400"
+           description="Normal" />
+    <entry _locID="font-weight_500"
+           _locAttrData="description"
+           value="500"
+           description="Medium" />
+    <entry _locID="font-weight_600"
+           _locAttrData="description"
+           value="600"
+           description="Semi Bold (Demi Bold)" />
+    <entry _locID="font-weight_700"
+           _locAttrData="description"
+           value="700"
+           description="Bold" />
+    <entry _locID="font-weight_800"
+           _locAttrData="description"
+           value="800"
+           description="Extra Bold (Ultra Bold)" />
+    <entry _locID="font-weight_900"
+           _locAttrData="description"
+           value="900"
+           description="Black (Heavy)" />
+  </CssPropertyValue>
+
+  <CssProperty _locID="font-stretch"
+               _locAttrData="description"
+               version="3.0"
+               browsers="FF9,IE9"
+               restriction="enum"
+               syntax="div { $(name): expanded; }"
+               description="The font-stretch property is used to expand or contract the horizontal width of the font. The change is relative to the normal width of the font as displayed by the browser."
+               standard-reference="http://www.w3.org/TR/css3-fonts/#font-stretch0">
+
+    <entry value="normal" />
+    <entry value="ultra-condensed" />
+    <entry value="extra-condensed" />
+    <entry value="condensed" />
+    <entry value="semi-condensed" />
+    <entry value="semi-expanded" />
+    <entry value="expanded" />
+    <entry value="extra-expanded" />
+    <entry value="ultra-expanded" />
+  </CssProperty>
+
+  <CssProperty _locID="font-size"
+               _locAttrData="description"
+               version="1.0"
+               restriction="length, percentage"
+               type="font-size"
+               description="Indicates the desired height of glyphs from the font. For scalable fonts, the font-size is a scale factor applied to the EM unit of the font. (Note that certain glyphs may bleed outside their EM box.) For non-scalable fonts, the font-size is converted into absolute units and matched against the declared font-size of the font, using the same absolute coordinate space for both of the matched values."
+               syntax="div { $(name): 12px; }"
+               standard-reference="http://www.w3.org/TR/css3-fonts/#font-size-prop" />
+
+  <CssPropertyValue type="font-size">
+    <entry value="large" />
+    <entry value="larger" />
+    <entry value="medium" />
+    <entry value="small" />
+    <entry value="smaller" />
+    <entry value="x-large" />
+    <entry value="x-small" />
+    <entry value="xx-large" />
+    <entry value="xx-small" />
+  </CssPropertyValue>
+
+  <CssProperty _locID="font-style"
+               _locAttrData="description"
+               version="1.0"
+               restriction="enum"
+               type="font-style"
+               syntax="body { $(name): italic; }"
+               description="Allows italic or oblique faces to be selected. Italic forms are generally cursive in nature while oblique faces are typically sloped versions of the regular face."
+               standard-reference="http://www.w3.org/TR/css3-fonts/#font-style0" />
+
+  <CssPropertyValue type="font-style">
+    <entry _locID="font-style_italic"
+           _locAttrData="description"
+           value="italic"
+           description="Selects a font that is labeled 'italic', or, if that is not available, one labeled 'oblique'." />
+    <entry _locID="font-style_normal"
+           _locAttrData="description"
+           value="normal"
+           description="Selects a face that is classified as 'normal'." />
+    <entry _locID="font-style_oblique"
+           _locAttrData="description"
+           value="oblique"
+           description="Selects a font that is labeled 'oblique'." />
+  </CssPropertyValue>
+
+  <CssProperty _locID="font-variant"
+               _locAttrData="description"
+               version="1.0"
+               restriction="enum"
+               type="font-variant"
+               syntax="div { $(name): small-caps; }"
+               description="Specifies variant representations of the font"
+               standard-reference="http://www.w3.org/TR/css3-fonts/#font-variant-prop" />
+
+  <CssPropertyValue type="font-variant">
+    <entry _locID="font-variant_normal"
+           _locAttrData="description"
+           value="normal"
+           description="Specifies a face that is not labeled as a small-caps font." />
+    <entry _locID="font-variant_small-caps"
+           _locAttrData="description"
+           value="small-caps"
+           description="Specifies a font that is labeled as a small-caps font. If a genuine small-caps font is not available, user agents should simulate a small-caps font." />
+  </CssPropertyValue>
+
+  <CssProperty _locID="font-family"
+               _locAttrData="description"
+               restriction="font"
+               type="font"
+               version="1.0"
+               description="Specifies a prioritized list of font family names or generic family names. A user agent iterates through the list of family names until it matches an available font that contains a glyph for the character to be rendered."
+               syntax="body { $(name): arial, verdana; }"
+               standard-reference="http://www.w3.org/TR/css3-fonts/#font-family0" />
+
+  <CssPropertyValue type="font">
+    <entry value="serif" />
+    <entry value="sans-serif" />
+    <entry value="cursive" />
+    <entry value="fantasy" />
+    <entry value="monospace" />
+  </CssPropertyValue>
+
+  <CssProperty _locID="font-size-adjust"
+               _locAttrData="description"
+                version="3.0"
+                browsers="FF3.5,IE10"
+                restriction="number"
+                description="This property is a way to preserve the readability of text when font fallback occurs. It does this by adjusting the font-size so that the x-height is the same irregardless of the font used."
+                syntax="div { $(name): 0.58; }"
+                standard-reference="http://www.w3.org/TR/css3-fonts/#font-size-adjust">
+
+    <entry _locID="font-size-adjust_none"
+           _locAttrData="description"
+           value="none"
+           description="Do not preserve the font's x-height." />
+  </CssProperty>
+
+  <CssProperty _locID="font"
+               _locAttrData="description"
+               version="1.0"
+               restriction="font"
+               type="font-weight, font-style, font-variant, font-size"
+               description="Shorthand property for setting 'font-style', 'font-variant', 'font-weight', 'font-size', 'line-height', and 'font-family', at the same place in the style sheet. The syntax of this property is based on a traditional typographical shorthand notation to set multiple properties related to fonts."
+               syntax="body { $(name): bold 12px arial, verdana; }"
+               standard-reference="http://www.w3.org/TR/css3-fonts/#propdef-font">
+
+    <entry _locID="font_caption"
+           _locAttrData="description"
+           value="caption"
+           version="3.0"
+           description="The font used for captioned controls (e.g., buttons, drop-downs, etc.)." />
+    <entry _locID="font_icon"
+           _locAttrData="description"
+           value="icon"
+           version="3.0"
+           description="The font used to label icons." />
+    <entry _locID="font_menu"
+           _locAttrData="description"
+           value="menu"
+           version="3.0"
+           description="The font used in menus (e.g., dropdown menus and menu lists)." />
+    <entry _locID="font_message-box"
+           _locAttrData="description"
+           value="message-box"
+           version="3.0"
+           description="The font used in dialog boxes." />
+    <entry _locID="font_small-caption"
+           _locAttrData="description"
+           value="small-caption"
+           version="3.0"
+           description="The font used for labeling small controls." />
+    <entry _locID="font_status-bar"
+           _locAttrData="description"
+           value="status-bar"
+           version="3.0"
+           description="The font used in window status bars." />
+  </CssProperty>
+
+  <CssProperty _locID="font-feature-settings"
+               _locAttrData="description"
+               version="3.0"
+               browsers="IE10"
+               restriction="string, number"
+               description="This property provides low-level control over OpenType font features. It is intended as a way of providing access to font features that are not widely used but are needed for a particular use case."
+               syntax="body { $(name): 'hwid'; }"
+               standard-reference="http://www.w3.org/TR/css3-fonts/#propdef-font-feature-settings">
+
+    <entry _locID="font-feature-settings-normal"
+         _locAttrData="description"
+         value="normal"
+         version="3.0"
+         description="No change in glyph substitution or positioning occurs." />
+    <entry value="on" browsers="none" />
+    <entry value="off" browsers="none" />
+  </CssProperty>
+
+  <CssProperty _locID="font-kerning"
+               _locAttrData="description"
+               version="3.0"
+               browsers="none"
+               restriction="enum"
+               description="Kerning is the contextual adjustment of inter-glyph spacing. This property controls metric kerning, kerning that utilizes adjustment data contained in the font."
+               syntax="body { $(name): normal; }"
+               standard-reference="http://www.w3.org/TR/css3-fonts/#propdef-font-kerning">
+      
+      <entry value="auto" />
+      <entry value="normal" />
+      <entry value="none" />
+  </CssProperty>
+
+  <CssProperty _locID="font-language-override"
+               _locAttrData="description"
+               version="3.0"
+               browsers="none"
+               restriction="string"
+               description="The value of 'normal' implies that when rendering with OpenType fonts the language of the document is used to infer the OpenType language system, used to select language specific features when rendering."
+               syntax="body { $(name): 'SRB'; }"
+               standard-reference="http://www.w3.org/TR/css3-fonts/#font-language-override-prop">
+
+    <entry _locID="font-language-override_normal"
+           _locAttrData="description"
+           value="normal"
+           description="Implies that when rendering with OpenType fonts the language of the document is used to infer the OpenType language system, used to select language specific features when rendering." />
+  </CssProperty>
+
+  <CssProperty _locID="font-synthesis"
+               _locAttrData="description"
+               version="3.0"
+               browsers="none"
+               restriction="enum"
+               description="This property controls whether user agents are allowed to synthesize bold or oblique font faces when a font family lacks bold or italic faces."
+               syntax="html:lang(ar) { $(name): none; }"
+               standard-reference="http://www.w3.org/TR/css3-fonts/#propdef-font-synthesis">
+
+    <entry _locID="font-synthesis_none"
+           _locAttrData="description"
+           value="none"
+           description="Disallow all synthetic faces." />
+    <entry value="style" />
+    <entry value="weight" />
+  </CssProperty>
+
+  <CssProperty _locID="font-variant-alternates"
+               _locAttrData="description"
+               version="3.0"
+               browsers="none"
+               restriction="enum"
+               description="For any given character, fonts can provide a variety of alternate glyphs in addition to the default glyph for that character. This property provides control over the selection of these alternate glyphs."
+               syntax="h2 { $(name): styleset(3,5); }"
+               standard-reference="http://www.w3.org/TR/css3-fonts/#propdef-font-variant-alternates">
+
+    <entry value="normal" />
+    <entry _locID="font-variant-alternates_stylistic"
+           _locAttrData="description"
+           value="stylistic()"
+           description="Enables display of stylistic alternates." />
+    <entry _locID="font-variant-alternates_contextual"
+           _locAttrData="description"
+           value="contextual"
+           description="Enables display of contextual alternates." />
+    <entry _locID="font-variant-alternates_no-contextual"
+           _locAttrData="description"
+           value="no-contextual"
+           description="Disables display of contextual alternates." />
+    <entry _locID="font-variant-alternates_historical-forms"
+           _locAttrData="description"
+           value="historical-forms"
+           description="Enables display of historical forms." />
+    <entry _locID="font-variant-alternates_styleset"
+           _locAttrData="description"
+           value="styleset()"
+            description="Enables display with stylistic sets." />
+    <entry _locID="font-variant-alternates_character-variant"
+           _locAttrData="description"
+           value="character-variant()"
+           description="Enables display of specific character variants." />
+    <entry _locID="font-variant-alternates_swash"
+           _locAttrData="description"
+           value="swash()"
+           description="Enables display of swash glyphs." />
+    <entry _locID="font-variant-alternates_ornaments"
+           _locAttrData="description"
+           value="ornaments()"
+           description="Enables replacement of default glyphs with ornaments, if provided in the font." />
+    <entry _locID="font-variant-alternates_annotation"
+           _locAttrData="description"
+           value="annotation()"
+           description="Enables display of alternate annotation forms." />
+    <entry _locID="font-variant-alternates_ruby"
+           _locAttrData="description"
+           value="ruby"
+           description="Enables display of ruby glyphs. This value only selects a glyph for use in ruby text, it does not affect font scaling." />
+  </CssProperty>
+
+  <CssProperty _locID="font-variant-caps"
+               _locAttrData="description"
+               version="3.0"
+               browsers="none"
+               restriction="enum"
+               description="Specifies control over capitalized forms."
+               syntax="p { $(name): titling-caps; }"
+               standard-reference="http://www.w3.org/TR/css3-fonts/#font-variant-caps-prop">
+
+    <entry value="normal" />
+    <entry _locID="font-variant-caps_small-caps"
+           _locAttrData="description"
+           value="small-caps"
+           description="Enables display of small capitals. Small-caps glyphs typically use the form of uppercase letters but are reduced to the size of lowercase letters." />
+    <entry _locID="font-variant-caps_all-small-caps"
+           _locAttrData="description"
+           value="all-small-caps"
+           description="Enables display of small capitals for both upper and lowercase letters." />
+    <entry _locID="font-variant-caps_petite-caps"
+           _locAttrData="description"
+           value="petite-caps"
+           description="Enables display of petite capitals." />
+    <entry _locID="font-variant-caps_all-petite-caps"
+           _locAttrData="description"
+           value="all-petite-caps"
+           description="Enables display of petite capitals for both upper and lowercase letters." />
+    <entry _locID="font-variant-caps_titling-caps"
+           _locAttrData="description"
+           value="titling-caps"
+           description="Enables display of titling capitals." />
+    <entry _locID="font-variant-caps_unicase"
+           _locAttrData="description"
+           value="unicase"
+           description="Enables display of mixture of small capitals for uppercase letters with normal lowercase letters." />
+  </CssProperty>
+
+  <CssProperty _locID="font-variant-east-asian"
+               _locAttrData="description"
+               version="3.0"
+               browsers="none"
+               restriction="enum"
+               description="Allows control of glyph substitute and positioning in East Asian text."
+               syntax="mark { $(name): normal; }"
+               standard-reference="http://www.w3.org/TR/css3-fonts/#font-variant-east-asian-prop">
+
+    <entry value="normal" />
+    <entry _locID="font-variant-east-asian_hojo-kanji"
+           _locAttrData="description"
+           value="hojo-kanji"
+           description="Enables rendering of Hojo Kanji forms." />
+    <entry _locID="font-variant-east-asian_jis78"
+           _locAttrData="description"
+           value="jis78"
+           description="Enables rendering of JIS78 forms." />
+    <entry _locID="font-variant-east-asian_jis83"
+           _locAttrData="description"
+           value="jis83"
+           description="Enables rendering of JIS83 forms." />
+    <entry _locID="font-variant-east-asian_jis90"
+           _locAttrData="description"
+           value="jis90"
+           description="Enables rendering of JIS90 forms." />
+    <entry _locID="font-variant-east-asian_jis04"
+           _locAttrData="description"
+           value="jis04" 
+           description="Enables rendering of JIS04 forms." />
+    <entry _locID="font-variant-east-asian_nlckanji"
+           _locAttrData="description"
+           value="nlckanji"
+           description="Enables rendering of NLC Kanji forms." />
+    <entry _locID="font-variant-east-asian_"
+           _locAttrData="description"
+           value="simplified" description="Enables rendering of simplified forms." />
+    <entry _locID="font-variant-east-asian_traditional"
+           _locAttrData="description"
+           value="traditional"
+           description="Enables rendering of traditional forms." />
+    <entry _locID="font-variant-east-asian_full-width"
+           _locAttrData="description"
+           value="full-width"
+           description="Enables rendering of full-width variants." />
+    <entry _locID="font-variant-east-asian_proportional-width"
+           _locAttrData="description"
+           value="proportional-width"
+           description="Enables rendering of proportionally-spaced variants." />
+  </CssProperty>
+
+  <CssProperty _locID="font-variant-ligatures"
+               _locAttrData="description"
+               version="3.0"
+               browsers="none"
+               restriction="enum"
+               description="Specifies control over which ligatures are enabled or disabled. A value of ‘normal’ implies that the defaults set by the font are used."
+               syntax="div { $(name): historical-ligatures; }"
+               standard-reference="http://www.w3.org/TR/css3-fonts/#font-variant-ligatures-prop">
+
+    <entry _locID="font-variant-ligatures_normal"
+           _locAttrData="description"
+           value="normal"
+           description="Implies that the defaults set by the font are used." />
+    <entry _locID="font-variant-ligatures_common-ligatures"
+           _locAttrData="description"
+           value="common-ligatures"
+           description="Enables display of common ligatures." />
+    <entry _locID="font-variant-ligatures_no-common-ligatures"
+           _locAttrData="description"
+           value="no-common-ligatures"
+           description="Disables display of common ligatures." />
+    <entry _locID="font-variant-ligatures_additional-ligatures"
+           _locAttrData="description"
+           value="additional-ligatures"
+           description="Enables display of additional ligatures." />
+    <entry _locID="font-variant-ligatures_no-additional-ligatures"
+           _locAttrData="description"
+           value="no-additional-ligatures"
+           description="Disables display of additional ligatures." />
+    <entry _locID="font-variant-ligatures_historical-ligatures"
+           _locAttrData="description"
+           value="historical-ligatures"
+           description="Enables display of historical ligatures." />
+    <entry _locID="font-variant-ligatures_no-historical-ligatures"
+           _locAttrData="description"
+           value="no-historical-ligatures"
+           description="Disables display of historical ligatures." />
+  </CssProperty>
+
+  <CssProperty _locID="font-variant-numeric"
+               _locAttrData="description"
+               version="3.0"
+               browsers="none"
+               restriction="enum"
+               description="Specifies control over numerical forms."
+               syntax=".amount { $(name): oldstyle-nums diagonal-fractions; }"
+               standard-reference="http://www.w3.org/TR/css3-fonts/#font-variant-numeric-prop">
+
+    <entry value="normal" />
+    <entry _locID="font-variant-numeric_lining-nums"
+           _locAttrData="description"
+           value="lining-nums"
+           description="Enables display of lining numerals." />
+    <entry _locID="font-variant-numeric_oldstyle-nums"
+           _locAttrData="description"
+           value="oldstyle-nums"
+           description="Enables display of old-style numerals." />
+    <entry _locID="font-variant-numeric_proportional-nums"
+           _locAttrData="description"
+           value="proportional-nums"
+           description="Enables display of proportional numerals." />
+    <entry _locID="font-variant-numeric_tabular-nums"
+           _locAttrData="description"
+           value="tabular-nums"
+           description="Enables display of tabular numerals." />
+    <entry _locID="font-variant-numeric_diagonal-fractions"
+           _locAttrData="description"
+           value="diagonal-fractions"
+           description="Enables display of lining diagonal fractions." />
+    <entry _locID="font-variant-numeric_stacked-fractions"
+           _locAttrData="description"
+           value="stacked-fractions"
+           description="Enables display of lining stacked fractions." />
+    <entry _locID="font-variant-numeric_slashed-zero"
+           _locAttrData="description"
+           value="slashed-zero"
+           description="Enables display of slashed zeros." />
+  </CssProperty>
+
+  <CssProperty _locID="font-variant-position"
+               _locAttrData="description"
+               version="3.0"
+               browsers="none"
+               restriction="enum"
+               description="Specifies the vertical position"
+               syntax="sub { $(name): subscript; }"
+               standard-reference="http://www.w3.org/TR/css3-fonts/#propdef-font-variant-position">
+
+      <entry value="normal" />
+      <entry value="sub" />
+      <entry value="super" />
+      <entry value="ordinal" />
+  </CssProperty>
+    
+</CssModule>

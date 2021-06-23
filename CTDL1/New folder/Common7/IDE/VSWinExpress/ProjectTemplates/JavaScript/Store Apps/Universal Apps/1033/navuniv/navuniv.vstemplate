@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="ProjectGroup">
+  <TemplateData>
+    <Name _locID="JSP_Project_NavUnivName">Navigation App (Universal Apps)</Name>
+    <Description _locID="JSP_Project_NavUnivDesc">A project for a Windows and Windows Phone app that has predefined controls for navigation.</Description>
+    <Icon>navuniv.ico</Icon>
+    <TemplateID>Microsoft.JavaScript.NavUniv</TemplateID>
+    <BlendTemplateID>Microsoft.Blend.NavUniversalWWA</BlendTemplateID>
+    <BlendTemplateGroupID>HTML (Universal)</BlendTemplateGroupID>
+    <BlendProjectSubType>WJApplication</BlendProjectSubType>
+    <ProjectType>JavaScript</ProjectType>
+    <DefaultName>NavSharedApp</DefaultName>
+    <TargetPlatformName>Windows</TargetPlatformName>
+    <RequiredPlatformVersion>6.3.1</RequiredPlatformVersion>
+    <CreateInPlace>true</CreateInPlace>
+    <PreviewImage>navuniv.png</PreviewImage>
+    <CreateNewFolder>true</CreateNewFolder>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <SortOrder>10</SortOrder>
+    <BlendCreateNewFolder>true</BlendCreateNewFolder>
+    <NumberOfParentCategoriesToRollUp>2</NumberOfParentCategoriesToRollUp>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+      <SolutionFolder Name="SharedApp">
+        <ProjectTemplateLink ProjectName="$safeprojectname$.Shared" CopyParameters="true">Shared\navuniv.Shared.vstemplate</ProjectTemplateLink>
+        <ProjectTemplateLink ProjectName="$safeprojectname$.Windows" CopyParameters="true">Store\navuniv.Store.vstemplate</ProjectTemplateLink>
+        <ProjectTemplateLink ProjectName="$safeprojectname$.WindowsPhone" CopyParameters="true">Phone\navuniv.Phone.vstemplate</ProjectTemplateLink>
+      </SolutionFolder>
+    </ProjectCollection>
+  </TemplateContent>
+</VSTemplate>

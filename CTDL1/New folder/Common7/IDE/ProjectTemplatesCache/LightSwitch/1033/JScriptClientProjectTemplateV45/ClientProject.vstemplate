@@ -1,0 +1,76 @@
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>LightSwitch JScript project template</Name>
+    <Description>Project template for LightSwitch JScript subproject</Description>
+    <Icon Package="{783E7E99-F1EC-4B21-91E2-D36F20B7C81D}" ID="3100" />
+    <ProjectType>VisualBasic</ProjectType>
+    <ProjectSubType>LightSwitch</ProjectSubType>
+    <TemplateID>Microsoft.LightSwitch.BlankClientProject.JS</TemplateID>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Client</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <RequiredFrameworkVersion>4.5</RequiredFrameworkVersion>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <Hidden>true</Hidden>
+  </TemplateData>
+
+  <TemplateContent>
+    <CustomParameters>
+      <CustomParameter Name="$ClientProjectName$" />
+      <CustomParameter Name="$ClientProjectSuffix$" Value="" />
+      <CustomParameter Name="$ServerProjectReference$" />
+    </CustomParameters>
+    <Project File="Client.jsproj" ReplaceParameters="true">
+      <!-- Client project -->
+      <ProjectItem TargetFileName="default.htm" ReplaceParameters="true">default.dbg.htm</ProjectItem>
+      <ProjectItem TargetFileName="packages.config">Client.packages.config</ProjectItem>
+      <ProjectItem TargetFileName="Content\dark-theme-2.5.1.css">dark-theme-2.5.1.css</ProjectItem>
+      <ProjectItem TargetFileName="Content\jquery.mobile-1.3.0.css">jquery.mobile-1.3.0.css</ProjectItem>
+      <ProjectItem TargetFileName="Content\jquery.mobile-1.3.0.min.css">jquery.mobile-1.3.0.min.css</ProjectItem>
+      <ProjectItem TargetFileName="Content\jquery.mobile.structure-1.3.0.css">jquery.mobile.structure-1.3.0.css</ProjectItem>
+      <ProjectItem TargetFileName="Content\jquery.mobile.structure-1.3.0.min.css">jquery.mobile.structure-1.3.0.min.css</ProjectItem>
+      <ProjectItem TargetFileName="Content\jquery.mobile.theme-1.3.0.css">jquery.mobile.theme-1.3.0.css</ProjectItem>
+      <ProjectItem TargetFileName="Content\jquery.mobile.theme-1.3.0.min.css">jquery.mobile.theme-1.3.0.min.css</ProjectItem>
+      <ProjectItem TargetFileName="Content\light-theme-2.5.1.css">light-theme-2.5.1.css</ProjectItem>
+      <ProjectItem TargetFileName="Content\msls-2.5.1.css">msls-2.5.1.css</ProjectItem>
+      <ProjectItem TargetFileName="Content\msls-2.5.1.min.css">msls-2.5.1.min.css</ProjectItem>
+      <ProjectItem TargetFileName="Content\msls-dark-2.5.1.css">msls-dark-2.5.1.css</ProjectItem>
+      <ProjectItem TargetFileName="Content\msls-light-2.5.1.css">msls-light-2.5.1.css</ProjectItem>
+      <ProjectItem TargetFileName="Content\user-customization.css">user-customization.css</ProjectItem>
+      <ProjectItem TargetFileName="Content\Web.config">Content.Web.config</ProjectItem>
+      <ProjectItem TargetFileName="Content\Images\ajax-loader.gif">ajax-loader.gif</ProjectItem>
+      <ProjectItem TargetFileName="Content\Images\icons-18-black.png">icons-18-black.png</ProjectItem>
+      <ProjectItem TargetFileName="Content\Images\icons-18-white.png">icons-18-white.png</ProjectItem>
+      <ProjectItem TargetFileName="Content\Images\icons-36-black.png">icons-36-black.png</ProjectItem>
+      <ProjectItem TargetFileName="Content\Images\icons-36-white.png">icons-36-white.png</ProjectItem>
+      <ProjectItem TargetFileName="Content\Images\msls-black-icons-18.png">msls-black-icons-18.png</ProjectItem>
+      <ProjectItem TargetFileName="Content\Images\msls-black-icons-36.png">msls-black-icons-36.png</ProjectItem>
+      <ProjectItem TargetFileName="Content\Images\msls-loader-dark.gif">msls-loader-dark.gif</ProjectItem>
+      <ProjectItem TargetFileName="Content\Images\msls-loader-light.gif">msls-loader-light.gif</ProjectItem>
+      <ProjectItem TargetFileName="Content\Images\msls-white-icons-18.png">msls-white-icons-18.png</ProjectItem>
+      <ProjectItem TargetFileName="Content\Images\msls-white-icons-36.png">msls-white-icons-36.png</ProjectItem>
+      <ProjectItem TargetFileName="Content\Images\msls-blue-icons-36.png">msls-blue-icons-36.png</ProjectItem>
+      <ProjectItem TargetFileName="Content\Images\user-logo.png">user-logo.png</ProjectItem>
+      <ProjectItem TargetFileName="Content\Images\user-logo.ico">user-logo.ico</ProjectItem>
+      <ProjectItem TargetFileName="Content\Images\user-logo-144.png">user-logo-144.png</ProjectItem>
+      <ProjectItem TargetFileName="Content\Images\user-splash-screen.png">user-splash-screen.png</ProjectItem>
+      <ProjectItem TargetFileName="Properties\Client.lsml" ReplaceParameters="true">Client.lsml</ProjectItem>
+      <ProjectItem TargetFileName="Properties\Proxies.lsml" ReplaceParameters="true">Proxies.lsml</ProjectItem>
+      <ProjectItem TargetFileName="Scripts\datajs-1.1.1.js">datajs-1.1.1.js</ProjectItem>
+      <ProjectItem TargetFileName="Scripts\datajs-1.1.1.min.js">datajs-1.1.1.min.js</ProjectItem>
+      <ProjectItem TargetFileName="Scripts\jquery-1.9.1.intellisense.js">jquery-1.9.1.intellisense.js</ProjectItem>
+      <ProjectItem TargetFileName="Scripts\jquery-1.9.1.js">jquery-1.9.1.js</ProjectItem>
+      <ProjectItem TargetFileName="Scripts\jquery-1.9.1.min.js">jquery-1.9.1.min.js</ProjectItem>
+      <ProjectItem TargetFileName="Scripts\jquery.mobile-1.3.0.js">jquery.mobile-1.3.0.js</ProjectItem>
+      <ProjectItem TargetFileName="Scripts\jquery.mobile-1.3.0.min.js">jquery.mobile-1.3.0.min.js</ProjectItem>
+      <ProjectItem TargetFileName="Scripts\jquery.mobile-1.3.0-vsdoc.js">jquery.mobile-1.3.0-vsdoc.js</ProjectItem>
+      <ProjectItem TargetFileName="Scripts\msls.js">msls.js</ProjectItem>
+      <ProjectItem TargetFileName="Scripts\msls-2.5.1-vsdoc.js">msls-2.5.1-vsdoc.js</ProjectItem>
+      <ProjectItem TargetFileName="Scripts\msls-2.5.1.js">msls-2.5.1.js</ProjectItem>
+      <ProjectItem TargetFileName="Scripts\msls-2.5.1.min.js">msls-2.5.1.min.js</ProjectItem>
+      <ProjectItem TargetFileName="Scripts\winjs-1.0.js">winjs-1.0.js</ProjectItem>
+      <ProjectItem TargetFileName="Scripts\winjs-1.0.min.js">winjs-1.0.min.js</ProjectItem>
+      <Folder Name="Screens\"/>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

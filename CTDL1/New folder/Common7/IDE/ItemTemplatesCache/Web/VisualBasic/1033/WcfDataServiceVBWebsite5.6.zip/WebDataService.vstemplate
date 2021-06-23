@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name _locID="$loc_001$">WCF Data Service 5.6</Name>
+    <Description _locID="$loc_002$">Generates a class that provides WCF Data Service. The version of WCF Data Services is 5.6, which is compliant with the V3 version of the OData protocol.</Description>
+    <Icon>__TemplateIcon.ico</Icon>
+    <TemplateID>Microsoft.WS.VisualBasic.WebDataService</TemplateID>
+    <TemplateGroupID>Web</TemplateGroupID>
+    <ProjectType>Web</ProjectType>
+    <ProjectSubType>VisualBasic</ProjectSubType>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+    <DefaultName>WcfDataService.svc</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Data</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Core</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Configuration</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Data.Entity</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.ServiceModel</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.ServiceModel.Web</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="$fileinputname$.svc">WebDataService.svc</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="true"  TargetFileName="App_Code\$fileinputname$.vb">WebDataService.vb</ProjectItem>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.Data.ServicesWizard, Version=11.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.Data.ServicesWizard.NewDataServiceWizard</FullClassName>
+  </WizardExtension>
+  <WizardExtension>
+    <Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <packages repository="registry" keyName="WcfDataServices" >
+      <package id="System.Spatial" version="5.6.0" />
+      <package id="Microsoft.Data.Edm" version="5.6.0" />
+      <package id="Microsoft.Data.OData" version="5.6.0" />
+      <package id="Microsoft.Data.Services.Client" version="5.6.0" />
+      <package id="Microsoft.Data.Services" version="5.6.0" />
+    </packages>
+  </WizardData>
+</VSTemplate>

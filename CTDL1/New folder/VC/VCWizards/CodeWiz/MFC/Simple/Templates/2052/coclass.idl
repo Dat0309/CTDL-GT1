@@ -1,0 +1,16 @@
+	//  [!output CLASS_NAME_ROOT] 的主调度接口
+		
+	[ uuid([!output DISPIID_REGISTRY_FORMAT]) ]
+	dispinterface I[!output CLASS_NAME_ROOT]
+	{
+		properties:
+		methods:
+	};
+
+	//  [!output CLASS_NAME_ROOT] 的类信息
+
+	[ uuid([!output CLSID_REGISTRY_FORMAT]) ]
+	coclass [!output CLASS_NAME_ROOT]
+	{
+		[default] dispinterface I[!output CLASS_NAME_ROOT];
+	};

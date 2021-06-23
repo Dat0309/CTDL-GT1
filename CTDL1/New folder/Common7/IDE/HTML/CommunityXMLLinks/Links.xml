@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!-- Links for the Community Window -->
+<!-- The following is a link to the Dynamic Help schema. -->
+<DynamicHelp xmlns="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd vsdh.xsd">
+	<LinkGroup ID="sites" Title="Venus Sites" Priority="1500">
+		<Glyph Collapsed="3" Expanded="4"/>
+	</LinkGroup>
+	<LinkGroup ID="Venus Private Forums" Title="Venus Private Forums" Priority="1400">
+		<Glyph Collapsed="3" Expanded="4"/>
+	</LinkGroup>
+	<LinkGroup ID="ASP.NET Forums" Title="ASP.NET 1.0 Public Forums" Priority="1200">
+		<Glyph Collapsed="3" Expanded="4"/>
+	</LinkGroup>
+	<Context>
+		<Links>
+			<LItem URL="http://www.asp.net/venus" LinkGroup="sites">Venus Home Page</LItem>
+			<LItem URL="http://www.asp.net" LinkGroup="sites">ASP.NET Home Page</LItem>
+			<LItem URL="http://www.asp.net/Forums/ShowForum.aspx?tabindex=1&amp;ForumID=77" LinkGroup="Venus Private Forums">General Discussions</LItem>
+			<LItem URL="http://www.asp.net/Forums/ShowForum.aspx?tabindex=1&amp;ForumID=83" LinkGroup="Venus Private Forums">Feature Requests</LItem>
+			<LItem URL="http://www.asp.net/Forums/ShowForum.aspx?tabindex=1&amp;ForumID=78" LinkGroup="Venus Private Forums">Bug Reports</LItem>
+			<LItem URL="http://www.asp.net/Forums/ShowForum.aspx?tabindex=1&amp;ForumID=86" LinkGroup="Venus Private Forums">ASP.NET 2.0 Related issues</LItem>
+			<LItem URL="http://www.asp.net/Forums/ShowForum.aspx?tabindex=1&amp;ForumID=11" LinkGroup="ASP.NET Forums">Announcements</LItem>
+			<LItem URL="http://www.asp.net/Forums/ShowForum.aspx?tabindex=1&amp;ForumID=15" LinkGroup="ASP.NET Forums">Getting Started</LItem>
+			<LItem URL="http://www.asp.net/Forums/ShowForum.aspx?tabindex=1&amp;ForumID=18" LinkGroup="ASP.NET Forums">Web Forms</LItem>
+			<LItem URL="http://www.asp.net/Forums/ShowForum.aspx?tabindex=1&amp;ForumID=24" LinkGroup="ASP.NET Forums">DataGrid, DataList, Repeater</LItem>
+			<LItem URL="http://www.asp.net/Forums/ShowForum.aspx?tabindex=1&amp;ForumID=23" LinkGroup="ASP.NET Forums">Data Access</LItem>
+			<LItem URL="http://www.asp.net/Forums/ShowForum.aspx?tabindex=1&amp;ForumID=25" LinkGroup="ASP.NET Forums">Security</LItem>
+			<LItem URL="http://www.asp.net/Forums/ShowForum.aspx?tabindex=1&amp;ForumID=21" LinkGroup="ASP.NET Forums">Caching</LItem>
+			<LItem URL="http://www.asp.net/Forums/ShowForum.aspx?tabindex=1&amp;ForumID=48" LinkGroup="ASP.NET Forums">Mobile</LItem>
+			<LItem URL="http://www.asp.net/Forums/ShowForum.aspx?tabindex=1&amp;ForumID=43" LinkGroup="ASP.NET Forums">XML</LItem>
+			<LItem URL="http://www.asp.net/Forums/ShowForum.aspx?tabindex=1&amp;ForumID=28" LinkGroup="ASP.NET Forums">XML Web Services</LItem>
+
+		</Links>
+	</Context>
+</DynamicHelp>

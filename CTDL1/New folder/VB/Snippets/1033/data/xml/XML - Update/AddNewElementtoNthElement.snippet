@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Add new element to the Nth element in XML data</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Adds a new XElement to the Nth XElement in XML data</Description>
+      <Shortcut>xmlAddn</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Xml.Linq.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Xml.Linq</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>Element</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the new element to be added.</ToolTip>
+          <Default>&lt;newElement/&gt;</Default>
+        </Literal>
+        <Literal>
+          <ID>AxisProp</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with name of the element to which the new element should be added.</ToolTip>
+          <Default>Elem</Default>
+        </Literal>
+        <Literal>
+          <ID>val</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with instance of the element to which the new element is added. Index is zero based.</ToolTip>
+          <Default>4</Default>
+        </Literal>
+        <Object>
+          <ID>XmlEle</ID>
+          <Type>XElement</Type>
+          <ToolTip>Replace with an XElement instance.</ToolTip>
+          <Default>xmlEle</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[$XmlEle$.<$AxisProp$>($val$).Add($Element$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

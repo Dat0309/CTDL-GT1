@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="Microsoft.VisualStudio.Data.Tools.SqlEditor" Version="1.4" Language="en-US" Publisher="Microsoft" />
+    <DisplayName>SQL Server Data Tools - Sql Editor</DisplayName>
+    <Description xml:space="preserve">Microsoft SQL Server Data Tools, Sql Editor, Debugger and Language Services</Description>
+    <MoreInfo>http://msdn.microsoft.com/en-us/data/bb931106.aspx</MoreInfo>
+    <Icon>SSDT-icon.png</Icon>
+    <PreviewImage>SSDT-screenshot.png</PreviewImage>
+  </Metadata>
+  <Installation InstalledByMsi="true" SystemComponent="true">
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="12.0" />
+    <InstallationTarget Id="Microsoft.VisualStudio.VWDExpress" Version="12.0" />
+    <InstallationTarget Id="Microsoft.VisualStudio.VSWinExpress" Version="12.0" />
+  </Installation>  
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="Microsoft.VisualStudio.Data.Tools.SqlLanguageServices.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="Microsoft.VisualStudio.Data.Tools.SqlEditor.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="Microsoft.VisualStudio.Data.Tools.SqlDebugger.pkgdef" />
+    <!-- Extension Package (may not be needed in final release) -->
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="Microsoft.SqlServer.Management.SqlEditorEditorExtensions.pkgdef" />
+  </Assets>
+</PackageManifest>

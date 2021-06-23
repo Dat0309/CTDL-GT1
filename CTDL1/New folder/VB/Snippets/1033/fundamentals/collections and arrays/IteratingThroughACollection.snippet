@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Iterate through a collection.</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Iterates through specific item types in a collection.</Description>
+      <Shortcut>colIter</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>itemVar</ID>
+          <ToolTip>Replace with the identifier for the item in the collection.</ToolTip>
+          <Default>name</Default>
+        </Literal>
+        <Literal>
+          <ID>itemType</ID>
+          <ToolTip>Replace with the type of an items that are in the collection.</ToolTip>
+          <Default>String</Default>
+        </Literal>
+        <Object>
+          <ID>colVar</ID>
+          <Type>IEnumerable</Type>
+          <ToolTip>Replace with the collection to iterate over.</ToolTip>
+          <Default>names</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[        ' Iterate through a collection
+        For Each $itemVar$ As $itemType$ In $colVar$
+
+        Next]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

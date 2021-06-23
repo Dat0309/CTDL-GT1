@@ -1,0 +1,33 @@
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <Name>Sayfa Denetimi</Name>
+        <Icon>PageControl.ico</Icon>
+        <Description>HTML, JS ve CSS dosyaları içeren bir boş sayfa denetimi.</Description>
+        <TemplateID>Microsoft.JavaScript.PageControl</TemplateID>
+        <TemplateGroupID>JavaScript_Windows_8.0_GroupID</TemplateGroupID>
+        <ProjectType>JavaScript</ProjectType>
+        <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+        <BlendProjectSubType>WJApplication</BlendProjectSubType>
+        <DefaultName>pagecontrol.html</DefaultName>
+        <PreviewImage>PageControl.png</PreviewImage>
+        <TargetPlatformName>Windows</TargetPlatformName> 
+        <RequiredPlatformVersion>6.2.0</RequiredPlatformVersion>
+    </TemplateData>
+    <TemplateContent>
+        <ProjectItem TargetFileName="$fileinputname$.js" ReplaceParameters="true">PageControl.js</ProjectItem>
+        <ProjectItem TargetFileName="$fileinputname$.html" ReplaceParameters="true" OpenInEditor="true">PageControl.html</ProjectItem>
+        <ProjectItem TargetFileName="$fileinputname$.css" ReplaceParameters="true">PageControl.css</ProjectItem>
+    </TemplateContent>
+    <WizardExtension>
+      <Assembly>Microsoft.VisualStudio.WinRT.TemplateWizards, Version=12.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+      <FullClassName>Microsoft.VisualStudio.WinRT.TemplateWizards.ActivationContract.Wizard</FullClassName>
+    </WizardExtension>
+    <WizardData>
+      <Activation>
+        <ManifestData>
+        </ManifestData>
+        <ManifestComment>
+        </ManifestComment>
+      </Activation>
+    </WizardData>
+</VSTemplate>

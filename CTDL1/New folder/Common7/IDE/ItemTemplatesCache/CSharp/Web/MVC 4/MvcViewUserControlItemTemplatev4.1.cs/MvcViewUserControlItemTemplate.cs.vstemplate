@@ -1,0 +1,24 @@
+﻿<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+    <TemplateData>
+        <DefaultName>ViewUserControl.ascx</DefaultName>
+        <Name Package="{141DA93E-88A7-45D5-B15B-89117F514D64}" ID="21108"/>
+        <Description Package="{141DA93E-88A7-45D5-B15B-89117F514D64}" ID="21109"/>
+        <Icon Package="{39c9c826-8ef8-4079-8c95-428f5b1c323f}" ID="4544"/>
+        <ProjectType>CSharp</ProjectType>
+        <SortOrder>5</SortOrder>
+        <NumberOfParentCategoriesToRollUp>2</NumberOfParentCategoriesToRollUp>
+        <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+        <TemplateID>MvcViewUserControlItemTemplate.cs.vstemplate.v401</TemplateID>
+        <TemplateGroupID>MVC4</TemplateGroupID>
+        <ShowByDefault>false</ShowByDefault>
+    </TemplateData>
+    <TemplateContent>
+        <CustomParameters>
+            <CustomParameter Name="$language$" Value="C#" />
+            <CustomParameter Name="$ParentExtension$" Value=".ascx"/>
+            <CustomParameter Name="$ChildExtension$" Value=".cs"/>
+        </CustomParameters>
+        <References />
+        <ProjectItem SubType="" TargetFileName="$fileinputname$.ascx" ReplaceParameters="true">Views\Home\ViewUserControl.ascx</ProjectItem>
+    </TemplateContent>
+</VSTemplate>

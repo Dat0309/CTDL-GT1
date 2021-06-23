@@ -1,0 +1,41 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="384" />
+    <Description Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="385" />
+    <Icon Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="206" />
+    <TemplateID>SharePoint15ClientWebPart_CS_ITEM</TemplateID>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>220</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>ClientWebPart</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <CreateInPlace>true</CreateInPlace>
+    <TemplateGroupID>SharePointItemTemplateGroupID</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\SharePointProjectItem.spdata" OpenInEditor="false">SharePointClientWebPart.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Elements.xml" OpenInEditor="true" >Elements.xml</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="SharePointProjectTemplateAttributes" Value="ProjectItem"/>
+      <CustomParameter Name="SharePointProjectParentFilter" Value="General;ProjectItem"/>
+      <CustomParameter Name="SharePointProjectProjectModeFilter" Value="SharePointApp"/>
+      <CustomParameter Name="$ProjectItemName$" Value="$fileinputname$"/>
+      <CustomParameter Name="$ClientWebPartPageUrl$" Value="$ClientWebPartPageUrl$"/>
+      <CustomParameter Name="$ClientWebPartPageProperties$" Value="$ClientWebPartPageProperties$"/>
+
+      <CustomParameter Name="$loc_client_web_part_content_1$" _locID="$loc_client_web_part_content_1$" _locAttrData="Value" Value="Content element identifies the location of the page that will render inside the client web part" />
+      <CustomParameter Name="$loc_client_web_part_content_2$" _locID="$loc_client_web_part_content_2$" _locAttrData="Value" Value="Properties are referenced on the query string using the pattern _propertyName_" />
+      <CustomParameter Name="$loc_client_web_part_content_3$" _locID="$loc_client_web_part_content_3$" _locAttrData="Value" Value="Example:" />
+      <CustomParameter Name="$loc_client_web_part_description$" _locID="$loc_client_web_part_description$" _locAttrData="Value" Value="$fileinputname$ Description" />
+      <CustomParameter Name="$loc_client_web_part_property_1$" _locID="$loc_client_web_part_property_1$" _locAttrData="Value" Value="Define properties in the Properties element." />
+      <CustomParameter Name="$loc_client_web_part_property_2$" _locID="$loc_client_web_part_property_2$" _locAttrData="Value" Value="Remember to put Property Name on the Src attribute of the Content element above." />
+      <CustomParameter Name="$loc_client_web_part_title$" _locID="$loc_client_web_part_title$" _locAttrData="Value" Value="$fileinputname$ Title" />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.ClientWebPartItemWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

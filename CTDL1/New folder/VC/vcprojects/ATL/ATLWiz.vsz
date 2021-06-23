@@ -1,0 +1,7 @@
+VSWIZARD 7.0
+Wizard=VsWizard.VsWizardEngine.12.0
+Param="WIZARD_NAME = ATLProject"
+Param="RELATIVE_PATH = VCWizards\AppWiz\ATL"
+Param="PREPROCESS_FUNCTION = CheckATLProjectName"
+Param="WIZARD_ID = 52"
+

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>$guid2$</SharedGUID>
+    <ItemsProjectGuid>{$guid1$}</ItemsProjectGuid>
+    <ItemsRootNamespace>$ext_safeprojectname$</ItemsRootNamespace>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <ClCompile Include="$(MSBuildThisFileDirectory)App.xaml.cpp">
+      <DependentUpon>$(MSBuildThisFileDirectory)App.xaml</DependentUpon>
+    </ClCompile>
+    <ClInclude Include="$(MSBuildThisFileDirectory)App.xaml.h">
+      <DependentUpon>$(MSBuildThisFileDirectory)App.xaml</DependentUpon>
+    </ClInclude>
+    <ClCompile Include="$(MSBuildThisFileDirectory)pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClInclude Include="$(MSBuildThisFileDirectory)pch.h" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)DataModel\SampleDataSource.cpp"/>
+    <ClInclude Include="$(MSBuildThisFileDirectory)DataModel\SampleDataSource.h" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Common\NavigationHelper.cpp"/>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Common\NavigationHelper.h" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Common\RelayCommand.cpp"/>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Common\RelayCommand.h" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.cpp"/>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\DarkGray.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\LightGray.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\MediumGray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\$currentuiculturename$\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="$(MSBuildThisFileDirectory)DataModel\SampleData.json" />
+  </ItemGroup>
+</Project>

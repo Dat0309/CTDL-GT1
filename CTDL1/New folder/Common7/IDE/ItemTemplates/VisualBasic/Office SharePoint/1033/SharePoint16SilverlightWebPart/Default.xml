@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="$ProjectItemName$" List="113" Url="_catalogs/wp">
+    <File Path="$ProjectItemName$\$fileinputname$.webpart" Url="$webpart_url$" Type="GhostableInLibrary">
+      <Property Name="Group" Value="Custom" />
+    </File>
+  </Module>
+  <Module Name="$ProjectItemName$">
+    <File Path="$fileinputname$\$SilverlightXapFile$" Url="$xap_url$" />
+  </Module>
+</Elements>

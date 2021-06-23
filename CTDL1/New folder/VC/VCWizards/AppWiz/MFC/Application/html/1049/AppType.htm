@@ -1,0 +1,1381 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<html dir="LTR">
+<head>
+	<title>Мастер приложений MFC</title>
+	<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<meta http-equiv="MSThemeCompatible" content="Yes">
+	<link id="LINKURL" rel="stylesheet" href="../../../../../1049/NewStyles.css">
+</head>
+<body bgcolor="BUTTONFACE" topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0"
+	onload="InitDocument(document);" onkeydown="if (!bValidating) OnKey();" onkeypress="if (!bValidating) OnPress();">
+	<table class="ONE" height="100%" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<col class="LinkPane">
+		<col>
+		<!--OPEN OF INTRODUCTORY INFORMATION TABLE//-->
+		<tr valign="TOP">
+			<td height="79" width="100%" colspan="2">
+				<table class="TWO" border="0" cellpadding="0" cellspacing="0">
+					<col width="12">
+					<col>
+					<col width="12">
+					<tr>
+						<td valign="TOP" height="12" width="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="12" width="12">
+							&nbsp;
+						</td>
+						<td class="IMAGE" valign="BOTTOM" width="110" rowspan="2">
+							<div class="SMALLA" id="SINGLE_DOC_IMAGE">
+								<img class="SMALL" src="../../Images/SingleDocument.gif" width="98" height="70" alt="">
+							</div>
+							<div class="SMALL" id="MULTI_DOC_IMAGE">
+								<img class="SMALL" src="..\..\Images\MultipleDocuments.gif" width="98" height="70"
+									alt="">
+							</div>
+							<div class="SMALL" id="MULTI_DOC_TABBED_IMAGE">
+								<img class="SMALL" src="..\..\Images\MDITabs.gif" width="98" height="70" alt="">
+							</div>
+							<div class="SMALL" id="DIALOG_IMAGE">
+								<img class="SMALL" src="..\..\Images\Dialog.gif" width="98" height="70" alt="">
+							</div>
+							<div class="SMALL" id="MULTI_TOP_DOC_IMAGE">
+								<img class="SMALL" src="..\..\Images\MultipleTopLevel.gif" width="108" height="70"
+									alt="">
+							</div>
+							<div class="SMALL" id="VISUAL_STUDIO_STYLE">
+								<img class="SMALL" src="..\..\Images\VSProjectStyle.gif" width="108" height="70"
+									alt="">
+							</div>
+							<div class="SMALL" id="OFFICE_STYLE">
+								<img class="SMALL" src="..\..\Images\OfficeProjectStyle.gif" width="108" height="70"
+									alt="">
+							</div>
+						</td>
+						<td valign="TOP" height="12" width="6" rowspan="2">
+							&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td valign="TOP" height="65" width="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="65">
+							<h4 class="HEAD" id="HEAD">
+								Тип приложения</h4>
+							<p class="SUBHEAD" id="SUBHEAD">
+								Укажите поддержку архитектуры "Документ/Представление", язык и параметры стиля интерфейса
+								вашего приложения.</p>
+						</td>
+						<td valign="TOP" height="65" width="12">
+							&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td valign="TOP" class="RULE" colspan="5" height="2">
+							<table border="0" width="100%" height="1" cellpadding="0" cellspacing="0">
+								<tr valign="TOP">
+									<td height="1" width="100%" bgcolor="BUTTONSHADOW">
+									</td>
+									<td height="1" width="1" bgcolor="WINDOW">
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<!--CLOSE OF INTRODUCTORY INFORMATION TABLE//-->
+		<!--OPEN OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+		<tr valign="TOP">
+			<td class="Three" valign="TOP" height="100%" width="100%">
+				<table class="fixedSize" height="100%" width="100%" border="0" cellpadding="0" cellspacing="0">
+					<tr valign="TOP">
+						<td class="threeCustom" valign="TOP">
+							<!--OPEN OF NAVIGATION TABLE//-->
+							<table class="THREE" border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col>
+								<col width="1">
+								<tr>
+									<td valign="TOP" colspan="3" height="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="100%">
+										&nbsp;
+									</td>
+									<td valign="TOP" height="100%">
+										<!--OPEN OF NAVIGATIONAL LINKS//-->
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="Default" title="Проверьте выбранные элементы."
+															onclick="Next(document, 'Default.htm');" tabindex="1">Обзор</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINKSELECTED">
+											<span class="VERTLINE1">
+												<img src="../../../../../1033/Images/spacer.gif" width="1" height="1" alt="" border="0">
+											</span><span class="HORILINE1">
+												<table width="167" height="100%" border="0" cellpadding="0" cellspacing="0">
+													<tr valign="TOP">
+														<td class="DOTTEDLINE" height="1">
+														</td>
+													</tr>
+													<tr valign="TOP">
+														<td height="100%">
+															<img src="../../../../../1033/Images/spacer.gif" width="165" height="28" alt="" border="0">
+														</td>
+													</tr>
+													<tr valign="TOP">
+														<td class="DOTTEDLINE" height="1">
+														</td>
+													</tr>
+												</table>
+											</span>
+											<table width="160" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXTSELECTED">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span id="AppType" title="Укажите параметры поддержки, языка и стиля интерфейса для архитектуры Document/View в приложении.">
+															Тип приложения</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXTINDENT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="CompoundDoc" title="Задайте параметры контейнера или сервера OLE и поддержку активного документа."
+															onclick="onClick(this);" tabindex="2">Поддержка составн. док-тов</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXTINDENT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="DocTemp" title="Укажите значения, используемые шаблоном документа приложения при создании нового документа."
+															onclick="onClick(this);" tabindex="3">Свойства шаблона документов</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="DBSupport" title="Задайте поддержку базы данных, включая источники данных."
+															onclick="onClick(this);" tabindex="4">Поддержка базы данных</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="UIFeatures" title="Задайте параметры, управляющие видом и восприятием приложения."
+															onclick="Next(document, 'UIFeatures.htm');" tabindex="5">Свойства интерфейса пользователя</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="Advanced" title="Задайте дополнительную поддержку для добавления в приложение."
+															onclick="Next(document, 'Advanced.htm');" tabindex="6">Дополнительные параметры</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="GeneratedClasses" title="Просмотрите созданные классы и укажите базовые классы для приложения."
+															onclick="Next(document, 'GeneratedClasses.htm');" tabindex="7">Созданные классы</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<!--CLOSE OF NAVIGATIONAL LINKS//-->
+									</td>
+									<td width="1">
+										<div class="VERTLINE">
+											<img src="../../../../../1033/Images/spacer.gif" width="1" height="1" alt="" border="0">
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				<!--CLOSE OF NAVIGATION TABLE//-->
+			</td>
+			<td valign="TOP" height="100%">
+				<!--OPEN OF CONTENT AND BUTTON TABLE//-->
+				<table class="ONE" border="0" cellpadding="0" cellspacing="0">
+					<col width="100%">
+					<tr valign="TOP">
+						<td height="100%">
+							<!--OPEN OF CONTENT//-->
+							<table class="CONTENT" border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col>
+								<col width="12">
+								<col>
+								<col width="12">
+								<tr>
+									<td valign="TOP" height="12" colspan="5">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP">
+										<span class="itemTextTop" id="applicationType_title">Тип приложения:
+											<p class="Spacer">
+												&nbsp;</p>
+											<input type="radio" class="Radio" name="apptype" id="APP_TYPE_SDI" accesskey="о"
+												title="Приложение с поддержкой однодокументного интерфейса (SDI)." onclick="OnAppType();">
+											<div class="itemTextRadioB" title="Приложение с поддержкой однодокументного интерфейса (SDI)."
+												id="APP_TYPE_SDI_DIV">
+												<label id="SINGLEDOC_TEXT" for="APP_TYPE_SDI"><u>О</u>дин документ</label>
+											</div>
+											<br>
+											<input type="radio" class="Radio" name="apptype" id="APP_TYPE_MDI" accesskey="Н"
+												title="Приложение, которое поддерживает многодокументный интерфейс (MDI) в одном фрейме верхнего уровня."
+												onclick="OnAppType();">
+											<div class="itemTextRadioB" id="SELECT_MULTIDOC_TEXT" title="Приложение, которое поддерживает многодокументный интерфейс (MDI) в одном фрейме верхнего уровня.">
+												<label id="MULTIDOC_TEXT" for="APP_TYPE_MDI">Несколько документо<u>в</u></label>
+											</div>
+											<br>
+											<input type="checkbox" class="CheckboxIndent" accesskey="в" id="APP_TYPE_TABBED_MDI"
+												title="Используйте документы с вкладками (в стиле Visual Studio), которые могут быть сгруппированы."
+												onpropertychange="OnAppType();">
+											<div class="itemTextCheckboxIndentB" id="SELECT_TABBED_MULTIDOC_TEXT" title="Используйте документы с вкладками (в стиле Visual Studio), которые могут быть сгруппированы.">
+												<label id="APP_TYPE_TABBED_MDI_LABEL" for="APP_TYPE_TABBED_MDI">Документ<u>ы</u> с вкладками</label>
+											</div>
+											<p class="ElementSpacer">
+												&nbsp;</p>
+											<input type="radio" class="Radio" name="apptype" id="APP_TYPE_DLG" accesskey="н"
+												title="Выберите приложение, которое запускается в диалоговом окне." onclick="OnAppType();">
+											<div class="itemTextRadioB" id="SELECT_DIALOG_TEXT" title="Выберите приложение, которое запускается в диалоговом окне.">
+												<label id="DIALOG_TEXT" for="APP_TYPE_DLG"><u>Н</u>а основе диалоговых окон</label>
+											</div>
+											<br>
+											<input type="checkbox" class="CheckboxIndent" accesskey="и" id="HTML_DIALOG" title="Получите класс диалоговых окон из CDHtmlDialog."
+												onpropertychange="OnDHTMLDialogSupport();">
+											<div class="itemTextCheckboxIndentB" id="HTML_DIALOG_DIV" title="Получите класс диалоговых окон из CDHtmlDialog.">
+												<label id="HTML_DIALOG_LABEL" for="HTML_DIALOG">Д<U>и</U>алоговое окно HTML</label>
+											</div>
+											<br>
+											<input type="checkbox" class="CheckboxIndent" accesskey="o" id="NO_MFC_CONTROLS" title="Запретить использование усовершенствованных элементов управления MFC в диалоговом окне (размер приложений со статическим связыванием будет уменьшен)."
+												onpropertychange="OnMFCControls();">
+											<div class="itemTextCheckboxIndentB" id="NO_MFC_CONTROLS_DIV" title="Запретить использование усовершенствованных элементов управления MFC в диалоговом окне (размер приложений со статическим связыванием будет уменьшен).">
+												<label id="NO_MFC_CONTROLS_LABEL" for="NO_MFC_CONTROLS">No enhanced MFC c<u>o</u>ntrols</label>
+											</div>
+											<p class="ElementSpacer">
+												&nbsp;</p>
+											<input type="radio" class="Radio" name="apptype" id="APP_TYPE_MTLD" accesskey="с"
+												title="Тип приложения, который поддерживает несколько фреймов верхнего уровня."
+												onclick="OnAppType();">
+											<div class="itemTextRadioB" id="SELECT_MULTI_TEXT" title="Тип приложения, который поддерживает несколько фреймов верхнего уровня.">
+												<label id="MULTI_TEXT" for="APP_TYPE_MTLD">Неско<u>л</u>ько документов верхнего уровня</label>
+											</div>
+										</span>
+										<p class="ElementSpacer">
+											&nbsp;</p>
+										<span class="itemText" id="docview_title">
+											<input class="CheckBox" type="checkbox" id="DOCVIEW" accesskey="а" title="Задайте сборку архитектуры Document/View в приложении с использованием базовых классов CDocument и CView."
+												onpropertychange="OnDocView();" class="SINGLECHECKBOX">
+											<div class="itemTextCheckboxA" id="SELECT_DOCVIEW_TEXT" title="Задайте сборку архитектуры Document/View в приложении с использованием базовых классов CDocument и CView.">
+												<label id="DOCVIEW_TEXT" for="DOCVIEW">Поддержка ар<u>х</u>итектуры Document/View</label>
+											</div>
+										</span>
+										<p class="ElementSpacer">
+											&nbsp;</p>
+										<span class="itemText" id="sdl_check_title">
+											<input class="CheckBox" type="checkbox" id="SDL_CHECK" accesskey="п" title="Включить дополнительные проверки жизненного цикла разработки безопасного ПО (SDL)."
+												onpropertychange="OnAppType();" class="SINGLECHECKBOX">
+											<div class="itemTextCheckboxA" id="SDL_CHECK_DIV" title="Включить дополнительные проверки жизненного цикла разработки безопасного ПО (SDL).">
+												<label id="SDL_CHECK_LABEL" for="SDL_CHECK"><U>П</U>роверки жизненного цикла разработки безопасного ПО (SDL)</label>
+											</div>
+										</span>
+										<p class="ElementSpacer18">
+											&nbsp;</p>
+										<span class="itemText" id="SPEC_LANGUAGE_TEXT" title="Укажите язык для ресурсов приложения.">
+											<label id="LANGUAGE_TEXT" for="LANGUAGE">Язы<u>к</u> ресурсов:</label>
+											<br>
+											<select class="sideBtn" size="1" id="LANGUAGE" accesskey="к" onchange="OnLang();"
+												title="Укажите язык для ресурсов приложения.">
+											</select>
+										</span>
+									</td>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP">
+										<span class="itemTextTop" id="projectType_title">Стиль проекта:
+											<p class="Spacer">
+												&nbsp;</p>
+											<input type="radio" class="Radio" accesskey="а" title="Выберите традиционный пользовательский интерфейс."
+												name="projtype" value="radiobutton" id="PROJECT_STYLE_MFCSTD" onclick="OnProjectStyle();">
+											<div class="itemTextRadioB" id="SELECT_UI_TEXT" title="Выберите традиционный пользовательский интерфейс.">
+												<label id="UI_TEXT" for="PROJECT_STYLE_MFCSTD">Ст<u>а</u>ндарт MFC</label>
+											</div>
+											<br>
+											<input type="radio" class="Radio" accesskey="п" title="Выберите пользовательский интерфейс в стиле браузера."
+												name="projtype" value="radiobutton" id="PROJECT_STYLE_EXPLORER" onclick="OnProjectStyle();">
+											<div class="itemTextRadioB" id="explorer_title" title="Выберите пользовательский интерфейс в стиле браузера.">
+												<label id="EXPLORER_TEXT" for="PROJECT_STYLE_EXPLORER"><u>П</u>роводник Windows</label>
+											</div>
+											<br>
+											<input type="radio" class="Radio" accesskey="И" title="Выберите интерфейс пользователя в стиле Visual Studio (с областями обозревателя, вывода и свойств)."
+												name="projtype" value="radiobutton" id="PROJECT_STYLE_VISUALSTUDIO" onclick="OnProjectStyle();">
+											<div class="itemTextRadioB" id="visualstudio_title" title="Выберите интерфейс пользователя в стиле Visual Studio (с областями обозревателя, вывода и свойств).">
+												<label id="VISUALSTUDIO_TEXT" for="PROJECT_STYLE_VISUALSTUDIO"><u>И</u>нтерфейс Visual Studio</label>
+											</div>
+											<br>
+											<input type="radio" class="Radio" accesskey="н" title="Выберите интерфейс пользователя в стиле Office (с лентой, областью переходов и надписью)."
+												name="projtype" value="radiobutton" id="PROJECT_STYLE_OFFICE" onclick="OnProjectStyle();">
+											<div class="itemTextRadioB" id="office_title" title="Выберите интерфейс пользователя в стиле Office (с лентой, областью переходов и надписью).">
+												<label id="OFFICE_TEXT" for="PROJECT_STYLE_OFFICE">Интерфейс <u>O</u>ffice</label>
+											</div>
+										</span>
+										<p class="ElementSpacer">
+											&nbsp;</p>
+										<span class="itemTextTop" id="appearance_title" title="Укажите визуальный стиль и цвета приложения.">
+											<label id="VISUAL_STYLE_COMBO_LABEL" for="VISUAL_STYLE_COMBO">Визуальны<u>й</u> стиль и цвета:</label>
+											<br>
+											<select class="sidebtnNoWidth" id="VISUAL_STYLE_COMBO" accesskey="с" title="Укажите визуальный стиль и цвета приложения."
+												onchange="OnAppearance(this);" size="1">
+												<option id="DEFMFC_LOOK" value="DEFMFC_LOOK">Windows (классический/по умолчанию)</option>
+												<option id="OFF2003_LOOK" value="OFF2003_LOOK">Office 2003</option>
+												<option id="VS2005_LOOK" value="VS2005_LOOK" selected>Visual Studio 2005</option>
+												<option id="VS2008_LOOK" value="VS2008_LOOK" selected>Visual Studio 2008</option>
+												<option id="OFF2007_BLUE" value="OFF2007_BLUE">Office 2007 (синяя тема)</option>
+												<option id="OFF2007_BLACK" value="OFF2007_BLACK">Office 2007 (черная тема)</option>
+												<option id="OFF2007_SILVER" value="OFF2007_SILVER">Office 2007 (серебристая тема)</option>
+												<option id="OFF2007_AQUA" value="OFF2007_AQUA">Office 2007 (аквамариновая тема)</option>
+												<option id="WINDOWS_7" value="WINDOWS_7">Windows 7</option>
+											</select>
+											<br>
+											<p class="ElementSpacer2">
+												&nbsp;</p>
+											<input type="checkbox" class="CheckBoxA" accesskey="Р" id="ENABLE_VISUAL_STYLE_SWITCHING"
+												title="Разрешить смену визуального стиля и цветов приложения во время его выполнения.">
+											<div class="itemTextCheckboxB" id="enable_visual_style_switching_label" title="Разрешить смену визуального стиля и цветов приложения во время его выполнения.">
+												<label id="ENABLE_VISUAL_STYLE_SWITCHING_LABEL" for="ENABLE_VISUAL_STYLE_SWITCHING"><u>Р</u>азрешить смену визуального стиля</label>
+											</div>
+										</span>
+										<p class="ElementSpacer">
+											&nbsp;</p>
+										<span class="itemTextTop" id="projectType_title2">Использование MFC:
+											<p class="Spacer">
+												&nbsp;</p>
+											<input type="radio" class="Radio" accesskey="И" title="Связь с MFC DLL." name="useofmfc"
+												id="DYNAMIC_MFC">
+											<div class="itemTextRadioB" id="LINK_MFC_DYNAMIC_TEXT" title="Связь с MFC DLL.">
+												<label id="DYNAMIC_MFC_TEXT" for="DYNAMIC_MFC">Испол<u>ь</u>зовать MFC в общей DLL</label>
+											</div>
+											<br>
+											<input type="radio" class="Radio" accesskey="с" title="Связь со статической библиотекой MFC."
+												name="useofmfc" value="radiobutton" id="STATIC_MFC">
+											<div class="itemTextRadioB" id="LINK_MFC_STATIC_TEXT" title="Связь со статической библиотекой MFC.">
+												<label id="STATIC_MFC_TEXT" for="STATIC_MFC">Исполь<u>з</u>овать MFC в статической библиотеке</label>
+											</div>
+										</span>
+									</td>
+								</tr>
+							</table>
+							<!--CLOSE OF CONTENT//-->
+						</td>
+					</tr>
+					<tr valign="BOTTOM">
+						<td>
+							<!--OPEN OF BUTTON HTML//-->
+							<table border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col>
+								<col width="75">
+								<col width="4">
+								<col width="75">
+								<col width="4">
+								<col width="75">
+								<col width="12">
+								<tr>
+									<td valign="TOP" class="RULE" colspan="8" height="2">
+										<table border="0" width="100%" height="1" cellpadding="0" cellspacing="0">
+											<tr valign="TOP">
+												<td height="1" width="100%" bgcolor="BUTTONSHADOW">
+												</td>
+												<td height="1" width="1" bgcolor="WINDOW">
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="11" colspan="8">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="MIDDLE" height="23" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP" height="23">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="FinishBtn" onclick="OnFinish(document);">
+											Готово</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="4">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="CancelBtn" onclick="window.external.Finish(document, 'cancel');">
+											Отмена</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="4">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="HelpBtn" onclick="window.external.OnHelp('vc.appwiz.mfc.exe.apptype');">
+											Справка</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="12" colspan="8">
+										&nbsp;
+									</td>
+								</tr>
+							</table>
+							<!--CLOSE OF BUTTON HTML//-->
+						</td>
+					</tr>
+				</table>
+				<!--CLOSE OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+<script language="JSCRIPT">
+
+	var tab_array = new Array();
+	tab_array[0] = Default;
+	tab_array[1] = AppType;
+	tab_array[2] = CompoundDoc;
+	tab_array[3] = DocTemp;
+	tab_array[4] = DBSupport;
+	tab_array[5] = UIFeatures;
+	tab_array[6] = Advanced;
+	tab_array[7] = GeneratedClasses;
+
+	function InitDocument(document) {
+		setDirection();
+		InitTabs();
+		window.external.Load(document);
+		PopulateLanguages();
+		OnLang();
+
+		ToggleImage();
+		SetFocus();
+
+		APP_TYPE_TABBED_MDI.disabled = false;
+		APP_TYPE_TABBED_MDI_LABEL.disabled = false;
+		VISUAL_STYLE_COMBO.disabled = false;
+		appearance_title.disabled = false;
+		ENABLE_VISUAL_STYLE_SWITCHING.disabled = false;
+		enable_visual_style_switching_label.disabled = false;
+
+		if (!APP_TYPE_MDI.checked) {
+			APP_TYPE_TABBED_MDI.disabled = true;
+			APP_TYPE_TABBED_MDI_LABEL.disabled = true;
+		}
+		else {
+			if (window.external.FindSymbol("USE_STANDARD_MENU_TOOLBAR") == true) {
+				APP_TYPE_TABBED_MDI.checked = false;
+			}
+		}
+
+		if (!APP_TYPE_DLG.checked) {
+			HTML_DIALOG.disabled = true;
+			HTML_DIALOG_LABEL.disabled = true;
+			NO_MFC_CONTROLS.disabled = true;
+			NO_MFC_CONTROLS_LABEL.disabled = true;
+	}
+
+		if ((window.external.FindSymbol("USE_STANDARD_MENU_TOOLBAR") == true) || window.external.FindSymbol("APP_TYPE_DLG")) {
+			VISUAL_STYLE_COMBO.value = "DEFMFC_LOOK";
+			ENABLE_VISUAL_STYLE_SWITCHING.disabled = true;
+			enable_visual_style_switching_label.disabled = true;
+			ENABLE_VISUAL_STYLE_SWITCHING.checked = false;
+
+			PROJECT_STYLE_MFCSTD.checked = true;
+			PROJECT_STYLE_EXPLORER.checked = false;
+			PROJECT_STYLE_VISUALSTUDIO.checked = false;
+			PROJECT_STYLE_OFFICE.checked = false;
+		}
+	}
+
+	function PopulateLanguages() {
+		var oLangList = document.all.tags("SELECT").item("LANGUAGE");
+
+		// Scan the templates directory for the available languages
+		//
+		var strInstalledLangs = window.external.GetInstalledLangs();
+
+		// Populate the list
+		//
+		var iBegin = 0;
+		var iEnd = 0;
+		while (iEnd >= 0) {
+			var strLangId;
+			iEnd = strInstalledLangs.indexOf(",", iBegin);
+			if (iEnd >= 0) {
+				strLangId = strInstalledLangs.substr(iBegin, iEnd - iBegin);
+				iBegin = iEnd + 1;
+			}
+			else {
+				strLangId = strInstalledLangs.substr(iBegin);
+			}
+			var oOption = document.createElement("OPTION");
+			oOption.value = strLangId;
+			oOption.text = window.external.GetLangFromLCID(strLangId);
+			oLangList.add(oOption);
+		}
+		var len = oLangList.options.length;
+
+		var bIsDBCS = false;
+		var strProjName = window.external.FindSymbol("PROJECT_NAME");
+		for (i = 0; i < strProjName.Length; i++) {
+			if (strProjName.charCodeAt(i) > 255) {
+				bIsDBCS = true;
+				break;
+			}
+		}
+
+		if (bIsDBCS) {
+			var strSystemLocale = window.external.GetSystemLCID();
+			for (i = 0; i < len; i++) {
+				var val = oLangList.options[i].value;
+				if (val == strSystemLocale) {
+					oLangList.selectedIndex = i;
+					break;
+				}
+			}
+			oLangList.disable = true;
+			return;
+		}
+
+
+		var strHostLocale = window.external.FindSymbol("LCID");
+
+		if (strHostLocale == "") {
+			strHostLocale = window.external.GetHostLocale();
+		}
+		var strHostLocalePrimary = window.external.GetPrimaryLangIdFromLCID(strHostLocale);
+		var strSystemLocale = window.external.GetSystemLCID();
+		var strSystemLocalePrimary = window.external.GetPrimaryLangIdFromLCID(strSystemLocale);
+		var nEnglishUSIndex = 0;
+		var nBestPrimaryMatch = -1;
+		var nSystemLocaleMatch = -1;
+
+		for (i = 0; i < len; i++) {
+			var val = oLangList.options[i].value;
+
+			// If the language of the VS Envrionment is running in
+			// is available it should default to that language.
+			if (val == strHostLocale) {
+				oLangList.selectedIndex = i;
+				return;
+			}
+
+			// remember the match on system locale, if host locale not found
+			if (val == strSystemLocale) {
+				nSystemLocaleMatch = i;
+			}
+
+			// Remember the best match based on primary langid (i.e. "English")
+			// So that if the System/Host locale are "English (United Kindom)"
+			// and the only installed one is "English (United States)", we will match.
+			if (window.external.GetPrimaryLangIdFromLCID(val) == strHostLocalePrimary ||
+			window.external.GetPrimaryLangIdFromLCID(val) == strSystemLocalePrimary) {
+				nBestPrimaryMatch = i;
+			}
+
+			if (val == "1033") {
+				nEnglishUSIndex = i;
+			}
+
+		}
+
+		//
+		// If the language that the system is running in
+		// (system default locale) is available it should
+		// default to that resource language.
+		//
+
+		if (nSystemLocaleMatch != -1)
+			oLangList.selectedIndex = nSystemLocaleMatch;
+
+		// If the language that the system is running in
+		// (system default locale) is *not* available it
+		// should default to English (available on all installs)
+		//
+		else if (nBestPrimaryMatch != -1)
+			oLangList.selectedIndex = nBestPrimaryMatch;
+
+		else
+			oLangList.selectedIndex = nEnglishUSIndex;
+	}
+
+	function InitTabs() {
+		MouseOut(DBSupport);
+		MouseOut(CompoundDoc);
+		MouseOut(DocTemp);
+	}
+
+	function Next(document, linkto) {
+		window.external.Next(document, linkto);
+	}
+
+	function onClick(obj) {
+		if (obj == null || typeof (obj) == "undefined")
+			return;
+
+		if (obj.id == "DBSupport") {
+			if (!APP_TYPE_DLG.checked) {
+				Next(document, "DBSupport.htm");
+			}
+		}
+		if (obj.id == "CompoundDoc") {
+			if (DOCVIEW.checked && !DOCVIEW.disabled) {
+				Next(document, "CompoundDoc.htm");
+			}
+		}
+		if (obj.id == "DocTemp") {
+			if (DOCVIEW.checked && !DOCVIEW.disabled) {
+				Next(document, "DocTemp.htm");
+			}
+		}
+	}
+
+	function CheckDataSource() {
+		if (window.external.FindSymbol("DB_CONNECTION_STRING") == "" && (window.external.FindSymbol("OLEDB") || window.external.FindSymbol("ODBC"))) {
+			L_Err1_Text = "При выборе параметра представления базы данных необходимо указать источник данных";
+			window.external.ReportError(L_Err1_Text);
+			return false;
+		}
+		return true;
+	}
+
+	function OnFinish(document) {
+		if (!CheckDataSource())
+			return;
+
+		if (window.external.FindSymbol("ACTIVE_DOC_SERVER")) {
+			if (window.external.FindSymbol("FILE_EXTENSION") == "") {
+				L_Err2_Text = "Необходимо задать расширение файла документа на странице ''Свойства шаблона документов''";
+				window.external.ReportError(L_Err2_Text);
+				return;
+			}
+		}
+		OnWizFinish(document);
+	}
+
+	function OnAppType() {
+		DBSupport.className = "activelink";
+		DOCVIEW.disabled = false;
+		docview_title.disabled = false;
+		SDL_CHECK.disabled = false;
+		sdl_check_title.disabled = false;
+		PROJECT_STYLE_EXPLORER.disabled = false;
+		explorer_title.disabled = false;
+		PROJECT_STYLE_VISUALSTUDIO.disabled = false;
+		visualstudio_title.disabled = false;
+		PROJECT_STYLE_OFFICE.disabled = false;
+		office_title.disabled = false;
+
+		if (APP_TYPE_MDI.checked) {
+			APP_TYPE_TABBED_MDI.disabled = false;
+			APP_TYPE_TABBED_MDI_LABEL.disabled = false;
+
+			if (window.external.FindSymbol("DB_VIEW_NO_FILE")) {
+				var L_Prompt1_Text = "При выборе многодокументного интерфейса в проект будет включена поддержка файлов.";
+				if (window.external.YesNoAlert(L_Prompt1_Text)) {
+					window.external.AddSymbol("DB_VIEW_NO_FILE", false);
+					window.external.AddSymbol("DB_VIEW_WITH_FILE", true);
+				}
+				else {
+					APP_TYPE_MDI.checked = false;
+					APP_TYPE_SDI.checked = true;
+				}
+			}
+		}
+		else {
+			APP_TYPE_TABBED_MDI.disabled = true;
+			APP_TYPE_TABBED_MDI.checked = false;
+			APP_TYPE_TABBED_MDI_LABEL.disabled = true;
+		}
+
+		if (APP_TYPE_DLG.checked) {
+			window.external.AddSymbol("DIALOG_BASE_CLASS", "CDialogEx");
+
+			HTML_DIALOG.disabled = false;
+			HTML_DIALOG_LABEL.disabled = false;
+			NO_MFC_CONTROLS.disabled = false;
+			NO_MFC_CONTROLS_LABEL.disabled = false;
+			DOCVIEW.disabled = true;
+			docview_title.disabled = true;
+			OnDocView();
+			DBSupport.className = "inactivelink";
+
+			PROJECT_STYLE_EXPLORER.disabled = true;
+			explorer_title.disabled = true;
+			PROJECT_STYLE_EXPLORER.checked = false;
+			PROJECT_STYLE_VISUALSTUDIO.disabled = true;
+			visualstudio_title.disabled = true;
+			PROJECT_STYLE_VISUALSTUDIO.checked = false;
+			PROJECT_STYLE_OFFICE.disabled = true;
+			office_title.disabled = true;
+			PROJECT_STYLE_OFFICE.checked = false;
+
+			window.external.AddSymbol("LIST_VIEW", false);
+			if (window.external.FindSymbol("VIEW_BASE_CLASS") != "CView")
+				window.external.AddSymbol("VIEW_BASE_CLASS", "CView");
+
+			PROJECT_STYLE_MFCSTD.checked = true;
+			VISUAL_STYLE_COMBO.value = "DEFMFC_LOOK";
+			VISUAL_STYLE_COMBO.disabled = true;
+			VISUAL_STYLE_COMBO_LABEL.disabled = true;
+			ENABLE_VISUAL_STYLE_SWITCHING.disabled = true;
+			enable_visual_style_switching_label.disabled = true;
+			ENABLE_VISUAL_STYLE_SWITCHING.checked = false;
+
+			window.external.AddSymbol("DB_SUPPORT_NONE", true);
+			window.external.AddSymbol("DB_SUPPORT_HEADER_ONLY", false);
+			window.external.AddSymbol("DB_VIEW_NO_FILE", false);
+			window.external.AddSymbol("DB_VIEW_WITH_FILE", false);
+			window.external.AddSymbol("OLEDB", false);
+			window.external.AddSymbol("ODBC", false);
+			window.external.AddSymbol("DB_SUPPORT_INFO", "");
+			window.external.AddSymbol("DB_CONNECTION_STRING", "");
+			window.external.AddSymbol("OLEDB_RECORD_VIEW", false);
+			window.external.AddSymbol("ODBC_RECORD_VIEW", false);
+			window.external.AddSymbol("VIEW_BASE_CLASS", "CView");
+
+			window.external.AddSymbol("COMPOUND_DOC_NONE", true);
+			window.external.AddSymbol("CONTAINER", false);
+			window.external.AddSymbol("MINI_SERVER", false);
+			window.external.AddSymbol("FULL_SERVER", false);
+			window.external.AddSymbol("CONTAINER_SERVER", false);
+			window.external.AddSymbol("ACTIVE_DOC_CONTAINER", false);
+			window.external.AddSymbol("ACTIVE_DOC_SERVER", false);
+			window.external.AddSymbol("MAIN_FRAME_MINIMIZE_BOX", false);
+			window.external.AddSymbol("MAIN_FRAME_MAXIMIZE_BOX", false);
+			window.external.AddSymbol("MAIN_FRAME_THICK_FRAME", false);
+		}
+		else {
+			HTML_DIALOG.disabled = true;
+			HTML_DIALOG.checked = false;
+			HTML_DIALOG_LABEL.disabled = true;
+			NO_MFC_CONTROLS.disabled = true;
+			NO_MFC_CONTROLS.checked = false;
+			NO_MFC_CONTROLS_LABEL.disabled = true;
+			window.external.AddSymbol("MAIN_FRAME_MINIMIZE_BOX", true);
+			window.external.AddSymbol("MAIN_FRAME_MAXIMIZE_BOX", true);
+			window.external.AddSymbol("MAIN_FRAME_THICK_FRAME", true);
+
+			VISUAL_STYLE_COMBO.disabled = false;
+			VISUAL_STYLE_COMBO_LABEL.disabled = false;
+		}
+
+		if (APP_TYPE_SDI.checked || APP_TYPE_MTLD.checked) {
+			if (window.external.FindSymbol("MENUBAR_TOOLBAR") || window.external.FindSymbol("RIBBON_TOOLBAR")) {
+				window.external.AddSymbol("MAIN_FRAME_BASE_CLASS", "CFrameWndEx");
+				window.external.AddSymbol("APP_BASE_CLASS", "CWinAppEx");
+			}
+			else {
+				window.external.AddSymbol("MAIN_FRAME_BASE_CLASS", "CFrameWnd");
+				window.external.AddSymbol("APP_BASE_CLASS", "CWinApp");
+			}
+		}
+		else if (APP_TYPE_TABBED_MDI.checked) {
+			window.external.AddSymbol("MAIN_FRAME_BASE_CLASS", "CMDIFrameWndEx");
+			window.external.AddSymbol("CHILD_FRAME_BASE_CLASS", "CMDIChildWndEx");
+			window.external.AddSymbol("APP_BASE_CLASS", "CWinAppEx");
+
+			if (PROJECT_STYLE_OFFICE.checked) {
+				if (window.external.FindSymbol("MENUBAR_TOOLBAR") == false) {
+					window.external.AddSymbol("USE_STANDARD_MENU_TOOLBAR", false);
+					window.external.AddSymbol("TOOLBAR_NONE", false);
+					window.external.AddSymbol("DOCKING_TOOLBAR", false);
+					window.external.AddSymbol("TOOLBAR_STYLE_REBAR", false);
+					window.external.AddSymbol("MENUBAR_TOOLBAR", false);
+					window.external.AddSymbol("RIBBON_TOOLBAR", true);
+				}
+			}
+			else {
+				if (window.external.FindSymbol("RIBBON_TOOLBAR") == false) {
+					window.external.AddSymbol("USE_STANDARD_MENU_TOOLBAR", false);
+					window.external.AddSymbol("TOOLBAR_NONE", false);
+					window.external.AddSymbol("DOCKING_TOOLBAR", false);
+					window.external.AddSymbol("TOOLBAR_STYLE_REBAR", false);
+					window.external.AddSymbol("MENUBAR_TOOLBAR", true);
+					window.external.AddSymbol("RIBBON_TOOLBAR", false);
+				}
+			}
+		}
+		else if (APP_TYPE_MDI.checked && (window.external.FindSymbol("RIBBON_TOOLBAR") || window.external.FindSymbol("MENUBAR_TOOLBAR"))) {
+			window.external.AddSymbol("MAIN_FRAME_BASE_CLASS", "CMDIFrameWndEx");
+			window.external.AddSymbol("CHILD_FRAME_BASE_CLASS", "CMDIChildWndEx");
+			window.external.AddSymbol("APP_BASE_CLASS", "CWinAppEx");
+		}
+		else if (APP_TYPE_MDI.checked) {
+			window.external.AddSymbol("MAIN_FRAME_BASE_CLASS", "CMDIFrameWnd");
+			window.external.AddSymbol("CHILD_FRAME_BASE_CLASS", "CMDIChildWnd");
+			window.external.AddSymbol("APP_BASE_CLASS", "CWinApp");
+		}
+		else if (APP_TYPE_DLG.checked) {
+			window.external.AddSymbol("APP_BASE_CLASS", "CWinApp");
+		}
+
+		if (!DOCVIEW.checked || DOCVIEW.disabled) {
+			PROJECT_STYLE_EXPLORER.disabled = true;
+			explorer_title.disabled = true;
+			PROJECT_STYLE_EXPLORER.checked = false;
+			PROJECT_STYLE_VISUALSTUDIO.disabled = true;
+			visualstudio_title.disabled = true;
+			PROJECT_STYLE_VISUALSTUDIO.checked = false;
+			PROJECT_STYLE_OFFICE.disabled = true;
+			office_title.disabled = true;
+			PROJECT_STYLE_OFFICE.checked = false;
+
+			window.external.AddSymbol("LIST_VIEW", false);
+			if (window.external.FindSymbol("VIEW_BASE_CLASS") != "CView")
+				window.external.AddSymbol("VIEW_BASE_CLASS", "CView");
+		}
+
+		ToggleImage();
+	}
+
+	function OnDocView() {
+		if (!DOCVIEW.checked && !DOCVIEW.disabled &&
+	 (window.external.FindSymbol("DB_VIEW_NO_FILE") ||
+	  window.external.FindSymbol("DB_VIEW_WITH_FILE") ||
+	 (window.external.FindSymbol("COMPOUND_DOC_NONE") == false) ||
+	 (window.external.FindSymbol("AUTOMATION") == true) ||
+	 (window.external.FindSymbol("SPLITTER") == true) ||
+	 (window.external.FindSymbol("MAPI") == true)
+	 )) {
+			var L_Prompt2_Text = "Удаление поддержки архитектуры Document/View сделает невозможным использование следующих элементов:\n";
+			var L_Prompt21_Text = "\n\t- Представление базы данных";
+			var L_Prompt22_Text = "\n\t- Составной документ";
+			var L_Prompt23_Text = "\n\t- Автоматизация";
+			var L_Prompt24_Text = "\n\t- Разделенное окно";
+			var L_Prompt25_Text = "\n\t- интерфейс MAPI (Messaging API)";
+			var L_Prompt26_Text = "\n\nПродолжить?";
+			var General_Prompt = L_Prompt2_Text;
+			if (window.external.FindSymbol("DB_VIEW_NO_FILE") || window.external.FindSymbol("DB_VIEW_WITH_FILE")) {
+				General_Prompt = General_Prompt + L_Prompt21_Text;
+			}
+			if (window.external.FindSymbol("COMPOUND_DOC_NONE") == false) {
+				General_Prompt = General_Prompt + L_Prompt22_Text;
+			}
+
+			if (window.external.FindSymbol("AUTOMATION") == true) {
+				General_Prompt = General_Prompt + L_Prompt23_Text;
+			}
+
+			if (window.external.FindSymbol("SPLITTER") == true) {
+				General_Prompt = General_Prompt + L_Prompt24_Text;
+			}
+
+			if (window.external.FindSymbol("MAPI") == true) {
+				General_Prompt = General_Prompt + L_Prompt25_Text;
+			}
+
+			if (window.external.YesNoAlert(General_Prompt + L_Prompt26_Text)) {
+				window.external.AddSymbol("DB_SUPPORT_NONE", true);
+				window.external.AddSymbol("DB_SUPPORT_HEADER_ONLY", false);
+				window.external.AddSymbol("DB_VIEW_NO_FILE", false);
+				window.external.AddSymbol("DB_VIEW_WITH_FILE", false);
+				window.external.AddSymbol("OLEDB", false);
+				window.external.AddSymbol("ODBC", false);
+				window.external.AddSymbol("DB_SUPPORT_INFO", "");
+				window.external.AddSymbol("DB_CONNECTION_STRING", "");
+				window.external.AddSymbol("OLEDB_RECORD_VIEW", false);
+				window.external.AddSymbol("ODBC_RECORD_VIEW", false);
+				window.external.AddSymbol("VIEW_BASE_CLASS", "CView");
+				window.external.AddSymbol("CONTAINER_ITEM_BASE_CLASS", false);
+				window.external.AddSymbol("SERVER_ITEM_BASE_CLASS", false);
+				window.external.AddSymbol("COMPOUND_DOC_NONE", true);
+				window.external.AddSymbol("CONTAINER", false);
+				window.external.AddSymbol("MINI_SERVER", false);
+				window.external.AddSymbol("FULL_SERVER", false);
+				window.external.AddSymbol("CONTAINER_SERVER", false);
+				window.external.AddSymbol("ACTIVE_DOC_CONTAINER", false);
+				window.external.AddSymbol("ACTIVE_DOC_SERVER", false);
+				window.external.AddSymbol("AUTOMATION", false);
+				window.external.AddSymbol("MAPI", false);
+				window.external.AddSymbol("SPLITTER", false);
+			}
+			else {
+				DOCVIEW.checked = true;
+			}
+		}
+
+		CompoundDoc.className = "activelink";
+		DocTemp.className = "activelink";
+
+		if (!DOCVIEW.checked || DOCVIEW.disabled) {
+			CompoundDoc.className = "inactivelink";
+
+			DocTemp.className = "inactivelink";
+			PROJECT_STYLE_EXPLORER.disabled = true;
+			explorer_title.disabled = true;
+			PROJECT_STYLE_EXPLORER.checked = false;
+			PROJECT_STYLE_VISUALSTUDIO.disabled = true;
+			visualstudio_title.disabled = true;
+			PROJECT_STYLE_VISUALSTUDIO.checked = false;
+			PROJECT_STYLE_OFFICE.disabled = true;
+			office_title.disabled = true;
+			PROJECT_STYLE_OFFICE.checked = false;
+
+			window.external.AddSymbol("LIST_VIEW", false);
+			if (window.external.FindSymbol("VIEW_BASE_CLASS") != "CView")
+				window.external.AddSymbol("VIEW_BASE_CLASS", "CView");
+
+			PROJECT_STYLE_MFCSTD.checked = true;
+			OnProjectStyle();
+		}
+		else {
+			PROJECT_STYLE_EXPLORER.disabled = false;
+			explorer_title.disabled = false;
+			PROJECT_STYLE_VISUALSTUDIO.disabled = false;
+			visualstudio_title.disabled = false;
+			PROJECT_STYLE_OFFICE.disabled = false;
+			office_title.disabled = false;
+		}
+	}
+
+	function OnProjectStyle() {
+		window.external.AddSymbol("ADV_DOCKING_EXPLORER", false);
+		window.external.AddSymbol("ADV_DOCKING_OUTPUT", false);
+		window.external.AddSymbol("ADV_DOCKING_PROPERTIES", false);
+		window.external.AddSymbol("ADV_DOCKING_NAVIGATION", false);
+		window.external.AddSymbol("ADV_DOCKING_CAPTION", false);
+
+		if (!PROJECT_STYLE_EXPLORER.checked) {
+			window.external.AddSymbol("PRINTING", true);
+			window.external.AddSymbol("LIST_VIEW", false);
+			if (window.external.FindSymbol("VIEW_BASE_CLASS") != "CView")
+				window.external.AddSymbol("VIEW_BASE_CLASS", "CView");
+		}
+
+		if (PROJECT_STYLE_MFCSTD.checked) {
+			window.external.AddSymbol("USE_STANDARD_MENU_TOOLBAR", true);
+			window.external.AddSymbol("TOOLBAR_NONE", true);
+			window.external.AddSymbol("DOCKING_TOOLBAR", true);
+			window.external.AddSymbol("TOOLBAR_STYLE_REBAR", false);
+			window.external.AddSymbol("MENUBAR_TOOLBAR", false);
+			window.external.AddSymbol("RIBBON_TOOLBAR", false);
+
+			if (APP_TYPE_MDI.checked) {
+				APP_TYPE_TABBED_MDI.checked = false;
+				window.external.AddSymbol("MAIN_FRAME_BASE_CLASS", "CMDIFrameWnd");
+			}
+			else {
+				window.external.AddSymbol("MAIN_FRAME_BASE_CLASS", "CFrameWnd");
+			}
+			window.external.AddSymbol("CHILD_FRAME_BASE_CLASS", "CMDIChildWnd");
+
+			VISUAL_STYLE_COMBO.value = "DEFMFC_LOOK";
+			ENABLE_VISUAL_STYLE_SWITCHING.disabled = true;
+			enable_visual_style_switching_label.disabled = true;
+			ENABLE_VISUAL_STYLE_SWITCHING.checked = false;
+		}
+
+		if (PROJECT_STYLE_EXPLORER.checked) {
+			window.external.AddSymbol("PRINTING", false);
+			window.external.AddSymbol("LIST_VIEW", true);
+			window.external.AddSymbol("OLEDB_RECORD_VIEW", false);
+			window.external.AddSymbol("ODBC_RECORD_VIEW", false);
+
+			window.external.AddSymbol("SCROLL_VIEW", false);
+			window.external.AddSymbol("FORM_VIEW", false);
+			window.external.AddSymbol("TREE_VIEW", false);
+			window.external.AddSymbol("RICH_EDIT_VIEW", false);
+			window.external.AddSymbol("EDIT_VIEW", false);
+			window.external.AddSymbol("HTML_VIEW", false);
+			window.external.AddSymbol("HTML_EDITVIEW", false);
+
+			if (window.external.FindSymbol("VIEW_BASE_CLASS") != "CListView") {
+				window.external.AddSymbol("VIEW_BASE_CLASS", "CListView");
+			}
+		}
+
+		if (PROJECT_STYLE_VISUALSTUDIO.checked) {
+			window.external.AddSymbol("ADV_DOCKING_EXPLORER", true);
+			window.external.AddSymbol("ADV_DOCKING_OUTPUT", true);
+			window.external.AddSymbol("ADV_DOCKING_PROPERTIES", true);
+
+			window.external.AddSymbol("USE_STANDARD_MENU_TOOLBAR", false);
+			window.external.AddSymbol("TOOLBAR_NONE", false);
+			window.external.AddSymbol("DOCKING_TOOLBAR", false);
+			window.external.AddSymbol("TOOLBAR_STYLE_REBAR", false);
+			window.external.AddSymbol("MENUBAR_TOOLBAR", true);
+			window.external.AddSymbol("RIBBON_TOOLBAR", false);
+
+			if (APP_TYPE_MDI.checked) {
+				APP_TYPE_TABBED_MDI.checked = true;
+			}
+
+			window.external.AddSymbol("APPLICATION_LOOK_VALUE", "ID_VIEW_APPLOOK_VS_2008");
+			VISUAL_STYLE_COMBO.value = "VS2008_LOOK";
+			ENABLE_VISUAL_STYLE_SWITCHING.disabled = false;
+			enable_visual_style_switching_label.disabled = false;
+			ENABLE_VISUAL_STYLE_SWITCHING.checked = true;
+			window.external.AddSymbol("VISUAL_MANAGER", "CMFCVisualManagerVS2008");
+		}
+
+		if (PROJECT_STYLE_OFFICE.checked) {
+			window.external.AddSymbol("ADV_DOCKING_NAVIGATION", true);
+			window.external.AddSymbol("ADV_DOCKING_CAPTION", true);
+
+			window.external.AddSymbol("USE_STANDARD_MENU_TOOLBAR", false);
+			window.external.AddSymbol("TOOLBAR_NONE", false);
+			window.external.AddSymbol("DOCKING_TOOLBAR", false);
+			window.external.AddSymbol("TOOLBAR_STYLE_REBAR", false);
+			window.external.AddSymbol("MENUBAR_TOOLBAR", false);
+			window.external.AddSymbol("RIBBON_TOOLBAR", true);
+
+			if (APP_TYPE_MDI.checked) {
+				APP_TYPE_TABBED_MDI.checked = true;
+			}
+
+			window.external.AddSymbol("APPLICATION_LOOK_VALUE", "ID_VIEW_APPLOOK_OFF_2007_BLUE");
+			VISUAL_STYLE_COMBO.value = "OFF2007_BLUE";
+			ENABLE_VISUAL_STYLE_SWITCHING.disabled = false;
+			enable_visual_style_switching_label.disabled = false;
+			ENABLE_VISUAL_STYLE_SWITCHING.checked = true;
+			window.external.AddSymbol("VISUAL_MANAGER", "CMFCVisualManagerOffice2007");
+			window.external.AddSymbol("VISUAL_STYLE", "Office2007_LunaBlue");
+		}
+
+		ToggleImage();
+	}
+
+	function OnAppearance(obj) {
+		if (obj.id != "VISUAL_STYLE_COMBO") {
+			return;
+		}
+
+		var oAppearances = document.all.tags("SELECT").item("VISUAL_STYLE_COMBO");
+		if (oAppearances != null) {
+			ENABLE_VISUAL_STYLE_SWITCHING.disabled = false;
+			enable_visual_style_switching_label.disabled = false;
+			ENABLE_VISUAL_STYLE_SWITCHING.checked = true;
+
+			window.external.AddSymbol("VISUAL_MANAGER_WINDOWS_7", false);
+
+			oAppearance = oAppearances.options[oAppearances.selectedIndex];
+			var strAppearance = oAppearance.value;
+			if (strAppearance == "OFF2003_LOOK") {
+				window.external.AddSymbol("USE_VISUAL_MANAGER", true);
+				window.external.AddSymbol("VISUAL_MANAGER", "CMFCVisualManagerOffice2003");
+				window.external.AddSymbol("USE_VISUAL_STYLE", false);
+				window.external.AddSymbol("APPLICATION_LOOK_VALUE", "ID_VIEW_APPLOOK_OFF_2003");
+				if ((window.external.FindSymbol("RIBBON_TOOLBAR") == false) && (window.external.FindSymbol("USE_STANDARD_MENU_TOOLBAR") == false)) {
+					window.external.AddSymbol("USE_STANDARD_MENU_TOOLBAR", false);
+					window.external.AddSymbol("TOOLBAR_NONE", false);
+					window.external.AddSymbol("DOCKING_TOOLBAR", false);
+					window.external.AddSymbol("TOOLBAR_STYLE_REBAR", false);
+					window.external.AddSymbol("MENUBAR_TOOLBAR", true);
+					window.external.AddSymbol("RIBBON_TOOLBAR", false);
+				}
+			}
+			else if (strAppearance == "VS2005_LOOK") {
+				window.external.AddSymbol("USE_VISUAL_MANAGER", true);
+				window.external.AddSymbol("VISUAL_MANAGER", "CMFCVisualManagerVS2005");
+				window.external.AddSymbol("USE_VISUAL_STYLE", false);
+				window.external.AddSymbol("APPLICATION_LOOK_VALUE", "ID_VIEW_APPLOOK_VS_2005");
+				if ((window.external.FindSymbol("RIBBON_TOOLBAR") == false) && (window.external.FindSymbol("USE_STANDARD_MENU_TOOLBAR") == false)) {
+					window.external.AddSymbol("USE_STANDARD_MENU_TOOLBAR", false);
+					window.external.AddSymbol("TOOLBAR_NONE", false);
+					window.external.AddSymbol("DOCKING_TOOLBAR", false);
+					window.external.AddSymbol("TOOLBAR_STYLE_REBAR", false);
+					window.external.AddSymbol("MENUBAR_TOOLBAR", true);
+					window.external.AddSymbol("RIBBON_TOOLBAR", false);
+				}
+			}
+			else if (strAppearance == "VS2008_LOOK") {
+				window.external.AddSymbol("USE_VISUAL_MANAGER", true);
+				window.external.AddSymbol("VISUAL_MANAGER", "CMFCVisualManagerVS2008");
+				window.external.AddSymbol("USE_VISUAL_STYLE", false);
+				window.external.AddSymbol("APPLICATION_LOOK_VALUE", "ID_VIEW_APPLOOK_VS_2008");
+				if ((window.external.FindSymbol("RIBBON_TOOLBAR") == false) && (window.external.FindSymbol("USE_STANDARD_MENU_TOOLBAR") == false)) {
+					window.external.AddSymbol("USE_STANDARD_MENU_TOOLBAR", false);
+					window.external.AddSymbol("TOOLBAR_NONE", false);
+					window.external.AddSymbol("DOCKING_TOOLBAR", false);
+					window.external.AddSymbol("TOOLBAR_STYLE_REBAR", false);
+					window.external.AddSymbol("MENUBAR_TOOLBAR", true);
+					window.external.AddSymbol("RIBBON_TOOLBAR", false);
+				}
+			}
+			else if (strAppearance == "OFF2007_BLUE") {
+				window.external.AddSymbol("USE_VISUAL_MANAGER", true);
+				window.external.AddSymbol("VISUAL_MANAGER", "CMFCVisualManagerOffice2007");
+				window.external.AddSymbol("VISUAL_STYLE", "Office2007_LunaBlue");
+				window.external.AddSymbol("USE_VISUAL_STYLE", true);
+				window.external.AddSymbol("APPLICATION_LOOK_VALUE", "ID_VIEW_APPLOOK_OFF_2007_BLUE");
+				if ((window.external.FindSymbol("MENUBAR_TOOLBAR") == false) && (window.external.FindSymbol("USE_STANDARD_MENU_TOOLBAR") == false)) {
+					window.external.AddSymbol("USE_STANDARD_MENU_TOOLBAR", false);
+					window.external.AddSymbol("TOOLBAR_NONE", false);
+					window.external.AddSymbol("DOCKING_TOOLBAR", false);
+					window.external.AddSymbol("TOOLBAR_STYLE_REBAR", false);
+					window.external.AddSymbol("MENUBAR_TOOLBAR", false);
+					window.external.AddSymbol("RIBBON_TOOLBAR", true);
+				}
+			}
+			else if (strAppearance == "OFF2007_BLACK") {
+				window.external.AddSymbol("USE_VISUAL_MANAGER", true);
+				window.external.AddSymbol("VISUAL_MANAGER", "CMFCVisualManagerOffice2007");
+				window.external.AddSymbol("VISUAL_STYLE", "Office2007_ObsidianBlack");
+				window.external.AddSymbol("USE_VISUAL_STYLE", true);
+				window.external.AddSymbol("APPLICATION_LOOK_VALUE", "ID_VIEW_APPLOOK_OFF_2007_BLACK");
+				if ((window.external.FindSymbol("MENUBAR_TOOLBAR") == false) && (window.external.FindSymbol("USE_STANDARD_MENU_TOOLBAR") == false)) {
+					window.external.AddSymbol("USE_STANDARD_MENU_TOOLBAR", false);
+					window.external.AddSymbol("TOOLBAR_NONE", false);
+					window.external.AddSymbol("DOCKING_TOOLBAR", false);
+					window.external.AddSymbol("TOOLBAR_STYLE_REBAR", false);
+					window.external.AddSymbol("MENUBAR_TOOLBAR", false);
+					window.external.AddSymbol("RIBBON_TOOLBAR", true);
+				}
+			}
+			else if (strAppearance == "OFF2007_SILVER") {
+				window.external.AddSymbol("USE_VISUAL_MANAGER", true);
+				window.external.AddSymbol("VISUAL_MANAGER", "CMFCVisualManagerOffice2007");
+				window.external.AddSymbol("VISUAL_STYLE", "Office2007_Silver");
+				window.external.AddSymbol("USE_VISUAL_STYLE", true);
+				window.external.AddSymbol("APPLICATION_LOOK_VALUE", "ID_VIEW_APPLOOK_OFF_2007_SILVER");
+				if ((window.external.FindSymbol("MENUBAR_TOOLBAR") == false) && (window.external.FindSymbol("USE_STANDARD_MENU_TOOLBAR") == false)) {
+					window.external.AddSymbol("USE_STANDARD_MENU_TOOLBAR", false);
+					window.external.AddSymbol("TOOLBAR_NONE", false);
+					window.external.AddSymbol("DOCKING_TOOLBAR", false);
+					window.external.AddSymbol("TOOLBAR_STYLE_REBAR", false);
+					window.external.AddSymbol("MENUBAR_TOOLBAR", false);
+					window.external.AddSymbol("RIBBON_TOOLBAR", true);
+				}
+			}
+			else if (strAppearance == "OFF2007_AQUA") {
+				window.external.AddSymbol("USE_VISUAL_MANAGER", true);
+				window.external.AddSymbol("VISUAL_MANAGER", "CMFCVisualManagerOffice2007");
+				window.external.AddSymbol("VISUAL_STYLE", "Office2007_Aqua");
+				window.external.AddSymbol("USE_VISUAL_STYLE", true);
+				window.external.AddSymbol("APPLICATION_LOOK_VALUE", "ID_VIEW_APPLOOK_OFF_2007_AQUA");
+				if ((window.external.FindSymbol("MENUBAR_TOOLBAR") == false) && (window.external.FindSymbol("USE_STANDARD_MENU_TOOLBAR") == false)) {
+					window.external.AddSymbol("USE_STANDARD_MENU_TOOLBAR", false);
+					window.external.AddSymbol("TOOLBAR_NONE", false);
+					window.external.AddSymbol("DOCKING_TOOLBAR", false);
+					window.external.AddSymbol("TOOLBAR_STYLE_REBAR", false);
+					window.external.AddSymbol("MENUBAR_TOOLBAR", false);
+					window.external.AddSymbol("RIBBON_TOOLBAR", true);
+				}
+			}
+			else if (strAppearance == "WINDOWS_7") {
+				window.external.AddSymbol("USE_VISUAL_MANAGER", true);
+				window.external.AddSymbol("VISUAL_MANAGER", "CMFCVisualManagerWindows7");
+				window.external.AddSymbol("USE_VISUAL_STYLE", false);
+				window.external.AddSymbol("APPLICATION_LOOK_VALUE", "ID_VIEW_APPLOOK_WINDOWS_7");
+				window.external.AddSymbol("VISUAL_MANAGER_WINDOWS_7", true);
+				if ((window.external.FindSymbol("MENUBAR_TOOLBAR") == false) && (window.external.FindSymbol("USE_STANDARD_MENU_TOOLBAR") == false)) {
+					window.external.AddSymbol("USE_STANDARD_MENU_TOOLBAR", false);
+					window.external.AddSymbol("TOOLBAR_NONE", false);
+					window.external.AddSymbol("DOCKING_TOOLBAR", false);
+					window.external.AddSymbol("TOOLBAR_STYLE_REBAR", false);
+					window.external.AddSymbol("MENUBAR_TOOLBAR", false);
+					window.external.AddSymbol("RIBBON_TOOLBAR", true);
+				}
+			}
+			else {
+				window.external.AddSymbol("USE_VISUAL_STYLE", false);
+				if (PROJECT_STYLE_MFCSTD.checked) {
+					window.external.AddSymbol("USE_VISUAL_MANAGER", false);
+				}
+				else {
+					window.external.AddSymbol("USE_VISUAL_MANAGER", true);
+					window.external.AddSymbol("VISUAL_MANAGER", "CMFCVisualManagerWindows");
+				}
+
+				ENABLE_VISUAL_STYLE_SWITCHING.disabled = true;
+				enable_visual_style_switching_label.disabled = true;
+				ENABLE_VISUAL_STYLE_SWITCHING.checked = false;
+			}
+		}
+	}
+
+	function OnLang() {
+		var oLangs = document.all.tags("SELECT").item("LANGUAGE");
+		if (oLangs != null) {
+			oLang = oLangs.options[oLangs.selectedIndex];
+			var strLCID = oLang.value;
+
+			// fix up the templates path for the locale
+			var strCurrentTemplatesPath = window.external.FindSymbol("TEMPLATES_PATH");
+			var nIndex = strCurrentTemplatesPath.lastIndexOf("\\");
+			var strSubstr = strCurrentTemplatesPath.substr(0, nIndex);
+			var strNewTemplatesPath = strSubstr + "\\" + strLCID;
+			window.external.AddSymbol("TEMPLATES_PATH", strNewTemplatesPath);
+
+			SetLocaleForResources(strLCID);
+
+			// for any LCID where we want to allow extended characters as  toolbar mnemonics, set
+			// the TOOLBAR_EXTCHAR_TRANSLATE symbol to true--currently only Russian LCID applies.
+			if (strLCID == "1049") {
+				window.external.AddSymbol("TOOLBAR_EXTCHAR_TRANSLATE", true);
+			}
+			else {
+				window.external.AddSymbol("TOOLBAR_EXTCHAR_TRANSLATE", false);
+			}
+		}
+	}
+
+	function ToggleImage() {
+		SINGLE_DOC_IMAGE.style.display = "none";
+		MULTI_DOC_IMAGE.style.display = "none";
+		MULTI_DOC_TABBED_IMAGE.style.display = "none";
+		DIALOG_IMAGE.style.display = "none";
+		MULTI_TOP_DOC_IMAGE.style.display = "none";
+		VISUAL_STUDIO_STYLE.style.display = "none";
+		OFFICE_STYLE.style.display = "none";
+
+		if (PROJECT_STYLE_VISUALSTUDIO.checked) {
+			VISUAL_STUDIO_STYLE.style.display = "block";
+			return;
+		}
+		if (PROJECT_STYLE_OFFICE.checked) {
+			OFFICE_STYLE.style.display = "block";
+			return;
+		}
+		if (APP_TYPE_SDI.checked) {
+			SINGLE_DOC_IMAGE.style.display = "block";
+			return;
+		}
+		if (APP_TYPE_MDI.checked) {
+			if (APP_TYPE_TABBED_MDI.checked) {
+				MULTI_DOC_TABBED_IMAGE.style.display = "block";
+				return;
+			}
+			MULTI_DOC_IMAGE.style.display = "block";
+			return;
+		}
+		if (APP_TYPE_DLG.checked) {
+			DIALOG_IMAGE.style.display = "block";
+			return;
+		}
+		if (APP_TYPE_MTLD.checked) {
+			MULTI_TOP_DOC_IMAGE.style.display = "block";
+		}
+	}
+
+	function SetFocus() {
+		if (APP_TYPE_SDI.checked) {
+			APP_TYPE_SDI.focus();
+			return;
+		}
+		if (APP_TYPE_MDI.checked) {
+			APP_TYPE_MDI.focus();
+			return;
+		}
+		if (APP_TYPE_DLG.checked) {
+			APP_TYPE_DLG.focus();
+			return;
+		}
+		if (APP_TYPE_MTLD.checked) {
+			APP_TYPE_MTLD.focus();
+		}
+	}
+
+	function OnDHTMLDialogSupport() {
+		if (HTML_DIALOG.checked) {
+			NO_MFC_CONTROLS.checked = false;
+			window.external.AddSymbol("DIALOG_BASE_CLASS", "CDHtmlDialog");
+		}
+		else {
+			window.external.AddSymbol("DIALOG_BASE_CLASS", "CDialogEx");
+		}
+	}
+
+	function OnMFCControls() {
+		if (NO_MFC_CONTROLS.checked)
+		{
+			HTML_DIALOG.checked = false;
+			window.external.AddSymbol("DIALOG_BASE_CLASS", "CDialog");
+		}
+		else
+		{
+			window.external.AddSymbol("DIALOG_BASE_CLASS", "CDialogEx");
+		}
+	}
+
+</script>
+
+<script id="INCLUDE_SCRIPT" language="JSCRIPT"></script>
+
+<script id="INCLUDE_COMMON" language="JSCRIPT"></script>
+
+<script>
+	document.scripts("INCLUDE_SCRIPT").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Script.js";
+	document.scripts("INCLUDE_COMMON").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Common.js";
+</script>
+

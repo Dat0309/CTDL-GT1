@@ -1,0 +1,42 @@
+﻿<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name Package="{7D4626A3-18C3-43A4-A66C-169D1D609803}" ID="1140" />
+    <Description Package="{7D4626A3-18C3-43A4-A66C-169D1D609803}" ID="1141" />
+    <ProjectType>VC</ProjectType>
+    <TemplateID>Microsoft.WindowsPhone.VC.UnitTest.Project</TemplateID>
+    <TemplateGroupID>Windows Phone</TemplateGroupID>
+    <SortOrder>1112</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>PhoneUnitTestApp</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <TargetPlatformName>Windows Phone</TargetPlatformName>
+    <Icon>__templateIcon.ico</Icon>
+    <PreviewImage>preview.png</PreviewImage>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="UnitTestApplication.vcxproj" ReplaceParameters="true">
+      <Folder Name="Assets" TargetFolderName="Assets">
+        <ProjectItem OpenInEditor="false" ReplaceParameters="false" TargetFileName="ApplicationIcon.png">ApplicationIcon.png</ProjectItem>
+        <ProjectItem OpenInEditor="false" ReplaceParameters="false" TargetFileName="AlignmentGrid.png">AlignmentGrid.png</ProjectItem>
+      </Folder>
+      <Folder Name="Assets\Tiles" TargetFolderName="Assets\Tiles">
+        <ProjectItem ReplaceParameters="false" TargetFileName="FlipCycleTileLarge.png">FlipCycleTileLarge.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="FlipCycleTileMedium.png">FlipCycleTileMedium.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="FlipCycleTileSmall.png">FlipCycleTileSmall.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="IconicTileMediumLarge.png">IconicTileMediumLarge.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="IconicTileSmall.png">IconicTileSmall.png</ProjectItem>
+      </Folder>
+      <ProjectItem OpenInEditor="true" ReplaceParameters="true">unittest1.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$safeprojectname$.vcxproj.filters">UnitTestApplication.vcxproj.filters</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="pch.cpp">pch.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="pch.h">pch.h</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="WMAppManifest.xml">WMAppManifest.xml</ProjectItem>
+      <ProjectItem TargetFileName="AppManifest.xaml">AppManifest.xaml</ProjectItem>
+      <ProjectItem TargetFileName="TestApp.dll">TestApp.dll</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

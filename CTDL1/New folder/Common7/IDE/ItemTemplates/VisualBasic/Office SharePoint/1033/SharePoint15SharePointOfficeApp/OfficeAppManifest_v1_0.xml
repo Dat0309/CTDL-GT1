@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Created:cb85b80c-f585-40ff-8bfc-12ff4d0e34a9-->
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="$OfficeAppType$">
+  <Id>$guid1$</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>$loc_ProviderName$</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="$ProjectItemName$" />
+  <Description DefaultValue="$ProjectItemName$"/>
+  <Capabilities>
+$if$ ("$HostExcel$" == "TRUE")    <Capability Name="Workbook" />
+$endif$$if$ ("$HostPowerPoint$" == "TRUE")    <Capability Name="Presentation" />
+$endif$$if$ ("$HostProject$" == "TRUE")    <Capability Name="Project" />
+$endif$$if$ ("$HostWord$" == "TRUE")    <Capability Name="Document" />
+$endif$  </Capabilities>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="$OfficeAppStartPage$" />
+$if$ ("$OfficeAppType$" == "ContentApp")    <RequestedWidth>400</RequestedWidth>
+    <RequestedHeight>400</RequestedHeight>
+$endif$  </DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+</OfficeApp>

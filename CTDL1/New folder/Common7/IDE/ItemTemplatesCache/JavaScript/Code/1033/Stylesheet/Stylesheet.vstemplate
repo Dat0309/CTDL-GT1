@@ -1,0 +1,16 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name _locID="JSP_Item_CSSName">Style Sheet</Name>
+    <Description _locID="JSP_Item_CSSDesc">A blank CSS document used to define rich HTML styles.</Description>
+    <Icon>Stylesheet.ico</Icon>
+    <TemplateID>Microsoft.JavaScript.StyleSheet</TemplateID>
+    <TemplateGroupID>JavaScript_Neutral_GroupID</TemplateGroupID>
+    <ProjectType>JavaScript</ProjectType>
+    <BlendProjectSubType>WJApplication</BlendProjectSubType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>stylesheet.css</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem OpenInEditor="true" BlendOpenInEditor="false">StyleSheet.css</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

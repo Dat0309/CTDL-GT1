@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Create XHTML by using XML literals</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Creates XHTML by using XML literals.</Description>
+      <Shortcut>xmlHtml</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.XML.Linq.dll</Assembly>          
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Linq</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Xml.Linq</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>AxisProp</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with your XML axis expression.</ToolTip>
+          <Default>inputXML...&lt;Book&gt;</Default>
+        </Literal>
+        <Literal>
+          <ID>Book</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the expression you want to display.</ToolTip>
+          <Default>i.@Name</Default>
+        </Literal>
+        <Literal>
+          <ID>Author</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the expression you want to display.</ToolTip>
+          <Default>i.@Author</Default>
+        </Literal>
+        <Object>
+          <ID>inputXML</ID>
+          <Type>XElement</Type>
+          <ToolTip>Replace with your XML instance.</ToolTip>
+          <Default>&lt;Library&gt; &lt;Book Name="SomeName" Author="SomeAuthor" /&gt;&lt;/library&gt;</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim inputXML = $inputXML$
+Dim xhtml = <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Enter title here</title>
+</head>
+<body>
+<p>Book Collection</p>
+<table border="1">
+    <tr>
+      <th align="left">Book</th>
+      <th align="left">Author</th>
+    </tr>
+    <%= From i in $AxisProp$ _
+        Select _
+        <tr>
+                 <td><%= $Book$ %> </td>
+                 <td><%= $Author$ %> </td>                  
+               </tr> _
+        %>
+    
+</table>
+</body>
+</html>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

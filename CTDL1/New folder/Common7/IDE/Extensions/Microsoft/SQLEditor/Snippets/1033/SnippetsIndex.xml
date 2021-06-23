@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SnippetCollection>
+  <_locDefinition xmlns="urn:locstudio">
+    <_locDefault _loc="locNone" />
+    <_locTag _loc="locData">Locale</_locTag>
+  </_locDefinition>
+  <Language Lang="SQL_SSDT" Guid="{ED1A9C1C-D95C-4DC1-8DB8-E5A28707A864}">
+    <SnippetDir>
+      <OnOff>On</OnOff>
+      <Installed>true</Installed>
+      <Locale>LOCALE_ID</Locale>
+      <DirPath>%InstallRoot%\Common7\IDE\Extensions\Microsoft\SQLEditor\Snippets\%LCID%\Function\</DirPath>
+      <LocalizedName>Function</LocalizedName>
+    </SnippetDir>
+    <SnippetDir>
+      <OnOff>On</OnOff>
+      <Installed>true</Installed>
+      <Locale>LOCALE_ID</Locale>
+      <DirPath>%InstallRoot%\Common7\IDE\Extensions\Microsoft\SQLEditor\Snippets\%LCID%\Table\</DirPath>
+      <LocalizedName>Table</LocalizedName>
+    </SnippetDir>
+    <SnippetDir>
+      <OnOff>On</OnOff>
+      <Installed>true</Installed>
+      <Locale>LOCALE_ID</Locale>
+      <DirPath>%InstallRoot%\Common7\IDE\Extensions\Microsoft\SQLEditor\Snippets\%LCID%\Index\</DirPath>
+      <LocalizedName>Index</LocalizedName>
+    </SnippetDir>
+    <SnippetDir>
+      <OnOff>On</OnOff>
+      <Installed>true</Installed>
+      <Locale>LOCALE_ID</Locale>
+      <DirPath>%InstallRoot%\Common7\IDE\Extensions\Microsoft\SQLEditor\Snippets\%LCID%\Login\</DirPath>
+      <LocalizedName>Login</LocalizedName>
+    </SnippetDir>
+    <SnippetDir>
+      <OnOff>On</OnOff>
+      <Installed>true</Installed>
+      <Locale>LOCALE_ID</Locale>
+      <DirPath>%InstallRoot%\Common7\IDE\Extensions\Microsoft\SQLEditor\Snippets\%LCID%\Role\</DirPath>
+      <LocalizedName>Role</LocalizedName>
+    </SnippetDir>
+    <SnippetDir>
+      <OnOff>On</OnOff>
+      <Installed>true</Installed>
+      <Locale>LOCALE_ID</Locale>
+      <DirPath>%InstallRoot%\Common7\IDE\Extensions\Microsoft\SQLEditor\Snippets\%LCID%\Schema\</DirPath>
+      <LocalizedName>Schema</LocalizedName>
+    </SnippetDir>
+    <SnippetDir>
+      <OnOff>On</OnOff>
+      <Installed>true</Installed>
+      <Locale>LOCALE_ID</Locale>
+      <DirPath>%InstallRoot%\Common7\IDE\Extensions\Microsoft\SQLEditor\Snippets\%LCID%\Stored Procedure\</DirPath>
+      <LocalizedName>Stored Procedure</LocalizedName>
+    </SnippetDir>
+    <SnippetDir>
+      <OnOff>On</OnOff>
+      <Installed>true</Installed>
+      <Locale>LOCALE_ID</Locale>
+      <DirPath>%InstallRoot%\Common7\IDE\Extensions\Microsoft\SQLEditor\Snippets\%LCID%\Synonym\</DirPath>
+      <LocalizedName>Synonym</LocalizedName>
+    </SnippetDir>
+    <SnippetDir>
+      <OnOff>On</OnOff>
+      <Installed>true</Installed>
+      <Locale>LOCALE_ID</Locale>
+      <DirPath>%InstallRoot%\Common7\IDE\Extensions\Microsoft\SQLEditor\Snippets\%LCID%\Trigger\</DirPath>
+      <LocalizedName>Trigger</LocalizedName>
+    </SnippetDir>
+    <SnippetDir>
+      <OnOff>On</OnOff>
+      <Installed>true</Installed>
+      <Locale>LOCALE_ID</Locale>
+      <DirPath>%InstallRoot%\Common7\IDE\Extensions\Microsoft\SQLEditor\Snippets\%LCID%\User\</DirPath>
+      <LocalizedName>User</LocalizedName>
+    </SnippetDir>
+    <SnippetDir>
+      <OnOff>On</OnOff>
+      <Installed>true</Installed>
+      <Locale>LOCALE_ID</Locale>
+      <DirPath>%InstallRoot%\Common7\IDE\Extensions\Microsoft\SQLEditor\Snippets\%LCID%\User Defined Data Type\</DirPath>
+      <LocalizedName>User Defined Data Type</LocalizedName>
+    </SnippetDir>
+    <SnippetDir>
+      <OnOff>On</OnOff>
+      <Installed>true</Installed>
+      <Locale>LOCALE_ID</Locale>
+      <DirPath>%InstallRoot%\Common7\IDE\Extensions\Microsoft\SQLEditor\Snippets\%LCID%\User Defined Table Type\</DirPath>
+      <LocalizedName>User Defined Table Type</LocalizedName>
+    </SnippetDir>
+    <SnippetDir>
+      <OnOff>On</OnOff>
+      <Installed>true</Installed>
+      <Locale>LOCALE_ID</Locale>
+      <DirPath>%InstallRoot%\Common7\IDE\Extensions\Microsoft\SQLEditor\Snippets\%LCID%\User Defined Type\</DirPath>
+      <LocalizedName>User Defined Type</LocalizedName>
+    </SnippetDir>
+    <SnippetDir>
+      <OnOff>On</OnOff>
+      <Installed>true</Installed>
+      <Locale>LOCALE_ID</Locale>
+      <DirPath>%InstallRoot%\Common7\IDE\Extensions\Microsoft\SQLEditor\Snippets\%LCID%\View\</DirPath>
+      <LocalizedName>View</LocalizedName>
+    </SnippetDir>
+  </Language>
+</SnippetCollection>

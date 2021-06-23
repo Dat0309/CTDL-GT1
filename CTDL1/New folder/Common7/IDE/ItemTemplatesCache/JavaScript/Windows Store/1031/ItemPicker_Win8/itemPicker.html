@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="ms-design-extensionType" content="FileOpenPicker" />
+    <title>Elementauswahlvertrag</title>
+
+    <!-- WinJS-Verweise -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="$fileinputname$.css" rel="stylesheet" />
+    <script src="/js/data.js"></script>
+    <script src="$fileinputname$.js"></script>
+</head>
+<body>
+    <!-- Diese Vorlage wird verwendet, um jedes Element in der nachfolgend
+         deklarierten ListView anzuzeigen. -->
+    <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
+        <div class="item">
+            <img class="item-image" src="#" data-win-bind="src: backgroundImage; alt: title" />
+        </div>
+    </div>
+
+    <!-- Der Inhalt, der geladen und angezeigt wird. -->
+    <section role="main" class="$safeitemname$">
+        <ul class="commandbar">
+            <li class="win-type-x-large win-type-interactive">Nach oben</li>
+        </ul>
+        <div class="pickerlist" aria-label="Items" data-win-control="WinJS.UI.ListView" data-win-options="{layout: {type: WinJS.UI.GridLayout}, selectionMode: 'multi', tapBehavior: 'toggleSelect', swipeBehavior: 'select'}"></div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Generate Property - Property And Backing Field</Title>
+            <Description>Snippet for the property created by the 'Generate Property' refactoring</Description>
+            <Author>Microsoft Corporation</Author>
+            <SnippetTypes>
+                <SnippetType>Refactoring</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal Editable="true">
+                    <ID>accessibility</ID>
+                    <Default>public</Default>
+                </Literal>
+                <Literal Editable="true">
+                    <ID>modifiers</ID>
+                    <Default></Default>
+                </Literal>
+                <Literal Editable="true">
+                    <ID>type</ID>
+                    <Default>type</Default>
+                </Literal>
+                <Literal Editable="true">
+                    <ID>field</ID>
+                    <Default>field</Default>
+                </Literal>
+                <Literal Editable="true">
+                    <ID>signature</ID>
+                    <Default>signature</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp">
+                <![CDATA[private $modifiers$ $type$ $field$;
+
+$accessibility$ $modifiers$ $type$ $signature$
+{
+    get { return $field$;}
+    set { $field$ = value;}
+}]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

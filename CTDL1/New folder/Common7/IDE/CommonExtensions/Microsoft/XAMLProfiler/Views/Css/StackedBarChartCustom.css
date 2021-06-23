@@ -1,0 +1,15 @@
+﻿.stackedBarChart {
+    -ms-grid-columns: auto auto auto;
+    display: -ms-grid;
+}
+
+    .stackedBarChart .barGraph {
+        -ms-grid-column: 2;
+        display: inline-block;
+        position: relative;
+    }
+
+    .stackedBarChart .bar {
+        position: absolute;
+        z-index: 5;
+    }

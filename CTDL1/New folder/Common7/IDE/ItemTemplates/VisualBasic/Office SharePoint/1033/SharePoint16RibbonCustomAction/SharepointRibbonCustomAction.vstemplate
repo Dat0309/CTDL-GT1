@@ -1,0 +1,35 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="404" />
+    <Description Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="405" />
+    <Icon Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="207" />
+    <TemplateID>SharePoint16RibbonCustomAction_VB_ITEM</TemplateID>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+    <ProjectType>VisualBasic</ProjectType>
+    <SortOrder>215</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>RibbonCustomAction</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <CreateInPlace>true</CreateInPlace>
+    <TemplateGroupID>SharePointItemTemplateGroupID</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\SharePointProjectItem.spdata" OpenInEditor="false" >SharePointRibbonCustomAction.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Elements.xml" OpenInEditor="true">Elements.xml</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="SharePointProjectTemplateAttributes" Value="ProjectItem"/>
+      <CustomParameter Name="SharePointProjectParentFilter" Value="General;ProjectItem"/>
+      <CustomParameter Name="SharePointProjectProjectModeFilter" Value="SharePointApp"/>
+      <CustomParameter Name="$ProjectItemName$" Value="$fileinputname$"/>
+      <CustomParameter Name="$loc_custom_action_ui_definition_comment1$" _locID="$loc_custom_action_ui_definition_comment1$" _locAttrData="Value" Value="Update the UI definitions below with the controls and the command actions" />
+      <CustomParameter Name="$loc_custom_action_ui_definition_comment2$" _locID="$loc_custom_action_ui_definition_comment2$" _locAttrData="Value" Value="that you want to enable for the custom action." />
+      <CustomParameter Name="$UICustomAction_RibbonLabelText$" _locID="$UICustomAction_RibbonLabelText$" _locAttrData="Value" Value="Request $safeitemname$" />
+      <CustomParameter Name="$UICustomAction_Title$" _locID="$UICustomAction_Title$" _locAttrData="Value" Value="Invoke '$safeitemname$' action" />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.RibbonCustomActionWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

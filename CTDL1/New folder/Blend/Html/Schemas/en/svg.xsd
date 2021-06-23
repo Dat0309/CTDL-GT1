@@ -1,0 +1,2785 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:vs="http://schemas.microsoft.com/Visual-Studio-Intellisense">
+	<!--
+	<xsd:attributeGroup name="SVG.xmlns.attrib">
+		<xsd:attribute name="xmlns" fixed="http://www.w3.org/2000/svg" />
+		<xsd:attributeGroup ref="XLINK.xmlns.attrib" />
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="XLINK.xmlns.attrib">
+		<xsd:attribute name="xmlns:xlink" fixed="http://www.w3.org/1999/xlink" />
+	</xsd:attributeGroup>
+-->
+	<xsd:attributeGroup name="SVG.Core.attrib">
+		<xsd:attribute name="id" />
+		<!--
+		<xsd:attribute name="xml:base" />
+		<xsd:attribute name="xml:lang" />
+		<xsd:attribute name="xml:space">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="default" />
+					<xsd:enumeration value="preserve" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		-->
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.Conditional.attrib">
+		<xsd:attribute name="requiredFeatures" />
+		<xsd:attribute name="requiredExtensions" />
+		<xsd:attribute name="systemLanguage" />
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.Style.attrib">
+		<xsd:attribute name="style" />
+		<xsd:attribute name="class" />
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.Presentation.attrib">
+		<xsd:attributeGroup ref="SVG.Container.attrib" />
+		<xsd:attributeGroup ref="SVG.Viewport.attrib" />
+		<xsd:attributeGroup ref="SVG.Text.attrib" />
+		<xsd:attributeGroup ref="SVG.TextContent.attrib" />
+		<xsd:attributeGroup ref="SVG.Font.attrib" />
+		<xsd:attributeGroup ref="SVG.Paint.attrib" />
+		<xsd:attributeGroup ref="SVG.Color.attrib" />
+		<xsd:attributeGroup ref="SVG.Opacity.attrib" />
+		<xsd:attributeGroup ref="SVG.Graphics.attrib" />
+		<xsd:attributeGroup ref="SVG.Marker.attrib" />
+		<xsd:attributeGroup ref="SVG.ColorProfile.attrib" />
+		<xsd:attributeGroup ref="SVG.Gradient.attrib" />
+		<xsd:attributeGroup ref="SVG.Clip.attrib" />
+		<xsd:attributeGroup ref="SVG.Mask.attrib" />
+		<xsd:attributeGroup ref="SVG.Filter.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterColor.attrib" />
+		<xsd:attributeGroup ref="SVG.Cursor.attrib" />
+		<xsd:attribute name="flood-color" />
+		<xsd:attribute name="flood-opacity" />
+		<xsd:attribute name="lighting-color" />
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.Container.attrib">
+		<xsd:attribute name="enable-background" />
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.Viewport.attrib">
+		<xsd:attributeGroup ref="SVG.clip.attrib" />
+		<xsd:attribute name="overflow">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="visible" />
+					<xsd:enumeration value="hidden" />
+					<xsd:enumeration value="scroll" />
+					<xsd:enumeration value="auto" />
+					<xsd:enumeration value="inherit" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.clip.attrib">
+		<xsd:attribute name="clip" />
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.Text.attrib">
+		<xsd:attribute name="writing-mode">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="lr-tb" />
+					<xsd:enumeration value="rl-tb" />
+					<xsd:enumeration value="tb-rl" />
+					<xsd:enumeration value="lr" />
+					<xsd:enumeration value="rl" />
+					<xsd:enumeration value="tb" />
+					<xsd:enumeration value="inherit" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.TextContent.attrib">
+		<xsd:attribute name="alignment-baseline">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="auto" />
+					<xsd:enumeration value="baseline" />
+					<xsd:enumeration value="before-edge" />
+					<xsd:enumeration value="text-before-edge" />
+					<xsd:enumeration value="middle" />
+					<xsd:enumeration value="central" />
+					<xsd:enumeration value="after-edge" />
+					<xsd:enumeration value="text-after-edge" />
+					<xsd:enumeration value="ideographic" />
+					<xsd:enumeration value="alphabetic" />
+					<xsd:enumeration value="hanging" />
+					<xsd:enumeration value="mathematical" />
+					<xsd:enumeration value="inherit" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="baseline-shift" />
+		<xsd:attribute name="direction">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="ltr" />
+					<xsd:enumeration value="rtl" />
+					<xsd:enumeration value="inherit" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="dominant-baseline">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="auto" />
+					<xsd:enumeration value="use-script" />
+					<xsd:enumeration value="no-change" />
+					<xsd:enumeration value="reset-size" />
+					<xsd:enumeration value="ideographic" />
+					<xsd:enumeration value="alphabetic" />
+					<xsd:enumeration value="hanging" />
+					<xsd:enumeration value="mathematical" />
+					<xsd:enumeration value="central" />
+					<xsd:enumeration value="middle" />
+					<xsd:enumeration value="text-after-edge" />
+					<xsd:enumeration value="text-before-edge" />
+					<xsd:enumeration value="inherit" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="glyph-orientation-horizontal" />
+		<xsd:attribute name="glyph-orientation-vertical" />
+		<xsd:attribute name="kerning" />
+		<xsd:attribute name="letter-spacing" />
+		<xsd:attribute name="text-anchor">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="start" />
+					<xsd:enumeration value="middle" />
+					<xsd:enumeration value="end" />
+					<xsd:enumeration value="inherit" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="text-decoration" />
+		<xsd:attribute name="unicode-bidi">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="normal" />
+					<xsd:enumeration value="embed" />
+					<xsd:enumeration value="bidi-override" />
+					<xsd:enumeration value="inherit" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="word-spacing" />
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.Font.attrib">
+		<xsd:attribute name="font-family" />
+		<xsd:attribute name="font-size" />
+		<xsd:attribute name="font-size-adjust" />
+		<xsd:attribute name="font-stretch">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="normal" />
+					<xsd:enumeration value="wider" />
+					<xsd:enumeration value="narrower" />
+					<xsd:enumeration value="ultra-condensed" />
+					<xsd:enumeration value="extra-condensed" />
+					<xsd:enumeration value="condensed" />
+					<xsd:enumeration value="semi-condensed" />
+					<xsd:enumeration value="semi-expanded" />
+					<xsd:enumeration value="expanded" />
+					<xsd:enumeration value="extra-expanded" />
+					<xsd:enumeration value="ultra-expanded" />
+					<xsd:enumeration value="inherit" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="font-style">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="normal" />
+					<xsd:enumeration value="italic" />
+					<xsd:enumeration value="oblique" />
+					<xsd:enumeration value="inherit" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="font-variant">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="normal" />
+					<xsd:enumeration value="small-caps" />
+					<xsd:enumeration value="inherit" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="font-weight">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="normal" />
+					<xsd:enumeration value="bold" />
+					<xsd:enumeration value="bolder" />
+					<xsd:enumeration value="lighter" />
+					<xsd:enumeration value="100" />
+					<xsd:enumeration value="200" />
+					<xsd:enumeration value="300" />
+					<xsd:enumeration value="400" />
+					<xsd:enumeration value="500" />
+					<xsd:enumeration value="600" />
+					<xsd:enumeration value="700" />
+					<xsd:enumeration value="800" />
+					<xsd:enumeration value="900" />
+					<xsd:enumeration value="inherit" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.Paint.attrib">
+		<xsd:attribute name="fill" />
+		<xsd:attribute name="fill-rule">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="nonzero" />
+					<xsd:enumeration value="evenodd" />
+					<xsd:enumeration value="inherit" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="stroke" />
+		<xsd:attribute name="stroke-dasharray" />
+		<xsd:attribute name="stroke-dashoffset" />
+		<xsd:attribute name="stroke-linecap">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="butt" />
+					<xsd:enumeration value="round" />
+					<xsd:enumeration value="square" />
+					<xsd:enumeration value="inherit" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="stroke-linejoin">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="miter" />
+					<xsd:enumeration value="round" />
+					<xsd:enumeration value="bevel" />
+					<xsd:enumeration value="inherit" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="stroke-miterlimit" />
+		<xsd:attribute name="stroke-width" />
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.Color.attrib">
+		<xsd:attribute name="color" />
+		<xsd:attribute name="color-interpolation">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="auto" />
+					<xsd:enumeration value="sRGB" />
+					<xsd:enumeration value="linearRGB" />
+					<xsd:enumeration value="inherit" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="color-rendering">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="auto" />
+					<xsd:enumeration value="optimizeSpeed" />
+					<xsd:enumeration value="optimizeQuality" />
+					<xsd:enumeration value="inherit" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.Opacity.attrib">
+		<xsd:attribute name="opacity" />
+		<xsd:attribute name="fill-opacity" />
+		<xsd:attribute name="stroke-opacity" />
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.Graphics.attrib">
+		<xsd:attribute name="display">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="inline" />
+					<xsd:enumeration value="block" />
+					<xsd:enumeration value="list-item" />
+					<xsd:enumeration value="run-in" />
+					<xsd:enumeration value="compact" />
+					<xsd:enumeration value="marker" />
+					<xsd:enumeration value="table" />
+					<xsd:enumeration value="inline-table" />
+					<xsd:enumeration value="table-row-group" />
+					<xsd:enumeration value="table-header-group" />
+					<xsd:enumeration value="table-footer-group" />
+					<xsd:enumeration value="table-row" />
+					<xsd:enumeration value="table-column-group" />
+					<xsd:enumeration value="table-column" />
+					<xsd:enumeration value="table-cell" />
+					<xsd:enumeration value="table-caption" />
+					<xsd:enumeration value="none" />
+					<xsd:enumeration value="inherit" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="image-rendering">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="auto" />
+					<xsd:enumeration value="optimizeSpeed" />
+					<xsd:enumeration value="optimizeQuality" />
+					<xsd:enumeration value="inherit" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="pointer-events">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="visiblePainted" />
+					<xsd:enumeration value="visibleFill" />
+					<xsd:enumeration value="visibleStroke" />
+					<xsd:enumeration value="visible" />
+					<xsd:enumeration value="painted" />
+					<xsd:enumeration value="fill" />
+					<xsd:enumeration value="stroke" />
+					<xsd:enumeration value="all" />
+					<xsd:enumeration value="none" />
+					<xsd:enumeration value="inherit" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="shape-rendering">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="auto" />
+					<xsd:enumeration value="optimizeSpeed" />
+					<xsd:enumeration value="crispEdges" />
+					<xsd:enumeration value="geometricPrecision" />
+					<xsd:enumeration value="inherit" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="text-rendering">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="auto" />
+					<xsd:enumeration value="optimizeSpeed" />
+					<xsd:enumeration value="optimizeLegibility" />
+					<xsd:enumeration value="geometricPrecision" />
+					<xsd:enumeration value="inherit" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="visibility">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="visible" />
+					<xsd:enumeration value="hidden" />
+					<xsd:enumeration value="inherit" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.Marker.attrib">
+		<xsd:attribute name="marker-start" />
+		<xsd:attribute name="marker-mid" />
+		<xsd:attribute name="marker-end" />
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.ColorProfile.attrib">
+		<xsd:attribute name="color-profile" />
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.Gradient.attrib">
+		<xsd:attribute name="stop-color" />
+		<xsd:attribute name="stop-opacity" />
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.Clip.attrib">
+		<xsd:attribute name="clip-path" />
+		<xsd:attribute name="clip-rule">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="nonzero" />
+					<xsd:enumeration value="evenodd" />
+					<xsd:enumeration value="inherit" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.Mask.attrib">
+		<xsd:attribute name="mask" />
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.Filter.attrib">
+		<xsd:attribute name="filter" />
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.FilterColor.attrib">
+		<xsd:attribute name="color-interpolation-filters">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="auto" />
+					<xsd:enumeration value="sRGB" />
+					<xsd:enumeration value="linearRGB" />
+					<xsd:enumeration value="inherit" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.Cursor.attrib">
+		<xsd:attribute name="cursor" />
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.DocumentEvents.attrib">
+		<xsd:attribute name="onunload" />
+		<xsd:attribute name="onabort" />
+		<xsd:attribute name="onerror" />
+		<xsd:attribute name="onresize" />
+		<xsd:attribute name="onscroll" />
+		<xsd:attribute name="onzoom" />
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.GraphicalEvents.attrib">
+		<xsd:attribute name="onfocusin" />
+		<xsd:attribute name="onfocusout" />
+		<xsd:attribute name="onactivate" />
+		<xsd:attribute name="onclick" />
+		<xsd:attribute name="onmousedown" />
+		<xsd:attribute name="onmouseup" />
+		<xsd:attribute name="onmouseover" />
+		<xsd:attribute name="onmousemove" />
+		<xsd:attribute name="onmouseout" />
+		<xsd:attributeGroup ref="SVG.onload.attrib" />
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.onload.attrib">
+		<xsd:attribute name="onload" />
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.External.attrib">
+		<xsd:attribute name="externalResourcesRequired">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="false" />
+					<xsd:enumeration value="true" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:attributeGroup>
+	<!--
+	<xsd:attributeGroup name="SVG.XLinkEmbed.attrib">
+		<xsd:attributeGroup ref="XLINK.xmlns.attrib" />
+		<xsd:attribute name="xlink:type" fixed="simple" />
+		<xsd:attribute name="xlink:href" />
+		<xsd:attribute name="xlink:role" />
+		<xsd:attribute name="xlink:arcrole" />
+		<xsd:attribute name="xlink:title" />
+		<xsd:attribute name="xlink:show">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="other" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="xlink:actuate" fixed="onLoad" />
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.XLinkRequired.attrib">
+		<xsd:attributeGroup ref="XLINK.xmlns.attrib" />
+		<xsd:attribute name="xlink:type" fixed="simple" />
+		<xsd:attribute name="xlink:href" use="required" />
+		<xsd:attribute name="xlink:role" />
+		<xsd:attribute name="xlink:arcrole" />
+		<xsd:attribute name="xlink:title" />
+		<xsd:attribute name="xlink:show">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="other" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="xlink:actuate" fixed="onLoad" />
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.XLink.attrib">
+	<xsd:attributeGroup ref="XLINK.xmlns.attrib" />
+	<xsd:attribute name="xlink:type" fixed="simple" />
+	<xsd:attribute name="xlink:href" />
+	<xsd:attribute name="xlink:role" />
+	<xsd:attribute name="xlink:arcrole" />
+	<xsd:attribute name="xlink:title" />
+	<xsd:attribute name="xlink:show">
+		<xsd:simpleType>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="other" />
+		</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute name="xlink:actuate" fixed="onLoad" />
+	</xsd:attributeGroup>
+-->
+	<xsd:attributeGroup name="SVG.FilterPrimitiveWithIn.attrib">
+		<xsd:attributeGroup ref="SVG.FilterPrimitive.attrib" />
+		<xsd:attribute name="in" />
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.FilterPrimitive.attrib">
+		<xsd:attribute name="x" />
+		<xsd:attribute name="y" />
+		<xsd:attribute name="width" />
+		<xsd:attribute name="height" />
+		<xsd:attribute name="result" />
+	</xsd:attributeGroup>
+	<!--
+	<xsd:attributeGroup name="SVG.XLinkReplace.attrib">
+	<xsd:attributeGroup ref="XLINK.xmlns.attrib" />
+	<xsd:attributeGroup ref="XLINK.xmlns.attrib" />
+	<xsd:attribute name="xlink:type" fixed="simple" />
+	<xsd:attribute name="xlink:href" use="required" />
+	<xsd:attribute name="xlink:role" />
+	<xsd:attribute name="xlink:arcrole" />
+	<xsd:attribute name="xlink:title" />
+	<xsd:attribute name="xlink:show">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="new" />
+				<xsd:enumeration value="replace" />
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute name="xlink:actuate" fixed="onLoad" />
+	</xsd:attributeGroup>
+-->
+	<xsd:attributeGroup name="SVG.AnimationEvents.attrib">
+		<xsd:attribute name="onbegin" />
+		<xsd:attribute name="onend" />
+		<xsd:attribute name="onrepeat" />
+		<xsd:attributeGroup ref="SVG.onload.attrib" />
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.Animation.attrib">
+		<!--
+	<xsd:attributeGroup ref="SVG.XLink.attrib" />
+-->
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.AnimationAttribute.attrib">
+		<xsd:attribute name="attributeName" use="required" />
+		<xsd:attribute name="attributeType" />
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.AnimationTiming.attrib">
+		<xsd:attribute name="begin" />
+		<xsd:attribute name="dur" />
+		<xsd:attribute name="end" />
+		<xsd:attribute name="min" />
+		<xsd:attribute name="max" />
+		<xsd:attribute name="restart" default="always">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="always" />
+					<xsd:enumeration value="never" />
+					<xsd:enumeration value="whenNotActive" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="repeatCount" />
+		<xsd:attribute name="repeatDur" />
+		<xsd:attribute name="fill" default="remove">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="remove" />
+					<xsd:enumeration value="freeze" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.AnimationValue.attrib">
+		<xsd:attribute name="calcMode" default="linear">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="discrete" />
+					<xsd:enumeration value="linear" />
+					<xsd:enumeration value="paced" />
+					<xsd:enumeration value="spline" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="values" />
+		<xsd:attribute name="keyTimes" />
+		<xsd:attribute name="keySplines" />
+		<xsd:attribute name="from" />
+		<xsd:attribute name="to" />
+		<xsd:attribute name="by" />
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="SVG.AnimationAddtion.attrib">
+		<xsd:attribute name="additive" default="replace">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="replace" />
+					<xsd:enumeration value="sum" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="accumulate" default="none">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="none" />
+					<xsd:enumeration value="sum" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:attributeGroup>
+	<xsd:complexType mixed="true" name="SVG.a">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="desc" type="SVG.desc" />
+			<xsd:element name="title" type="SVG.title" />
+			<xsd:element name="metadata" type="SVG.metadata" />
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+			<xsd:element name="animateMotion" type="SVG.animateMotion" />
+			<xsd:element name="animateColor" type="SVG.animateColor" />
+			<xsd:element name="animateTransform" type="SVG.animateTransform" />
+			<xsd:element name="svg" type="SVG.svg" />
+			<xsd:element name="g" type="SVG.g" />
+			<xsd:element name="defs" type="SVG.defs" />
+			<xsd:element name="symbol" type="SVG.symbol" />
+			<xsd:element name="use" type="SVG.use" />
+			<xsd:element name="switch" type="SVG.switch" />
+			<xsd:element name="image" type="SVG.image" />
+			<xsd:element name="style" type="SVG.style" />
+			<xsd:element name="path" type="SVG.path" />
+			<xsd:element name="rect" type="SVG.rect" />
+			<xsd:element name="circle" type="SVG.circle" />
+			<xsd:element name="line" type="SVG.line" />
+			<xsd:element name="ellipse" type="SVG.ellipse" />
+			<xsd:element name="polyline" type="SVG.polyline" />
+			<xsd:element name="polygon" type="SVG.polygon" />
+			<xsd:element name="text" type="SVG.text" />
+			<xsd:element name="altGlyphDef" type="SVG.altGlyphDef" />
+			<xsd:element name="marker" type="SVG.marker" />
+			<xsd:element name="color-profile" type="SVG.color-profile" />
+			<xsd:element name="linearGradient" type="SVG.linearGradient" />
+			<xsd:element name="radialGradient" type="SVG.radialGradient" />
+			<xsd:element name="pattern" type="SVG.pattern" />
+			<xsd:element name="clipPath" type="SVG.clipPath" />
+			<xsd:element name="mask" type="SVG.mask" />
+			<xsd:element name="filter" type="SVG.filter" />
+			<xsd:element name="cursor" type="SVG.cursor" />
+			<xsd:element name="a" type="SVG.a" />
+			<xsd:element name="view" type="SVG.view" />
+			<xsd:element name="script" type="SVG.script" />
+			<xsd:element name="font" type="SVG.font" />
+			<xsd:element name="font-face" type="SVG.font-face" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Presentation.attrib" />
+		<xsd:attributeGroup ref="SVG.GraphicalEvents.attrib" />
+		<!--
+	<xsd:attributeGroup ref="SVG.XLinkReplace.attrib" />
+-->
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="transform" />
+		<xsd:attribute name="target" type="xsd:NMTOKEN" />
+	</xsd:complexType>
+	<xsd:complexType mixed="true" name="SVG.altGlyph">
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.TextContent.attrib" />
+		<xsd:attributeGroup ref="SVG.Font.attrib" />
+		<xsd:attributeGroup ref="SVG.Paint.attrib" />
+		<xsd:attributeGroup ref="SVG.Color.attrib" />
+		<xsd:attributeGroup ref="SVG.Opacity.attrib" />
+		<xsd:attributeGroup ref="SVG.Graphics.attrib" />
+		<xsd:attributeGroup ref="SVG.Clip.attrib" />
+		<xsd:attributeGroup ref="SVG.Mask.attrib" />
+		<xsd:attributeGroup ref="SVG.Filter.attrib" />
+		<xsd:attributeGroup ref="SVG.GraphicalEvents.attrib" />
+		<xsd:attributeGroup ref="SVG.Cursor.attrib" />
+		<!--
+	<xsd:attributeGroup ref="SVG.XLink.attrib" />
+-->
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="x" />
+		<xsd:attribute name="y" />
+		<xsd:attribute name="dx" />
+		<xsd:attribute name="dy" />
+		<xsd:attribute name="glyphRef" />
+		<xsd:attribute name="format" />
+		<xsd:attribute name="rotate" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.altGlyphDef">
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element maxOccurs="unbounded" name="glyphRef" type="SVG.glyphRef" />
+				<xsd:element maxOccurs="unbounded" name="altGlyphItem" type="SVG.altGlyphItem" />
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.altGlyphItem">
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" name="glyphRef" type="SVG.glyphRef" />
+		</xsd:sequence>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.animate">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="desc" type="SVG.desc" />
+			<xsd:element name="title" type="SVG.title" />
+			<xsd:element name="metadata" type="SVG.metadata" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.AnimationEvents.attrib" />
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attributeGroup ref="SVG.Animation.attrib" />
+		<xsd:attributeGroup ref="SVG.AnimationAttribute.attrib" />
+		<xsd:attributeGroup ref="SVG.AnimationTiming.attrib" />
+		<xsd:attributeGroup ref="SVG.AnimationValue.attrib" />
+		<xsd:attributeGroup ref="SVG.AnimationAddtion.attrib" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.animateColor">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="desc" type="SVG.desc" />
+			<xsd:element name="title" type="SVG.title" />
+			<xsd:element name="metadata" type="SVG.metadata" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.AnimationEvents.attrib" />
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attributeGroup ref="SVG.Animation.attrib" />
+		<xsd:attributeGroup ref="SVG.AnimationAttribute.attrib" />
+		<xsd:attributeGroup ref="SVG.AnimationTiming.attrib" />
+		<xsd:attributeGroup ref="SVG.AnimationValue.attrib" />
+		<xsd:attributeGroup ref="SVG.AnimationAddtion.attrib" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.animateMotion">
+		<xsd:sequence>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="desc" type="SVG.desc" />
+				<xsd:element name="title" type="SVG.title" />
+				<xsd:element name="metadata" type="SVG.metadata" />
+			</xsd:choice>
+			<xsd:element minOccurs="0" name="mpath" type="SVG.mpath" />
+		</xsd:sequence>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.AnimationEvents.attrib" />
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attributeGroup ref="SVG.Animation.attrib" />
+		<xsd:attributeGroup ref="SVG.AnimationTiming.attrib" />
+		<xsd:attributeGroup ref="SVG.AnimationAddtion.attrib" />
+		<xsd:attribute name="calcMode" default="paced">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="discrete" />
+					<xsd:enumeration value="linear" />
+					<xsd:enumeration value="paced" />
+					<xsd:enumeration value="spline" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="values" />
+		<xsd:attribute name="keyTimes" />
+		<xsd:attribute name="keySplines" />
+		<xsd:attribute name="from" />
+		<xsd:attribute name="to" />
+		<xsd:attribute name="by" />
+		<xsd:attribute name="path" />
+		<xsd:attribute name="keyPoints" />
+		<xsd:attribute name="rotate" />
+		<xsd:attribute name="origin" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.animateTransform">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="desc" type="SVG.desc" />
+			<xsd:element name="title" type="SVG.title" />
+			<xsd:element name="metadata" type="SVG.metadata" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.AnimationEvents.attrib" />
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attributeGroup ref="SVG.Animation.attrib" />
+		<xsd:attributeGroup ref="SVG.AnimationAttribute.attrib" />
+		<xsd:attributeGroup ref="SVG.AnimationTiming.attrib" />
+		<xsd:attributeGroup ref="SVG.AnimationValue.attrib" />
+		<xsd:attributeGroup ref="SVG.AnimationAddtion.attrib" />
+		<xsd:attribute name="type" default="translate">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="translate" />
+					<xsd:enumeration value="scale" />
+					<xsd:enumeration value="rotate" />
+					<xsd:enumeration value="skewX" />
+					<xsd:enumeration value="skewY" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="SVG.circle">
+		<xsd:sequence>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="desc" type="SVG.desc" />
+				<xsd:element name="title" type="SVG.title" />
+				<xsd:element name="metadata" type="SVG.metadata" />
+			</xsd:choice>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="animate" type="SVG.animate" />
+				<xsd:element name="set" type="SVG.set" />
+				<xsd:element name="animateMotion" type="SVG.animateMotion" />
+				<xsd:element name="animateColor" type="SVG.animateColor" />
+				<xsd:element name="animateTransform" type="SVG.animateTransform" />
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Paint.attrib" />
+		<xsd:attributeGroup ref="SVG.Color.attrib" />
+		<xsd:attributeGroup ref="SVG.Opacity.attrib" />
+		<xsd:attributeGroup ref="SVG.Graphics.attrib" />
+		<xsd:attributeGroup ref="SVG.Clip.attrib" />
+		<xsd:attributeGroup ref="SVG.Mask.attrib" />
+		<xsd:attributeGroup ref="SVG.Filter.attrib" />
+		<xsd:attributeGroup ref="SVG.GraphicalEvents.attrib" />
+		<xsd:attributeGroup ref="SVG.Cursor.attrib" />
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="cx" />
+		<xsd:attribute name="cy" />
+		<xsd:attribute name="r" use="required" />
+		<xsd:attribute name="transform" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.clipPath">
+		<xsd:sequence>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="desc" type="SVG.desc" />
+				<xsd:element name="title" type="SVG.title" />
+				<xsd:element name="metadata" type="SVG.metadata" />
+			</xsd:choice>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="animate" type="SVG.animate" />
+				<xsd:element name="set" type="SVG.set" />
+				<xsd:element name="animateMotion" type="SVG.animateMotion" />
+				<xsd:element name="animateColor" type="SVG.animateColor" />
+				<xsd:element name="animateTransform" type="SVG.animateTransform" />
+				<xsd:element name="use" type="SVG.use" />
+				<xsd:element name="path" type="SVG.path" />
+				<xsd:element name="rect" type="SVG.rect" />
+				<xsd:element name="circle" type="SVG.circle" />
+				<xsd:element name="line" type="SVG.line" />
+				<xsd:element name="ellipse" type="SVG.ellipse" />
+				<xsd:element name="polyline" type="SVG.polyline" />
+				<xsd:element name="polygon" type="SVG.polygon" />
+				<xsd:element name="text" type="SVG.text" />
+				<xsd:element name="altGlyphDef" type="SVG.altGlyphDef" />
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Text.attrib" />
+		<xsd:attributeGroup ref="SVG.TextContent.attrib" />
+		<xsd:attributeGroup ref="SVG.Font.attrib" />
+		<xsd:attributeGroup ref="SVG.Paint.attrib" />
+		<xsd:attributeGroup ref="SVG.Color.attrib" />
+		<xsd:attributeGroup ref="SVG.Opacity.attrib" />
+		<xsd:attributeGroup ref="SVG.Graphics.attrib" />
+		<xsd:attributeGroup ref="SVG.Clip.attrib" />
+		<xsd:attributeGroup ref="SVG.Mask.attrib" />
+		<xsd:attributeGroup ref="SVG.Filter.attrib" />
+		<xsd:attributeGroup ref="SVG.Cursor.attrib" />
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="transform" />
+		<xsd:attribute name="clipPathUnits">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="userSpaceOnUse" />
+					<xsd:enumeration value="objectBoundingBox" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="SVG.color-profile">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="desc" type="SVG.desc" />
+			<xsd:element name="title" type="SVG.title" />
+			<xsd:element name="metadata" type="SVG.metadata" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<!--
+	<xsd:attributeGroup ref="SVG.XLink.attrib" />
+-->
+		<xsd:attribute name="local" />
+		<xsd:attribute name="name" use="required" />
+		<xsd:attribute name="rendering-intent" default="auto">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="auto" />
+					<xsd:enumeration value="perceptual" />
+					<xsd:enumeration value="relative-colorimetric" />
+					<xsd:enumeration value="saturation" />
+					<xsd:enumeration value="absolute-colorimetric" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="SVG.cursor">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="desc" type="SVG.desc" />
+			<xsd:element name="title" type="SVG.title" />
+			<xsd:element name="metadata" type="SVG.metadata" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<!--
+	<xsd:attributeGroup ref="SVG.XLinkRequired.attrib" />
+-->
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="x" />
+		<xsd:attribute name="y" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.definition-src">
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<!--
+	<xsd:attributeGroup ref="SVG.XLinkRequired.attrib" />
+-->
+	</xsd:complexType>
+	<xsd:complexType name="SVG.defs">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="desc" type="SVG.desc" />
+			<xsd:element name="title" type="SVG.title" />
+			<xsd:element name="metadata" type="SVG.metadata" />
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+			<xsd:element name="animateMotion" type="SVG.animateMotion" />
+			<xsd:element name="animateColor" type="SVG.animateColor" />
+			<xsd:element name="animateTransform" type="SVG.animateTransform" />
+			<xsd:element name="svg" type="SVG.svg" />
+			<xsd:element name="g" type="SVG.g" />
+			<xsd:element name="defs" type="SVG.defs" />
+			<xsd:element name="symbol" type="SVG.symbol" />
+			<xsd:element name="use" type="SVG.use" />
+			<xsd:element name="switch" type="SVG.switch" />
+			<xsd:element name="image" type="SVG.image" />
+			<xsd:element name="style" type="SVG.style" />
+			<xsd:element name="path" type="SVG.path" />
+			<xsd:element name="rect" type="SVG.rect" />
+			<xsd:element name="circle" type="SVG.circle" />
+			<xsd:element name="line" type="SVG.line" />
+			<xsd:element name="ellipse" type="SVG.ellipse" />
+			<xsd:element name="polyline" type="SVG.polyline" />
+			<xsd:element name="polygon" type="SVG.polygon" />
+			<xsd:element name="text" type="SVG.text" />
+			<xsd:element name="altGlyphDef" type="SVG.altGlyphDef" />
+			<xsd:element name="marker" type="SVG.marker" />
+			<xsd:element name="color-profile" type="SVG.color-profile" />
+			<xsd:element name="linearGradient" type="SVG.linearGradient" />
+			<xsd:element name="radialGradient" type="SVG.radialGradient" />
+			<xsd:element name="pattern" type="SVG.pattern" />
+			<xsd:element name="clipPath" type="SVG.clipPath" />
+			<xsd:element name="mask" type="SVG.mask" />
+			<xsd:element name="filter" type="SVG.filter" />
+			<xsd:element name="cursor" type="SVG.cursor" />
+			<xsd:element name="a" type="SVG.a" />
+			<xsd:element name="view" type="SVG.view" />
+			<xsd:element name="script" type="SVG.script" />
+			<xsd:element name="font" type="SVG.font" />
+			<xsd:element name="font-face" type="SVG.font-face" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Presentation.attrib" />
+		<xsd:attributeGroup ref="SVG.GraphicalEvents.attrib" />
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="transform" />
+	</xsd:complexType>
+	<xsd:complexType mixed="true" name="SVG.desc">
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.ellipse">
+		<xsd:sequence>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="desc" type="SVG.desc" />
+				<xsd:element name="title" type="SVG.title" />
+				<xsd:element name="metadata" type="SVG.metadata" />
+			</xsd:choice>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="animate" type="SVG.animate" />
+				<xsd:element name="set" type="SVG.set" />
+				<xsd:element name="animateMotion" type="SVG.animateMotion" />
+				<xsd:element name="animateColor" type="SVG.animateColor" />
+				<xsd:element name="animateTransform" type="SVG.animateTransform" />
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Paint.attrib" />
+		<xsd:attributeGroup ref="SVG.Color.attrib" />
+		<xsd:attributeGroup ref="SVG.Opacity.attrib" />
+		<xsd:attributeGroup ref="SVG.Graphics.attrib" />
+		<xsd:attributeGroup ref="SVG.Clip.attrib" />
+		<xsd:attributeGroup ref="SVG.Mask.attrib" />
+		<xsd:attributeGroup ref="SVG.Filter.attrib" />
+		<xsd:attributeGroup ref="SVG.GraphicalEvents.attrib" />
+		<xsd:attributeGroup ref="SVG.Cursor.attrib" />
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="cx" />
+		<xsd:attribute name="cy" />
+		<xsd:attribute name="rx" use="required" />
+		<xsd:attribute name="ry" use="required" />
+		<xsd:attribute name="transform" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.feBlend">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterColor.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterPrimitiveWithIn.attrib" />
+		<xsd:attribute name="in2" use="required" />
+		<xsd:attribute name="mode" default="normal">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="normal" />
+					<xsd:enumeration value="multiply" />
+					<xsd:enumeration value="screen" />
+					<xsd:enumeration value="darken" />
+					<xsd:enumeration value="lighten" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="SVG.feColorMatrix">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterColor.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterPrimitiveWithIn.attrib" />
+		<xsd:attribute name="type" default="matrix">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="matrix" />
+					<xsd:enumeration value="saturate" />
+					<xsd:enumeration value="hueRotate" />
+					<xsd:enumeration value="luminanceToAlpha" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="values" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.feComponentTransfer">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="feFuncR" type="SVG.feFuncR" />
+			<xsd:element minOccurs="0" name="feFuncG" type="SVG.feFuncG" />
+			<xsd:element minOccurs="0" name="feFuncB" type="SVG.feFuncB" />
+			<xsd:element minOccurs="0" name="feFuncA" type="SVG.feFuncA" />
+		</xsd:sequence>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterColor.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterPrimitiveWithIn.attrib" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.feComposite">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterColor.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterPrimitiveWithIn.attrib" />
+		<xsd:attribute name="in2" use="required" />
+		<xsd:attribute name="operator" default="over">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="over" />
+					<xsd:enumeration value="in" />
+					<xsd:enumeration value="out" />
+					<xsd:enumeration value="atop" />
+					<xsd:enumeration value="xor" />
+					<xsd:enumeration value="arithmetic" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="k1" />
+		<xsd:attribute name="k2" />
+		<xsd:attribute name="k3" />
+		<xsd:attribute name="k4" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.feConvolveMatrix">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterColor.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterPrimitiveWithIn.attrib" />
+		<xsd:attribute name="order" use="required" />
+		<xsd:attribute name="kernelMatrix" use="required" />
+		<xsd:attribute name="divisor" />
+		<xsd:attribute name="bias" />
+		<xsd:attribute name="targetX" />
+		<xsd:attribute name="targetY" />
+		<xsd:attribute name="edgeMode" default="duplicate">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="duplicate" />
+					<xsd:enumeration value="wrap" />
+					<xsd:enumeration value="none" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="kernelUnitLength" />
+		<xsd:attribute name="preserveAlpha">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="false" />
+					<xsd:enumeration value="true" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="SVG.feDiffuseLighting">
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element name="feDistantLight" type="SVG.feDistantLight" />
+				<xsd:element name="fePointLight" type="SVG.fePointLight" />
+				<xsd:element name="feSpotLight" type="SVG.feSpotLight" />
+			</xsd:choice>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="animate" type="SVG.animate" />
+				<xsd:element name="set" type="SVG.set" />
+				<xsd:element name="animateColor" type="SVG.animateColor" />
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Color.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterColor.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterPrimitiveWithIn.attrib" />
+		<xsd:attribute name="lighting-color" />
+		<xsd:attribute name="surfaceScale" />
+		<xsd:attribute name="diffuseConstant" />
+		<xsd:attribute name="kernelUnitLength" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.feDisplacementMap">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterColor.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterPrimitiveWithIn.attrib" />
+		<xsd:attribute name="in2" use="required" />
+		<xsd:attribute name="scale" />
+		<xsd:attribute name="xChannelSelector" default="A">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="R" />
+					<xsd:enumeration value="G" />
+					<xsd:enumeration value="B" />
+					<xsd:enumeration value="A" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="yChannelSelector" default="A">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="R" />
+					<xsd:enumeration value="G" />
+					<xsd:enumeration value="B" />
+					<xsd:enumeration value="A" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="SVG.feDistantLight">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attribute name="azimuth" />
+		<xsd:attribute name="elevation" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.feFlood">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+			<xsd:element name="animateColor" type="SVG.animateColor" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Color.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterColor.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterPrimitiveWithIn.attrib" />
+		<xsd:attribute name="flood-color" />
+		<xsd:attribute name="flood-opacity" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.feFuncA">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attribute name="type" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="identity" />
+					<xsd:enumeration value="table" />
+					<xsd:enumeration value="discrete" />
+					<xsd:enumeration value="linear" />
+					<xsd:enumeration value="gamma" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="tableValues" />
+		<xsd:attribute name="slope" />
+		<xsd:attribute name="intercept" />
+		<xsd:attribute name="amplitude" />
+		<xsd:attribute name="exponent" />
+		<xsd:attribute name="offset" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.feFuncB">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attribute name="type" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="identity" />
+					<xsd:enumeration value="table" />
+					<xsd:enumeration value="discrete" />
+					<xsd:enumeration value="linear" />
+					<xsd:enumeration value="gamma" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="tableValues" />
+		<xsd:attribute name="slope" />
+		<xsd:attribute name="intercept" />
+		<xsd:attribute name="amplitude" />
+		<xsd:attribute name="exponent" />
+		<xsd:attribute name="offset" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.feFuncG">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attribute name="type" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="identity" />
+					<xsd:enumeration value="table" />
+					<xsd:enumeration value="discrete" />
+					<xsd:enumeration value="linear" />
+					<xsd:enumeration value="gamma" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="tableValues" />
+		<xsd:attribute name="slope" />
+		<xsd:attribute name="intercept" />
+		<xsd:attribute name="amplitude" />
+		<xsd:attribute name="exponent" />
+		<xsd:attribute name="offset" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.feFuncR">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attribute name="type" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="identity" />
+					<xsd:enumeration value="table" />
+					<xsd:enumeration value="discrete" />
+					<xsd:enumeration value="linear" />
+					<xsd:enumeration value="gamma" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="tableValues" />
+		<xsd:attribute name="slope" />
+		<xsd:attribute name="intercept" />
+		<xsd:attribute name="amplitude" />
+		<xsd:attribute name="exponent" />
+		<xsd:attribute name="offset" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.feGaussianBlur">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterColor.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterPrimitiveWithIn.attrib" />
+		<xsd:attribute name="stdDeviation" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.feImage">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+			<xsd:element name="animateTransform" type="SVG.animateTransform" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Presentation.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterPrimitive.attrib" />
+		<!--
+	<xsd:attributeGroup ref="SVG.XLinkEmbed.attrib" />
+-->
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="preserveAspectRatio" default="xMidYMid meet" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.feMerge">
+		<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="feMergeNode" type="SVG.feMergeNode" />
+		</xsd:sequence>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterColor.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterPrimitive.attrib" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.feMergeNode">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attribute name="in" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.feMorphology">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterColor.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterPrimitiveWithIn.attrib" />
+		<xsd:attribute name="operator" default="erode">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="erode" />
+					<xsd:enumeration value="dilate" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="radius" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.feOffset">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterColor.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterPrimitiveWithIn.attrib" />
+		<xsd:attribute name="dx" />
+		<xsd:attribute name="dy" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.fePointLight">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attribute name="x" />
+		<xsd:attribute name="y" />
+		<xsd:attribute name="z" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.feSpecularLighting">
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element name="feDistantLight" type="SVG.feDistantLight" />
+				<xsd:element name="fePointLight" type="SVG.fePointLight" />
+				<xsd:element name="feSpotLight" type="SVG.feSpotLight" />
+			</xsd:choice>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="animate" type="SVG.animate" />
+				<xsd:element name="set" type="SVG.set" />
+				<xsd:element name="animateColor" type="SVG.animateColor" />
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Color.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterColor.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterPrimitiveWithIn.attrib" />
+		<xsd:attribute name="lighting-color" />
+		<xsd:attribute name="surfaceScale" />
+		<xsd:attribute name="specularConstant" />
+		<xsd:attribute name="specularExponent" />
+		<xsd:attribute name="kernelUnitLength" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.feSpotLight">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attribute name="x" />
+		<xsd:attribute name="y" />
+		<xsd:attribute name="z" />
+		<xsd:attribute name="pointsAtX" />
+		<xsd:attribute name="pointsAtY" />
+		<xsd:attribute name="pointsAtZ" />
+		<xsd:attribute name="specularExponent" />
+		<xsd:attribute name="limitingConeAngle" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.feTile">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterColor.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterPrimitiveWithIn.attrib" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.feTurbulence">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterColor.attrib" />
+		<xsd:attributeGroup ref="SVG.FilterPrimitive.attrib" />
+		<xsd:attribute name="baseFrequency" />
+		<xsd:attribute name="numOctaves" />
+		<xsd:attribute name="seed" />
+		<xsd:attribute name="stitchTiles" default="noStitch">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="stitch" />
+					<xsd:enumeration value="noStitch" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="type" default="turbulence">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="fractalNoise" />
+					<xsd:enumeration value="turbulence" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="SVG.filter">
+		<xsd:sequence>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="desc" type="SVG.desc" />
+				<xsd:element name="title" type="SVG.title" />
+				<xsd:element name="metadata" type="SVG.metadata" />
+			</xsd:choice>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="animate" type="SVG.animate" />
+				<xsd:element name="set" type="SVG.set" />
+				<xsd:element name="feBlend" type="SVG.feBlend" />
+				<xsd:element name="feColorMatrix" type="SVG.feColorMatrix" />
+				<xsd:element name="feComponentTransfer" type="SVG.feComponentTransfer" />
+				<xsd:element name="feComposite" type="SVG.feComposite" />
+				<xsd:element name="feConvolveMatrix" type="SVG.feConvolveMatrix" />
+				<xsd:element name="feDiffuseLighting" type="SVG.feDiffuseLighting" />
+				<xsd:element name="feDisplacementMap" type="SVG.feDisplacementMap" />
+				<xsd:element name="feFlood" type="SVG.feFlood" />
+				<xsd:element name="feGaussianBlur" type="SVG.feGaussianBlur" />
+				<xsd:element name="feImage" type="SVG.feImage" />
+				<xsd:element name="feMerge" type="SVG.feMerge" />
+				<xsd:element name="feMorphology" type="SVG.feMorphology" />
+				<xsd:element name="feOffset" type="SVG.feOffset" />
+				<xsd:element name="feSpecularLighting" type="SVG.feSpecularLighting" />
+				<xsd:element name="feTile" type="SVG.feTile" />
+				<xsd:element name="feTurbulence" type="SVG.feTurbulence" />
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Presentation.attrib" />
+		<!--
+	<xsd:attributeGroup ref="SVG.XLink.attrib" />
+-->
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="x" />
+		<xsd:attribute name="y" />
+		<xsd:attribute name="width" />
+		<xsd:attribute name="height" />
+		<xsd:attribute name="filterRes" />
+		<xsd:attribute name="filterUnits">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="userSpaceOnUse" />
+					<xsd:enumeration value="objectBoundingBox" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="primitiveUnits">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="userSpaceOnUse" />
+					<xsd:enumeration value="objectBoundingBox" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="SVG.font">
+		<xsd:sequence>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="desc" type="SVG.desc" />
+				<xsd:element name="title" type="SVG.title" />
+				<xsd:element name="metadata" type="SVG.metadata" />
+			</xsd:choice>
+			<xsd:element name="font-face" type="SVG.font-face" />
+			<xsd:element name="missing-glyph" type="SVG.missing-glyph" />
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="glyph" type="SVG.glyph" />
+				<xsd:element name="hkern" type="SVG.hkern" />
+				<xsd:element name="vkern" type="SVG.vkern" />
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Presentation.attrib" />
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="horiz-origin-x" />
+		<xsd:attribute name="horiz-origin-y" />
+		<xsd:attribute name="horiz-adv-x" use="required" />
+		<xsd:attribute name="vert-origin-x" />
+		<xsd:attribute name="vert-origin-y" />
+		<xsd:attribute name="vert-adv-y" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.font-face">
+		<xsd:sequence>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="desc" type="SVG.desc" />
+				<xsd:element name="title" type="SVG.title" />
+				<xsd:element name="metadata" type="SVG.metadata" />
+			</xsd:choice>
+			<xsd:element minOccurs="0" name="font-face-src" type="SVG.font-face-src" />
+			<xsd:element minOccurs="0" name="definition-src" type="SVG.definition-src" />
+		</xsd:sequence>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attribute name="font-family" />
+		<xsd:attribute name="font-style" />
+		<xsd:attribute name="font-variant" />
+		<xsd:attribute name="font-weight" />
+		<xsd:attribute name="font-stretch" />
+		<xsd:attribute name="font-size" />
+		<xsd:attribute name="unicode-range" />
+		<xsd:attribute name="units-per-em" />
+		<xsd:attribute name="panose-1" />
+		<xsd:attribute name="stemv" />
+		<xsd:attribute name="stemh" />
+		<xsd:attribute name="slope" />
+		<xsd:attribute name="cap-height" />
+		<xsd:attribute name="x-height" />
+		<xsd:attribute name="accent-height" />
+		<xsd:attribute name="ascent" />
+		<xsd:attribute name="descent" />
+		<xsd:attribute name="widths" />
+		<xsd:attribute name="bbox" />
+		<xsd:attribute name="ideographic" />
+		<xsd:attribute name="alphabetic" />
+		<xsd:attribute name="mathematical" />
+		<xsd:attribute name="hanging" />
+		<xsd:attribute name="v-ideographic" />
+		<xsd:attribute name="v-alphabetic" />
+		<xsd:attribute name="v-mathematical" />
+		<xsd:attribute name="v-hanging" />
+		<xsd:attribute name="underline-position" />
+		<xsd:attribute name="underline-thickness" />
+		<xsd:attribute name="strikethrough-position" />
+		<xsd:attribute name="strikethrough-thickness" />
+		<xsd:attribute name="overline-position" />
+		<xsd:attribute name="overline-thickness" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.font-face-format">
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attribute name="string" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.font-face-name">
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attribute name="name" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.font-face-src">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="font-face-uri" type="SVG.font-face-uri" />
+			<xsd:element name="font-face-name" type="SVG.font-face-name" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.font-face-uri">
+		<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="font-face-format" type="SVG.font-face-format" />
+		</xsd:sequence>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<!--
+	<xsd:attributeGroup ref="SVG.XLinkRequired.attrib" />
+-->
+	</xsd:complexType>
+	<xsd:complexType mixed="true" name="SVG.foreignObject">
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Presentation.attrib" />
+		<xsd:attributeGroup ref="SVG.GraphicalEvents.attrib" />
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="x" />
+		<xsd:attribute name="y" />
+		<xsd:attribute name="width" use="required" />
+		<xsd:attribute name="height" use="required" />
+		<xsd:attribute name="transform" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.g">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="desc" type="SVG.desc" />
+			<xsd:element name="title" type="SVG.title" />
+			<xsd:element name="metadata" type="SVG.metadata" />
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+			<xsd:element name="animateMotion" type="SVG.animateMotion" />
+			<xsd:element name="animateColor" type="SVG.animateColor" />
+			<xsd:element name="animateTransform" type="SVG.animateTransform" />
+			<xsd:element name="svg" type="SVG.svg" />
+			<xsd:element name="g" type="SVG.g" />
+			<xsd:element name="defs" type="SVG.defs" />
+			<xsd:element name="symbol" type="SVG.symbol" />
+			<xsd:element name="use" type="SVG.use" />
+			<xsd:element name="switch" type="SVG.switch" />
+			<xsd:element name="image" type="SVG.image" />
+			<xsd:element name="style" type="SVG.style" />
+			<xsd:element name="path" type="SVG.path" />
+			<xsd:element name="rect" type="SVG.rect" />
+			<xsd:element name="circle" type="SVG.circle" />
+			<xsd:element name="line" type="SVG.line" />
+			<xsd:element name="ellipse" type="SVG.ellipse" />
+			<xsd:element name="polyline" type="SVG.polyline" />
+			<xsd:element name="polygon" type="SVG.polygon" />
+			<xsd:element name="text" type="SVG.text" />
+			<xsd:element name="altGlyphDef" type="SVG.altGlyphDef" />
+			<xsd:element name="marker" type="SVG.marker" />
+			<xsd:element name="color-profile" type="SVG.color-profile" />
+			<xsd:element name="linearGradient" type="SVG.linearGradient" />
+			<xsd:element name="radialGradient" type="SVG.radialGradient" />
+			<xsd:element name="pattern" type="SVG.pattern" />
+			<xsd:element name="clipPath" type="SVG.clipPath" />
+			<xsd:element name="mask" type="SVG.mask" />
+			<xsd:element name="filter" type="SVG.filter" />
+			<xsd:element name="cursor" type="SVG.cursor" />
+			<xsd:element name="a" type="SVG.a" />
+			<xsd:element name="view" type="SVG.view" />
+			<xsd:element name="script" type="SVG.script" />
+			<xsd:element name="font" type="SVG.font" />
+			<xsd:element name="font-face" type="SVG.font-face" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Presentation.attrib" />
+		<xsd:attributeGroup ref="SVG.GraphicalEvents.attrib" />
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="transform" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.glyph">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="desc" type="SVG.desc" />
+			<xsd:element name="title" type="SVG.title" />
+			<xsd:element name="metadata" type="SVG.metadata" />
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+			<xsd:element name="animateMotion" type="SVG.animateMotion" />
+			<xsd:element name="animateColor" type="SVG.animateColor" />
+			<xsd:element name="animateTransform" type="SVG.animateTransform" />
+			<xsd:element name="svg" type="SVG.svg" />
+			<xsd:element name="g" type="SVG.g" />
+			<xsd:element name="defs" type="SVG.defs" />
+			<xsd:element name="symbol" type="SVG.symbol" />
+			<xsd:element name="use" type="SVG.use" />
+			<xsd:element name="switch" type="SVG.switch" />
+			<xsd:element name="image" type="SVG.image" />
+			<xsd:element name="style" type="SVG.style" />
+			<xsd:element name="path" type="SVG.path" />
+			<xsd:element name="rect" type="SVG.rect" />
+			<xsd:element name="circle" type="SVG.circle" />
+			<xsd:element name="line" type="SVG.line" />
+			<xsd:element name="ellipse" type="SVG.ellipse" />
+			<xsd:element name="polyline" type="SVG.polyline" />
+			<xsd:element name="polygon" type="SVG.polygon" />
+			<xsd:element name="text" type="SVG.text" />
+			<xsd:element name="altGlyphDef" type="SVG.altGlyphDef" />
+			<xsd:element name="marker" type="SVG.marker" />
+			<xsd:element name="color-profile" type="SVG.color-profile" />
+			<xsd:element name="linearGradient" type="SVG.linearGradient" />
+			<xsd:element name="radialGradient" type="SVG.radialGradient" />
+			<xsd:element name="pattern" type="SVG.pattern" />
+			<xsd:element name="clipPath" type="SVG.clipPath" />
+			<xsd:element name="mask" type="SVG.mask" />
+			<xsd:element name="filter" type="SVG.filter" />
+			<xsd:element name="cursor" type="SVG.cursor" />
+			<xsd:element name="a" type="SVG.a" />
+			<xsd:element name="view" type="SVG.view" />
+			<xsd:element name="script" type="SVG.script" />
+			<xsd:element name="font" type="SVG.font" />
+			<xsd:element name="font-face" type="SVG.font-face" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Presentation.attrib" />
+		<xsd:attribute name="unicode" />
+		<xsd:attribute name="glyph-name" />
+		<xsd:attribute name="d" />
+		<xsd:attribute name="orientation" />
+		<xsd:attribute name="arabic-form" />
+		<xsd:attribute name="lang" />
+		<xsd:attribute name="horiz-adv-x" />
+		<xsd:attribute name="vert-origin-x" />
+		<xsd:attribute name="vert-origin-y" />
+		<xsd:attribute name="vert-adv-y" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.glyphRef">
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Font.attrib" />
+		<!--
+	<xsd:attributeGroup ref="SVG.XLink.attrib" />
+-->
+		<xsd:attribute name="x" />
+		<xsd:attribute name="y" />
+		<xsd:attribute name="dx" />
+		<xsd:attribute name="dy" />
+		<xsd:attribute name="glyphRef" />
+		<xsd:attribute name="format" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.hkern">
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attribute name="u1" />
+		<xsd:attribute name="g1" />
+		<xsd:attribute name="u2" />
+		<xsd:attribute name="g2" />
+		<xsd:attribute name="k" use="required" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.image">
+		<xsd:sequence>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="desc" type="SVG.desc" />
+				<xsd:element name="title" type="SVG.title" />
+				<xsd:element name="metadata" type="SVG.metadata" />
+			</xsd:choice>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="animate" type="SVG.animate" />
+				<xsd:element name="set" type="SVG.set" />
+				<xsd:element name="animateMotion" type="SVG.animateMotion" />
+				<xsd:element name="animateColor" type="SVG.animateColor" />
+				<xsd:element name="animateTransform" type="SVG.animateTransform" />
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Viewport.attrib" />
+		<xsd:attributeGroup ref="SVG.Color.attrib" />
+		<xsd:attributeGroup ref="SVG.Opacity.attrib" />
+		<xsd:attributeGroup ref="SVG.Graphics.attrib" />
+		<xsd:attributeGroup ref="SVG.ColorProfile.attrib" />
+		<xsd:attributeGroup ref="SVG.Clip.attrib" />
+		<xsd:attributeGroup ref="SVG.Mask.attrib" />
+		<xsd:attributeGroup ref="SVG.Filter.attrib" />
+		<xsd:attributeGroup ref="SVG.GraphicalEvents.attrib" />
+		<xsd:attributeGroup ref="SVG.Cursor.attrib" />
+		<!--
+	<xsd:attributeGroup ref="SVG.XLinkEmbed.attrib" />
+-->
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="x" />
+		<xsd:attribute name="y" />
+		<xsd:attribute name="width" use="required" />
+		<xsd:attribute name="height" use="required" />
+		<xsd:attribute name="preserveAspectRatio" default="xMidYMid meet" />
+		<xsd:attribute name="transform" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.line">
+		<xsd:sequence>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="desc" type="SVG.desc" />
+				<xsd:element name="title" type="SVG.title" />
+				<xsd:element name="metadata" type="SVG.metadata" />
+			</xsd:choice>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="animate" type="SVG.animate" />
+				<xsd:element name="set" type="SVG.set" />
+				<xsd:element name="animateMotion" type="SVG.animateMotion" />
+				<xsd:element name="animateColor" type="SVG.animateColor" />
+				<xsd:element name="animateTransform" type="SVG.animateTransform" />
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Paint.attrib" />
+		<xsd:attributeGroup ref="SVG.Color.attrib" />
+		<xsd:attributeGroup ref="SVG.Opacity.attrib" />
+		<xsd:attributeGroup ref="SVG.Graphics.attrib" />
+		<xsd:attributeGroup ref="SVG.Marker.attrib" />
+		<xsd:attributeGroup ref="SVG.Clip.attrib" />
+		<xsd:attributeGroup ref="SVG.Mask.attrib" />
+		<xsd:attributeGroup ref="SVG.Filter.attrib" />
+		<xsd:attributeGroup ref="SVG.GraphicalEvents.attrib" />
+		<xsd:attributeGroup ref="SVG.Cursor.attrib" />
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="x1" />
+		<xsd:attribute name="y1" />
+		<xsd:attribute name="x2" />
+		<xsd:attribute name="y2" />
+		<xsd:attribute name="transform" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.linearGradient">
+		<xsd:sequence>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="desc" type="SVG.desc" />
+				<xsd:element name="title" type="SVG.title" />
+				<xsd:element name="metadata" type="SVG.metadata" />
+			</xsd:choice>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="stop" type="SVG.stop" />
+				<xsd:element name="animate" type="SVG.animate" />
+				<xsd:element name="set" type="SVG.set" />
+				<xsd:element name="animateTransform" type="SVG.animateTransform" />
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Color.attrib" />
+		<xsd:attributeGroup ref="SVG.Gradient.attrib" />
+		<!--
+	<xsd:attributeGroup ref="SVG.XLink.attrib" />
+-->
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="x1" />
+		<xsd:attribute name="y1" />
+		<xsd:attribute name="x2" />
+		<xsd:attribute name="y2" />
+		<xsd:attribute name="gradientUnits">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="userSpaceOnUse" />
+					<xsd:enumeration value="objectBoundingBox" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="gradientTransform" />
+		<xsd:attribute name="spreadMethod">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="pad" />
+					<xsd:enumeration value="reflect" />
+					<xsd:enumeration value="repeat" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="SVG.marker">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="desc" type="SVG.desc" />
+			<xsd:element name="title" type="SVG.title" />
+			<xsd:element name="metadata" type="SVG.metadata" />
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+			<xsd:element name="animateMotion" type="SVG.animateMotion" />
+			<xsd:element name="animateColor" type="SVG.animateColor" />
+			<xsd:element name="animateTransform" type="SVG.animateTransform" />
+			<xsd:element name="svg" type="SVG.svg" />
+			<xsd:element name="g" type="SVG.g" />
+			<xsd:element name="defs" type="SVG.defs" />
+			<xsd:element name="symbol" type="SVG.symbol" />
+			<xsd:element name="use" type="SVG.use" />
+			<xsd:element name="switch" type="SVG.switch" />
+			<xsd:element name="image" type="SVG.image" />
+			<xsd:element name="style" type="SVG.style" />
+			<xsd:element name="path" type="SVG.path" />
+			<xsd:element name="rect" type="SVG.rect" />
+			<xsd:element name="circle" type="SVG.circle" />
+			<xsd:element name="line" type="SVG.line" />
+			<xsd:element name="ellipse" type="SVG.ellipse" />
+			<xsd:element name="polyline" type="SVG.polyline" />
+			<xsd:element name="polygon" type="SVG.polygon" />
+			<xsd:element name="text" type="SVG.text" />
+			<xsd:element name="altGlyphDef" type="SVG.altGlyphDef" />
+			<xsd:element name="marker" type="SVG.marker" />
+			<xsd:element name="color-profile" type="SVG.color-profile" />
+			<xsd:element name="linearGradient" type="SVG.linearGradient" />
+			<xsd:element name="radialGradient" type="SVG.radialGradient" />
+			<xsd:element name="pattern" type="SVG.pattern" />
+			<xsd:element name="clipPath" type="SVG.clipPath" />
+			<xsd:element name="mask" type="SVG.mask" />
+			<xsd:element name="filter" type="SVG.filter" />
+			<xsd:element name="cursor" type="SVG.cursor" />
+			<xsd:element name="a" type="SVG.a" />
+			<xsd:element name="view" type="SVG.view" />
+			<xsd:element name="script" type="SVG.script" />
+			<xsd:element name="font" type="SVG.font" />
+			<xsd:element name="font-face" type="SVG.font-face" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Presentation.attrib" />
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="refX" />
+		<xsd:attribute name="refY" />
+		<xsd:attribute name="markerUnits">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="strokeWidth" />
+					<xsd:enumeration value="userSpaceOnUse" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="markerWidth" />
+		<xsd:attribute name="markerHeight" />
+		<xsd:attribute name="orient" />
+		<xsd:attribute name="viewBox" />
+		<xsd:attribute name="preserveAspectRatio" default="xMidYMid meet" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.mask">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="desc" type="SVG.desc" />
+			<xsd:element name="title" type="SVG.title" />
+			<xsd:element name="metadata" type="SVG.metadata" />
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+			<xsd:element name="animateMotion" type="SVG.animateMotion" />
+			<xsd:element name="animateColor" type="SVG.animateColor" />
+			<xsd:element name="animateTransform" type="SVG.animateTransform" />
+			<xsd:element name="svg" type="SVG.svg" />
+			<xsd:element name="g" type="SVG.g" />
+			<xsd:element name="defs" type="SVG.defs" />
+			<xsd:element name="symbol" type="SVG.symbol" />
+			<xsd:element name="use" type="SVG.use" />
+			<xsd:element name="switch" type="SVG.switch" />
+			<xsd:element name="image" type="SVG.image" />
+			<xsd:element name="style" type="SVG.style" />
+			<xsd:element name="path" type="SVG.path" />
+			<xsd:element name="rect" type="SVG.rect" />
+			<xsd:element name="circle" type="SVG.circle" />
+			<xsd:element name="line" type="SVG.line" />
+			<xsd:element name="ellipse" type="SVG.ellipse" />
+			<xsd:element name="polyline" type="SVG.polyline" />
+			<xsd:element name="polygon" type="SVG.polygon" />
+			<xsd:element name="text" type="SVG.text" />
+			<xsd:element name="altGlyphDef" type="SVG.altGlyphDef" />
+			<xsd:element name="marker" type="SVG.marker" />
+			<xsd:element name="color-profile" type="SVG.color-profile" />
+			<xsd:element name="linearGradient" type="SVG.linearGradient" />
+			<xsd:element name="radialGradient" type="SVG.radialGradient" />
+			<xsd:element name="pattern" type="SVG.pattern" />
+			<xsd:element name="clipPath" type="SVG.clipPath" />
+			<xsd:element name="mask" type="SVG.mask" />
+			<xsd:element name="filter" type="SVG.filter" />
+			<xsd:element name="cursor" type="SVG.cursor" />
+			<xsd:element name="a" type="SVG.a" />
+			<xsd:element name="view" type="SVG.view" />
+			<xsd:element name="script" type="SVG.script" />
+			<xsd:element name="font" type="SVG.font" />
+			<xsd:element name="font-face" type="SVG.font-face" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Presentation.attrib" />
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="x" />
+		<xsd:attribute name="y" />
+		<xsd:attribute name="width" />
+		<xsd:attribute name="height" />
+		<xsd:attribute name="maskUnits">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="userSpaceOnUse" />
+					<xsd:enumeration value="objectBoundingBox" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="maskContentUnits">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="userSpaceOnUse" />
+					<xsd:enumeration value="objectBoundingBox" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType mixed="true" name="SVG.metadata">
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.missing-glyph">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="desc" type="SVG.desc" />
+			<xsd:element name="title" type="SVG.title" />
+			<xsd:element name="metadata" type="SVG.metadata" />
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+			<xsd:element name="animateMotion" type="SVG.animateMotion" />
+			<xsd:element name="animateColor" type="SVG.animateColor" />
+			<xsd:element name="animateTransform" type="SVG.animateTransform" />
+			<xsd:element name="svg" type="SVG.svg" />
+			<xsd:element name="g" type="SVG.g" />
+			<xsd:element name="defs" type="SVG.defs" />
+			<xsd:element name="symbol" type="SVG.symbol" />
+			<xsd:element name="use" type="SVG.use" />
+			<xsd:element name="switch" type="SVG.switch" />
+			<xsd:element name="image" type="SVG.image" />
+			<xsd:element name="style" type="SVG.style" />
+			<xsd:element name="path" type="SVG.path" />
+			<xsd:element name="rect" type="SVG.rect" />
+			<xsd:element name="circle" type="SVG.circle" />
+			<xsd:element name="line" type="SVG.line" />
+			<xsd:element name="ellipse" type="SVG.ellipse" />
+			<xsd:element name="polyline" type="SVG.polyline" />
+			<xsd:element name="polygon" type="SVG.polygon" />
+			<xsd:element name="text" type="SVG.text" />
+			<xsd:element name="altGlyphDef" type="SVG.altGlyphDef" />
+			<xsd:element name="marker" type="SVG.marker" />
+			<xsd:element name="color-profile" type="SVG.color-profile" />
+			<xsd:element name="linearGradient" type="SVG.linearGradient" />
+			<xsd:element name="radialGradient" type="SVG.radialGradient" />
+			<xsd:element name="pattern" type="SVG.pattern" />
+			<xsd:element name="clipPath" type="SVG.clipPath" />
+			<xsd:element name="mask" type="SVG.mask" />
+			<xsd:element name="filter" type="SVG.filter" />
+			<xsd:element name="cursor" type="SVG.cursor" />
+			<xsd:element name="a" type="SVG.a" />
+			<xsd:element name="view" type="SVG.view" />
+			<xsd:element name="script" type="SVG.script" />
+			<xsd:element name="font" type="SVG.font" />
+			<xsd:element name="font-face" type="SVG.font-face" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Presentation.attrib" />
+		<xsd:attribute name="d" />
+		<xsd:attribute name="horiz-adv-x" />
+		<xsd:attribute name="vert-origin-x" />
+		<xsd:attribute name="vert-origin-y" />
+		<xsd:attribute name="vert-adv-y" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.mpath">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="desc" type="SVG.desc" />
+			<xsd:element name="title" type="SVG.title" />
+			<xsd:element name="metadata" type="SVG.metadata" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<!--
+	<xsd:attributeGroup ref="SVG.XLinkRequired.attrib" />
+-->
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.path">
+		<xsd:sequence>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="desc" type="SVG.desc" />
+				<xsd:element name="title" type="SVG.title" />
+				<xsd:element name="metadata" type="SVG.metadata" />
+			</xsd:choice>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="animate" type="SVG.animate" />
+				<xsd:element name="set" type="SVG.set" />
+				<xsd:element name="animateMotion" type="SVG.animateMotion" />
+				<xsd:element name="animateColor" type="SVG.animateColor" />
+				<xsd:element name="animateTransform" type="SVG.animateTransform" />
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Paint.attrib" />
+		<xsd:attributeGroup ref="SVG.Color.attrib" />
+		<xsd:attributeGroup ref="SVG.Opacity.attrib" />
+		<xsd:attributeGroup ref="SVG.Graphics.attrib" />
+		<xsd:attributeGroup ref="SVG.Marker.attrib" />
+		<xsd:attributeGroup ref="SVG.Clip.attrib" />
+		<xsd:attributeGroup ref="SVG.Mask.attrib" />
+		<xsd:attributeGroup ref="SVG.Filter.attrib" />
+		<xsd:attributeGroup ref="SVG.GraphicalEvents.attrib" />
+		<xsd:attributeGroup ref="SVG.Cursor.attrib" />
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="d" use="required" />
+		<xsd:attribute name="pathLength" />
+		<xsd:attribute name="transform" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.pattern">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="desc" type="SVG.desc" />
+			<xsd:element name="title" type="SVG.title" />
+			<xsd:element name="metadata" type="SVG.metadata" />
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+			<xsd:element name="animateMotion" type="SVG.animateMotion" />
+			<xsd:element name="animateColor" type="SVG.animateColor" />
+			<xsd:element name="animateTransform" type="SVG.animateTransform" />
+			<xsd:element name="svg" type="SVG.svg" />
+			<xsd:element name="g" type="SVG.g" />
+			<xsd:element name="defs" type="SVG.defs" />
+			<xsd:element name="symbol" type="SVG.symbol" />
+			<xsd:element name="use" type="SVG.use" />
+			<xsd:element name="switch" type="SVG.switch" />
+			<xsd:element name="image" type="SVG.image" />
+			<xsd:element name="style" type="SVG.style" />
+			<xsd:element name="path" type="SVG.path" />
+			<xsd:element name="rect" type="SVG.rect" />
+			<xsd:element name="circle" type="SVG.circle" />
+			<xsd:element name="line" type="SVG.line" />
+			<xsd:element name="ellipse" type="SVG.ellipse" />
+			<xsd:element name="polyline" type="SVG.polyline" />
+			<xsd:element name="polygon" type="SVG.polygon" />
+			<xsd:element name="text" type="SVG.text" />
+			<xsd:element name="altGlyphDef" type="SVG.altGlyphDef" />
+			<xsd:element name="marker" type="SVG.marker" />
+			<xsd:element name="color-profile" type="SVG.color-profile" />
+			<xsd:element name="linearGradient" type="SVG.linearGradient" />
+			<xsd:element name="radialGradient" type="SVG.radialGradient" />
+			<xsd:element name="pattern" type="SVG.pattern" />
+			<xsd:element name="clipPath" type="SVG.clipPath" />
+			<xsd:element name="mask" type="SVG.mask" />
+			<xsd:element name="filter" type="SVG.filter" />
+			<xsd:element name="cursor" type="SVG.cursor" />
+			<xsd:element name="a" type="SVG.a" />
+			<xsd:element name="view" type="SVG.view" />
+			<xsd:element name="script" type="SVG.script" />
+			<xsd:element name="font" type="SVG.font" />
+			<xsd:element name="font-face" type="SVG.font-face" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Presentation.attrib" />
+		<!--
+	<xsd:attributeGroup ref="SVG.XLink.attrib" />
+-->
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="x" />
+		<xsd:attribute name="y" />
+		<xsd:attribute name="width" />
+		<xsd:attribute name="height" />
+		<xsd:attribute name="patternUnits">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="userSpaceOnUse" />
+					<xsd:enumeration value="objectBoundingBox" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="patternContentUnits">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="userSpaceOnUse" />
+					<xsd:enumeration value="objectBoundingBox" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="patternTransform" />
+		<xsd:attribute name="viewBox" />
+		<xsd:attribute name="preserveAspectRatio" default="xMidYMid meet" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.polygon">
+		<xsd:sequence>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="desc" type="SVG.desc" />
+				<xsd:element name="title" type="SVG.title" />
+				<xsd:element name="metadata" type="SVG.metadata" />
+			</xsd:choice>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="animate" type="SVG.animate" />
+				<xsd:element name="set" type="SVG.set" />
+				<xsd:element name="animateMotion" type="SVG.animateMotion" />
+				<xsd:element name="animateColor" type="SVG.animateColor" />
+				<xsd:element name="animateTransform" type="SVG.animateTransform" />
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Paint.attrib" />
+		<xsd:attributeGroup ref="SVG.Color.attrib" />
+		<xsd:attributeGroup ref="SVG.Opacity.attrib" />
+		<xsd:attributeGroup ref="SVG.Graphics.attrib" />
+		<xsd:attributeGroup ref="SVG.Marker.attrib" />
+		<xsd:attributeGroup ref="SVG.Clip.attrib" />
+		<xsd:attributeGroup ref="SVG.Mask.attrib" />
+		<xsd:attributeGroup ref="SVG.Filter.attrib" />
+		<xsd:attributeGroup ref="SVG.GraphicalEvents.attrib" />
+		<xsd:attributeGroup ref="SVG.Cursor.attrib" />
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="points" use="required" />
+		<xsd:attribute name="transform" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.polyline">
+		<xsd:sequence>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="desc" type="SVG.desc" />
+				<xsd:element name="title" type="SVG.title" />
+				<xsd:element name="metadata" type="SVG.metadata" />
+			</xsd:choice>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="animate" type="SVG.animate" />
+				<xsd:element name="set" type="SVG.set" />
+				<xsd:element name="animateMotion" type="SVG.animateMotion" />
+				<xsd:element name="animateColor" type="SVG.animateColor" />
+				<xsd:element name="animateTransform" type="SVG.animateTransform" />
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Paint.attrib" />
+		<xsd:attributeGroup ref="SVG.Color.attrib" />
+		<xsd:attributeGroup ref="SVG.Opacity.attrib" />
+		<xsd:attributeGroup ref="SVG.Graphics.attrib" />
+		<xsd:attributeGroup ref="SVG.Marker.attrib" />
+		<xsd:attributeGroup ref="SVG.Clip.attrib" />
+		<xsd:attributeGroup ref="SVG.Mask.attrib" />
+		<xsd:attributeGroup ref="SVG.Filter.attrib" />
+		<xsd:attributeGroup ref="SVG.GraphicalEvents.attrib" />
+		<xsd:attributeGroup ref="SVG.Cursor.attrib" />
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="points" use="required" />
+		<xsd:attribute name="transform" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.radialGradient">
+		<xsd:sequence>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="desc" type="SVG.desc" />
+				<xsd:element name="title" type="SVG.title" />
+				<xsd:element name="metadata" type="SVG.metadata" />
+			</xsd:choice>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="stop" type="SVG.stop" />
+				<xsd:element name="animate" type="SVG.animate" />
+				<xsd:element name="set" type="SVG.set" />
+				<xsd:element name="animateTransform" type="SVG.animateTransform" />
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Color.attrib" />
+		<xsd:attributeGroup ref="SVG.Gradient.attrib" />
+		<!--
+	<xsd:attributeGroup ref="SVG.XLink.attrib" />
+-->
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="cx" />
+		<xsd:attribute name="cy" />
+		<xsd:attribute name="r" />
+		<xsd:attribute name="fx" />
+		<xsd:attribute name="fy" />
+		<xsd:attribute name="gradientUnits">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="userSpaceOnUse" />
+					<xsd:enumeration value="objectBoundingBox" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="gradientTransform" />
+		<xsd:attribute name="spreadMethod">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="pad" />
+					<xsd:enumeration value="reflect" />
+					<xsd:enumeration value="repeat" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="SVG.rect">
+		<xsd:sequence>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="desc" type="SVG.desc" />
+				<xsd:element name="title" type="SVG.title" />
+				<xsd:element name="metadata" type="SVG.metadata" />
+			</xsd:choice>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="animate" type="SVG.animate" />
+				<xsd:element name="set" type="SVG.set" />
+				<xsd:element name="animateMotion" type="SVG.animateMotion" />
+				<xsd:element name="animateColor" type="SVG.animateColor" />
+				<xsd:element name="animateTransform" type="SVG.animateTransform" />
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Paint.attrib" />
+		<xsd:attributeGroup ref="SVG.Color.attrib" />
+		<xsd:attributeGroup ref="SVG.Opacity.attrib" />
+		<xsd:attributeGroup ref="SVG.Graphics.attrib" />
+		<xsd:attributeGroup ref="SVG.Clip.attrib" />
+		<xsd:attributeGroup ref="SVG.Mask.attrib" />
+		<xsd:attributeGroup ref="SVG.Filter.attrib" />
+		<xsd:attributeGroup ref="SVG.GraphicalEvents.attrib" />
+		<xsd:attributeGroup ref="SVG.Cursor.attrib" />
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="x" />
+		<xsd:attribute name="y" />
+		<xsd:attribute name="width" use="required" />
+		<xsd:attribute name="height" use="required" />
+		<xsd:attribute name="rx" />
+		<xsd:attribute name="ry" />
+		<xsd:attribute name="transform" />
+	</xsd:complexType>
+	<xsd:complexType mixed="true" name="SVG.script">
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<!--
+	<xsd:attributeGroup ref="SVG.XLink.attrib" />
+-->
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="type" use="required" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.set">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="desc" type="SVG.desc" />
+			<xsd:element name="title" type="SVG.title" />
+			<xsd:element name="metadata" type="SVG.metadata" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.AnimationEvents.attrib" />
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attributeGroup ref="SVG.Animation.attrib" />
+		<xsd:attributeGroup ref="SVG.AnimationAttribute.attrib" />
+		<xsd:attributeGroup ref="SVG.AnimationTiming.attrib" />
+		<xsd:attribute name="to" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.stop">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+			<xsd:element name="animateColor" type="SVG.animateColor" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Color.attrib" />
+		<xsd:attributeGroup ref="SVG.Gradient.attrib" />
+		<xsd:attribute name="offset" use="required" />
+	</xsd:complexType>
+	<xsd:complexType mixed="true" name="SVG.style">
+		<xsd:attribute name="_xmlspace" fixed="preserve">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="preserve" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attribute name="type" use="required" />
+		<xsd:attribute name="media" />
+		<xsd:attribute name="title" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.svg">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="desc" type="SVG.desc" />
+			<xsd:element name="title" type="SVG.title" />
+			<xsd:element name="metadata" type="SVG.metadata" />
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+			<xsd:element name="animateMotion" type="SVG.animateMotion" />
+			<xsd:element name="animateColor" type="SVG.animateColor" />
+			<xsd:element name="animateTransform" type="SVG.animateTransform" />
+			<xsd:element name="svg" type="SVG.svg" />
+			<xsd:element name="g" type="SVG.g" />
+			<xsd:element name="defs" type="SVG.defs" />
+			<xsd:element name="symbol" type="SVG.symbol" />
+			<xsd:element name="use" type="SVG.use" />
+			<xsd:element name="switch" type="SVG.switch" />
+			<xsd:element name="image" type="SVG.image" />
+			<xsd:element name="style" type="SVG.style" />
+			<xsd:element name="path" type="SVG.path" />
+			<xsd:element name="rect" type="SVG.rect" />
+			<xsd:element name="circle" type="SVG.circle" />
+			<xsd:element name="line" type="SVG.line" />
+			<xsd:element name="ellipse" type="SVG.ellipse" />
+			<xsd:element name="polyline" type="SVG.polyline" />
+			<xsd:element name="polygon" type="SVG.polygon" />
+			<xsd:element name="text" type="SVG.text" />
+			<xsd:element name="altGlyphDef" type="SVG.altGlyphDef" />
+			<xsd:element name="marker" type="SVG.marker" />
+			<xsd:element name="color-profile" type="SVG.color-profile" />
+			<xsd:element name="linearGradient" type="SVG.linearGradient" />
+			<xsd:element name="radialGradient" type="SVG.radialGradient" />
+			<xsd:element name="pattern" type="SVG.pattern" />
+			<xsd:element name="clipPath" type="SVG.clipPath" />
+			<xsd:element name="mask" type="SVG.mask" />
+			<xsd:element name="filter" type="SVG.filter" />
+			<xsd:element name="cursor" type="SVG.cursor" />
+			<xsd:element name="a" type="SVG.a" />
+			<xsd:element name="view" type="SVG.view" />
+			<xsd:element name="script" type="SVG.script" />
+			<xsd:element name="font" type="SVG.font" />
+			<xsd:element name="font-face" type="SVG.font-face" />
+		</xsd:choice>
+		<!--
+	<xsd:attributeGroup ref="SVG.xmlns.attrib" />
+-->
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Presentation.attrib" />
+		<xsd:attributeGroup ref="SVG.DocumentEvents.attrib" />
+		<xsd:attributeGroup ref="SVG.GraphicalEvents.attrib" />
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="x" />
+		<xsd:attribute name="y" />
+		<xsd:attribute name="width" />
+		<xsd:attribute name="height" />
+		<xsd:attribute name="viewBox" />
+		<xsd:attribute name="preserveAspectRatio" default="xMidYMid meet" />
+		<xsd:attribute name="zoomAndPan" default="magnify">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="disable" />
+					<xsd:enumeration value="magnify" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="version" fixed="1.1" />
+		<xsd:attribute name="baseProfile" />
+		<xsd:attribute name="contentScriptType" default="text/ecmascript" />
+		<xsd:attribute name="contentStyleType" default="text/css" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.switch">
+		<xsd:sequence>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="desc" type="SVG.desc" />
+				<xsd:element name="title" type="SVG.title" />
+				<xsd:element name="metadata" type="SVG.metadata" />
+			</xsd:choice>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="svg" type="SVG.svg" />
+				<xsd:element name="g" type="SVG.g" />
+				<xsd:element name="use" type="SVG.use" />
+				<xsd:element name="text" type="SVG.text" />
+				<xsd:element name="animate" type="SVG.animate" />
+				<xsd:element name="set" type="SVG.set" />
+				<xsd:element name="animateMotion" type="SVG.animateMotion" />
+				<xsd:element name="animateColor" type="SVG.animateColor" />
+				<xsd:element name="animateTransform" type="SVG.animateTransform" />
+				<xsd:element name="switch" type="SVG.switch" />
+				<xsd:element name="image" type="SVG.image" />
+				<xsd:element name="path" type="SVG.path" />
+				<xsd:element name="rect" type="SVG.rect" />
+				<xsd:element name="circle" type="SVG.circle" />
+				<xsd:element name="line" type="SVG.line" />
+				<xsd:element name="ellipse" type="SVG.ellipse" />
+				<xsd:element name="polyline" type="SVG.polyline" />
+				<xsd:element name="polygon" type="SVG.polygon" />
+				<xsd:element name="a" type="SVG.a" />
+				<xsd:element name="foreignObject" type="SVG.foreignObject" />
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Presentation.attrib" />
+		<xsd:attributeGroup ref="SVG.GraphicalEvents.attrib" />
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="transform" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.symbol">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="desc" type="SVG.desc" />
+			<xsd:element name="title" type="SVG.title" />
+			<xsd:element name="metadata" type="SVG.metadata" />
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+			<xsd:element name="animateMotion" type="SVG.animateMotion" />
+			<xsd:element name="animateColor" type="SVG.animateColor" />
+			<xsd:element name="animateTransform" type="SVG.animateTransform" />
+			<xsd:element name="svg" type="SVG.svg" />
+			<xsd:element name="g" type="SVG.g" />
+			<xsd:element name="defs" type="SVG.defs" />
+			<xsd:element name="symbol" type="SVG.symbol" />
+			<xsd:element name="use" type="SVG.use" />
+			<xsd:element name="switch" type="SVG.switch" />
+			<xsd:element name="image" type="SVG.image" />
+			<xsd:element name="style" type="SVG.style" />
+			<xsd:element name="path" type="SVG.path" />
+			<xsd:element name="rect" type="SVG.rect" />
+			<xsd:element name="circle" type="SVG.circle" />
+			<xsd:element name="line" type="SVG.line" />
+			<xsd:element name="ellipse" type="SVG.ellipse" />
+			<xsd:element name="polyline" type="SVG.polyline" />
+			<xsd:element name="polygon" type="SVG.polygon" />
+			<xsd:element name="text" type="SVG.text" />
+			<xsd:element name="altGlyphDef" type="SVG.altGlyphDef" />
+			<xsd:element name="marker" type="SVG.marker" />
+			<xsd:element name="color-profile" type="SVG.color-profile" />
+			<xsd:element name="linearGradient" type="SVG.linearGradient" />
+			<xsd:element name="radialGradient" type="SVG.radialGradient" />
+			<xsd:element name="pattern" type="SVG.pattern" />
+			<xsd:element name="clipPath" type="SVG.clipPath" />
+			<xsd:element name="mask" type="SVG.mask" />
+			<xsd:element name="filter" type="SVG.filter" />
+			<xsd:element name="cursor" type="SVG.cursor" />
+			<xsd:element name="a" type="SVG.a" />
+			<xsd:element name="view" type="SVG.view" />
+			<xsd:element name="script" type="SVG.script" />
+			<xsd:element name="font" type="SVG.font" />
+			<xsd:element name="font-face" type="SVG.font-face" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Presentation.attrib" />
+		<xsd:attributeGroup ref="SVG.GraphicalEvents.attrib" />
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="viewBox" />
+		<xsd:attribute name="preserveAspectRatio" default="xMidYMid meet" />
+	</xsd:complexType>
+	<xsd:complexType mixed="true" name="SVG.text">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="desc" type="SVG.desc" />
+			<xsd:element name="title" type="SVG.title" />
+			<xsd:element name="metadata" type="SVG.metadata" />
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+			<xsd:element name="animateMotion" type="SVG.animateMotion" />
+			<xsd:element name="animateColor" type="SVG.animateColor" />
+			<xsd:element name="animateTransform" type="SVG.animateTransform" />
+			<xsd:element name="tspan" type="SVG.tspan" />
+			<xsd:element name="tref" type="SVG.tref" />
+			<xsd:element name="textPath" type="SVG.textPath" />
+			<xsd:element name="altGlyph" type="SVG.altGlyph" />
+			<xsd:element name="a" type="SVG.a" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Text.attrib" />
+		<xsd:attributeGroup ref="SVG.TextContent.attrib" />
+		<xsd:attributeGroup ref="SVG.Font.attrib" />
+		<xsd:attributeGroup ref="SVG.Paint.attrib" />
+		<xsd:attributeGroup ref="SVG.Color.attrib" />
+		<xsd:attributeGroup ref="SVG.Opacity.attrib" />
+		<xsd:attributeGroup ref="SVG.Graphics.attrib" />
+		<xsd:attributeGroup ref="SVG.Clip.attrib" />
+		<xsd:attributeGroup ref="SVG.Mask.attrib" />
+		<xsd:attributeGroup ref="SVG.Filter.attrib" />
+		<xsd:attributeGroup ref="SVG.GraphicalEvents.attrib" />
+		<xsd:attributeGroup ref="SVG.Cursor.attrib" />
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="x" />
+		<xsd:attribute name="y" />
+		<xsd:attribute name="dx" />
+		<xsd:attribute name="dy" />
+		<xsd:attribute name="rotate" />
+		<xsd:attribute name="textLength" />
+		<xsd:attribute name="lengthAdjust">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="spacing" />
+					<xsd:enumeration value="spacingAndGlyphs" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="transform" />
+	</xsd:complexType>
+	<xsd:complexType mixed="true" name="SVG.textPath">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="tspan" type="SVG.tspan" />
+			<xsd:element name="tref" type="SVG.tref" />
+			<xsd:element name="altGlyph" type="SVG.altGlyph" />
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+			<xsd:element name="animateColor" type="SVG.animateColor" />
+			<xsd:element name="desc" type="SVG.desc" />
+			<xsd:element name="title" type="SVG.title" />
+			<xsd:element name="metadata" type="SVG.metadata" />
+			<xsd:element name="a" type="SVG.a" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.TextContent.attrib" />
+		<xsd:attributeGroup ref="SVG.Font.attrib" />
+		<xsd:attributeGroup ref="SVG.Paint.attrib" />
+		<xsd:attributeGroup ref="SVG.Color.attrib" />
+		<xsd:attributeGroup ref="SVG.Opacity.attrib" />
+		<xsd:attributeGroup ref="SVG.Graphics.attrib" />
+		<xsd:attributeGroup ref="SVG.Clip.attrib" />
+		<xsd:attributeGroup ref="SVG.Mask.attrib" />
+		<xsd:attributeGroup ref="SVG.Filter.attrib" />
+		<xsd:attributeGroup ref="SVG.GraphicalEvents.attrib" />
+		<xsd:attributeGroup ref="SVG.Cursor.attrib" />
+		<!--
+	<xsd:attributeGroup ref="SVG.XLinkRequired.attrib" />
+-->
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="startOffset" />
+		<xsd:attribute name="textLength" />
+		<xsd:attribute name="lengthAdjust">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="spacing" />
+					<xsd:enumeration value="spacingAndGlyphs" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="method">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="align" />
+					<xsd:enumeration value="stretch" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="spacing">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="auto" />
+					<xsd:enumeration value="exact" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType mixed="true" name="SVG.title">
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.tref">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+			<xsd:element name="animateColor" type="SVG.animateColor" />
+			<xsd:element name="desc" type="SVG.desc" />
+			<xsd:element name="title" type="SVG.title" />
+			<xsd:element name="metadata" type="SVG.metadata" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.TextContent.attrib" />
+		<xsd:attributeGroup ref="SVG.Font.attrib" />
+		<xsd:attributeGroup ref="SVG.Paint.attrib" />
+		<xsd:attributeGroup ref="SVG.Color.attrib" />
+		<xsd:attributeGroup ref="SVG.Opacity.attrib" />
+		<xsd:attributeGroup ref="SVG.Graphics.attrib" />
+		<xsd:attributeGroup ref="SVG.Clip.attrib" />
+		<xsd:attributeGroup ref="SVG.Mask.attrib" />
+		<xsd:attributeGroup ref="SVG.Filter.attrib" />
+		<xsd:attributeGroup ref="SVG.GraphicalEvents.attrib" />
+		<xsd:attributeGroup ref="SVG.Cursor.attrib" />
+		<!--
+	<xsd:attributeGroup ref="SVG.XLinkRequired.attrib" />
+-->
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="x" />
+		<xsd:attribute name="y" />
+		<xsd:attribute name="dx" />
+		<xsd:attribute name="dy" />
+		<xsd:attribute name="rotate" />
+		<xsd:attribute name="textLength" />
+		<xsd:attribute name="lengthAdjust">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="spacing" />
+					<xsd:enumeration value="spacingAndGlyphs" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType mixed="true" name="SVG.tspan">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="tspan" type="SVG.tspan" />
+			<xsd:element name="tref" type="SVG.tref" />
+			<xsd:element name="altGlyph" type="SVG.altGlyph" />
+			<xsd:element name="animate" type="SVG.animate" />
+			<xsd:element name="set" type="SVG.set" />
+			<xsd:element name="animateColor" type="SVG.animateColor" />
+			<xsd:element name="desc" type="SVG.desc" />
+			<xsd:element name="title" type="SVG.title" />
+			<xsd:element name="metadata" type="SVG.metadata" />
+			<xsd:element name="a" type="SVG.a" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.TextContent.attrib" />
+		<xsd:attributeGroup ref="SVG.Font.attrib" />
+		<xsd:attributeGroup ref="SVG.Paint.attrib" />
+		<xsd:attributeGroup ref="SVG.Color.attrib" />
+		<xsd:attributeGroup ref="SVG.Opacity.attrib" />
+		<xsd:attributeGroup ref="SVG.Graphics.attrib" />
+		<xsd:attributeGroup ref="SVG.Clip.attrib" />
+		<xsd:attributeGroup ref="SVG.Mask.attrib" />
+		<xsd:attributeGroup ref="SVG.Filter.attrib" />
+		<xsd:attributeGroup ref="SVG.GraphicalEvents.attrib" />
+		<xsd:attributeGroup ref="SVG.Cursor.attrib" />
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="x" />
+		<xsd:attribute name="y" />
+		<xsd:attribute name="dx" />
+		<xsd:attribute name="dy" />
+		<xsd:attribute name="rotate" />
+		<xsd:attribute name="textLength" />
+		<xsd:attribute name="lengthAdjust">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="spacing" />
+					<xsd:enumeration value="spacingAndGlyphs" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="SVG.use">
+		<xsd:sequence>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="desc" type="SVG.desc" />
+				<xsd:element name="title" type="SVG.title" />
+				<xsd:element name="metadata" type="SVG.metadata" />
+			</xsd:choice>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="animate" type="SVG.animate" />
+				<xsd:element name="set" type="SVG.set" />
+				<xsd:element name="animateMotion" type="SVG.animateMotion" />
+				<xsd:element name="animateColor" type="SVG.animateColor" />
+				<xsd:element name="animateTransform" type="SVG.animateTransform" />
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.Conditional.attrib" />
+		<xsd:attributeGroup ref="SVG.Style.attrib" />
+		<xsd:attributeGroup ref="SVG.Presentation.attrib" />
+		<xsd:attributeGroup ref="SVG.GraphicalEvents.attrib" />
+		<!--
+	<xsd:attributeGroup ref="SVG.XLinkEmbed.attrib" />
+-->
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="x" />
+		<xsd:attribute name="y" />
+		<xsd:attribute name="width" />
+		<xsd:attribute name="height" />
+		<xsd:attribute name="transform" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.view">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="desc" type="SVG.desc" />
+			<xsd:element name="title" type="SVG.title" />
+			<xsd:element name="metadata" type="SVG.metadata" />
+		</xsd:choice>
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attributeGroup ref="SVG.External.attrib" />
+		<xsd:attribute name="viewBox" />
+		<xsd:attribute name="preserveAspectRatio" default="xMidYMid meet" />
+		<xsd:attribute name="zoomAndPan" default="magnify">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="disable" />
+					<xsd:enumeration value="magnify" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="viewTarget" />
+	</xsd:complexType>
+	<xsd:complexType name="SVG.vkern">
+		<xsd:attributeGroup ref="SVG.Core.attrib" />
+		<xsd:attribute name="u1" />
+		<xsd:attribute name="g1" />
+		<xsd:attribute name="u2" />
+		<xsd:attribute name="g2" />
+		<xsd:attribute name="k" use="required" />
+	</xsd:complexType>
+</xsd:schema>

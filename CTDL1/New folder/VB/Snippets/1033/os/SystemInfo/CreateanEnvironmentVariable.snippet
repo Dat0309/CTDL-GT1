@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Create an Environment Variable</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Creates a user environment variable that persists between program executions.</Description>
+      <Shortcut>sysCreateVar</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>Variable</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the name of the variable.</ToolTip>
+          <Default>"Variable"</Default>
+        </Literal>
+        <Literal>
+          <ID>Value</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the variable value.</ToolTip>
+          <Default>"Value"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Environment.SetEnvironmentVariable($Variable$, $Value$, EnvironmentVariableTarget.User)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

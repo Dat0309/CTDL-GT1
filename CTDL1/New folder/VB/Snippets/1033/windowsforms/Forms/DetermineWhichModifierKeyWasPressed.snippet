@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Determine Which Modifier Key Was Pressed</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Monitors for modifier keys such as the SHIFT, ALT, and CTRL keys.</Description>
+      <Shortcut>formKey</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Drawing.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>formName</ID>
+          <Type>System.Windows.Forms.Form</Type>
+          <ToolTip>Replace with a reference to a form.</ToolTip>
+          <Default>Me</Default>
+        </Object>
+        <Literal>
+          <ID>modifierKey</ID>
+          <Type>Keys</Type>
+          <ToolTip>The modifier key that is being checked for.</ToolTip>
+          <Default>Keys.Shift</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[Private Sub $formName$_KeyPress(ByVal sender As Object, _
+ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles $formName$.KeyPress
+
+    If (Control.ModifierKeys And $modifierKey$) = $modifierKey$ Then
+
+    End If
+
+End Sub
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

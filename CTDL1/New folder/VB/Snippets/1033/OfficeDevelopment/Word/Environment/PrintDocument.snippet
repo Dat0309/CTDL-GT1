@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Print a Word Document</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Sets up the printer options and prints a Word document.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Word.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Word = Microsoft.Office.Interop.Word</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>background</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True to print the document in the background. Leave blank to omit this optional parameter.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>append</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True to append the document to the file specified by the OutputFileName argument; false to overwrite the contents of OutputFileName.  Leave blank to omit the parameter.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>range</ID>
+          <Type>Microsoft.Office.Interop.Word.WdPrintOutRange</Type>
+          <ToolTip>Replace with the page range. Can be any Word.WdPrintOutRange constant, or leave blank to omit.</ToolTip>
+          <Default>wdPrintAllDocument</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>outputFileName</ID>
+          <Type>String</Type>
+          <ToolTip>If PrintToFile is true, replace with the path and file name of the output file. Leave blank otherwise.</ToolTip>
+          <Default>"MyOutputFile"</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>fromPage</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with the starting page number when Range is set to Word.wdPrintFromTo. Leave blank otherwise.</ToolTip>
+          <Default>1</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>toPage</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with the ending page number when Range is set to Word.wdPrintFromTo. Leave blank otherwise.</ToolTip>
+          <Default>10</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>item</ID>
+          <Type>Word.WdPrintOutItem</Type>
+          <ToolTip>Replace with the item to be printed. Can be any Word.WdPrintOutItem constant. Leave blank to omit this argument.</ToolTip>
+          <Default>wdPrintDocumentContent</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>copies</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with the number of copies to be printed, or leave blank to use the default value.</ToolTip>
+          <Default>1</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>pages</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the page numbers and page ranges to be printed, separated by commas. For example, "2, 6-10" prints page 2 and pages 6 through 10. Leave blank to omit.</ToolTip>
+          <Default>"1-10"</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>pageType</ID>
+          <Type>Word.WdPrintOutPages</Type>
+          <ToolTip>Replace with the type of pages to be printed. Can be any Word.WdPrintOutPages constant, or leave blank to omit.</ToolTip>
+          <Default>wdPrintAllPages</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>printToFile</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True to send printer instructions to a file. Make sure to specify a file name with outputFileName.</ToolTip>
+          <Default>False</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>collate</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True to print all pages of the document before printing the next copy, when printing multiple copies of a document.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>manualDuplexPrint</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True to print a two-sided document on a printer without a duplex printing kit.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>printZoomColumn</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with the number of pages you want Word to fit horizontally on one page. Can be 1, 2, 3, or 4, or leave blank to omit.</ToolTip>
+          <Default>2</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>printZoomRow</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with the number of pages you want Word to fit vertically on one page. Can be 1, 2, or 4, or leave blank to omit.</ToolTip>
+          <Default>2</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>printZoomPaperWidth</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with the width to which you want Word to scale printed pages, in twips (20 twips = 1 point; 72 points = 1 inch).</ToolTip>
+          <Default>10</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>printZoomPaperHeight</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with the height to which you want Word to scale printed pages, in twips (20 twips = 1 point; 72 points = 1 inch).</ToolTip>
+          <Default>20</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>document</ID>
+          <Type>Microsoft.Office.Interop.Word.Document</Type>
+          <ToolTip>Replace with the document to print.</ToolTip>
+          <Default>document</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>ActivePrinterMacGX</ID>
+          <Type>Object</Type>
+          <ToolTip>This argument is available only in Microsoft Office Macintosh Edition. For additional information about this argument, consult the language reference Help included with Microsoft Office Macintosh Edition.</ToolTip>
+          <Default>ActivePrinterMacGX</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="" Delimiter="$"><![CDATA[
+$document$.PrintOut( Background:=$background$, _
+					 Append:=$append$, _
+					 Range:=$range$, _
+					 OutputFileName:=$outputFileName$, _
+					 From:=$fromPage$, _
+					 To:$toPage$, _
+					 Item:=Word.WdPrintOutItem.$item$, _
+				 	 Copies:=$copies$, _
+					 Pages:=$pages$, _
+					 PageType:=Word.WdPrintOutPages.$pageType$, _
+					 PrintToFile:=$printToFile$, _
+					 Collate:=$collate$, _
+					 ActivePrinterMacGX:=$ActivePrinterMacGX$, _
+					 ManualDuplexPrint:=$manualDuplexPrint$, _
+					 PrintZoomColumn:=$printZoomColumn$, _
+					 PrintZoomRow:=$printZoomRow$, _
+					 PrintZoomPaperWidth:=$printZoomPaperWidth$, _ 
+					 PrintZoomPaperHeight:=$printZoomPaperHeight$)
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

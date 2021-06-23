@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="Microsoft.VisualStudio.VisualBasic.EditorComponents">
+    <Name>Visual Basic Editor</Name>
+    <Author>Microsoft</Author>
+    <Version>11.0</Version>
+    <Description>Visual Basic Editor</Description>
+    <Locale>1033</Locale>
+    <SupportedProducts>
+      <VisualStudio Version="11.0">
+        <Edition>Pro</Edition>
+        <Edition>VBExpress</Edition>
+        <Edition>VWDExpress</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5" />
+    <SystemComponent>true</SystemComponent>
+  </Identifier>
+
+  <References />
+
+  <Content>
+    <MefComponent>Microsoft.VisualBasic.Editor.dll</MefComponent>
+    <MefComponent>Microsoft.VisualStudio.VisualBasic.LanguageService.dll</MefComponent>
+  </Content>
+</Vsix>

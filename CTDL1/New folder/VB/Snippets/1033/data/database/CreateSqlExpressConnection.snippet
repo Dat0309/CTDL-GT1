@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Create a local SQLConnection to SQL Express</Title>
+      <Author>Microsoft</Author>
+      <Description>Creates a SQL Connection providing replacements for the typical connection name/value pairs for a SQL Express Connection using User Instance=True</Description>
+      <Shortcut>adoCreateSqlExpConn</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Data.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Xml.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Data</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Data.SqlClient</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>dataBaseName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace this with the file name of the database.</ToolTip>
+          <Default>Northwind</Default>
+        </Literal>
+        <Literal>
+          <ID>dataDirectory</ID>
+          <Type>String</Type>
+          <ToolTip>To use the DataDirectory created as part of Click Once, use the |DataDirectory| macro.  Replace this macro if you wish to use a specific directory</ToolTip>
+          <Default>|DataDirectory|</Default>
+        </Literal>
+        <Object>
+          <ID>conn</ID>
+          <Type>SqlConnection</Type>
+          <ToolTip>Replace this with the name of the connection object.</ToolTip>
+          <Default>conn</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $conn$ As New SqlConnection()
+$conn$.ConnectionString = "Data Source=.\SQLEXPRESS;AttachDbFilename=$dataDirectory$\$dataBaseName$.mdf;Integrated Security=True;User Instance=True"
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

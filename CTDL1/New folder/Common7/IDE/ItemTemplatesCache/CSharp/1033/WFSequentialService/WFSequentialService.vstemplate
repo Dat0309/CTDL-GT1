@@ -1,0 +1,40 @@
+﻿<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <DefaultName>Workflow.cs</DefaultName>
+    <Name Package="{2c0f61bf-3c36-468c-94b8-4021965749e7}" ID="121" />
+    <Description Package="{2c0f61bf-3c36-468c-94b8-4021965749e7}" ID="122" />
+    <Icon Package="{2c0f61bf-3c36-468c-94b8-4021965749e7}" ID="401" />
+    <TemplateID>Microsoft.CSharp.WFSequentialItem</TemplateID>
+    <ProjectType>CSharp</ProjectType>
+    <TemplateGroupID>WorkflowItemTemplateGroupID</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+    <RequiredFrameworkVersion>3.5</RequiredFrameworkVersion>
+    <MaxFrameworkVersion>3.5</MaxFrameworkVersion>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>mscorlib</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Runtime.Serialization</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.ServiceModel</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.WorkflowServices</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem SubType="Code" TargetFileName="I$fileinputname$.cs" ReplaceParameters="true">IWorkflow.cs</ProjectItem>
+    <ProjectItem SubType="Code" TargetFileName="$fileinputname$.cs" ReplaceParameters="true">Workflow.cs</ProjectItem>
+    <ProjectItem SubType="Code" TargetFileName="$fileinputname$.designer.cs" ReplaceParameters="true">Workflow.designer.cs</ProjectItem>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.ServiceModel.Core, Version=12.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35, processorArchitecture=MSIL</Assembly>
+    <FullClassName>Microsoft.VisualStudio.ServiceModel.AddWFServiceItemWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

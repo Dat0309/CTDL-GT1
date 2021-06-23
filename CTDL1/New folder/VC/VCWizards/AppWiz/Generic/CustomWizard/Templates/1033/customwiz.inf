@@ -1,0 +1,5 @@
+readme.txt
+[!if CUSTOM_WIZARD_UI]
+sample.txt
+[!endif]
+

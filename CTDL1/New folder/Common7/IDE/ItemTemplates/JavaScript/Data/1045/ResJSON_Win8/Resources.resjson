@@ -1,0 +1,6 @@
+﻿// Szczegółowe informacje na temat lokalizowania aplikacji systemu Windows: http://go.microsoft.com/fwlink/?LinkId=212836
+
+{
+    "greeting"              : "Witaj świecie!",
+    "_greeting.comment"     : "To jest komentarz do lokalizatora"
+}

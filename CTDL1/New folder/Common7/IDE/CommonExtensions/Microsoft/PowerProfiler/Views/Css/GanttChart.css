@@ -1,0 +1,205 @@
+﻿.timelineViewGroup {
+    -ms-grid-column: 1;
+    -ms-grid-columns: 1fr max-content;
+    -ms-grid-row: 1;
+    -ms-grid-rows: auto 4px 1fr;
+    height: 100%;
+    width: 100%;
+}
+
+/* We dont display gantt chart header
+       .timelineViewGroup .timelineLabel {
+        -ms-grid-column: 1;
+        -ms-grid-row: 1;
+        -ms-grid-row-align: end;
+        font-weight: 600;
+        width: 100%;
+    }*/
+
+.emptyHeader {
+    background-color: #cccedb; /*[{plugin-treeview-content-inactive-selected-background-color}]*/
+}
+
+.timelineViewGroup .timelineSort {
+    -ms-grid-column: 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-align: center;
+    margin-bottom: 2px;
+}
+
+    .timelineViewGroup .timelineSort .timelineSortLabel {
+        padding-right: 5px;
+    }
+
+    .timelineViewGroup .timelineSort .timelineSortSelector {
+        font-family: Segoe UI, Tahoma, Arial, Verdana; /*[{plugin-font-family}]*/
+        font-size: 12px; /*[{plugin-font-size}]*/
+    }
+
+        .timelineViewGroup .timelineSort .timelineSortSelector option {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+.timelineViewGroup .timelineViewAndDetails {
+    -ms-grid-column-span: 2;
+    -ms-grid-columns: 1fr auto;
+    -ms-grid-row: 3;
+    -ms-grid-rows: auto 1fr;
+    border-top: 1px solid grey; /*[1px solid {plugin-responsiveness-graph-border}]*/
+    display: -ms-grid;
+    height: 100%;
+    width: 100%;
+}
+
+    .timelineViewGroup .timelineViewAndDetails .timelineEventHeaderLabel {
+        -ms-grid-row-align: center;
+        font-weight: 600;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .timelineViewGroup .timelineViewAndDetails .timelineEventHeaderDivider {
+        background-color: #d3d3d3; /*[{plugin-perftools-splitter}]*/
+        height: 100%;
+        position: relative;
+        width: 5px;
+    }
+
+
+    .timelineViewGroup .timelineViewAndDetails .timelineRuler {
+        -ms-grid-column: 1;
+        -ms-grid-row: 1;
+        border-bottom: 1px solid #c0c0c0;
+        overflow: hidden;
+    }
+
+    .timelineViewGroup .timelineViewAndDetails .timelineView {
+        -ms-grid-column: 1;
+        -ms-grid-row: 2;
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+
+        .timelineViewGroup .timelineViewAndDetails .timelineView .verticalRulerLine {
+            border-right-color: #c0c0c0; /*[{diagnostics-host-graph-line}]*/
+            border-right-width: 1px;
+            border-right-style: solid;
+            height: 100%;
+            margin-top: 1px;
+            position: absolute;
+            top: 0px;
+            width: 0px;
+        }
+
+    .timelineViewGroup .timelineViewAndDetails .timelineDetailsPaneContainer {
+        -ms-grid-column: 2;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 2;
+    }
+
+.eventDetails {
+    background-color: #ff00ff; /*[{plugin-perftools-detail-pane}]*/
+    border-left: 1px solid #c0c0c0; /*[1px solid {plugin-responsiveness-graph-border}]*/
+    height: 100%;
+    overflow-y: auto;
+    width: 280px;
+}
+
+    .eventDetails .eventDetailsHead {
+        color: white;
+        font-weight: 600;
+        height: 1.5em;
+        overflow: hidden;
+        padding: 4px 10px 4px 10px;
+        margin-bottom: 5px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .eventDetails .eventDetailsTable {
+        display: table;
+        margin-left: 10px;
+        margin-right: 10px;
+        table-layout: fixed;
+        width: 260px;
+    }
+
+    .eventDetails .eventRow {
+        display: table-row;
+    }
+
+    .eventDetails .eventCell {
+        display: table-cell;
+        overflow: hidden;
+        padding: 5px 0px 5px 0px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 50%;
+    }
+
+        .eventDetails .eventCell.eventCellValue {
+            padding-left: 20px;
+        }
+
+    .eventDetails .detailSeparator {
+        border-bottom: 1px solid #c0c0c0; /*[1px solid {plugin-perftools-splitter}]*/
+        height: 0px;
+        left: 0px;
+        margin: 5px 10px 5px 10px;
+        width: 100%;
+    }
+
+    .eventDetails .eventDetailsDescription {
+        margin: 5px 10px 0px 10px;
+    }
+
+.timelineView > .timelineFocus {
+    height: 0px;
+    width: 100%;
+}
+
+.eventDataTemplate {
+    -ms-grid-columns: 200px 5px 1fr;
+    -ms-grid-rows: 1fr;
+    display: -ms-grid;
+}
+
+.timelineView .eventDataTemplateNameCell {
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    position: relative;
+}
+
+    .timelineView .eventDataTemplateNameCell .eventDataTemplateName {
+        left: 20px;
+        margin-right: 20px;
+        overflow: hidden;
+        position: relative;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+.timelineView .eventDataTemplateDataCell {
+    -ms-flex-align: center;
+    -ms-grid-column: 3;
+    -ms-grid-row: 1;
+    display: -ms-flexbox;
+    height: 100%;
+    overflow: hidden;
+}
+
+    .timelineView .eventDataTemplateDataCell .eventBar {
+        height: 1em;
+        top: 0.1em;
+    }
+
+    .timelineView .eventDataTemplateDataCell .durationText {
+        margin-left: 5px;
+        white-space: nowrap;
+    }
+
+.eventBarColor {
+    background-color: #0072c6;
+}

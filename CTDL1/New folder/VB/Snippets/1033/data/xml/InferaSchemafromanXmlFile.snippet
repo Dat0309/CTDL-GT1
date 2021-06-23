@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Infer and create a schema from an XML file</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Infers a schema from an existing XML file and saves it as a seperate schema file.</Description>
+      <Shortcut>xmlInfer</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Xml.dll</Assembly>
+          <Url />
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.IO</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Xml</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Xml.Schema</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+	<Literal>
+	  <ID>XmlFile</ID>
+	  <Type>String</Type>
+	  <ToolTip>Replace with the XML file to infer schema from.</ToolTip>
+	  <Default>"sample.xml"</Default>
+	</Literal>
+	<Literal>
+	  <ID>XsdFile</ID>
+	  <Type>String</Type>
+	  <ToolTip>Replace with the XSD file name to save the schema to.</ToolTip>
+	  <Default>"sampleSchema.xsd"</Default>
+	</Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim infer = New XmlSchemaInference()
+Dim sc = New XmlSchemaSet()
+sc = infer.InferSchema(New XmlTextReader($xmlFile$))
+
+Dim w = XmlWriter.Create(New StreamWriter($XsdFile$))
+For Each schemafile As XmlSchema In sc.Schemas()
+    schemafile.Write(w)
+Next]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

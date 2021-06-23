@@ -1,0 +1,44 @@
+﻿[$RootKey$\Packages\{E1E64066-4FED-4364-9E3F-A4CD6F74E1B9}]
+@="Microsoft.VisualStudio.SharePoint.BusinessConnectivityServices.VSPackage, Microsoft.VisualStudio.SharePoint.BusinessConnectivityServices, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"InprocServer32"="$WinDir$\SYSTEM32\MSCOREE.DLL"
+"Class"="Microsoft.VisualStudio.SharePoint.BusinessConnectivityServices.VSPackage"
+"CodeBase"="$PackageFolder$\Microsoft.VisualStudio.SharePoint.BusinessConnectivityServices.dll"
+
+[$RootKey$\Menus]
+"{E1E64066-4FED-4364-9E3F-A4CD6F74E1B9}"=", 1000.ctmenu, 1"
+
+[$RootKey$\Editors\{E57A2875-15D3-4F26-95AC-8554533D2968}]
+@="SharePoint External Content Type Designer"
+"DisplayName"="#101"
+"Package"="{E1E64066-4FED-4364-9E3F-A4CD6F74E1B9}"
+"CommonPhysicalViewAttributes"=dword:00000003
+
+[$RootKey$\Languages\File Extensions\.ect]
+@="{E57A2875-15D3-4F26-95AC-8554533D2968}"
+
+[$RootKey$\Editors\{E57A2875-15D3-4F26-95AC-8554533D2968}\Extensions]
+"ect"=dword:00000040
+
+[$RootKey$\Editors\{32CC8DFA-2D70-49b2-94CD-22D57349B778}\Extensions]
+"ect"=dword:00000060
+
+[$RootKey$\Editors\{E57A2875-15D3-4F26-95AC-8554533D2968}\LogicalViews]
+"{7651a702-06e5-11d1-8ebd-00a0c90f26ea}"=""
+
+[$RootKey$\Projects\{f184b08f-c81c-45f6-a57f-5abd9991f28f}\FileExtensions\.ect]
+"EditorFactoryNotify"="{32cc8dfa-2d70-49b2-94cd-22d57349b778}"
+[$RootKey$\Projects\{fae04ec0-301f-11d3-bf4b-00c04f79efbc}\FileExtensions\.ect]
+"EditorFactoryNotify"="{32cc8dfa-2d70-49b2-94cd-22d57349b778}"
+
+[$RootKey$\XmlChooserFactory\ect]
+"DefaultLogicalView"="{7651A702-06E5-11D1-8EBD-00A0C90F26EA}"
+"Extension"="ect"
+"Namespace"="http://schemas.microsoft.com/windows/2007/BusinessDataCatalog"
+"{7651A700-06E5-11D1-8EBD-00A0C90F26EA}"="{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+"{7651A701-06E5-11D1-8EBD-00A0C90F26EA}"="{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+"{7651A702-06E5-11D1-8EBD-00A0C90F26EA}"="{E57A2875-15D3-4F26-95AC-8554533D2968}"
+"{7651A703-06E5-11D1-8EBD-00A0C90F26EA}"="{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+
+[$RootKey$\BindingPaths\{00000000-0000-0000-0000-000000000000}]
+"$PackageFolder$"=""
+

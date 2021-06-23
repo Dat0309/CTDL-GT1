@@ -1,0 +1,33 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>label</Title>
+    <Author>Microsoft Corporation</Author>
+    <Shortcut>label</Shortcut>
+    <AlternativeShortcuts>
+      <Shortcut>button</Shortcut>
+      <Shortcut>linkbutton</Shortcut>
+      <Shortcut>literal</Shortcut>
+      <Shortcut Value="label">asp:label</Shortcut>
+      <Shortcut Value="button">asp:button</Shortcut>
+      <Shortcut Value="linkbutton">asp:linkbutton</Shortcut>
+      <Shortcut Value="literal">asp:literal</Shortcut>
+    </AlternativeShortcuts>
+    <Description>Markup snippet for a control that contains text</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <FileExtensions>
+      aspx;master;ascx
+    </FileExtensions>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>text</ID>
+        <ToolTip>text</ToolTip>
+        <Default>text</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="html"><![CDATA[<asp:$shortcut$ text="$text$" runat="server" />$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

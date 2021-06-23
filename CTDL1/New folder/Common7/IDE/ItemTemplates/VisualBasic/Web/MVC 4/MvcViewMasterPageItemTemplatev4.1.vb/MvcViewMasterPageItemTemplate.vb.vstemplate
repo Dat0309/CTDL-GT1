@@ -1,0 +1,22 @@
+﻿<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+    <TemplateData>
+        <DefaultName>ViewMasterPage.Master</DefaultName>
+        <Name Package="{141DA93E-88A7-45D5-B15B-89117F514D64}" ID="21106"/>
+        <Description Package="{141DA93E-88A7-45D5-B15B-89117F514D64}" ID="21107"/>
+        <Icon Package="{39c9c826-8ef8-4079-8c95-428f5b1c323f}" ID="4709"/>
+        <ProjectType>VisualBasic</ProjectType>
+        <SortOrder>5</SortOrder>
+        <NumberOfParentCategoriesToRollUp>2</NumberOfParentCategoriesToRollUp>
+        <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+        <TemplateID>MvcViewMasterPageItemTemplate.vb.vstemplate.v401</TemplateID>
+        <TemplateGroupID>MVC4</TemplateGroupID>
+        <ShowByDefault>false</ShowByDefault>
+    </TemplateData>
+    <TemplateContent>
+        <CustomParameters>
+            <CustomParameter Name="$language$" Value="VB" />
+        </CustomParameters>
+        <References />
+        <ProjectItem SubType="" TargetFileName="$fileinputname$.Master" ReplaceParameters="true">Views\Shared\ViewMasterPage.Master</ProjectItem>
+    </TemplateContent>
+</VSTemplate>

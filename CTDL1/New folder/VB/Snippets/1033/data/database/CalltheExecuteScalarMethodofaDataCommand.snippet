@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Call the ExecuteScalar Method of a SqlCommand</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Executes a SQL statement that returns a single value using the SqlCommand.ExecuteScalar method of an existing data command.</Description>
+      <Shortcut>adoExecScalar</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Data.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Xml.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Data</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Data.SqlClient</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>conn</ID>
+          <Type>System.Data.SqlClient.SqlConnection</Type>
+          <ToolTip>Replace with an existing connection object.</ToolTip>
+          <Default>conn</Default>
+        </Object>
+        <Object>
+          <ID>cmd</ID>
+          <Type>System.Data.SqlClient.SqlCommand</Type>
+          <ToolTip>The name of an existing SqlCommand to execute</ToolTip>
+          <Default>cmd</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim result As Object
+Dim previousConnectionState As ConnectionState = $conn$.State
+Try
+	If $conn$.State = ConnectionState.Closed Then
+		$conn$.Open()
+	End If
+	result = $cmd$.ExecuteScalar()
+Finally
+    If previousConnectionState = ConnectionState.Closed Then
+        $conn$.Close()
+    End If
+End Try
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

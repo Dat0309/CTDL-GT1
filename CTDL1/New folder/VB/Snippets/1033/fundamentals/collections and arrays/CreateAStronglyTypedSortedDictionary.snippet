@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Create a sorted dictionary.</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Creates a sorted dictionary to hold a specific type of items.</Description>
+      <Shortcut>colCreateSort</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>keyType</ID>
+          <ToolTip>Type of key.</ToolTip>
+          <Default>Integer</Default>
+        </Literal>
+        <Literal>
+          <ID>itemType</ID>
+          <ToolTip>Replace with the type of item the collection should hold.</ToolTip>
+          <Default>String</Default>
+        </Literal>
+        <Literal>
+          <ID>storageVar</ID>
+          <ToolTip>Replace with an identifier for the backing storage.</ToolTip>
+          <Default>sortedStudents</Default>
+        </Literal>
+        <Literal>
+          <ID>keyValue1</ID>
+          <ToolTip>Replace with the key for the first value.</ToolTip>
+          <Default>1</Default>
+        </Literal>
+        <Literal>
+          <ID>keyValue2</ID>
+          <ToolTip>Replace with the key for the second value.</ToolTip>
+          <Default>2</Default>
+        </Literal>
+        <Literal>
+          <ID>itemValue1</ID>
+          <ToolTip>Replace with the item for the first value.</ToolTip>
+          <Default>"Mary Chase"</Default>
+        </Literal>
+        <Literal>
+          <ID>itemValue2</ID>
+          <ToolTip>Replace with the item for the second value.</ToolTip>
+          <Default>"Barnaby Williams"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[        ' Backing storage -- a generic dictionary
+        Dim $storageVar$ As New SortedDictionary(Of $keyType$, $itemType$)
+
+        ' Add items to the dictionary
+        $storageVar$.Add($keyValue1$, $itemValue1$)
+        $storageVar$.Add($keyValue2$, $itemValue2$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

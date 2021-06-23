@@ -1,0 +1,21 @@
+﻿// 如需當地語系化 Windows 應用程式的詳細資訊，請參閱: http://go.microsoft.com/fwlink/?LinkId=212836
+
+{
+    "Section1": "區段 1",
+    "Section1Subtext": "Lorem ipsum dolor sit nonumy sed consectetuer ising elit, sed diam",
+    "Section1Description": "Lorem ipsum dolor sit amet, consectetur ising elit, sed diam nonummy nibh uismod tincidunt ut laoreet suscipit lobortis nisl ut wisi quipexerci quis consequat minim veniam, quis nostrud. exerci tation ullam corper.",
+
+    "Section2": "區段 2",
+    "Section2ItemTitle": "項目標題",
+    "Section2ItemSubtitle": "項目子標題",
+    "Section2Subtext": "Quisque in porta lorem dolor amet sed consectetuer ising elit, sed diam non my nibh uis mod wisi quip.",
+    "Section2Description": "Lorem ipsum dolor sit amet, consectetur ising elit, sed diam nonummy nibh uismod tincidunt ut laoreet suscipit lobortis nisl ut wisi quipexerci quis consequat minim veniam, quis nostrud. exerci tation ullam corper.",
+    
+    "Section3": "區段 3",
+    
+    "Section4": "區段 4",
+    "Section4Description": "Lorem ipsum dolor sit amet, consectetur ising elit, sed diam nonummy nibh uismod tincidunt ut laoreet suscipit lobortis nisl ut wisi quipexerci quis consequat minim veniam, quis nostrud. exerci tation ullam corper.",
+
+    "DescriptionText": "說明文字:",
+    "SectionSubtitle": "章節子標題"
+}

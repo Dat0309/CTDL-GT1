@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Attach a Schema to a Document</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Attaches a schema from Word's schema library to a document.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Word.dll</Assembly>
+          <Url></Url>
+        </Reference>
+        <Reference>
+          <Assembly>Microsoft.Office.Tools.Word.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Word = Microsoft.Office.Interop.Word</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Office.Tools.Word</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object Editable="true">
+          <ID>xmlNamespace</ID>
+          <Type>Microsoft.Office.Interop.Word.XMLNamespace</Type>
+          <ToolTip>Replace with the XMLNamespace object to attach to the document. Can be newly created, or a member of the XMLNamespaces collection.</ToolTip>
+          <Default>xmlNamespace</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>document</ID>
+          <Type>Microsoft.Office.Interop.Word.Document</Type>
+          <ToolTip>Replace with a Word.Document object to attach the schema to.</ToolTip>
+          <Default>document</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="" Delimiter="$"><![CDATA[
+' The $document$ object must be a Microsoft.Office.Interop.Word.Document object.
+' If you are using the Microsoft.Office.Tools.Word.Document class to handle your
+' document, use the InnerObject property to get the interop object.
+$xmlNamespace$.AttachToDocument($document$)
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

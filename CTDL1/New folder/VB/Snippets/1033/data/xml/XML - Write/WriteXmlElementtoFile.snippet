@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Write an XML element to file</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Writes an XML element to a file.</Description>
+      <Shortcut>xmlSave</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Xml.Linq.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Xml.Linq</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>File</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the text file name.</ToolTip>
+          <Default>save.xml</Default>
+        </Literal>      
+        <Object>
+          <ID>XmlEle</ID>
+          <Type>XElement</Type>
+          <ToolTip>Replace with an XElement instance.</ToolTip>
+          <Default>xmlEle</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[$XmlEle$.Save($File$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,19 @@
+﻿.stackPanel {
+    height: 100%;
+    /*sometimes scroll bar width value is nonzero even when the scroll bar is not showed. So, showing scroll bar always for now
+        (this value is used by ruler to leave out the scrollbar width space while rendering)*/
+    overflow-y: scroll;
+    overflow-x: auto;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+    .stackPanel .contentSizer {
+        height: 1px;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        width: 1px;
+    }

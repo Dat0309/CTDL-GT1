@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Bind Data to a Bookmark</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Binds data to a Word Bookmark object through a BindingSource object.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Word.dll</Assembly>
+          <Url></Url>
+        </Reference>
+        <Reference>
+          <Assembly>Microsoft.Office.Tools.Word.dll</Assembly>
+          <Url></Url>
+        </Reference>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Word = Microsoft.Office.Interop.Word</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Office.Tools.Word</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>dataMember</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the member of the data source to bind to, if needed.</ToolTip>
+          <Default>"DataMember"</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>fieldName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the field of the data member to display in the bookmark.</ToolTip>
+          <Default>"FieldName"</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>bindingSource</ID>
+          <Type>System.Windows.Forms.BindingSource</Type>
+          <ToolTip>Replace with a binding source to use to set up the data binding.</ToolTip>
+          <Default>bindingSource</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>dataSource</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a data source to bind to. Can be any type that can be bound to, including datasets and data tables, as well as custom types.</ToolTip>
+          <Default>dataSource</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>bookmark</ID>
+          <Type>Microsoft.Office.Tools.Word.Bookmark</Type>
+          <ToolTip>Replace with the bookmark to data bind to.</ToolTip>
+          <Default>bookmark</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="" Delimiter="$"><![CDATA[
+Dim $bindingSource$ As BindingSource = new BindingSource()
+$bindingSource$.DataSource = $dataSource$
+$bindingSource$.DataMember = $dataMember$
+$bookmark$.DataBindings.Add("Text", $bindingSource$, $fieldName$)
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

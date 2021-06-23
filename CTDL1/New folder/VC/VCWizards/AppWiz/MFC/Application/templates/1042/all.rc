@@ -1,0 +1,1856 @@
+//Microsoft Visual C++에서 생성한 리소스 스크립트입니다.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE 2 리소스에서 생성되었습니다.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+#include "verrsrc.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#ifdef APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "#include ""verrsrc.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE
+BEGIN
+[!if COMPOUND_DOC_NONE]
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+[!endif]
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_[!output LANG_SUFFIX])\r\n"
+    "LANGUAGE [!output PRIMARY_LANG_ID], [!output SUB_LANG_ID]\r\n"
+    "#include ""[!output RES_PATH]\\[!output RC2_FILE_NAME].rc2""  // Microsoft Visual C++ 이외의 다른 도구에서 편집한 리소스입니다.\r\n"
+    "#include ""[!output MFC_RC_INCLUDE_PREFIX]afxres.rc""      // 표준 구성 요소\r\n"
+[!if PRINTING]
+    "#include ""[!output MFC_RC_INCLUDE_PREFIX]afxprint.rc""    // 인쇄 미리 보기 리소스\r\n"
+[!endif]
+[!if CONTAINER || CONTAINER_SERVER]
+    "#include ""[!output MFC_RC_INCLUDE_PREFIX]afxolecl.rc""    // OLE 컨테이너 리소스\r\n"
+[!endif]
+[!if CONTAINER_SERVER || FULL_SERVER || MINI_SERVER]
+    "#include ""[!output MFC_RC_INCLUDE_PREFIX]afxolesv.rc""    // OLE 서버 리소스\r\n"
+[!endif]
+[!if OLEDB || ODBC]
+    "#include ""[!output MFC_RC_INCLUDE_PREFIX]afxdb.rc""        // 데이터베이스 리소스\r\n"
+[!endif]
+[!if RIBBON_TOOLBAR || MENUBAR_TOOLBAR || APP_TYPE_TABBED_MDI]
+    "#if !defined(_AFXDLL)\r\n"
+[!if !PRINTING]
+    "#include ""[!output MFC_RC_INCLUDE_PREFIX]afxprint.rc""        // 인쇄 미리 보기 리소스\r\n"
+[!endif]
+    "#include ""[!output MFC_RC_INCLUDE_PREFIX]afxribbon.rc""        // MFC 리본 및 컨트롤 막대 리소스\r\n"
+    "#endif\r\n"
+[!endif]
+    "#endif\r\n"
+[!if AUTOMATION]
+    "1 TYPELIB ""[!output SAFE_IDL_NAME].tlb""\r\n"
+[!endif]
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 아이콘
+//
+
+// 응용 프로그램 아이콘이 모든 시스템에서 일관된 상태를 유지하도록 하기 위해
+// 가장 낮은 ID 값을 갖는 아이콘이 맨 처음 배치됩니다.
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_[!output LANG_SUFFIX])
+LANGUAGE [!output PRIMARY_LANG_ID], [!output SUB_LANG_ID]
+IDR_MAINFRAME           ICON         "[!output RES_PATH]\\[!output PROJECT_NAME].ico"
+[!if DOCVIEW && !APP_TYPE_DLG]
+IDR_[!output SAFE_DOC_TYPE_NAME]TYPE         ICON         "[!output RES_PATH]\\[!output PROJECT_NAME]Doc.ico"
+[!endif]
+#endif
+[!if ADV_DOCKING_EXPLORER]
+IDI_FILE_VIEW           ICON         "[!output RES_PATH]\\file_view.ico"
+IDI_FILE_VIEW_HC        ICON         "[!output RES_PATH]\\file_view_hc.ico"
+IDI_CLASS_VIEW          ICON         "[!output RES_PATH]\\class_view.ico"
+IDI_CLASS_VIEW_HC       ICON         "[!output RES_PATH]\\class_view_hc.ico"
+[!endif]
+[!if ADV_DOCKING_OUTPUT]
+IDI_OUTPUT_WND          ICON         "[!output RES_PATH]\\output_wnd.ico"
+IDI_OUTPUT_WND_HC       ICON         "[!output RES_PATH]\\output_wnd_hc.ico"
+[!endif]
+[!if ADV_DOCKING_PROPERTIES]
+IDI_PROPERTIES_WND      ICON         "[!output RES_PATH]\\properties_wnd.ico"
+IDI_PROPERTIES_WND_HC   ICON         "[!output RES_PATH]\\properties_wnd_hc.ico"
+[!endif]
+[!if DOCKING_TOOLBAR || TOOLBAR_STYLE_REBAR || MENUBAR_TOOLBAR || RIBBON_TOOLBAR]
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 비트맵
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+[!if MENUBAR_TOOLBAR || RIBBON_TOOLBAR]
+IDR_MAINFRAME_256       BITMAP                  "res\\Toolbar256.bmp"
+[!endif]
+[!if CONTAINER_SERVER || FULL_SERVER || MINI_SERVER]
+[!if APP_TYPE_MDI || APP_TYPE_TABBED_MDI]
+IDR_[!output SAFE_DOC_TYPE_NAME]TYPE_SRVR_IP  BITMAP      "res\\IToolbar.bmp"
+[!if MENUBAR_TOOLBAR || RIBBON_TOOLBAR]
+IDR_[!output SAFE_DOC_TYPE_NAME]TYPE_SRVR_IP_256  BITMAP  "res\\IToolbar256.bmp"
+[!endif]
+[!else]
+IDR_SRVR_INPLACE        BITMAP                  "res\\IToolbar.bmp"
+[!if MENUBAR_TOOLBAR || RIBBON_TOOLBAR]
+IDR_SRVR_INPLACE_256    BITMAP                  "res\\IToolbar256.bmp"
+[!endif]
+[!endif]
+[!endif]
+[!if RIBBON_TOOLBAR]
+IDB_MAIN                BITMAP                  "res\\main.bmp"
+IDB_FILELARGE           BITMAP                  "res\\filelarge.bmp"
+IDB_FILESMALL           BITMAP                  "res\\filesmall.bmp"
+IDB_WRITELARGE          BITMAP                  "res\\writelarge.bmp"
+IDB_WRITESMALL          BITMAP                  "res\\writesmall.bmp"
+IDB_BUTTONS             BITMAP                  "res\\buttons.bmp"
+[!endif]
+[!if ADV_DOCKING_EXPLORER]
+IDR_SORT                BITMAP                  "res\\sort.bmp"
+IDB_SORT_24             BITMAP                  "res\\sort_hc.bmp"
+IDB_FILE_VIEW           BITMAP                  "res\\fileview.bmp"
+IDB_FILE_VIEW_24        BITMAP                  "res\\fileview_hc.bmp"
+IDB_CLASS_VIEW          BITMAP                  "res\\classview.bmp"
+IDB_CLASS_VIEW_24       BITMAP                  "res\\classview_hc.bmp"
+IDR_EXPLORER            BITMAP                  "res\\explorer.bmp"
+IDB_EXPLORER_24         BITMAP                  "res\\explorer_hc.bmp"
+IDR_MENU_IMAGES         BITMAP                  "res\\menuimages.bmp"
+IDB_MENU_IMAGES_24      BITMAP                  "res\\menuimages_hc.bmp"
+[!endif]
+[!if ADV_DOCKING_PROPERTIES]
+IDR_PROPERTIES          BITMAP                  "res\\properties.bmp"
+IDB_PROPERTIES_HC       BITMAP                  "res\\properties_hc.bmp"
+[!endif]
+[!if ADV_DOCKING_NAVIGATION]
+IDB_NAVIGATION_LARGE    BITMAP                  "res\\nav_large.bmp"
+IDB_NAVIGATION_LARGE_HC BITMAP                  "res\\nav_large_hc.bmp"
+IDB_PAGES               BITMAP                  "res\\pages.bmp"
+IDB_PAGES_HC            BITMAP                  "res\\pages_hc.bmp"
+IDB_PAGES_SMALL         BITMAP                  "res\\pages_small.bmp"
+IDB_PAGES_SMALL_HC      BITMAP                  "res\\pages_small_hc.bmp"
+[!endif]
+[!if ADV_DOCKING_CAPTION]
+IDB_INFO                BITMAP                  "res\\info.bmp"
+[!endif]
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 도구 모음
+//
+
+IDR_MAINFRAME TOOLBAR 16, 15
+BEGIN
+[!if !DB_VIEW_NO_FILE]
+[!if DOCVIEW]
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+[!else]
+[!if APP_TYPE_MDI || APP_TYPE_TABBED_MDI]
+    BUTTON      ID_FILE_NEW
+    SEPARATOR
+[!endif]
+[!endif]
+[!endif]
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+[!if DOCVIEW]
+    BUTTON      ID_FILE_PRINT
+[!endif]
+[!if OLEDB || ODBC]
+    SEPARATOR
+    BUTTON      ID_RECORD_FIRST
+    BUTTON      ID_RECORD_PREV
+    BUTTON      ID_RECORD_NEXT
+    BUTTON      ID_RECORD_LAST
+    SEPARATOR
+[!endif]
+[!if LIST_VIEW]
+    SEPARATOR
+    BUTTON      ID_VIEW_LARGEICON
+    BUTTON      ID_VIEW_SMALLICON
+    BUTTON      ID_VIEW_LIST
+    BUTTON      ID_VIEW_DETAILS
+[!endif]
+    BUTTON      ID_APP_ABOUT
+END
+
+[!if MENUBAR_TOOLBAR || RIBBON_TOOLBAR]
+IDR_MAINFRAME_256 TOOLBAR 16, 15
+BEGIN
+[!if !DB_VIEW_NO_FILE]
+[!if DOCVIEW]
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+[!else]
+[!if APP_TYPE_MDI || APP_TYPE_TABBED_MDI]
+    BUTTON      ID_FILE_NEW
+    SEPARATOR
+[!endif]
+[!endif]
+[!endif]
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+[!if DOCVIEW]
+    BUTTON      ID_FILE_PRINT
+[!endif]
+[!if OLEDB || ODBC]
+    SEPARATOR
+    BUTTON      ID_RECORD_FIRST
+    BUTTON      ID_RECORD_PREV
+    BUTTON      ID_RECORD_NEXT
+    BUTTON      ID_RECORD_LAST
+    SEPARATOR
+[!endif]
+[!if LIST_VIEW]
+    SEPARATOR
+    BUTTON      ID_VIEW_LARGEICON
+    BUTTON      ID_VIEW_SMALLICON
+    BUTTON      ID_VIEW_LIST
+    BUTTON      ID_VIEW_DETAILS
+[!endif]
+    BUTTON      ID_APP_ABOUT
+END
+[!endif]
+
+[!if CONTAINER_SERVER || FULL_SERVER || MINI_SERVER]
+[!if APP_TYPE_MDI || APP_TYPE_TABBED_MDI]
+IDR_[!output SAFE_DOC_TYPE_NAME]TYPE_SRVR_IP TOOLBAR 16, 15
+[!else]
+IDR_SRVR_INPLACE TOOLBAR   16, 15
+[!endif]
+BEGIN
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+[!if !DB_VIEW_NO_FILE]
+[!if OLEDB || ODBC]
+    SEPARATOR
+    BUTTON      ID_RECORD_FIRST
+    BUTTON      ID_RECORD_PREV
+    BUTTON      ID_RECORD_NEXT
+    BUTTON      ID_RECORD_LAST
+[!endif]
+[!endif]
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+[!endif]
+[!endif]
+[!if ADV_DOCKING_EXPLORER]
+
+IDR_SORT TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_SORT_MENU
+    BUTTON      ID_NEW_FOLDER
+END
+
+IDR_EXPLORER TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_PROPERTIES
+END
+
+IDR_MENU_IMAGES TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_WINDOW_MANAGER
+    SEPARATOR
+    BUTTON      ID_WINDOW_CASCADE
+    BUTTON      ID_WINDOW_TILE_HORZ
+    BUTTON      ID_TOOLS_MACRO
+    BUTTON      ID_SORTING_SORTALPHABETIC
+    BUTTON      ID_SORTING_SORTBYTYPE
+    BUTTON      ID_SORTING_SORTBYACCESS
+    BUTTON      ID_SORTING_GROUPBYTYPE
+END
+[!endif]
+[!if ADV_DOCKING_PROPERTIES]
+
+IDR_PROPERTIES TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_EXPAND_ALL
+    BUTTON      ID_SORTPROPERTIES
+    BUTTON      ID_PROPERTIES1
+    BUTTON      ID_PROPERTIES2
+END
+[!endif]
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_[!output LANG_SUFFIX])
+LANGUAGE [!output PRIMARY_LANG_ID], [!output SUB_LANG_ID]
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 메뉴
+//
+
+[!if APP_TYPE_MDI || APP_TYPE_TABBED_MDI]
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "파일(&F)"
+    BEGIN
+[!if APP_TYPE_MDI || APP_TYPE_TABBED_MDI || DOCVIEW]
+        MENUITEM "새로 만들기(&N)\tCtrl+N",                ID_FILE_NEW
+[!endif]
+[!if DOCVIEW]
+        MENUITEM "열기(&O)...\tCtrl+O",            ID_FILE_OPEN
+[!endif]
+        MENUITEM "닫기(&C)",                      ID_FILE_CLOSE
+[!if DOCVIEW]
+[!if PRINTING]
+        MENUITEM SEPARATOR
+        MENUITEM "인쇄 설정(&R)...",             ID_FILE_PRINT_SETUP
+[!endif]
+[!if MRU_SIZE != 0]
+        MENUITEM SEPARATOR
+        MENUITEM "최근에 사용한 파일",                 ID_FILE_MRU_FILE1,GRAYED
+[!endif]
+[!endif]
+[!if APP_TYPE_MDI || APP_TYPE_TABBED_MDI || DOCVIEW]
+        MENUITEM SEPARATOR
+[!endif]
+        MENUITEM "끝내기(&X)",                       ID_APP_EXIT
+    END
+[!if DOCKING_TOOLBAR || TOOLBAR_STYLE_REBAR || RIBBON_TOOLBAR || STATUS_BAR]
+    POPUP "보기(&V)"
+    BEGIN
+[!if DOCKING_TOOLBAR || TOOLBAR_STYLE_REBAR]
+        MENUITEM "도구 모음(&T)",                    ID_VIEW_TOOLBAR
+[!endif]
+[!if MENUBAR_TOOLBAR]
+        POPUP "도구 모음 및 도킹 창(&T)"
+        BEGIN
+            MENUITEM "<자리 표시자>",           ID_VIEW_TOOLBAR
+        END
+[!endif]
+[!if STATUS_BAR]
+        MENUITEM "상태 표시줄(&S)",                 ID_VIEW_STATUS_BAR
+[!endif]
+[!if ADV_DOCKING_CAPTION]
+        MENUITEM "캡션 표시줄(&C)",                ID_VIEW_CAPTION_BAR
+[!endif]
+[!if ENABLE_VISUAL_STYLE_SWITCHING]
+        POPUP "응용 프로그램 모양(&A)"
+        BEGIN
+            MENUITEM "Windows 2000(&2)",           ID_VIEW_APPLOOK_WIN_2000
+            MENUITEM "Office XP(&X)",              ID_VIEW_APPLOOK_OFF_XP
+            MENUITEM "Windows XP(&W)",             ID_VIEW_APPLOOK_WIN_XP
+            MENUITEM "Office 2003(&3)",            ID_VIEW_APPLOOK_OFF_2003
+            MENUITEM "Visual Studio 200&5",     ID_VIEW_APPLOOK_VS_2005
+            MENUITEM "Visual Studio 200&8",     ID_VIEW_APPLOOK_VS_2008
+            POPUP "Office 2007(&7)"
+            BEGIN
+                MENUITEM "파랑 스타일(&B)",         ID_VIEW_APPLOOK_OFF_2007_BLUE
+                MENUITEM "검정 스타일(&L)",        ID_VIEW_APPLOOK_OFF_2007_BLACK
+                MENUITEM "은색 스타일(&S)",       ID_VIEW_APPLOOK_OFF_2007_SILVER
+                MENUITEM "바다색 스타일(&A)",         ID_VIEW_APPLOOK_OFF_2007_AQUA
+            END
+        END
+[!endif]
+[!if PROJECT_STYLE_EXPLORER]
+        MENUITEM "분할(&P)",                      ID_WINDOW_SPLIT
+[!endif]
+[!if LIST_VIEW]
+        MENUITEM SEPARATOR
+        MENUITEM "큰 아이콘(&G)",                ID_VIEW_LARGEICON
+        MENUITEM "작은 아이콘(&M)",                ID_VIEW_SMALLICON
+        MENUITEM "간단히(&L)",                       ID_VIEW_LIST
+        MENUITEM "자세히(&D)",                    ID_VIEW_DETAILS
+        MENUITEM SEPARATOR
+        POPUP "아이콘 정렬(&I)"
+        BEGIN
+            MENUITEM "이름순(&N)",                    ID_VIEW_BYNAME
+            MENUITEM SEPARATOR
+            MENUITEM "자동 정렬(&A)",               ID_VIEW_AUTOARRANGE
+        END
+        MENUITEM "아이콘 줄 맞춤(&E)",              ID_VIEW_LINEUP
+[!endif]
+    END
+[!endif]
+    POPUP "도움말(&H)"
+    BEGIN
+        MENUITEM "[!output PROJECT_NAME] 정보(&A)...",          ID_APP_ABOUT
+    END
+END
+
+IDR_[!output SAFE_DOC_TYPE_NAME]TYPE MENU
+BEGIN
+    POPUP "파일(&F)"
+    BEGIN
+[!if APP_TYPE_MDI || APP_TYPE_TABBED_MDI || DOCVIEW]
+        MENUITEM "새로 만들기(&N)\tCtrl+N",                ID_FILE_NEW
+[!if DOCVIEW]
+        MENUITEM "열기(&O)...\tCtrl+O",            ID_FILE_OPEN
+[!endif]
+        MENUITEM "닫기(&C)",                      ID_FILE_CLOSE
+[!if DOCVIEW]
+        MENUITEM "저장(&S)\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "다른 이름으로 저장(&A)...",                 ID_FILE_SAVE_AS
+[!if PRINTING]
+        MENUITEM SEPARATOR
+        MENUITEM "인쇄(&P)...\tCtrl+P",           ID_FILE_PRINT
+[!if !HTML_VIEW && !HTML_EDITVIEW]
+        MENUITEM "인쇄 미리 보기(&V)",              ID_FILE_PRINT_PREVIEW
+[!endif]
+        MENUITEM "인쇄 설정(&R)...",             ID_FILE_PRINT_SETUP
+[!endif]
+[!if MAPI]
+        MENUITEM SEPARATOR
+        MENUITEM "보내기(&D)...",                    ID_FILE_SEND_MAIL
+[!endif]
+[!if MRU_SIZE != 0]
+        MENUITEM SEPARATOR
+        MENUITEM "최근에 사용한 파일",                 ID_FILE_MRU_FILE1,GRAYED
+[!endif]
+[!endif]
+        MENUITEM SEPARATOR
+[!endif]
+        MENUITEM "끝내기(&X)",                       ID_APP_EXIT
+    END
+    POPUP "편집(&E)"
+    BEGIN
+        MENUITEM "실행 취소(&U)\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "잘라내기(&T)\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "복사(&C)\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "붙여넣기(&P)\tCtrl+V",              ID_EDIT_PASTE
+[!if CONTAINER || CONTAINER_SERVER]
+        MENUITEM "선택하여 붙여넣기(&S)...",           ID_EDIT_PASTE_SPECIAL
+[!endif]
+[!if EDIT_VIEW || RICH_EDIT_VIEW]
+        MENUITEM "모두 선택(&L)\tCtrl+A",         ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "찾기(&F)...\tCtrl+F",            ID_EDIT_FIND
+        MENUITEM "다음 찾기(&I)\tF3",              ID_EDIT_REPEAT
+        MENUITEM "바꾸기(&E)\tCtrl+H",            ID_EDIT_REPLACE
+[!endif]
+[!if CONTAINER || CONTAINER_SERVER]
+        MENUITEM SEPARATOR
+        MENUITEM "새 개체 삽입(&N)...",       ID_OLE_INSERT_NEW
+        MENUITEM "연결(&K)...",                   ID_OLE_EDIT_LINKS
+[!if RICH_EDIT_VIEW]
+        MENUITEM "개체 속성(&R)\\tAlt+Enter", ID_OLE_EDIT_PROPERTIES
+[!endif]
+        MENUITEM "<<OLE 동사를 여기에 입력합니다.>>",       ID_OLE_VERB_POPUP
+[!endif]
+    END
+[!if OLEDB_RECORD_VIEW || ODBC_RECORD_VIEW]
+    POPUP "레코드(&R)"
+    BEGIN
+        MENUITEM "첫 레코드(&F)"                ID_RECORD_FIRST
+        MENUITEM "이전 레코드(&P)"                ID_RECORD_PREV
+        MENUITEM "다음 레코드(&N)"                    ID_RECORD_NEXT
+        MENUITEM "마지막 레코드(&L)"                    ID_RECORD_LAST
+    END
+[!endif]
+[!if DOCKING_TOOLBAR || TOOLBAR_STYLE_REBAR || RIBBON_TOOLBAR || STATUS_BAR]
+    POPUP "보기(&V)"
+    BEGIN
+[!if DOCKING_TOOLBAR || TOOLBAR_STYLE_REBAR]
+        MENUITEM "도구 모음(&T)",                    ID_VIEW_TOOLBAR
+[!endif]
+[!if MENUBAR_TOOLBAR]
+        POPUP "도구 모음 및 도킹 창(&T)"
+        BEGIN
+            MENUITEM "<자리 표시자>",           ID_VIEW_TOOLBAR
+        END
+[!endif]
+[!if STATUS_BAR]
+        MENUITEM "상태 표시줄(&S)",                 ID_VIEW_STATUS_BAR
+[!endif]
+[!if ADV_DOCKING_CAPTION]
+        MENUITEM "캡션 표시줄(&C)",                ID_VIEW_CAPTION_BAR
+[!endif]
+[!if ENABLE_VISUAL_STYLE_SWITCHING]
+        POPUP "응용 프로그램 모양(&A)"
+        BEGIN
+            MENUITEM "Windows 2000(&2)",           ID_VIEW_APPLOOK_WIN_2000
+            MENUITEM "Office XP(&X)",              ID_VIEW_APPLOOK_OFF_XP
+            MENUITEM "Windows XP(&W)",             ID_VIEW_APPLOOK_WIN_XP
+            MENUITEM "Office 2003(&3)",            ID_VIEW_APPLOOK_OFF_2003
+            MENUITEM "Visual Studio 200&5",     ID_VIEW_APPLOOK_VS_2005
+            MENUITEM "Visual Studio 200&8",     ID_VIEW_APPLOOK_VS_2008
+            POPUP "Office 2007(&7)"
+            BEGIN
+                MENUITEM "파랑 스타일(&B)",         ID_VIEW_APPLOOK_OFF_2007_BLUE
+                MENUITEM "검정 스타일(&L)",        ID_VIEW_APPLOOK_OFF_2007_BLACK
+                MENUITEM "은색 스타일(&S)",       ID_VIEW_APPLOOK_OFF_2007_SILVER
+                MENUITEM "바다색 스타일(&A)",         ID_VIEW_APPLOOK_OFF_2007_AQUA
+            END
+        END
+[!endif]
+[!if PROJECT_STYLE_EXPLORER]
+        MENUITEM "분할(&P)",                      ID_WINDOW_SPLIT
+[!if LIST_VIEW]
+        MENUITEM SEPARATOR
+        MENUITEM "큰 아이콘(&G)",                ID_VIEW_LARGEICON
+        MENUITEM "작은 아이콘(&M)",                ID_VIEW_SMALLICON
+        MENUITEM "간단히(&L)",                       ID_VIEW_LIST
+        MENUITEM "자세히(&D)",                    ID_VIEW_DETAILS
+        MENUITEM SEPARATOR
+        POPUP "아이콘 정렬(&I)"
+        BEGIN
+            MENUITEM "이름순(&N)",                    ID_VIEW_BYNAME
+            MENUITEM SEPARATOR
+            MENUITEM "자동 정렬(&A)",               ID_VIEW_AUTOARRANGE
+        END
+        MENUITEM "아이콘 줄 맞춤(&E)",              ID_VIEW_LINEUP
+[!endif]
+[!endif]
+    END
+[!endif]
+[!if DOCVIEW || !APP_TYPE_TABBED_MDI || SPLITTER]
+    POPUP "창(&W)"
+    BEGIN
+[!if DOCVIEW]
+        MENUITEM "새 창(&N)",                 ID_WINDOW_NEW
+[!endif]
+[!if !APP_TYPE_TABBED_MDI]
+        MENUITEM "계단식 배열(&C)",                    ID_WINDOW_CASCADE
+        MENUITEM "바둑판식 배열(&T)",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "아이콘 정렬(&A)",              ID_WINDOW_ARRANGE
+[!endif]
+[!if SPLITTER]
+        MENUITEM "분할(&P)",                      ID_WINDOW_SPLIT
+[!endif]
+    END
+[!endif]
+    POPUP "도움말(&H)"
+    BEGIN
+        MENUITEM "[!output PROJECT_NAME] 정보(&A)...",          ID_APP_ABOUT
+    END
+END
+
+[!if CONTAINER || CONTAINER_SERVER]
+IDR_[!output SAFE_DOC_TYPE_NAME]TYPE_CNTR_IP MENU
+BEGIN
+    POPUP "파일(&F)"
+    BEGIN
+[!if APP_TYPE_MDI || APP_TYPE_TABBED_MDI || DOCVIEW]
+        MENUITEM "새로 만들기(&N)\tCtrl+N",                ID_FILE_NEW
+[!if DOCVIEW]
+        MENUITEM "열기(&O)...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "닫기(&C)",                      ID_FILE_CLOSE
+        MENUITEM "저장(&S)\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "다른 이름으로 저장(&A)...",                 ID_FILE_SAVE_AS
+[!if PRINTING]
+        MENUITEM SEPARATOR
+        MENUITEM "인쇄(&P)...\tCtrl+P",           ID_FILE_PRINT
+[!if !HTML_VIEW && !HTML_EDITVIEW]
+        MENUITEM "인쇄 미리 보기(&V)",              ID_FILE_PRINT_PREVIEW
+[!endif]
+        MENUITEM "인쇄 설정(&R)...",             ID_FILE_PRINT_SETUP
+[!endif]
+[!if MAPI]
+        MENUITEM SEPARATOR
+        MENUITEM "보내기(&D)...",                    ID_FILE_SEND_MAIL
+[!endif]
+[!if MRU_SIZE != 0]
+        MENUITEM SEPARATOR
+        MENUITEM "최근에 사용한 파일",                 ID_FILE_MRU_FILE1,GRAYED
+[!endif]
+[!endif]
+        MENUITEM SEPARATOR
+[!endif]
+        MENUITEM "끝내기(&X)",                       ID_APP_EXIT
+    END
+    MENUITEM SEPARATOR
+    MENUITEM SEPARATOR
+    POPUP "창(&W)"
+    BEGIN
+        MENUITEM "새 창(&N)",                 ID_WINDOW_NEW
+        MENUITEM "계단식 배열(&C)",                    ID_WINDOW_CASCADE
+        MENUITEM "바둑판식 배열(&T)",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "아이콘 정렬(&A)",              ID_WINDOW_ARRANGE
+[!if SPLITTER]
+        MENUITEM "분할(&P)",                      ID_WINDOW_SPLIT
+[!endif]
+    END
+END
+[!endif]
+
+[!if CONTAINER_SERVER || FULL_SERVER || MINI_SERVER]
+IDR_[!output SAFE_DOC_TYPE_NAME]TYPE_SRVR_EMB MENU
+BEGIN
+    POPUP "파일(&F)"
+    BEGIN
+        MENUITEM "새로 만들기(&N)\tCtrl+N",                ID_FILE_NEW
+[!if DOCVIEW]
+        MENUITEM "열기(&O)...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "닫기(&C)",                      ID_FILE_CLOSE
+        MENUITEM "업데이트(&U)\tCtrl+S",                ID_FILE_UPDATE
+[!if !MINI_SERVER]
+        MENUITEM "다른 이름으로 복사본 저장(&A)...",            ID_FILE_SAVE_COPY_AS
+[!endif]
+[!if PRINTING]
+        MENUITEM SEPARATOR
+        MENUITEM "인쇄(&P)...\tCtrl+P",           ID_FILE_PRINT
+[!if !HTML_VIEW && !HTML_EDITVIEW]
+        MENUITEM "인쇄 미리 보기(&V)",              ID_FILE_PRINT_PREVIEW
+[!endif]
+        MENUITEM "인쇄 설정(&R)...",             ID_FILE_PRINT_SETUP
+[!endif]
+[!if MAPI]
+        MENUITEM SEPARATOR
+        MENUITEM "보내기(&D)...",                    ID_FILE_SEND_MAIL
+[!endif]
+[!if MRU_SIZE != 0]
+        MENUITEM SEPARATOR
+        MENUITEM "최근에 사용한 파일",                 ID_FILE_MRU_FILE1,GRAYED
+[!endif]
+[!endif]
+        MENUITEM SEPARATOR
+        MENUITEM "끝내기(&X)",                       ID_APP_EXIT
+    END
+    POPUP "편집(&E)"
+    BEGIN
+        MENUITEM "실행 취소(&U)\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "잘라내기(&T)\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "복사(&C)\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "붙여넣기(&P)\tCtrl+V",              ID_EDIT_PASTE
+[!if CONTAINER || CONTAINER_SERVER]
+        MENUITEM "선택하여 붙여넣기(&S)...",           ID_EDIT_PASTE_SPECIAL
+[!endif]
+[!if EDIT_VIEW || RICH_EDIT_VIEW]
+        MENUITEM "모두 선택(&L)\tCtrl+A",         ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "찾기(&F)...\tCtrl+F",            ID_EDIT_FIND
+        MENUITEM "다음 찾기(&I)\tF3",              ID_EDIT_REPEAT
+        MENUITEM "바꾸기(&E)\tCtrl+H",            ID_EDIT_REPLACE
+[!endif]
+[!if CONTAINER || CONTAINER_SERVER]
+        MENUITEM SEPARATOR
+        MENUITEM "새 개체 삽입(&N)...",       ID_OLE_INSERT_NEW
+        MENUITEM "연결(&K)...",                   ID_OLE_EDIT_LINKS
+[!if RICH_EDIT_VIEW]
+        MENUITEM "개체 속성(&R)\\tAlt+Enter", ID_OLE_EDIT_PROPERTIES
+[!endif]
+        MENUITEM "<<OLE 동사를 여기에 입력합니다.>>",       ID_OLE_VERB_POPUP
+[!endif]
+    END
+[!if OLEDB_RECORD_VIEW || ODBC_RECORD_VIEW]
+    POPUP "레코드(&R)"
+    BEGIN
+        MENUITEM "첫 레코드(&F)"                ID_RECORD_FIRST
+        MENUITEM "이전 레코드(&P)"                ID_RECORD_PREV
+        MENUITEM "다음 레코드(&N)"                    ID_RECORD_NEXT
+        MENUITEM "마지막 레코드(&L)"                    ID_RECORD_LAST
+    END
+[!endif]
+[!if DOCKING_TOOLBAR || TOOLBAR_STYLE_REBAR || RIBBON_TOOLBAR || STATUS_BAR]
+    POPUP "보기(&V)"
+    BEGIN
+[!if DOCKING_TOOLBAR || TOOLBAR_STYLE_REBAR]
+        MENUITEM "도구 모음(&T)",                    ID_VIEW_TOOLBAR
+[!endif]
+[!if MENUBAR_TOOLBAR]
+        POPUP "도구 모음 및 도킹 창(&T)"
+        BEGIN
+            MENUITEM "<자리 표시자>",           ID_VIEW_TOOLBAR
+        END
+[!endif]
+[!if STATUS_BAR]
+        MENUITEM "상태 표시줄(&S)",                 ID_VIEW_STATUS_BAR
+[!endif]
+[!if ADV_DOCKING_CAPTION]
+        MENUITEM "캡션 표시줄(&C)",                ID_VIEW_CAPTION_BAR
+[!endif]
+[!if ENABLE_VISUAL_STYLE_SWITCHING]
+        POPUP "응용 프로그램 모양(&A)"
+        BEGIN
+            MENUITEM "Windows 2000(&2)",           ID_VIEW_APPLOOK_WIN_2000
+            MENUITEM "Office XP(&X)",              ID_VIEW_APPLOOK_OFF_XP
+            MENUITEM "Windows XP(&W)",             ID_VIEW_APPLOOK_WIN_XP
+            MENUITEM "Office 2003(&3)",            ID_VIEW_APPLOOK_OFF_2003
+            MENUITEM "Visual Studio 200&5",     ID_VIEW_APPLOOK_VS_2005
+            MENUITEM "Visual Studio 200&8",     ID_VIEW_APPLOOK_VS_2008
+            POPUP "Office 2007(&7)"
+            BEGIN
+                MENUITEM "파랑 스타일(&B)",         ID_VIEW_APPLOOK_OFF_2007_BLUE
+                MENUITEM "검정 스타일(&L)",        ID_VIEW_APPLOOK_OFF_2007_BLACK
+                MENUITEM "은색 스타일(&S)",       ID_VIEW_APPLOOK_OFF_2007_SILVER
+                MENUITEM "바다색 스타일(&A)",         ID_VIEW_APPLOOK_OFF_2007_AQUA
+            END
+        END
+[!endif]
+    END
+[!endif]
+    POPUP "창(&W)"
+    BEGIN
+        MENUITEM "새 창(&N)",                 ID_WINDOW_NEW
+        MENUITEM "계단식 배열(&C)",                    ID_WINDOW_CASCADE
+        MENUITEM "바둑판식 배열(&T)",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "아이콘 정렬(&A)",              ID_WINDOW_ARRANGE
+[!if SPLITTER]
+        MENUITEM "분할(&P)",                      ID_WINDOW_SPLIT
+[!endif]
+    END
+    POPUP "도움말(&H)"
+    BEGIN
+        MENUITEM "[!output PROJECT_NAME] 정보(&A)...",          ID_APP_ABOUT
+    END
+END
+IDR_[!output SAFE_DOC_TYPE_NAME]TYPE_SRVR_IP MENU
+BEGIN
+    POPUP "편집(&E)"
+    BEGIN
+        MENUITEM "실행 취소(&U)\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "잘라내기(&T)\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "복사(&C)\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "붙여넣기(&P)\tCtrl+V",              ID_EDIT_PASTE
+[!if CONTAINER || CONTAINER_SERVER]
+        MENUITEM "선택하여 붙여넣기(&S)...",           ID_EDIT_PASTE_SPECIAL
+[!endif]
+[!if EDIT_VIEW || RICH_EDIT_VIEW]
+        MENUITEM "모두 선택(&L)\tCtrl+A",         ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "찾기(&F)...\tCtrl+F",            ID_EDIT_FIND
+        MENUITEM "다음 찾기(&I)\tF3",              ID_EDIT_REPEAT
+        MENUITEM "바꾸기(&E)\tCtrl+H",            ID_EDIT_REPLACE
+[!endif]
+[!if CONTAINER || CONTAINER_SERVER]
+        MENUITEM SEPARATOR
+        MENUITEM "새 개체 삽입(&N)...",       ID_OLE_INSERT_NEW
+        MENUITEM "연결(&K)...",                   ID_OLE_EDIT_LINKS
+[!if RICH_EDIT_VIEW]
+        MENUITEM "개체 속성(&R)\\tAlt+Enter", ID_OLE_EDIT_PROPERTIES
+[!endif]
+        MENUITEM "<<OLE 동사를 여기에 입력합니다.>>",       ID_OLE_VERB_POPUP
+[!endif]
+    END
+[!if OLEDB_RECORD_VIEW || ODBC_RECORD_VIEW]
+    POPUP "레코드(&R)"
+    BEGIN
+        MENUITEM "첫 레코드(&F)"                ID_RECORD_FIRST
+        MENUITEM "이전 레코드(&P)"                ID_RECORD_PREV
+        MENUITEM "다음 레코드(&N)"                    ID_RECORD_NEXT
+        MENUITEM "마지막 레코드(&L)"                    ID_RECORD_LAST
+    END
+[!endif]
+[!if DOCKING_TOOLBAR || TOOLBAR_STYLE_REBAR || MENUBAR_TOOLBAR]
+    POPUP "보기(&V)"
+    BEGIN
+[!if DOCKING_TOOLBAR || TOOLBAR_STYLE_REBAR]
+        MENUITEM "도구 모음(&T)",                    ID_VIEW_TOOLBAR
+[!endif]
+[!if MENUBAR_TOOLBAR]
+        POPUP "도구 모음 및 도킹 창(&T)"
+        BEGIN
+            MENUITEM "<자리 표시자>",           ID_VIEW_TOOLBAR
+        END
+[!endif]
+    END
+[!endif]
+    MENUITEM SEPARATOR
+    MENUITEM SEPARATOR
+    POPUP "도움말(&H)"
+    BEGIN
+        MENUITEM "[!output PROJECT_NAME] 정보(&A)...",          ID_APP_ABOUT
+    END
+END
+[!endif]
+
+[!else]
+IDR_MAINFRAME MENU
+BEGIN
+[!if MINI_SERVER]
+    POPUP "파일(&F)"
+    BEGIN
+        MENUITEM "끝내기(&X)",                       ID_APP_EXIT
+        MENUITEM SEPARATOR
+        MENUITEM "[!output PROJECT_NAME] 정보(&A)...",          ID_APP_ABOUT
+    END
+[!else]
+    POPUP "파일(&F)"
+    BEGIN
+[!if APP_TYPE_MTLD]
+        MENUITEM "새 프레임(&F)",                  ID_FILE_NEW_FRAME
+[!endif]
+[!if DOCVIEW]
+[!if !DB_VIEW_NO_FILE]
+        MENUITEM "새로 만들기(&N)\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "열기(&O)...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "저장(&S)\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "다른 이름으로 저장(&A)...",                 ID_FILE_SAVE_AS
+[!endif]
+[!if PRINTING]
+[!if !DB_VIEW_NO_FILE]
+        MENUITEM SEPARATOR
+[!endif]
+        MENUITEM "인쇄(&P)...\tCtrl+P",           ID_FILE_PRINT
+[!if !HTML_VIEW && !HTML_EDITVIEW]
+        MENUITEM "인쇄 미리 보기(&V)",              ID_FILE_PRINT_PREVIEW
+[!endif]
+        MENUITEM "인쇄 설정(&R)...",             ID_FILE_PRINT_SETUP
+[!endif]
+[!if DB_VIEW_NO_FILE]
+[!if PRINTING]
+        MENUITEM SEPARATOR
+[!endif]
+[!else]
+[!if MAPI]
+        MENUITEM SEPARATOR
+        MENUITEM "보내기(&D)...",                    ID_FILE_SEND_MAIL
+[!endif]
+[!if MRU_SIZE != 0]
+        MENUITEM SEPARATOR
+        MENUITEM "최근에 사용한 파일",                 ID_FILE_MRU_FILE1,GRAYED
+[!endif]
+        MENUITEM SEPARATOR
+[!endif]
+[!endif]
+        MENUITEM "끝내기(&X)",                       ID_APP_EXIT
+    END
+    POPUP "편집(&E)"
+    BEGIN
+        MENUITEM "실행 취소(&U)\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "잘라내기(&T)\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "복사(&C)\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "붙여넣기(&P)\tCtrl+V",              ID_EDIT_PASTE
+[!if CONTAINER || CONTAINER_SERVER]
+        MENUITEM "선택하여 붙여넣기(&S)...",           ID_EDIT_PASTE_SPECIAL
+[!endif]
+[!if EDIT_VIEW || RICH_EDIT_VIEW]
+        MENUITEM "모두 선택(&L)\tCtrl+A",         ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "찾기(&F)...\tCtrl+F",            ID_EDIT_FIND
+        MENUITEM "다음 찾기(&I)\tF3",              ID_EDIT_REPEAT
+        MENUITEM "바꾸기(&E)\tCtrl+H",            ID_EDIT_REPLACE
+[!endif]
+[!if CONTAINER || CONTAINER_SERVER]
+        MENUITEM SEPARATOR
+        MENUITEM "새 개체 삽입(&N)...",       ID_OLE_INSERT_NEW
+        MENUITEM "연결(&K)...",                   ID_OLE_EDIT_LINKS
+[!if RICH_EDIT_VIEW]
+        MENUITEM "개체 속성(&R)\\tAlt+Enter", ID_OLE_EDIT_PROPERTIES
+[!endif]
+        MENUITEM "<<OLE 동사를 여기에 입력합니다.>>",       ID_OLE_VERB_POPUP
+[!endif]
+    END
+[!if OLEDB_RECORD_VIEW || ODBC_RECORD_VIEW]
+    POPUP "레코드(&R)"
+    BEGIN
+        MENUITEM "첫 레코드(&F)"                ID_RECORD_FIRST
+        MENUITEM "이전 레코드(&P)"                ID_RECORD_PREV
+        MENUITEM "다음 레코드(&N)"                    ID_RECORD_NEXT
+        MENUITEM "마지막 레코드(&L)"                    ID_RECORD_LAST
+    END
+[!endif]
+[!if DOCKING_TOOLBAR || TOOLBAR_STYLE_REBAR || RIBBON_TOOLBAR || STATUS_BAR || SPLITTER]
+    POPUP "보기(&V)"
+    BEGIN
+[!if DOCKING_TOOLBAR || TOOLBAR_STYLE_REBAR]
+        MENUITEM "도구 모음(&T)",                    ID_VIEW_TOOLBAR
+[!endif]
+[!if MENUBAR_TOOLBAR]
+        POPUP "도구 모음 및 도킹 창(&T)"
+        BEGIN
+            MENUITEM "<자리 표시자>",           ID_VIEW_TOOLBAR
+        END
+[!endif]
+[!if STATUS_BAR]
+        MENUITEM "상태 표시줄(&S)",                 ID_VIEW_STATUS_BAR
+[!endif]
+[!if ADV_DOCKING_CAPTION]
+        MENUITEM "캡션 표시줄(&C)",                ID_VIEW_CAPTION_BAR
+[!endif]
+[!if ENABLE_VISUAL_STYLE_SWITCHING]
+        POPUP "응용 프로그램 모양(&A)"
+        BEGIN
+            MENUITEM "Windows 2000(&2)",           ID_VIEW_APPLOOK_WIN_2000
+            MENUITEM "Office XP(&X)",              ID_VIEW_APPLOOK_OFF_XP
+            MENUITEM "Windows XP(&W)",             ID_VIEW_APPLOOK_WIN_XP
+            MENUITEM "Office 2003(&3)",            ID_VIEW_APPLOOK_OFF_2003
+            MENUITEM "Visual Studio 200&5",     ID_VIEW_APPLOOK_VS_2005
+            MENUITEM "Visual Studio 200&8",     ID_VIEW_APPLOOK_VS_2008
+            POPUP "Office 2007(&7)"
+            BEGIN
+                MENUITEM "파랑 스타일(&B)",         ID_VIEW_APPLOOK_OFF_2007_BLUE
+                MENUITEM "검정 스타일(&L)",        ID_VIEW_APPLOOK_OFF_2007_BLACK
+                MENUITEM "은색 스타일(&S)",       ID_VIEW_APPLOOK_OFF_2007_SILVER
+                MENUITEM "바다색 스타일(&A)",         ID_VIEW_APPLOOK_OFF_2007_AQUA
+            END
+        END
+[!endif]
+[!if SPLITTER]
+        MENUITEM "분할(&P)",                      ID_WINDOW_SPLIT
+[!endif]
+    END
+[!endif]
+    POPUP "도움말(&H)"
+    BEGIN
+        MENUITEM "[!output PROJECT_NAME] 정보(&A)...",          ID_APP_ABOUT
+    END
+[!endif]
+END
+
+[!if CONTAINER || CONTAINER_SERVER]
+IDR_CNTR_INPLACE MENU
+BEGIN
+    POPUP "파일(&F)"
+    BEGIN
+[!if APP_TYPE_MTLD]
+        MENUITEM "새 프레임(&F)",                  ID_FILE_NEW_FRAME
+[!endif]
+        MENUITEM "새로 만들기(&N)\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "열기(&O)...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "저장(&S)\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "다른 이름으로 저장(&A)...",                 ID_FILE_SAVE_AS
+[!if PRINTING]
+        MENUITEM SEPARATOR
+        MENUITEM "인쇄(&P)...\tCtrl+P",           ID_FILE_PRINT
+[!if !HTML_VIEW && !HTML_EDITVIEW]
+        MENUITEM "인쇄 미리 보기(&V)",              ID_FILE_PRINT_PREVIEW
+[!endif]
+        MENUITEM "인쇄 설정(&R)...",             ID_FILE_PRINT_SETUP
+[!endif]
+[!if MAPI]
+        MENUITEM SEPARATOR
+        MENUITEM "보내기(&D)...",                    ID_FILE_SEND_MAIL
+[!endif]
+[!if MRU_SIZE != 0]
+        MENUITEM SEPARATOR
+        MENUITEM "최근에 사용한 파일",                 ID_FILE_MRU_FILE1,GRAYED
+[!endif]
+        MENUITEM SEPARATOR
+        MENUITEM "끝내기(&X)",                       ID_APP_EXIT
+    END
+    MENUITEM SEPARATOR
+    MENUITEM SEPARATOR
+END
+[!endif]
+
+[!if MINI_SERVER || FULL_SERVER || CONTAINER_SERVER]
+IDR_SRVR_INPLACE MENU
+BEGIN
+    POPUP "편집(&E)"
+    BEGIN
+        MENUITEM "실행 취소(&U)\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "잘라내기(&T)\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "복사(&C)\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "붙여넣기(&P)\tCtrl+V",              ID_EDIT_PASTE
+[!if CONTAINER || CONTAINER_SERVER]
+        MENUITEM "선택하여 붙여넣기(&S)...",           ID_EDIT_PASTE_SPECIAL
+[!endif]
+[!if EDIT_VIEW || RICH_EDIT_VIEW]
+        MENUITEM "모두 선택(&L)\tCtrl+A",         ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "찾기(&F)...\tCtrl+F",            ID_EDIT_FIND
+        MENUITEM "다음 찾기(&I)\tF3",              ID_EDIT_REPEAT
+        MENUITEM "바꾸기(&E)\tCtrl+H",            ID_EDIT_REPLACE
+[!if CONTAINER || CONTAINER_SERVER]
+[!endif]
+        MENUITEM SEPARATOR
+        MENUITEM "새 개체 삽입(&N)...",       ID_OLE_INSERT_NEW
+        MENUITEM "연결(&K)...",                   ID_OLE_EDIT_LINKS
+[!if RICH_EDIT_VIEW]
+        MENUITEM "개체 속성(&R)\\tAlt+Enter", ID_OLE_EDIT_PROPERTIES
+[!endif]
+        MENUITEM "<<OLE 동사를 여기에 입력합니다.>>",       ID_OLE_VERB_POPUP
+[!endif]
+    END
+[!if OLEDB_RECORD_VIEW || ODBC_RECORD_VIEW]
+    POPUP "레코드(&R)"
+    BEGIN
+        MENUITEM "첫 레코드(&F)"                ID_RECORD_FIRST
+        MENUITEM "이전 레코드(&P)"                ID_RECORD_PREV
+        MENUITEM "다음 레코드(&N)"                    ID_RECORD_NEXT
+        MENUITEM "마지막 레코드(&L)"                    ID_RECORD_LAST
+    END
+[!endif]
+[!if DOCKING_TOOLBAR || TOOLBAR_STYLE_REBAR || MENUBAR_TOOLBAR]
+    POPUP "보기(&V)"
+    BEGIN
+[!if DOCKING_TOOLBAR || TOOLBAR_STYLE_REBAR]
+        MENUITEM "도구 모음(&T)",                    ID_VIEW_TOOLBAR
+[!endif]
+[!if MENUBAR_TOOLBAR]
+        POPUP "도구 모음 및 도킹 창(&T)"
+        BEGIN
+            MENUITEM "<자리 표시자>",           ID_VIEW_TOOLBAR
+        END
+[!endif]
+    END
+[!endif]
+    MENUITEM SEPARATOR
+    MENUITEM SEPARATOR
+    POPUP "도움말(&H)"
+    BEGIN
+        MENUITEM "[!output PROJECT_NAME] 정보(&A)...",          ID_APP_ABOUT
+    END
+END
+IDR_SRVR_EMBEDDED MENU
+BEGIN
+    POPUP "파일(&F)"
+    BEGIN
+        MENUITEM "업데이트(&U)\tCtrl+S",                ID_FILE_UPDATE
+[!if !MINI_SERVER]
+        MENUITEM "다른 이름으로 복사본 저장(&A)...",            ID_FILE_SAVE_COPY_AS
+[!endif]
+[!if PRINTING]
+        MENUITEM SEPARATOR
+        MENUITEM "인쇄(&P)...\tCtrl+P",           ID_FILE_PRINT
+[!if !HTML_VIEW && !HTML_EDITVIEW]
+        MENUITEM "인쇄 미리 보기(&V)",              ID_FILE_PRINT_PREVIEW
+[!endif]
+        MENUITEM "인쇄 설정(&R)...",             ID_FILE_PRINT_SETUP
+[!endif]
+[!if MAPI]
+        MENUITEM SEPARATOR
+        MENUITEM "보내기(&D)...",                    ID_FILE_SEND_MAIL
+[!endif]
+        MENUITEM SEPARATOR
+        MENUITEM "끝내기(&X)",                       ID_APP_EXIT
+    END
+    POPUP "편집(&E)"
+    BEGIN
+        MENUITEM "실행 취소(&U)\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "잘라내기(&T)\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "복사(&C)\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "붙여넣기(&P)\tCtrl+V",              ID_EDIT_PASTE
+[!if CONTAINER || CONTAINER_SERVER]
+        MENUITEM "선택하여 붙여넣기(&S)...",           ID_EDIT_PASTE_SPECIAL
+[!endif]
+[!if EDIT_VIEW || RICH_EDIT_VIEW]
+        MENUITEM "모두 선택(&L)\tCtrl+A",         ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "찾기(&F)...\tCtrl+F",            ID_EDIT_FIND
+        MENUITEM "다음 찾기(&I)\tF3",              ID_EDIT_REPEAT
+        MENUITEM "바꾸기(&E)\tCtrl+H",            ID_EDIT_REPLACE
+[!endif]
+[!if CONTAINER || CONTAINER_SERVER]
+        MENUITEM SEPARATOR
+        MENUITEM "새 개체 삽입(&N)...",       ID_OLE_INSERT_NEW
+        MENUITEM "연결(&K)...",                   ID_OLE_EDIT_LINKS
+[!if RICH_EDIT_VIEW]
+        MENUITEM "개체 속성(&R)\\tAlt+Enter", ID_OLE_EDIT_PROPERTIES
+[!endif]
+        MENUITEM "<<OLE 동사를 여기에 입력합니다.>>",       ID_OLE_VERB_POPUP
+[!endif]
+    END
+[!if OLEDB_RECORD_VIEW || ODBC_RECORD_VIEW]
+    POPUP "레코드(&R)"
+    BEGIN
+        MENUITEM "첫 레코드(&F)"                ID_RECORD_FIRST
+        MENUITEM "이전 레코드(&P)"                ID_RECORD_PREV
+        MENUITEM "다음 레코드(&N)"                    ID_RECORD_NEXT
+        MENUITEM "마지막 레코드(&L)"                    ID_RECORD_LAST
+    END
+[!endif]
+[!if DOCKING_TOOLBAR || TOOLBAR_STYLE_REBAR || RIBBON_TOOLBAR || STATUS_BAR || SPLITTER]
+    POPUP "보기(&V)"
+    BEGIN
+[!if DOCKING_TOOLBAR || TOOLBAR_STYLE_REBAR]
+        MENUITEM "도구 모음(&T)",                    ID_VIEW_TOOLBAR
+[!endif]
+[!if MENUBAR_TOOLBAR]
+        POPUP "도구 모음 및 도킹 창(&T)"
+        BEGIN
+            MENUITEM "<자리 표시자>",           ID_VIEW_TOOLBAR
+        END
+[!endif]
+[!if STATUS_BAR]
+        MENUITEM "상태 표시줄(&S)",                 ID_VIEW_STATUS_BAR
+[!endif]
+[!if ADV_DOCKING_CAPTION]
+        MENUITEM "캡션 표시줄(&C)",                ID_VIEW_CAPTION_BAR
+[!endif]
+[!if ENABLE_VISUAL_STYLE_SWITCHING]
+        POPUP "응용 프로그램 모양(&A)"
+        BEGIN
+            MENUITEM "Windows 2000(&2)",           ID_VIEW_APPLOOK_WIN_2000
+            MENUITEM "Office XP(&X)",              ID_VIEW_APPLOOK_OFF_XP
+            MENUITEM "Windows XP(&W)",             ID_VIEW_APPLOOK_WIN_XP
+            MENUITEM "Office 2003(&3)",            ID_VIEW_APPLOOK_OFF_2003
+            MENUITEM "Visual Studio 200&5",     ID_VIEW_APPLOOK_VS_2005
+            MENUITEM "Visual Studio 200&8",     ID_VIEW_APPLOOK_VS_2008
+            POPUP "Office 2007(&7)"
+            BEGIN
+                MENUITEM "파랑 스타일(&B)",         ID_VIEW_APPLOOK_OFF_2007_BLUE
+                MENUITEM "검정 스타일(&L)",        ID_VIEW_APPLOOK_OFF_2007_BLACK
+                MENUITEM "은색 스타일(&S)",       ID_VIEW_APPLOOK_OFF_2007_SILVER
+                MENUITEM "바다색 스타일(&A)",         ID_VIEW_APPLOOK_OFF_2007_AQUA
+            END
+            MENUITEM "Windows 7(&D)",              ID_VIEW_APPLOOK_WINDOWS_7
+        END
+[!endif]
+[!if SPLITTER]
+        MENUITEM "분할(&P)",                      ID_WINDOW_SPLIT
+[!endif]
+    END
+[!endif]
+    POPUP "도움말(&H)"
+    BEGIN
+        MENUITEM "[!output PROJECT_NAME] 정보(&A)...",          ID_APP_ABOUT
+    END
+END
+[!endif]
+[!endif]
+[!if MENUBAR_TOOLBAR || RIBBON_TOOLBAR]
+
+IDR_POPUP_EDIT MENU
+BEGIN
+	POPUP "편집"
+	BEGIN
+		MENUITEM "잘라내기(&T)\tCtrl+X",            ID_EDIT_CUT
+		MENUITEM "복사(&C)\tCtrl+C",           ID_EDIT_COPY
+		MENUITEM "붙여넣기(&P)\tCtrl+V",          ID_EDIT_PASTE
+[!if EDIT_VIEW || RICH_EDIT_VIEW]
+		MENUITEM SEPARATOR
+		MENUITEM "모두 선택(&L)\tCtrl+A",     ID_EDIT_SELECT_ALL
+[!endif]
+    END
+END
+[!endif]
+[!if RIBBON_TOOLBAR]
+[!if RICH_EDIT_VIEW]
+
+IDR_PASTE_MENU MENU
+BEGIN
+    MENUITEM "붙여넣기(&P)",                      ID_EDIT_PASTE
+    MENUITEM "선택하여 붙여넣기(&S)...",           ID_EDIT_PASTE_SPECIAL
+    MENUITEM "하이퍼링크로 붙여넣기(&H)",         ID_WRITE_PASTEASHYPERLINK
+END
+[!endif]
+
+IDR_WINDOWS_MENU MENU
+BEGIN
+    MENUITEM "새 창(&N)",                 ID_WINDOW_NEW
+END
+[!endif]
+[!if ADV_DOCKING_EXPLORER]
+
+IDR_POPUP_SORT MENU
+BEGIN
+    POPUP "정렬"
+    BEGIN
+        MENUITEM "사전순 정렬(&S)",         ID_SORTING_SORTALPHABETIC
+        MENUITEM "형식별 정렬(&T)",               ID_SORTING_SORTBYTYPE
+        MENUITEM "액세스별 정렬(&E)",             ID_SORTING_SORTBYACCESS
+        MENUITEM "형식별 그룹화(&Y)",              ID_SORTING_GROUPBYTYPE
+    END
+END
+
+IDR_POPUP_EXPLORER MENU
+BEGIN
+    POPUP "탐색기"
+    BEGIN
+        MENUITEM "열기(&O)",                       ID_OPEN
+        MENUITEM "연결 프로그램(&W)....",              ID_OPEN_WITH
+        MENUITEM SEPARATOR
+        MENUITEM "컴파일(&C)",                    ID_DUMMY_COMPILE
+        MENUITEM SEPARATOR
+        MENUITEM "잘라내기(&T)\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "복사(&C)\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "제거(&R)",                     ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "속성(&P)...",              ID_PROPERTIES
+    END
+END
+[!endif]
+[!if ADV_DOCKING_OUTPUT]
+
+IDR_OUTPUT_POPUP MENU
+BEGIN
+    POPUP "팝업"
+    BEGIN
+        MENUITEM "복사(&C)",                       ID_EDIT_COPY
+        MENUITEM "지우기(&C)",                      ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "숨기기(&H)",                       ID_VIEW_OUTPUTWND
+    END
+END
+[!endif]
+[!if MENUBAR_TOOLBAR || RIBBON_TOOLBAR]
+
+IDR_HELP_MENU MENU 
+BEGIN
+    MENUITEM "[!output PROJECT_NAME] 정보(&A)...",          ID_APP_ABOUT
+END
+[!endif]
+[!if ENABLE_VISUAL_STYLE_SWITCHING]
+
+IDR_THEME_MENU MENU
+BEGIN
+    MENUITEM "Office 2007(파랑 스타일)(&B)",       ID_VIEW_APPLOOK_OFF_2007_BLUE
+    MENUITEM "Office 2007(검정 스타일)(&L)",      ID_VIEW_APPLOOK_OFF_2007_BLACK
+    MENUITEM "Office 2007(은색 스타일)(&S)",     ID_VIEW_APPLOOK_OFF_2007_SILVER
+    MENUITEM "Office 2007(바다색 스타일)(&A)",       ID_VIEW_APPLOOK_OFF_2007_AQUA
+    MENUITEM "Windows 7(&D)",                      ID_VIEW_APPLOOK_WINDOWS_7
+END
+[!endif]
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 액셀러레이터 키
+//
+
+[!if !DOCVIEW]
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY,CONTROL,NOINVERT
+[!if APP_TYPE_MDI || APP_TYPE_TABBED_MDI]
+    "N",            ID_FILE_NEW,            VIRTKEY,CONTROL,NOINVERT
+[!endif]
+    "V",            ID_EDIT_PASTE,          VIRTKEY,CONTROL,NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY,ALT,NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY,SHIFT,NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY ,NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY,SHIFT,NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY,CONTROL,NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY,SHIFT,NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY,CONTROL,NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY,CONTROL,NOINVERT
+END
+[!else]
+[!if !MINI_SERVER]
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+[!if !DB_VIEW_NO_FILE]
+    "N",            ID_FILE_NEW,            VIRTKEY,CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY,CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY,CONTROL
+[!endif]
+[!if PRINTING]
+    "P",            ID_FILE_PRINT,          VIRTKEY,CONTROL
+[!endif]
+	"Z",            ID_EDIT_UNDO,           VIRTKEY,CONTROL
+	"X",            ID_EDIT_CUT,            VIRTKEY,CONTROL
+	"C",            ID_EDIT_COPY,           VIRTKEY,CONTROL
+	"V",            ID_EDIT_PASTE,          VIRTKEY,CONTROL
+[!if EDIT_VIEW || RICH_EDIT_VIEW]
+	"A",            ID_EDIT_SELECT_ALL,     VIRTKEY,CONTROL
+	"F",            ID_EDIT_FIND,           VIRTKEY,CONTROL
+	VK_F3,          ID_EDIT_REPEAT,         VIRTKEY
+	"H",            ID_EDIT_REPLACE,        VIRTKEY,CONTROL
+[!endif]
+[!if RICH_EDIT_VIEW]
+    VK_RETURN,      ID_OLE_EDIT_PROPERTIES, VIRTKEY,ALT,NOINVERT
+[!endif]
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY,ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY,SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY,CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY,SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY
+    VK_F6,          ID_PREV_PANE,           VIRTKEY,SHIFT
+[!if CONTAINER || CONTAINER_SERVER]
+    VK_ESCAPE,      ID_CANCEL_EDIT_CNTR,       VIRTKEY,NOINVERT
+[!endif]
+END
+[!endif]
+[!endif]
+
+[!if APP_TYPE_MDI || APP_TYPE_TABBED_MDI]
+[!if CONTAINER || CONTAINER_SERVER]
+IDR_[!output SAFE_DOC_TYPE_NAME]TYPE_CNTR_IP ACCELERATORS
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY,CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY,CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY,CONTROL
+[!if PRINTING]
+    "P",            ID_FILE_PRINT,          VIRTKEY,CONTROL
+[!endif]
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY
+    VK_F6,          ID_PREV_PANE,           VIRTKEY,SHIFT
+[!if CONTAINER || CONTAINER_SERVER]
+    VK_ESCAPE,      ID_CANCEL_EDIT_CNTR,       VIRTKEY,NOINVERT
+[!endif]
+END
+[!endif]
+
+[!if MINI_SERVER || FULL_SERVER || CONTAINER_SERVER]
+IDR_[!output SAFE_DOC_TYPE_NAME]TYPE_SRVR_IP ACCELERATORS
+BEGIN
+	"Z",            ID_EDIT_UNDO,           VIRTKEY,CONTROL
+	"X",            ID_EDIT_CUT,            VIRTKEY,CONTROL
+	"C",            ID_EDIT_COPY,           VIRTKEY,CONTROL
+	"V",            ID_EDIT_PASTE,          VIRTKEY,CONTROL
+[!if EDIT_VIEW || RICH_EDIT_VIEW]
+	"A",            ID_EDIT_SELECT_ALL,     VIRTKEY,CONTROL
+	"F",            ID_EDIT_FIND,           VIRTKEY,CONTROL
+	VK_F3,          ID_EDIT_REPEAT,         VIRTKEY
+	"H",            ID_EDIT_REPLACE,        VIRTKEY,CONTROL
+[!endif]
+[!if RICH_EDIT_VIEW]
+    VK_RETURN,      ID_OLE_EDIT_PROPERTIES, VIRTKEY,ALT,NOINVERT
+[!endif]
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY,ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY,SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY,CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY,SHIFT
+    VK_ESCAPE,      ID_CANCEL_EDIT_SRVR,       VIRTKEY,NOINVERT
+END
+IDR_[!output SAFE_DOC_TYPE_NAME]TYPE_SRVR_EMB ACCELERATORS
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY,CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY,CONTROL
+    "S",            ID_FILE_UPDATE,         VIRTKEY,CONTROL
+[!if PRINTING]
+    "P",            ID_FILE_PRINT,          VIRTKEY,CONTROL
+[!endif]
+	"Z",            ID_EDIT_UNDO,           VIRTKEY,CONTROL
+	"X",            ID_EDIT_CUT,            VIRTKEY,CONTROL
+	"C",            ID_EDIT_COPY,           VIRTKEY,CONTROL
+	"V",            ID_EDIT_PASTE,          VIRTKEY,CONTROL
+[!if EDIT_VIEW || RICH_EDIT_VIEW]
+	"A",            ID_EDIT_SELECT_ALL,     VIRTKEY,CONTROL
+	"F",            ID_EDIT_FIND,           VIRTKEY,CONTROL
+	VK_F3,          ID_EDIT_REPEAT,         VIRTKEY
+	"H",            ID_EDIT_REPLACE,        VIRTKEY,CONTROL
+[!endif]
+[!if RICH_EDIT_VIEW]
+    VK_RETURN,      ID_OLE_EDIT_PROPERTIES, VIRTKEY,ALT,NOINVERT
+[!endif]
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY,ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY,SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY,CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY,SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY
+    VK_F6,          ID_PREV_PANE,           VIRTKEY,SHIFT
+[!if CONTAINER_SERVER]
+    VK_ESCAPE,      ID_CANCEL_EDIT_CNTR,       VIRTKEY,NOINVERT
+[!endif]
+END
+[!endif]
+
+[!else]
+[!if CONTAINER || CONTAINER_SERVER]
+IDR_CNTR_INPLACE ACCELERATORS
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY,CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY,CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY,CONTROL
+[!if PRINTING]
+    "P",            ID_FILE_PRINT,          VIRTKEY,CONTROL
+[!endif]
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY
+    VK_F6,          ID_PREV_PANE,           VIRTKEY,SHIFT
+[!if CONTAINER || CONTAINER_SERVER]
+    VK_ESCAPE,      ID_CANCEL_EDIT_CNTR,       VIRTKEY,NOINVERT
+[!endif]
+END
+[!endif]
+
+[!if MINI_SERVER || FULL_SERVER || CONTAINER_SERVER]
+IDR_SRVR_INPLACE ACCELERATORS
+BEGIN
+	"Z",            ID_EDIT_UNDO,           VIRTKEY,CONTROL
+	"X",            ID_EDIT_CUT,            VIRTKEY,CONTROL
+	"C",            ID_EDIT_COPY,           VIRTKEY,CONTROL
+	"V",            ID_EDIT_PASTE,          VIRTKEY,CONTROL
+[!if EDIT_VIEW || RICH_EDIT_VIEW]
+	"A",            ID_EDIT_SELECT_ALL,     VIRTKEY,CONTROL
+	"F",            ID_EDIT_FIND,           VIRTKEY,CONTROL
+	VK_F3,          ID_EDIT_REPEAT,         VIRTKEY
+	"H",            ID_EDIT_REPLACE,        VIRTKEY,CONTROL
+[!endif]
+[!if RICH_EDIT_VIEW]
+    VK_RETURN,      ID_OLE_EDIT_PROPERTIES, VIRTKEY,ALT,NOINVERT
+[!endif]
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY,ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY,SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY,CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY,SHIFT
+    VK_ESCAPE,      ID_CANCEL_EDIT_SRVR,       VIRTKEY,NOINVERT
+END
+IDR_SRVR_EMBEDDED ACCELERATORS
+BEGIN
+    "S",            ID_FILE_UPDATE,         VIRTKEY,CONTROL
+[!if PRINTING]
+    "P",            ID_FILE_PRINT,          VIRTKEY,CONTROL
+[!endif]
+	"Z",            ID_EDIT_UNDO,           VIRTKEY,CONTROL
+	"X",            ID_EDIT_CUT,            VIRTKEY,CONTROL
+	"C",            ID_EDIT_COPY,           VIRTKEY,CONTROL
+	"V",            ID_EDIT_PASTE,          VIRTKEY,CONTROL
+[!if EDIT_VIEW || RICH_EDIT_VIEW]
+	"A",            ID_EDIT_SELECT_ALL,     VIRTKEY,CONTROL
+	"F",            ID_EDIT_FIND,           VIRTKEY,CONTROL
+	VK_F3,          ID_EDIT_REPEAT,         VIRTKEY
+	"H",            ID_EDIT_REPLACE,        VIRTKEY,CONTROL
+[!endif]
+[!if RICH_EDIT_VIEW]
+    VK_RETURN,      ID_OLE_EDIT_PROPERTIES, VIRTKEY,ALT,NOINVERT
+[!endif]
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY,ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY,SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY,CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY,SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY
+    VK_F6,          ID_PREV_PANE,           VIRTKEY,SHIFT
+[!if CONTAINER_SERVER]
+    VK_ESCAPE,      ID_CANCEL_EDIT_CNTR,       VIRTKEY,NOINVERT
+[!endif]
+END
+[!endif]
+
+[!endif]
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 대화 상자
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "[!output PROJECT_NAME] 정보"
+FONT [!output DLG_FONT_SIZE], "[!output DLG_FONT_NAME]"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    LTEXT           "[!output PROJECT_NAME], 버전 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) [!output YEAR]",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "확인",IDOK,113,41,50,14,WS_GROUP
+END
+
+[!if FORM_VIEW || OLEDB_RECORD_VIEW || ODBC_RECORD_VIEW]
+IDD_[!output UPPER_CASE_SAFE_PROJECT_IDENTIFIER_NAME]_FORM    DIALOGEX  0, 0, 320, 200
+STYLE DS_SHELLFONT | WS_CHILD
+FONT [!output DLG_FONT_SIZE], "[!output DLG_FONT_NAME]"
+BEGIN
+    LTEXT    "TODO: 이 대화 상자에 폼 컨트롤을 배치합니다.",IDC_STATIC,24,42,
+        280,8
+END
+[!endif]
+
+[!if TOOLBAR_STYLE_REBAR]
+IDR_MAINFRAME DIALOGEX 0, 0, 330, 16
+STYLE DS_SHELLFONT | WS_CHILD
+FONT [!output DLG_FONT_SIZE], "[!output DLG_FONT_NAME]"
+BEGIN
+    LTEXT    "TODO: 대화 상자 모음을 배치합니다. ",IDC_STATIC,12,4,
+        300,8
+END
+
+[!if MINI_SERVER || FULL_SERVER || CONTAINER_SERVER]
+IDR_[!output SAFE_DOC_TYPE_NAME]TYPE_SRVR_IP DIALOGEX  0, 0, 330, 16
+STYLE DS_SHELLFONT | WS_CHILD
+FONT [!output DLG_FONT_SIZE], "[!output DLG_FONT_NAME]"
+BEGIN
+    LTEXT    "TODO: 내부 대화 상자 모음을 배치합니다.",IDC_STATIC,12,4,
+        300,8
+END
+[!endif]
+[!endif]
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 버전
+//
+
+VS_VERSION_INFO     VERSIONINFO
+  FILEVERSION       1,0,0,1
+  PRODUCTVERSION    1,0,0,1
+ FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+#ifdef _DEBUG
+ FILEFLAGS VS_FF_DEBUG
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS VOS_NT_WINDOWS32
+ FILETYPE VFT_APP
+ FILESUBTYPE VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "[!output HEX_LCID]04B0"
+        BEGIN
+            VALUE "CompanyName", "TODO: <회사 이름>"
+            VALUE "FileDescription", "[!output PROJECT_NAME]"
+            VALUE "FileVersion",     "1.0.0.1"
+            VALUE "InternalName",    "[!output PROJECT_NAME].exe"
+            VALUE "LegalCopyright", "TODO: (c) <회사 이름>.  All rights reserved."
+            VALUE "OriginalFilename","[!output PROJECT_NAME].exe"
+            VALUE "ProductName", "TODO: <제품 이름>"
+            VALUE "ProductVersion",  "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x[!output HEX_LCID], 1200
+    END
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+[!if FORM_VIEW || OLEDB_RECORD_VIEW || ODBC_RECORD_VIEW]
+    IDD_[!output UPPER_CASE_SAFE_PROJECT_IDENTIFIER_NAME]_FORM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+[!endif]
+END
+#endif    // APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 문자열 테이블
+//
+
+[!if CONTAINER || MINI_SERVER || FULL_SERVER || CONTAINER_SERVER || AUTOMATION || OLEDB || ACTIVEX_CONTROLS || ACCESSIBILITY || RIBBON_TOOLBAR || OLEDB_RECORD_VIEW || ODBC_RECORD_VIEW || SOCKETS]
+STRINGTABLE
+BEGIN
+[!if CONTAINER || MINI_SERVER || FULL_SERVER || CONTAINER_SERVER || AUTOMATION || OLEDB || ACTIVEX_CONTROLS || ACCESSIBILITY || RIBBON_TOOLBAR]
+    IDP_OLE_INIT_FAILED       "OLE를 초기화할 수 없습니다.  OLE 라이브러리 버전이 올바른지 확인하십시오."
+[!endif]
+[!if MINI_SERVER]
+    IDP_USE_INSERT_OBJECT    "이 서버는 컨테이너 응용 프로그램에서만 실행할 수 있습니다."
+[!endif]
+[!if CONTAINER || CONTAINER_SERVER]
+    IDP_FAILED_TO_CREATE    "개체를 만들지 못했습니다.  개체가 시스템 레지스트리에 입력되어 있는지 확인하십시오."
+[!endif]
+[!if OLEDB_RECORD_VIEW || ODBC_RECORD_VIEW]
+    IDP_FAILED_OPEN_DATABASE    "데이터베이스를 열 수 없습니다."
+[!endif]
+[!if SOCKETS]
+    IDP_SOCKETS_INIT_FAILED    "Windows 소켓을 초기화하지 못했습니다."
+[!endif]
+END
+[!endif]
+STRINGTABLE
+BEGIN
+// MAC을 대상으로 하지 않는 응용 프로그램에서는 두 개의 추가 부분 문자열을 제거합니다.
+[!if APP_TYPE_MDI || APP_TYPE_TABBED_MDI]
+    IDR_MAINFRAME           "[!output MAIN_FRAME_CAPTION]"
+[!if HAS_SUFFIX]  // 파일 접미사를 가집니다(셸 파일 형식도 해당됨).
+    IDR_[!output SAFE_DOC_TYPE_NAME]TYPE         "\n[!output SAFE_DOC_TYPE_NAME]\n[!output FILE_NEW_NAME_SHORT]\n[!output FILTER_NAME]\n.[!output FILE_EXTENSION]\n[!output FILE_TYPE_ID]\n[!output FILE_NEW_NAME_LONG]"
+[!else]
+[!if !DOCVIEW]
+    IDR_[!output SAFE_DOC_TYPE_NAME]TYPE         "\n[!output SAFE_DOC_TYPE_NAME]\n[!output FILE_NEW_NAME_SHORT]"
+[!else]
+    IDR_[!output SAFE_DOC_TYPE_NAME]TYPE         "\n[!output SAFE_DOC_TYPE_NAME]\n[!output FILE_NEW_NAME_SHORT]\n\n\n[!output FILE_TYPE_ID]\n[!output FILE_NEW_NAME_LONG]"
+[!endif]
+[!endif]
+[!else]
+[!if !DOCVIEW]
+    IDR_MAINFRAME           "[!output MAIN_FRAME_CAPTION]"
+[!else]
+[!if HAS_SUFFIX]  // 파일 접미사를 가집니다.
+    IDR_MAINFRAME           "[!output MAIN_FRAME_CAPTION]\n\n[!output FILE_NEW_NAME_SHORT]\n[!output FILTER_NAME]\n.[!output FILE_EXTENSION]\n[!output FILE_TYPE_ID]\n[!output FILE_NEW_NAME_LONG]"
+[!else]
+    IDR_MAINFRAME           "[!output MAIN_FRAME_CAPTION]\n\n[!output FILE_NEW_NAME_SHORT]\n\n\n[!output FILE_TYPE_ID]\n[!output FILE_NEW_NAME_LONG]"
+[!endif]
+
+[!endif]
+[!endif]
+END
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "[!output PROJECT_NAME]"
+    AFX_IDS_IDLEMESSAGE     "준비"
+END
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+[!if DO_KANA]
+    ID_INDICATOR_KANA       "KANA"
+[!endif]
+END
+STRINGTABLE
+BEGIN
+[!if APP_TYPE_MTLD]
+    ID_FILE_NEW_FRAME        "새 프레임을 만듭니다.\n새 프레임"
+[!if !RIBBON_TOOLBAR]
+    IDS_CLOSE                "닫기"
+[!endif]
+[!endif]
+[!if APP_TYPE_MDI || APP_TYPE_TABBED_MDI || DOCVIEW]
+[!if !DB_VIEW_NO_FILE]
+    ID_FILE_NEW             "새 문서를 만듭니다.\n새로 만들기"
+[!if DOCVIEW]
+    ID_FILE_OPEN            "기존 문서를 엽니다.\n열기"
+[!endif]
+    ID_FILE_CLOSE           "활성 문서를 닫습니다.\n닫기"
+[!endif]
+[!if DOCVIEW]
+    ID_FILE_SAVE            "활성 문서를 저장합니다.\n저장"
+    ID_FILE_SAVE_AS         "활성 문서를 새 이름으로 저장합니다.\n다른 이름으로 저장"
+[!endif]
+[!endif]
+[!if MINI_SERVER || FULL_SERVER || CONTAINER_SERVER]
+    ID_FILE_UPDATE          "컨테이너를 업데이트하여 변경 내용을 보여 줍니다.\n업데이트"
+    ID_FILE_SAVE_COPY_AS    "활성 문서의 복사본을 새 이름으로 저장합니다.\n복사본 저장"
+[!endif]
+[!if PRINTING]
+    ID_FILE_PAGE_SETUP      "인쇄 옵션을 변경합니다.\n페이지 설정"
+    ID_FILE_PRINT_SETUP     "프린터 및 인쇄 옵션을 변경합니다.\n인쇄 설정"
+    ID_FILE_PRINT_DIRECT    "현재 옵션을 사용하여 활성 문서를 인쇄합니다.\n빠른 인쇄"
+    ID_FILE_PRINT           "활성 문서를 인쇄합니다.\n인쇄"
+[!if !HTML_VIEW && !HTML_EDITVIEW]
+    ID_FILE_PRINT_PREVIEW   "전체 페이지를 표시합니다.\n인쇄 미리 보기"
+[!endif]
+[!endif]
+[!if MAPI]
+    ID_FILE_SEND_MAIL       "전자 메일을 통해 활성 문서를 보냅니다.\n메일 보내기"
+[!endif]
+    ID_APP_ABOUT            "프로그램 정보, 버전 번호 및 저작권을 표시합니다.\n정보"
+    ID_APP_EXIT             "문서를 저장할지를 묻고 응용 프로그램을 끝냅니다.\n끝내기"
+[!if DOCVIEW]
+    ID_FILE_MRU_FILE1       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE2       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE3       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE4       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE5       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE6       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE7       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE8       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE9       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE10      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE11      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE12      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE13      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE14      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE15      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE16      "현재 문서를 엽니다."
+[!endif]
+    ID_NEXT_PANE            "다음 창으로 전환합니다.\n다음 창"
+    ID_PREV_PANE            "이전 창으로 전환합니다.\n이전 창"
+[!if APP_TYPE_MDI || APP_TYPE_TABBED_MDI]
+[!if DOCVIEW]
+    ID_WINDOW_NEW           "활성 문서에 대해 다른 창을 엽니다.\n새 창"
+[!endif]
+    ID_WINDOW_ARRANGE       "창의 아래쪽에 아이콘을 정렬합니다.\n아이콘 정렬"
+    ID_WINDOW_CASCADE       "창이 겹치도록 계단식으로 정렬합니다.\n계단식 창 배열"
+    ID_WINDOW_TILE_HORZ     "창이 겹치지 않도록 바둑판식으로 정렬합니다.\n바둑판식 창 배열"
+    ID_WINDOW_TILE_VERT     "창이 겹치지 않도록 바둑판식으로 정렬합니다.\n바둑판식 창 배열"
+[!endif]
+    ID_WINDOW_SPLIT         "활성 창을 여러 개의 창으로 분할합니다.\n분할"
+    ID_EDIT_CLEAR           "선택 영역을 지웁니다.\n지우기"
+    ID_EDIT_CLEAR_ALL       "모두 지웁니다.\n모두 지우기"
+    ID_EDIT_COPY            "선택 영역을 복사하여 클립보드에 넣습니다.\n복사"
+    ID_EDIT_CUT             "선택 영역을 잘라내어 클립보드에 넣습니다.\n잘라내기"
+    ID_EDIT_FIND            "지정한 텍스트를 찾습니다.\n찾기"
+    ID_EDIT_PASTE           "클립보드 내용을 삽입합니다.\n붙여넣기"
+    ID_EDIT_REPEAT          "마지막 작업을 반복합니다.\n반복"
+    ID_EDIT_REPLACE         "특정 텍스트를 다른 텍스트로 바꿉니다.\n바꾸기"
+    ID_EDIT_SELECT_ALL      "전체 문서를 선택합니다.\n모두 선택"
+    ID_EDIT_UNDO            "마지막 작업 실행을 취소합니다.\n실행 취소"
+    ID_EDIT_REDO            "이전에 실행 취소된 작업을 다시 실행합니다.\n다시 실행"
+[!if DOCKING_TOOLBAR || TOOLBAR_STYLE_REBAR || RIBBON_TOOLBAR]
+    ID_VIEW_TOOLBAR         "도구 모음을 표시하거나 숨깁니다.\n도구 모음 설정/해제"
+[!endif]
+[!if STATUS_BAR]
+    ID_VIEW_STATUS_BAR      "상태 표시줄을 표시하거나 숨깁니다.\n상태 표시줄 설정/해제"
+[!endif]
+[!if ADV_DOCKING_CAPTION]
+    ID_VIEW_CAPTION_BAR     "캡션 표시줄을 표시하거나 숨깁니다.\n캡션 표시줄 설정/해제"
+[!endif]
+[!if CONTAINER || CONTAINER_SERVER]
+    ID_EDIT_PASTE_LINK      "클립보드의 내용과 소스에 대한 연결을 삽입합니다.\n연결하여 붙여넣기"
+    ID_EDIT_PASTE_SPECIAL   "클립보드 내용을 지정한 옵션에 따라 삽입합니다.\n선택하여 붙여넣기"
+    ID_OLE_INSERT_NEW       "새 포함 개체를 삽입합니다.\n새 개체"
+    ID_OLE_EDIT_LINKS       "연결된 개체를 편집합니다.\n연결 편집"
+    ID_OLE_VERB_FIRST       "포함 개체 또는 연결 개체를 활성화합니다."
+    57873                   "포함 개체 또는 연결 개체를 활성화합니다."
+    57874                   "포함 개체 또는 연결 개체를 활성화합니다."
+    57875                   "포함 개체 또는 연결 개체를 활성화합니다."
+    ID_OLE_VERB_POPUP       "포함 개체 또는 연결 개체를 활성화합니다."
+    ID_OLE_EDIT_CONVERT     "개체를 다른 형식으로 변환합니다.\n개체 변환"
+[!endif]
+[!if OLEDB_RECORD_VIEW || ODBC_RECORD_VIEW]
+    ID_RECORD_NEXT            "다음 레코드로 이동합니다.\n다음 레코드"
+    ID_RECORD_PREV            "이전 레코드로 이동합니다.\n이전 레코드"
+    ID_RECORD_LAST            "마지막 레코드로 이동합니다.\n마지막 레코드"
+    ID_RECORD_FIRST           "첫 레코드로 이동합니다.\n첫 레코드"
+[!endif]
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "창 크기를 변경합니다."
+    AFX_IDS_SCMOVE          "창 위치를 변경합니다."
+    AFX_IDS_SCMINIMIZE      "창을 아이콘으로 축소합니다."
+    AFX_IDS_SCMAXIMIZE      "창을 전체 화면 크기로 확대합니다."
+    AFX_IDS_SCNEXTWINDOW    "다음 문서 창으로 전환합니다."
+    AFX_IDS_SCPREVWINDOW    "이전 문서 창으로 전환합니다."
+    AFX_IDS_SCCLOSE         "문서를 저장할 것인지 확인하고 활성 창을 닫습니다."
+    AFX_IDS_SCRESTORE       "창을 보통 크기로 복원합니다."
+    AFX_IDS_SCTASKLIST      "작업 목록을 활성화합니다."
+[!if APP_TYPE_MDI || APP_TYPE_TABBED_MDI]
+    AFX_IDS_MDICHILD        "이 창을 활성화합니다."
+[!endif]
+[!if PRINTING]
+    AFX_IDS_PREVIEW_CLOSE   "인쇄 미리 보기 모드를 닫습니다.\n미리 보기 취소"
+[!endif]
+END
+
+[!if LIST_VIEW]
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_SMALLICON       "작은 아이콘을 사용하여 항목을 표시합니다.\n작은 아이콘"
+    ID_VIEW_LARGEICON       "큰 아이콘을 사용하여 항목을 표시합니다.\n큰 아이콘"
+    ID_VIEW_LIST            "항목을 목록으로 표시합니다.\n간단히"
+    ID_VIEW_DETAILS         "각 항목에 대한 자세한 정보를 창에 표시합니다.\n자세히"
+    ID_VIEW_LINEUP          "모눈에 맞춰 아이콘을 정렬합니다."
+    ID_VIEW_BYNAME          "사전순으로 아이콘을 정렬합니다."
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_AUTOARRANGE         "모눈에 맞춰 아이콘을 정렬합니다."
+END
+[!endif]
+
+[!if MENUBAR_TOOLBAR || RIBBON_TOOLBAR]
+STRINGTABLE
+BEGIN
+    IDS_STATUS_PANE1        "창 1"
+    IDS_STATUS_PANE2        "창 2"
+[!if MENUBAR_TOOLBAR]
+    IDS_TOOLBAR_STANDARD    "표준"
+    IDS_TOOLBAR_CUSTOMIZE   "사용자 지정..."
+[!endif]
+[!if APP_TYPE_MDI]
+    ID_WINDOW_MANAGER       "창(&W)..."
+[!endif]
+[!if ADV_DOCKING_EXPLORER]
+    IDS_FILE_VIEW           "파일 뷰"
+    IDS_CLASS_VIEW          "클래스 뷰"
+    IDS_EXPLORER            "탐색기"
+[!endif]
+[!if ADV_DOCKING_OUTPUT]
+    IDS_OUTPUT_WND          "출력"
+    IDS_BUILD_TAB           "빌드"
+    IDS_DEBUG_TAB           "디버그"
+    IDS_FIND_TAB            "찾기"
+[!endif]
+[!if ADV_DOCKING_PROPERTIES]
+    IDS_PROPERTIES_WND      "속성"
+[!endif]
+[!if ADV_DOCKING_NAVIGATION]
+    IDS_MYCALENDARS         "내 일정"
+    IDS_CALENDAR            "일정"
+    IDS_SHORTCUTS           "바로 가기"
+    IDS_FOLDERS             "폴더"
+    IDS_OUTLOOKBAR          "Outlook 표시줄"
+[!endif]
+[!if ADV_DOCKING_CAPTION]
+    IDS_CAPTION_BUTTON      "옵션..."
+    IDS_CAPTION_BUTTON_TIP  "자세한 옵션을 보려면 여기를 클릭하십시오."
+    IDS_CAPTION_TEXT        "사용자에게 메시지를 표시할 수 있는 캡션 표시줄입니다."
+    IDS_CAPTION_IMAGE_TIP   "중요"
+    IDS_CAPTION_IMAGE_TEXT  "사용자에게 표시되는 정보 메시지입니다."
+[!endif]
+    IDS_EDIT_MENU           "편집"
+END
+[!endif]
+[!if RIBBON_TOOLBAR]
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 리본
+//
+
+IDR_RIBBON             RT_RIBBON_XML           "res\\ribbon.mfcribbon-ms"
+
+[!endif]
+#endif
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE 3 리소스에서 생성되었습니다.
+//
+
+[!if COMPOUND_DOC_NONE]
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+[!endif]
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_[!output LANG_SUFFIX])
+LANGUAGE [!output PRIMARY_LANG_ID], [!output SUB_LANG_ID]
+#include "[!output RES_PATH]\\[!output RC2_FILE_NAME].rc2"  // Microsoft Visual C++ 이외의 다른 도구에서 편집한 리소스입니다.
+#include "[!output MFC_RC_INCLUDE_PREFIX]afxres.rc"      // 표준 구성 요소입니다.
+[!if PRINTING]
+#include "[!output MFC_RC_INCLUDE_PREFIX]afxprint.rc"  // 인쇄 미리 보기 리소스
+[!endif]
+[!if CONTAINER || CONTAINER_SERVER]
+#include "[!output MFC_RC_INCLUDE_PREFIX]afxolecl.rc"  // OLE 컨테이너 리소스
+[!endif]
+[!if MINI_SERVER || FULL_SERVER || CONTAINER_SERVER]
+#include "[!output MFC_RC_INCLUDE_PREFIX]afxolesv.rc"  // OLE 서버 리소스
+[!endif]
+[!if OLEDB || ODBC]
+#include "[!output MFC_RC_INCLUDE_PREFIX]afxdb.rc"        // 데이터베이스 리소스
+[!endif]
+[!if RIBBON_TOOLBAR || MENUBAR_TOOLBAR || APP_TYPE_TABBED_MDI]
+#if !defined(_AFXDLL)
+[!if !PRINTING]
+#include "[!output MFC_RC_INCLUDE_PREFIX]afxprint.rc"        // 인쇄 미리 보기 리소스
+[!endif]
+#include "[!output MFC_RC_INCLUDE_PREFIX]afxribbon.rc"        // MFC 리본 및 컨트롤 막대 리소스
+#endif
+[!endif]
+#endif
+[!if AUTOMATION]
+
+1 TYPELIB "[!output SAFE_IDL_NAME].tlb"
+[!endif]
+#endif    // APSTUDIO_INVOKED가 아님

@@ -1,0 +1,1 @@
+﻿CREATE SEARCH PROPERTY LIST [$rawname$];

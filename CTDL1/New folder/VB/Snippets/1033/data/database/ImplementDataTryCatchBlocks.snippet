@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Implement Data Try/Catch Blocks </Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Implements a Try/Catch block that handles Exception, DataException, and all the exceptions that derive from DataException.</Description>
+      <Shortcut>adoTryCatch</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Data.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Xml.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Data</Namespace>
+        </Import>
+		  <Import>
+			  <Namespace>System</Namespace>
+		  </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>tryCode</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with data task code.</ToolTip>
+          <Default>' Add your data task here. </Default>
+        </Literal>
+        <Literal>
+          <ID>finallyCode</ID>
+          <Type>String</Type>
+          <ToolTip>Dispose of any resources you used in the Try block.</ToolTip>
+          <Default>' Dispose of any resources you used in the Try block.</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Try
+    $tryCode$
+Catch concurrencyEx As DBConcurrencyException
+    Throw concurrencyEx 
+Catch constraintEx As ConstraintException
+    Throw constraintEx
+Catch deletedRowEx As DeletedRowInaccessibleException
+    Throw deletedRowEx
+Catch duplicateNameEx As DuplicateNameException
+    Throw duplicateNameEx
+Catch inRowChangingEx As InRowChangingEventException
+    Throw inRowChangingEx
+Catch invalidConstraintEx As InvalidConstraintException
+    Throw invalidConstraintEx
+Catch invalidExpressionEx As InvalidExpressionException
+    Throw invalidExpressionEx
+Catch missingPrimaryEx As MissingPrimaryKeyException
+    Throw missingPrimaryEx
+Catch noNullEx As NoNullAllowedException
+    Throw noNullEx
+Catch readOnlyEx As ReadOnlyException
+    Throw readOnlyEx
+Catch rowNotInTableEx As RowNotInTableException
+    Throw rowNotInTableEx
+Catch strongTypingEx As StrongTypingException
+    Throw strongTypingEx
+Catch typedDataSetEx As TypedDataSetGeneratorException
+    Throw typedDataSetEx
+Catch versionNotFoundEx As VersionNotFoundException
+    Throw versionNotFoundEx
+Catch dataEx As DataException
+    Throw dataEx
+Catch ex As Exception
+    Throw ex
+Finally
+    $finallyCode$
+End Try
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,113 @@
+HKCR
+{
+[!if PROGID_VALID]
+	[!output PROGID] = s '[!output TYPE_NAME]'
+	{
+		CLSID = s '{[!output CLSID_REGISTRY_FORMAT]}'
+	}
+	[!output VERSION_INDEPENDENT_PROGID] = s '[!output TYPE_NAME]'
+	{		
+		CurVer = s '[!output PROGID]'
+	}
+[!endif]
+	NoRemove CLSID
+	{
+		ForceRemove {[!output CLSID_REGISTRY_FORMAT]} = s '[!output TYPE_NAME]'
+		{
+[!if PROGID_VALID]
+			ProgID = s '[!output PROGID]'
+			VersionIndependentProgID = s '[!output VERSION_INDEPENDENT_PROGID]'
+[!endif]
+[!if INTERFACE_DUAL]
+			ForceRemove Programmable
+[!endif]
+[!if DLL_APP]
+			InprocServer32 = s '%MODULE%'
+			{
+[!if !DEVICE || SUPPORT_DCOM]
+[!if THREADING_FREE]
+				val ThreadingModel = s 'Free'
+[!endif]
+[!if THREADING_BOTH]
+				val ThreadingModel = s 'Both'
+[!endif]
+[!if THREADING_APARTMENT]
+				val ThreadingModel = s 'Apartment'
+[!endif]
+[!if THREADING_NEUTRAL]
+				val ThreadingModel = s 'Neutral'
+[!endif]
+[!else]
+				val ThreadingModel = s 'Free'
+[!endif]
+			}
+[!else]
+			LocalServer32 = s '%MODULE%'
+			{
+				val ServerExecutable = s '%MODULE_RAW%'
+			}
+[!endif]
+			TypeLib = s '{[!output LIBID_REGISTRY_FORMAT]}'
+			Version = s '[!output TYPELIB_VERSION_MAJOR].[!output TYPELIB_VERSION_MINOR]'
+[!if ADD_HANDLER_SUPPORT && PREVIEW_HANDLER]			
+			val AppID = s '{6d2b5079-2f0b-48dd-ab7f-97cec514d30b}'
+			val DisplayName = s '@%MODULE%,-101'
+            val Icon = s '%MODULE%,201'
+[!endif]
+		}
+[!if ADD_HANDLER_SUPPORT && SEARCH_HANDLER]
+		ForceRemove {[!output CLSID_PERSISTENT_HANDLER]} = s '[!output TYPE_NAME]'
+		{
+			ForceRemove PersistentAddinsRegistered = s ''
+			{
+				{89BCB740-6119-101A-BCB7-00DD010655AF} = s '{[!output CLSID_REGISTRY_FORMAT]}'
+			}
+		}
+[!endif]		
+	}
+[!if ADD_HANDLER_SUPPORT && PREVIEW_HANDLER]
+	NoRemove .[!output HANDLER_FILE_EXTENSION]
+	{
+		NoRemove ShellEx
+		{
+			ForceRemove {8895b1c6-b41f-4c1c-a562-0d564250836f} = s '{[!output CLSID_REGISTRY_FORMAT]}'
+		}
+	}
+[!endif]
+[!if ADD_HANDLER_SUPPORT && SEARCH_HANDLER]
+	NoRemove .[!output HANDLER_FILE_EXTENSION]
+	{
+		NoRemove PersistentHandler = s '{[!output CLSID_PERSISTENT_HANDLER]}'
+	}
+[!endif]
+[!if ADD_HANDLER_SUPPORT && THUMBNAIL_PROVIDER_HANDLER]
+	NoRemove .[!output HANDLER_FILE_EXTENSION]
+	{
+		NoRemove ShellEx
+		{
+			ForceRemove {E357FCCD-A995-4576-B01F-234630154E96} = s '{[!output CLSID_REGISTRY_FORMAT]}'
+		}
+	}
+[!endif]
+}
+[!if ADD_HANDLER_SUPPORT && PREVIEW_HANDLER]
+HKLM
+{
+	NoRemove Software
+	{
+		NoRemove Microsoft
+		{
+			NoRemove Windows
+			{
+				NoRemove CurrentVersion
+				{
+					NoRemove PreviewHandlers
+					{
+						val {[!output CLSID_REGISTRY_FORMAT]} = s '[!output TYPE_NAME]'
+					}				
+				}
+			}
+		}
+	}
+}
+[!endif]

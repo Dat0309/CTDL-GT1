@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Enumerate Serial Ports</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Shows how to enumerate serial ports using the My object.</Description>
+      <Shortcut>conPorts</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="VB" Kind="method body"><![CDATA[For Each portName In My.Computer.Ports.SerialPortNames
+    
+Next]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

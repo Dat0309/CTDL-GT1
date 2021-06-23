@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns="http://openajax.org/metadata" xmlns:win="http://microsoft.com/blend/5/namespace" xmlns:blend="http://schemas.microsoft.com/winjs/Blend/2011" spec="1.0" id="http://www.microsoft.com/schemas/corsica/1.0/Hub_with_Sample_Data" name="WinJS.UI.Hub_with_Sample_Data" version="1.0">
+	<blend:compatibleWiths>
+		<blend:compatibleWith platform="Windows" minVersion="8.1" />
+	</blend:compatibleWiths>
+	<locale messages="..\..\..\intrinsics\all-all.xml" />
+	<locale lang="en-us" messages="..\..\..\intrinsics\en-us.xml" />
+	<locale lang="de-de" messages="..\..\..\intrinsics\de-de.xml" />
+	<locale lang="es-es" messages="..\..\..\intrinsics\es-es.xml" />
+	<locale lang="fr-fr" messages="..\..\..\intrinsics\fr-fr.xml" />
+	<locale lang="it-it" messages="..\..\..\intrinsics\it-it.xml" />
+	<locale lang="ja" messages="..\..\..\intrinsics\ja.xml" />
+	<locale lang="ko" messages="..\..\..\intrinsics\ko.xml" />
+	<locale lang="ru-ru" messages="..\..\..\intrinsics\ru-ru.xml" />
+	<locale lang="zh-cn" messages="..\..\..\intrinsics\zh-cn.xml" />
+	<locale lang="zh-tw" messages="..\..\..\intrinsics\zh-tw.xml" />
+	<author name="Microsoft Corporation" />
+	<title type="text/plain" locid="WinJS.UI.Hub_with_Sample_Data.Title">Hub with Sample Data</title>
+	<icons>
+		<icon src="ui_winjs.ui.listview.12x12.png" width="12" height="12" />
+		<icon src="ui_winjs.ui.listview.16x16.png" width="16" height="16" />
+	</icons>
+	<description type="text/plain" locid="WinJS.UI.Hub_with_Sample_Data.Description"><![CDATA[Hub with Sample Data]]></description>
+	<requires>
+		<require type="javascript" src="//Microsoft.WinJS.2.0/js/base.js" />
+		<require type="javascript" src="//Microsoft.WinJS.2.0/js/ui.js" />
+		<require type="css" src="//Microsoft.WinJS.2.0/css/ui-dark.css" includeRef="true" p4:distinct="false" xmlns:p4="http://schemas.microsoft.com/winjs/2011" />
+		<require type="javascript" src="sampleData.js" />
+		<require type="javascript"><![CDATA[WinJS.UI.processAll();]]></require>
+	</requires>
+	<content>
+		<![CDATA[
+		<div class="group1ItemTemplate" data-win-control="WinJS.Binding.Template">
+			<div>
+				<div data-win-bind="textContent:name"></div>
+			</div>
+		</div>
+		<div class="group2ItemTemplate" data-win-control="WinJS.Binding.Template">
+			<div>
+				<div data-win-bind="textContent:name"></div>
+			</div>
+		</div>
+		<div class="sampleListViewItemTemplate" data-win-control="WinJS.Binding.Template">
+			<div>
+				<div data-win-bind="textContent:name" style="width: 100px;"></div>
+			</div>
+		</div>
+		<div data-win-control="WinJS.UI.SemanticZoom">
+			<div class="zoomedInContainer" data-win-control="WinJS.UI.Hub">
+				<div data-win-control="WinJS.UI.HubSection" data-win-options="{header: groupOneName}">
+					<div>
+						<div data-win-control="WinJS.UI.Repeater" data-win-options="{data: sectionOneDataSource, template:select('.group1ItemTemplate')}"></div>
+					</div>
+				</div>
+				<div data-win-control="WinJS.UI.HubSection" data-win-options="{header: groupTwoName}">
+					<div>
+						<div data-win-control="WinJS.UI.ListView" data-win-options="{itemDataSource:sectionTwoDataSource.dataSource, itemTemplate:select('.group2ItemTemplate')}"></div>
+					</div>
+				</div>
+			</div>
+			<div class="zoomedOutContainer" data-win-control="WinJS.UI.ListView" data-win-options="{itemDataSource:sampleData.dataSource, itemTemplate:select('.sampleListViewItemTemplate')}"></div>
+		</div>
+		]]>
+	</content>
+	<categories>
+		<category name="Windows app Controls" />
+		<category name="Windows app Controls/All" />
+		<category name="Windows app Controls/Snippets" />
+	</categories>
+</widget>

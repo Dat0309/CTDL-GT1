@@ -1,0 +1,10 @@
+// [!output SAFE_IDL_NAME].idl: código fuente de la biblioteca de tipos de [!output PROJECT_NAME].dll
+// El compilador MIDL procesa este archivo
+// y genera la biblioteca de tipos ([!output SAFE_IDL_NAME].tlb).
+
+[ uuid([!output LIBID_REGISTRY_FORMAT]), version(1.0) ]
+library [!output LIB_NAME]
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+};

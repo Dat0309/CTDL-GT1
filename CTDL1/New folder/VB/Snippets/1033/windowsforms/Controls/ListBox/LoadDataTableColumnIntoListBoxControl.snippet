@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Load a Column from a Database Table into a ListBox Control</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Fills a ListBox with data from a DataTable object.</Description>
+      <Shortcut>lbData</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Data.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.xml</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Data</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>listBoxName</ID>
+          <Type>ListBox</Type>
+          <ToolTip>Replace with a ListBox control on your form.</ToolTip>
+          <Default>ListBox1</Default>
+        </Object>
+        <Object>
+          <ID>table</ID>
+          <Type>DataTable</Type>
+          <ToolTip>Replace with the DataTable whose column you want to load in the ListBox.</ToolTip>
+          <Default>DataTable1</Default>
+        </Object>
+        <Literal>
+          <ID>columnName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the name of the column from the DataTable that you want to use.</ToolTip>
+          <Default>"ColumnName"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[$listBoxName$.DataSource = $table$
+$listBoxName$.DisplayMember = $columnName$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

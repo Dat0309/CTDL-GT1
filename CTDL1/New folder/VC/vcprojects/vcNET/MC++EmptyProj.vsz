@@ -1,0 +1,7 @@
+VSWIZARD 7.0
+Wizard=VsWizard.VsWizardEngine.12.0
+Param="WIZARD_NAME = EmptyProject"
+Param="RELATIVE_PATH = VCWizards\AppWiz\.NET"
+Param="WIZARD_UI = FALSE"
+Param="MANAGED = TRUE"
+Param="WIZARD_ID = 60"

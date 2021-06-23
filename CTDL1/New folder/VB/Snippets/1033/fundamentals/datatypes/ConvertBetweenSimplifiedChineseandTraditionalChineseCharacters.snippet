@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Convert between Simplified Chinese and Traditional Chinese Characters</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Converts between Simplified Chinese and Traditional Chinese characters in a String.</Description>
+      <Shortcut>typeSimpleTrad</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>Simplified</ID>
+          <Type />
+          <ToolTip>Replace with Simplified Chinese String.</ToolTip>
+          <Default>"Simplified Chinese String"</Default>
+          <Function />
+        </Literal>
+        <Literal>
+          <ID>Traditional</ID>
+          <Type />
+          <ToolTip>Replace with Traditional Chinese String.</ToolTip>
+          <Default>"Traditional Chinese String"</Default>
+          <Function />
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[' Convert Simplified Chinese to Traditional Chinese.
+ 	Dim tString As String = StrConv($Simplified$, _
+    VbStrConv.TraditionalChinese)
+' Convert Traditional Chinese to Simplified Chinese.
+	Dim sString As String = StrConv($Traditional$, _
+    VbStrConv.SimplifiedChinese)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

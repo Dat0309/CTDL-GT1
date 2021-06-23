@@ -1,0 +1,62 @@
+HKCR
+{
+[!if PROGID_VALID]
+	[!output PROGID] = s '[!output TYPE_NAME]'
+	{
+		CLSID = s '{[!output CLSID_REGISTRY_FORMAT]}'
+[!if INSERTABLE]
+		Insertable
+[!endif]
+	}
+	[!output VERSION_INDEPENDENT_PROGID] = s '[!output TYPE_NAME]'
+	{		
+		CurVer = s '[!output PROGID]'
+	}
+[!endif]
+	NoRemove CLSID
+	{
+		ForceRemove {[!output CLSID_REGISTRY_FORMAT]} = s '[!output TYPE_NAME]'
+		{
+[!if PROGID_VALID]
+			ProgID = s '[!output PROGID]'
+			VersionIndependentProgID = s '[!output VERSION_INDEPENDENT_PROGID]'
+[!endif]
+[!if INTERFACE_DUAL]
+			ForceRemove Programmable
+[!endif]
+[!if DLL_APP]
+			InprocServer32 = s '%MODULE%'
+			{
+[!if !DEVICE || SUPPORT_DCOM]
+[!if THREADING_APARTMENT]
+				val ThreadingModel = s 'Apartment'
+[!endif]
+[!else]
+				val ThreadingModel = s 'Free'
+[!endif]
+			}
+[!else]
+			LocalServer32 = s '%MODULE%'
+			{
+				val ServerExecutable = s '%MODULE_RAW%'
+			}
+[!endif]
+[!if APPID_EXIST]
+			val AppID = s '[!output APPID_REGISTRY_FORMAT]'
+[!endif]
+			ForceRemove Control
+[!if INSERTABLE]
+			ForceRemove Insertable
+[!endif]
+[!if !DEVICE]
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, [!output IDR_BMPID_VALUE]'
+[!endif]
+			MiscStatus = s '0'
+			{
+			    '1' = s '%OLEMISC%'
+			}
+			TypeLib = s '{[!output LIBID_REGISTRY_FORMAT]}'
+			Version = s '[!output TYPELIB_VERSION_MAJOR].[!output TYPELIB_VERSION_MINOR]'
+		}
+	}
+}

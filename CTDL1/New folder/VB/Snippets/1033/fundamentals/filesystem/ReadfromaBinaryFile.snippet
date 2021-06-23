@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Read a Binary File</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Reads data from a binary file.</Description>
+      <Shortcut>filReadBin</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>Filename</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with filename.</ToolTip>
+          <Default>"C:\Test.txt"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim fileContents As Byte()
+filecontents = My.Computer.FileSystem.ReadAllBytes($Filename$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

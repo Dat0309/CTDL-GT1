@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title _locID="vbEventTitle1">Add Dependency Property - EventHandler</Title>
+      <Shortcut>wde</Shortcut>
+      <Description _locID="vbEventDesc1">Code snippet for creating a dependency property in a Windows Workflow Activity.</Description>
+      <Author>Microsoft Corporation</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>event</ID>
+          <ToolTip _locID="vbEventTip1">Replace with the event name.</ToolTip>
+          <Default>MyEvent</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>classname</ID>
+          <ToolTip _locID="vbEventTip2">Replace with the enclosing activity class name.</ToolTip>
+          <Default>ActivityClassName</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="vb">
+    <![CDATA[Public Shared $event$Event as DependencyProperty = DependencyProperty.Register("$event$", GetType(EventHandler), GetType($classname$))
+  
+  <Description("$event$")> _
+  <Category("$event$ Category")> _
+  <Browsable(True)> _
+  <DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)> _
+  Public Custom Event $event$ as EventHandler 
+    AddHandler(ByVal value As EventHandler)
+      MyBase.AddHandler($classname$.$event$Event, value)
+    End AddHandler
+    RemoveHandler(ByVal value As EventHandler)
+      MyBase.RemoveHandler($classname$.$event$Event, value)
+    End RemoveHandler
+    RaiseEvent(ByVal sender As Object, ByVal e As System.EventArgs)
+    End RaiseEvent
+  End Event]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

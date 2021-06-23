@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Load an RTF File into a RichTextBox Control</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Loads a file in RTF format into a RichTextBox control.</Description>
+      <Shortcut>richLoad</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+          <Url />
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>RTFControl</ID>
+          <Type>System.Windows.Forms.RichTextBox</Type>
+          <ToolTip>Replace with a RichTextBox control on your form.</ToolTip>
+          <Default>RichTextBox1</Default>
+        </Object>
+        <Literal>
+          <ID>Filename</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the file name.</ToolTip>
+          <Default>"RichTextDocument.rtf"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[$RTFControl$.LoadFile($Filename$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

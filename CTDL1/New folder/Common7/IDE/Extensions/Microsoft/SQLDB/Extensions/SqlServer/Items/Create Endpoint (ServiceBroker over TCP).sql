@@ -1,0 +1,6 @@
+﻿CREATE ENDPOINT [$rawname$]
+	AS TCP
+	(
+		LISTENER_PORT = 4022
+	)
+	FOR SERVICE_BROKER()

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="ProjectGroup">
+  <TemplateData>
+    <Name>中樞/樞紐分析應用程式 (通用應用程式)</Name>
+    <Description>使用中樞控制項之 Windows 三頁面通用應用程式以及使用樞紐分析控制項和 Windows 執行階段之 Windows Phone 應用程式的專案。專用頁面會顯示群組和項目詳細資料。</Description>
+    <Icon>hubpivotuniv.ico</Icon>
+    <TemplateID>Microsoft.JavaScript.HubPivotUniv</TemplateID>
+    <BlendTemplateID>Microsoft.Blend.HubPivotUniversalWWA</BlendTemplateID>
+    <BlendTemplateGroupID>HTML (Universal)</BlendTemplateGroupID>
+    <BlendProjectSubType>WJApplication</BlendProjectSubType>
+    <ProjectType>JavaScript</ProjectType>
+    <DefaultName>HubPivotSharedApp</DefaultName>
+    <TargetPlatformName>Windows</TargetPlatformName>
+    <RequiredPlatformVersion>6.3.1</RequiredPlatformVersion>
+    <CreateInPlace>true</CreateInPlace>
+    <PreviewImage>hubpivotuniv.png</PreviewImage>
+    <CreateNewFolder>true</CreateNewFolder>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <SortOrder>10</SortOrder>
+    <BlendCreateNewFolder>true</BlendCreateNewFolder>
+    <NumberOfParentCategoriesToRollUp>2</NumberOfParentCategoriesToRollUp>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+      <SolutionFolder Name="SharedApp">
+        <ProjectTemplateLink ProjectName="$safeprojectname$.Shared" CopyParameters="true">Shared\hubpivotuniv.Shared.vstemplate</ProjectTemplateLink>
+        <ProjectTemplateLink ProjectName="$safeprojectname$.Windows" CopyParameters="true">Store\hubpivotuniv.Store.vstemplate</ProjectTemplateLink>
+        <ProjectTemplateLink ProjectName="$safeprojectname$.WindowsPhone" CopyParameters="true">Phone\hubpivotuniv.Phone.vstemplate</ProjectTemplateLink>
+      </SolutionFolder>
+    </ProjectCollection>
+  </TemplateContent>
+</VSTemplate>

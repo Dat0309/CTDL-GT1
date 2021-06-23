@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.RemoteEventReceiver" DefaultFile="$ProjectItemName$.vb" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="$ProjectItemName$\" Type="ElementManifest" />
+  </Files>
+  <ExtensionData>
+    <ExtensionDataItem Key="RemoteEventReceiverCategory" Value="$RemoteEventReceiverCategory$" />
+    <ExtensionDataItem Key="WcfServiceRelativePath" Value="$WcfServiceRelativePath$" />
+  </ExtensionData>
+</ProjectItem>

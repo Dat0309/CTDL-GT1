@@ -1,0 +1,89 @@
+﻿.parsingBar {
+    background-color: #0072c6;
+}
+
+.layoutBar {
+    background-color: #dd5900;
+}
+
+.xamlOtherBar {
+    background-color: #b5b5b5;
+}
+
+.appCodeBar {
+    background-color: #aecd00;
+}
+
+.uiThread {
+    background-color: #9b4f96;
+}
+
+.compositionThread {
+    background-color: #79d7f2;
+}
+
+html, body {
+    -ms-high-contrast-adjust: none;
+    cursor: default;
+}
+
+.mainView {
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: auto 1fr;
+    display: -ms-grid;
+    height: 100vh;
+    width: 100vw;
+}
+
+    .mainView .reportViewContainer {
+        -ms-grid-columns: minmax(670px, 1fr);
+        -ms-grid-row: 2;
+        -ms-grid-rows: auto minmax(15em, 1fr);
+        display: -ms-grid;
+        overflow: auto;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .mainView .reportViewContainer .swimlaneViewContainer {
+        -ms-grid-row: 1;
+        -ms-grid-rows: auto auto 1fr;
+        -ms-grid-columns: 1fr;
+        display: -ms-grid;
+        margin-bottom: 15px;
+    }
+
+    .mainView .reportViewContainer .detailsViewContainer {
+        -ms-grid-row: 2;
+        height: 100%;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .mainView .reportViewContainer .swimlaneViewContainer .graphRulerViewContainer {
+        -ms-grid-row: 1;
+    }
+
+    .mainView .reportViewContainer .swimlaneViewContainer .uithreadActivityContainer {
+        -ms-grid-row: 2;
+        margin-top: 15px;
+    }
+
+    .mainView .reportViewContainer .swimlaneViewContainer .frameRateGraphContainer {
+        -ms-grid-row: 3;
+        margin-top: 15px;
+    }
+
+    .mainView .reportViewContainer .detailsViewContainer .parsingTimelineViewContainer {
+        height: 100%;
+        width: 100%;
+    }
+
+    .mainView .reportViewContainer .detailsViewContainer .hotElementsCostViewContainer {
+        height: 100%;
+        width: 100%;
+    }
+
+.mainView .reportViewContainer .detailsViewContainer .tabControl > .tabBarContainer {
+    -ms-grid-column-align: start;
+}

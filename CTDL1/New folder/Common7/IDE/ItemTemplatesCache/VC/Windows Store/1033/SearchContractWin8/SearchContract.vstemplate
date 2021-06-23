@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="1024" />
+    <Description Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="1025" />
+    <Icon Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="4017" />
+    <TemplateID>Microsoft.CPP.WinRT.SearchContract</TemplateID>
+    <TemplateGroupID>WinRT-Native</TemplateGroupID>
+    <ProjectType>VC</ProjectType>
+    <NumberOfParentCategoriesToRollUp>0</NumberOfParentCategoriesToRollUp>
+    <DefaultName>SearchResultsPage.xaml</DefaultName>
+    <ShowByDefault>true</ShowByDefault>
+    <SortOrder>91</SortOrder>
+    <PreviewImage>SearchContract.png</PreviewImage>
+    <TargetPlatformName>Windows</TargetPlatformName>
+    <RequiredPlatformVersion>6.2.0</RequiredPlatformVersion>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="true" ItemType="Page" SubType="Designer" CustomTool="MSBuild:Compile" TargetFileName="$fileinputname$.xaml">SearchResultsPage.xaml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.xaml.h">SearchResultsPage.xaml.h</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="true" TargetFileName="$fileinputname$.xaml.cpp">SearchResultsPage.xaml.cpp</ProjectItem>
+
+    <ProjectItem ReplaceParameters="false" TargetFileName="$wizardcommonprefix$ReadMe.txt">ReadMe.txt</ProjectItem>
+    <ProjectItem ReplaceParameters="false" TargetFileName="$wizardcommonprefix$StandardStyles.xaml">StandardStyles.xaml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$BindableBase.h">BindableBase.h</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$BindableBase.cpp">BindableBase.cpp</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$BooleanToVisibilityConverter.h">BooleanToVisibilityConverter.h</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$BooleanToVisibilityConverter.cpp">BooleanToVisibilityConverter.cpp</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$BooleanNegationConverter.h">BooleanNegationConverter.h</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$BooleanNegationConverter.cpp">BooleanNegationConverter.cpp</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$LayoutAwarePage.h">LayoutAwarePage.h</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$LayoutAwarePage.cpp">LayoutAwarePage.cpp</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$RichTextColumns.h">RichTextColumns.h</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$RichTextColumns.cpp">RichTextColumns.cpp</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$SuspensionManager.h">SuspensionManager.h</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$SuspensionManager.cpp">SuspensionManager.cpp</ProjectItem>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.WinRT.TemplateWizards, Version=12.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.WinRT.TemplateWizards.SmartItem.Wizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <HasWizardSubPath>SearchResultsPage.xaml.h</HasWizardSubPath>
+    <CommonOptional>ReadMe.txt</CommonOptional>
+    <CommonRequired>StandardStyles.xaml</CommonRequired>
+    <CommonRequired>BindableBase.h</CommonRequired>
+    <CommonRequired>BindableBase.cpp</CommonRequired>
+    <CommonRequired>BooleanToVisibilityConverter.h</CommonRequired>
+    <CommonRequired>BooleanToVisibilityConverter.cpp</CommonRequired>
+    <CommonRequired>BooleanNegationConverter.h</CommonRequired>
+    <CommonRequired>BooleanNegationConverter.cpp</CommonRequired>
+    <CommonRequired>LayoutAwarePage.h</CommonRequired>
+    <CommonRequired>LayoutAwarePage.cpp</CommonRequired>
+    <CommonRequired>RichTextColumns.h</CommonRequired>
+    <CommonRequired>RichTextColumns.cpp</CommonRequired>
+    <CommonRequired>SuspensionManager.h</CommonRequired>
+    <CommonRequired>SuspensionManager.cpp</CommonRequired>
+    <Activation>
+      <AppMethod Name="OnSearchActivated" CommentPrefix="// " Include="&quot;$safeitemname$.xaml.h&quot;"
+                 Declaration="virtual void OnSearchActivated(Windows::ApplicationModel::Activation::SearchActivatedEventArgs^ pArgs) override;">
+        <![CDATA[
+        /// <summary>
+        /// Invoked when the application is activated to display search results.
+        /// </summary>
+        /// <param name="args">Details about the activation request.</param>
+        void $wizardappclass$::OnSearchActivated(Windows::ApplicationModel::Activation::SearchActivatedEventArgs^ args)
+        {
+
+			// TODO: Register the Windows::ApplicationModel::Search::SearchPane::GetForCurrentView()->QuerySubmitted
+			// event in OnWindowCreated to speed up searches once the application is already running
+
+			// If the app does not contain a top-level frame, it is possible that this 
+			// is the initial launch of the app. Typically this method and OnLaunched 
+			// in App.xaml.cpp can call a common method.
+			auto previousContent = Window::Current->Content;
+			auto rootFrame = dynamic_cast<Windows::UI::Xaml::Controls::Frame^>(previousContent);
+			if (rootFrame == nullptr)
+			{
+				// Create a Frame to act as the navigation context and associate it with
+				// a SuspensionManager key
+				rootFrame = ref new Frame();
+				Common::SuspensionManager::RegisterFrame(rootFrame, "AppFrame");
+
+				auto prerequisite = Concurrency::task<void>([](){});
+				if (args->PreviousExecutionState == ApplicationExecutionState::Terminated)
+				{
+					// Restore the saved session state only when appropriate, scheduling the
+					// final launch steps after the restore is complete
+					prerequisite = Common::SuspensionManager::RestoreAsync();
+				}
+				prerequisite.then([=](Concurrency::task<void> prerequisite)
+				{
+					try
+					{
+						prerequisite.get();
+					}
+					catch (Platform::Exception^)
+					{
+						// If restore fails, the app should proceed as though there was no restored state.
+					}
+
+					// TODO: Navigate to the initial landing page of the app as if you were launched. This
+					// allows the user to return to your app from the search results page by using the back button.
+
+					//Navigate to the search page
+					rootFrame->Navigate(TypeName($safeitemname$::typeid), args->QueryText);
+					// Place the frame in the current Window
+					Window::Current->Content = rootFrame;
+					// Ensure the current window is active
+					Window::Current->Activate();
+
+				}, Concurrency::task_continuation_context::use_current());
+			}
+			else
+			{
+				//Navigate to the search page
+				rootFrame->Navigate(TypeName($safeitemname$::typeid), args->QueryText);
+				// Ensure the current window is active
+				Window::Current->Activate();
+			}
+        }
+        ]]>
+      </AppMethod>
+      <AppMethodComment>
+        <![CDATA[
+        // TODO: Respond to activation for search results
+        //
+        // The following code could not be automatically added to your application subclass,
+        // either because the appropriate class could not be located or because a method with
+        // the same name already exists.  Ensure that appropriate code deals with activation
+        // by displaying search results for the specified search term.
+        //
+        ]]>
+      </AppMethodComment>
+      <ManifestData>
+        <Extension Category="windows.search" />
+      </ManifestData>
+      <ManifestComment>
+        <![CDATA[
+        // TODO: Edit the manifest to enable searching
+        //
+        // The package manifest could not be automatically updated.  Open the package manifest
+        // file and ensure that support for activation for searching is enabled.
+        ]]>
+      </ManifestComment>
+    </Activation>
+  </WizardData>
+</VSTemplate>

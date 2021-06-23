@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Add a ToolTip to a Windows Forms Control</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Adds a ToolTip to a Windows Forms Control.</Description>
+      <Shortcut>controlTip</Shortcut>
+    </Header>
+    <Snippet>
+		<References>
+			<Reference>
+				<Assembly>System.Windows.Forms.dll</Assembly>
+			</Reference>
+		</References>
+		<Imports>
+			<Import>
+				<Namespace>Microsoft.VisualBasic</Namespace>
+			</Import>
+			<Import>
+				<Namespace>System.Windows.Forms</Namespace>
+			</Import>
+		</Imports>
+      <Declarations>
+        <Object>
+          <ID>control</ID>
+          <Type>Control</Type>
+          <ToolTip>Replace with a control on your form.</ToolTip>
+          <Default>Button1</Default>
+        </Object>
+        <Literal>
+          <ID>text</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with a String to display in the ToolTip.</ToolTip>
+          <Default>"ToolTip Text"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim tooltip As New ToolTip()
+tooltip.SetToolTip($control$, $text$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

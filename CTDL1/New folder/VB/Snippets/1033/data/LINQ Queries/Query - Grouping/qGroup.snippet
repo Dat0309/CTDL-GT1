@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Group By Into Count()</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Creates a query that groups results and returns a count of how many items are in each group.</Description>
+      <Shortcut>qGroup</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>queryResult</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the query.</ToolTip>
+          <Default>query</Default>
+        </Literal>
+        <Literal>
+          <ID>item</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the variable that represents an item from your data source.</ToolTip>
+          <Default>fruit</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSource</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the identifier for your data source.</ToolTip>
+          <Default>New String() {"apple", "orange", "pear", "banana"}</Default>
+        </Literal>
+        <Literal>
+          <ID>field</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the name of the field used to group the results.</ToolTip>
+          <Default>Length</Default>
+       </Literal>
+        <Literal>
+          <ID>groupingCondition</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the aggregator to call on your group.</ToolTip>
+          <Default>Count</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $queryResult$ = From $item$ In $dataSource$ _
+                    Group By $item$.$field$ Into $groupingCondition$() _
+                    Select $field$, $groupingCondition$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

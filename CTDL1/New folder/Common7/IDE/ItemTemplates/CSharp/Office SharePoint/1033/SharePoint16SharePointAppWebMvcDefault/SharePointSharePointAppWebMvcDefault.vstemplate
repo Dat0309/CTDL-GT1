@@ -1,0 +1,25 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="375" />
+    <TemplateID>SharePoint16SharePointAppWebMvcDefault_CS_ITEM</TemplateID>
+    <ProjectType>CSharp</ProjectType>
+    <Hidden>true</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem TargetFileName="Controllers\HomeController.cs" ReplaceParameters="true" OpenInEditor="true">Controllers\HomeController.cs</ProjectItem>
+    <ProjectItem TargetFileName="Scripts\spcontext.js" ReplaceParameters="true" OpenInEditor="false">Scripts\spcontext.js</ProjectItem>
+    <ProjectItem TargetFileName="Views\Home\Index.cshtml" ReplaceParameters="true" OpenInEditor="false">Views\Home\Index.cshtml</ProjectItem>
+    <ProjectItem TargetFileName="Views\Shared\Error.cshtml" ReplaceParameters="true" OpenInEditor="false">Views\Shared\Error.cshtml</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="$loc_scripts_spcontext_js_Comment1$" _locID="$loc_scripts_spcontext_js_Comment1$" _locAttrData="Value" Value="SPHostUrl parameter name" />
+      <CustomParameter Name="$loc_scripts_spcontext_js_Comment2$" _locID="$loc_scripts_spcontext_js_Comment2$" _locAttrData="Value" Value="Gets SPHostUrl from the current URL and appends it as query string to the links which point to current domain in the page." />
+      <CustomParameter Name="$loc_scripts_spcontext_js_Comment3$" _locID="$loc_scripts_spcontext_js_Comment3$" _locAttrData="Value" Value="Appends SPHostUrl as query string to all the links which point to current domain." />
+      <CustomParameter Name="$loc_scripts_spcontext_js_Comment4$" _locID="$loc_scripts_spcontext_js_Comment4$" _locAttrData="Value" Value="Gets SPHostUrl from the given query string." />
+      <CustomParameter Name="$loc_scripts_spcontext_js_Comment5$" _locID="$loc_scripts_spcontext_js_Comment5$" _locAttrData="Value" Value="Gets authority from the given url when it is an absolute url with http/https protocol or a protocol relative url." />
+      <CustomParameter Name="$loc_scripts_spcontext_js_Comment6$" _locID="$loc_scripts_spcontext_js_Comment6$" _locAttrData="Value" Value="Filters out anchors and urls with other unsupported protocols." />
+      <CustomParameter Name="$loc_scripts_spcontext_js_Comment7$" _locID="$loc_scripts_spcontext_js_Comment7$" _locAttrData="Value" Value="If SPHasRedirectedToSharePoint exists in the query string, remove it." />
+      <CustomParameter Name="$loc_scripts_spcontext_js_Comment8$" _locID="$loc_scripts_spcontext_js_Comment8$" _locAttrData="Value" Value="Hence, when user bookmarks the url, SPHasRedirectedToSharePoint will not be included." />
+      <CustomParameter Name="$loc_scripts_spcontext_js_Comment9$" _locID="$loc_scripts_spcontext_js_Comment9$" _locAttrData="Value" Value="Note that modifying window.location.search will cause an additional request to server." />
+    </CustomParameters>
+  </TemplateContent>
+</VSTemplate>

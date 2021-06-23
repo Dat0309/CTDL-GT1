@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Locate an Item in a Windows Forms ListBox Control</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Locates the first incidence of a string in a ListBox control.</Description>
+      <Shortcut>lbLocate</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>listBoxName</ID>
+          <Type>ListBox</Type>
+          <ToolTip>Replace with a ListBox control on your form.</ToolTip>
+          <Default>ListBox1</Default>
+        </Object>
+        <Literal>
+          <ID>searchString</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the String whose location you are trying to find.</ToolTip>
+          <Default>"Maria"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim index As Integer
+index = $listBoxName$.FindString($searchString$)
+If index <> ListBox.NoMatches Then
+    ' Item found.
+Else
+    ' Item not found.
+End If]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

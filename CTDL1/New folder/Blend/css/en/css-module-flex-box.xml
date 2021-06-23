@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Flexible Box Layout" standard-reference="http://www.w3.org/TR/css3-flexbox/" status="CR" pub-date="2012-09-18">
+
+  <CssPropertyValue type="flexdirections">
+    <entry value="row" />
+    <entry value="row-reverse" />
+    <entry value="column" />
+    <entry value="column-reverse" />
+  </CssPropertyValue>
+
+  <CssPropertyValue type="flexwraps">
+    <entry _locID="flex-wrap_nowrap"
+           _locAttrData="description"
+           value="nowrap"
+           description="The flexbox is single-line. The cross-start direction is equivalent to either the 'start' or 'before' direction of the current writing mode, whichever is in the cross-axis, and the cross-end direction is the opposite direction of cross-start." />
+    <entry _locID="flex-pack_wrap"
+           _locAttrData="description"
+           value="wrap"
+           description="The flexbox is multi-line. The cross-start direction is equivalent to either the 'start' or 'before' direction of the current writing mode, whichever is in the cross-axis, and the cross-end direction is the opposite direction of cross-start." />
+    <entry _locID="flex-pack_wrap-reverse"
+           _locAttrData="description"
+           value="wrap-reverse"
+           description="Same as 'wrap', except the cross-start and cross-end directions are swapped." />
+  </CssPropertyValue>
+
+  <CssProperty _locID="align-content"
+               _locAttrData="description"
+               version="3.0"
+               browsers="IE11,O12.1"
+               restriction="enum"
+               syntax="p { $(name): flex-start; }"
+               description="Aligns a flex container's lines within the flex container when there is extra space in the cross-axis, similar to how 'justify-content' aligns individual items within the main-axis."
+               standard-reference="http://www.w3.org/TR/css3-flexbox/#align-content">
+
+    <entry value="flex-start" />
+    <entry value="flex-end" />
+    <entry value="center" />
+    <entry value="space-between" />
+    <entry value="space-around" />
+    <entry value="stretch" />
+  </CssProperty>
+
+  <CssProperty _locID="align-items"
+               _locAttrData="description"
+               version="3.0"
+               browsers="IE11,O12.1"
+               restriction="enum"
+               syntax="p { $(name): flex-start; }"
+               description="Flex items can be aligned in the cross axis of the current line of the flex container, similar to 'justify-content' but in the perpendicular direction."
+               standard-reference="http://www.w3.org/TR/css3-flexbox/#align-items">
+
+    <entry value="flex-start" />
+    <entry value="flex-end" />
+    <entry value="center" />
+    <entry value="baseline" />
+    <entry value="stretch" />
+  </CssProperty>
+
+  <CssProperty _locID="align-self"
+               _locAttrData="description"
+               version="3.0"
+               browsers="IE11,O12.1"
+               restriction="enum"
+               syntax="p { $(name): flex-start; }"
+               description="Flex items can be aligned in the cross axis of the current line of the flex container, similar to 'justify-content' but in the perpendicular direction."
+               standard-reference="http://www.w3.org/TR/css3-flexbox/#align-items">
+
+    <entry value="auto" />
+    <entry value="flex-start" />
+    <entry value="flex-end" />
+    <entry value="center" />
+    <entry value="baseline" />
+    <entry value="stretch" />
+  </CssProperty>
+
+  <CssProperty _locID="display">
+    <entry value="flexbox" browsers="IE11,O12.1" />
+    <entry value="inline-flexbox" browsers="IE11,O12.1" />
+  </CssProperty>
+
+  <CssProperty _locID="flex-basis"
+               _locAttrData="description"
+               version="3.0"
+               browsers="IE11,O12.1"
+               restriction="length, number, percentage"
+               syntax="p { $(name): 30%; }"
+               description="The 'flex-basis' property sets the flex basis. Negative lengths are invalid."
+               standard-reference="http://www.w3.org/TR/css3-flexbox/#flex-basis-propdef">
+
+    <entry value="auto" />
+  </CssProperty>
+
+  <CssProperty _locID="flex-direction"
+               _locAttrData="description"
+               version="3.0"
+               browsers="IE11,O12.1"
+               type="flexdirections"
+               restriction="enum"
+               syntax="div { $(name): column; }"
+               description="Specifies how flexbox items are placed in the flexbox."
+               standard-reference="http://www.w3.org/TR/css3-flexbox/#flex-direction" />
+
+  <CssProperty _locID="flex-flow"
+               _locAttrData="description"
+               version="3.0"
+               browsers="IE11,O12.1"
+               type="flexwraps, flexdirections"
+               restriction="enum"
+               syntax="div { $(name): column wrap; }"
+               description="Specifies how flexbox items are placed in the flexbox."
+               standard-reference="http://www.w3.org/TR/css3-flexbox/#flex-flow" />
+
+  <CssProperty _locID="flex-grow"
+               _locAttrData="description"
+               version="3.0"
+               browsers="IE11,O12.1"
+               restriction="number"
+               syntax="p { $(name): 4; }"
+               description="The 'flex-grow' property sets the flex grow factor. Negative numbers are invalid."
+               standard-reference="http://www.w3.org/TR/css3-flexbox/#flex-grow" />
+
+  <CssProperty _locID="flex-shrink"
+               _locAttrData="description"
+               version="3.0"
+               browsers="IE11,O12.1"
+               restriction="number"
+               syntax="p { $(name): 4; }"
+               description="The 'flex-shrink' property sets the flex shrink factor. Negative numbers are invalid."
+               standard-reference="http://www.w3.org/TR/css3-flexbox/#flex-shrink" />
+
+  <CssProperty _locID="flex"
+               _locAttrData="description"
+               version="3.0"
+               browsers="IE11,O12.1"
+               restriction="length, number, percentage"
+               syntax="p { $(name): 0 1 auto; }"
+               description="Specifies the components of a flexible length: the flex grow factor and flex shrink factor, and the flex basis."
+               standard-reference="http://www.w3.org/TR/css3-flexbox/#flex">
+
+    <entry value="auto" />
+    <entry value="none" />
+  </CssProperty>
+
+  <CssProperty _locID="flex-wrap"
+               _locAttrData="description"
+               version="3.0"
+               browsers="IE11,O12.1"
+               type="flexwraps"
+               restriction="enum"
+               syntax="div { $(name): nowrap; }"
+               description="controls whether the flexbox is single-line or multi-line, and the direction of the cross axis, which affects the direction new lines are stacked in and the meaning of the 'flex-align', 'flex-item-align', and 'flex-line-pack' properties."
+               standard-reference="http://www.w3.org/TR/css3-flexbox/#flex-wrap" />
+
+  <CssProperty _locID="justify-content"
+               _locAttrData="description"
+               version="3.0"
+               browsers="IE11,O12.1"
+               restriction="enum"
+               syntax="p { $(name): flex-start; }"
+               description="Aligns a flex container's lines within the flex container when there is extra space in the cross-axis, similar to how 'justify-content' aligns individual items within the main-axis."
+               standard-reference="http://www.w3.org/TR/css3-flexbox/#align-content">
+
+    <entry value="flex-start" />
+    <entry value="flex-end" />
+    <entry value="center" />
+    <entry value="space-between" />
+    <entry value="space-around" />
+  </CssProperty>
+
+  <CssProperty _locID="order"
+               _locAttrData="description"
+               version="3.0"
+               browsers="IE11,O12.1"
+               restriction="enum"
+               syntax="p { $(name): -1; }"
+               description="Controls the order in which flex items appear within their flex container, by assigning them to ordinal groups."
+               standard-reference="http://www.w3.org/TR/css3-flexbox/#order" />
+
+</CssModule>

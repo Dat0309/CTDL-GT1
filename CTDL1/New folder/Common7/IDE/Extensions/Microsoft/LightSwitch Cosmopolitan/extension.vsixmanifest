@@ -1,0 +1,15 @@
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="Microsoft.LightSwitch.Cosmopolitan" Version="1.0" Language="en-US" Publisher="Microsoft" />
+    <DisplayName>LightSwitch Cosmopolitan Shell and Theme</DisplayName>
+    <Description>A LightSwitch shell and theme with modern and clean UI, inspired by the Silverlight Cosmopolitan theme.</Description>
+    <Tags>Visual Studio LightSwitch</Tags>
+  </Metadata>
+  <Installation SystemComponent="true" InstalledByMsi="true" AllUsers="true">
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[12.0,13.0)" />
+  </Installation>
+  <Dependencies></Dependencies>
+  <Assets>
+    <Asset Type="LightSwitchPackage" Path="Microsoft.LightSwitch.Cosmopolitan.lspkg" />
+  </Assets>
+</PackageManifest>

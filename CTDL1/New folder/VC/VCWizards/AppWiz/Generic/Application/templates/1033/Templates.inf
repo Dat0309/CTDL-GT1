@@ -1,0 +1,31 @@
+readme.txt
+[!if LIB_APP]
+        [!if PRE_COMPILED_HEADER]
+stdafx.h
+targetver.h
+stdafx.cpp
+        [!endif]
+[!else]
+stdafx.h
+targetver.h
+stdafx.cpp
+OpenFile | root.cpp
+        [!if WIN_APP || SUPPORT_MFC]
+resource.h
+root.rc
+        [!endif]
+        [!if WIN_APP || SUPPORT_MFC]
+root.h
+        [!else]
+                [!if DLL_APP && EXPORT_SYMBOLS]
+root.h
+                [!endif]
+        [!endif]
+        [!if WIN_APP]
+CopyOnly | small.ico
+CopyOnly | root.ico
+        [!endif]
+[!endif]
+[!if DLL_APP && !SUPPORT_MFC]
+dllmain.cpp
+[!endif]

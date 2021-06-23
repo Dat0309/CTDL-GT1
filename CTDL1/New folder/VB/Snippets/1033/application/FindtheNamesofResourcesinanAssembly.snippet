@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Find the Names of Resources in an Assembly</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Returns a list of all the resources in an assembly.</Description>
+      <Shortcut>appRes</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Reflection</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>executingAssembly</ID>
+          <Type>Assembly</Type>
+          <ToolTip>The object to store the currently executing assembly.</ToolTip>
+          <Default>executingAssembly</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[$executingAssembly$ = Assembly.GetExecutingAssembly()
+Dim resources() As string = $executingAssembly$.GetManifestResourceNames
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

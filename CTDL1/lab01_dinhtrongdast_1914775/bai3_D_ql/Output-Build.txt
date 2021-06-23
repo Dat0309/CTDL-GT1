@@ -1,0 +1,4 @@
+﻿1>------ Build started: Project: bai3_D_ql, Configuration: Debug Win32 ------
+1>  program.cpp
+1>  bai3_D_ql.vcxproj -> D:\CTDL1\bai3_D_ql\Debug\bai3_D_ql.exe
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========

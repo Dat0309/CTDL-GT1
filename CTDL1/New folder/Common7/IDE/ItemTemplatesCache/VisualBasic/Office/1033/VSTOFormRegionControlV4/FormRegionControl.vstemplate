@@ -1,0 +1,46 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{59B99E29-E334-44A5-B522-B8C467AEC0D0}" ID="135" />
+    <Description Package="{59B99E29-E334-44A5-B522-B8C467AEC0D0}" ID="136" />
+    <Icon Package="{59B99E29-E334-44A5-B522-B8C467AEC0D0}" ID="340" />
+    <ProjectType>VisualBasic</ProjectType>
+    <TemplateGroupID>VSTOOutlookNoMAF</TemplateGroupID>
+    <TemplateID>VSTO-FormRegion</TemplateID>
+    <ShowByDefault>false</ShowByDefault>
+    <SortOrder>10</SortOrder>
+    <DefaultName>FormRegion.vb</DefaultName>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>System</Assembly>
+        <URL>http://www.microsoft.com</URL>
+      </Reference>
+      <Reference>
+        <Assembly>System.Data</Assembly>
+        <URL>http://www.microsoft.com</URL>
+      </Reference>
+      <Reference>
+        <Assembly>System.Drawing</Assembly>
+        <URL>http://www.microsoft.com</URL>
+      </Reference>
+      <Reference>
+        <Assembly>System.Windows.Forms</Assembly>
+        <URL>http://www.microsoft.com</URL>
+      </Reference>
+      <Reference>
+        <Assembly>Microsoft.Office.Tools.Outlook, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, Custom=null</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem ReplaceParameters="true" SubType="Form">FormRegionControl.vb</ProjectItem>
+    <ProjectItem ReplaceParameters="true">FormRegionControl.Designer.vb</ProjectItem>
+    <ProjectItem ReplaceParameters="true">ImportedFormRegion.vb</ProjectItem>
+    <ProjectItem ReplaceParameters="true">ImportedFormRegion.Designer.vb</ProjectItem>
+    <ProjectItem ReplaceParameters="false" TargetFileName="$fileinputname$.resx">ImportedFormRegion.resx</ProjectItem>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.Tools.Office.AddInProject, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, Custom=null</Assembly>
+    <FullClassName>Microsoft.VisualStudio.OfficeTools.AddinProject.FormRegionItemWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

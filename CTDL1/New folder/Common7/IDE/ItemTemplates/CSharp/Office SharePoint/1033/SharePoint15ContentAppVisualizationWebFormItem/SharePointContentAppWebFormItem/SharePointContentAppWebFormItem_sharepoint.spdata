@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="$fileinputname$\" Type="ElementManifest" />
+    <ProjectItemFile Source="DataBinding\DataBinding.css" Target="$fileinputname$\DataBinding\" Type="ElementFile" />
+    <ProjectItemFile Source="DataBinding\DataBinding.html" Target="$fileinputname$\DataBinding\" Type="ElementFile" />
+    <ProjectItemFile Source="DataBinding\DataBinding.js" Target="$fileinputname$\DataBinding\" Type="ElementFile" />
+    <ProjectItemFile Source="Home\Home.css" Target="$fileinputname$\Home\" Type="ElementFile" />
+    <ProjectItemFile Source="Home\Home.html" Target="$fileinputname$\Home\" Type="ElementFile" />
+    <ProjectItemFile Source="Home\Home.js" Target="$fileinputname$\Home\" Type="ElementFile" />
+    <ProjectItemFile Source="App.css" Target="$fileinputname$\" Type="ElementFile" />
+    <ProjectItemFile Source="App.js" Target="$fileinputname$\" Type="ElementFile" />
+    <ProjectItemFile Source="Visualization.js" Target="$fileinputname$\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

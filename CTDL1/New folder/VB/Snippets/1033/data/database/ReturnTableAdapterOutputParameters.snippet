@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Return Output Parameter for a TableAdapter Query</Title>
+      <Author>Microsoft</Author>
+      <Description>TableAdapter methods that "Retun No Value" use ExecuteNonQuery which returns the rows affected.  This Snippet returns the value from one of the command parameters on a TableAdapter.</Description>
+      <Shortcut>dtNonQueryOutParam</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>methodName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the name of the new method you wish to expose on the TableAdapter.</ToolTip>
+          <Default>GetNonQueryOutputParameter</Default>
+        </Literal>
+        <Literal>
+          <ID>existingMethod</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the existing ExecuteNonQuery method on the TableAdapter.</ToolTip>
+          <Default>GetCustomerCount</Default>
+        </Literal>
+        <Literal>
+          <ID>commandIndex</ID>
+          <Type>Int</Type>
+          <ToolTip>Replace with the index of the command in the TableAdapter _commandCollection.  
+Hint: Select Go To Definition on the existing method to determine the index.</ToolTip>
+          <Default>1</Default>
+        </Literal>
+        <Literal>
+          <ID>parameterIndex</ID>
+          <Type>Int</Type>
+          <ToolTip>Replace with the index of the parameter that you wish to return.  
+Hint: Use the DataSet designer to determine the index of the parameter on the query of the TableAdapter.</ToolTip>
+          <Default>1</Default>
+        </Literal>
+        <Object>
+          <ID>dataType</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with the DataType the method will return.  </ToolTip>
+          <Default>Integer</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[Public Function $methodName$() As $dataType$
+	Me.$existingMethod$()
+	Return Me._commandCollection($commandIndex$).Parameters($parameterIndex$).Value
+End Function
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

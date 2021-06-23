@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Retrieve a Text File from an Assembly's Resources</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Retrieves the text from a file that is an embedded resource of an assembly.</Description>
+      <Shortcut>appResText</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.IO</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Reflection</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>ResourceName</ID>
+          <Type>String</Type>
+          <ToolTip>The name of the resource.</ToolTip>
+          <Default>"AssemblyName.Filename.txt"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim executingAssembly As Assembly = Assembly.GetExecutingAssembly
+        Dim appStream As Stream = executingAssembly.GetManifestResourceStream($ResourceName$)
+        Dim textStream As New StreamReader(appStream)
+        Dim text As String = textStream.ReadToEnd]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

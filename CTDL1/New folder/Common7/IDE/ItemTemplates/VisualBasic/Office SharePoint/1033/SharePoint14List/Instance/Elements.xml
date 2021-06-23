@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="$ListInstanceTitle$"
+                OnQuickLaunch="TRUE"
+                TemplateType="$TemplateType$"
+                $FeatureIdAttribute$Url="Lists/$ListInstanceUrl$"
+                Description="$loc_ListInstanceDescription$">
+  </ListInstance>
+</Elements>

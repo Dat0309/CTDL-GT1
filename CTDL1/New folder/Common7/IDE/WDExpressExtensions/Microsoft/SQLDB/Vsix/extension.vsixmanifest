@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="Microsoft.VisualStudio.Data.Tools" Version="1.4" Language="en-US" Publisher="Microsoft" />
+    <DisplayName>SQL Server Data Tools</DisplayName>
+    <Description xml:space="preserve">Microsoft SQL Server Data Tools</Description>
+    <MoreInfo>http://msdn.microsoft.com/en-us/data/bb931106.aspx</MoreInfo>
+    <Icon>SSDT-icon.png</Icon>
+    <PreviewImage>SSDT-screenshot.png</PreviewImage>
+  </Metadata>
+  <Installation InstalledByMsi="true" SystemComponent="true">
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="12.0" />
+    <InstallationTarget Id="Microsoft.VisualStudio.VWDExpress" Version="12.0" />
+    <InstallationTarget Id="Microsoft.VisualStudio.VSWinExpress" Version="12.0" />
+  </Installation>  
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="Microsoft.VisualStudio.Data.Tools.Package.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="Microsoft.VisualStudio.Data.Tools.Package.SqlProfile.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="Microsoft.VisualStudio.Data.Tools.Relational.Design.Package.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="Microsoft.VisualStudio.Data.Tools.SqlObjectExplorer.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="Microsoft.VisualStudio.Data.Tools.SQLPDWExtensions.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="Microsoft.VisualStudio.Data.Tools.DataCompare.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="Microsoft.VisualStudio.Data.Tools.Delta.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="Microsoft.VisualStudio.Data.Tools.Delta.UI.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="Microsoft.VisualStudio.Data.Tools.SQLPDWExtensions.dll" />
+  </Assets>
+</PackageManifest>

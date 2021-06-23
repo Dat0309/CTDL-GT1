@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Read a Registry Value</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Reads a string registry value from the current user hive.</Description>
+      <Shortcut>regRead</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>DefaultValue</ID>
+          <ToolTip>Replace with the default value.</ToolTip>
+          <Default>"Default Value"</Default>
+        </Literal>
+        <Literal>
+          <ID>Path</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the path to the key.</ToolTip>
+          <Default>"HKEY_CURRENT_USER\Software\CompanyName\ProductName\KeyName"</Default>
+        </Literal>
+        <Literal>
+          <ID>Value</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the value name to be retrieved.</ToolTip>
+          <Default>"valueName"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim keyValue As Object
+keyValue = My.Computer.Registry.GetValue($Path$, $Value$, $DefaultValue$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

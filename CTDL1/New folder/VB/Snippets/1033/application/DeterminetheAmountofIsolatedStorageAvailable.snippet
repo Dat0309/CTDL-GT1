@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Determine the Amount of Isolated Storage Available. </Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Determines the Amount of Isolated Storage Available.</Description>
+      <Shortcut>appIsoAmt</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.IO.IsolatedStorage</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>varName</ID>
+          <Type>String</Type>
+          <ToolTip>The variable name for the isolated storage.</ToolTip>
+          <Default>isolatedStorage</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[
+        Dim $varName$ = IsolatedStorageFile.GetStore(IsolatedStorageScope.User Or IsolatedStorageScope.Assembly Or IsolatedStorageScope.Domain, Nothing, Nothing)
+        Dim spaceAvailable = $varName$.Quota - $varName$.UsedSize
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

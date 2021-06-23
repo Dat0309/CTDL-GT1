@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.VisualStudio.SharePoint.Commands</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext">
+      <summary>Provides the context in which a SharePoint command is being executed.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext.Logger">
+      <summary>Gets the log service which you can use to write messages to the Output window or Error List window in Visual Studio.</summary>
+      <returns>An <see cref="T:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger" /> instance representing the log service.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext.Refresh">
+      <summary>Refreshes the context with new instances of the Microsoft.SharePoint.SPSite and Microsoft.SharePoint.SPWeb objects.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext.Site">
+      <summary>Gets a Microsoft.SharePoint.SPSite that represents the SharePoint site collection on which the command is run.</summary>
+      <returns>The SharePoint site collection on which the command is run.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext.Web">
+      <summary>Gets a Microsoft.SharePoint.SPWeb that represents the SharePoint site on which the command is run.</summary>
+      <returns>The SharePoint site on which the command is run.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger">
+      <summary>Represents the logging service for SharePoint commands.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.Commands.LogCategory)">
+      <summary>Writes a message to the Output window or Error List window with the specified category.</summary>
+      <param name="message">The message text.</param>
+      <param name="category">The category of the message. This specifies whether the message appears in the Output window or Error List window (or both), and where the message appears in the Error List window.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.Commands.LogCategory,System.String)">
+      <summary>Writes a message to the Output window or Error List window with the specified category and Help keyword.</summary>
+      <param name="message">The message text.</param>
+      <param name="category">The category of the message. This specifies whether the message appears in the Output window or Error List window (or both), and where the message appears in the Error List window.</param>
+      <param name="helpKeyword">The Help keyword for the error.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.Commands.LogCategory,System.String,System.Int32,System.Int32)">
+      <summary>Writes a message to the Output window or Error List window with the specified category and error location information.</summary>
+      <param name="message">The message text.</param>
+      <param name="category">The category of the message. This specifies whether the message appears in the Output window or Error List window (or both), and where the message appears in the Error List window.</param>
+      <param name="filePath">The full path to the file with the error or warning.</param>
+      <param name="lineNumber">The line number of the error or warning.</param>
+      <param name="columnNumber">The column number of the error or warning.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger.WriteLine(System.String,Microsoft.VisualStudio.SharePoint.Commands.LogCategory,System.String,System.Int32,System.Int32,System.String)">
+      <summary>Writes a message to the Output window or Error List window with the specified category, error location information, and Help keyword.</summary>
+      <param name="message">The message text.</param>
+      <param name="category">The category of the message. This specifies whether the message appears in the Output window or Error List window (or both), and where the message appears in the Error List window.</param>
+      <param name="filePath">The full path to the file with the error or warning.</param>
+      <param name="lineNumber">The line number of the error or warning.</param>
+      <param name="columnNumber">The column number of the error or warning.</param>
+      <param name="helpKeyword">The Help keyword for the error.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Commands.LogCategory">
+      <summary>Specifies where messages written by using the SharePoint log service appear in the Output window and Error List window.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Commands.LogCategory.Error">
+      <summary>Specifies that the message appears in the Output window and in the Errors group of the Error List window.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Commands.LogCategory.Warning">
+      <summary>Specifies that the message appears in the Output window and in the Warning group of the Error List window.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Commands.LogCategory.Verbose">
+      <summary>Specifies that the message appears only in the Output window, if verbose messages are enabled. The message does not appear in the Error List window.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Commands.LogCategory.Message">
+      <summary>Specifies that the message appears in the Output window and in the Message group of the Error List window.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.SharePoint.Commands.LogCategory.Status">
+      <summary>Specifies that the message appears only in the Output window. The message does not appear in the Error List window.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute">
+      <summary>Indicates that a method is a SharePoint command.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute" /> class with the specified command ID.</summary>
+      <param name="commandId">The ID for the SharePoint command. The ID should be unique; it is recommended that you use the name of the method preceded by the method's namespace.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute.CommandId">
+      <summary>Gets the ID of the command.</summary>
+      <returns>A string representing a command ID.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandServices">
+      <summary>Represents services that can be used in a SharePoint command implementation.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandServices.GetProperties(System.Object)">
+      <summary>Retrieves a dictionary with properties for the specified component.</summary>
+      <returns>An object representing a dictionary of component properties.</returns>
+      <param name="component">The component for which to retrieve the dictionary.</param>
+    </member>
+  </members>
+</doc>

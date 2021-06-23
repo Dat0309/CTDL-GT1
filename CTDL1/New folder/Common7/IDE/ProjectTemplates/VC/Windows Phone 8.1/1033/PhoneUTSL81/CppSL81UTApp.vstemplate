@@ -1,0 +1,49 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Unit Test App (Windows Phone Silverlight 8.1)</Name>
+    <Description Package="{7D4626A3-18C3-43A4-A66C-169D1D609803}" ID="1141" />
+    <ProjectType>VC</ProjectType>
+    <SortOrder>57</SortOrder>
+    <TemplateID>Microsoft.WindowsPhone.VC.UnitTest.SL8.1.Project</TemplateID>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>PhoneUnitTestApp</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+    <PreviewImage>preview.png</PreviewImage>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <TargetPlatformName>WindowsPhone</TargetPlatformName>
+    <RequiredPlatformVersion>6.3.0</RequiredPlatformVersion>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$safeprojectname$.vcxproj" File="PhoneUnitTestApp.vcxproj" ReplaceParameters="true">
+      <Folder Name="Assets" TargetFolderName="Assets">
+      <ProjectItem ReplaceParameters="false" TargetFileName="Logo.scale-240.png">Logo.scale-240.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="BadgeLogo.scale-240.png">BadgeLogo.scale-240.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="SplashScreen.scale-240.png">SplashScreen.scale-240.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="SquareTile71x71.scale-240.png">SquareTile71x71.scale-240.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="SquareTile150x150.scale-240.png">SquareTile150x150.scale-240.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="StoreLogo.scale-240.png">StoreLogo.scale-240.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="WideLogo.scale-240.png">WideLogo.scale-240.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="ApplicationIcon.png">ApplicationIcon.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="AlignmentGrid.png">AlignmentGrid.png</ProjectItem>
+        <Folder Name="Tiles" TargetFolderName="Tiles">
+        <ProjectItem ReplaceParameters="false" TargetFileName="FlipCycleTileLarge.png">FlipCycleTileLarge.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="FlipCycleTileMedium.png">FlipCycleTileMedium.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="FlipCycleTileSmall.png">FlipCycleTileSmall.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="IconicTileMediumLarge.png">IconicTileMediumLarge.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="IconicTileSmall.png">IconicTileSmall.png</ProjectItem>
+        </Folder>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$safeprojectname$.vcxproj.filters">PhoneUnitTestApp.vcxproj.filters</ProjectItem>
+      <ProjectItem OpenInEditor="true" ReplaceParameters="true" TargetFileName="unittest.cpp">unittest.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="pch.cpp">pch.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="pch.h">pch.h</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Package.appxmanifest">Package.appxmanifest</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="WMAppManifest.xml">WMAppManifest.xml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="AppManifest.xaml">AppManifest.xaml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="TestApp.dll">TestApp.dll</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

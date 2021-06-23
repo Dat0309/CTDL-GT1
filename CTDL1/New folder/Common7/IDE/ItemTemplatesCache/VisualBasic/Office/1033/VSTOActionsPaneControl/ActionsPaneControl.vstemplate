@@ -1,0 +1,36 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{D26B5834-CA88-4677-912A-EF20D6C4D589}" ID="300" />
+    <Description Package="{D26B5834-CA88-4677-912A-EF20D6C4D589}" ID="301" />
+    <Icon Package="{164B10B9-B200-11D0-8C61-00A0C91E29D5}" ID="4526" />
+    <ProjectType>VisualBasic</ProjectType>
+    <TemplateGroupID>VSTO1</TemplateGroupID>
+    <TemplateID>VSTO-ActionPane</TemplateID>
+    <ShowByDefault>false</ShowByDefault>
+    <SortOrder>11</SortOrder>
+    <DefaultName>ActionsPaneControl.vb</DefaultName>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>System</Assembly>
+        <URL>http://www.microsoft.com</URL>
+      </Reference>
+      <Reference>
+        <Assembly>System.Data</Assembly>
+        <URL>http://www.microsoft.com</URL>
+      </Reference>
+      <Reference>
+        <Assembly>System.Drawing</Assembly>
+        <URL>http://www.microsoft.com</URL>
+      </Reference>
+      <Reference>
+        <Assembly>System.Windows.Forms</Assembly>
+        <URL>http://www.microsoft.com</URL>
+      </Reference>
+    </References>
+    <ProjectItem ReplaceParameters="true" SubType="Form">ActionsPaneControl.vb</ProjectItem>
+    <ProjectItem ReplaceParameters="true">ActionsPaneControl.Designer.vb</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

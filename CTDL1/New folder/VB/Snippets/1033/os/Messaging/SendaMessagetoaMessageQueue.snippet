@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Send a Message to a Message Queue</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Sends a text message to a queue on the local computer.</Description>
+      <Shortcut>mqSend</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Messaging.dll</Assembly>
+          <Url />
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Messaging</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>QueueName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the queue name. The "." represents the local computer.</ToolTip>
+          <Default>".\QueueName"</Default>
+        </Literal>
+        <Literal>
+          <ID>Body</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the body of the message. The body may be any object.</ToolTip>
+          <Default>"Message text"</Default>
+        </Literal>
+        <Literal>
+          <ID>Label</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with a label for the message.</ToolTip>
+          <Default>"Important message!"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim queue As New MessageQueue($QueueName$)
+queue.Send($Body$, $Label$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,17 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <Name Package="{CB22EE0E-4072-4ae7-96E2-90FCCF879544}" ID="1004"/>
+        <Description Package="{CB22EE0E-4072-4ae7-96E2-90FCCF879544}" ID="1005"/>
+        <Icon Package="{CB22EE0E-4072-4ae7-96E2-90FCCF879544}" ID="9010"/>
+        <TemplateID>Microsoft.Silverlight.Web.VisualBasic.JScriptPage</TemplateID>
+        <ProjectType>Web</ProjectType>
+        <ProjectSubType>VisualBasic</ProjectSubType>
+        <ShowByDefault>true</ShowByDefault>
+        <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+        <DefaultName>Scene.xaml</DefaultName>
+    </TemplateData>
+    <TemplateContent>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.xaml">SilverlightPage.xaml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.js">SilverlightPage.js</ProjectItem>
+    </TemplateContent>
+</VSTemplate>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Search a Directory for Files Recursively</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Searches a directory for files recursively.</Description>
+      <Shortcut>filSearchDir</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Collections.ObjectModel</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>directory</ID>
+          <ToolTip>Replace with directory to search.</ToolTip>
+          <Default>"C:\"</Default>
+        </Literal>
+        <Literal>
+          <ID>str</ID>
+          <ToolTip>Replace with wildcard string to use for search.</ToolTip>
+          <Default>"*.txt"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim files As ReadOnlyCollection(Of String)
+files = My.Computer.FileSystem.GetFiles($directory$, FileIO.SearchOption.SearchAllSubDirectories, $str$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

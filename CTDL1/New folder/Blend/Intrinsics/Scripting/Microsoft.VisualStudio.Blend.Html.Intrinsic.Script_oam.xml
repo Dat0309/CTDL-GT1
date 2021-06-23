@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<widget spec="1.0" id="ms-blend://Microsoft.VisualStudio.Blend.Html.Intrinsic.Script" name="Microsoft.VisualStudio.Blend.Html.Intrinsic.Script" version="1.0" xmlns="http://openajax.org/metadata">
+	<locale messages="..\all-all.xml" />
+	<locale lang="en-us" messages="..\en-us.xml" />
+	<locale lang="de-de" messages="..\de-de.xml" />
+	<locale lang="es-es" messages="..\es-es.xml" />
+	<locale lang="fr-fr" messages="..\fr-fr.xml" />
+	<locale lang="it-it" messages="..\it-it.xml" />
+	<locale lang="ja" messages="..\ja.xml" />
+	<locale lang="ko" messages="..\ko.xml" />
+  <locale lang="ru-ru" messages="..\ru-ru.xml" />
+	<locale lang="zh-cn" messages="..\zh-cn.xml" />
+	<locale lang="zh-tw" messages="..\zh-tw.xml" />
+	<author name="Microsoft Corporation" />
+	<title type="text/plain" locid="Microsoft.VisualStudio.Blend.Html.Intrinsic.Script.Title"><![CDATA[<script>]]></title>
+	<description type="text/plain" locid="Microsoft.VisualStudio.Blend.Html.Intrinsic.Script.Description"><![CDATA[The script element allows authors to include dynamic script and data blocks in their documents.]]></description>
+	<content><![CDATA[<script></script>]]></content>
+	<icons>
+		<icon src="Microsoft.VisualStudio.Blend.Html.Intrinsic.Script.16x16.png" width="16" height="16" />
+		<icon src="Microsoft.VisualStudio.Blend.Html.Intrinsic.Script.12x12.png" width="12" height="12" />
+	</icons>
+	<categories>
+		<category name="HTML Elements"/>
+		<category name="HTML Elements::Scripting"/>
+	</categories>
+</widget>

@@ -1,0 +1,236 @@
+﻿;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Define the TypeScript Package with its GUID and corresponding assembly name/location
+;;
+[$RootKey$\Packages\{2ffe45c4-5c73-493c-b187-f2e955ff875e}]
+@="TypeScriptLanguageService.VsPackage.LanguageServicePackage, TypeScriptLanguageService, Version=1.0.5.0, Culture=neutral"
+"InprocServer32"="$WinDir$\system32\MSCOREE.DLL"
+"Assembly"="TypeScriptLanguageService, Version=1.0.5.0, Culture=neutral"
+"Class"="TypeScriptLanguageService.VsPackage.LanguageServicePackage"
+;; Note: We use "$PackageFolder$" because we deploy using a VSIX file
+"CodeBase"="$PackageFolder$\TypeScriptLanguageService.dll"
+"CompanyName"="Microsoft Corporation"
+"ProductName"="TypeScript for Microsoft Visual Studio"
+"ProductVersion"="1.0"
+"MinEdition"="Standard"
+"ID"=dword:00000068
+"VSWinExpressId"=dword:00000001
+"VWDExpressId"=dword:00000002
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Define the language service, with it unique GUID and owning package
+;;
+[$RootKey$\Services\{4a0dddb5-7a95-4fbf-97cc-616d07737a77}]
+@="{2ffe45c4-5c73-493c-b187-f2e955ff875e}"
+"Name"="TypeScriptLanguageService"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Memu and commands
+;;
+[$RootKey$\Menus]
+"{2ffe45c4-5c73-493c-b187-f2e955ff875e}"=", Menus.ctmenu,1"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Associate the TypeScript language service with ".ts" file extensions.
+;;
+;;
+[$RootKey$\Languages\File Extensions\.ts]
+@="{4a0dddb5-7a95-4fbf-97cc-616d07737a77}"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Define the capabilities of the typescript language service.
+;;
+;; Note: This is needed to show a "TypeScript" entry under "Tools | Options | Text Editor".
+;;
+;; Note: The name of the language service ("TypeScript") ends up being set as the "ContentType" 
+;;       of the created buffer. It is also used as the display name of the "Text Editor" entry.
+;;
+;; Note: If you change the "TypeScript" name below, you need to change also
+;;       1) The content type contant value at "TypeScriptLanguageService.VsPackage.StringConstants.TypeScriptContentTypeName"
+;;       2) All the entries starting with "[$RootKey$\Languages\Language Services\" in this file
+;;
+[$RootKey$\Languages\Language Services\TypeScript]
+@="{4a0dddb5-7a95-4fbf-97cc-616d07737a77}"
+"ShowCompletion"=dword:00000001
+"ShowSmartIndent"=dword:00000001
+"RequestStockColors"=dword:00000001
+"DefaultToInsertSpaces"=dword:00000001
+"ShowDropdownBarOption"=dword:00000001
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Binding redirect: ensure the package uses version 10 of the assemblies
+;; This entry is ignore by dev10, but used by dev11 to configure assembly binding
+;; redirect when loading the package.
+;; The guid defining the key is a unique guid, unrelated to anything else.
+;;
+
+[$RootKey$\RuntimeConfiguration\dependentAssembly\bindingRedirection\{75b859df-ebe1-490f-afa7-136e35df20c4}]
+"name"="Microsoft.VisualStudio.Language.NavigateTo.Interfaces"
+"publicKeyToken"="b03f5f7f11d50a3a"
+"culture"="neutral"
+"oldVersion"="10.0.0.0"
+"newVersion"="11.0.0.0"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Most of the entries below are not needed because we don't have a custom
+;; editor factory.
+;;
+[$RootKey$\Editors\{0f2454b1-a556-402d-a7d0-1fde7f99dee0}]
+@="TypeScriptEditor"
+"DisplayName"="TypeScriptEditor"
+"Package"="{2ffe45c4-5c73-493c-b187-f2e955ff875e}"
+"CommonPhysicalViewAttributes"=dword:00000002
+;;
+;; Add ".ts" extension to existing "Source Code (Text) Editor" editor
+[$RootKey$\Editors\{0f2454b1-a556-402d-a7d0-1fde7f99dee0}\Extensions]
+"ts"=dword:00000026
+;;
+[$RootKey$\Editors\{0f2454b1-a556-402d-a7d0-1fde7f99dee0}\LogicalViews]
+"{7651A700-06E5-11d1-8EBD-00A0C90F26EA}"=""
+"{7651A701-06E5-11D1-8EBD-00A0C90F26EA}"=""
+"{7651A703-06E5-11D1-8EBD-00A0C90F26EA}"=""
+
+;;Register our EditorFactor to be notified when a *.ts file is added to a VB project
+[$RootKey$\Projects\{F184B08F-C81C-45f6-A57F-5ABD9991F28F}\FileExtensions\.ts]
+"EditorFactoryNotify"="{0f2454b1-a556-402d-a7d0-1fde7f99dee0}"
+"DefaultBuildAction"="TypeScriptCompile"
+
+;;Register our EditorFactor to be notified when a *.ts file is added to a C# project
+[$RootKey$\Projects\{FAE04EC0-301F-11d3-BF4B-00C04F79EFBC}\FileExtensions\.ts]
+"EditorFactoryNotify"="{0f2454b1-a556-402d-a7d0-1fde7f99dee0}"
+"DefaultBuildAction"="TypeScriptCompile"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Define Tools|Options pages
+;;
+[$RootKey$\Languages\Language Services\TypeScript\EditorToolsOptions]
+
+[$RootKey$\Languages\Language Services\TypeScript\EditorToolsOptions\Formatting]
+@="#1000"
+"Package"="{2ffe45c4-5c73-493c-b187-f2e955ff875e}"
+
+[$RootKey$\Languages\Language Services\TypeScript\EditorToolsOptions\Formatting\General]
+@="#1002"
+"Package"="{2ffe45c4-5c73-493c-b187-f2e955ff875e}"
+"Page"="{08f3fd83-881a-4990-89c9-57ba96eafded}"
+"Keywords"="#1014"
+
+[$RootKey$\Languages\Language Services\TypeScript\EditorToolsOptions\Formatting\New Lines]
+@="#1003"
+"Package"="{2ffe45c4-5c73-493c-b187-f2e955ff875e}"
+"Page"="{990eb19d-a345-4a3b-a275-a63bd6032b55}"
+"Keywords"="#1011"
+
+[$RootKey$\Languages\Language Services\TypeScript\EditorToolsOptions\Formatting\Spacing]
+@="#1004"
+"Package"="{2ffe45c4-5c73-493c-b187-f2e955ff875e}"
+"Page"="{4395bf79-9b95-4a50-9c3f-acffad314368}"
+"Keywords"="#1015"
+
+[$RootKey$\Languages\Language Services\TypeScript\EditorToolsOptions\Project]
+@="#1016"
+"Package"="{2ffe45c4-5c73-493c-b187-f2e955ff875e}"
+
+[$RootKey$\Languages\Language Services\TypeScript\EditorToolsOptions\Project\General]
+@="#1017"
+"Package"="{2ffe45c4-5c73-493c-b187-f2e955ff875e}"
+"Page"="{f42fbcf3-88d4-4763-9a59-a77a8d09632c}"
+"Keywords"="#1018"
+
+[$RootKey$\AutomationProperties\TextEditor\TypeScript Specific]
+"Description"="#1007"
+"Name"="TypeScript Specific"
+"Package"="{2ffe45c4-5c73-493c-b187-f2e955ff875e}"
+"ProfileSave"=dword:00000001
+"ResourcePackage"="{2ffe45c4-5c73-493c-b187-f2e955ff875e}"
+"VSSettingsMigration"=dword:00000001
+@="#1008"
+
+[$RootKey$\AutomationProperties\TextEditor\TypeScript]
+"Description"="#1009"
+"Name"="TypeScript"
+"Package"="{F5E7E720-1401-11D1-883B-0000F87579D2}"
+"ProfileSave"=dword:00000001
+"ResourcePackage"="{2ffe45c4-5c73-493c-b187-f2e955ff875e}"
+"VSSettingsMigration"=dword:00000001
+@="#1010"
+
+[$RootKey$\FileExtensionMapping\{7C7D0B79-2EE8-49EA-A04A-DC932FBE1A2B}]
+@="TypeScript Editor"
+"DisplayName"="#1022"
+"EditorGUID"="{0f2454b1-a556-402d-a7d0-1fde7f99dee0}"
+"LogViewID"="{4a0dddb5-7a95-4fbf-97cc-616d07737a77}"
+"Package"="{2ffe45c4-5c73-493c-b187-f2e955ff875e}"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; New Project Dialog Root Node
+;;
+
+[$RootKey$\NewProjectTemplates\TemplateDirs\{2ffe45c4-5c73-493c-b187-f2e955ff875e}\/1]
+@="#1019"
+"DeveloperActivity"="TypeScript"
+"SortPriority"=dword:000000fa
+"TemplatesDir"="\.\NullPath"
+
+[$RootKey$\Projects\{0188900E-B2F5-48B2-8CD3-D907FFF86357}]
+@="TypeScriptTemplates"
+"Language(VsTemplate)"="TypeScript"
+"Package"="{2ffe45c4-5c73-493c-b187-f2e955ff875e}"
+"DisplayName"="TypeScript"
+"DisplayProjectFileExtensions"="#1"
+"ProjectTemplatesDir"="\\.\\NullPath"
+"DisplayProjectType(VsTemplate)"="TypeScript"
+
+;;[$RootKey$\Projects\{0188900E-B2F5-48B2-8CD3-D907FFF86357}\AddItemTemplates]
+;;
+;;[$RootKey$\Projects\{0188900E-B2F5-48B2-8CD3-D907FFF86357}\AddItemTemplates\TemplateDirs]
+;;
+;;[$RootKey$\Projects\{0188900E-B2F5-48B2-8CD3-D907FFF86357}\AddItemTemplates\TemplateDirs\{7e89d1bd-0041-4382-9816-0e78fc502bed}]
+;;
+;;[$RootKey$\Projects\{0188900E-B2F5-48B2-8CD3-D907FFF86357}\AddItemTemplates\TemplateDirs\{7e89d1bd-0041-4382-9816-0e78fc502bed}\/1]
+;;@="JavaScript"
+;;"SortPriority"=dword:000001f4
+;;"TemplatesDir"="\\.\\NullPath"
+;;
+;;[$RootKey$\Projects\{0188900E-B2F5-48B2-8CD3-D907FFF86357}\FileExtensions]
+;;
+;;[$RootKey$\Projects\{0188900E-B2F5-48B2-8CD3-D907FFF86357}\FileExtensions\.appxmanifest]
+;;"EditorFactoryNotify"="{32cc8dfa-2d70-49b2-94cd-22d57349b778}"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; TypeScript ProjectPropertyPage
+;;
+[$RootKey$\CLSID\{d4683cae-88c4-4b85-863d-ac8014f3ba36}]
+@="TypeScriptLanguageService.VsPackage.TypeScriptProjectPropertyPageComClass"
+"InprocServer32"="$WinDir$\SYSTEM32\MSCOREE.DLL"
+"Class"="TypeScriptLanguageService.VsPackage.TypeScriptProjectPropertyPageComClass"
+"CodeBase"="$PackageFolder$\TypeScriptLanguageService.dll"
+"ThreadingModel"="Both"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Debugger expression evaluator
+;;
+
+[$RootKey$\AD7Metrics\ExpressionEvaluator\{87BDF188-E6E8-4FCF-A82A-9B8506E01847}\{994B45C4-E6E9-11D2-903F-00C04FA302A1}]
+"Engine"="{F200A7E7-DEA5-11D0-B854-00A0244A1DE2}"
+"Language"="TypeScript"
+"Name"="Microsoft TypeScript"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Installation location
+;;
+[$RootKey$\TypeScriptConfigurationSettings]
+"InstallationFolder"="$PackageFolder$"

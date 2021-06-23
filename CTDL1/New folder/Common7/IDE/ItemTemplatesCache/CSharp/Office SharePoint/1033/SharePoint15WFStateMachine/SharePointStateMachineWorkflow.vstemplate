@@ -1,0 +1,58 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="317" />
+    <Description Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="328" />
+    <Icon Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="238" />
+    <TemplateID>SharePoint15WFStateMachine_CS_ITEM</TemplateID>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>85</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>Workflow</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <CreateInPlace>true</CreateInPlace>
+    <TemplateGroupID>SharePointItemTemplateGroupID</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>Microsoft.SharePoint.WorkflowActions</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Workflow.Activities</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Workflow.ComponentModel</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Workflow.Runtime</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Drawing</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\SharePointProjectItem.spdata" OpenInEditor="false">Workflow1.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="true" SubType="Component" TargetFileName="$fileinputname$\$fileinputname$.cs">Workflow1.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\$fileinputname$.Designer.cs">Workflow1.Designer.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\$fileinputname$.xml">workflow.xml</ProjectItem>
+    <CustomParameters>      
+      <CustomParameter Name="SharePointProjectTemplateAttributes" Value="ProjectItem"/>
+      <CustomParameter Name="SharePointProjectParentFilter" Value="General;ProjectItem"/>
+      <CustomParameter Name="$ProjectItemName$" Value="$fileinputname$"/>
+      <CustomParameter Name="$ProjectItemClassName$" Value="$safeitemrootname$"/>
+      <CustomParameter Name="$subNamespace$" Value="$safeitemrootname$"/>
+      <CustomParameter Name="$loc_Comment1$" _locID="$loc_Comment1$" _locAttrData="Value" Value="Customize the text in square brackets." />
+      <CustomParameter Name="$loc_Comment2$" _locID="$loc_Comment2$" _locAttrData="Value" Value="Remove brackets when filling in, e.g. " />
+      <CustomParameter Name="$loc_Comment3$" _locID="$loc_Comment3$" _locAttrData="Value" Value="Tags to specify InfoPath forms for the workflow; delete tags for forms that you do not have" />
+      <CustomParameter Name="$loc_Comment4$" _locID="$loc_Comment4$" _locAttrData="Value" Value="Modification forms: create a unique guid for each modification form" />
+      <CustomParameter Name="$loc_Comment5$" _locID="$loc_Comment5$" _locAttrData="Value" Value="Required method for Designer support - do not modify" />
+      <CustomParameter Name="$loc_Comment6$" _locID="$loc_Comment6$" _locAttrData="Value" Value="the contents of this method with the code editor." />
+      <CustomParameter Name="$loc_Description$" _locID="$loc_Description$" _locAttrData="Value" Value="My SharePoint Workflow" />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.WorkflowWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

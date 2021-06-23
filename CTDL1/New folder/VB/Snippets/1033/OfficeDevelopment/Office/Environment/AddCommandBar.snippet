@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Add a Command Bar</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Adds a CommandBar object to an Office document.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>office.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Office = Microsoft.Office.Core</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>commandBarName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the name of the command bar.</ToolTip>
+          <Default>"Command Bar Name"</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>commandBarPosition</ID>
+          <Type>Microsoft.Office.Core.MsoBarPosition.</Type>
+          <ToolTip>Replace with the position for the command bar. Use one of the Office.MsoBarPosition constants.</ToolTip>
+          <Default>msoBarTop</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>replaceActiveMenuBar</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True to replace the active menu bar with the new command bar.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>temporary</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True to delete the command bar when the workbook is closed. Word ignores this parameter. Set the CustomizationContext property of the Word document to control the object lifetime in Word.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>commandBarHost</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a reference to the Excel Application, Word Application or a Word Document.</ToolTip>
+          <Default>commandBarHost</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>newCommandBar</ID>
+          <Type>Microsoft.Office.Core.CommandBar</Type>
+          <ToolTip>Replace with a variable to hold the new command bar.</ToolTip>
+          <Default>newCommandBar</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="" Delimiter="$"><![CDATA[
+Dim commandBarsCollection As Office.CommandBars = CType($commandBarHost$.CommandBars, Office.CommandBars)
+$newCommandBar$ = commandBarsCollection.Add($commandBarName$, $commandBarPosition$, $replaceActiveMenuBar$, $temporary$) 
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

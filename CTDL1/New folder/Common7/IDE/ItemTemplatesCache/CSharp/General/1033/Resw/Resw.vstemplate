@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="1009" />
+    <Description Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="1010" />
+    <Icon Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="4006" />
+    <TemplateID>Microsoft.Templates.CSharp.Resw</TemplateID>
+    <ProjectType>CSharp</ProjectType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>Resources.resw</DefaultName>
+    <TemplateGroupID>WinRT-Managed</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ItemType="PRIResource">Resources.resw</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

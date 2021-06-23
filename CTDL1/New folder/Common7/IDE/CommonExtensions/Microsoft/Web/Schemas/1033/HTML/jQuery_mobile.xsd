@@ -1,0 +1,451 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<xsd:schema xmlns='http://schemas.microsoft.com/intellisense/jquery-mobile'
+      xmlns:xsd='http://www.w3.org/2001/XMLSchema'
+      targetNamespace='http://schemas.microsoft.com/intellisense/jquery-mobile'
+      xmlns:vs='http://schemas.microsoft.com/Visual-Studio-Intellisense'
+      vs:ishtmlschema="true"
+      vs:isserverschema="false"
+      vs:htmlflavor="5.0"
+      vs:SuccinctFriendlyName="jQuery Mobile"
+      vs:issupplemental="true"
+      vs:customattrprefix="data-"
+      vs:addattributesfromusage="true">
+
+  <xsd:annotation>
+    <xsd:documentation>
+      Microsoft Visual Studio schema for jQuery Mobile
+      data-* attributes (http://jquerymobile.com/demos/1.0/docs/api/data-attributes.html)
+    </xsd:documentation>
+  </xsd:annotation>
+
+  <!-- This element must be the first one in the file! -->
+  <xsd:element name="a">
+    <xsd:complexType>
+      <xsd:attribute name="data-ng-href" vs:category="Angular" />
+      <xsd:attribute name="data-role">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:NMTOKEN">
+            <xsd:enumeration value="button" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:attribute>
+      <xsd:attribute name="data-corners" type="xsd:boolean" default="true" vs:requiredattributevalue="data-role:button"/>
+      <xsd:attribute name="data-iconshadow" type="xsd:boolean" default="true" vs:requiredattributevalue="data-role:button"/>
+      <xsd:attribute name="data-inline" type="xsd:boolean" default="false" vs:requiredattributevalue="data-role:button"/>
+      <xsd:attribute name="data-shadow" type="xsd:boolean" default="true" vs:requiredattributevalue="data-role:button"/>
+      <xsd:attribute name="data-theme" vs:requiredattributevalue="data-role:button" />
+      <xsd:attribute name="data-iconpos" default="left" vs:requiredattributevalue="data-role:button">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:NMTOKEN">
+            <xsd:enumeration value="left" />
+            <xsd:enumeration value="right" />
+            <xsd:enumeration value="top" />
+            <xsd:enumeration value="bottom" />
+            <xsd:enumeration value="notext" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:attribute>
+      <xsd:attribute name="data-icon" vs:requiredattributevalue="data-role:button">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:NMTOKEN">
+            <xsd:enumeration value="home" />
+            <xsd:enumeration value="delete" />
+            <xsd:enumeration value="arrow-u" />
+            <xsd:enumeration value="arrow-d" />
+            <xsd:enumeration value="check" />
+            <xsd:enumeration value="gear" />
+            <xsd:enumeration value="grid" />
+            <xsd:enumeration value="star" />
+            <xsd:enumeration value="custom" />
+            <xsd:enumeration value="arrow-r" />
+            <xsd:enumeration value="arrow-l" />
+            <xsd:enumeration value="minus" />
+            <xsd:enumeration value="refresh" />
+            <xsd:enumeration value="forward" />
+            <xsd:enumeration value="back" />
+            <xsd:enumeration value="alert" />
+            <xsd:enumeration value="info" />
+            <xsd:enumeration value="search" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:attribute>
+      <xsd:attribute name="data-rel" vs:requiredattributevalue="data-role:button">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:NMTOKEN">
+            <xsd:enumeration value="dialog" />
+            <xsd:enumeration value="back" />
+            <xsd:enumeration value="external" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:attribute>
+      <xsd:attribute name="data-transition" default="slide" vs:requiredattributevalue="data-role:button">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:NMTOKEN">
+            <xsd:enumeration value="pop" />
+            <xsd:enumeration value="flip" />
+            <xsd:enumeration value="slidedown" />
+            <xsd:enumeration value="fade" />
+            <xsd:enumeration value="slideup" />
+            <xsd:enumeration value="slide" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:attribute>
+      <xsd:attribute name="data-ajax" type="xsd:boolean" default="true" vs:requiredattributevalue="data-role:button"/>
+      <xsd:attribute name="data-dom-cache" type="xsd:boolean" default="false" vs:requiredattributevalue="data-role:button"/>
+      <xsd:attribute name="data-prefetch" type="xsd:boolean" default="false" vs:requiredattributevalue="data-role:button"/>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="input">
+    <xsd:complexType>
+      <xsd:attribute name="data-role" vs:inputtype="checkbox range" >
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:NMTOKEN">
+            <xsd:enumeration value="none" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:attribute>
+      <xsd:attribute name="data-theme" />
+      <xsd:attribute name="data-track-theme"  vs:inputtype="range"/>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="div">
+    <xsd:complexType>
+      <xsd:attribute name="data-role">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:NMTOKEN">
+            <xsd:enumeration value="collapsible" />
+            <xsd:enumeration value="collapsible-set" />
+            <xsd:enumeration value="page" />
+            <xsd:enumeration value="dialog" />
+            <xsd:enumeration value="content" />
+            <xsd:enumeration value="fieldcontain" />
+            <xsd:enumeration value="footer" />
+            <xsd:enumeration value="navbar" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:attribute>
+      <xsd:attribute name="data-collapsed" type="xsd:boolean" default="true" vs:requiredattributevalue="data-role:collapsible|collapsible-set" />
+      <xsd:attribute name="data-content-theme"  vs:requiredattributevalue="data-role:collapsible|collapsible-set" />
+      <xsd:attribute name="data-add-back-btn" vs:requiredattributevalue="data-role:header" type="xsd:boolean" default="false"/>
+      <xsd:attribute name="data-back-btn-text" vs:requiredattributevalue="data-role:header"/>
+      <xsd:attribute name="data-back-btn-theme" vs:requiredattributevalue="data-role:header"/>
+      <xsd:attribute name="data-position" vs:requiredattributevalue="data-role:footer|header">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:NMTOKEN">
+            <xsd:enumeration value="fixed" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:attribute>
+      <xsd:attribute name="data-close-btn-text" vs:requiredattributevalue="data-role:page|dialog"/>
+      <xsd:attribute name="data-dom-cache" type="xsd:boolean" vs:requiredattributevalue="data-role:page" default="false"/>
+      <xsd:attribute name="data-id" vs:requiredattributevalue="data-role:page|footer" />
+      <xsd:attribute name="data-fullscreen" type="xsd:boolean" vs:requiredattributevalue="data-role:page"/>
+      <xsd:attribute name="data-theme" type="xsd:boolean" vs:requiredattributevalue="data-role:page|content|footer|header"/>
+      <xsd:attribute name="data-overlay-theme" vs:requiredattributevalue="data-role:page" />
+      <xsd:attribute name="data-title" vs:requiredattributevalue="data-role:page|collapsible|collapsible-set|header" />
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="select">
+    <xsd:complexType>
+      <xsd:attribute name="data-role">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:NMTOKEN">
+            <xsd:enumeration value="slider" />
+            <xsd:enumeration value="none" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:attribute>
+      <xsd:attribute name="data-theme" vs:requiredattributevalue="data-role:slider" />
+      <xsd:attribute name="data-track-theme" vs:requiredattributevalue="data-role:slider" />
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="ol" type="list" />
+  <xsd:element name="ul" type="list" />
+
+  <xsd:element name="li">
+    <xsd:complexType>
+      <xsd:attribute name="data-role">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:NMTOKEN">
+            <xsd:enumeration value="list-divider" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:attribute>
+      <xsd:attribute name="data-icon">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:NMTOKEN">
+            <xsd:enumeration value="home" />
+            <xsd:enumeration value="delete" />
+            <xsd:enumeration value="arrow-u" />
+            <xsd:enumeration value="arrow-d" />
+            <xsd:enumeration value="check" />
+            <xsd:enumeration value="gear" />
+            <xsd:enumeration value="grid" />
+            <xsd:enumeration value="star" />
+            <xsd:enumeration value="custom" />
+            <xsd:enumeration value="arrow-r" />
+            <xsd:enumeration value="arrow-l" />
+            <xsd:enumeration value="minus" />
+            <xsd:enumeration value="refresh" />
+            <xsd:enumeration value="forward" />
+            <xsd:enumeration value="back" />
+            <xsd:enumeration value="alert" />
+            <xsd:enumeration value="info" />
+            <xsd:enumeration value="search" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:attribute>
+      <xsd:attribute name="data-theme" />
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:complexType name="list">
+    <xsd:attribute name="data-role">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:NMTOKEN">
+          <xsd:enumeration value="listview" />
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:attribute>
+    <xsd:attribute name="data-theme" vs:requiredattributevalue="data-role:listview"/>
+    <xsd:attribute name="data-count-theme" vs:requiredattributevalue="data-role:listview"/>
+    <xsd:attribute name="data-dividertheme" vs:requiredattributevalue="data-role:listview"/>
+    <xsd:attribute name="data-filter" type="xsd:boolean" default="false" vs:requiredattributevalue="data-role:listview"/>
+    <xsd:attribute name="data-filter-placeholder" vs:requiredattributevalue="data-role:listview"/>
+    <xsd:attribute name="data-filter-theme" vs:requiredattributevalue="data-role:listview"/>
+    <xsd:attribute name="data-inset" type="xsd:boolean" default="false" vs:requiredattributevalue="data-role:listview"/>
+    <xsd:attribute name="data-split-icon" vs:requiredattributevalue="data-role:listview">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:NMTOKEN">
+          <xsd:enumeration value="home" />
+          <xsd:enumeration value="delete" />
+          <xsd:enumeration value="arrow-u" />
+          <xsd:enumeration value="arrow-d" />
+          <xsd:enumeration value="check" />
+          <xsd:enumeration value="gear" />
+          <xsd:enumeration value="grid" />
+          <xsd:enumeration value="star" />
+          <xsd:enumeration value="custom" />
+          <xsd:enumeration value="arrow-r" />
+          <xsd:enumeration value="arrow-l" />
+          <xsd:enumeration value="minus" />
+          <xsd:enumeration value="refresh" />
+          <xsd:enumeration value="forward" />
+          <xsd:enumeration value="back" />
+          <xsd:enumeration value="alert" />
+          <xsd:enumeration value="info" />
+          <xsd:enumeration value="search" />
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:attribute>
+  </xsd:complexType>
+
+  <!-- These attributes are used by requireJS and Ember -->
+  <xsd:element name="script">
+    <xsd:complexType>
+      <xsd:attribute name="data-main" type="xsd:string" />
+      <xsd:attribute name="data-template-name" type="xsd:string" />
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="___all___">
+    <xsd:complexType>
+      <xsd:attributeGroup ref="bootstrapAttributeGroup" />
+      <xsd:attribute name="data-bind" />
+      <xsd:attribute name="data-ng-animate" vs:category="Angular" />
+      <xsd:attribute name="data-ng-app" vs:category="Angular" vs:standalone="anyvalue" />
+      <xsd:attribute name="data-ng-bind" vs:category="Angular" />
+      <xsd:attribute name="data-ng-bind-html" vs:category="Angular" />
+      <xsd:attribute name="data-ng-bind-template" vs:category="Angular" />
+      <xsd:attribute name="data-ng-change" vs:category="Angular" />
+      <xsd:attribute name="data-ng-class" vs:category="Angular" />
+      <xsd:attribute name="data-ng-class-even" vs:category="Angular" />
+      <xsd:attribute name="data-ng-class-odd" vs:category="Angular" />
+      <xsd:attribute name="data-ng-click" vs:category="Angular" />
+      <xsd:attribute name="data-ng-cloak" vs:category="Angular" vs:standalone="true" />
+      <xsd:attribute name="data-ng-controller" vs:category="Angular" />
+      <xsd:attribute name="data-ng-dblclick" vs:category="Angular" />
+      <xsd:attribute name="data-ng-form" vs:category="Angular" />
+      <xsd:attribute name="data-ng-hide" vs:category="Angular" />
+      <xsd:attribute name="data-ng-include" vs:category="Angular" />
+      <xsd:attribute name="data-ng-init" vs:category="Angular" />
+      <xsd:attribute name="data-ng-keydown" vs:category="Angular" />
+      <xsd:attribute name="data-ng-keypress" vs:category="Angular" />
+      <xsd:attribute name="data-ng-keyup" vs:category="Angular" />
+      <xsd:attribute name="data-ng-model" vs:category="Angular" vs:standalone="anyvalue" />
+      <xsd:attribute name="data-ng-message" vs:category="Angular" />
+      <xsd:attribute name="data-ng-messages" vs:category="Angular" />
+      <xsd:attribute name="data-ng-mousedown" vs:category="Angular" />
+      <xsd:attribute name="data-ng-mouseenter" vs:category="Angular" />
+      <xsd:attribute name="data-ng-mouseleave" vs:category="Angular" />
+      <xsd:attribute name="data-ng-mousemove" vs:category="Angular" />
+      <xsd:attribute name="data-ng-mouseover" vs:category="Angular" />
+      <xsd:attribute name="data-ng-mouseup" vs:category="Angular" />
+      <xsd:attribute name="data-ng-non-bindable" vs:category="Angular" vs:standalone="true" />
+      <xsd:attribute name="data-ng-open" vs:category="Angular" />
+      <xsd:attribute name="data-ng-options" vs:category="Angular" />
+      <xsd:attribute name="data-ng-pluralize" vs:category="Angular" />
+      <xsd:attribute name="data-ng-repeat" vs:category="Angular" />
+      <xsd:attribute name="data-ng-required" vs:category="Angular" />
+      <xsd:attribute name="data-ng-show" vs:category="Angular" />
+      <xsd:attribute name="data-ng-style" vs:category="Angular" />
+      <xsd:attribute name="data-ng-swipe-left" vs:category="Angular" />
+      <xsd:attribute name="data-ng-swipe-right" vs:category="Angular" />
+      <xsd:attribute name="data-ng-switch" vs:category="Angular" vs:standalone="true" />
+      <xsd:attribute name="data-ng-switch-when" vs:category="Angular" />
+      <xsd:attribute name="data-ng-transclude" vs:category="Angular" vs:standalone="true" />
+      <xsd:attribute name="data-ng-trim" vs:category="Angular" vs:standalone="true" />
+      <xsd:attribute name="data-ng-view" vs:category="Angular" vs:standalone="true" />
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="button" type="formelements" />
+  <xsd:element name="textarea" type="formelements" />
+
+  <xsd:complexType name="formelements">
+    <xsd:attribute name="data-ng-checked" vs:category="Angular" />
+    <xsd:attribute name="data-ng-disabled" vs:category="Angular" />
+    <xsd:attribute name="data-ng-list" vs:category="Angular" />
+    <xsd:attribute name="data-ng-maxlength" vs:category="Angular" type="xsd:nonNegativeInteger" />
+    <xsd:attribute name="data-ng-minlength" vs:category="Angular" type="xsd:nonNegativeInteger" />
+    <xsd:attribute name="data-ng-multiple" vs:category="Angular" />
+    <xsd:attribute name="data-ng-readonly" vs:category="Angular" vs:standalone="true" />
+    <xsd:attribute name="data-ng-false-value" vs:category="Angular" />
+    <xsd:attribute name="data-ng-true-value" vs:category="Angular" />
+    <xsd:attribute name="data-ng-pattern" vs:category="Angular" />
+  </xsd:complexType>
+
+  <xsd:element name="form">
+    <xsd:complexType>
+      <xsd:attribute name="data-ng-dirty" vs:category="Angular" vs:standalone="true" />
+      <xsd:attribute name="data-ng-invalid" vs:category="Angular" vs:standalone="true" />
+      <xsd:attribute name="data-ng-pristine" vs:category="Angular" vs:standalone="true" />
+      <xsd:attribute name="data-ng-submit" vs:category="Angular" />
+      <xsd:attribute name="data-ng-valid" vs:category="Angular" vs:standalone="true" />
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="option">
+    <xsd:complexType>
+      <xsd:attribute name="data-ng-selected" vs:category="Angular" />
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="html">
+    <xsd:complexType>
+      <xsd:attribute name="data-ng-csp" vs:category="Angular" vs:standalone="true" />
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="img">
+    <xsd:complexType>
+      <xsd:attribute name="data-ng-src" vs:category="Angular" />
+      <xsd:attribute name="data-ng-srcset" vs:category="Angular" />
+    </xsd:complexType>
+  </xsd:element>
+
+  <!-- Start Bootstrap specific attributes -->
+
+  <xsd:simpleType name="bootstrapComponents">
+    <xsd:restriction base="xsd:NMTOKEN">
+      <xsd:enumeration value="alert" />
+      <xsd:enumeration value="button" />
+      <xsd:enumeration value="buttons" />
+      <xsd:enumeration value="collapse" />
+      <xsd:enumeration value="dropdown" />
+      <xsd:enumeration value="false" />
+      <xsd:enumeration value="modal" />
+      <xsd:enumeration value="pill" />
+      <xsd:enumeration value="popover" />
+      <xsd:enumeration value="tab" />
+      <xsd:enumeration value="toggle" />
+      <xsd:enumeration value="tooltip" />
+      <xsd:enumeration value="true" />
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="triggerType">
+    <xsd:restriction base="xsd:NMTOKEN">
+      <xsd:enumeration value="click" />
+      <xsd:enumeration value="hover" />
+      <xsd:enumeration value="focus" />
+      <xsd:enumeration value="manual" />
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:attributeGroup name="bootstrapAttributeGroup">
+    <xsd:attribute name="data-animation" type="xsd:boolean" />
+    <xsd:attribute name="data-backdrop">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:NMTOKEN">
+          <xsd:enumeration value="static" />
+          <xsd:enumeration value="true" />
+          <xsd:enumeration value="false" />
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:attribute>
+    <xsd:attribute name="data-container" />
+    <xsd:attribute name="data-content" />
+    <xsd:attribute name="data-delay" />
+    <xsd:attribute name="data-dissmiss" type="bootstrapComponents" />
+    <xsd:attribute name="data-html" type="xsd:boolean" />
+    <xsd:attribute name="data-interval" type="xsd:integer" />
+    <xsd:attribute name="data-keyboard" type="xsd:boolean" />
+    <xsd:attribute name="data-loading-text" />
+    <xsd:attribute name="data-offset" />
+    <xsd:attribute name="data-offset-bottom" />
+    <xsd:attribute name="data-offset-top" />
+    <xsd:attribute name="data-parent" />
+    <xsd:attribute name="data-path" />
+    <xsd:attribute name="data-pause" type="triggerType" />
+    <xsd:attribute name="data-placement">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:NMTOKEN">
+          <xsd:enumeration value="left" />
+          <xsd:enumeration value="right" />
+          <xsd:enumeration value="top" />
+          <xsd:enumeration value="bottom" />
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:attribute>
+    <xsd:attribute name="data-ride">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:NMTOKEN">
+          <xsd:enumeration value="carousel" />
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:attribute>
+    <xsd:attribute name="data-selector" />
+    <xsd:attribute name="data-slide">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:NMTOKEN">
+          <xsd:enumeration value="next" />
+          <xsd:enumeration value="prev" />
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:attribute>
+    <xsd:attribute name="data-slide-to" type="xsd:integer" />
+    <xsd:attribute name="data-show" type="xsd:boolean" />
+    <xsd:attribute name="data-spy">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:NMTOKEN">
+          <xsd:enumeration value="affix" />
+          <xsd:enumeration value="scroll" />
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:attribute>
+    <xsd:attribute name="data-target" />
+    <xsd:attribute name="data-template" />
+    <xsd:attribute name="data-toggle" type="bootstrapComponents" />
+    <xsd:attribute name="data-trigger" type="triggerType" />
+    <xsd:attribute name="data-viewport" />
+    <xsd:attribute name="data-wrap" type="xsd:boolean" />
+  </xsd:attributeGroup>
+
+  <!-- End Bootstrap specific attributes -->
+
+</xsd:schema>

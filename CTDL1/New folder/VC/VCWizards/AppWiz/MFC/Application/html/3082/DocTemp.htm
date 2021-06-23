@@ -1,0 +1,721 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<html dir="LTR">
+<head>
+	<title>Asistente para aplicaciones MFC</title>
+	<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="MSThemeCompatible" content="Yes">
+	<link id="LINKURL" rel="stylesheet" href="../../../../../3082/NewStyles.css">
+</head>
+<body bgcolor="BUTTONFACE" topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0"
+	onload="InitDocument(document);" onkeydown="if (!bValidating) OnKey();" onkeypress="if (!bValidating) OnPress();">
+	<table class="ONE" height="100%" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<col class="LinkPane">
+		<col>
+		<!--OPEN OF INTRODUCTORY INFORMATION TABLE//-->
+		<tr valign="TOP">
+			<td height="79" width="100%" colspan="2">
+				<table class="TWO" border="0" cellpadding="0" cellspacing="0">
+					<col width="12">
+					<col>
+					<col width="12">
+					<tr>
+						<td valign="TOP" height="12" width="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="12" width="12">
+							&nbsp;
+						</td>
+						<td class="IMAGE" valign="BOTTOM" width="110" rowspan="2">
+							<div class="SMALLA" id="SINGLE_DOC_IMAGE">
+								<img class="SMALL" src="../../Images/DocTemplateString.gif" width="98" height="70"
+									alt="" border="0">
+							</div>
+						</td>
+						<td valign="TOP" height="12" width="6" rowspan="2">
+							&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td valign="TOP" height="65" width="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="65">
+							<h4 class="HEAD" id="HEAD">Propiedades de plantilla de documentos</h4>
+							<p class="SUBHEAD" id="SUBHEAD">
+								Especifique los valores para la plantilla de documento de la aplicación que desee usar cuando
+								cree un documento.</p>
+						</td>
+						<td valign="TOP" height="65" width="12">
+							&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td valign="TOP" class="RULE" colspan="5" height="2">
+							<table border="0" width="100%" height="1" cellpadding="0" cellspacing="0">
+								<tr valign="TOP">
+									<td height="1" width="100%" bgcolor="BUTTONSHADOW">
+									</td>
+									<td height="1" width="1" bgcolor="WINDOW">
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<!--CLOSE OF INTRODUCTORY INFORMATION TABLE//-->
+		<!--OPEN OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+		<tr valign="TOP">
+			<td class="Three" valign="TOP" height="100%" width="100%">
+				<table class="fixedSize" height="100%" width="100%" border="0" cellpadding="0" cellspacing="0">
+					<tr valign="TOP">
+						<td class="threeCustom" valign="TOP">
+							<!--OPEN OF NAVIGATION TABLE//-->
+							<table class="THREE" border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col>
+								<col width="1">
+								<tr>
+									<td valign="TOP" colspan="3" height="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="100%">
+										&nbsp;
+									</td>
+									<td valign="TOP" height="100%">
+										<!--OPEN OF NAVIGATIONAL LINKS//-->
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="Default" title="Ver información general de las selecciones"
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } Next(document, 'Default.htm');"
+															tabindex="1">Información general</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="AppType" title="Especificar las opciones de compatibilidad con la arquitectura documento/vista, del lenguaje y del estilo de la interfaz para la aplicación"
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } Next(document, 'AppType.htm');"
+															tabindex="2">Tipo de aplicación</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXTINDENT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="CompoundDoc" title="Especificar opciones de servidor o de contenedor OLE y compatibilidad con documentos activos"
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } onClick(this);"
+															tabindex="3">Compatib. doc. compuestos</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINKSELECTED">
+											<span class="VERTLINE1">
+												<img src="../../../../../1033/Images/spacer.gif" width="1" height="1" alt="" border="0">
+											</span><span class="HORILINE1">
+												<table width="167" height="100%" border="0" cellpadding="0" cellspacing="0">
+													<tr valign="TOP">
+														<td class="DOTTEDLINE" height="1">
+														</td>
+													</tr>
+													<tr valign="TOP">
+														<td height="100%">
+															<img src="../../../../../1033/Images/spacer.gif" width="165" height="28" alt="" border="0">
+														</td>
+													</tr>
+													<tr valign="TOP">
+														<td class="DOTTEDLINE" height="1">
+														</td>
+													</tr>
+												</table>
+											</span>
+											<table width="160" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXTSELECTEDINDENT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span id="DocTemp" title="Especificar los valores para la plantilla del documento de la aplicación que desee utilizar cuando cree un documento">
+															Prop. plantilla documento</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="DBSupport" title="Especificar compatibilidad con bases de datos, incluido cualquier origen de código fuente"
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } onClick(this);"
+															tabindex="4">Compatib. con bases de datos</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="UIFeatures" title="Especificar opciones que controlan la apariencia de la aplicación"
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } Next(document, 'UIFeatures.htm');"
+															tabindex="5">Caract. de la interfaz de usuario</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="Advanced" title="Especificar compatibilidad adicional para incorporar a la aplicación"
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } Next(document, 'Advanced.htm');"
+															tabindex="6">Características avanzadas</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="GeneratedClasses" title="Revisar las clases generadas y especificar las clases base para la aplicación"
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } Next(document, 'GeneratedClasses.htm');"
+															tabindex="7">Clases generadas</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<!--CLOSE OF NAVIGATIONAL LINKS//-->
+									</td>
+									<td width="1">
+										<div class="VERTLINE">
+											<img src="../../../../../1033/Images/spacer.gif" width="1" height="1" alt="" border="0">
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				<!--CLOSE OF NAVIGATION TABLE//-->
+			</td>
+			<td valign="TOP" height="100%">
+				<!--OPEN OF CONTENT AND BUTTON TABLE//-->
+				<table class="ONE" border="0" cellpadding="0" cellspacing="0">
+					<col width="100%">
+					<tr valign="TOP">
+						<td height="100%">
+							<!--OPEN OF CONTENT//-->
+							<table class="CONTENT" border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col width="398">
+								<col width="12">
+								<tr>
+									<td valign="TOP" height="9" colspan="3">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP">
+										<table class="FixedSize" border="0" cellpadding="0" cellspacing="0">
+											<col width="193">
+											<col width="12">
+											<col width="193">
+											<tr>
+												<td valign="TOP">
+													<span class="itemText" id="FILE_EXTENSION_TEXT" title="Extensión de archivo para los documentos de la aplicación">
+														<label id="EXTENSION_TEXT" for="FILE_EXTENSION">E<u>x</u>tensión de archivo:</label>
+														<br>
+														<input class="sideBtn" type="text" name="FileExt" id="FILE_EXTENSION" accesskey="x"
+															onpropertychange="ExtensionChanged(true);" title="Extensión de archivo para los documentos de aplicación.  El formato de extensión recomendado es 'tipoDoc-compañía'; por ejemplo, 'xlsx-microsoft'."
+															tabindex="8">
+													</span>
+												</td>
+												<td valign="TOP" width="12">
+													&nbsp;
+												</td>
+												<td valign="TOP">
+													<span class="itemText" id="DOCTYPE_WILDCARD_TEXT" title="Tipo de documento y filtro comodín como &quot;Worksheets (*.xls)&quot;">
+														<label id="FILTER_TEXT" for="FILTER_NAME"><u>N</u>ombre de filtro:</label>
+														<br>
+														<input class="sideBtn" type="text" name="FilterName" id="FILTER_NAME" accesskey="n"
+															title="Tipo de documento y filtro comodín como &quot;Worksheets (*.xls)&quot;"
+															tabindex="9">
+													</span>
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="17" colspan="3">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP">
+										<span class="itemText" id="preview_handler_title">
+											<input class="CheckBox" type="checkbox" id="PREVIEW_HANDLER" accesskey="v" title="Habilita la compatibilidad con el controlador de vista previa. Los datos de documentos se mostrarán en el panel de vista previa del explorador.  Debe proporcionarse una extensión de archivo.  Se creará un proyecto de DLL ATL para contener los controladores."
+												class="SINGLECHECKBOX" tabindex="10">
+											<div class="itemTextCheckboxA" id="SELECT_PREVIEW_HANDLER_TEXT" title="Habilita la compatibilidad con el controlador de vista previa. Los datos de documentos se mostrarán en el panel de vista previa del explorador.  Debe proporcionarse una extensión de archivo.  Se creará un proyecto de DLL ATL para contener los controladores.">
+												<label id="PREVIEW_HANDLER_TEXT" for="PREVIEW_HANDLER">Compatibilidad con el controlador de <u>v</u>ista previa para el tipo de archivo</label>
+											</div>
+										</span>
+										<p class="ElementSpacer2">
+											&nbsp;</p>
+										<span class="itemText" id="thumbnail_handler_title">
+											<input class="CheckBox" type="checkbox" id="THUMBNAIL_HANDLER" accesskey="m" title="Genera código en clases derivadas de CDocument y CView que se llamará desde los controladores de búsqueda y miniaturas, y permitirá el uso compartido de código de aplicación con código de controlador implementado en una biblioteca DLL.  Debe proporcionarse una extensión de archivo.  Se creará un proyecto de DLL ATL para contener los controladores."
+												class="SINGLECHECKBOX" tabindex="11">
+											<div class="itemTextCheckboxA" id="SELECT_THUMBNAIL_HANDLER_TEXT" title="Genera código en clases derivadas de CDocument y CView que se llamará desde el controlador de miniaturas y permitirá el uso compartido de código de aplicación con el código de controlador implementado en una biblioteca DLL.  Debe proporcionarse una extensión de archivo.  Se creará un proyecto de DLL ATL para contener los controladores.">
+												<label id="THUMBNAIL_HANDLER_TEXT" for="THUMBNAIL_HANDLER">Compatibilidad con el controlador de <u>m</u>iniaturas para el tipo de archivo</label>
+											</div>
+										</span>
+										<p class="ElementSpacer2">
+											&nbsp;</p>
+										<span class="itemText" id="search_handler_title">
+											<input class="CheckBox" type="checkbox" id="SEARCH_HANDLER" accesskey="b" title="Genera código en clases derivadas de CDocument y CView que se llamará desde los controladores de búsqueda y miniaturas, y permitirá el uso compartido de código de aplicación con código de controlador implementado en una biblioteca DLL.  Debe proporcionarse una extensión de archivo.  Se creará un proyecto de DLL ATL para contener los controladores."
+												class="SINGLECHECKBOX" tabindex="11">
+											<div class="itemTextCheckboxA" id="SELECT_SEARCH_HANDLER_TEXT" title="Genera código en clases derivadas de CDocument y CView que se llamará desde el controlador de búsqueda y permitirá el uso compartido de código de aplicación con código de controlador implementado en una biblioteca DLL.  Debe proporcionarse una extensión de archivo.  Se creará un proyecto de DLL ATL para contener los controladores.">
+												<label id="SEARCH_HANDLER_TEXT" for="SEARCH_HANDLER">Compatibilidad con el controlador de <u>b</u>úsqueda para el tipo de archivo</label>
+											</div>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="17" colspan="3">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP">
+										<table class="FixedSize" border="0" cellpadding="0" cellspacing="0">
+											<col width="193">
+											<col width="12">
+											<col width="193">
+											<tr>
+												<td valign="TOP">
+													<span class="itemText" id="MAIN_FRAME_CAPTION_TEXT" title="Texto que va a aparecer en la parte superior del marco de la aplicación principal; normalmente, el nombre de la aplicación">
+														<label id="MAIN_FRAME_TEXT" for="MAIN_FRAME_CAPTION">Título del marco <u>p</u>rincipal:</label>
+														<br>
+														<input class="sideBtn" type="text" name="MainFrCap" id="MAIN_FRAME_CAPTION" accesskey="p"
+															title="Texto que va a aparecer en la parte superior del marco de la aplicación principal; normalmente, el nombre de la aplicación"
+															tabindex="12">
+													</span>
+													<p class="ElementSpacer2">
+														&nbsp;</p>
+													<span class="itemText" id="ROOT_NAME_TEXT" title="Nombre raíz para el nuevo archivo del documento. El valor predeterminado es &quot;Project&quot;">
+														<label id="DOC_TYPE_TEXT" for="DOC_TYPE_NAME">Nombre del <u>t</u>ipo de documento:</label>
+														<br>
+														<input class="sideBtn" type="text" name="DocTypeName" id="DOC_TYPE_NAME" accesskey="t"
+															title="Nombre raíz para el nuevo archivo del documento. El valor predeterminado es &quot;Untitled&quot;" tabindex="14">
+													</span>
+													<p class="ElementSpacer2">
+														&nbsp;</p>
+													<span class="itemText" id="SHORT_NAME_TEXT" title="Nombre corto de este tipo de documento, como &quot;Worksheet&quot;">
+														<label id="NEW_SHORT_NAME_TEXT" for="FILE_NEW_NAME_SHORT">Nuevo nombre co<U>r</U>to del archivo:</label>
+														<br>
+														<input class="sideBtn" type="text" name="FileNameShort" id="FILE_NEW_NAME_SHORT"
+															accesskey="r" title="Nombre corto de este tipo de documento, como &quot;Worksheet&quot;"
+															tabindex="16">
+													</span>
+												</td>
+												<td valign="TOP" width="12">
+													&nbsp;
+												</td>
+												<td valign="TOP">
+													<span class="itemText" id="IDENTIFIER_TEXT" title="Identificador para el tipo de documento que se va a almacenar en la base de datos de registro de Windows">
+														<label id="ID_TEXT" for="FILE_TYPE_ID"><u>I</u>dentificador del tipo de archivo:</label>
+														<br>
+														<input class="sideBtn" type="text" name="FileID" id="FILE_TYPE_ID" accesskey="i"
+															title="Identificador para el tipo de documento que se va a almacenar en la base de datos de registro de Windows"
+															tabindex="13">
+													</span>
+													<p class="ElementSpacer2">
+														&nbsp;</p>
+													<span class="itemText" id="DOC_NAME_TEXT" title="Nombre del tipo de documento que se almacenará en la base de datos de registro de Windows.">
+														<label id="LONG_NAME_TEXT" for="FILE_NEW_NAME_LONG">Nombre <u>l</u>argo del tipo de archivo:</label>
+														<br>
+														<input class="sideBtn" type="text" name="FileNameLong" id="FILE_NEW_NAME_LONG" accesskey="l"
+															title="Nombre del tipo de documento que se almacenará en la base de datos de registro de Windows."
+															tabindex="15">
+													</span>
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="100%" colspan="3">
+										&nbsp;
+									</td>
+								</tr>
+							</table>
+							<!--CLOSE OF CONTENT//-->
+						</td>
+					</tr>
+					<tr valign="BOTTOM">
+						<td>
+							<!--OPEN OF BUTTON HTML//-->
+							<table border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col>
+								<col width="75">
+								<col width="4">
+								<col width="75">
+								<col width="4">
+								<col width="75">
+								<col width="12">
+								<tr>
+									<td valign="TOP" class="RULE" colspan="8" height="2">
+										<table border="0" width="100%" height="1" cellpadding="0" cellspacing="0">
+											<tr valign="TOP">
+												<td height="1" width="100%" bgcolor="BUTTONSHADOW">
+												</td>
+												<td height="1" width="1" bgcolor="WINDOW">
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="11" colspan="8">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="MIDDLE" height="23" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP" height="23">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="FinishBtn" onclick="OnFinish(document);">
+											Finalizar</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="4">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="CancelBtn" onclick="window.external.Finish(document, 'cancel');">
+											Cancelar</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="4">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="HelpBtn" onclick="window.external.OnHelp('vc.appwiz.mfc.exe.doctemp');">
+											Ayuda</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="12" colspan="8">
+										&nbsp;
+									</td>
+								</tr>
+							</table>
+							<!--CLOSE OF BUTTON HTML//-->
+						</td>
+					</tr>
+				</table>
+				<!--CLOSE OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+<script language="JSCRIPT">
+
+	var tab_array = new Array();
+	tab_array[0] = Default;
+	tab_array[1] = AppType;
+	tab_array[2] = CompoundDoc;
+	tab_array[3] = DocTemp;
+	tab_array[4] = DBSupport;
+	tab_array[5] = UIFeatures;
+	tab_array[6] = Advanced;
+	tab_array[7] = GeneratedClasses;
+
+	var ProjName = window.external.FindSymbol("PROJECT_NAME");
+
+	function InitDocument(document) {
+		setDirection();
+		InitTabs();
+		window.external.Load(document);
+
+		var max = new Number;
+		max = window.external.FindSymbol("MAX_DOC_TYPE_NAME");
+		DOC_TYPE_NAME.maxLength = max;
+
+		max = window.external.FindSymbol("MAX_FILE_NEW_NAME_SHORT");
+		FILE_NEW_NAME_SHORT.maxLength = max;
+
+		max = window.external.FindSymbol("MAX_FILE_TYPE_ID");
+		FILE_TYPE_ID.maxLength = max;
+
+		max = window.external.FindSymbol("MAX_FILE_NEW_NAME_LONG");
+		FILE_NEW_NAME_LONG.maxLength = max;
+
+		max = window.external.FindSymbol("MAX_FILTER_NAME");
+		FILTER_NAME.maxLength = max;
+
+		ExtensionChanged(false);
+	}
+
+	function InitTabs() {
+		MouseOut(DBSupport);
+		MouseOut(CompoundDoc);
+	}
+
+	function Next(document, linkto) {
+		window.external.Next(document, linkto);
+	}
+
+	function onClick(obj) {
+		if (obj == null || typeof (obj) == "undefined") {
+			return;
+		}
+
+		if (obj.id == "DBSupport") {
+			if (!window.external.FindSymbol("APP_TYPE_DLG")) {
+				Next(document, "DBSupport.htm");
+			}
+		}
+
+		if (obj.id == "CompoundDoc") {
+			if (window.external.FindSymbol("DOCVIEW") && !window.external.IsSymbolDisabled("DOCVIEW")) {
+				Next(document, "CompoundDoc.htm");
+			}
+		}
+	}
+
+	function CheckDataSource() {
+		if (window.external.FindSymbol("DB_CONNECTION_STRING") == "" && (window.external.FindSymbol("OLEDB") || window.external.FindSymbol("ODBC"))) {
+			L_Err1_Text = "Debe especificar un origen de datos cuando seleccione la opción de vista de base de datos";
+			window.external.ReportError(L_Err1_Text);
+			return false;
+		}
+
+		return true;
+	}
+
+	function OnFinish(document) {
+		bValidating = true;
+		if (!ValidateInput()) {
+			bValidating = false;
+			return;
+		}
+
+		if (!CheckDataSource())
+			return;
+
+		if (window.external.FindSymbol("ACTIVE_DOC_SERVER")) {
+			var strExtension = window.external.FindSymbol("FILE_EXTENSION");
+			if (strExtension == "") {
+				L_Err2_Text = "La opción Servidor de documentos activos está seleccionada. Debe especificar una extensión de archivo de documento.";
+				window.external.ReportError(L_Err2_Text);
+				FILE_EXTENSION.focus();
+				return;
+			}
+		}
+
+		OnWizFinish(document);
+	}
+
+	function ExtensionChanged(fValueChanged) {
+		var strExtension = TrimStr(FILE_EXTENSION.value);
+		window.external.AddSymbol("FILE_EXTENSION", strExtension);
+		if (strExtension == "") {
+			FILTER_NAME.value = strExtension;
+			window.external.AddSymbol("HAS_SUFFIX", false);
+			PREVIEW_HANDLER.checked = false;
+			PREVIEW_HANDLER.disabled = true;
+			PREVIEW_HANDLER_TEXT.disabled = true;
+			THUMBNAIL_HANDLER.checked = false;
+			THUMBNAIL_HANDLER.disabled = true;
+			THUMBNAIL_HANDLER_TEXT.disabled = true;
+			SEARCH_HANDLER.checked = false;
+			SEARCH_HANDLER.disabled = true;
+			SEARCH_HANDLER_TEXT.disabled = true;
+		}
+		else {
+			if (fValueChanged) {
+				FILTER_NAME.value = ProjName + " Files (*." + strExtension + ")";
+			}
+			window.external.AddSymbol("HAS_SUFFIX", true);
+			PREVIEW_HANDLER.disabled = false;
+			PREVIEW_HANDLER_TEXT.disabled = false;
+			THUMBNAIL_HANDLER.disabled = false;
+			THUMBNAIL_HANDLER_TEXT.disabled = false;
+			SEARCH_HANDLER.disabled = false;
+			SEARCH_HANDLER_TEXT.disabled = false;
+		}
+	}
+
+	function ValidateInput() {
+		var oInvalid = null;
+
+		if (!Validate(FILE_EXTENSION)) {
+			oInvalid = FILE_EXTENSION;
+		}
+
+		if (oInvalid == null) {
+			if (!Validate(FILE_TYPE_ID)) {
+				oInvalid = FILE_TYPE_ID;
+			}
+		}
+
+		if (oInvalid == null) {
+			if (!Validate(DOC_TYPE_NAME)) {
+				oInvalid = DOC_TYPE_NAME;
+			}
+		}
+
+		if (oInvalid == null) {
+			if (!Validate(FILTER_NAME)) {
+				oInvalid = FILTER_NAME;
+			}
+		}
+
+		if (oInvalid == null) {
+			if (!Validate(FILE_NEW_NAME_SHORT)) {
+				oInvalid = FILE_NEW_NAME_SHORT;
+			}
+		}
+
+		if (oInvalid == null) {
+			if (!Validate(FILE_NEW_NAME_LONG)) {
+				oInvalid = FILE_NEW_NAME_LONG;
+			}
+		}
+
+		if (oInvalid != null) {
+			window.external.ReportError();
+			oInvalid.focus();
+			return false;
+		}
+		return true;
+	}
+
+	function ValidateFileExtension(strExt) {
+		if (strExt.length == 0 && (PREVIEW_HANDLER.checked || THUMBNAIL_HANDLER.checked || SEARCH_HANDLER.checked)) {
+			L_Err4_Text = "La extensión de archivo no puede estar vacía cuando está habilitada la compatibilidad con el controlador de vista previa.";
+			oErrObj = new Error(L_Err4_Text);
+			SetErrorInfo(oErrObj);
+			return false;
+		}
+
+		if (!ValidateExtension(strExt) || !window.external.dte.VCLanguageManager.ValidateFileName(strExt, vsCMValidateFileExtNone)) {
+			L_Err5_Text = "Extensión de archivo no válida. La extensión no puede contener espacios ni ninguno de los siguientes caracteres: <>.\"\\/|:?*.";
+			oErrObj = new Error(L_Err5_Text);
+			SetErrorInfo(oErrObj);
+			return false;
+		}
+
+		return true;
+	}
+
+	function ValidateExtension(strExt) {
+		if (strExt.indexOf("<") >= 0 || strExt.indexOf(">") >= 0 || strExt.indexOf("\"") >= 0 || strExt.indexOf(" ") >= 0 ||
+		strExt.indexOf("/") >= 0 || strExt.indexOf("\\") >= 0 || strExt.indexOf("|") >= 0 || strExt.indexOf(":") >= 0 ||
+		strExt.indexOf("?") >= 0 || strExt.indexOf("*") >= 0 || strExt.indexOf(".") >= 0) {
+			return false;
+		}
+
+		return true;
+	}
+
+	function Validate(obj) {
+		var bValid = true;
+		switch (obj.id) {
+			case "FILE_EXTENSION":
+				{
+					if (!FILE_EXTENSION.value.length && !PREVIEW_HANDLER.checked && !THUMBNAIL_HANDLER.checked && !SEARCH_HANDLER.checked) {
+						bValid = true;
+						break;
+					}
+					bValid = ValidateFileExtension(obj.value);
+					break;
+				}
+			case "DOC_TYPE_NAME":
+				bValid = window.external.dte.VCLanguageManager.ValidateQualifiedName(obj.value);
+				break;
+			case "FILE_TYPE_ID":
+				bValid = window.external.IsValidProgID(obj.value);
+				break;
+			default:
+				break;
+		}
+
+		if (typeof (bValid) == "undefined")
+			bValid = false;
+
+		return bValid;
+	}
+
+</script>
+
+<script id="INCLUDE_SCRIPT" language="JSCRIPT"></script>
+
+<script id="INCLUDE_COMMON" language="JSCRIPT"></script>
+
+<script>
+	document.scripts("INCLUDE_SCRIPT").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Script.js";
+	document.scripts("INCLUDE_COMMON").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Common.js";
+</script>
+

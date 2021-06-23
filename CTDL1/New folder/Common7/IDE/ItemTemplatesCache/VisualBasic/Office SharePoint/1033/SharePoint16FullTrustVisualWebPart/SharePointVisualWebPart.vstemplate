@@ -1,0 +1,54 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="353" />
+    <Description Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="354" />
+    <Icon Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="236" />
+    <TemplateID>SharePoint16FullTrustVisualWebPart_VB_ITEM</TemplateID>
+    <FrameworkVersion>4.0</FrameworkVersion>
+    <ProjectType>VisualBasic</ProjectType>
+    <SortOrder>20</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>VisualWebPart</DefaultName>
+    <TemplateGroupID>SharePointItemTemplateGroupID</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>Microsoft.SharePoint</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Web</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Web.Extensions</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$/SharePointProjectItem.spdata" OpenInEditor="false">Default.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$/$fileinputname$.vb" OpenInEditor="false">Default.vb</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$/$fileinputname$.webpart" OpenInEditor="false">Default.webpart</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$/Elements.xml" OpenInEditor="false">Default.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$/$fileinputname$UserControl.ascx" OpenInEditor="true">DefaultUserControl.ascx</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$/$fileinputname$UserControl.ascx.vb" OpenInEditor="false">DefaultUserControl.ascx.vb</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$/$fileinputname$UserControl.ascx.designer.vb" OpenInEditor="false">DefaultUserControl.ascx.designer.vb</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="SharePointProjectTemplateAttributes" Value="ProjectItem"/>
+      <CustomParameter Name="SharePointProjectParentFilter" Value="General;ProjectItem"/>
+      <CustomParameter Name="$import_error_message$" Value="$Resources:core,ImportErrorMessage;" />
+      <CustomParameter Name="$webpart_title$" Value="$projectname$ - $fileinputname$" />
+      <CustomParameter Name="$webpart_classname$" Value="$safeitemrootname$" />
+      <CustomParameter Name="$webparturl$" Value="$projectname$_$fileinputname$.webpart" />
+      <CustomParameter Name="$ascx_classname$" Value="$safeitemrootname$UserControl" />
+      <CustomParameter Name="$ProjectItemName$" Value="$fileinputname$"/>
+      <CustomParameter Name="$loc_ascxPath_comment$" _locID="$loc_ascxPath_comment$" _locAttrData="Value" Value="Visual Studio might automatically update this path when you change the Visual Web Part project item." />
+      <CustomParameter Name="$loc_webpart_description$" _locID="$loc_webpart_description$" _locAttrData="Value" Value="My Visual Web Part" />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.WebPartProjectItemWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

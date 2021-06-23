@@ -1,0 +1,6 @@
+﻿// Windows uygulama yerelleştirmesi ile ilgili ayrıntılar için bakınız: http://go.microsoft.com/fwlink/?LinkId=212836
+
+{
+    "greeting"              : "Merhaba Dünya!",
+    "_greeting.comment"     : "Yerelleştiren kişiye bir yorumdur"
+}

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Load an Assembly at Run Time</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Loads an assembly at run time.</Description>
+      <Shortcut>appLoad</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Reflection</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>fileName</ID>
+          <Type>String</Type>
+          <ToolTip>The full path to the assembly file.</ToolTip>
+          <Default>"C:\Folder\AssemblyName.dll"</Default>
+        </Literal>
+        <Object>
+          <ID>loadedAssembly</ID>
+          <Type>Assembly</Type>
+          <ToolTip>The Assembly object that stores the assembly being loaded.</ToolTip>
+          <Default>loadedAssembly</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[$loadedAssembly$ = Assembly.LoadFile($fileName$)
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

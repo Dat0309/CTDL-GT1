@@ -1,0 +1,60 @@
+﻿.ms-grid-3x3
+{
+	display: -ms-grid;
+	-ms-grid-rows: 1fr 1fr 1fr;
+	-ms-grid-columns: 1fr 1fr 1fr;
+	width: 600px;
+	height: 600px;
+}
+.ms-grid-3x3 div:empty
+{
+	background-image: linear-gradient(60deg, black, rgba(193, 193, 193, 0.498) 42.6%, rgb(121, 121, 121) 52.6%, black);
+	background-size: 8px 8px;
+	opacity: 0.2;
+	border: 1px solid #101010;
+}
+.ms-grid-3x3 > .one
+{
+	-ms-grid-column: 1;
+	-ms-grid-row: 1;
+}
+.ms-grid-3x3 > .two
+{
+	-ms-grid-column: 2;
+	-ms-grid-row: 1;
+}
+.ms-grid-3x3 > .three
+{
+	-ms-grid-column: 3;
+	-ms-grid-row: 1;
+}
+.ms-grid-3x3 > .four
+{
+	-ms-grid-column: 1;
+	-ms-grid-row: 2;
+}
+.ms-grid-3x3 > .five
+{
+	-ms-grid-column: 2;
+	-ms-grid-row: 2;
+}
+.ms-grid-3x3 > .six
+{
+	-ms-grid-column: 3;
+	-ms-grid-row: 2;
+}
+.ms-grid-3x3 > .seven
+{
+	-ms-grid-column: 1;
+	-ms-grid-row: 3;
+}
+.ms-grid-3x3 > .eight
+{
+	-ms-grid-column: 2;
+	-ms-grid-row: 3;
+}
+.ms-grid-3x3 > .nine
+{
+	-ms-grid-column: 3;
+	-ms-grid-row: 3;
+}

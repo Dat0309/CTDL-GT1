@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Find the Amount of Disk Space Available</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Returns the amount of available disk space on a specified drive.</Description>
+      <Shortcut>sysSpace</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>DriveLetter</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the drive letter to query.</ToolTip>
+          <Default>"C:\"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim drive = My.Computer.FileSystem.GetDriveInfo($DriveLetter$)
+Dim space = drive.AvailableFreeSpace]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

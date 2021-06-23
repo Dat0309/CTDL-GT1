@@ -1,0 +1,6 @@
+<SchemaCatalog xmlns="http://schemas.microsoft.com/xsd/catalog">
+  <Schema href="%CommonProgramW6432%/Microsoft Shared/web server extensions/15/TEMPLATE/XML/workflowmetadata.xsd"
+          targetNamespace="http://schemas.microsoft.com/sharepoint/2012/app/workflow" />
+  <Schema href="%CommonProgramFiles%/Microsoft Shared/web server extensions/15/TEMPLATE/XML/workflowmetadata.xsd"
+          targetNamespace="http://schemas.microsoft.com/sharepoint/2012/app/workflow" />
+</SchemaCatalog>

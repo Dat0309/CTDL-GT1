@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns="http://openajax.org/metadata"
+        xmlns:win="http://microsoft.com/blend/5/namespace"
+		xmlns:blend="http://schemas.microsoft.com/winjs/Blend/2011"
+        spec="1.0"
+        id="http://www.microsoft.com/schemas/corsica/1.0/ListView_with_Grouped_Sample_Data"
+        name="WinJS.UI.ListView_with_Grouped_Sample_Data"
+        version="1.0">
+	<blend:compatibleWiths>
+		<blend:compatibleWith platform="Windows" minVersion="8.1" />
+	</blend:compatibleWiths>
+	<author name="Microsoft Corporation" />
+	<title type="text/plain">ListView with Grouped Sample Data</title>
+	<icons>
+		<icon src="ui_winjs.ui.listview.12x12.png" width="12" height="12" />
+		<icon src="ui_winjs.ui.listview.16x16.png" width="16" height="16" />
+	</icons>
+	<description type="text/plain">
+		<![CDATA[ListView with Grouped Sample Data]]>
+	</description>
+	<requires>
+		<require type="javascript" src="//Microsoft.WinJS.2.0/js/base.js" />
+		<require type="javascript" src="//Microsoft.WinJS.2.0/js/ui.js" />
+		<require type="css" src="//Microsoft.WinJS.2.0/css/ui-dark.css" includeRef="true" p4:distinct="false" xmlns:p4="http://schemas.microsoft.com/winjs/2011" />
+		<require type="javascript" src="sampleData.js" />
+		<require type="javascript"><![CDATA[WinJS.UI.processAll();]]></require>
+	</requires>
+	<content>
+		<![CDATA[
+	<div class="sampleGroupedListViewGroupTemplate" data-win-control="WinJS.Binding.Template">
+		<div>
+			<div data-win-bind="textContent:groupName"></div>
+		</div>
+	</div>
+	<div class="sampleGroupedListViewItemTemplate" data-win-control="WinJS.Binding.Template">
+		<div>
+			<div data-win-bind="textContent:name" style="width: 100px;"></div>
+		</div>
+	</div>
+
+	<div data-win-control="WinJS.UI.ListView" 
+		 data-win-options="{groupHeaderTemplate:select('.sampleGroupedListViewGroupTemplate'), groupDataSource:groupedList.groups.dataSource, itemDataSource:groupedList.dataSource, itemTemplate:select('.sampleGroupedListViewItemTemplate')}">
+	</div>
+		]]>
+	</content>
+	<categories>
+		<category name="Windows app Controls"/>
+		<category name="Windows app Controls/All"/>
+		<category name="Windows app Controls/Snippets"/>
+	</categories>
+</widget>

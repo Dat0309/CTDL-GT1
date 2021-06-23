@@ -1,0 +1,75 @@
+﻿#layoutView {
+    display: table;
+    margin: 10px auto;
+    padding: 10px;
+}
+div.BPT-Layout-Layer {
+    display: table-cell; 
+    padding: .1em 1px;
+    border-radius: 2px;
+    text-align: center;
+    border-top: 1px solid #84ACDD;
+    border-left: 1px solid #84ACDD;
+    border-bottom: 1px solid #84ACDD;
+    border-right: 1px solid #84ACDD;
+    white-space:nowrap;
+}
+    
+div.BPT-Layout-Top, div.BPT-Layout-Bottom {
+    font-family: inherit;
+    text-align:center;
+    padding: .9em;
+    height: 1em;
+}
+
+div.BPT-Layout-Left, div.BPT-Layout-Right {
+    font-family: inherit;
+    display: table-cell;
+    vertical-align: middle;
+    min-width: 30px;
+    height: 1em;
+}
+
+div.BPT-Layout-Left .BPT-EditContainer, div.BPT-Layout-Right .BPT-EditContainer {
+    padding: 0 5px 0 5px;
+}
+    
+div.BPT-Layout-Label {
+    font-family: inherit;
+    display: block;
+    font-size: .85em;
+    padding: 0px 5px;
+    width: 0px;
+    height: 0px;
+    overflow:visible;
+    color: #000000; /*[{VSFONTCOLOR_EDITOR}]*/
+}
+
+#layout-offset-layer {
+    color: #880000; /*[{VSFONTCOLOR_CSS_SELECTOR}]*/
+    border-color: #880000; /*[{VSFONTCOLOR_CSS_SELECTOR}]*/
+}
+
+#layout-margin-layer {
+    color: #0000FF; /*[{VSFONTCOLOR_CSS_PROPERTY_VALUE}]*/
+    border-color: #0000FF; /*[{VSFONTCOLOR_CSS_PROPERTY_VALUE}]*/
+}
+
+#layout-border-layer {
+    color: #FF0000; /*[{VSFONTCOLOR_HTML_ATTRIBUTE_NAME}]*/
+    border-color: #FF0000; /*[{VSFONTCOLOR_HTML_ATTRIBUTE_NAME}]*/
+}
+
+#layout-padding-layer {
+    color: #006400; /*[{VSFONTCOLOR_HTML_COMMENT}]*/
+    border-color: #006400; /*[{VSFONTCOLOR_HTML_COMMENT}]*/
+}
+
+#layout-size-layer {
+    color: #000000; /*[{VSFONTCOLOR_EDITOR}]*/
+    border-color: #000000; /*[{VSFONTCOLOR_EDITOR}]*/
+    height: 1em;
+    min-width: 8em;
+    min-height: 5em;
+    vertical-align: middle;
+}

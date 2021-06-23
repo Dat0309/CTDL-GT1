@@ -1,0 +1,31 @@
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{1B027A40-8F43-11D0-8D11-00A0C91BC942}" ID="3260" />
+    <Description Package="{1B027A40-8F43-11D0-8D11-00A0C91BC942}" ID="3261" />
+    <ProjectType>VC</ProjectType>
+    <TemplateGroupID>WinRT-Native</TemplateGroupID>
+    <TemplateID>Microsoft.VisualC.SilverlightPhone.DLL</TemplateID>
+    <SortOrder>58</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>PhoneDll</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <TargetPlatformName>WindowsPhone</TargetPlatformName>
+    <RequiredPlatformVersion>6.3.0</RequiredPlatformVersion>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <Icon>__templateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="Dll.vcxproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.vcxproj.filters">Dll.vcxproj.filters</ProjectItem>
+      <ProjectItem ReplaceParameters="false" OpenInEditor="true">dllmain.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.h">Dll.h</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.cpp">Dll.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false">pch.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false">pch.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false">targetver.h</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

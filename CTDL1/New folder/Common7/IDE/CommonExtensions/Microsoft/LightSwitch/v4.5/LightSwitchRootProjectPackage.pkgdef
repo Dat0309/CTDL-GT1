@@ -1,0 +1,50 @@
+[$RootKey$]
+
+[$RootKey$\Menus]
+"{783E7E99-F1EC-4B21-91E2-D36F20B7C81D}"=",1000,1"
+
+[$RootKey$\NewProjectTemplates\TemplateDirs\{783E7E99-F1EC-4B21-91E2-D36F20B7C81D}]
+
+[$RootKey$\NewProjectTemplates\TemplateDirs\{783E7E99-F1EC-4B21-91E2-D36F20B7C81D}\/1]
+@="LightSwitch"
+"TemplatesDir"="\\\\.\\\\NullPath"
+"SortPriority"=dword:00000105
+
+[$RootKey$\Packages]
+
+[$RootKey$\Packages\{783E7E99-F1EC-4B21-91E2-D36F20B7C81D}]
+"Class"="Microsoft.LightSwitch.VSIntegration.Project.RootProject.RootProjectPackage"
+"CodeBase"="$ProgramFiles$\Microsoft SDKs\LightSwitch\v4.5\Design\Microsoft.LightSwitch.Design.Package.dll"
+"CompanyName"="Microsoft Corporation"
+"ID"=dword:00000064
+"InProcServer32"="$System$\mscoree.dll"
+"MinEdition"="Standard"
+"ProductName"="LightSwitch Root Project"
+"ProductVersion"="4.5"
+@="Microsoft.LightSwitch.VSIntegration.Project.RootProject.RootProjectPackage, Microsoft.LightSwitch.Design.Package, Version=12.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+
+[$RootKey$\Packages\{783E7E99-F1EC-4B21-91E2-D36F20B7C81D}\SatelliteDll]
+"DllName"="Microsoft.LightSwitch.Design.ProjectUI.dll"
+"Path"="$ProgramFiles$\Microsoft SDKs\LightSwitch\v4.5\Design"
+
+[$RootKey$\Projects]
+
+[$RootKey$\Projects\{581633EB-B896-402F-8E60-36F3DA191C85}]
+"DefaultProjectExtension"="lsxtproj"
+"DisplayName"="#2105"
+"DisplayProjectFileExtensions"="#2106"
+"Language(VsTemplate)"="LightSwitch"
+"Package"="{783E7E99-F1EC-4B21-91E2-D36F20B7C81D}"
+"PossibleProjectExtensions"="lsxtproj"
+"ProjectTemplatesDir"="$ShellFolder$\Common7\IDE\ProjectTemplates\LightSwitch\1033"
+@="RootProjectFactory"
+
+[$RootKey$\Services]
+
+[$RootKey$\Services\{9BACEF39-76BA-45E2-B799-F51FEA0CBB3D}]
+"LightSwitch PropertySheetWindow"="{272EA915-68EE-4AFD-99A4-1286126565EC}"
+
+[$RootKey$\Setup]
+
+[$RootKey$\Setup\VSLS]
+"ProductName"="Microsoft LightSwitch"

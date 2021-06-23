@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="ms-design-extensionType" content="FileOpenPicker" />
+    <title>项选取器协定</title>
+
+    <!-- WinJS 引用 -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="$fileinputname$.css" rel="stylesheet" />
+    <script src="$fileinputname$.js"></script>
+</head>
+<body>
+    <!-- 此模板用于显示下面声明的 ListView
+         中的每一项。 -->
+    <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
+        <div class="pickerlist-tooltip">
+            <div class="tooltip-image-column">
+                <img class="tooltip-image" src="#" data-win-bind="src: backgroundImage" />
+            </div>
+            <div class="tooltip-body-column win-type-large win-type-ellipsis">
+                <span class="tooltip-body" data-win-bind="textContent: title"></span>
+                <br />
+                <span class="tooltip-body-secondary" data-win-bind="textContent: description"></span>
+            </div>
+        </div>
+
+        <div class="item" data-win-control="WinJS.UI.Tooltip" data-win-options="{ infotip: true, contentElement: select('.pickerlist-tooltip') }">
+            <img class="item-image" src="#" data-win-bind="src: backgroundImage; alt: title" />
+        </div>
+    </div>
+
+    <!-- 将加载和显示的内容。 -->
+    <section role="main" class="$safeitemname$">
+        <ul class="commandbar">
+            <li class="up-button win-type-x-large win-type-interactive">转到上级</li>
+        </ul>
+        <div class="pickerlist" aria-label="Items" data-win-control="WinJS.UI.ListView" data-win-options="{selectionMode: 'multi', tapBehavior: 'toggleSelect', swipeBehavior: 'select'}"></div>
+    </section>
+</body>
+</html>

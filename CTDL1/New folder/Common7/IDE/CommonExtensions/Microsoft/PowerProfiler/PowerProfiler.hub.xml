@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Components xmlns="urn:diagnosticshub-components-definition-1-3">
+  <ToolComponent Exclusive="false">
+    <ResourceBaseName>Resources\PowerProfilerResources</ResourceBaseName>
+    <Id>33041A6B-F1DC-4894-86A9-14E3AF8299C2</Id>
+    <Name ResourceId="PowerProfilerToolName" />
+    <Description ResourceId="PowerProfilerToolDescription" />
+    <!-- don't show this profiler on Windows8 or less -->
+    <HostOSVersion MinVersion="6.3" />
+    <SupportedTargets>
+      <!-- JavaScript Windows Store Apps -->
+      <VisualStudio DebuggerContext="LocalOrRemote">
+        <ProjectType>262852C6-CD72-467D-83FE-5EEB1973A190</ProjectType>
+        <TargetPlatform Name="Windows"/>
+        <TargetPlatform Name="WindowsPhone"/>
+      </VisualStudio>
+      <!-- C# Windows Store Apps -->
+      <VisualStudio DebuggerContext="LocalOrRemote">
+        <ProjectType>BC8A1FFA-BEE3-4634-8014-F334798102B3</ProjectType>
+        <ProjectType>FAE04EC0-301F-11D3-BF4B-00C04F79EFBC</ProjectType>
+        <TargetPlatform Name="Windows"/>
+      </VisualStudio>
+      <!-- VB Windows Store Apps -->
+      <VisualStudio DebuggerContext="LocalOrRemote">
+        <ProjectType>BC8A1FFA-BEE3-4634-8014-F334798102B3</ProjectType>
+        <ProjectType>F184B08F-C81C-45F6-A57F-5ABD9991F28F</ProjectType>
+        <TargetPlatform Name="Windows"/>
+      </VisualStudio>
+      <!-- C++ Windows and Windows Phone Store Apps -->
+      <VisualStudio DebuggerContext="LocalOrRemote">
+        <ProjectType>8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942</ProjectType>
+        <TargetPlatform Name="Windows"/>
+        <TargetPlatform Name="WindowsPhone"/>
+        <!--Filtering out C++ desktop applications -->
+        <ExpectedProperty Id="VSHPROPID_AppContainer" Value="True" />
+      </VisualStudio>
+
+      <!-- C# Windows Phone Store Apps -->
+      <VisualStudio DebuggerContext="RemoteOnly">
+        <ProjectType>76F1466A-8B6D-4E39-A767-685A06062A39</ProjectType>
+        <ProjectType>FAE04EC0-301F-11D3-BF4B-00C04F79EFBC</ProjectType>
+        <TargetPlatform Name="WindowsPhone"/>
+      </VisualStudio>
+      <!-- VB Windows Phone Store Apps -->
+      <VisualStudio DebuggerContext="RemoteOnly">
+        <ProjectType>76F1466A-8B6D-4E39-A767-685A06062A39</ProjectType>
+        <ProjectType>F184B08F-C81C-45F6-A57F-5ABD9991F28F</ProjectType>
+        <TargetPlatform Name="WindowsPhone"/>
+      </VisualStudio>
+
+      <WindowsStoreApp Type="All">
+        <TargetPlatform Name="Windows" Attach="Unsupported" Launch="LocalOrRemote" MinOSVersion="6.3"/>
+      </WindowsStoreApp>
+    </SupportedTargets>
+    <EnabledCollectors>
+      <CustomCollector IsPauseSupported="false" Id="72089E7A-A3C8-4652-9817-F33C8149AFFC"/>
+      <StandardCollector IsPauseSupported="false">
+        <!-- Microsoft-Windows-Kernel-Processor-Power -->
+        <EtwProvider Id="0F67E49F-FE51-4E9F-B490-6F2948CC6027" Level="Information" FilterByProcessId="false">
+          <!-- Diag -->
+          <Keyword>0x00000002</Keyword>
+        </EtwProvider>
+
+        <!-- Microsoft-Windows-Ndu provider to capture network traffic for the target application-->
+        <EtwProvider Id="DF271536-4298-45E1-B0F2-E88F78619C5D" Level="Verbose" FilterByProcessId="false">
+          <!-- KeywordNduPerFlowStats -->
+          <Keyword>0x00000004</Keyword>
+        </EtwProvider>
+
+        <!-- Microsoft-Windows-Immersive-Shell Provider. Gives the state of store app window to know if the display power has to be considered in Infosource. -->
+        <EtwProvider Id="315A8872-923E-4EA2-9889-33CD4754BF64" FilterByProcessId="false" Level="Information">
+          <Keyword>0x8000000000000000</Keyword>
+        </EtwProvider>
+
+        <!-- Microsoft-WindowsPhone-AppPlatProvider. Gives the state of phone store app window to know if the display power has to be considered in Infosource. -->
+        <EtwProvider Id="3C42000F-CC27-48C3-A005-48F6E38B131F" FilterByProcessId="false" Level="Information">
+          <!-- PLM -->
+          <Keyword>0x0000000000004000</Keyword>
+        </EtwProvider>
+
+        <!-- Microsoft-Windows-Diagnostics-LoggingChannel -->
+        <EtwProvider Id="4BD2826E-54A1-4BA9-BF63-92B73EA1AC4A" Level="Information" FilterByProcessId="true">
+        </EtwProvider>
+
+        <!-- Microsoft-IE -->
+        <EtwProvider Id="9E3B3947-CA5D-4614-91A2-7B624E0E7244">
+          <!-- Ideally we should use keyword to filter only event ID (MSHTML_MSPERFORMANCE_MARK - 211)
+                   instead we are using our relogger to do the filtering because we recieve lot of unwanted IE events. -->
+          <!-- primarynav -->
+          <Keyword>0x00000100</Keyword>
+        </EtwProvider>
+
+        <!-- Windows Kernel Trace -->
+        <!-- Need this to filter App Life cycle events by target process-->
+        <EtwProvider Id="9E814AAD-3204-11D2-9A82-006008A86939" FilterByProcessId="true" Level="Information">
+          <!-- process -->
+          <Keyword>0x00000001</Keyword>
+        </EtwProvider>
+
+        <!-- Widows Phone Emulator network usage -->
+        <EtwProvider Id="8CFD055C-25AA-4E6D-8277-62E6F7BCE202" Level="Information" FilterByProcessId="false">
+        </EtwProvider>
+
+        <!-- Collects display screen power, network interface ids-->
+        <CollectorAgent Clsid="79BAC9EB-BCF8-4F30-A90A-2DC5EFB946AE" LocalDllRelativePath="Platform\PowerDataCollectionAgent.dll" RemoteDllRelativePath="PowerProfiler\Platform\PowerDataCollectionAgent.dll">
+          <!-- This etw provider gets events generated by PowerCollectionAgent -->
+          <EtwProvider Id="C0E43E85-A440-45AE-A0FD-7238C3BB4847" FilterByProcessId="false" Level="Information">
+          </EtwProvider>
+        </CollectorAgent>
+
+        <DeviceDeployment>
+          <Package Id="0268B762-9167-44A9-8307-816A93E767DD" />
+        </DeviceDeployment>
+      </StandardCollector>
+    </EnabledCollectors>
+
+    <DataWarehouse>
+      <CustomAnalyzers>
+        <Location Arch="Amd64" LocalDllRelativePath="Extensions\amd64\PowerDataSource.dll" />
+        <Location Arch="X86" LocalDllRelativePath="Extensions\PowerDataSource.dll" />
+        <Analyzer Clsid="5A25B010-7F99-4168-AD2B-7445CC9846E6"/>
+      </CustomAnalyzers>
+      <CustomAnalyzers>
+        <Location Arch="Amd64" LocalDllRelativePath="Extensions\amd64\MarkerEventsDataModel.dll" />
+        <Location Arch="X86" LocalDllRelativePath="Extensions\MarkerEventsDataModel.dll" />
+        <Analyzer Clsid="212E4115-6EF3-4D06-9305-E336173C9DC9"/>
+      </CustomAnalyzers>
+    </DataWarehouse>
+
+    <Views>
+      <StandardSwimLane Destination="Analysis">
+        <Title>Energy Profiler Ruler</Title>
+        <Description>Shared ruler for Energy Profiler</Description>
+        <JsonConfiguration>
+          {
+          "View": "Ruler",
+          "Series": [{
+          "SeriesType": "Mark",
+          "MarkType": 2,
+          "DataSource":
+          {
+          "CounterId": "2", <!-- enum value MarkType::UserMark declared in is_MarkerEvents.hpp -->
+          "AnalyzerId": "212E4115-6EF3-4D06-9305-E336173C9DC9"
+          }
+          }, {
+          "SeriesType": "Mark",
+          "MarkType": 1,
+          "DataSource":
+          {
+          "CounterId": "1", <!-- enum value MarkType::LifeCycleEvent declared in is_MarkerEvents.hpp -->
+          "AnalyzerId": "212E4115-6EF3-4D06-9305-E336173C9DC9"
+          }
+          }
+          ]
+          }
+        </JsonConfiguration>
+      </StandardSwimLane>
+      <StandardSwimLane Destination="Analysis">
+        <Title ResourceId="PowerMultilineGraphTitle">Energy Graph</Title>
+        <JsonConfiguration>
+          {
+          "GraphType":"MultiLineGraph",
+          "Series": [
+          {
+          "SeriesType": "Line",
+          "Legend": "Total_Category",
+          "Color": {
+          "Line": "rgb(191, 63, 0)",
+          "Fill": "rgba(191, 63, 0, 0.5)"
+          },
+          "DataSource": {
+          "CounterId": "Total", <!--JSInterfaceMemberAttributes::TotalCategory in PowerProfiler\Extensions\Constants.cpp -->
+          "CustomDomain": {
+          "task": "2" <!--AnalysisTaskType::GetPowerData in PowerProfiler\Extensions\EnergyAnalysisController.h -->
+          },
+          "AnalyzerId": "5A25B010-7F99-4168-AD2B-7445CC9846E6"
+          }
+          },
+          {
+          "SeriesType": "Line",
+          "Legend": "CPU_Category",
+          "Color": {
+          "Line": "rgb(252, 183, 20)",
+          "Fill": "rgba(252, 183, 20, 0.5)"
+          },
+
+          "DataSource": {
+          "CounterId": "CPU", <!--JSInterfaceMemberAttributes::CPUCategory in PowerProfiler\Extensions\Constants.cpp -->
+          "CustomDomain": {
+          "task": "2" <!--AnalysisTaskType::GetPowerData in PowerProfiler\Extensions\EnergyAnalysisController.h -->
+          },
+          "AnalyzerId": "5A25B010-7F99-4168-AD2B-7445CC9846E6"
+          }
+          },
+          {
+          "SeriesType": "Line",
+          "Legend": "Display_Category",
+          "Color": {
+          "Line": "rgb(181, 181, 181)",
+          "Fill": "rgba(181, 181, 181, 0.5)"
+          },
+          "DataSource": {
+          "CounterId": "Display", <!--JSInterfaceMemberAttributes::DisplayCategory in PowerProfiler\Extensions\Constants.cpp-->
+          "CustomDomain": {
+          "task": "2" <!--AnalysisTaskType::GetPowerData in PowerProfiler\Extensions\EnergyAnalysisController.h -->
+          },
+          "AnalyzerId": "5A25B010-7F99-4168-AD2B-7445CC9846E6"
+          }
+          },
+          {
+          "SeriesType": "Line",
+          "Legend": "Network_Category",
+          "Color": {
+          "Line": "rgb(17, 122, 209)",
+          "Fill": "rgba(17, 122, 209, 0.5)"
+          },
+          "DataSource": {
+          "CounterId": "Network_Total", <!--JSInterfaceMemberAttributes::NetworkTotalCategory in PowerProfiler\Extensions\Constants.cpp-->
+          "CustomDomain": {
+          "task": "2" <!--AnalysisTaskType::GetPowerData in PowerProfiler\Extensions\EnergyAnalysisController.h -->
+          },
+          "AnalyzerId": "5A25B010-7F99-4168-AD2B-7445CC9846E6"
+          }
+          }
+          ],
+          "RefreshDataOnResizeAndZoom": true,
+          "MinValue": 0,
+          "MaxValue": 50,
+          "SetScaleValueViaAnalyzer": true,
+          "Unit": "PowerUnit"
+          }
+        </JsonConfiguration>
+        <Resources>
+          <JavaScriptResource JavaScriptKey="CPU_Category" ResourceId="CPU_Category" />
+          <JavaScriptResource JavaScriptKey="Display_Category" ResourceId="Display_Category" />
+          <JavaScriptResource JavaScriptKey="Network_Category" ResourceId="Network_Category" />
+          <JavaScriptResource JavaScriptKey="PowerUnit" ResourceId="PowerUnit" />
+          <JavaScriptResource JavaScriptKey="Total_Category" ResourceId="Total_Category" />
+        </Resources>
+      </StandardSwimLane>
+      <DetailsView Destination="Analysis">
+        <Title ResourceId="PowerProfilerDetailsViewTitle" />
+        <ScriptedControl>
+          <Manifest>PowerProfiler.manifest.json</Manifest>
+        </ScriptedControl>
+      </DetailsView>
+    </Views>
+  </ToolComponent>
+</Components>

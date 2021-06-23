@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE dotfuscator SYSTEM "dotfuscator_v2.3.dtd">
+<dotfuscator version="2.3">
+	<!-- define expandable properties -->
+	<!-- optional -->
+	<propertylist>
+		<property name="projectname" value="myproject"/>
+		<property name="anotherone" value="yabbadabbadoo"/>
+	</propertylist>
+	<!-- general options -->
+	<!-- optional.  If absent, the option is considered to be "off"-->
+	<global>
+		<option>verbose</option>
+		<!--			<option>quiet</option> -->
+		<!--			<option>investigate</option> -->
+	</global>
+	<!-- trigger list (files only). Modules containing assembly manifests -->
+	<!-- at least one is required -->
+	<!--	<trigger>
+		<filelist>
+			<file dir="c:\projects\${projectname}\bin\Debug" name="myTarget.exe"/>
+			<file dir="c:\projects\${projectname}\bin\Debug" name="myTargetLib.dll"/>
+		</filelist>
+	</trigger>
+-->
+	<input>
+		<loadpaths>
+			<file dir="c:\bob"/>
+		</loadpaths>
+		<package refid="e0f75ada-0259-46f9-a01a-b210abc65780">
+		  <file dir="c:\projects\${projectname}\bin\Debug" name="mySilverlight.xap" />
+		  <asmlist>
+		    <inputassembly refid="38148e7f-52ce-4950-a430-283edc1a11c0">
+		      <option>transformxaml</option>
+		      <file dir="" name="ASilverlightApp.dll" />
+		    </inputassembly>
+		  </asmlist>
+		</package>
+		<asmlist>
+			<inputassembly>
+				<option>library</option>
+				<file dir="c:\projects\${projectname}\bin\Debug" name="myTarget.exe"/>
+			</inputassembly>
+		</asmlist>
+	</input>
+	<!-- destination directory -->
+	<!-- required -->
+	<output>
+		<file dir="c:\work"/>
+	</output>
+	<!-- temporary directory ( optional ) defaults to system temp directory-->
+	<tempdir>
+		<file dir="c:\work"/>
+	</tempdir>
+	<!-- analytics options -->
+	<sos mergeruntime="true">
+	  <option>sendanalytics</option>
+	</sos>
+	<!-- analytics extended attributes -->
+	<!-- See manual for full details on attributes and options -->
+	<extattributes>
+	  <extattribute name="PreEmptive.Attributes.ApplicationAttribute">
+	    <codetransformlist>
+	      <codetransform name="analytics" />
+	    </codetransformlist>
+	    <!-- assembly level attributes use same syntax as input -->
+	    <assembly>
+	      <packageref refid="e0f75ada-0259-46f9-a01a-b210abc65780" />
+	      <file dir="" name="AssemblyInPackageWithAnalytics.dll" />
+	    </assembly>
+	    <propertylist>
+	      <property name="Guid" value="6d2c8edf-3048-4fa9-95f1-e631769ea817" />
+	    </propertylist>
+	  </extattribute>
+	  <extattribute name="PreEmptive.Attributes.BusinessAttribute">
+	    <codetransformlist>
+	      <codetransform name="analytics" />
+	    </codetransformlist>
+	    <assembly>
+	      <packageref refid="e0f75ada-0259-46f9-a01a-b210abc65780" />
+	      <file dir="" name="AssemblyInPackageWithAnalytics.dll" />
+	    </assembly>
+	    <propertylist>
+	      <property name="CompanyName" value="SomeName" />
+                  <property name="CompanyKey" value="b955a232-7a57-46b9-8b0d-2e34bc739731" />
+	    </propertylist>
+	  </extattribute>
+	  <extattribute name="PreEmptive.Attributes.SetupAttribute">
+	    <codetransformlist>
+	      <codetransform name="analytics" />
+	    </codetransformlist>
+	    <!-- method level attributes match on fully qualified type name and method signature -->
+	    <type name="SomeNamespace.SomeType">
+	      <method name="Initialize" signature="void()" />
+	    </type>
+	    <propertylist>
+	      <property name="OfflineStorageResultSinkElement" value="None" />
+	      <property name="ExtendedKeySourceOwner" value="" />
+	      <property name="OptInSourceName" value="" />
+	      <property name="CustomEndpoint" value="blah" />
+	      <property name="OfflineStorageResultSinkName" value="" />
+	      <property name="OfflineStateSourceOwner" value="" />
+	      <property name="OfflineStorageResultSinkOwner" value="" />
+	      <property name="OptInSourceElement" value="None" />
+	      <property name="InstanceIdSourceElement" value="None" />
+	      <property name="InstanceIdSourceName" value="" />
+	      <property name="ExtendedKeySourceName" value="" />
+	      <property name="ExtendedKeySourceElement" value="None" />
+	      <property name="OptInSourceOwner" value="" />
+	      <property name="OfflineStateSourceElement" value="DefaultAction" />
+	      <property name="OfflineStateSourceName" value="" />
+	      <property name="InstanceIdSourceOwner" value="" />
+	      <property name="ExtendedKeyMethodArguments" value="" />
+	      <property name="UseSSL" value="True" />
+	    </propertylist>
+	  </extattribute>
+	  <extattribute name="PreEmptive.Attributes.TeardownAttribute">
+	    <codetransformlist>
+	      <codetransform name="analytics" />
+	    </codetransformlist>
+	    <type name="SomeNamespace.SomeOtherType">
+	      <method name="Exit_Application" signature="void()" />
+	    </type>
+	    <propertylist>
+	      <property name="ExtendedKeySourceElement" value="None" />
+	      <property name="ExtendedKeySourceName" value="" />
+	      <property name="ExtendedKeySourceOwner" value="" />
+	      <property name="ExtendedKeyMethodArguments" value="" />
+	    </propertylist>
+	  </extattribute>
+
+	</extattributes>
+	<!-- renaming options -->
+	<!-- If absent, an option is considered to be "off"-->
+	<renaming>
+		<!-- these two options are mutually exclusive -->
+		<!--		<option>keephierarchy</option> -->
+		<!--		<option>keepnamespace</option> -->
+		<!-- optional.  can exclude classes, namespaces, modules, methods, or fields with or without RE matching -->
+		<excludelist>
+			<!-- exclude one type and all its members -->
+			<type name="preemptive.test.MyTest"/>
+			<!-- exclude all public types whose names start with My.Test.I (and all their members)-->
+			<type regex="true" name="My[\.]Test[\.]I.*" speclist="+public"/>
+			<!-- exclude all types in this namespace (and all their members)-->
+			<namespace name="My.Excluded.Namespace"/>
+			<!-- exclude all types in all matching namespaces (and all their members)-->
+			<namespace regex="true" name="My[\.]Other.*"/>
+			<!-- exclude stuff inside the given type (but not the type itself)-->
+			<type name="preemptive.test.MyOtherTest" excludetype="false">
+				<!-- all public instance Getters -->
+				<method regex="true" name="Get.*" speclist="+public,-static"/>
+				<!-- all public instance Setters -->
+				<method regex="true" name="Set.*" speclist="+public,-static"/>
+				<!-- methods named DoIt with the given signature -->
+				<method name="DoIt" signature="int, System.Console, System.Collection.ICollection, float[]"/>
+				<!-- fields named MyField -->
+				<field name="MyField"/>
+				<!-- all static fields starting with ENUM_ -->
+				<field regex="true" name="ENUM_.*" speclist="+static"/>
+			</type>
+			<!-- Exclude all types that are annotated with  the PreEmptive.MyCustomAttribute OR the PreEmptive.MyOtherCustomAttribute -->
+			<type name=".*" regex="true">
+				<customattribute name="PreEmptive.MyCustomAttribute" regex="false"/>
+				<customattribute name="PreEmptive.MyOtherCustomAttribute" regex="false"/>
+			</type>
+			<!-- Exclude all methods that are annotated with  the PreEmptive.MethodAttribute -->
+			<type name=".*" regex="true">
+				<method name=".*">
+					<customattribute name="PreEmptive.MethodAttribute"/>
+				</method>
+			</type>
+			<!-- exclude everything in a given module -->
+			<module name="ExcludedLibResource.dll" assemblyname="ExcludedLib"/>
+			<!-- exclude everything in a given assembly -->
+			<assembly>
+				<file dir="c:\projects\project1\bin\Debug" name="ExcludedLib.dll"/>
+			</assembly>
+		</excludelist>
+		<!-- mapping output file -->
+		<!-- both are optional -->
+		<mapping>
+			<!-- mapinput is optional -->
+			<mapinput>
+				<file dir="c:\work" name="testmap.xml"/>
+			</mapinput>
+			<!-- overwrite is optional (defaults to false ) -->
+			<mapoutput overwrite="true">
+				<file dir="c:\work" name="testmap.xml"/>
+				<transform>
+					<file dir="${configdir}" name="myxform.xsl"/>
+				</transform>
+			</mapoutput>
+		</mapping>
+	</renaming>
+	<!-- optional -->
+	<controlflow level="low">
+		<!-- medium, or high -->
+		<option>disable</option>
+		<!-- type, namespace, module, assembly allowed here -->
+		<excludelist>
+			<type name="preemptive.test.MyOtherTest" excludetype="false">
+				<!-- all public instance Getters -->
+				<method regex="true" name="Get.*" speclist="+public,-static"/>
+				<!-- all public instance Setters -->
+				<method regex="true" name="Set.*" speclist="+public,-static"/>
+				<!-- methods named DoIt with the given signature -->
+				<method name="DoIt" signature="int, System.Console, System.Collection.ICollection, float[]"/>
+				<!-- fields named MyField -->
+				<field name="MyField"/>
+				<!-- all static fields starting with ENUM_ -->
+				<field regex="true" name="ENUM_.*" speclist="+static"/>
+			</type>
+			<!-- exclude everything in a given module -->
+			<module name="ExcludedLibResource.dll" assemblyname="ExcludedLib"/>
+			<!-- exclude everything in a given assembly -->
+			<assembly>
+				<file dir="c:\projects\project1\bin\Debug" name="ExcludedLib.dll"/>
+			</assembly>
+		</excludelist>
+	</controlflow>
+	<stringencrypt>
+		<option>disable</option>
+		<includelist>
+			<namespace name="preemptive.sensitive"/>
+			<type name="SensitiveType"/>
+		</includelist>
+	</stringencrypt>
+	<!-- optional -->
+	<removal>
+		<option>disable</option>
+		<!-- triggerlist is required -->
+		<triggerlist>
+			<!-- type, namespace, module, assembly allowed here -->
+			<!-- namespace, module, and assembly:  uses all members in contained types as triggers -->
+			<!-- type: can specify methods and fields (with REs) to use as triggers -->
+			<type name="preemptive.test.MyApplication">
+				<method name="Main" signature="string[]"/>
+			</type>
+		</triggerlist>
+		<!-- optional -->
+		<conditionalincludes>
+			<!-- type, namespace, module, assembly allowed here
+         forcibly includes selected types in dependency analysis.  
+         Members are still subject to removal
+         this is for manually including types not detected by static analysis. -->
+			<!-- Note that nested members inside the type element make 
+         no sense in this context and will be ignored -->
+			<type name="preemptive.test.MyDynamicType"/>
+			<type name="preemptive.test.dynamic*" regex="true"/>
+		</conditionalincludes>
+		<removalreport>
+			<file dir="${configdir}" name="removal.xml"/>
+			<transform>
+				<file dir="${configdir}" name="myxform.xsl"/>
+			</transform>
+		</removalreport>
+	</removal>
+	<linking>
+		<option>disable</option>
+		<linkedassembly>
+			<primaryinput>
+				<assembly>
+					<file dir="" name=""/>
+				</assembly>
+			</primaryinput>
+			<assemblylist>
+				<assembly>
+					<file dir="" name=""/>
+				</assembly>
+			</assemblylist>
+			<outputassembly name=""/>
+		</linkedassembly>
+	</linking>
+	<premark>
+		<option>usepassphrase</option>
+		<option>truncatestring</option>
+		<assemblylist>
+			<assembly>
+				<file dir="" name=""/>
+			</assembly>		
+		</assemblylist>
+		<passphrase>itsasecret</passphrase>
+		<encoding name="6bit-a"/>
+		<watermark>this is a watermark string</watermark>
+	</premark>
+	<signing>
+		<!-- 		<option>disable</option> -->
+		<resign>
+			<option>dontuseattributes</option>
+			<key>
+				<file dir="." name="mykey.snk"/>
+			</key>
+		</resign>
+		<delaysign>
+			<key>
+				<file dir="." name="privateKey.snk"/>
+				<!---			<container name="mycontainer"/> -->
+			</key>
+		</delaysign>
+	</signing>
+	<eventlist>
+		<event type="postbuild">
+			<option>foreachmodule</option>
+			<program>
+				<file name="peverify.exe" dir="${sdkDir}"/>
+				<environment commandline="${dotf.current.out.module}" workingdir="${dotf.destination}"/>
+			</program>
+		</event>
+	</eventlist>
+	<!--Smart Obfuscation options -->
+	<smartobfuscation>
+	  <smartobfuscationreport verbosity="all" overwrite="false" />
+	</smartobfuscation>
+</dotfuscator>

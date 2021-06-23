@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+
+  <TemplateData>
+
+    <Name>TypeScript File</Name>
+
+    <Description>Empty TypeScript file</Description>
+
+    <Icon Package="{2ffe45c4-5c73-493c-b187-f2e955ff875e}" ID="3"></Icon>
+
+    <TemplateID>3d7694c0-f13e-4ab4-bbe9-c12be57c9ae7</TemplateID>
+
+    <TemplateGroupID>Web</TemplateGroupID>
+    <ProjectType>VisualBasic</ProjectType>
+    <ProjectSubType>Web</ProjectSubType>
+    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+
+    <NumberOfParentCategoriesToRollUp>2</NumberOfParentCategoriesToRollUp>
+
+    <DefaultName>file.ts</DefaultName>
+
+  </TemplateData>
+
+  <TemplateContent>
+
+    <ProjectItem SubType="Code" ItemType="TypeScriptCompile" TargetFileName="$fileinputname$.ts" ReplaceParameters="true">file.ts</ProjectItem>
+
+  </TemplateContent>
+
+</VSTemplate>

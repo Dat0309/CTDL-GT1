@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Join (explicit) on an array</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Creates a query that matches items against elements in an array.</Description>
+      <Shortcut>qJoinExpArray</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>queryResult</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the query.</ToolTip>
+          <Default>query</Default>
+        </Literal>
+        <Literal>
+          <ID>item</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the variable that represents an item from your data source.</ToolTip>
+          <Default>fruit</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSource</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the identifier for your data source.</ToolTip>
+          <Default>New String() {"apple", "orange", "pear", "banana", "strawberry", "blueberry"}</Default>
+        </Literal>       
+        <Literal>
+          <ID>field1</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the name of the field determining the Join condition.</ToolTip>
+          <Default>Length</Default>
+        </Literal>       
+        <Literal>
+          <ID>field2</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the name of a field being selected.</ToolTip>
+          <Default>ToUpper()</Default>
+        </Literal> 
+        <Literal>
+          <ID>length</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the range variable for the array.</ToolTip>
+          <Default>length</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $queryResult$ = From $item$ In $dataSource$ _
+                   Join $length$ In New Integer() { 4, 5 } _
+                                   On $item$.$field1$ Equals $length$ _
+                   Select $item$.$field1$, $item$.$field2$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

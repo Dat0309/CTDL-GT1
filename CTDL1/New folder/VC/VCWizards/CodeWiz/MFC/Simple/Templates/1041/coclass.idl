@@ -1,0 +1,16 @@
+	//  [!output CLASS_NAME_ROOT] のプライマリ ディスパッチ インターフェイス
+		
+	[ uuid([!output DISPIID_REGISTRY_FORMAT]) ]
+	dispinterface I[!output CLASS_NAME_ROOT]
+	{
+		properties:
+		methods:
+	};
+
+	//  [!output CLASS_NAME_ROOT] のクラス情報
+
+	[ uuid([!output CLSID_REGISTRY_FORMAT]) ]
+	coclass [!output CLASS_NAME_ROOT]
+	{
+		[default] dispinterface I[!output CLASS_NAME_ROOT];
+	};

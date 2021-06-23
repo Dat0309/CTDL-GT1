@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.ListDefinition" DefaultFile="Elements.xml" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="$ProjectItemName$\" Type="ElementManifest" />
+    <ProjectItemFile Source="Schema.xml" Target="$ProjectItemName$\" Type="ElementFile" />
+$if$ ($TemplateType$ == 101)
+    <ProjectItemFile Source="EditDlg.htm" Target="$ProjectItemName$\" Type="ElementFile" />
+    <ProjectItemFile Source="FileDlg.htm" Target="$ProjectItemName$\" Type="ElementFile" />
+    <ProjectItemFile Source="Repair.aspx" Target="$ProjectItemName$\" Type="ElementFile" />
+    <ProjectItemFile Source="Upload.aspx" Target="$ProjectItemName$\" Type="ElementFile" />
+$endif$
+  </Files>
+</ProjectItem>

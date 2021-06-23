@@ -1,0 +1,26 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>scripts</Title>
+    <Author>Microsoft Corporation</Author>
+    <Shortcut>scripts</Shortcut>
+    <Description>Markup snippet for a scripts collection for a scriptmanager</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <FileExtensions>
+      aspx;master;ascx
+    </FileExtensions>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>path</ID>
+        <ToolTip>path</ToolTip>
+        <Default>#</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="html"><![CDATA[<scripts>
+    <asp:scriptreference path="$path$" />$end$
+</scripts>]]></Code>
+  </Snippet>
+</CodeSnippet>

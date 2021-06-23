@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <TemplateID>PowerShellTools.RedirectTemplate</TemplateID>
+    <Name Package="{8d6fdf26-c2d9-43d0-866a-f2af71f19813}" ID="500" />
+    <Description Package="{8d6fdf26-c2d9-43d0-866a-f2af71f19813}" ID="501" />
+    <Icon Package="{8d6fdf26-c2d9-43d0-866a-f2af71f19813}" ID="502" />
+    <ProjectType>PowerShell</ProjectType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <CreateNewFolder>false</CreateNewFolder>
+    <DefaultName>PowerShell</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <SortOrder>0</SortOrder>
+    <PromptForSaveOnCreation>false</PromptForSaveOnCreation>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Hidden>false</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="emptyproject.csproj" ReplaceParameters="true">
+      <ProjectItem OpenInWebBrowser="true">PowerShellTools.html</ProjectItem>
+      <ProjectItem>VSLogo.gif</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FramesTabTitle" xml:space="preserve">
+    <value>Фреймы</value>
+  </data>
+  <data name="FramesTabTooltip" xml:space="preserve">
+    <value>Фреймы</value>
+  </data>
+  <data name="GraphCollapseAriaLabel" xml:space="preserve">
+    <value>Нажмите клавишу ВВОД, чтобы свернуть график.</value>
+  </data>
+  <data name="GraphExpandAriaLabel" xml:space="preserve">
+    <value>Нажмите клавишу ВВОД, чтобы развернуть график.</value>
+  </data>
+  <data name="HotElementsTabTitle" xml:space="preserve">
+    <value>Активные элементы</value>
+  </data>
+  <data name="HotElementsTabTooltip" xml:space="preserve">
+    <value>С группировкой по шаблону</value>
+  </data>
+  <data name="Layout_Category" xml:space="preserve">
+    <value>Макет</value>
+  </data>
+  <data name="LayoutLegendTooltip" xml:space="preserve">
+    <value>Процент времени, затраченный на построение макета</value>
+  </data>
+  <data name="LogicalTreeTabTitle" xml:space="preserve">
+    <value>Логическое дерево</value>
+  </data>
+  <data name="LogicalTreeTooltip" xml:space="preserve">
+    <value>Логическое дерево</value>
+  </data>
+  <data name="MillisecondsAbbreviation" xml:space="preserve">
+    <value>мс</value>
+  </data>
+  <data name="MillisecondsLabel" xml:space="preserve">
+    <value>мс</value>
+  </data>
+  <data name="MinutesAbbreviation" xml:space="preserve">
+    <value>мин</value>
+  </data>
+  <data name="MinutesLabel" xml:space="preserve">
+    <value>мин</value>
+  </data>
+  <data name="ParsingTabTitle" xml:space="preserve">
+    <value>Синтаксический анализ</value>
+  </data>
+  <data name="ParsingTabTooltip" xml:space="preserve">
+    <value>Синтаксический анализ</value>
+  </data>
+  <data name="Parsing_Category" xml:space="preserve">
+    <value>Синтаксический анализ</value>
+  </data>
+  <data name="ParsingLegendTooltip" xml:space="preserve">
+    <value>Процент времени, затраченный на разбор документа XAML</value>
+  </data>
+  <data name="RulerAriaLabel" xml:space="preserve">
+    <value>Минимальное значение линейки — "{0}", максимальное значение линейки — "{1}"</value>
+  </data>
+  <data name="RulerLeftSliderAriaLabel" xml:space="preserve">
+    <value>Левый ползунок</value>
+  </data>
+  <data name="RulerLifecycleMarkLabel" xml:space="preserve">
+    <value>Отметка жизненного цикла приложения</value>
+  </data>
+  <data name="RulerRightSliderAriaLabel" xml:space="preserve">
+    <value>Правый ползунок</value>
+  </data>
+  <data name="RulerSliderAriaValueText" xml:space="preserve">
+    <value>Текущее значение — {0}. Минимальное значение — {1}. Максимальное значение — {2}.</value>
+  </data>
+  <data name="RulerTitle" xml:space="preserve">
+    <value>Диагностический сеанс</value>
+  </data>
+  <data name="RulerUserMarkLabel" xml:space="preserve">
+    <value>Пользовательская отметка</value>
+  </data>
+  <data name="Ruler_LifeCycleEvents" xml:space="preserve">
+    <value>Отметка жизненного цикла приложения</value>
+  </data>
+  <data name="Ruler_UserMarks" xml:space="preserve">
+    <value>Пользовательская отметка</value>
+  </data>
+  <data name="RulerMarkTooltipLabel" xml:space="preserve"> <!-- Appended to label text in diagnostics hub ruler control, e.g. "Activation Start"xxxxxx -->
+    <value> в {0}</value>
+  </data>
+  <data name="RulerMarkLabel" xml:space="preserve">
+    <value>Деление линейки, указывающее на наличие следующих событий: {0}</value>
+    <comment>{0} is replaced with the tooltip content of the ruler mark(s)</comment>
+  </data>
+  <data name="SecondsAbbreviation" xml:space="preserve">
+    <value>с</value>
+  </data>
+  <data name="SecondsLabel" xml:space="preserve">
+    <value>с</value>
+  </data>
+  <data name="SummaryTabTitle" xml:space="preserve">
+    <value>Сводка</value>
+  </data>
+  <data name="SummaryTabTooltip" xml:space="preserve">
+    <value>Сводка</value>
+  </data>
+  <data name="UiThreadActivityAriaLabel" xml:space="preserve">
+    <value>Гистограмма, представляющая использование потока пользовательского интерфейса приложения. Для навигации используйте клавиши со стрелками вправо и влево.</value>
+  </data>
+  <data name="UiThreadActivityBarAriaLabel" xml:space="preserve">
+    <value>{0} использовал {1}% времени в потоке пользовательского интерфейса</value>
+  </data>
+  <data name="UiThreadActivityChartTitle" xml:space="preserve">
+    <value>Использование потока пользовательского интерфейса (%)</value>
+  </data>
+  <data name="XamlOther_Category" xml:space="preserve">
+    <value>Другие XAML</value>
+  </data>
+  <data name="XamlOtherLegendTooltip" xml:space="preserve">
+    <value>Процент времени, затраченный на другие службы XAML</value>
+  </data>
+  <data name="XamlProfilerDetailsViewTitle" xml:space="preserve">
+    <value>Скорость реагирования ИП XAML</value>
+  </data>
+  <data name="XamlProfilerToolDescription" xml:space="preserve">
+    <value>Проверка времени, проведенного в приложении</value>
+  </data>
+  <data name="XamlProfilerToolName" xml:space="preserve">
+    <value>Скорость реагирования ИП XAML</value>
+  </data>
+  <data name="SelectAnEventDescription" xml:space="preserve">
+    <value>Выберите запись на временной шкале для просмотра подробностей</value>
+  </data>
+  <data name="DescriptionLabel" xml:space="preserve">
+    <value>Описание</value>
+  </data>
+  <data name="DurationExclusiveLabel" xml:space="preserve">
+    <value>Длительность (исключительная)</value>
+  </data>
+  <data name="DurationInclusiveLabel" xml:space="preserve">
+    <value>Длительность (включительная)</value>
+  </data>
+  <data name="ElementsExclusiveLabel" xml:space="preserve">
+    <value>Элементы интерфейса (исключительно)</value>
+  </data>
+  <data name="ElementsInclusiveLabel" xml:space="preserve">
+    <value>Элементы интерфейса (включительно)</value>
+  </data>
+  <data name="EndTimeLabel" xml:space="preserve">
+    <value>Время окончания</value>
+  </data>
+  <data name="EventsTimelineAriaLabel" xml:space="preserve">
+    <value>Прокручиваемая диаграмма Ганта, на которой отображается последовательность событий, произошедших в течение выделенного отрезка времени.  Для навигации используйте клавиши со стрелками вверх и вниз.</value>
+  </data>
+  <data name="StartTimeLabel" xml:space="preserve">
+    <value>Время начала</value>
+  </data>
+  <data name="XAMLParsingViewEventHeaderLabel" xml:space="preserve">
+    <value>Имя файла</value>
+  </data>
+  <data name="AnalyzeDataStatus" xml:space="preserve">
+    <value>Анализ собранных данных</value>
+  </data>
+  <data name="ElementCountLabel" xml:space="preserve">
+    <value>Количество элементов</value>
+  </data>
+  <data name="ElementNameLabel" xml:space="preserve">
+    <value>Имя элемента</value>
+  </data>
+  <data name="HotElementsViewEventHeaderLabel" xml:space="preserve">
+    <value>Тип</value>
+  </data>
+  <data name="TemplateNameLabel" xml:space="preserve">
+    <value>Имя шаблона</value>
+  </data>
+  <data name="DWM_Category" xml:space="preserve">
+    <value>Поток компоновки</value>
+  </data>
+  <data name="FrameRateGraphGraphTitle" xml:space="preserve">
+    <value>Пропускная способность визуализации</value>
+  </data>
+  <data name="FrameRateUnit" xml:space="preserve">
+    <value>Кадров в секунду</value>
+  </data>
+  <data name="DefaultTemplateNameLabel" xml:space="preserve">
+    <value>default</value>
+  </data>
+  <data name="InlineTemplateNameLabel" xml:space="preserve">
+    <value>встроенный</value>
+  </data>
+  <data name="UI_Category" xml:space="preserve">
+    <value>Поток ИП</value>
+  </data>
+  <data name="HotElementXAMLFileNameLabel" xml:space="preserve">
+    <value>Имя файла</value>
+  </data>
+  <data name="AppCode_Category" xml:space="preserve">
+    <value>Код приложения</value>
+  </data>
+  <data name="AppCodeLegendTooltip" xml:space="preserve">
+    <value>Процент времени, затраченный на код приложения</value>
+  </data>
+</root>

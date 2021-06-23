@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Convert Mouse Coordinates to Screen Coordinates</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Converts mouse coordinates from a mouse event into screen coordinates.</Description>
+      <Shortcut>formMouse</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Drawing.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>formName</ID>
+          <Type>Form</Type>
+          <ToolTip>Refers to the form this code is added to.</ToolTip>
+          <Default>Me</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[Private Sub $formName$_MouseDown(ByVal sender As Object, _
+ByVal e As System.Windows.Forms.MouseEventArgs) _
+Handles $formName$.MouseDown
+    Dim screenPoint As Point
+    screenPoint = $formName$.PointToScreen(New Point(e.X, e.Y))
+End Sub]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

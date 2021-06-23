@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="$fileinputnamecompose$\" Type="ElementManifest" />
+    <ProjectItemFile Source="Home\Home.css" Target="$fileinputnamecompose$\Home\" Type="ElementFile" />
+    <ProjectItemFile Source="Home\Home.html" Target="$fileinputnamecompose$\Home\" Type="ElementFile" />
+    <ProjectItemFile Source="Home\Home.js" Target="$fileinputnamecompose$\Home\" Type="ElementFile" />
+    <ProjectItemFile Source="App.css" Target="$fileinputnamecompose$\" Type="ElementFile" />
+    <ProjectItemFile Source="App.js" Target="$fileinputnamecompose$\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

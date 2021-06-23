@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VsixLanguagePack Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema-lp/2010">
+  <LocalizedName>Menedżer pakietów NuGet</LocalizedName>
+  <LocalizedDescription>Kolekcja narzędzi do automatyzacji procesów instalowania, aktualizowania, konfigurowania i usuwania pakietów w programie VS Project.</LocalizedDescription>
+  <License>EULA.rtf</License>
+  <MoreInfoUrl>http://nuget.codeplex.com/documentation</MoreInfoUrl>
+</VsixLanguagePack>

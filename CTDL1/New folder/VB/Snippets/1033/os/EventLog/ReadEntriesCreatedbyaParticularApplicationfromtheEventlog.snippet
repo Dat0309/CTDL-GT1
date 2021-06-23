@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Read Entries Created by a Particular Application from the Event Log</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Populates a list with all event log entries for an application.</Description>
+      <Shortcut>evReadApp</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Diagnostics</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>LogName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the log name. This reads the Application log on the local computer.</ToolTip>
+          <Default>"Application"</Default>
+        </Literal>
+        <Literal>
+          <ID>SourceName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the source name. The source name is associated with an particular application when the events are written.</ToolTip>
+          <Default>"SourceName"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim log As New EventLog($LogName$)
+Dim entries As New List(Of EventLogEntry)
+For Each entry As EventLogEntry In log.Entries
+    If entry.Source = $SourceName$ Then
+        entries.Add(entry)
+    End If
+Next]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

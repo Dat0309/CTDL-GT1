@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+	<TemplateData>
+		<Name Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="1079" />
+		<Description Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="1080" />
+		<Icon Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="4054" />
+		<TemplateID>Microsoft.CS.WinRT.WindowsPhoneHubApplication.Phone</TemplateID>
+		<TemplateGroupID>WinRT-Managed</TemplateGroupID>
+		<ProjectType>CSharp</ProjectType>
+		<DefaultName>App</DefaultName>
+		<TargetPlatformName>Windows</TargetPlatformName>
+		<RequiredPlatformVersion>6.3</RequiredPlatformVersion>
+		<CreateInPlace>true</CreateInPlace>
+		<PreviewImage>HubApp.png</PreviewImage>
+		<CreateNewFolder>false</CreateNewFolder>
+		<ProvideDefaultName>true</ProvideDefaultName>
+		<SortOrder>14</SortOrder>
+		<PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+		<NumberOfParentCategoriesToRollUp>0</NumberOfParentCategoriesToRollUp>
+	</TemplateData>
+ 	<TemplateContent>
+ 		<Project File="Application.csproj" ReplaceParameters="true">
+				<Folder Name="Assets">
+					<ProjectItem ReplaceParameters="false" TargetFileName="Logo.scale-240.png">Phone.Logo.png</ProjectItem>
+					<ProjectItem ReplaceParameters="false" TargetFileName="SmallLogo.scale-240.png">Phone.SmallLogo.png</ProjectItem>
+					<ProjectItem ReplaceParameters="false" TargetFileName="SplashScreen.scale-240.png">Phone.SplashScreen.png</ProjectItem>
+					<ProjectItem ReplaceParameters="false" TargetFileName="Square71x71Logo.scale-240.png">Phone.Square71x71Logo.png</ProjectItem>
+					<ProjectItem ReplaceParameters="false" TargetFileName="StoreLogo.scale-240.png">Phone.StoreLogo.png</ProjectItem>
+					<ProjectItem ReplaceParameters="false" TargetFileName="WideLogo.scale-240.png">Phone.WideLogo.png</ProjectItem>
+					<ProjectItem ReplaceParameters="false" TargetFileName="DarkGray.png">DarkGray.png</ProjectItem>
+					<ProjectItem ReplaceParameters="false" TargetFileName="LightGray.png">LightGray.png</ProjectItem>
+					<ProjectItem ReplaceParameters="false" TargetFileName="MediumGray.png">MediumGray.png</ProjectItem>
+					<ProjectItem ReplaceParameters="false" TargetFileName="HubBackground.theme-dark.png">HubBackground.theme-dark.png</ProjectItem>
+					<ProjectItem ReplaceParameters="false" TargetFileName="HubBackground.theme-light.png">HubBackground.theme-light.png</ProjectItem>
+				</Folder>
+				<Folder Name="Common">
+					<ProjectItem ReplaceParameters="true" TargetFileName="NavigationHelper.cs">NavigationHelper.cs</ProjectItem>
+					<ProjectItem ReplaceParameters="true" TargetFileName="ObservableDictionary.cs">ObservableDictionary.cs</ProjectItem>
+					<ProjectItem ReplaceParameters="true" TargetFileName="SuspensionManager.cs">SuspensionManager.cs</ProjectItem>
+					<ProjectItem ReplaceParameters="true" TargetFileName="RelayCommand.cs">RelayCommand.cs</ProjectItem>
+					<ProjectItem ReplaceParameters="true" TargetFileName="ReadMe.txt">ReadMe.txt</ProjectItem>
+				</Folder>
+				<Folder Name="DataModel">
+					<ProjectItem ReplaceParameters="true" TargetFileName="SampleDataSource.cs">SampleDataSource.cs</ProjectItem>
+					<ProjectItem ReplaceParameters="true" TargetFileName="SampleData.json">SampleData.json</ProjectItem>
+				</Folder>
+				<Folder Name="Properties">
+					<ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">Phone.AssemblyInfo.cs</ProjectItem>
+				</Folder>
+				<Folder Name="Strings">
+					<Folder Name="Language" TargetFolderName="$currentuiculturename$">
+						<ProjectItem ReplaceParameters="true" TargetFileName="Resources.resw">Resources.resw</ProjectItem>
+					</Folder>
+				</Folder>
+				<ProjectItem ReplaceParameters="true" TargetFileName="App.xaml">App.xaml</ProjectItem>
+				<ProjectItem ReplaceParameters="true" OpenInEditor="true" BlendOpenInEditor="false" TargetFileName="App.xaml.cs">App.xaml.cs</ProjectItem>
+				<ProjectItem ReplaceParameters="true" BlendOpenInEditor="true" TargetFileName="HubPage.xaml">HubPage.xaml</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="HubPage.xaml.cs">HubPage.xaml.cs</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="ItemPage.xaml">ItemPage.xaml</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="ItemPage.xaml.cs">ItemPage.xaml.cs</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="SectionPage.xaml">SectionPage.xaml</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="SectionPage.xaml.cs">SectionPage.xaml.cs</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="Package.appxmanifest">Package-PhoneAppx.appxmanifest</ProjectItem>
+ 		</Project>
+	</TemplateContent>
+	<WizardExtension>
+		<Assembly>Microsoft.VisualStudio.WinRT.TemplateWizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+		<FullClassName>Microsoft.VisualStudio.WinRT.TemplateWizards.PhoneAppxWizard</FullClassName>	
+	</WizardExtension>
+</VSTemplate>

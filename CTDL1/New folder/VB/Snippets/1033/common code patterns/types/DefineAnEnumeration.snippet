@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Define an Enumeration</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Defines an enumeration.</Description>
+      <Shortcut>Enum</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>Value1</ID>
+          <Type>
+          </Type>
+          <ToolTip>Replace with value of named constant.</ToolTip>
+          <Default>ValueOne</Default>
+        </Literal>
+        <Literal>
+          <ID>Value2</ID>
+          <Type>
+          </Type>
+          <ToolTip>Replace with value of named constant.</ToolTip>
+          <Default>ValueTwo</Default>
+        </Literal>
+        <Literal>
+          <ID>EnumName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the enumeration name.</ToolTip>
+          <Default>MyEnum</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[Enum $EnumName$
+     $Value1$
+     $Value2$
+End Enum]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

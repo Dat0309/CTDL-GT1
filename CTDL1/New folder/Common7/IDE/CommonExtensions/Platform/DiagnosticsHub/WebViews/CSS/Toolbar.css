@@ -1,0 +1,89 @@
+﻿.toolbar-button {
+    padding: 2px;
+    background-color: inherit;
+    height: 100%;
+    -ms-grid-columns: auto auto;
+    -ms-grid-rows: 1fr;
+    display: -ms-grid;
+    float:left;
+    border:1px solid transparent;
+}
+
+    .toolbar-button:hover {
+        background-color: lightblue; /*[{diagnostics-host-toolbar-hover}]*/
+        border:1px solid black; /*[1px solid {diagnostics-host-toolbar-border}]*/
+    }
+
+.toolbar-button-disabled {
+    padding: 2px;
+    background-color: inherit;
+    height: 100%;
+    -ms-grid-columns: auto auto;
+    -ms-grid-rows: 1fr;
+    display: -ms-grid;
+    float:left;
+    border:1px solid transparent;
+}
+
+.button-text {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    background-color: transparent;
+    color:inherit;
+    height:100%;
+    padding-left:3px;
+}
+
+.button-text-disabled {
+    color: #c0c0c0; /*[{diagnostics-host-toolbar-text-disabled}]*/
+}
+
+.button-image {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    width: 1.250em;
+    height: 100%;
+    background-position-x: left;
+    background-position-y: bottom;
+    background-size: 1.000em 1.000em;
+    padding-right: 5px;
+    background-color: inherit;
+    background-position-y:center;
+}
+
+.zoomin-button-image {
+    background: url("../images/i_chartzoom_in.png") no-repeat; /*[url({vs-image-toolbar-chartzoom-in}) no-repeat]*/
+}
+
+.zoomin-button-image-disabled {
+    background: url("../images/i_chartzoom_in_disabled.png") no-repeat; /*[url({vs-image-toolbar-chartzoom-in-disabled}) no-repeat]*/
+}
+
+.zoomout-button-image {
+    background: url("../images/i_chartzoom_reset.png") no-repeat; /*[url({vs-image-toolbar-chartzoom-reset}) no-repeat]*/
+}
+
+.zoomout-button-image-disabled {
+    background: url("../images/i_chartzoom_reset_disabled.png") no-repeat; /*[url({vs-image-toolbar-chartzoom-reset-disabled}) no-repeat]*/
+}
+
+.clearselection-button-image {
+    background: url("../images/i_chartselection_clear.png") no-repeat; /*[url({vs-image-toolbar-chartselection-clear}) no-repeat]*/
+}
+
+.clearselection-button-image-disabled {
+    background: url("../images/i_chartselection_clear_disabled.png") no-repeat; /*[url({vs-image-toolbar-chartselection-clear-disabled}) no-repeat]*/
+}
+
+.toolbar-container {
+    width: 100%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: black; /*[{plugin-color}]*/
+    font-size: 9pt; /*[{plugin-font-size}]*/
+    font-family: "Segoe UI", Arial, sans-serif; /*[{plugin-font-family} , Arial, sans-serif]*/
+    background-color: grey; /*[{vs-command-bar-gradient-begin-color}]*/
+    float:left;
+}

@@ -1,0 +1,7 @@
+<CompatibilityList>
+    <Extension>
+        <ExtensionId>5fb7364d-2e8c-44a4-95eb-2a382e30fec8</ExtensionId>
+        <ExtensionVersion>[1.0,2.4]</ExtensionVersion>
+        <VisualStudioVersion>[12.0.30723,13.0]</VisualStudioVersion>
+    </Extension>
+</CompatibilityList>

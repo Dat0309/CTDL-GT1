@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Group results from 2 sources and retrieve the Count</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Creates a query that groups results from 2 different sources, and returns a count of items in each group.</Description>
+      <Shortcut>queGroJo</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>queryResult</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the query.</ToolTip>
+          <Default>query</Default>
+        </Literal>
+        <Literal>
+          <ID>item1</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the  first variable that represents an item from your data source.</ToolTip>
+          <Default>charCount</Default>
+        </Literal>
+        <Literal>
+          <ID>item2</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the  second variable that represents an item from your data source.</ToolTip>
+          <Default>fruit</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSource2</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the identifier for your first data source.</ToolTip>
+         <Default>New String() {"apple", "orange", "pear", "banana", "strawberry", "blueberry"}</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSource1</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the identifier for your second data source.</ToolTip>
+          <Default>CapFruits</Default>
+        </Literal>       
+        <Literal>
+          <ID>dataType1</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the type of your first data source</ToolTip>
+          <Default>Integer()</Default>
+        </Literal>
+        <Literal>
+          <ID>groupfield</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the grouping for your sources.</ToolTip>
+          <Default>Length</Default>
+        </Literal>
+        <Literal>
+          <ID>aggregate</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the aggregate for the group.</ToolTip>
+          <Default>Count()</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $dataSource1$() As $dataType1$ = {"4", "5", "6"}
+
+                 Dim $queryResult$ = From $item1$ In $dataSource1$ _
+                             Group Join $item2$ In $dataSource2$ _
+                                   On $item2$.$groupfield$ Equals $item1$ _
+                                   Into Group, $aggregate$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

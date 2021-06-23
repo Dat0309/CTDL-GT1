@@ -1,0 +1,10 @@
+﻿<StackPanel xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <!--Element to create for such basic types as string double, int, etc. -->
+  <TextBlock x:Name="Field_System.String" Text="{Binding}" Margin="1" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+  <!--Element to create for boolean -->
+  <CheckBox x:Name="Field_System.Boolean" IsChecked="{Binding}" Margin="1" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+  <!--Element to create for ImageSource -->
+  <Image x:Name="Field_System.Windows.Media.ImageSource" Source="{Binding}" Margin="1" Height="64" Width="64" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+</StackPanel>

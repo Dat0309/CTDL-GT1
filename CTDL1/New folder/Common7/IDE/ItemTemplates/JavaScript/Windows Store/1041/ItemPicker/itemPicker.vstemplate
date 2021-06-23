@@ -1,0 +1,42 @@
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <Name>ファイル オープン ピッカー コントラクト</Name>
+        <Icon>itemPicker.ico</Icon>
+        <Description>他のアプリケーションへのファイルの提供を可能にするアプリケーション コントラクトです。</Description>
+        <ProjectType>JavaScript</ProjectType>
+        <TemplateID>Microsoft.JavaScript.ItemPicker</TemplateID>
+        <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+        <DefaultName>fileOpenPicker.html</DefaultName>
+        <PreviewImage>ItemPicker.png</PreviewImage>
+        <TargetPlatformName>Windows</TargetPlatformName> 
+        <RequiredPlatformVersion>6.3.0</RequiredPlatformVersion>
+        <AppliesTo>JavaScriptWJProject + !SharedAssetsProject</AppliesTo>
+    </TemplateData>
+    <TemplateContent>
+        <ProjectItem TargetFileName="$fileinputname$.js" ReplaceParameters="true" OpenInEditor="true" BlendOpenInEditor="false">itemPicker.js</ProjectItem>
+        <ProjectItem TargetFileName="$fileinputname$.html" ReplaceParameters="true" BlendOpenInEditor="true">itemPicker.html</ProjectItem>
+        <ProjectItem TargetFileName="$fileinputname$.css" ReplaceParameters="true">itemPicker.css</ProjectItem>
+    </TemplateContent>
+    <WizardExtension>
+        <Assembly>Microsoft.VisualStudio.WinRT.TemplateWizards, Version=12.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+        <FullClassName>Microsoft.VisualStudio.WinRT.TemplateWizards.ActivationContract.Wizard</FullClassName>
+    </WizardExtension>
+    <WizardData>
+        <Activation>
+            <ManifestData>
+                <Extension Category="windows.fileOpenPicker" StartPage="$wizardrelativeitemname$.html">
+                    <FileOpenPicker>
+                      <SupportedFileTypes SupportsAnyFileType="true"/>
+                    </FileOpenPicker>
+                </Extension>
+            </ManifestData>
+            <ManifestComment>
+                //
+                // TODO:  マニフェストを編集してファイル オープン ピッカーとして使用できるようにします。パッケージ
+                // マニフェストを自動的に更新できませんでした。パッケージ マニフェスト ファイルを開き、
+                // 'ファイル オープン ピッカー' のアクティベーションのサポートが有効になっていることを確認してください。
+
+            </ManifestComment>
+        </Activation>
+    </WizardData>
+</VSTemplate>

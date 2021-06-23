@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>For Each over the results of a query</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>A For...Each demonstrating how to iterate over the results of the query.</Description>
+      <Shortcut>qLoop</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>queryResult</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the query.</ToolTip>
+          <Default>query</Default>
+        </Literal>
+        <Literal>
+          <ID>item</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the the identifer for the range variable that represents an item from your data source.</ToolTip>
+          <Default>score</Default>
+        </Literal>
+        <Literal>
+          <ID>iterationVar</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the identifer for the iteration variable used to iterate over the query.</ToolTip>
+          <Default>higherScore</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSource</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the identifier for your data source.</ToolTip>
+          <Default>scores</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSourceType</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the type of your data source.</ToolTip>
+          <Default>Integer</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $dataSource$() As $dataSourceType$ = {50, 42, 76, 93, 65, 51, 79, 97, _
+                                   44, 65, 70, 83, 81, 52}
+
+        Dim $queryResult$ = From $item$ In $dataSource$ _
+                     Where $item$ > (From avgScore In $dataSource$).Average _
+                     Order By $item$ _
+                     Select $item$
+
+        For Each $iterationVar$ In $queryResult$
+            Console.WriteLine("The following score was above average: " & $iterationVar$)
+        Next]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

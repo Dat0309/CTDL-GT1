@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Add a Check Mark to a ToolStripMenuItem</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Adds a check mark to a ToolStripMenuItem. </Description>
+      <Shortcut>menuAddCheck</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>menuItemName</ID>
+          <Type>ToolStripMenuItem</Type>
+          <ToolTip>Replace with a dropdown menu item on your form.</ToolTip>
+          <Default>ToolStripMenuItem1</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[$menuItemName$.Checked = True]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

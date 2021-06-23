@@ -1,0 +1,29 @@
+﻿<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name _locID="InstallHybridAppTools_Name">Install Tools for Apache Cordova</Name>
+    <Description _locID="InstallHybridAppTools_Desc">Install the latest preview version of tools to develop apps targeting Android, iOS, Windows, and Windows Phone using Apache Cordova™.</Description>
+    <Icon>BlankCordovaJS.ico</Icon>
+    <ProjectType>JavaScript</ProjectType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <CreateNewFolder>false</CreateNewFolder>
+    <TemplateID>Microsoft.JavaScript.InstallMDHA</TemplateID>
+    <DefaultName>InstallHybridAppTools</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <SortOrder>100</SortOrder>
+    <PromptForSaveOnCreation>false</PromptForSaveOnCreation>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Hidden>false</Hidden>
+  </TemplateData>
+
+  <TemplateContent>
+    <CustomParameters>
+      <CustomParameter Name="htmlRelPath" Value="ProjectTemplates\JavaScript\Multi-Device Hybrid App\$LCID$\InstallLatestMultiDeviceHybridAppTools\Install Multi-Device Hybrid App tools.html" />
+    </CustomParameters>
+  </TemplateContent>
+
+  <WizardExtension> 
+    <Assembly>Microsoft.VisualStudio.VsipSupport.PlaceholderProject, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly> 
+    <FullClassName>Microsoft.VisualStudio.VsipSupport.WizardExtension</FullClassName> 
+  </WizardExtension>
+</VSTemplate>

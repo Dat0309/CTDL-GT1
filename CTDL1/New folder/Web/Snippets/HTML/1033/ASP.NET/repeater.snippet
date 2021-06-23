@@ -1,0 +1,27 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>repeater</Title>
+    <Author>Microsoft Corporation</Author>
+    <Shortcut>repeater</Shortcut>
+    <AlternativeShortcuts>
+      <Shortcut>datalist</Shortcut>
+      <Shortcut>formview</Shortcut>
+      <Shortcut Value="repeater">asp:repeater</Shortcut>
+      <Shortcut Value="datalist">asp:datalist</Shortcut>
+      <Shortcut Value="formview">asp:formview</Shortcut>
+    </AlternativeShortcuts>
+    <Description>Markup snippet for a data-bound control</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+    <FileExtensions>
+      aspx;master;ascx
+    </FileExtensions>
+  </Header>
+  <Snippet>
+    <Code Language="html"><![CDATA[<asp:$shortcut$ runat="server">
+    <itemtemplate>$selected$$end$</itemtemplate>
+</asp:$shortcut$>]]></Code>
+  </Snippet>
+</CodeSnippet>

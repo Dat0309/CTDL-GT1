@@ -1,0 +1,57 @@
+﻿<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="369" />
+    <Description Package ="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID ="370" />
+    <Icon Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="239" />
+    <TemplateID>SharePoint14SilverlightWebPartProject_CS</TemplateID>
+    <ProjectType>CSharp</ProjectType>
+    <CreateNewFolder>true</CreateNewFolder>
+    <CreateInPlace>true</CreateInPlace>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>SilverlightWebPartProject</DefaultName>
+    <SortOrder>9920</SortOrder>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="SharePointSilverlightWebPartProject.csproj" ReplaceParameters="true">
+      <Folder Name="SilverlightWebPart1" TargetFolderName="SilverlightWebPart1">
+        <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="SharePointProjectItem.spdata">SilverlightWebPart1.spdata</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="true">SilverlightWebPart1.webpart</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="false">Elements.xml</ProjectItem>
+      </Folder>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Features" TargetFolderName="Features">
+        <Folder Name="Feature1" TargetFolderName="Feature1">
+          <ProjectItem ReplaceParameters="true" TargetFileName="Feature1.feature">Feature.feature</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Feature1.Template.xml">feature.xml</ProjectItem>
+        </Folder>
+      </Folder>
+      <Folder Name="Package" TargetFolderName="Package">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Package.package">Package.package</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Package.Template.xml">manifest.xml</ProjectItem>
+      </Folder>
+    </Project>
+    <CustomParameters>
+      <CustomParameter Name="$rootnamespace$" Value="$safeprojectname$" />
+      <CustomParameter Name="$fileinputname$" Value="SilverlightWebPart1" />
+      <CustomParameter Name="$webparturl$" Value="$projectname$_SilverlightWebPart1.webpart" />
+      <CustomParameter Name="$xap_url$" Value="SiteAssets/$projectname$/SilverlightWebPart1/$SilverlightXapFile$" />
+      <CustomParameter Name="$webpart_xap_url$" Value="$SiteCollectionUrl$SiteAssets/$projectname$/SilverlightWebPart1/$SilverlightXapFile$" />
+      <CustomParameter Name="$import_error_message$" Value="$Resources:core,ImportErrorMessage;" />
+      <CustomParameter Name="$webpart_title$" Value="$projectname$ - SilverlightWebPart1" />
+      <CustomParameter Name="$ProjectItemName$" Value="SilverlightWebPart1"/>
+      <CustomParameter Name="$subnamespace$" Value="SilverlightWebPart1"/>
+      <CustomParameter Name="$loc_webpart_description$" _locID="$loc_webpart_description$" _locAttrData="Value" Value="My Silverlight Web Part" />
+      <CustomParameter Name="$loc_feature_description$" _locID="$loc_feature_description$" _locAttrData="Value" Value="My Silverlight Web Part Feature" />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.SilverlightWebPartProjectWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

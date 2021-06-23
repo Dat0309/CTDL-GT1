@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="Microsoft.Windows.Phone.Emulator.8.1" Version="1.0.0.0" Language="en-us" Publisher="Microsoft"/>
+    <DisplayName>Windows Phone 8.1 Emulator Image</DisplayName>
+    <Description>The emulator image for Windows Phone 8.1 provides a virtualized environment in which you can debug and test Windows Phone apps without a physical device.</Description>
+  </Metadata>
+  <Installation InstalledByMsi="true">
+    <InstallationTarget Version="12.0" Id="Microsoft.VisualStudio.Pro" ProductUpdate="true"/>
+    <InstallationTarget Version="12.0" Id="Microsoft.VisualStudio.VSWinExpress" ProductUpdate="true"/>
+  </Installation>
+  <Dependencies/>
+  <Assets/>
+</PackageManifest>

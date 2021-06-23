@@ -1,0 +1,13 @@
+﻿<Grid xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Grid.ColumnDefinitions>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition/>
+  </Grid.ColumnDefinitions>
+  <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Margin="0,9.5,0,0">
+    <Image x:Name="Replace_Windows.UI.Xaml.Media.ImageSource" Source="{Binding}" Height="79" Width="79"/>
+  </Border>
+  <StackPanel Grid.Column="1" Margin="14.5,0,0,0">
+    <TextBlock x:Name="Replace_Title_System.String" Text="{Binding}" Style="{ThemeResource ListViewItemTextBlockStyle}"/>
+    <TextBlock x:Name="Replace_Subtitle_System.String" Text="{Binding}" Style="{ThemeResource ListViewItemSubheaderTextBlockStyle}"/>
+  </StackPanel>
+</Grid>

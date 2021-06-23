@@ -1,0 +1,53 @@
+﻿.$safeitemname$ {
+    /* コマンドと項目の行を含むグリッドを定義 */
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 75px 1fr;
+    display: -ms-grid;
+    height: 100%;
+    width: 100%;
+}
+
+    .$safeitemname$ .commandbar {
+        height: 100%;
+        list-style-type: none;
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-top: 13px;
+        width: 100%;
+    }
+
+        .$safeitemname$ .commandbar li {
+            display: inline;
+            font-family: "Segoe UI Light";
+            margin-left: 20px;
+            margin-right: 20px;
+            opacity: 0.6;
+        }
+
+            .$safeitemname$ .commandbar li:hover {
+                opacity: 1.0;
+            }
+
+    .$safeitemname$ .pickerlist {
+        -ms-grid-row: 2;
+        height: 100%;
+        width: 100%;
+    }
+
+        /* このセレクターは、ui-dark/light.css が
+           .win-surface に変更を上書きしないようにするため使用されます。*/
+        .$safeitemname$ .pickerlist .win-horizontal.win-viewport .win-surface {
+            margin-bottom: 20px;
+            margin-left: 115px;
+            margin-right: 115px;
+        }
+
+        .$safeitemname$ .pickerlist .item {
+            height: 130px;
+            width: 190px;
+        }
+
+            .$safeitemname$ .pickerlist .item .item-image {
+                height: 130px;
+                width: 190px;
+            }

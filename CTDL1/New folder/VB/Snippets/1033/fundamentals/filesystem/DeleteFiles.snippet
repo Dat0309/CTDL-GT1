@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Delete a File</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Deletes a file after confirming deletion with the user.</Description>
+      <Shortcut>filDelFile</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>Filename</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the file name.</ToolTip>
+          <Default>"C:\Test.txt"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[My.Computer.FileSystem.DeleteFile($Filename$, FileIO.UIOption.AllDialogs, FileIO.RecycleOption.SendToRecycleBin)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

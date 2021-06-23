@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="F7EA5877-0BAB-4F79-8517-55B6380178F9" Version="1.0" Language="en-us" Publisher="Microsoft Corporation"/>
+    <DisplayName>Windows Azure SDK for .NET Update Notifications</DisplayName>
+    <Description></Description>
+  </Metadata>
+  <Installation InstalledByMsi="true">
+    <!-- Pro = Pro, Premium, and Ultimate-->
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="12.0" ProductUpdate="true" />
+    <InstallationTarget Id="Microsoft.VisualStudio.VWDExpress" Version="12.0" ProductUpdate="true" />
+  </Installation>
+  <Dependencies/>
+  <Assets/>
+</PackageManifest>

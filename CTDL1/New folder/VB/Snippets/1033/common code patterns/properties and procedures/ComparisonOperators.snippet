@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Define Comparison Operators (&gt; and &lt;)</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Defines the comparison operators (&gt; and &lt;).</Description>
+      <Shortcut>OpComp</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>TypeName</ID>
+          <Type />
+          <ToolTip>Replace with your class name.</ToolTip>
+          <Default>ThisClass</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[Public Shared Operator >(ByVal left As $TypeName$, _
+        ByVal right As $TypeName$) As Boolean
+
+    End Operator
+
+    Public Shared Operator <(ByVal left As $TypeName$, _
+        ByVal right As $TypeName$) As Boolean
+
+    End Operator]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

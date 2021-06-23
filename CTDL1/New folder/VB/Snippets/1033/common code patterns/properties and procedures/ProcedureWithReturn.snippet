@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Define a Function</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Uses the Function keyword to define a procedure that returns a value.</Description>
+      <Keywords>
+      </Keywords>
+      <Shortcut>Function</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>FuncName</ID>
+          <Type></Type>
+          <ToolTip>Replace with the name of the function.</ToolTip>
+          <Default>MyFunc</Default>
+        </Literal>
+        <Literal>
+          <ID>ReturnType</ID>
+          <Type></Type>
+          <ToolTip>Replace with the return type of the function.</ToolTip>
+          <Default>Integer</Default>
+        </Literal>
+        <Literal>
+          <ID>ReturnValue</ID>
+          <Type></Type>
+          <ToolTip>Replace with the return value of the function.</ToolTip>
+          <Default>0</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[Function $FuncName$() As $ReturnType$
+
+Return $ReturnValue$
+End Function	]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

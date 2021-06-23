@@ -1,0 +1,12 @@
+﻿{
+  "codeGenerators": {
+    "CSharp": {
+      "type": "CSharpCodeGenerator, AutoRest.CodeGenerator.CSharp"
+    }
+  },
+  "modelers": {
+    "Swagger": {
+      "type": "GenericSwaggerModeler, AutoRest.Modeler.Swagger"
+    }
+  }
+}

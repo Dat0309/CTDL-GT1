@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format ="1.0.0">
+    <Header>
+      <Title _locID="csPropTitle1">Add DependencyProperty - Property</Title>
+      <Author>Microsoft Corporation</Author>
+      <Shortcut>wdp</Shortcut>
+      <Description _locID="csPropDesc1">Code snippet for creating a dependency property in a Windows Workflow Activity</Description>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip _locID="csPropTip1">Replace with the property type.</ToolTip>
+          <Default>string</Default>
+        </Literal>
+        <Literal>
+          <ID>property</ID>
+          <ToolTip _locID="csPropTip2">Replace with the property name.</ToolTip>
+          <Default>MyProperty</Default>
+        </Literal>
+        <Literal Editable="false">
+          <ID>classname</ID>
+          <Function>ClassName()</Function>
+          <Default>ClassNamePlaceholder</Default>
+        </Literal>
+        <Literal Editable="false">
+          <ID>DependencyPropertyType</ID>
+          <Function>SimpleTypeName(global::System.Workflow.ComponentModel.DependencyProperty)</Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>DescriptionAttributeType</ID>
+          <Function>SimpleTypeName(global::System.ComponentModel.DescriptionAttribute)</Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>CategoryAttributeType</ID>
+          <Function>SimpleTypeName(global::System.ComponentModel.CategoryAttribute)</Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>BrowsableAttributeType</ID>
+          <Function>SimpleTypeName(global::System.ComponentModel.BrowsableAttribute)</Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>DesignerSerializationVisibilityAttributeType</ID>
+          <Function>SimpleTypeName(global::System.ComponentModel.DesignerSerializationVisibilityAttribute)</Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>DesignerSerializationVisibilityType</ID>
+          <Function>SimpleTypeName(global::System.ComponentModel.DesignerSerializationVisibility)</Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[public static $DependencyPropertyType$ $property$Property = $DependencyPropertyType$.Register("$property$", typeof($type$), typeof($classname$));
+  
+  [$DescriptionAttributeType$("$property$")]
+  [$CategoryAttributeType$("$property$ Category")]
+  [$BrowsableAttributeType$(true)]
+  [$DesignerSerializationVisibilityAttributeType$($DesignerSerializationVisibilityType$.Visible)]
+  public $type$ $property$
+  {
+    get 
+    { 
+      return (($type$)(base.GetValue($classname$.$property$Property))); 
+    }
+    set 
+    { 
+      base.SetValue($classname$.$property$Property, value); 
+    }
+  }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

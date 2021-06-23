@@ -1,0 +1,79 @@
+﻿<folderTemplates>
+  <!--C# WAP-->
+  <project guid="{349c5853-65df-11da-9384-00065b846f21}">
+    <folder>
+      <template id="5d27f54b-e369-424d-b74f-951f75b4b82e"/>
+    </folder>
+
+    <folder name="Content">
+      <template id="5d27f54b-e369-424d-b74f-951f75b4b82e"/>
+    </folder>
+    <folder name="JavaScript">
+      <template id="5d27f54b-e369-424d-b74f-951f75b4b82e"/>
+    </folder>
+    <folder name="JS">
+      <template id="5d27f54b-e369-424d-b74f-951f75b4b82e"/>
+    </folder>
+    <folder name="Scripts">
+      <template id="5d27f54b-e369-424d-b74f-951f75b4b82e"/>
+    </folder>
+  </project>
+
+  <!--VB WAP-->
+  <project guid="{349c5854-65df-11da-9384-00065b846f21}">
+    <folder>
+      <template id="3d7694c0-f13e-4ab4-bbe9-c12be57c9ae7"/>
+    </folder>
+    <folder name="Content">
+      <template id="3d7694c0-f13e-4ab4-bbe9-c12be57c9ae7"/>
+    </folder>
+    <folder name="JavaScript">
+      <template id="3d7694c0-f13e-4ab4-bbe9-c12be57c9ae7"/>
+    </folder>
+    <folder name="JS">
+      <template id="3d7694c0-f13e-4ab4-bbe9-c12be57c9ae7"/>
+    </folder>
+    <folder name="Scripts">
+      <template id="3d7694c0-f13e-4ab4-bbe9-c12be57c9ae7"/>
+    </folder>
+  </project>
+
+  <!--C# Website-->
+  <project guid="{e24c65dc-7377-472b-9aba-bc803b73c61a}" language="Visual C#">
+    <folder>
+      <template id="5d27f54b-e369-424d-b74f-951f75b4b82e"/>
+    </folder>
+    <folder name="Content">
+      <template id="5d27f54b-e369-424d-b74f-951f75b4b82e"/>
+    </folder>
+    <folder name="JavaScript">
+      <template id="5d27f54b-e369-424d-b74f-951f75b4b82e"/>
+    </folder>
+    <folder name="JS">
+      <template id="5d27f54b-e369-424d-b74f-951f75b4b82e"/>
+    </folder>
+    <folder name="Scripts">
+      <template id="5d27f54b-e369-424d-b74f-951f75b4b82e"/>
+    </folder>
+  </project>
+
+  <!--VB Website-->
+  <project guid="{e24c65dc-7377-472b-9aba-bc803b73c61a}" language="Visual Basic">
+    <folder>
+      <template id="3d7694c0-f13e-4ab4-bbe9-c12be57c9ae7"/>
+    </folder>
+    <folder name="Content">
+      <template id="3d7694c0-f13e-4ab4-bbe9-c12be57c9ae7"/>
+    </folder>
+    <folder name="JavaScript">
+      <template id="3d7694c0-f13e-4ab4-bbe9-c12be57c9ae7"/>
+    </folder>
+    <folder name="JS">
+      <template id="3d7694c0-f13e-4ab4-bbe9-c12be57c9ae7"/>
+    </folder>
+    <folder name="Scripts">
+      <template id="3d7694c0-f13e-4ab4-bbe9-c12be57c9ae7"/>
+    </folder>
+  </project>
+
+</folderTemplates>

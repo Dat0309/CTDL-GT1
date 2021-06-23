@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="$rootnamespace$.$subnamespace$.$safeitemrootname$, $SharePoint.Project.AssemblyFullName$" />
+      <importErrorMessage>$import_error_message$</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">$webpart_title$</property>
+        <property name="Description" type="string">$loc_webpart_description$</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

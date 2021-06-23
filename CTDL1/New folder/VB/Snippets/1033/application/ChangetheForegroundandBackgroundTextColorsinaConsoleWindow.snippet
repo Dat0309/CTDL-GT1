@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Change the Foreground and Background Colors in a Console Window</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Changes the background and text color of the console window.</Description>
+      <Shortcut>appChanCol</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>background</ID>
+          <Type>ConsoleColor</Type>
+          <ToolTip>Replace with the new background color.</ToolTip>
+          <Default>ConsoleColor.DarkRed</Default>
+        </Literal>
+        <Literal>
+          <ID>foreground</ID>
+          <Type>ConsoleColor</Type>
+          <ToolTip>Replace with the new foreground color.</ToolTip>
+          <Default>ConsoleColor.Gray</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Console.BackgroundColor = $background$
+Console.ForegroundColor = $foreground$
+Console.Clear()
+
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

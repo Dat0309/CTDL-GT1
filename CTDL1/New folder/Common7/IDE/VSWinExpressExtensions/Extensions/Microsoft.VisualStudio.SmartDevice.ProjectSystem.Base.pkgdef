@@ -1,0 +1,179 @@
+[$RootKey$\Menus]
+"{7D4626A3-18C3-43A4-A66C-169D1D609803}"=", Slm.ctmenu, 1"
+
+[$RootKey$\Packages\{7D4626A3-18C3-43A4-A66C-169D1D609803}]
+@="Silverlight Mobile VS Project System"
+"InprocServer32"="%SystemRoot%\\system32\\mscoree.dll"
+"Class"="Microsoft.VisualStudio.SmartDevice.ProjectSystem.SilverlightMobileVSPackage"
+"Assembly"="Microsoft.VisualStudio.SmartDevice.ProjectSystem.Base, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+
+[$RootKey$\Packages\{7D4626A3-18C3-43A4-A66C-169D1D609803}\AddNewItemFilters\ExcludedTemplates]
+"AboutBox.vstemplate"=dword:00000000
+"Activity.vstemplate"=dword:00000000
+"ADONETArtifactGenerator_T4CodeGenTemplateCS.vstemplate"=dword:00000000
+"ADONETArtifactGenerator_T4CodeGenTemplateVB.vstemplate"=dword:00000000
+"ADONETArtifactGenerator_T4SelfTrackingCodeGenTemplateCS.vstemplate"=dword:00000000
+"ADONETArtifactGenerator_T4SelfTrackingCodeGenTemplateVB.vstemplate"=dword:00000000
+"AppConfiguration.vstemplate"=dword:00000000
+"App.vstemplate"=dword:00000000
+"appManifest.vstemplate"=dword:00000000
+"AspNetHandler.vstemplate"=dword:00000000
+"AspNetModule.vstemplate"=dword:00000000
+"AuthenticationDomainService.vstemplate"=dword:00000000
+"Bitmap.vstemplate"=dword:00000000
+"BusinessLogic.vstemplate"=dword:00000000
+"ComClass.vstemplate"=dword:00000000
+"CrystalReport.vstemplate"=dword:00000000
+"Cursor.vstemplate"=dword:00000000
+"CustomControl.vstemplate"=dword:00000000
+"Component.vstemplate"=dword:00000000
+"DatabaseUnitTest.vstemplate"=dword:00000000
+"dataset.vstemplate"=dword:00000000
+"Dialog.vstemplate"=dword:00000000
+"DynamicDataField.vstemplate"=dword:00000000
+"EmptyDatabase.vstemplate"=dword:00000000
+"EmptyDatabase2.vstemplate"=dword:00000000
+"Explorer.vstemplate"=dword:00000000
+"Form.vstemplate"=dword:00000000
+"htmlpage.vstemplate"=dword:00000000
+"Icon.vstemplate"=dword:00000000
+"installer.vstemplate"=dword:00000000
+"LinqToSQLObjects_CS.vstemplate"=dword:00000000
+"LinqToSQLObjects_VB.vstemplate"=dword:00000000
+"LocalDataCache.vstemplate"=dword:00000000
+"LoginForm.vstemplate"=dword:00000000
+"mdiparent.vstemplate"=dword:00000000
+"ModelObjectItemCS.vstemplate"=dword:00000000
+"ModelObjectItemVB.vstemplate"=dword:00000000
+"MTSTransactionClass.vstemplate"=dword:00000000
+"PreTextTemplate.CSharp.vstemplate"=dword:00000000
+"PreTextTemplate.VisualBasic.vstemplate"=dword:00000000
+"Report.vstemplate"=dword:00000000
+"Settings.vstemplate"=dword:00000000
+"SilverlightClass.vstemplate"=dword:00000000
+"splashscreen.vstemplate"=dword:00000000
+"TextTemplate.CSharp.vstemplate"=dword:00000000
+"TextTemplate.VisualBasic.vstemplate"=dword:00000000
+"UserControl.vstemplate"=dword:00000000
+"UserService.vstemplate"=dword:00000000
+"VBScript.vstemplate"=dword:00000000
+"Visualizer.vstemplate"=dword:00000000
+"WcfService.vstemplate"=dword:00000000
+"WCFWorkflowService.vstemplate"=dword:00000000
+"WebControl.vstemplate"=dword:00000000
+"WebCustomControl.vstemplate"=dword:00000000
+"windowsform.vstemplate"=dword:00000000
+"windowsservice.vstemplate"=dword:00000000
+"WinScript.vstemplate"=dword:00000000
+"WorkflowWebConfig.vstemplate"=dword:00000000
+"WorkflowWebConfig.vstemplate"=dword:00000000
+"WPFCustomControl.vstemplate"=dword:00000000
+"WPFFlowDocument.vstemplate"=dword:00000000
+"WPFPage.vstemplate"=dword:00000000
+"WPFPageFunction.vstemplate"=dword:00000000
+"WPFResourceDictionary.vstemplate"=dword:00000000
+"WPFUserControl.vstemplate"=dword:00000000
+"WPFWindow.vstemplate"=dword:00000000
+"XSLTFile.vstemplate"=dword:00000000
+"SilverlightControl.vstemplate"=dword:00000000
+"SLTemplatedControl.vstemplate"=dword:00000000
+"SLChildWindow.vstemplate"=dword:00000000
+"SLResourceDictionary.vstemplate"=dword:00000000
+"SLPage.vstemplate"=dword:00000000
+"SilverlightApplication.vstemplate"=dword:00000000
+"XMLSchema.vstemplate"=dword:00000000
+"CSharp.vstemplate"=dword:00000000
+"RuleSet.vstemplate"=dword:00000000
+"ClassDiagram.vstemplate"=dword:00000000
+"JScript.vstemplate"=dword:00000000
+"StyleSheet.vstemplate"=dword:00000000
+"DbContext_CS_V5.0.vstemplate"=dword:00000000
+"DbContext_VB_V5.0.vstemplate"=dword:00000000
+
+[$RootKey$\Packages\{7D4626A3-18C3-43A4-A66C-169D1D609803}\AddNewItemFilters\ExcludedTemplates\WindowsPhone7.1]
+"SRGSGrammar.vstemplate"=dword:00000000
+"VoiceCommandDefinition.vstemplate"=dword:00000000
+"WindowsPhone80Panorama.vstemplate"=dword:00000000
+"WindowsPhone80Pivot.vstemplate"=dword:00000000
+
+[$RootKey$\Packages\{7D4626A3-18C3-43A4-A66C-169D1D609803}\AddNewItemFilters\ExcludedTemplates\WindowsPhone8.0]
+"WindowsPhone71Panorama.vstemplate"=dword:00000000
+"WindowsPhone71Pivot.vstemplate"=dword:00000000
+
+[$RootKey$\Packages\{7D4626A3-18C3-43A4-A66C-169D1D609803}\AddNewItemFilters\ExcludedTemplateDirs]
+"Data"=dword:00000000
+"Reporting"=dword:00000000
+"Web"=dword:00000000
+"Windows Forms"=dword:00000000
+"WorkFlow"=dword:00000000
+"WPF"=dword:00000000
+"Silverlight"=dword:00000000
+
+[$RootKey$\Projects\{C089C8C0-30E0-4E22-80C0-CE093F111A43}]
+@="C# Silverlight Mobile Project Templates"
+"Package"="{7D4626A3-18C3-43A4-A66C-169D1D609803}"
+"Language(VsTemplate)"="CSharp"
+"Package"="{7D4626A3-18C3-43A4-A66C-169D1D609803}"
+"TemplateGroupIDs(VsTemplate)"="Silverlight,Windows Phone"
+"ShowOnlySpecifiedTemplates(VsTemplate)"="0"
+
+[$RootKey$\Projects\{DB03555F-0C8B-43BE-9FF9-57896B3C5E56}]
+@="VB Silverlight Mobile Project Templates"
+"Language(VsTemplate)"="VisualBasic"
+"Package"="{7D4626A3-18C3-43A4-A66C-169D1D609803}"
+"TemplateGroupIDs(VsTemplate)"="Silverlight,Windows Phone"
+"ShowOnlySpecifiedTemplates(VsTemplate)"="0"
+
+[$RootKey$\MSBuild\SafeImports]
+"Microsoft.Silverlight.Mobile.Common.targets"="$ProgramFiles$\MSBuild\Microsoft\Silverlight\v2.0\Microsoft.Silverlight.Mobile.Common.targets"
+
+[$RootKey$\CLSID\{5486F8AB-1673-43F2-9A1A-8B4EDD57312A}]
+@="Default WPApplicationPropertyPageComClass Class"
+"Assembly"="Microsoft.VisualStudio.SmartDevice.ProjectSystem.Base, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"Class"="Microsoft.VisualStudio.SmartDevice.ProjectSystem.WPApplicationPropertyPageComClass"
+"InprocServer32"="%SystemRoot%\\system32\\mscoree.dll"
+"ThreadingModel"="Both"
+
+[$RootKey$\CLSID\{35EA5413-A8AC-40B7-A21F-128294CBE18E}]
+@="Default WPDebugPropertyPageComClass Class"
+"Assembly"="Microsoft.VisualStudio.SmartDevice.ProjectSystem.Base, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"Class"="Microsoft.VisualStudio.SmartDevice.ProjectSystem.WPDebugPropertyPageComClass"
+"InprocServer32"="%SystemRoot%\\system32\\mscoree.dll"
+"ThreadingModel"="Both"
+
+[$RootKey$\CLSID\{81661434-EC72-465D-9CE7-A494368E7A50}]
+@="Default DebugPropertyPageComClass Class"
+"Assembly"="Microsoft.VisualStudio.SmartDevice.ProjectSystem.Base, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"Class"="Microsoft.VisualStudio.SmartDevice.ProjectSystem.DebugPropertyPageComClass"
+"InprocServer32"="%SystemRoot%\\system32\\mscoree.dll"
+"ThreadingModel"="Both"
+
+[$RootKey$\Services\{9FD2C3D4-5C9D-416F-9A3A-29842923354D}]
+@="{7D4626A3-18C3-43A4-A66C-169D1D609803}"
+"Name"="IWindowsPhoneToolbarService"
+
+[$RootKey$\SupportedRuntimesForFxFamily\WindowsPhone\4.5]
+@=""
+
+[$RootKey$\Projects\{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}\FileExtensions\.xaml]
+"DefaultBuildAction"="Page"
+
+[$RootKey$\CLSID\{A90516D5-0C0D-4576-92B5-7BF4BE075590}]
+@="Microsoft Visual Basic File Upgrade"
+"InprocServer32"="$RootFolder$\Common7\IDE\vb7to8DL.dll"
+"ThreadingModel"="Apartment"
+
+[$RootKey$\Languages\CodeExpansions\Basic]
+"Package"="{019971D6-4685-11D2-B48A-0000F87572EB}"
+"DisplayName"="1533"
+"LangStringID"="VB"
+"IndexPath"="%InstallRoot%\Common7\IDE\VSWinExpress\Snippets\VB\%LCID%\SnippetIndex_Win8Express.xml"
+"ShowRoots"=dword:00000001
+"MultipleSnippetsPerFile"=dword:00000000
+@="{3A12D0B8-C26C-11D0-B442-00A0244A1DD2}"
+
+[$RootKey$\Languages\CodeExpansions\Basic\Paths]
+"Microsoft Visual Basic"="%InstallRoot%\Common7\IDE\VSWinExpress\Snippets\VB\%LCID%\common code patterns\;%InstallRoot%\Common7\IDE\VSWinExpress\Snippets\VB\%LCID%\data\;%InstallRoot%\Common7\IDE\VSWinExpress\Snippets\VB\%LCID%\fundamentals\;%InstallRoot%\VB\Snippets\%LCID%\WPF\;%MyDocs%\Code Snippets\Visual Basic\My Code Snippets\"
+
+[$RootKey$\Languages\CodeExpansions\Basic\ForceCreateDirs]
+"Microsoft Visual Basic"="%MyDocs%\Code Snippets\Visual Basic\My Code Snippets\"

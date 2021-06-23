@@ -1,0 +1,36 @@
+﻿// SQL Debugger package registration
+[$RootKey$\Packages\{9A62B3CA-5BDF-47CB-A406-3CEB946F1DDF}]
+@="SqlStudio Debugger Package"
+"Assembly"="Microsoft.VisualStudio.Data.Tools.SqlDebugger, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"Class"="Microsoft.VisualStudio.Data.Tools.SqlDebugger.SqlDebugPackage"
+"CodeBase"="$RootFolder$\Common7\IDE\Extensions\Microsoft\SQLEditor\Microsoft.VisualStudio.Data.Tools.SqlDebugger.dll"
+"CompanyName"="Microsoft Corporation"
+"InprocServer32"="%SystemRoot%\\system32\\mscoree.dll"
+"ProductName"="Microsoft SQL Server Data Tools, Sql Debugger"
+
+[$RootKey$\BindingPaths\{9A62B3CA-5BDF-47CB-A406-3CEB946F1DDF}]
+"$RootFolder$\Common7\IDE\Extensions\Microsoft\SQLEditor"=""
+"$ProgramFiles$\Common Files\Microsoft Shared\SQL Server Developer Tools\120"=""
+"$ProgramFiles$\Common Files\Microsoft Shared\SQL Debugging\120"=""
+
+[$RootKey$\Menus]
+"{9A62B3CA-5BDF-47CB-A406-3CEB946F1DDF}"=", Menus.ctmenu, 1"
+
+[$RootKey$\AD7Metrics\Engine\{1202F5B4-3522-4149-BAD8-58B2079D704F}]
+"Name"="resource=$RootFolder$Common7\Packages\Debugger\*\vsdebugui.dll#6007"
+@="guidSQLEng2"
+"CLSID"="{3B476D3A-A401-11D2-AAD4-00C04F990171}"
+"AlwaysLoadLocal"=dword:00000001
+"FunctionBP"=dword:00000001
+"HitCountBP"=dword:00000001
+"Attach"=dword:00000001
+"PortSupplier"="{708C1ECA-FF48-11D2-904F-00C04FA302A1}"
+"ProgramProvider"="{4FF9DEF4-8922-4D02-9379-3FFA64D1D639}"
+"AlwaysLoadProgramProviderLocal"=dword:00000001
+"RemoteDebugging"=dword:00000001
+"AutoSelectPriority"=dword:0000000a
+
+[$RootKey$\CLSID\{3B476D3A-A401-11D2-AAD4-00C04F990171}]
+"InprocServer32"="$RootFolder$Common7\IDE\Extensions\Microsoft\SQLEditor\Microsoft.VisualStudio.Data.Tools.SqlDebugEngine.dll"
+"ThreadingModel"="Free"
+@="SQL Debug Engine (SQL Studio)"

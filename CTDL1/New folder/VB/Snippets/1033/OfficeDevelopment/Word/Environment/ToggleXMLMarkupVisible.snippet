@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Show or Hide XML Markup</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Shows or hides the XML markup in a Word document.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Word.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Word = Microsoft.Office.Interop.Word</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>showMarkup</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with an Integer value. 1 to show the XML markup; 0 to hide it.</ToolTip>
+          <Default>1</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>document</ID>
+          <Type>Microsoft.Office.Interop.Word.Document</Type>
+          <ToolTip>Replace with the document in which to hide or show the XML markup.</ToolTip>
+          <Default>document</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="" Delimiter="$"><![CDATA[
+$document$.ActiveWindow.View.ShowXMLMarkup = CInt($showMarkup$)
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

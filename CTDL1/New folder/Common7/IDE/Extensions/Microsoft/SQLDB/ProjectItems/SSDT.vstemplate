@@ -1,0 +1,26 @@
+﻿<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <Name Package="{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}" ID="524"/>
+        <Description Package="{00FEE386-5F9F-4577-99F4-F327FAFC0FB9}" ID="525"/>
+        <SortOrder>150</SortOrder>
+        <Icon>DatabaseProject.ico</Icon>
+        <CreateNewFolder>true</CreateNewFolder>
+        <CreateInPlace>false</CreateInPlace>
+        <ProjectType>SSDT</ProjectType>
+        <DefaultName>Database</DefaultName>
+        <ProvideDefaultName>true</ProvideDefaultName>
+        <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+        <LocationField>Enabled</LocationField>
+        <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+        <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    </TemplateData>
+    <TemplateContent>
+        <Project File="SSDT.sqlproj" ReplaceParameters="true">
+          <Folder Name="Properties"/>
+        </Project>
+    </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.Data.Tools.Package, Version=12.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a, Custom=null</Assembly>
+    <FullClassName>Microsoft.VisualStudio.Data.Tools.Package.Project.TemplateWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

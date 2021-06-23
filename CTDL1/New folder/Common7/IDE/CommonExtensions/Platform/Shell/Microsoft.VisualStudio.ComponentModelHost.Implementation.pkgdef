@@ -1,0 +1,12 @@
+[$RootKey$\Packages\{49d12072-378b-4ffa-a09e-40e0b5d097cc}]
+@="Visual Studio Component Model Host Package"
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"Class"="Microsoft.VisualStudio.ComponentModelHost.HostPackage"
+"Assembly"="Microsoft.VisualStudio.ComponentModelHost.Implementation,version=12.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+"CodeBase"="$ShellFolder$\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.ComponentModelHost.Implementation.dll"
+[$RootKey$\Services\{DEBF6A60-A2CB-4059-8677-0067F046C4BC}]
+@="{49d12072-378b-4ffa-a09e-40e0b5d097cc}"
+"Name"="Visual Studio Component Model Host Service"
+[$RootKey$\Services\{FD57C398-FDE3-42c2-A358-660F269CBE43}]
+@="{49d12072-378b-4ffa-a09e-40e0b5d097cc}"
+"Name"="Visual Studio Component Model Service"

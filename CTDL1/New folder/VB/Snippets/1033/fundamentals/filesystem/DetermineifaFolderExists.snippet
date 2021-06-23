@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Determine if a Folder Exists </Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Sets a Boolean variable indicating whether a specified folder exists.</Description>
+      <Shortcut>filExistFold</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>folderName</ID>
+          <ToolTip>Replace with the name of the directory to search for.</ToolTip>
+          <Default>"C:\TestDirectory"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim folderExists As Boolean
+folderExists = My.Computer.FileSystem.DirectoryExists($folderName$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

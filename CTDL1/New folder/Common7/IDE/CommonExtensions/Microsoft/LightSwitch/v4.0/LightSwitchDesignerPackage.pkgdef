@@ -1,0 +1,35 @@
+[$RootKey$\Menus]
+"{60e27db8-af54-4dd0-93f9-0c112e4a5903}"=",1000,1"
+
+[$RootKey$\Packages]
+
+[$RootKey$\Packages\{60e27db8-af54-4dd0-93f9-0c112e4a5903}]
+"Assembly"="Microsoft.LightSwitch.Design.Package, Version=12.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"Class"="Microsoft.LightSwitch.VisualStudioIntegration.DesignerPackage.DesignerHostPackage"
+"CodeBase"="$ProgramFiles$\Microsoft SDKs\LightSwitch\v4.0\Design\Microsoft.LightSwitch.Design.Package.dll"
+"CompanyName"="Microsoft Corporation"
+"ID"=dword:00000064
+"InProcServer32"="$System$\mscoree.dll"
+"MinEdition"="Standard"
+"ProductName"="LightSwitch Designer Hosting package"
+"ProductVersion"="4.0"
+@="LightSwitch Designer Hosting package"
+
+[$RootKey$\Packages\{60e27db8-af54-4dd0-93f9-0c112e4a5903}\SatelliteDll]
+"DllName"="Microsoft.LightSwitch.Design.PackageUI.dll"
+"Path"="$ProgramFiles$\Microsoft SDKs\LightSwitch\v4.0\Design"
+
+[$RootKey$\Packages\{D9245338-D3EB-44EE-875E-D32C312DEF84}]
+"Assembly"="Microsoft.LightSwitch.Design.Package, Version=12.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"Class"="Microsoft.LightSwitch.VisualStudioIntegration.DesignerPackage.AssemblyResolverPackage"
+"CodeBase"="$ProgramFiles$\Microsoft SDKs\LightSwitch\v4.0\Design\Microsoft.LightSwitch.Design.Package.dll"
+"CompanyName"="Microsoft Corporation"
+"ID"=dword:00000064
+"InProcServer32"="$System$\mscoree.dll"
+"MinEdition"="Standard"
+"ProductName"="LightSwitch Assembly Resolver Package"
+"ProductVersion"="4.0"
+@="LightSwitch Assembly Resolver Package"
+
+[$RootKey$\BindingPaths\{60e27db8-af54-4dd0-93f9-0c112e4a5903}]
+"$ProgramFiles$\Microsoft SQL Server\110\DAC\Bin"=""

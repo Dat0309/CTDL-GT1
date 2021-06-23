@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Write to a Text file</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Writes a message to the application event log.</Description>
+      <Shortcut>appLog</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>fileName</ID>
+          <Type>String</Type>
+          <ToolTip>The String variable that stores the filename to be written to.</ToolTip>
+          <Default>"TheFile.txt"</Default>
+        </Literal>
+        <Literal>
+          <ID>textContents</ID>
+          <Type>String</Type>
+          <ToolTip>The text to be written to the file.</ToolTip>
+          <Default>"TextContents"</Default>
+        </Literal>
+        <Literal>
+          <ID>append</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Specifies whether text should be added to the end of the file (true) or overwrite existing contents (false).</ToolTip>
+          <Default>False</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[My.Computer.FileSystem.WriteAllText($fileName$, $textContents$, $append$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

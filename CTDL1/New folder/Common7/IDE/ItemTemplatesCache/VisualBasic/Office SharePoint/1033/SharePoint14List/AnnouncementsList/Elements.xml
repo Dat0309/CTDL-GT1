@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <!-- $loc_NameAttributeComment$ -->
+    <ListTemplate 
+        Name="$ProjectItemName$" 
+        Type="$TemplateType$" 
+        BaseType="0" 
+        OnQuickLaunch="TRUE" 
+        SecurityBits="11" 
+        Sequence="320"
+        DisplayName="$ListDisplayName$"
+        Description="$loc_ListTemplateDescription$"
+        Image="/_layouts/images/itann.png"/>
+</Elements>

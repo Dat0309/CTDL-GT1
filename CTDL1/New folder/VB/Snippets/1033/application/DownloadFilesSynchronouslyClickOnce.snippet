@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Download Files Synchronously with ClickOnce</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Downloads files synchronously using ClickOnce.</Description>
+      <Shortcut>appDownload</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Deployment.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Deployment</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>fileDownloadGroup</ID>
+          <Type>String</Type>
+          <ToolTip>The name of file download group.</ToolTip>
+          <Default>"Media"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[        If My.Application.IsNetworkDeployed Then
+            If Not(My.Application.Deployment.IsFileGroupDownloaded($fileDownloadGroup$)) Then
+                 My.Application.Deployment.DownloadFileGroup($fileDownloadGroup$)
+            End If
+        End If]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

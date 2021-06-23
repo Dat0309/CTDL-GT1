@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Calculate the Sine of a specified Angle</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Converts an angle from degrees to radians and then calculates sine of the angle</Description>
+      <Shortcut>mathSin</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>Degrees</ID>
+          <Type>Double</Type>
+          <ToolTip>Replace with the measurement in degrees.</ToolTip>
+          <Default>120</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim radians As Double = $Degrees$ * Math.PI / 180
+Dim sin As Double = Math.Sin(radians)
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

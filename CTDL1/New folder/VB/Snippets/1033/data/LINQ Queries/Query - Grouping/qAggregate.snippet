@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Aggregate Into Count() and Sum()</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Uses an aggregate to count the number of fruits and sum the number of characters.</Description>
+      <Shortcut>qAggregate</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+         <Literal>
+          <ID>queryResult</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the query.</ToolTip>
+          <Default>query</Default>
+        </Literal>
+        <Literal>
+          <ID>item</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the variable that represents an item from your data source.</ToolTip>
+          <Default>fruit</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSource</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the identifier for your data source.</ToolTip>
+          <Default>New String() {"apple", "orange", "pear", "banana"}</Default>
+        </Literal>
+        <Literal>
+          <ID>field</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the name of the field used for the second aggregation.</ToolTip>
+          <Default>Length</Default>
+       </Literal>
+        <Literal>
+          <ID>aggregateName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the alias to give to the first aggregate.</ToolTip>
+          <Default>FruitCount</Default>
+        </Literal>
+        <Literal>
+          <ID>aggregateName2</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the alias to give to the second aggregate.</ToolTip>
+          <Default>CharCount</Default>
+        </Literal>
+        <Literal>
+          <ID>groupingCondition</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the first aggregator to call on your group.</ToolTip>
+          <Default>Count</Default>
+        </Literal>
+        <Literal>
+          <ID>groupingCondition2</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the second aggregator to call on your group.</ToolTip>
+          <Default>Sum</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $queryResult$ = Aggregate $item$ In $dataSource$ _
+                  Into $aggregateName$ = $groupingCondition$(), $aggregateName2$ = $groupingCondition2$($item$.$field$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

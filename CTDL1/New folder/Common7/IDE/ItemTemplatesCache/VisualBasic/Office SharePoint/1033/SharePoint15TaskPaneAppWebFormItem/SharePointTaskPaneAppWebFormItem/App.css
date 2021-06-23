@@ -1,0 +1,54 @@
+﻿/* $loc_app_css_1$ */
+
+#content-header {
+    background: #2a8dd4;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* $loc_app_css_2$ */
+    overflow: hidden; /* $loc_app_css_3$ */
+}
+
+#content-main {
+    background: #fff;
+    position: fixed;
+    top: 80px; /* $loc_app_css_4$ */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto; /* $loc_app_css_5$ */
+}
+
+.padding {
+    padding: 15px;
+}
+
+#notification-message {
+    background-color: #818285;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    min-height: 80px;
+    right: 0;
+    z-index: 100;
+    bottom: 0;
+    display: none; /* $loc_app_css_6$ */
+}
+
+    #notification-message #notification-message-header {
+        font-size: medium;
+        margin-bottom: 10px;
+    }
+
+    #notification-message #notification-message-close {
+        background-image: url("../Images/Close.png");
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        cursor: pointer;
+    }

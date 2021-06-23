@@ -1,0 +1,24 @@
+[$RootKey$]
+
+[$RootKey$\AutoLoadPackages\{349C5852-65DF-11DA-9384-00065B846F21}]
+"{2B538B3F-8F93-46F8-81F1-D402F4B3D122}"=dword:00000000
+
+[$RootKey$\Menus]
+"{2B538B3F-8F93-46F8-81F1-D402F4B3D122}"=",1000,1"
+
+[$RootKey$\Packages]
+
+[$RootKey$\Packages\{2B538B3F-8F93-46F8-81F1-D402F4B3D122}]
+"Class"="Microsoft.LightSwitch.VSIntegration.Project.ProjectUpgradeDelegator.ProjectUpgradeDelegatorPackage"
+"CodeBase"="$ShellFolder$\Common7\IDE\PrivateAssemblies\Microsoft.LightSwitch.UpgradeDelegator.dll"
+"CompanyName"="Microsoft Corporation"
+"ID"=dword:00000064
+"InProcServer32"="$System$\mscoree.dll"
+"MinEdition"="Standard"
+"ProductName"="LightSwitch Project Upgrade Delegator"
+"ProductVersion"="4.5"
+@="Microsoft.LightSwitch.VSIntegration.Project.ProjectUpgradeDelegator.ProjectUpgradeDelegatorPackage, Microsoft.LightSwitch.UpgradeDelegator, Version=12.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+
+[$RootKey$\Packages\{2B538B3F-8F93-46F8-81F1-D402F4B3D122}\SatelliteDll]
+"DllName"="Microsoft.LightSwitch.UpgradeDelegatorUI.dll"
+"Path"="$ShellFolder$\Common7\IDE"

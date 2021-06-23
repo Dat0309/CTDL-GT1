@@ -1,0 +1,15 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <Name Package="{141DA93E-88A7-45D5-B15B-89117F514D64}" ID="21400"/>
+        <Description Package="{141DA93E-88A7-45D5-B15B-89117F514D64}" ID="21401"/>
+        <Icon>webrole_vb.ico</Icon>
+        <ProjectType>CloudServiceProject</ProjectType>
+        <DefaultName>MvcWebRole</DefaultName>
+        <TemplateID>MvcAzureItemTemplate.vb.vstemplate.v401</TemplateID>
+    </TemplateData>
+    <TemplateContent />
+    <WizardExtension>
+        <Assembly>Microsoft.VisualStudio.CloudService.Wizard,Version=1.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+        <FullClassName>Microsoft.VisualStudio.CloudService.Wizard.AddItemWizard</FullClassName>
+    </WizardExtension>
+</VSTemplate>

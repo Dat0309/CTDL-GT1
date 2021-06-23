@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:Microsoft.Data.Tools.Schema.Extensions" elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="urn:Microsoft.Data.Tools.Schema.Extensions">
+  <xsd:element name="extensions">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="extension" minOccurs="0" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:attribute name="assembly" type="xsd:string" use="optional"/>
+            <xsd:attribute name="type" type="xsd:string" use="required"/>
+            <xsd:attribute name="enabled" type="xsd:boolean" use="required"/>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="assembly" type="xsd:string" use="required"/>
+      <xsd:attribute name="version" type="xsd:unsignedByte" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

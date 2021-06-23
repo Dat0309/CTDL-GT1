@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<widget version="1.0" spec="1.0" id="ms-blend://Microsoft.VS.Actions.LoadPageAction" name="Microsoft.VS.Actions.LoadPageAction" xmlns:blend="http://schemas.microsoft.com/winjs/Blend/2011" xmlns="http://openajax.org/metadata">
+	<userAgent platform="WindowsWebPhone" osVersion="8.1"/>
+	<locale messages="..\all-all.xml" />
+	<locale lang="en-us" messages="..\en-us.xml" />
+	<locale lang="de-de" messages="..\de-de.xml" />
+	<locale lang="es-es" messages="..\es-es.xml" />
+	<locale lang="fr-fr" messages="..\fr-fr.xml" />
+	<locale lang="it-it" messages="..\it-it.xml" />
+	<locale lang="ja" messages="..\ja.xml" />
+	<locale lang="ko" messages="..\ko.xml" />
+	<locale lang="ru-ru" messages="..\ru-ru.xml" />
+	<locale lang="zh-cn" messages="..\zh-cn.xml" />
+	<locale lang="zh-tw" messages="..\zh-tw.xml" />
+	<author name="Microsoft Corporation" />
+	<title type="text/plain" locid="Microsoft.VS.Actions.LoadPageAction.Title"><![CDATA[LoadPageAction]]></title>
+	<description type="text/plain" locid="Microsoft.VS.Actions.LoadPageAction.Description"><![CDATA[Loads a page as a child of the elements referred to by targetSelector property]]></description>
+	<icons>
+		<icon src="Microsoft.VS.Action.16x16.png" width="16" height="16" />
+		<icon src="Microsoft.VS.Action.12x12.png" width="12" height="12" />
+	</icons>
+	<properties>
+		<property name="page" datatype="String" required="true">
+			<description locid="Microsoft.VS.Actions.LoadPageAction.page" type="text/plain">Specifies the URI to load.</description>
+		</property>
+		<property name="targetSelector" datatype="String" required="true" blend:selectorIntellisense="true">
+			<description locid="Microsoft.VS.Actions.LoadPageAction.targetSelector" type="text/plain">A CSS selector that specifies the target elements to which the page is added.</description>
+		</property>
+		<property name="type" datatype="String" required="true">
+			<description locid="Microsoft.VS.Actions.LoadPageAction.type" type="text/plain">The type of the action.</description>
+		</property>
+		<property name="pageLoaded" datatype="ActionCollection" required="false">
+			<description locid="Microsoft.VS.Actions.LoadPageAction.pageLoaded" type="text/plain">Specifies the collection of actions that will execute when the LoadPageAction is executed.</description>
+		</property>
+	</properties>
+	<requires>
+		<require type="javascript" src="//Microsoft.Phone.WinJS.2.1/js/base.js"/>
+		<require type="javascript" src="..\..\Libraries\HTML\Interactivity.1.1.js" target="js/Interactivity.1.1.js"/>
+	</requires>
+</widget>

@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Filter by fields not selected</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Creates a query that filters by fields not selected in the results.</Description>
+      <Shortcut>qFiltDiff</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>queryResult</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the query.</ToolTip>
+          <Default>query</Default>
+        </Literal>
+        <Literal>
+          <ID>item</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the variable that represents an item from your data source.</ToolTip>
+          <Default>fruit</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSource</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the identifier for your data source.</ToolTip>
+          <Default>New String() {"apple", "orange", "pear", "banana"}</Default>
+        </Literal>
+        <Literal>
+          <ID>whereField1</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the name of the first field being filtered on.</ToolTip>
+          <Default>Length</Default>
+        </Literal>
+                <Literal>
+          <ID>whereField2</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the name of the second field being filtered on.</ToolTip>
+          <Default>ToUpper()</Default>
+        </Literal>
+        <Literal>
+          <ID>condition1</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the first condition being filtered by.</ToolTip>
+          <Default>>= 5</Default>
+        </Literal>
+        <Literal>
+          <ID>selectedField</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the name of the field being returned.</ToolTip>
+          <Default>ToLower()</Default>
+        </Literal>
+        <Literal>
+          <ID>condition2</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the second condition being filtered by.</ToolTip>
+          <Default>= "PEAR"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $queryResult$ = From $item$ In $dataSource$ _
+                    Where $item$.$whereField1$ $condition1$ And $item$.$whereField2$ $condition2$ _
+                    Select $item$.$selectedField$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

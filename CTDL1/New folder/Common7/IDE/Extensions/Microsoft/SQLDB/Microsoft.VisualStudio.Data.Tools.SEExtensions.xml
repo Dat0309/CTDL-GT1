@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DataViewSupport xmlns="http://schemas.microsoft.com/VisualStudio/2007/07/Data/DataViewSupport">
+  <!-- Definitions of TSData global commands -->
+  <Define name="TSData Global Commands">
+    <CommandRef name="Global New Diagram Command" />
+    <CommandRef name="Global New Table Command" />
+    <CommandRef name="Global New View Command" />
+    <CommandRef name="Global New Stored Procedure Command" />
+    <CommandRef name="Global New Scalar Function Command" />
+    <CommandRef name="Global New Table-valued Function Command" />
+    <CommandRef name="Global New Inline Table-valued Function Command" />
+    <CommandRef name="Execute Text Object Command" />
+    <CommandRef name="Debug Text Object Command" />
+  </Define>
+  <Define name="Global New Diagram Command">
+    <CommandRef name="VSData Tools Command" arguments="0x3040, Diagram" />
+  </Define>
+  <Define name="Global New Table Command">
+    <CommandRef name="VSData Tools Command" arguments="0x3041, TabularObject" />
+  </Define>
+  <Define name="Global New View Command">
+    <CommandRef name="VSData Tools Command" arguments="0x3043, TabularObject" />
+  </Define>
+  <Define name="Global New Trigger Command">
+    <CommandRef name="VSData Tools Command" arguments="0x304A, TextObject" />
+  </Define>
+  <Define name="Global New Stored Procedure Command">
+    <CommandRef name="VSData Tools Command" arguments="0x3044, TextObject" />
+  </Define>
+  <Define name="Global New Scalar Function Command">
+    <CommandRef name="VSData Tools Command" arguments="0x3045, TextObject" />
+  </Define>
+  <Define name="Global New Table-valued Function Command">
+    <CommandRef name="VSData Tools Command" arguments="0x3046, TextObject" />
+  </Define>
+  <Define name="Global New Inline Table-valued Function Command">
+    <CommandRef name="VSData Tools Command" arguments="0x3047, TextObject" />
+  </Define>
+  <!-- Definitions of TSData node commands -->
+  <Define name="TSData Connection/Database Commands">
+    <CommandRef name="Application Debugging Command" />
+    <CommandRef name="Allow SQL/CLR Debugging Command" />
+    <CommandRef name="End Application Debugging Command" />
+    <CommandRef name="CompareSchema" arguments="Database"/>
+    <CommandRef name="ImportSchema"/>
+  </Define>
+  <Define name="TSData Diagrams Folder Commands">
+    <CommandRef name="New Diagram Command" />
+  </Define>
+  <Define name="TSData Diagram Commands">
+    <CommandRef name="New Diagram Command" />
+    <CommandRef name="Design Diagram Command" />
+    <CommandRef name="Copy Command" arguments="Diagram" />
+    <CommandRef name="Delete Command" arguments="Diagram" />
+    <CommandRef name="Rename Command" arguments="Diagram" />
+  </Define>
+  <Define name="TSData Tables Folder Commands">
+    <CommandRef name="New Table Command" />
+  </Define>
+  <Define name="TSData Table Commands">
+    <CommandRef name="New Table Command" />
+    <CommandRef name="Global New Trigger Command" />
+    <CommandRef name="New Trigger Command" />
+    <CommandRef name="Design Tabular Object Command" />
+    <CommandRef name="Script Object Command" />
+    <CommandRef name="Delete Command" arguments="TabularObject" />
+  </Define>
+  <Define name="TSData Full-text Index Commands" />
+  <Define name="TSData Views Folder Commands">
+    <CommandRef name="New View Command" />
+  </Define>
+  <Define name="TSData View Commands">
+    <CommandRef name="New View Command" />
+    <CommandRef name="Global New Trigger Command" />
+    <CommandRef name="New Trigger Command" />
+    <CommandRef name="Design Tabular Object Command" />
+    <CommandRef name="Script Object Command" />
+    <CommandRef name="Delete Command" arguments="TabularObject" />
+  </Define>
+  <Define name="TSData Table/View Triggers Folder Commands">
+    <CommandListRef name="TSData New Table/View Trigger Commands" />
+  </Define>
+  <Define name="TSData New Table/View Trigger Commands">
+    <CommandRef name="Global New Trigger Command" />
+    <CommandRef name="New Trigger Command" />
+  </Define>
+  <Define name="TSData Table/View Trigger Commands">
+    <CommandRef name="Open Text Object Command" />
+    <CommandRef name="Script Object Command" />
+    <CommandRef name="Delete Command" arguments="TextObject" />
+  </Define>
+  <Define name="TSData Table/View Indexes Folder Commands" />
+  <Define name="TSData Table/View Index Commands">
+    <CommandRef name="Script Object Command" />
+  </Define>
+  <Define name="TSData Stored Procedures Folder Commands">
+    <CommandRef name="New Stored Procedure Command" />
+  </Define>
+  <Define name="TSData System Stored Procedure Commands">
+    <CommandRef name="Execute Text Object Command" />
+  </Define>
+  <Define name="TSData New Stored Procedure Commands">
+    <CommandRef name="New Stored Procedure Command" />
+  </Define>
+  <Define name="TSData Stored Procedure Commands">
+    <CommandRef name="Open Text Object Command" />
+    <CommandRef name="Script Object Command" />
+    <CommandRef name="Delete Command" arguments="TextObject" />
+  </Define>
+  <Define name="TSData Functions Folder Commands">
+    <CommandListRef name="TSData New Function Commands" />
+  </Define>
+  <Define name="TSData New Function Commands">
+    <CommandRef name="New Scalar Function Command" />
+    <CommandRef name="New Table-valued Function Command" />
+    <CommandRef name="New Inline Table-valued Function Command" />
+  </Define>
+  <Define name="TSData Function Commands">
+    <CommandRef name="Open Text Object Command" />
+    <CommandRef name="Script Object Command" />
+    <CommandRef name="Delete Command" arguments="TextObject" />
+  </Define>
+  <Define name="TSData Aggregate Commands">
+    <CommandRef name="Open Text Object Command" />
+    <CommandRef name="Script Object Command" />
+    <CommandRef name="Delete Command" arguments="TextObject" />
+  </Define>
+  <Define name="TSData Synonyms Folder Commands" />
+  <Define name="TSData Synonym Commands">
+    <CommandRef name="Script Object Command" />
+    <CommandRef name="Delete Command" arguments="Synonym" />
+  </Define>
+  <Define name="TSData Types Folder Commands" />
+  <Define name="TSData User Defined Data Types Folder Commands" />
+  <Define name="TSData User Defined Data Type Commands">
+    <CommandRef name="Script Object Command" />
+  </Define>
+  <Define name="TSData User Defined Types Folder Commands" />
+  <Define name="TSData User Defined Type Commands">
+    <CommandRef name="Open Text Object Command" />
+    <CommandRef name="Script Object Command" />
+    <CommandRef name="Delete Command" arguments="TextObject" />
+  </Define>
+  <Define name="TSData Schemas Folder Commands" />
+  <Define name="TSData Schema Commands" />
+  <Define name="TSData Assemblies Folder Commands" />
+  <Define name="TSData Assembly Commands" />
+  <Define name="TSData Assembly File Commands">
+    <CommandRef name="Open Text Object Command" />
+  </Define>
+  <!-- Definitions of individual commands -->
+  <Define name="Application Debugging Command">
+    <CommandRef name="VSData Tools Command" arguments="0x3515, Database" />
+  </Define>
+  <Define name="Allow SQL/CLR Debugging Command">
+    <CommandRef name="VSData Tools Command" arguments="0x3516, Database" />
+  </Define>
+  <Define name="End Application Debugging Command">
+    <CommandRef name="VSData Tools Command" arguments="0x3540, Database" />
+  </Define>
+  <Define name="New Diagram Command">
+    <CommandRef name="VSData Tools Command" arguments="0x352A, Diagram" />
+  </Define>
+  <Define name="New Table Command">
+    <CommandRef name="VSData Tools Command" arguments="0x3520, TabularObject" />
+  </Define>
+  <Define name="New View Command">
+    <CommandRef name="VSData Tools Command" arguments="0x3521, TabularObject" />
+  </Define>
+  <Define name="New Trigger Command">
+    <CommandRef name="VSData Tools Command" arguments="0x3527, TextObject" />
+  </Define>
+  <Define name="New Stored Procedure Command">
+    <CommandRef name="VSData Tools Command" arguments="0x3522, TextObject" />
+  </Define>
+  <Define name="New Scalar Function Command">
+    <CommandRef name="VSData Tools Command" arguments="0x3525, TextObject" />
+  </Define>
+  <Define name="New Table-valued Function Command">
+    <CommandRef name="VSData Tools Command" arguments="0x3524, TextObject" />
+  </Define>
+  <Define name="New Inline Table-valued Function Command">
+    <CommandRef name="VSData Tools Command" arguments="0x3523, TextObject" />
+  </Define>
+  <Define name="Design Diagram Command">
+    <CommandRef name="VSData Tools Default Command" arguments="0x3003, Diagram" />
+  </Define>
+  <Define name="Design Tabular Object Command">
+    <CommandRef name="VSData Tools Default Command" arguments="0x3003, TabularObject" />
+  </Define>
+  <Define name="Open Text Object Command">
+    <CommandRef name="VSData Tools Default Command" arguments="0x3061, TextObject" />
+  </Define>
+  <Define name="Execute Text Object Command">
+    <CommandRef name="VSData Tools Command" arguments="0x3062, TextObject" />
+  </Define>
+  <Define name="Debug Text Object Command">
+    <CommandRef name="VSData Tools Command" arguments="0x3012, TextObject" />
+  </Define>
+  <Define name="Script Object Command">
+    <CommandRef name="VSData Tools Command" arguments="0x303B, Script" />
+  </Define>
+  <Define name="VSData Tools Default Command" parameters="cmdid, type">
+    <Command guid="501822E1-B5AF-11d0-B4DC-00A0C91506EF" cmdid="$(cmdid)" provider="Microsoft.VisualStudio.Data.Providers.SqlServer.SqlView$(type)CommandProvider" isDefault="true" />
+  </Define>
+  <Define name="VSData Tools Command" parameters="cmdid, type">
+    <Command guid="501822E1-B5AF-11d0-B4DC-00A0C91506EF" cmdid="$(cmdid)" provider="Microsoft.VisualStudio.Data.Providers.SqlServer.SqlView$(type)CommandProvider" />
+  </Define>
+  <Define name="Delete Command" parameters="type">
+    <Command guid="5EFC7975-14BC-11cf-9B2B-00AA00573819" cmdid="17" provider="Microsoft.VisualStudio.Data.Providers.SqlServer.SqlView$(type)CommandProvider" />
+  </Define>
+  <Define name="Rename Command" parameters="type">
+    <Command guid="5EFC7975-14BC-11cf-9B2B-00AA00573819" cmdid="150" provider="Microsoft.VisualStudio.Data.Providers.SqlServer.SqlView$(type)CommandProvider" />
+  </Define>
+
+  <Define name="ImportSchema">
+    <Command guid="000AF700-CF09-4582-9E1C-2603403AB647" cmdid="2305" provider="Microsoft.VisualStudio.Data.Tools.Package.Internal.ServerExplorerCommandHandler, Microsoft.VisualStudio.Data.Tools.Package, Version=12.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    </Command>
+  </Define>
+  <Define name="CompareSchema" parameters="scope">
+    <Command guid="000AF700-CF09-4582-9E1C-2603403AB647" cmdid="2304" provider="Microsoft.VisualStudio.Data.Tools.Package.Internal.ServerExplorerCommandHandler, Microsoft.VisualStudio.Data.Tools.Package, Version=12.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Parameters>
+        <Parameter value="$(scope)"/>
+      </Parameters>
+    </Command>
+  </Define>
+</DataViewSupport>

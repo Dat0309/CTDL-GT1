@@ -1,0 +1,2296 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<HTML DIR="LTR">
+	<HEAD>
+		<TITLE>Add Member Variable Wizard</TITLE>
+		<META NAME="vs_targetSchema" CONTENT="http://schemas.microsoft.com/intellisense/ie5">
+		<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+		<META HTTP-EQUIV="MSThemeCompatible" CONTENT="Yes">
+		<LINK ID="LINKURL" REL="stylesheet" HREF="../../../../../1033/NewStyles.css">
+		<SYMBOL NAME="VARIABLE_NAME" TYPE="text" VALUE="">
+		</SYMBOL>
+		<SYMBOL NAME="VARIABLE_TYPE" TYPE="text" VALUE="int">
+		</SYMBOL>
+		<SYMBOL NAME="COMMENT" TYPE="text" VALUE="">
+		</SYMBOL>
+		<SYMBOL NAME="CONTROL_VARIABLE" TYPE="checkbox" VALUE="false">
+		</SYMBOL>
+		<SYMBOL NAME="VARIABLE_CATEGORY" TYPE="select-one" VALUE="Control">
+		</SYMBOL>
+		<SYMBOL NAME="CONTROL_NAME" TYPE="select-one" VALUE="">
+		</SYMBOL>
+		<SYMBOL NAME="CONTROL_TYPE" TYPE="text" VALUE="">
+		</SYMBOL>
+		<SYMBOL NAME="CONTROL_CLSID" TYPE="text" VALUE="">
+		</SYMBOL>
+		<SYMBOL NAME="HEADER_FILE" TYPE="text" VALUE="">
+		</SYMBOL>
+		<SYMBOL NAME="IMPL_FILE" TYPE="text" VALUE="">
+		</SYMBOL>
+		<SYMBOL NAME="CLASS_TEXT" TYPE="text" VALUE="">
+		</SYMBOL>
+		<SYMBOL NAME="CLASS_ENUMS" TYPE="text" VALUE="">
+		</SYMBOL>
+		<SYMBOL NAME="MAX_VALUE" TYPE="text" VALUE="">
+		</SYMBOL>
+		<SYMBOL NAME="MIN_VALUE" TYPE="text" VALUE="">
+		</SYMBOL>
+		<SYMBOL NAME="MAX_CHARS" TYPE="text" VALUE="">
+		</SYMBOL>
+		<SYMBOL NAME="ACCESS" TYPE="select-one" VALUE="1">
+		</SYMBOL>
+		<SYMBOL NAME="UPDATE" TYPE="bool" VALUE="false">
+		</SYMBOL>
+	</HEAD>
+	<BODY BGCOLOR="BUTTONFACE" TOPMARGIN="0" LEFTMARGIN="0" RIGHTMARGIN="0" BOTTOMMARGIN="0" ONLOAD="InitDocument(document);" ONKEYDOWN="if (!bValidating) OnKey();" ONKEYPRESS="if (!bValidating) OnPress();">
+		<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="100%">
+			<TR VALIGN="TOP">
+				<TD HEIGHT="79">
+					<!--OPEN OF ALL ENCOMPASSING TABLE ROW ONE//-->
+					<TABLE CLASS="TWO" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+						<COL WIDTH="12">
+						<COL>
+						<COL WIDTH="12">
+						<TR>
+							<TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+								&nbsp;
+							</TD>
+							<TD VALIGN="TOP" HEIGHT="12">
+								&nbsp;
+							</TD>
+							<TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+								&nbsp;
+							</TD>
+							<TD CLASS="IMAGE" VALIGN="BOTTOM" WIDTH="110" ROWSPAN="2">
+								<DIV ID="Layer0">
+									<IMG CLASS="SMALLEST" SRC="..\..\Images\MemVar.gif" WIDTH="63" HEIGHT="63" ALT="" BORDER="0">
+								</DIV>
+							</TD>
+							<TD VALIGN="TOP" HEIGHT="12" WIDTH="6" ROWSPAN="2">
+								&nbsp;
+							</TD>
+						</TR>
+						<TR>
+							<TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+								&nbsp;
+							</TD>
+							<TD VALIGN="TOP" HEIGHT="65">
+								<H4 CLASS="HEAD" ID="HEAD">
+									Welcome to the Add Member Variable Wizard
+								</H4>
+								<P CLASS="SUBHEAD" ID="SUBHEAD">
+									This wizard adds a member variable to your class, struct, or union.
+								</P>
+							</TD>
+							<TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+								&nbsp;
+							</TD>
+						</TR>
+						<TR>
+							<TD VALIGN="TOP" CLASS="RULE" COLSPAN="5" HEIGHT="2">
+								<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+									<TR VALIGN="TOP">
+										<TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW">
+										</TD>
+										<TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW">
+										</TD>
+									</TR>
+								</TABLE>
+							</TD>
+						</TR>
+					</TABLE>
+					<!--CLOSE OF ALL ENCOMPASSING TABLE ROW ONE//-->
+				</TD>
+			</TR>
+			<TR VALIGN="TOP">
+				<TD HEIGHT="100%">
+					<!--OPEN OF ALL ENCOMPASSING TABLE ROW TWO//-->
+					<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+						<COL>
+						<TR>
+							<TD VALIGN="TOP" HEIGHT="100%">
+								<!--OPEN OF CONTENT AND BUTTON TABLE//-->
+								<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+									<COL WIDTH="100%">
+									<TR VALIGN="TOP">
+										<TD HEIGHT="100%">
+											<!--OPEN OF CONTENT//-->
+											<TABLE CLASS="CONTENT" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+												<COL WIDTH="12">
+												<COL WIDTH="185">
+												<COL WIDTH="12">
+												<COL WIDTH="185">
+												<COL WIDTH="12">
+												<COL WIDTH="185">
+												<COL WIDTH="12">
+												<TR>
+													<TD VALIGN="TOP" HEIGHT="12" COLSPAN="7">
+														&nbsp;
+													</TD>
+												</TR>
+												<TR VALIGN="TOP">
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+													<TD VALIGN="TOP">
+														<SPAN CLASS="itemTextTop" ID="access_title" TITLE="Select the access type for the variable.">
+															<LABEL FOR="ACCESS" ID="ACCESS_LABEL"><U>A</U>ccess:</LABEL>
+															<BR>
+															<SELECT CLASS="SideBtnThreeColumn" ID="ACCESS" SIZE="1" ACCESSKEY="A" TITLE="Select the access type for the variable." VALUE="1" TABINDEX="1">
+																<-- vsCMAccessPublic = 1 -->
+																<OPTION VALUE="1" ID="PUBLIC_OPTION" SELECTED>
+																	public</OPTION>
+																<-- vsCMAccessProtected = 8 -->
+																<OPTION VALUE="8" ID="PROTECTED_OPTION">
+																	protected</OPTION>
+																<-- vsCMAccessPrivate = 2 -->
+																<OPTION VALUE="2" ID="PRIVATE_OPTION">
+																	private</OPTION>
+															</SELECT></SPAN>
+													</TD>
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+													<TD VALIGN="MIDDLE">
+														<SPAN CLASS="itemText" TITLE="Check this if you want to add a variable based on a control on the dialog." ID="control_var_title" STYLE="POSITION:RELATIVE; TOP:.3EM;">
+															<INPUT CLASS="CheckBox" TYPE="checkbox" ID="CONTROL_VARIABLE" ACCESSKEY="O" TITLE="Check this if you want to add a variable based on a control on the dialog." onClick="OnControlVariable();" TABINDEX="4">
+															<DIV CLASS="itemTextCheckboxA" ID="CONTROL_VARIABLE_DIV" TITLE="Check this if you want to add a variable based on a control on the dialog.">
+																<LABEL FOR="CONTROL_VARIABLE" ID="CONTROL_VARIABLE_LABEL">C<U>o</U>ntrol variable</LABEL>
+															</DIV>
+														</SPAN>
+													</TD>
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+													<TD VALIGN="TOP">
+														&nbsp;
+													</TD>
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+												</TR>
+												<TR>
+													<TD VALIGN="TOP" HEIGHT="15" COLSPAN="7">
+														&nbsp;
+													</TD>
+												</TR>
+												<TR VALIGN="TOP">
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+													<TD VALIGN="TOP">
+														<SPAN CLASS="itemText" ID="data_type_title" TITLE="Enter or select the data type for the variable.">
+															<LABEL FOR="VariableType" ID="VariableType_LABEL"><U>V</U>ariable type:</LABEL>
+															<BR>
+															<INPUT CLASS="SideBtnThreeColumn" ID="VARIABLE_TYPE" TYPE="hidden" TITLE="Enter or select the data type for the variable."></INPUT>
+															<OBJECT CLASS="itemTextThreeColumn" ID="VariableType" ACCESSKEY="V" CLASSID="CLSID:79eadad6-3f7a-45a6-a75e-dd0b7d70fa43" TABINDEX="2" VIEWASTEXT>
+															</OBJECT>
+														</SPAN>
+													</TD>
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+													<TD VALIGN="TOP">
+														<SPAN CLASS="itemText" TITLE="Select the dialog control ID to create the variable for." ID="control_name_title">
+															<LABEL CLASS="indent" FOR="CONTROL_NAME" ID="CONTROL_NAME_LABEL">Control <U>I</U>D:</LABEL>
+															<BR>
+															<SELECT CLASS="sidebtn2" ID="CONTROL_NAME" SIZE="1" ACCESSKEY="i" TITLE="Select the dialog control ID to create the variable for." VALUE="char" onChange="OnControlId();" TABINDEX="5" STYLE="POSITION:RELATIVE; TOP:4PX; WIDTH:170PX;">
+															</SELECT></SPAN>
+													</TD>
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+													<TD VALIGN="TOP">
+														<SPAN CLASS="itemText" ID="CATEGORY" TITLE="Specify whether the variable is based on the control type or the value of the control.">
+															<LABEL FOR="VARIABLE_CATEGORY" ID="VARIABLE_CATEGORY_LABEL">Ca<U>t</U>egory:</LABEL>
+															<BR>
+															<SELECT CLASS="sidebtn2" ID="VARIABLE_CATEGORY" SIZE="1" ACCESSKEY="T" TITLE="Specify whether the variable is based on the control type or the value of the control." VALUE="char" onChange="OnCategory();" TABINDEX="6" STYLE="POSITION:RELATIVE; LEFT: 0PX; TOP:4PX; WIDTH:165PX;">
+																<OPTION ID="CATEGORY_CONTROL" VALUE="Control">
+																	Control</OPTION>
+																<OPTION ID="CATEGORY_VALUE" VALUE="Value">
+																	Value</OPTION>
+															</SELECT></SPAN>
+													</TD>
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+												</TR>
+												<TR>
+													<TD VALIGN="TOP" HEIGHT="10" COLSPAN="7">
+														&nbsp;
+													</TD>
+												</TR>
+												<TR VALIGN="TOP">
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+													<TD VALIGN="TOP">
+														<SPAN CLASS="itemText" ID="variable_name_title" TITLE="Enter the name of the variable to be added to the class.">
+															<LABEL FOR="VARIABLE_NAME" ID="VARIABLE_NAME_LABEL">Variable <U>n</U>ame:</LABEL>
+															<BR>
+															<INPUT CLASS="SideBtnThreeColumn" ID="VARIABLE_NAME" TYPE="text" ACCESSKEY="N" TITLE="Enter the name of the variable to be added to the class." TABINDEX="3">
+														</SPAN>
+													</TD>
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+													<TD VALIGN="TOP">
+														<SPAN CLASS="itemTextIndent" ID="control_type_title" TITLE="Displays the type of control that the generated variable will be based on." DISABLED>
+															<LABEL FOR="CONTROL_TYPE" ID="CONTROL_TYPE_LABEL">Control t<U>y</U>pe:</LABEL>
+															<BR>
+															<INPUT CLASS="sideBtn2" ID="CONTROL_TYPE" TYPE="text" ACCESSKEY="Y" TITLE="Displays the type of control that the generated variable will be based on." READONLY TABINDEX="7">
+														</SPAN>
+													</TD>
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+													<TD VALIGN="TOP">
+														<SPAN CLASS="itemText" TITLE="Enter the maximum characters for the variable." ID="max_chars_title">
+															<LABEL FOR="MAX_CHARS" ID="MAX_CHARS_LABEL">Ma<U>x</U> chars:</LABEL>
+															<BR>
+															<INPUT CLASS="sideBtnThreeColumn" TYPE="text" ID="MAX_CHARS" ACCESSKEY="X" TITLE="Enter the maximum characters for the variable." TABINDEX="8">
+														</SPAN>
+													</TD>
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+												</TR>
+												<TR>
+													<TD VALIGN="TOP" HEIGHT="10" COLSPAN="7">
+														&nbsp;
+													</TD>
+												</TR>
+												<TR VALIGN="TOP">
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+													<TD VALIGN="TOP">
+														&nbsp;
+													</TD>
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+													<TD VALIGN="TOP">
+														<SPAN CLASS="itemTextIndent" TITLE="Enter the minimum value for the variable." ID="min_value_title">
+															<LABEL FOR="MIN_VALUE" ID="MIN_VALUE_LABEL">Min val<U>u</U>e:</LABEL>
+															<BR>
+															<INPUT CLASS="sideBtn2" TYPE="text" ID="MIN_VALUE" ACCESSKEY="U" TITLE="Enter the minimum value for the variable." TABINDEX="9">
+														</SPAN>
+													</TD>
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+													<TD VALIGN="TOP">
+														<SPAN CLASS="itemText" TITLE="Enter the maximum value for the variable." ID="max_value_title">
+															<LABEL FOR="MAX_VALUE" ID="MAX_VALUE_LABEL">Max valu<U>e</U>:</LABEL>
+															<BR>
+															<INPUT CLASS="sideBtnThreeColumn" TYPE="text" ID="MAX_VALUE" ACCESSKEY="E" TITLE="Enter the maximum value for the variable." TABINDEX="10">
+														</SPAN>
+													</TD>
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+												</TR>
+												<TR>
+													<TD VALIGN="TOP" HEIGHT="10" COLSPAN="7">
+														&nbsp;
+													</TD>
+												</TR>
+												<TR VALIGN="TOP">
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+													<TD VALIGN="TOP">
+														&nbsp;
+													</TD>
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+													<TD VALIGN="TOP">
+														<NOBR><SPAN CLASS="itemTextIndent" TITLE="If the variable is based on an ActiveX Control, the wizard will create a wrapper class. Enter the header file to insert the class declaration." ID="header_file_title">
+																<LABEL FOR="HEADER_FILE" ID="HEADER_FILE_LABEL">.h <U>f</U>ile:</LABEL>
+																<BR>
+																<INPUT CLASS="sideBtn2" TYPE="text" ID="HEADER_FILE" ACCESSKEY="F" TITLE="If the variable is based on an ActiveX Control, the wizard will create a wrapper class. Enter the header file to insert the class declaration." TABINDEX="11" STYLE="WIDTH:144PX;">
+																<BUTTON CLASS="buttonClass3Custom" ID="BrowseBtnHeader" ACCESSKEY="" TYPE="BUTTON" TITLE="Browse for header file" onClick="OnBrowseHeaderFile();" TABINDEX="12">
+																	...</BUTTON> </SPAN></NOBR>
+													</TD>
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+													<TD VALIGN="TOP">
+														<NOBR><SPAN CLASS="itemText" ID="impl_file_title" TITLE="If the variable is based on an ActiveX Control, the wizard will create a wrapper class. Enter the header file to insert the class declaration.">
+																<LABEL FOR="IMPL_FILE" ID="IMPL_FILE_LABEL">.c<U>p</U>p file:</LABEL>
+																<BR>
+																<INPUT CLASS="sideBtn21" TYPE="text" ID="IMPL_FILE" ACCESSKEY="P" TITLE="If the variable is based on an ActiveX Control, the wizard will create a wrapper class. Enter the header file to insert the class declaration." TABINDEX="13">
+																<BUTTON CLASS="buttonClass3Custom" ID="BrowseBtnImpl" ACCESSKEY="" TYPE="BUTTON" TITLE="Browse for implementation file" onClick="OnBrowseImplFile();" TABINDEX="14">
+																	...</BUTTON> </SPAN></NOBR>
+													</TD>
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+												</TR>
+												<TR VALIGN="TOP">
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+													<TD VALIGN="TOP" COLSPAN="5">
+														<SPAN CLASS="itemText" ID="comment_title" TITLE="Enter the comment to appear above the variable declaration.">
+															<NOBR><LABEL FOR="COMMENT" ID="COMMENT_LABEL">Co<U>m</U>ment (// notation not
+																	required):</LABEL> </NOBR>
+															<BR>
+															<INPUT CLASS="COMMENT" ID="COMMENT" TYPE="text" ACCESSKEY="m" TITLE="Enter the comment to appear above the variable declaration." TABINDEX="15">
+														</SPAN>
+													</TD>
+													<TD VALIGN="TOP" WIDTH="12">
+														&nbsp;
+													</TD>
+												</TR>
+												<TR>
+													<TD VALIGN="TOP" HEIGHT="100%" COLSPAN="7">
+														&nbsp;
+													</TD>
+												</TR>
+											</TABLE>
+											<!--CLOSE OF CONTENT//-->
+										</TD>
+									</TR>
+									<TR VALIGN="BOTTOM">
+										<TD>
+											<!--OPEN OF BUTTON HTML//-->
+											<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+												<COL WIDTH="12">
+												<COL>
+												<COL WIDTH="75">
+												<COL WIDTH="4">
+												<COL WIDTH="75">
+												<COL WIDTH="4">
+												<COL WIDTH="75">
+												<COL WIDTH="12">
+												<TR>
+													<TD VALIGN="TOP" CLASS="RULE" COLSPAN="8" HEIGHT="2">
+														<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+															<TR VALIGN="TOP">
+																<TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW">
+																</TD>
+																<TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW">
+																</TD>
+															</TR>
+														</TABLE>
+													</TD>
+												</TR>
+												<TR>
+													<TD VALIGN="TOP" HEIGHT="11" COLSPAN="8">
+														&nbsp;
+													</TD>
+												</TR>
+												<TR>
+													<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+														&nbsp;
+													</TD>
+													<TD VALIGN="TOP" HEIGHT="23">
+														&nbsp;
+													</TD>
+													<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+														<BUTTON CLASS="BUTTONS" ID="FinishBtn" onClick="OnFinish(document);">Finish</BUTTON>
+													</TD>
+													<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+														&nbsp;
+													</TD>
+													<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+														<BUTTON CLASS="BUTTONS" ID="CancelBtn" onClick="window.external.Finish(document, 'cancel');">
+															Cancel</BUTTON>
+													</TD>
+													<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+														&nbsp;
+													</TD>
+													<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+														<BUTTON CLASS="BUTTONS" ID="HelpBtn" onClick="window.external.OnHelp('vc.codewiz.variable.overview');">
+															Help</BUTTON>
+													</TD>
+													<TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+														&nbsp;
+													</TD>
+												</TR>
+												<TR>
+													<TD VALIGN="TOP" HEIGHT="12" COLSPAN="8">
+														&nbsp;
+													</TD>
+												</TR>
+											</TABLE>
+											<!--CLOSE OF BUTTON HTML//-->
+										</TD>
+									</TR>
+								</TABLE>
+								<!--CLOSE OF CONTENT AND BUTTON TABLE//-->
+							</TD>
+						</TR>
+					</TABLE>
+					<!--CLOSE OF ALL ENCOMPASSING TABLE ROW TWO//-->
+				</TD>
+			</TR>
+		</TABLE>
+	</BODY>
+</HTML>
+<SCRIPT LANGUAGE="JSCRIPT">
+
+var oControlNames = document.all.tags("SELECT").item("CONTROL_NAME");
+var oCategories = document.all.tags("SELECT").item("VARIABLE_CATEGORY");
+var oTypeLibs = window.external.TypeLibs;
+var oControls;
+
+var     arr_ControlTypes; //0-lbound VBArray of the controls and their types
+var g_aoControlProperties = new Array();
+var g_aoControlPropertyTypes = new Array();
+var g_aoControlPropertyDispids = new Array();
+
+var strDialogId = "";
+var bMfcProject = false;
+var bHasDDXText = false;
+var strDDXTextVarName = "";
+var bHasDDXControl = false;
+var strDDXControlVarName = "";
+var bInUpdateControls = false;
+var strDispID = "";
+
+var VALIDATE_MIN = 1;
+var VALIDATE_MAX = 2;
+
+function InitDocument(document)
+{
+	setDirection();
+
+	if (window.external.FindSymbol("DOCUMENT_FIRST_LOAD"))
+	{
+		var L_WizardDialogTitle_Text = "Add Member Variable Wizard";
+		window.external.AddSymbol("WIZARD_DIALOG_TITLE", L_WizardDialogTitle_Text);
+		window.external.SetDefaults(document);
+	}
+
+	window.external.Load(document);
+
+	bMfcProject = IsMFCProject(window.external.ProjectObject, false);
+	var oExtender;
+	if (bMfcProject)
+	{
+		oExtender = window.external.ParentObject.Extender("VCDialog");
+		if (oExtender)
+		{
+			strDialogId = oExtender.DialogID;
+		}
+		if (typeof(strDialogId) != "undefined" && strDialogId.length)
+		{
+			if (PopulateControlNamesAndTypes(strDialogId))
+				OnControlId();
+		}
+		else
+		{
+			OnControlId();
+		}
+	}
+
+	if (oExtender==null || CONTROL_TYPE.value == "undefined" || CONTROL_TYPE.value == "")
+	{
+		CONTROL_TYPE.value = "";
+		CONTROL_TYPE.text = "";
+		DisableControlVar();
+		OnActiveXControl(false);
+	}
+
+	UpdateControls();
+
+	if (VARIABLE_CATEGORY.disabled || VARIABLE_CATEGORY.options[VARIABLE_CATEGORY.selectedIndex].value != "Control")
+		VariableType.ListIndex = 4;  // default variable type for non-control is int
+}
+
+function Next(document, linkto)
+{
+	window.external.Next(document, linkto);
+}
+
+function OnFinish(document)
+{
+	//in case of ActiveX control set the CONTROL_TYPE.value to the GUID of the control
+	//as the OnFinish() in Default.JS script will access it via FindSymbol("CONTROL_TYPE")
+	//
+	CONTROL_TYPE.value = CONTROL_TYPE.text;
+	VARIABLE_TYPE.value = VariableType.Value;
+
+	var bUpdate = VARIABLE_NAME.disabled;
+	if (bUpdate)
+	{
+		window.external.AddSymbol("UPDATE", true);
+	}
+	else
+	{
+		bValidating = true;
+		if (!ValidateInput())
+		{
+			bValidating = false;
+			return;
+		}
+		bValidating = false;
+	}
+
+	//CONTROL_TYPE.value contains the GUID of ActiveX control by now
+	//
+	if (!CONTROL_TYPE.disabled && IsActiveXControl(CONTROL_TYPE.value) &&
+		!HEADER_FILE.disabled && !IMPL_FILE.disabled)
+	{
+		var strFormattedGuid = window.external.FormatGuid(CONTROL_TYPE.value, 2);
+		window.external.AddSymbol("CONTROL_CLSID", strFormattedGuid);
+
+		try
+		{
+			var strTypeLib = window.external.GetActiveXControlTypeLib(CONTROL_TYPE.value);
+		}
+		catch(e)
+		{
+			strTypeLib = null;
+		}
+
+		if (!strTypeLib)
+		{
+			var L_WarningLocation_Text = "Error in generating ActiveX Control wrapper:\r\n";
+			var L_Warning1_Text = "Cannot access resource information.  Check if the .rc file is opened in another editor.";
+
+			window.external.ReportError(L_WarningLocation_Text + L_Warning1_Text);
+			return;
+		}
+
+		try
+		{
+			var oTypeLib = oTypeLibs.item(strTypeLib);
+			window.external.AddSymbol("CLASS_ENUMS", GenerateActiveXControlClassEnums(oTypeLib));
+			window.external.AddSymbol("CLASS_TEXT", GenerateActiveXControlClassText(oTypeLib));
+		}
+		catch(e)
+		{
+			window.external.ReportError();
+			return;
+		}
+
+		window.external.AddSymbol("CLASS_NAME", VARIABLE_TYPE.value);
+		window.external.AddSymbol("PROP_DISPID", strDispID);
+		var glob = window.external.ProjectObject.Globals;
+		if(!glob.VariableExists(CONTROL_TYPE.value))
+		{
+			//store the GUIDS for ActiveX control wrapper we've added in the "globals" section of the project file
+			glob.VariableValue(CONTROL_TYPE.value) = VARIABLE_TYPE.value;
+			glob.VariablePersists(CONTROL_TYPE.value) = true;
+		}
+	}
+
+	OnWizFinish(document);
+}
+
+function OnBrowseHeaderFile()
+{
+	var strFile;
+	try
+	{
+		L_Title1_Text = "VS Wizards Select File";
+		L_Title2_Text = "Visual C++ Header Files (*.h)\0*.h\0\0";
+		strFile = window.external.GetOpenFileNameViaDlg(L_Title1_Text, window.external.FindSymbol("PROJECT_PATH"), L_Title2_Text, HEADER_FILE.value);
+	}
+	catch(e)
+	{
+		if (e.number != OLE_E_PROMPTSAVECANCELLED)
+		{
+			var L_ErrMsg2_Text = "Error in OnBrowseHeaderFile()";
+			if (e.description.length != 0)
+			{
+				L_ErrMsg2_Text += ": ";
+				L_ErrMsg2_Text += e.description;
+			}
+			window.external.ReportError(L_ErrMsg2_Text);
+		}
+		return;
+	}
+	HEADER_FILE.value = strFile;
+}
+
+function OnBrowseImplFile()
+{
+	var strFile;
+	try
+	{
+		L_Title3_Text = "VS Wizards Select File";
+		L_Title4_Text = "Visual C++ Files (*.cpp;*.h;*.inl;*.c)\0*.cpp;*.h;*.inl;*.c\0\0";
+		strFile = window.external.GetOpenFileNameViaDlg(L_Title3_Text, window.external.FindSymbol("PROJECT_PATH"), L_Title4_Text, IMPL_FILE.value);
+	}
+	catch(e)
+	{
+		if (e.number != OLE_E_PROMPTSAVECANCELLED)
+		{
+			var L_ErrMsg3_Text = "Error in OnBrowseImplFile()";
+			if (e.description.length != 0)
+			{
+				L_ErrMsg3_Text += ": ";
+				L_ErrMsg3_Text += e.description;
+			}
+			window.external.ReportError(L_ErrMsg3_Text);
+		}
+		return;
+	}
+	IMPL_FILE.value = strFile;
+}
+
+function ValidateCharType(strVal)
+{
+	var nVal = strVal;
+	if (nVal == "SCHAR_MIN")
+		nVal = -128;
+	if (nVal == "SCHAR_MAX")
+		nVal = 127;
+
+	if (isNaN(parseInt(nVal)))
+	{
+		if (nVal.length == 1)
+		{
+			nVal = nVal.charCodeAt(0);
+		}
+		else
+		{
+			return NaN;
+		}
+	}
+	nVal = new Number(nVal);
+	if (nVal < -128 || nVal > 127)
+		return NaN;
+	return nVal;
+}
+
+function ValidateUCharType(strVal)
+{
+	var nVal = strVal;
+
+	if (nVal == "UCHAR_MAX")
+		nVal = 0xff;
+
+	if (isNaN(parseInt(nVal)))
+	{
+		if (nVal.length == 1)
+		{
+			nVal = nVal.charCodeAt(0);
+		}
+		else
+		{
+			return NaN;
+		}
+	}
+	nVal = new Number(nVal);
+	if (nVal < 0 || nVal > 0xff)
+		return NaN;
+	return nVal;
+}
+
+function ValidateShortType(strVal)
+{
+	var nVal = strVal;
+
+	if (nVal == "SHRT_MIN")
+		nVal = -32768;
+
+	if (nVal == "SCHAR_MAX")
+		nVal = 32767;
+
+	nVal = new Number(nVal);
+	if (nVal < -32768 || nVal > 32767)
+		return NaN;
+	return nVal;
+}
+
+function ValidateUShortType(strVal)
+{
+	var nVal = strVal;
+
+	if (nVal == "USHRT_MAX")
+		nVal = 0xffff;
+
+	nVal = new Number(nVal);
+	if (nVal < 0 || nVal > 0xffff)
+		return NaN;
+	return nVal;
+}
+
+function ValidateIntType(strVal)
+{
+	var nVal = strVal;
+
+	if (nVal == "INT_MIN" || nVal == "LONG_MIN")
+		nVal = -2147483648;
+
+	if (nVal == "INT_MAX" || nVal == "LONG_MAX")
+		nVal = 2147483647;
+
+	nVal = new Number(nVal);
+	if (nVal < -2147483648 || nVal > 2147483647)
+		return NaN;
+	return nVal;
+}
+
+function ValidateUIntType(strVal)
+{
+	var nVal = strVal;
+
+	if (nVal == "UINT_MAX" || nVal == "ULONG_MAX")
+		nVal = 0xffffffff;
+
+	nVal = new Number(nVal);
+	if (nVal < 0 || nVal > 0xffffffff)
+		return NaN;
+	return nVal;
+}
+
+function ValidateInt64Type(strVal)
+{
+	var nVal = strVal;
+
+	if (nVal == "_I64_MIN")
+		nVal = -9223372036854775808;
+
+	if (nVal == "INT_MAX")
+		nVal = 9223372036854775807;
+
+	nVal = new Number(nVal);
+	if (nVal < -9223372036854775808 || nVal > 9223372036854775807)
+		return NaN;
+	return nVal;
+}
+
+function ValidateUInt64Type(strVal)
+{
+	var nVal = strVal;
+
+	if (nVal == "_UI64_MAX")
+		nVal = 0xffffffffffffffff;
+
+	nVal = new Number(nVal);
+	if (nVal < 0 || nVal > 0xffffffffffffffff)
+		return NaN;
+	return nVal;
+}
+
+function ValidateFloatType(strVal)
+{
+	var nFloatMax = Math.pow(2, 128);
+	var nFloatMin = -nFloatMax;
+
+	var nVal = strVal;
+	if (nVal == "-FLT_MAX")
+		nVal = nFloatMin;
+
+	if (nVal == "FLT_MAX")
+		nVal = nFloatMax;
+
+	nVal = new Number(nVal);
+	if (nVal < nFloatMin || nVal > nFloatMax)
+		return NaN;
+	return nVal;
+}
+
+function ValidateDoubleType(strVal)
+{
+	var nDoubleMax = Number.MAX_VALUE;
+	var nDoubleMin = -nDoubleMax;
+	
+	var nVal = strVal;
+	if (nVal == "-DBL_MAX")
+		nVal = nDoubleMin;
+
+	if (nVal == "DBL_MAX")
+		nVal = nDoubleMax;
+
+	nVal = new Number(nVal);
+	if (nVal < nDoubleMin || nVal > nDoubleMax)
+		return NaN;
+	return nVal;
+}
+
+function ValidateVal(strVarType, strVal, validationQuery)
+{
+	var fMin;
+	if (validationQuery == VALIDATE_MIN)
+		fMin = true;
+	else if (validationQuery == VALIDATE_MAX)
+		fMin = false;
+	else
+		return false;
+
+	var nVal = 0;
+	
+	switch(strVarType)
+	{
+	case "char" :
+	case "CHAR" :
+		{
+			if (strVal == "")
+				strVal = fMin ? "SCHAR_MIN" : "SCHAR_MAX";
+			nVal = ValidateCharType(strVal);
+			break;
+		}
+
+	case "unsigned char" :
+	case "UCHAR" :
+	case "BYTE" :
+	case "byte" :
+		{
+			if (strVal == "")
+				strVal = fMin ? 0 : "UCHAR_MAX";
+			nVal = ValidateUCharType(strVal);
+			break;
+		}
+
+	case "short" :
+	case "SHORT" :
+		{
+			if (strVal == "")
+				strVal = fMin ? "SHRT_MIN" : "SHRT_MAX";
+			nVal = ValidateShortType(strVal);
+			break;
+		}
+	case "unsigned short" :
+	case "USHORT" :
+	case "WORD" :
+		{
+			if (strVal == "")
+				strVal = fMin ? 0 : "USHRT_MAX";
+			nVal = ValidateShortType(strVal);
+			break;
+		}
+	case "int" :
+	case "INT" :
+	case "long" :
+	case "LONG" :
+		{
+			if (strVal == "")
+				strVal = fMin ? "INT_MIN" : "INT_MAX";
+			nVal = ValidateIntType(strVal);
+			break;
+		}
+	case "unsigned int" :
+	case "UINT" :
+	case "unsigned long" :
+	case "ULONG" :
+	case "DWORD" :
+		{
+			if (strVal == "")
+				strVal = fMin ? 0 : "UINT_MAX";
+			nVal = ValidateUIntType(strVal);
+			break;
+		}
+	case "__int64" :
+	case "LONGLONG" :
+		{
+			if (strVal == "")
+				strVal = fMin ? "_I64_MIN" : "_I64_MAX";
+			nVal = ValidateInt64Type(strVal);
+			break;
+		}
+	case "unsigned __int64" :
+	case "ULONGLONG" :
+		{
+			if (strVal == "")
+				strVal = fMin ? 0 : "_UI64_MAX";
+			nVal = ValidateUInt64Type(strVal);
+			break;
+		}
+	case "float" :
+	case "FLOAT" :
+		{
+			if (strVal == "")
+				strVal = fMin ? "-FLT_MAX" : "FLT_MAX";
+			nVal = ValidateFloatType(strVal);
+			break;
+		}
+	case "double" :
+	case "DOUBLE" :
+		{
+			if (strVal == "")
+				strVal = fMin ? "-DBL_MAX" : "DBL_MAX";
+			nVal = ValidateDoubleType(strVal);
+			break;
+		}
+	default :
+		return true;
+	}
+
+	if (isNaN(nVal))
+	{
+		return false;
+	}
+
+	return true;
+}
+
+function ValidateMinMax(strVarType, strMin, strMax)
+{
+	var L_InvalidMINMAX_Text = "Invalid values for Minimum & Maximum";
+	var L_InvalidMAX_Text = "Invalid value for Maximum";
+	var L_InvalidMIN_Text = "Invalid value for Minimum";
+	var L_InvalidMAXLESSMIN_Text = "Maximum value less than Minimum value";
+
+	if (strMin == "" && strMax == "")
+		return true;
+
+	if (strMin == "" && strMax != "")
+	{
+		var L_EmptyMIN_Text = "Minimum value is required if Maximum value is filled in.";
+		window.external.ReportError(L_EmptyMIN_Text);
+		MIN_VALUE.focus();
+		return false;
+	}
+	else if (strMax == "" && strMin != "")
+	{
+		var L_EmptyMAX_Text = "Maximum value is required if Minimum value is filled in.";
+	    window.external.ReportError(L_EmptyMAX_Text);
+		MAX_VALUE.focus();
+		return false;
+	}
+
+	var nMin = ValidateVal(strVarType, strMin, VALIDATE_MIN);
+	var nMax = ValidateVal(strVarType, strMax, VALIDATE_MAX);
+
+	if (isNaN(nMin) && isNaN(nMax))
+	{
+		window.external.ReportError(L_InvalidMINMAX_Text);
+		MIN_VALUE.focus();
+		return false;
+	}
+	else if (isNaN(nMin))
+	{
+		window.external.ReportError(L_InvalidMIN_Text);
+		MIN_VALUE.focus();
+		return false;
+	}
+	else if (isNaN(nMax))
+	{
+		window.external.ReportError(L_InvalidMAX_Text);
+		MAX_VALUE.focus();
+		return false;
+	}
+	if (nMin > nMax)
+	{
+		window.external.ReportError(L_InvalidMAXLESSMIN_Text);
+		MIN_VALUE.focus();
+		return false;
+	}
+	return true;
+}
+
+function ValidateInput()
+{
+	var bValid = true;
+
+	if (HEADER_FILE.disabled == false)
+	{
+		if (HEADER_FILE.value == "")
+		{
+			var L_EmptyHdrFile_Text = "Specify header file name of the control variable";
+			window.external.ReportError(L_EmptyHdrFile_Text);
+			HEADER_FILE.focus();
+			return false;
+		}
+		if (!CanUseFileName(HEADER_FILE.value, true))
+		{
+			HEADER_FILE.focus();
+			return false;
+		}
+		bValid = ValidateFileNameAndEnsureInProject(HEADER_FILE.value, vsCMValidateFileExtCpp);
+		if (!bValid)
+		{
+			window.external.ReportError();
+			HEADER_FILE.focus();
+			return false;
+		}
+	}
+
+	if (IMPL_FILE.disabled == false)
+	{
+		if (IMPL_FILE.value == "")
+		{
+			var L_EmptyImplFile_Text = "Specify Implementation file name of the control variable" ;
+			window.external.ReportError(L_EmptyImplFile_Text);
+			IMPL_FILE.focus();
+			return false;
+		}
+		if (!CanUseFileName(IMPL_FILE.value, true))
+		{
+			IMPL_FILE.focus();
+			return false;
+		}
+		bValid = ValidateFileNameAndEnsureInProject(IMPL_FILE.value, vsCMValidateFileExtCppSource);
+		if (!bValid)
+		{
+			window.external.ReportError();
+			IMPL_FILE.focus();
+			return false;
+		}
+	}
+
+	var strType = TrimStr(VARIABLE_TYPE.value);
+
+	if(strType=="")
+	{
+		var L_Invalid3_Text = "The variable type cannot be blank.";
+		window.external.ReportError(L_Invalid3_Text);
+		VariableType.focus();
+		return false;
+	}
+	if(strType=="void")
+	{
+		var L_Invalid4_Text = "The variable type cannot be void.";
+		window.external.ReportError(L_Invalid4_Text);
+		VariableType.focus();
+		return false;
+	}
+
+	var strName = TrimStr(VARIABLE_NAME.value);
+	if(strName == "")
+	{
+		var L_Invalid5_Text = "The variable name cannot be blank.";
+		window.external.ReportError(L_Invalid5_Text);
+		VARIABLE_NAME.focus();
+		return false;
+	}
+
+	bValid = window.external.ParentObject.ValidateMember(strName, vsCMElementVariable, VARIABLE_TYPE.value);
+
+	if (!bValid)
+	{
+		window.external.ReportError();
+		VARIABLE_NAME.focus();
+		return false;
+	}
+
+	VARIABLE_NAME.value = strName;
+	VARIABLE_TYPE.value = strType;
+
+	if (EnableMinMax(strType))
+	{
+		bValid = ValidateMinMax(strType, MIN_VALUE.value, MAX_VALUE.value);
+	}
+	return bValid;
+}
+
+function IsListed(strType)
+{
+	var len = VariableType.Count;
+	for (i = 0; i < len; i++)
+	{
+		if (strType == VariableType.Item(i))
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+function DisableControlVar()
+{
+	CONTROL_VARIABLE.disabled = true;
+	control_var_title.disabled = true;
+	CONTROL_NAME.disabled = true;
+	control_name_title.disabled = true;
+	CONTROL_TYPE.disabled = true;
+	control_type_title.disabled = true;
+
+	CATEGORY.disabled = true;
+	VARIABLE_CATEGORY.disabled = true;
+}
+
+function OnControlId()
+{
+	if (oControlNames.selectedIndex == -1)
+	{
+		oControlNames.selectedIndex = 0;
+	}
+	if (arr_ControlTypes!=null && 0 <= arr_ControlTypes.ubound(2))
+	{
+		CONTROL_TYPE.text = arr_ControlTypes.getItem(1, oControlNames.selectedIndex);
+
+		// in case of ActiveX control, we show CONTROL_TYPE.value as "OCX" for the user
+		// but save the GUID of the control in CONTROL_TYPE.text
+		//
+		CONTROL_TYPE.value = IsActiveXControl(CONTROL_TYPE.text) ? "OCX" : CONTROL_TYPE.text;
+
+		UpdateValueControl();
+		OnControlVariable();
+	}
+}
+
+function OnActiveXControl(bControlVariable)
+{
+	var nSelectedIndex = VARIABLE_CATEGORY.selectedIndex;
+	UpdateValueControl();
+
+	var bActiveXControl = false;
+	if (!CONTROL_TYPE.disabled && IsActiveXControl(CONTROL_TYPE.text))
+	{
+		HEADER_FILE.disabled = false;
+		header_file_title.disabled = false;
+		BrowseBtnHeader.disabled = false;
+
+		IMPL_FILE.disabled = false;
+		impl_file_title.disabled = false;
+		BrowseBtnImpl.disabled = false;
+
+		PopulateCategories(true);
+		bActiveXControl = true;
+	}
+	else
+	{
+		HEADER_FILE.disabled = true;
+		header_file_title.disabled = true;
+		BrowseBtnHeader.disabled = true;
+
+		IMPL_FILE.disabled = true;
+		impl_file_title.disabled = true;
+		BrowseBtnImpl.disabled = true;
+
+		PopulateCategories(false);
+	}
+
+	VARIABLE_CATEGORY.selectedIndex = nSelectedIndex;
+	var strCategory = VARIABLE_CATEGORY.options[nSelectedIndex].value;
+
+	if (bActiveXControl)
+		PopulateVariableTypes(true, bControlVariable);
+	else
+		PopulateVariableTypes(false, bControlVariable);
+
+	VariableType.ListIndex = 0;
+	var strType = VariableType.Value;
+
+	for (i = 0; i < g_aoControlProperties.length; i++)
+	{
+		if (g_aoControlProperties[i] == strCategory)
+		{
+			strType = g_aoControlPropertyTypes[i];
+			strDispID = g_aoControlPropertyDispids[i];
+			break;
+		}
+	}
+	for (j = 0; j < VariableType.Count; j++)
+	{
+		VariableType.ListIndex = j;
+		if (VariableType.Value == strType)
+			break;
+	}
+}
+
+function PopulateCategories(bActiveXControl)
+{
+	var nIndex = 0;
+
+	if (bActiveXControl)
+	{
+		try
+		{
+			var strTypeLib = window.external.GetActiveXControlTypeLib(CONTROL_TYPE.text);
+		}
+		catch(e)
+		{
+			strTypeLib = null;
+		}
+
+		if (!strTypeLib)
+		{
+			var L_WarningNoTLB_Text = "Cannot access ActiveX Control type library. ";
+			var L_Warning1_Text = "Check if the .rc file is opened in another editor.";
+
+			window.external.ReportError(L_WarningNoTLB_Text + L_Warning1_Text);
+			return;
+		}
+		var oTypeLib = oTypeLibs.item(strTypeLib);
+		var oEnums = oTypeLib.Enums;
+		var nEnumCount = oEnums.Count;
+		var oInterfaces = oTypeLib.Interfaces;
+		var nCount = oInterfaces.Count;
+
+		var bDefaultInterface = false;
+		var oInterface;
+		for (n = 1; n <= nCount; n++)
+		{
+			oInterface = oInterfaces.item(n);
+			if (!IsInterfaceOnCoclass(oTypeLib, oInterface, CONTROL_TYPE.text))
+				continue;
+
+			if (oInterface.Default == true)
+			{
+				bDefaultInterface = true;
+				break;
+			}
+		}
+
+		if (bDefaultInterface == true)
+		{
+			var oFuncs = oInterface.Properties;
+			var funcCount = oFuncs.Count;
+			for (j = 1; j <= funcCount; j++)
+			{
+				oFunc = oFuncs.item(j);
+				var strType = oFunc.Type;
+				var strName = oFunc.Name;
+
+				var oOption = document.createElement("OPTION");
+				oOption.value = strName;
+				oOption.text = strName;
+				oOption.ID = strName.toUpperCase();
+				oCategories.add(oOption);
+
+				g_aoControlProperties[nIndex] = strName;
+				g_aoControlPropertyDispids[nIndex] = oFunc.DispID;
+
+				if (IsTypeEnum(strType, oEnums, nEnumCount))
+					strType = "long";
+				g_aoControlPropertyTypes[nIndex] = strType;
+
+				if (!IsListed(strType))
+					VariableType.AddItem(strType);
+
+				nIndex++;
+			}
+		}
+	}
+	g_aoControlProperties.length = nIndex + 1;
+	g_aoControlPropertyTypes.length = nIndex + 1;
+}
+
+function IsTypeEnum(strType, oEnums, nEnumCount)
+{
+	for (i = 1; i <=  nEnumCount; i++)
+	{
+		var oEnum = oEnums.item(i);
+		if (strType == oEnum.Name)
+			return true;
+	}
+	return false;
+}
+
+function OnControlVariable()
+{
+	var bChecked = CONTROL_VARIABLE.checked;
+
+	CONTROL_TYPE.disabled = !bChecked;
+	control_type_title.disabled = !bChecked;
+	CONTROL_NAME.disabled = !bChecked;
+	control_name_title.disabled = !bChecked;
+
+	CATEGORY.disabled = !bChecked;
+	VARIABLE_CATEGORY.disabled = !bChecked;
+
+	MIN_VALUE.disabled = !bChecked;
+	min_value_title.disabled = !bChecked;
+	MAX_VALUE.disabled = !bChecked;
+	max_value_title.disabled = !bChecked;
+	MAX_CHARS.disabled = !bChecked;
+	max_chars_title.disabled = !bChecked;
+
+	if (bMfcProject && bChecked)
+	{
+			GetDDXVariables();
+	}
+
+	OnActiveXControl(bChecked);
+	UpdateControls();
+}
+
+function OnCategory()
+{
+	OnActiveXControl(CONTROL_VARIABLE.checked);
+	UpdateControls();
+}
+
+function DisableNameAndType(bDisable)
+{
+	if (VARIABLE_NAME.disabled && !bDisable)
+		VARIABLE_NAME.value = "";
+
+	VARIABLE_NAME.disabled = bDisable;
+	ACCESS.disabled = bDisable;
+	VariableType.Enabled = !bDisable;
+}
+
+function UpdateValueControl()
+{
+	var strControlType = CONTROL_TYPE.text;
+	DisableValueType(false);
+
+	switch(strControlType)
+	{
+		case "BUTTON":
+		case "msctls_updown32":
+		case "msctls_progress32":
+		case "msctls_hotkey32":
+		case "SysListView32":
+		case "SysTreeView32":
+		case "SysTabControl32":
+		case "SysAnimate32":
+		case "SysLink":
+		case "ICON":
+				case "MfcButton":
+				case "MfcMenuButton":
+				case "MfcPropertyGrid":
+				case "MfcFontComboBox":
+				case "MfcShellList":
+				case "MfcShellTree":
+			DisableValueType(true);
+			break;
+		default:
+			if(IsActiveXControl(strControlType))
+				DisableValueType(true);
+			break;
+	}
+}
+
+function DisableValueType(bDisable)
+{
+	oCategories.options.length = 0;
+
+	var oOption1 = document.createElement("OPTION");
+	oOption1.value = "Control";
+	oOption1.text = "Control";
+	oOption1.ID = "CATEGORY_CONTROL";
+	oCategories.add(oOption1);
+
+	var oOption2 = document.createElement("OPTION");
+	oOption2.value = "Value";
+	oOption2.text = "Value";
+	oOption2.ID = "CATEGORY_VALUE";
+	oCategories.add(oOption2);
+
+	if (bDisable)
+	{
+		oOption2.removeNode(true);
+	}
+}
+
+function IsValueControlCategoryVariable()
+{
+	return !VARIABLE_CATEGORY.disabled && VARIABLE_CATEGORY.options[VARIABLE_CATEGORY.selectedIndex].value == "Value";
+}
+
+function EnableMinMax(strVarType)
+{
+	if (!IsValueControlCategoryVariable())
+	    return false; // Range checking is only supported for Value category control variables.
+
+	switch (strVarType)
+	{
+	// 8 bit
+	case "BYTE" :
+	case "byte" :
+
+	case "char" :
+	case "CHAR" :
+
+	case "unsigned char" :
+	case "UCHAR" :
+
+	// 16 bit
+
+	case "short" :
+	case "SHORT" :
+
+	case "unsigned short" :
+	case "USHORT" :
+
+	case "WORD" :
+
+	// 32 bit
+	case "int" :
+	case "INT" :
+	case "unsigned int" :
+	case "UINT" :
+
+	case "long" :
+	case "LONG" :
+	case "unsigned long" :
+	case "ULONG" :
+
+	case "DWORD" :
+
+	// 64 bit
+	case "__int64" :
+	case "unsigned __int64" :
+
+	case "LONGLONG" :
+	case "ULONGLONG" :
+
+	// float & double
+	case "float" :
+	case "FLOAT" :
+
+	case "double" :
+	case "DOUBLE" :
+
+		return true;
+	}
+
+	return false;
+}
+
+function UpdateControls()
+{
+	if (bInUpdateControls)
+		return;
+
+	bInUpdateControls = true;
+	var bControl = false;
+
+	if (!VARIABLE_CATEGORY.disabled && VARIABLE_CATEGORY.options[VARIABLE_CATEGORY.selectedIndex].value == "Control")
+		bControl = true;
+
+	var varobj;
+
+	if (bControl)
+	{
+		if (bHasDDXControl)
+		{
+			VARIABLE_NAME.value = strDDXControlVarName;
+			varobj = window.external.ParentObject.Variables.Find(strDDXControlVarName);
+		}
+		if (varobj)
+		{
+			VariableType.Value = varobj.TypeString;
+			DisableNameAndType(true);
+		}
+		else
+		{
+			DisableNameAndType(false);
+			//disable the type if it is ActiveX control wrraper and it's already been generated
+			var glob = window.external.ProjectObject.Globals;
+			if(glob.VariableExists(CONTROL_TYPE.text))
+			{
+				VariableType.Enabled = false;
+
+				HEADER_FILE.value = "";
+				IMPL_FILE.value = "";
+
+				HEADER_FILE.disabled = true;
+				header_file_title.disabled = true;
+				BrowseBtnHeader.disabled = true;
+
+				IMPL_FILE.disabled = true;
+				impl_file_title.disabled = true;
+				BrowseBtnImpl.disabled = true;
+			}		
+		}
+
+		max_value_title.disabled = true;
+		MAX_VALUE.disabled = true;
+		MAX_VALUE.value = "";
+		min_value_title.disabled = true;
+		MIN_VALUE.disabled = true;
+		MIN_VALUE.value = "";
+		max_chars_title.disabled = true;
+		MAX_CHARS.disabled = true;
+		MAX_CHARS.value = "";
+	}
+	else
+	{
+		if (bHasDDXText)
+		{
+			VARIABLE_NAME.value = strDDXTextVarName;
+			varobj = window.external.ParentObject.Variables.Find(strDDXTextVarName);
+		}
+
+		if (varobj)
+		{
+			VariableType.Value = varobj.TypeString;
+			DisableNameAndType(true);
+			var extender = varobj.Extender("MFCDialogStringVariable");
+			if (extender)
+			{
+				MAX_CHARS.value =       extender.MaxChars;
+			}
+			if (!extender)
+			{
+				extender = varobj.Extender("MFCDialogNumberVariable");
+				if (extender)
+				{
+					MAX_VALUE.value =       extender.MaxValue;
+					MIN_VALUE.value =       extender.MinValue;
+				}
+			}
+		}
+		else
+		{
+			DisableNameAndType(false);
+		}
+
+		if (IsValueControlCategoryVariable() 
+		    && (VariableType.value == "CString" || VariableType.value == "CStringA" || VariableType.value == "CStringW"))
+		{
+			max_value_title.disabled = true;
+			MAX_VALUE.disabled = true;
+			MAX_VALUE.value = "";
+			min_value_title.disabled = true;
+			MIN_VALUE.disabled = true;
+			MIN_VALUE.value = "";
+			var bEnableMaxChars = ValidateVal("int", MAX_CHARS.value, VALIDATE_MAX);
+			max_chars_title.disabled = !bEnableMaxChars;
+			MAX_CHARS.disabled = !bEnableMaxChars;
+		}
+		else
+		{
+			var bEnableMinMax = EnableMinMax(VariableType.value);
+			var bEnableMin = bEnableMinMax && ValidateVal(VariableType.value, MIN_VALUE.value, VALIDATE_MIN);
+			var bEnableMax = bEnableMinMax && ValidateVal(VariableType.value, MAX_VALUE.value, VALIDATE_MAX);
+			max_value_title.disabled = !bEnableMax;
+			MAX_VALUE.disabled = !bEnableMax;
+			min_value_title.disabled = !bEnableMin;
+			MIN_VALUE.disabled = !bEnableMin;
+			max_chars_title.disabled = true;
+			MAX_CHARS.disabled = true;
+			MAX_CHARS.value = "";
+		}
+	}
+
+	bInUpdateControls = false;
+}
+
+function PopulateControlNamesAndTypes(strDialogId)
+{
+	try
+	{
+		arr_ControlTypes = new VBArray(window.external.GetDialogControlsAndTypes(strDialogId));
+	}
+	catch(e)
+	{
+		CONTROL_VARIABLE.checked = false;
+		CONTROL_VARIABLE.disabled = true;
+		control_var_title.disabled = true;
+		return false;
+	}
+
+	var contextControlName = window.external.FindSymbol("CONTEXT_CONTROL");
+
+	for (var i = 0; i <= arr_ControlTypes.ubound(2); i++) //arr_ControlTypes.lbound(2) is always 0
+	{
+		if (!IsActiveXControl(arr_ControlTypes.getItem(1, i)) ||
+		    window.external.GetActiveXControlTypeLib(arr_ControlTypes.getItem(1, i)))
+		{
+		    var oOption = document.createElement("OPTION");
+		    oOption.value = arr_ControlTypes.getItem(0, i);
+
+		    oOption.text = oOption.value;
+		    oControlNames.add(oOption);
+
+		    if(oOption.value == contextControlName)
+		    {
+			    CONTROL_VARIABLE.checked = true;
+			    oControlNames.selectedIndex = i;
+		    }
+		}
+		else
+		{
+			var L_WarningNoTLB_Text = "Cannot access ActiveX Control type library.";
+			window.external.ReportError(arr_ControlTypes.getItem(0, i) + ":\r\n" + L_WarningNoTLB_Text);
+		}
+	}
+	return true;
+}
+
+function PopulateVariableTypes(bActiveXControl, bControlVariable)
+{
+	VariableType.Clear();
+
+	if (bControlVariable)
+	{
+		if (!VARIABLE_CATEGORY.disabled && VARIABLE_CATEGORY.options[VARIABLE_CATEGORY.selectedIndex].value != "Value")
+		{
+			var strControlClass = GetControlClass();
+			VariableType.AddItem(strControlClass);
+			VariableType.ListIndex = 0;
+		}
+		else
+			PopulateValueTypes(GetControlValueType());
+
+		VariableType.ListIndex = 0;
+	}
+	else
+	{
+		VariableType.AddItem("bool");
+		VariableType.AddItem("char");
+		VariableType.AddItem("double");
+		VariableType.AddItem("float");
+		VariableType.AddItem("int");
+		VariableType.AddItem("long");
+		VariableType.AddItem("long double");
+		VariableType.AddItem("short");
+		VariableType.AddItem("unsigned char");
+		VariableType.AddItem("unsigned int");
+		VariableType.AddItem("unsigned long");
+	}
+
+	if (bActiveXControl)
+	{
+		for (n = 0; n < g_aoControlPropertyTypes.length; n++)
+		{
+			var strType = g_aoControlPropertyTypes[n];
+			if (!IsListed(strType))
+				VariableType.AddItem(strType);
+		}
+	}
+}
+
+function PopulateValueTypes(strTypes)
+{
+	var len = strTypes.length;
+	var strType = "";
+
+	for (i = 0; i < len; i++)
+	{
+		if (strTypes.substr(i,1) == ",")
+		{
+			VariableType.AddItem(strType);
+			strType = "";
+			continue;
+		}
+		strType += strTypes.substr(i,1);
+	}
+
+	if (strType != "")
+		VariableType.AddItem(strType);
+}
+
+function IsActiveXControl(strControlType)
+{
+	//ActiveXContol type string is persisted as its coclass' GUID, it must contain the '{' and '}' chars
+
+	if(strControlType.indexOf("{") != -1 && strControlType.indexOf("}") != -1)
+		return true;
+
+	return false;
+}
+
+function GetDDXVariables()
+{
+	var classObj = window.external.ParentObject;
+	bHasDDXText     = false;
+	bHasDDXControl = false;
+	strDDXTextVarName = "";
+	strDDXControlVarName = "";
+
+	for (var i=1; i <= classObj.Variables.Count; i++)
+	{
+			var extender = classObj.Variables(i).Extender("MFCDialogVariable");
+			try
+			{
+				if (extender && extender.IDType != -1 && extender.ControlID == CONTROL_NAME.value)
+				{
+						if (extender.IDType == 0)
+						{
+								bHasDDXText = true;
+								strDDXTextVarName = classObj.Variables(i).Name;
+						}
+						else if (extender.IDType == 1)
+						{
+								bHasDDXControl = true;
+								strDDXControlVarName = classObj.Variables(i).Name;
+						}
+				}
+			}
+			catch(e)
+			{
+				continue;
+			}
+	}
+}
+
+function GetControlClass()
+{
+	var strControlType = CONTROL_TYPE.text;
+	var strControlClass = "";
+
+	switch(strControlType)
+	{
+		case "SPLIT":
+			strControlClass = "CSplitButton";
+			break;
+		case "BUTTON":
+		case "COMMANDLINK":
+			strControlClass = "CButton";
+			break;
+		case "CHECK":
+		case "RADIO":
+			strControlClass = "CButton";
+			break;
+		case "SCROLLBAR":
+			strControlClass = "CScrollBar";
+			break;
+		case "msctls_trackbar32":
+			strControlClass = "CSliderCtrl";
+			break;
+		case "msctls_updown32":
+			strControlClass = "CSpinButtonCtrl";
+			break;
+		case "msctls_progress32":
+			strControlClass = "CProgressCtrl";
+			break;
+		case "msctls_hotkey32":
+			strControlClass = "CHotKeyCtrl";
+			break;
+		case "SysListView32":
+			strControlClass = "CListCtrl";
+			break;
+		case "SysTreeView32":
+			strControlClass = "CTreeCtrl";
+			break;
+		case "SysTabControl32":
+			strControlClass = "CTabCtrl";
+			break;
+		case "SysAnimate32":
+			strControlClass = "CAnimateCtrl";
+			break;
+		case "RICHEDIT":
+		case "RichEdit20A":
+			strControlClass = "CRichEditCtrl";
+			break;
+		case "SysDateTimePick32":
+			strControlClass = "CDateTimeCtrl";
+			break;
+		case "SysMonthCal32":
+			strControlClass = "CMonthCalCtrl";
+			break;
+		case "SysIPAddress32":
+			strControlClass = "CIPAddressCtrl";
+			break;
+		case "ComboBoxEx32":
+			strControlClass = "CComboBoxEx";
+			break;
+		case "EDIT":
+			strControlClass = "CEdit";
+			break;
+		case "LISTBOX":
+			strControlClass = "CListBox";
+			break;
+		case "COMBOBOX":
+			strControlClass = "CComboBox";
+			break;
+		case "CUSTOM":
+			break;
+		case "GROUPBOX":
+		case "ICON":
+		case "LTEXT":
+		case "CTEXT":
+		case "RTEXT":
+			strControlClass = "CStatic";
+			break;
+		case "SysLink":
+			strControlClass = "CLinkCtrl";
+			break;
+		case "msctls_netaddress":
+			strControlClass = "CNetAddressCtrl";
+			break;
+	    	case "MfcButton":
+			strControlClass = "CMFCButton";
+			break;
+	    	case "MfcColorButton":
+			strControlClass = "CMFCColorButton";
+			break;
+	    	case "MfcFontComboBox":
+			strControlClass = "CMFCFontComboBox";
+			break;
+	    	case "MfcMaskedEdit":
+			strControlClass = "CMFCMaskedEdit";
+			break;
+	    	case "MfcMenuButton":
+			strControlClass = "CMFCMenuButton";
+			break;
+	    	case "MfcPropertyGrid":
+			strControlClass = "CMFCPropertyGridCtrl";
+			break;
+	    	case "MfcShellList":
+			strControlClass = "CMFCShellListCtrl";
+			break;
+	    	case "MfcShellTree":
+			strControlClass = "CMFCShellTreeCtrl";
+			break;
+	    	case "MfcLink":
+			strControlClass = "CMFCLinkCtrl";
+			break;
+	   	case "MfcEditBrowse":
+			strControlClass = "CMFCEditBrowseCtrl";
+			break;
+	    	case "MfcVSListBox":
+			strControlClass = "CVSListBox";
+			break;
+		default:
+			if(IsActiveXControl(strControlType))
+			{
+				strControlClass = SetActiveXClassWrapperName(strControlType);
+			}
+			break;
+	}
+
+	return strControlClass;
+}
+
+function SetActiveXClassWrapperName(strControlType)
+{
+	var glob = window.external.ProjectObject.Globals;
+	//check if the formatted GUID for strControlType wrapper exists in "globals" section of the project file
+	var strControlClass;
+	if(glob.VariableExists(strControlType))
+	{       //yes, it exists, so use its class name and don't allow to pickup any different name
+		strControlClass = glob.VariableValue(strControlType);
+		//the control wrapper class name and file name fields will be disabled (no need to change)
+		//and the control wrapper class not regenerated
+	}
+	else
+	{       //it does not exist, construct the new class name, and filename where the wrapper can be implemented
+		//the control wrappere class name and file name fields will stay enabled in case user wants to change it
+		strControlClass = oControlNames.options[oControlNames.selectedIndex].value;
+		var strControlClassRoot = strControlClass.substr(4, strControlClass.length);
+		strControlClass = "C" + strControlClassRoot;
+
+		var strControlClassLowerCasePart = strControlClass.substr(2, strControlClass.length).toLowerCase();
+		var strControlClassUpperCasePart = strControlClass.substr(0, 2).toUpperCase();
+
+		strControlClass = strControlClassUpperCasePart + strControlClassLowerCasePart;
+		HEADER_FILE.value = strControlClassRoot.toLowerCase() + ".h";
+		IMPL_FILE.value = strControlClassRoot.toLowerCase() + ".cpp";
+	}
+
+	return strControlClass;
+}
+
+function GetControlValueType()
+{
+	var strControlValueType = "";
+	var strControlType = CONTROL_TYPE.text;
+
+	switch(strControlType)
+	{
+		case "CHECK":
+		case "RADIO":
+			strControlValueType = "BOOL,int";
+			break;
+		case "COMBOBOX":
+		case "LISTBOX":
+		case "ComboBoxEx32":
+				case "MfcVSListBox":
+			strControlValueType = "CString,int";
+			break;
+		case "SCROLLBAR":
+		case "msctls_trackbar32":
+			strControlValueType = "int";
+			break;
+		case "EDIT":
+		case "RICHEDIT":
+		case "RichEdit20A":
+		case "GROUPBOX":
+		case "LTEXT":
+		case "CTEXT":
+		case "RTEXT":
+				case "MfcMaskedEdit":
+				case "MfcEditBrowse":
+			strControlValueType = "CString,BYTE,COleCurrency,COleDateTime,DECIMAL,double,DWORD,FILETIME,float,GUID,int,long,LONGLONG,short,UINT,ULONGLONG";
+			break;
+		case "SysDateTimePick32":
+			strControlValueType = "COleDateTime,CString,CTime,FILETIME";
+			break;
+		case "SysMonthCal32":
+			strControlValueType = "COleDateTime,CTime,FILETIME";
+			break;
+		case "SysIPAddress32":
+			strControlValueType = "DWORD";
+			break;
+				case "MfcColorButton":
+			strControlValueType = "COLORREF";
+			break;
+				case "MfcLink":
+						strControlValueType = "CString";
+			break;
+
+		default:
+			break;
+	}
+	return strControlValueType;
+}
+
+function GenerateActiveXControlClassEnums(oTypeLib)
+{
+	var nCount = oTypeLib.Enums.Count;
+	var strEnumText = "";
+
+	for (i = 1; i <=  nCount; i++)
+	{
+		var oEnum = oTypeLib.Enums.item(i);
+		strEnumText += oEnum.Body;
+	}
+	return strEnumText;
+}
+
+function GenerateActiveXControlClassText(oTypeLib)
+{
+	var strClassText = "";
+
+	var oInterfaces = oTypeLib.Interfaces;
+	var nCount = oInterfaces.Count;
+
+	var bGenerate_Array = new Array();
+	var Name_Array = new Array();
+	var Base_Array = new Array();
+	var i;
+	for (i = 0; i < nCount; i++)
+	{
+		Name_Array[i] = "";
+		Base_Array[i] = "";
+		bGenerate_Array[i] = false;
+
+		var oInterface = oInterfaces.item(i+1);
+
+		if (!IsInterfaceOnCoclass(oTypeLib, oInterface, CONTROL_TYPE.text) || oInterface.Default == false || oInterface.Source == true)
+			continue;
+
+		Name_Array[i] = oInterface.Name;
+		Base_Array[i] = oInterface.Base;
+		bGenerate_Array[i] = true;
+	}
+	for (i = 0; i < nCount; i++)
+	{
+		var strBase = Base_Array[i];
+		if(strBase && strBase.length && strBase!="IDispatch" && strBase!="IUnknown")
+		{
+			for(var j=0; j< nCount; j++)
+			{
+				if(strBase == Name_Array[j])
+				{
+					bGenerate_Array[j] = false;
+					break;
+				}
+			}
+		}
+	}
+	for (i = 0; i <  nCount; i++)
+	{
+		if(!bGenerate_Array[i])
+		{
+			if (Name_Array[i] != "")
+			{
+				strClassText += "// Interface: " + Name_Array[i] + " not generated, because it was a base interface for others.\n\n";
+			}
+		}
+		else
+		{
+			var oInterface = oInterfaces.item(i+1);
+
+			strClassText += "// ";
+			strClassText += Name_Array[i];
+			strClassText += "\r\n\r\n// Functions\r\n//\r\n\r\n";
+			strClassText += GetFuncText(oTypeLib, oInterface, strClassText);
+		}
+	}
+	return strClassText;
+}
+
+
+function IsInterfaceOnCoclass(oTypeLib, oInterface, ControlGuid)
+{
+	var Coclasses = oTypeLib.Coclasses;
+	var CoclassCount = Coclasses.Count;
+
+	for (cnt = 1; cnt <= CoclassCount; cnt++)
+	{
+		var oCoclass = Coclasses.item(cnt);
+		if (oCoclass.Guid == ControlGuid)
+		{
+			var oCoclassInterfaces = oCoclass.Interfaces;
+			var InterfaceCount = oCoclassInterfaces.Count;
+			for (cn = 1; cn <= InterfaceCount; cn++)
+			{
+				var oInt = oCoclassInterfaces.item(cn);
+				if (oInt.Name == oInterface.Name)
+				{
+					return true;
+				}
+			}
+		}
+	}
+	return false;
+}
+
+function GetFuncText(oTypeLib, oInterface, strOldText)
+{
+	var oFuncs = oInterface.Functions;
+	var funcCount = oFuncs.Count;
+	var strText = "";
+	var oFunc;
+
+	for (j = 1; j <= funcCount; j++)
+	{
+		var strFuncText = "\t";
+		oFunc = oFuncs.item(j);
+		if(oFunc.Name == "AddRef" || oFunc.Name == "Release" || oFunc.Name == "QueryInterface")
+			continue;
+
+		if(oFunc.Name == "CreateControl")
+		{
+			strText += "//function: " + oFunc.Name + " not generated, because its name is reserved.\n\n";
+			continue;
+		}
+		var index = strOldText.indexOf(oFunc.Name);
+		while (0 < index)
+		{
+			var prevChar = strOldText.charAt(index-1);
+			var nextChar = strOldText.charAt(index + oFunc.Name.length);
+			if( (prevChar=='(' && nextChar==')') ||
+				(prevChar==' ' && nextChar=='('))
+			{
+				strText += "//function: " + oFunc.Name + " not generated, because it was generates on other interfaces.\n\n";
+				break;
+			}
+			index = strOldText.indexOf(oFunc.Name, index+1);
+		}
+		if(0 < index)
+			continue; //the old function with the same name was found
+		// If the function has a return type we don't know about, don't generate a wrapper at all.
+		// It at least makes the project to compile.
+		if ((oFunc.TypeString != "void") && (oFunc.ReturnType == "VT_EMPTY" || oFunc.ReturnType == "VT_VOID"))
+			continue;
+		if (oFunc.TypeString != "HRESULT")
+		{
+
+			strFuncText += ((oFunc.TypeString == "BSTR") ? "CString" : oFunc.TypeString.replace("VARIANT_BOOL", "BOOL"));
+			strFuncText += " ";
+			strFuncText += oFunc.Name;
+			strFuncText += "(";
+		}
+		else
+		{
+			strFuncText += "STDMETHOD(";
+			strFuncText += oFunc.Name;
+			strFuncText += ")(";
+		}
+		var oParams = oFunc.Parameters;
+		var paramCount = oParams.Count;
+
+		for (iParam = 1; iParam <= paramCount; iParam++)
+		{
+			var oParam = oParams.item(iParam);
+			if(iParam > 1)
+				strFuncText += ", ";
+			strFuncText += (oParam.TypeString == "BSTR") ? "LPCTSTR" : oParam.TypeString.replace("VARIANT_BOOL", "BOOL");
+			strFuncText += " ";
+			if (oParam.Name.length)
+				strFuncText += oParam.Name;
+			else
+				strFuncText += "newValue";
+		}
+		strFuncText += ")\r\n\t{\r\n\t\t";
+
+		if (oFunc.ReturnType != "VT_EMPTY" && oFunc.ReturnType != "VT_VOID")
+		{
+			strFuncText += ((oFunc.TypeString == "BSTR") ? "CString" : oFunc.TypeString.replace("VARIANT_BOOL", "BOOL"));
+			strFuncText += " result;\r\n\t\t";
+		}
+
+		if (paramCount)
+		{
+			strFuncText += "static BYTE parms[] = ";
+			for (count = 1; count <= paramCount; count++)
+			{
+				strFuncText += oFunc.Parameters.item(count).VTSType;
+				strFuncText += " ";
+			}
+			strFuncText += ";\r\n\t\t";
+		}
+
+		strFuncText += "InvokeHelper(";
+		strFuncText += oFunc.DispID;
+		strFuncText += ", DISPATCH_";
+		strFuncText += oFunc.InvokeKind;
+		strFuncText += ", " + oFunc.ReturnType;
+
+		if (oFunc.ReturnType == "VT_EMPTY" || oFunc.ReturnType == "VT_VOID")
+			strFuncText += ", NULL";
+		else
+			strFuncText += ", (void*)&result";
+
+		if (paramCount)
+		{
+			strFuncText += ", parms";
+			if (oFunc.InvokeKind == "PROPERTYPUT" || oFunc.InvokeKind == "PROPERTYPUTREF")
+			{
+				if (paramCount > 1)
+				{
+					for (n = 1; n < paramCount; n++)
+					{
+						var oParam = oParams.item(n);
+						strFuncText += ", ";
+						if (oParam.VTSType == "VTS_CY" || oParam.VTSType == "VTS_VARIANT")
+							strFuncText += "&";
+						strFuncText += oParam.Name;
+					}
+					if (oParams.item(paramCount).VTSType == "VTS_CY" || oParams.item(paramCount).VTSType == "VTS_VARIANT")
+						strFuncText += ", &newValue);"
+					else
+						strFuncText += ", newValue);"
+				}
+				else
+				{
+					if (oParams.item(paramCount).VTSType == "VTS_CY" || oParams.item(paramCount).VTSType == "VTS_VARIANT")
+						strFuncText += ", &newValue);"
+					else
+						strFuncText += ", newValue);"
+				}
+			}
+			else
+			{
+				for (n = 1; n <= paramCount; n++)
+				{
+					var oParam = oParams.item(n);
+					strFuncText += ", ";
+					if (oParam.VTSType == "VTS_CY" || oParam.VTSType == "VTS_VARIANT")
+						strFuncText += "&";
+					strFuncText += oParam.Name;
+				}
+				strFuncText += ");"
+			}
+		}
+		else
+		{
+			strFuncText += ", NULL);"
+		}
+		if (oFunc.ReturnType != "VT_EMPTY" && oFunc.ReturnType != "VT_VOID")
+			strFuncText += "\r\n\t\treturn result;";
+
+		strFuncText += "\r\n\t}\r\n";
+		strText += strFuncText;
+	}
+
+	strText += "\r\n// Properties\r\n//\r\n\r\n";
+
+	var oProps = oInterface.Properties;
+	var propCount = oProps.Count;
+
+	var oEnums = oTypeLib.Enums;
+	var nEnumCount = oEnums.Count;
+	var oProp;
+
+	for (n = 1; n <= propCount; n++)
+	{
+		var strPropText = "";
+		oProp = oProps.item(n);
+		strPropText = GetPropText(oProp, oEnums, nEnumCount);
+		strText += strPropText;
+	}
+
+	return strText;
+}
+
+function GetPropText(oProp, oEnums, nEnumCount)
+{
+	var strPropTxt = "";
+	var strPropType = oProp.Type;
+	var strRetType = strPropType;
+	var strVTType = oProp.VariantType;
+
+	if (IsTypeEnum(strPropType, oEnums, nEnumCount))
+	{
+		strPropType = "long";
+		strRetType = "long";
+	}
+	else if (strVTType == "VT_UNKNOWN")
+	{
+		strPropType = "LPUNKNOWN";
+		strRetType = "LPUNKNOWN";
+	}
+	else
+	{
+		strRetType = GetReturnType(oProp.Type);
+
+		if (strRetType == "CPicture")
+		{
+			window.external.AddSymbol("INCLUDE_PICTURE", true);
+			strPropType = "LPDISPATCH";
+		}
+		else if (strRetType == "COleFont")
+		{
+			window.external.AddSymbol("INCLUDE_FONT", true);
+			strPropType = "LPDISPATCH";
+		}
+		else
+		{
+			strPropType = strRetType;
+		}
+	}
+
+
+	strPropTxt += strRetType;
+	strPropTxt += " Get";
+	strPropTxt += oProp.Name;
+	strPropTxt += "()\r\n{\r\n\t";
+	strPropTxt += strPropType;
+	strPropTxt += " result;\r\n\tGetProperty(";
+	strPropTxt += oProp.DispID;
+	strPropTxt += ", ";
+	strPropTxt += strVTType;
+
+	if (strRetType == "COleFont" || strRetType == "CPicture")
+	{
+		strPropTxt += ", (void*)&result);\r\n\treturn ";
+		strPropTxt += strRetType;
+		strPropTxt += "(result);\r\n}\r\n";
+	}
+	else
+	{
+		strPropTxt += ", (void*)&result);\r\n\treturn result;\r\n}\r\n";
+	}
+
+	strPropTxt += "void Set";
+	strPropTxt += oProp.Name;
+	strPropTxt += "(";
+	strPropTxt += strPropType;
+	strPropTxt += " propVal)\r\n{\r\n\tSetProperty(";
+	strPropTxt += oProp.DispID;
+	strPropTxt += ", ";
+	strPropTxt += strVTType;
+	strPropTxt += ", propVal);\r\n}\r\n";
+
+	return strPropTxt;
+}
+
+function GetReturnType(strType)
+{
+	var strRet = strType;
+
+	switch(strType)
+	{
+		case "VARIANT_BOOL":
+			strRet = "BOOL";
+			break;
+		case "BSTR":
+			strRet = "CString";
+			break;
+		case "OLE_COLOR":
+			strRet = "unsigned long";
+			break;
+		case "Font *":
+			strRet = "COleFont";
+			break;
+		case "Picture *":
+			strRet = "CPicture";
+			break;
+	}
+	return strRet;
+}
+
+
+</SCRIPT>
+<SCRIPT ID="INCLUDE_SCRIPT" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT ID="INCLUDE_COMMON" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT>
+	document.scripts("INCLUDE_SCRIPT").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Script.js";
+	document.scripts("INCLUDE_COMMON").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Common.js";
+</SCRIPT>
+<SCRIPT FOR="VariableType" EVENT="KeyDown(nKeyCode)">
+	OnWizComboKeyDown(nKeyCode);
+</SCRIPT>
+<SCRIPT FOR="VariableType" EVENT="Change">
+	UpdateControls();
+</SCRIPT>

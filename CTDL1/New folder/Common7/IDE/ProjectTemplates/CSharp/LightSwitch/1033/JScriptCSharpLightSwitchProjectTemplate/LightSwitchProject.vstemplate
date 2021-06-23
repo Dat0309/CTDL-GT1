@@ -1,0 +1,109 @@
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{783E7E99-F1EC-4B21-91E2-D36F20B7C81D}" ID="2103" />
+    <Description  Package="{783E7E99-F1EC-4B21-91E2-D36F20B7C81D}" ID="2102" />
+    <Icon Package="{783E7E99-F1EC-4B21-91E2-D36F20B7C81D}" ID="3000" />
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>LightSwitch</ProjectSubType>
+    <TemplateID>Microsoft.LightSwitch.BlankLightSwitchApplication.JS.CS</TemplateID>
+    <SortOrder>90</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <CreateNewFolder>true</CreateNewFolder>
+    <CreateInPlace>true</CreateInPlace>
+    <DefaultName>Application</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <RequiredFrameworkVersion>4.5</RequiredFrameworkVersion>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+  </TemplateData>
+  <TemplateContent>
+    <CustomParameters>
+      <CustomParameter Name="$InitialClientProjectType$" Value="JScript" />
+      <CustomParameter Name="$ClientProjectName$" Value="HTMLClient" />
+      <CustomParameter Name="$ClientProjectSuffix$" Value=".HTMLClient" />
+      <CustomParameter Name="$ServerProjectReference$" Value="..\$projectname$.Server\$projectname$.Server.csproj" />
+    </CustomParameters>
+    <Project File="LightSwitchProject.lsxtproj" ReplaceParameters="true">
+      <!-- Root project -->
+      <ProjectItem TargetFileName="ServiceConfiguration.cscfg" ReplaceParameters="true">ServiceConfiguration.cscfg</ProjectItem>
+      <ProjectItem TargetFileName="ServiceDefinition.csdef" ReplaceParameters="true">ServiceDefinition.csdef</ProjectItem>
+      <ProjectItem TargetFileName="diagnostics.wadcfg">diagnostics.wadcfg</ProjectItem>
+      <!-- Client project -->
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\$projectname$.HTMLClient.jsproj" ReplaceParameters="true">Client.jsproj</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\default.htm" ReplaceParameters="true">default.dbg.htm</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\packages.config">Client.packages.config</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\dark-theme-2.5.1.css">dark-theme-2.5.1.css</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\jquery.mobile-1.3.0.css">jquery.mobile-1.3.0.css</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\jquery.mobile-1.3.0.min.css">jquery.mobile-1.3.0.min.css</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\jquery.mobile.structure-1.3.0.css">jquery.mobile.structure-1.3.0.css</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\jquery.mobile.structure-1.3.0.min.css">jquery.mobile.structure-1.3.0.min.css</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\jquery.mobile.theme-1.3.0.css">jquery.mobile.theme-1.3.0.css</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\jquery.mobile.theme-1.3.0.min.css">jquery.mobile.theme-1.3.0.min.css</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\light-theme-2.5.1.css">light-theme-2.5.1.css</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\msls-2.5.1.css">msls-2.5.1.css</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\msls-2.5.1.min.css">msls-2.5.1.min.css</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\msls-dark-2.5.1.css">msls-dark-2.5.1.css</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\msls-light-2.5.1.css">msls-light-2.5.1.css</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\user-customization.css">user-customization.css</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\Web.config">Content.Web.config</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\Images\ajax-loader.gif">ajax-loader.gif</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\Images\icons-18-black.png">icons-18-black.png</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\Images\icons-18-white.png">icons-18-white.png</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\Images\icons-36-black.png">icons-36-black.png</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\Images\icons-36-white.png">icons-36-white.png</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\Images\msls-black-icons-18.png">msls-black-icons-18.png</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\Images\msls-black-icons-36.png">msls-black-icons-36.png</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\Images\msls-loader-dark.gif">msls-loader-dark.gif</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\Images\msls-loader-light.gif">msls-loader-light.gif</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\Images\msls-white-icons-18.png">msls-white-icons-18.png</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\Images\msls-white-icons-36.png">msls-white-icons-36.png</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\Images\msls-blue-icons-36.png">msls-blue-icons-36.png</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\Images\user-logo.png">user-logo.png</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\Images\user-logo.ico">user-logo.ico</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\Images\user-logo-144.png">user-logo-144.png</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Content\Images\user-splash-screen.png">user-splash-screen.png</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Properties\Client.lsml" ReplaceParameters="true">Client.lsml</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Properties\Proxies.lsml" ReplaceParameters="true">Proxies.lsml</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Scripts\datajs-1.1.1.js">datajs-1.1.1.js</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Scripts\datajs-1.1.1.min.js">datajs-1.1.1.min.js</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Scripts\jquery-1.9.1.intellisense.js">jquery-1.9.1.intellisense.js</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Scripts\jquery-1.9.1.js">jquery-1.9.1.js</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Scripts\jquery-1.9.1.min.js">jquery-1.9.1.min.js</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Scripts\jquery.mobile-1.3.0.js">jquery.mobile-1.3.0.js</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Scripts\jquery.mobile-1.3.0.min.js">jquery.mobile-1.3.0.min.js</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Scripts\jquery.mobile-1.3.0-vsdoc.js">jquery.mobile-1.3.0-vsdoc.js</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Scripts\msls.js">msls.js</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Scripts\msls-2.5.1-vsdoc.js">msls-2.5.1-vsdoc.js</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Scripts\msls-2.5.1.js">msls-2.5.1.js</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Scripts\msls-2.5.1.min.js">msls-2.5.1.min.js</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Scripts\winjs-1.0.js">winjs-1.0.js</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.HTMLClient\Scripts\winjs-1.0.min.js">winjs-1.0.min.js</ProjectItem>
+      <Folder Name="Screens" TargetFolderName="$projectname$.HTMLClient\Screens"/>
+      <!-- Server project -->
+      <ProjectItem TargetFileName="$projectname$.Server\$projectname$.Server.csproj" ReplaceParameters="true">Server.csproj</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.Server\Properties\AssemblyInfo.cs" ReplaceParameters="true">Server.AssemblyInfo.cs</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.Server\Properties\Service.lsml">Service.lsml</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.Server\Web.config" ReplaceParameters="true">Web.config</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.Server\Web.Debug.config">Web.Debug.config</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.Server\Web.Release.config">Web.Release.config</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.Server\packages.config">Server.packages.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.Server\default.aspx">default.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.Server\default.aspx.cs">default.aspx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.Server\default.aspx.designer.cs">default.aspx.designer.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.LightSwitch.Design.VSTemplateWizard, Version=12.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, Custom=null</Assembly>
+    <FullClassName>Microsoft.LightSwitch.Design.VSTemplateWizard.TemplateWizardImplementation</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <ProjectReferenceInformation DefaultName="Server" Extension="csproj" />
+    <ProjectReferenceInformation DefaultName="HTMLClient" Extension="jsproj" />
+
+    <NuGetPackageInfo Type="Client" Id="datajs" Version="1.1.1" TargetFramework="winrt45"/>
+    <NuGetPackageInfo Type="Client" Id="jQuery" Version="1.9.1" TargetFramework="winrt45" />
+    <NuGetPackageInfo Type="Client" Id="jquery.mobile" Version="1.3.0" TargetFramework="winrt45" />
+    <NuGetPackageInfo Type="Client" Id="Microsoft.LightSwitch.Client.JavaScript.Runtime" Version="2.5.1.0" TargetFramework="winrt45" />
+
+    <NuGetPackageInfo Type="Server" Id="System.IdentityModel.Tokens.Jwt" Version="1.0.0" TargetFramework="net45" />
+  </WizardData>
+</VSTemplate>

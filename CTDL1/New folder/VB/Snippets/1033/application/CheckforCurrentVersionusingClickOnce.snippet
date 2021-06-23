@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Check for Current Version using ClickOnce</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Checks for current version using ClickOnce.</Description>
+      <Shortcut>appCOVersion</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Deployment.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Deployment</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>currentVersion</ID>
+          <Type>Version</Type>
+          <ToolTip>The Version object that stores the currently running version of the application.</ToolTip>
+          <Default>currentAppVersion</Default>
+        </Object>
+        <Object>
+          <ID>lastUpdate</ID>
+          <Type>Date</Type>
+          <ToolTip>The Date object that stores the date of the last update.</ToolTip>
+          <Default>lastUpdateDate</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[	If My.Application.IsNetworkDeployed Then
+
+		$currentVersion$ = My.Application.Deployment.CurrentVersion
+		$lastUpdate$ = My.Application.Deployment.TimeOfLastUpdateCheck
+
+	End If]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

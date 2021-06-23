@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Compute the Hash Code of a String</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Computes the hash of a string using MD5, SHA1, or SHA384 algorithms.</Description>
+      <Shortcut>secHashStr</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Security.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Text</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Security.Cryptography</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.IO</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="VB" Kind="method decl"><![CDATA[    Enum HashMethod
+        MD5
+        SHA1
+        SHA384
+    End Enum
+
+    Function GenerateHashDigest(ByVal source As String, ByVal algorithm As HashMethod) As String
+        Dim hashAlgorithm As HashAlgorithm = Nothing
+        Select Case algorithm
+            Case HashMethod.MD5
+                hashAlgorithm = New MD5CryptoServiceProvider
+            Case HashMethod.SHA1
+                hashAlgorithm = New SHA1CryptoServiceProvider
+            Case HashMethod.SHA384
+                hashAlgorithm = New SHA384Managed
+            Case Else
+                ' Error case.
+        End Select
+
+        Dim byteValue = Encoding.UTF8.GetBytes(source)
+        Dim hashValue = hashAlgorithm.ComputeHash(byteValue)
+        Return Convert.ToBase64String(hashValue)
+    End Function
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,1267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema id="FeatureModelSchema" targetNamespace="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/FeatureModel" elementFormDefault="qualified" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/FeatureModel" xmlns:core="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import id="CoreSchema" namespace="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" />
+  <!-- FeatureManifest -->
+  <xsd:element name="featureManifest" abstract="true" type="FeatureManifest" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="FeatureManifest" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents the manifest of a SharePoint Feature.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: FeatureManifestHasActivationDependencies -->
+          <xsd:element name="activationDependencies" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of FeatureManifestHasActivationDependencies</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="featureManifestHasActivationDependencies">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from FeatureManifestHasActivationDependencies needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="featureActivationDependency" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: FeatureManifestHasElements -->
+          <xsd:element name="elements" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of FeatureManifestHasElements</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="featureManifestHasElements">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from FeatureManifestHasElements needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="element" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: FeatureManifestHasProperties -->
+          <xsd:element name="properties" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of FeatureManifestHasProperties</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="featureManifestHasProperties">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from FeatureManifestHasProperties needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="property" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: FeatureManifestHasUpgradeActions -->
+          <xsd:element name="upgradeActions" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of FeatureManifestHasUpgradeActions</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="featureManifestHasUpgradeActions">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from FeatureManifestHasUpgradeActions needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="upgradeAction" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Property: ActivateOnDefault -->
+        <xsd:attribute name="activateOnDefault" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Indicates whether the Feature is activated during installation.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: AlwaysForceInstall -->
+        <xsd:attribute name="alwaysForceInstall" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Indicates whether the Feature should be installed by force, even if the Feature is already installed.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Creator -->
+        <xsd:attribute name="creator" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The developer who created the Feature.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: DefaultResourceFile -->
+        <xsd:attribute name="defaultResourceFile" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The central resource file for retrieving Feature resources.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Description -->
+        <xsd:attribute name="description" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Indicates what the Feature does.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsHidden -->
+        <xsd:attribute name="isHidden" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Indicates whether the Feature is visible in the list of available Features to activate.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: FeatureId -->
+        <xsd:attribute name="featureId" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The SharePoint ID of the Feature</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ImageUrl -->
+        <xsd:attribute name="imageUrl" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The relative URL of the image associated with the Feature.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ImageAltText -->
+        <xsd:attribute name="imageAltText" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The text for the image associated with the Feature.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ReceiverAssembly -->
+        <xsd:attribute name="receiverAssembly" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The fully-qualified name of the assembly that contains the event receiver for the Feature.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ReceiverClass -->
+        <xsd:attribute name="receiverClass" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The class name of the event receiver for the Feature.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Scope -->
+        <xsd:attribute name="scope" type="FeatureScope" >
+          <xsd:annotation>
+            <xsd:documentation>The context in which a Feature is activated.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: SolutionId -->
+        <xsd:attribute name="solutionId" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Specifies the ID of the SharePoint server where the Feature will be installed. Microsoft Internal Use Only.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Title -->
+        <xsd:attribute name="title" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The title of the Feature.  Limited to 255 characters.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Version -->
+        <xsd:attribute name="version" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Specifies a System.Version-compliant representation of the version of the Feature.  This can be up to four numbers delimited by decimals.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: AutoActivateInCentralAdmin -->
+        <xsd:attribute name="autoActivateInCentralAdmin" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Indicates whether the Feature is activated by default for administrators.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: RequireResources -->
+        <xsd:attribute name="requireResources" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Indicates whether SharePoint checks for resources for a particular language and culture.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: UIVersion -->
+        <xsd:attribute name="uIVersion" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Specifies a string that indicates the compatible versions of the site.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: UpgradeActionsReceiverAssembly -->
+        <xsd:attribute name="upgradeActionsReceiverAssembly" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The fully-qualified name of the assembly that contains the Feature event receiver handling custom upgrade actions.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: UpgradeActionsReceiverClass -->
+        <xsd:attribute name="upgradeActionsReceiverClass" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The class name of the Feature event receiver handling custom upgrade actions.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- FeatureManifest Moniker -->
+  <xsd:element name="featureManifestMoniker" abstract="true" type="FeatureManifestMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="FeatureManifestMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for FeatureManifest instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- FeatureActivationDependency -->
+  <xsd:element name="featureActivationDependency" abstract="true" type="FeatureActivationDependency" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="FeatureActivationDependency" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a Feature on which activation of another Feature depends.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Property: MinimumVersion -->
+        <xsd:attribute name="minimumVersion" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The minimum version of the dependent Feature that must be installed for this Feature to function.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Description -->
+        <xsd:attribute name="description" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Indicates what the activation dependency does.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- FeatureActivationDependency Moniker -->
+  <xsd:element name="featureActivationDependencyMoniker" abstract="true" type="FeatureActivationDependencyMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="FeatureActivationDependencyMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for FeatureActivationDependency instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ProjectItemReference -->
+  <xsd:element name="projectItemReference" type="ProjectItemReference" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ProjectItemReference">
+    <xsd:annotation>
+      <xsd:documentation>Represents a reference to a Project Item.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Property: ItemId -->
+        <xsd:attribute name="itemId" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The ID of the Project Item.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ProjectPath -->
+        <xsd:attribute name="projectPath" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The path to the project file to which the referenced item belongs.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ProjectItemReference Moniker -->
+  <xsd:element name="projectItemReferenceMoniker" abstract="true" type="ProjectItemReferenceMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ProjectItemReferenceMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ProjectItemReference instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Property -->
+  <xsd:element name="property" type="Property" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="Property">
+    <xsd:annotation>
+      <xsd:documentation>Represents the default value for a Feature property.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Property: Key -->
+        <xsd:attribute name="key" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The identifier of the property.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Value -->
+        <xsd:attribute name="value" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The value of the property.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Property Moniker -->
+  <xsd:element name="propertyMoniker" abstract="true" type="PropertyMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="PropertyMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Property instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Element -->
+  <xsd:element name="element" abstract="true" type="Element" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="Element" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a file associated with a Feature.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Property: Location -->
+        <xsd:attribute name="location" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The relative path of the element from the Feature manifest file.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Element Moniker -->
+  <xsd:element name="elementMoniker" abstract="true" type="ElementMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ElementMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Element instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ElementFile -->
+  <xsd:element name="elementFile" type="ElementFile" substitutionGroup="element" />
+  <xsd:complexType name="ElementFile">
+    <xsd:annotation>
+      <xsd:documentation>Represents an ElementFile in a feature.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="Element">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ElementFile Moniker -->
+  <xsd:element name="elementFileMoniker" abstract="true" type="ElementFileMoniker" substitutionGroup="elementMoniker" />
+  <xsd:complexType name="ElementFileMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ElementFile instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ElementManifest -->
+  <xsd:element name="elementManifest" type="ElementManifest" substitutionGroup="element" />
+  <xsd:complexType name="ElementManifest">
+    <xsd:annotation>
+      <xsd:documentation>Represents an ElementManifest in a feature.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="Element">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ElementManifest Moniker -->
+  <xsd:element name="elementManifestMoniker" abstract="true" type="ElementManifestMoniker" substitutionGroup="elementMoniker" />
+  <xsd:complexType name="ElementManifestMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ElementManifest instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ReferencedFeatureActivationDependency -->
+  <xsd:element name="referencedFeatureActivationDependency" type="ReferencedFeatureActivationDependency" substitutionGroup="featureActivationDependency" />
+  <xsd:complexType name="ReferencedFeatureActivationDependency">
+    <xsd:annotation>
+      <xsd:documentation>Represents a Feature within the Visual Studio solution on which another Feature depends.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="FeatureActivationDependency">
+        <!-- Property: ItemId -->
+        <xsd:attribute name="itemId" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The SharePoint project system ID (i.e. ISharePointProjectFeature.Id) of the referenced Feature.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ProjectPath -->
+        <xsd:attribute name="projectPath" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The path to the project file to which the referenced Feature belongs.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ReferencedFeatureActivationDependency Moniker -->
+  <xsd:element name="referencedFeatureActivationDependencyMoniker" abstract="true" type="ReferencedFeatureActivationDependencyMoniker" substitutionGroup="featureActivationDependencyMoniker" />
+  <xsd:complexType name="ReferencedFeatureActivationDependencyMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ReferencedFeatureActivationDependency instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="FeatureActivationDependencyMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CustomFeatureActivationDependency -->
+  <xsd:element name="customFeatureActivationDependency" type="CustomFeatureActivationDependency" substitutionGroup="featureActivationDependency" />
+  <xsd:complexType name="CustomFeatureActivationDependency">
+    <xsd:annotation>
+      <xsd:documentation>Represents an arbitrary Feature (e.g. one already on the server) on which activation of the another Feature depends.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="FeatureActivationDependency">
+        <!-- Property: FeatureTitle -->
+        <xsd:attribute name="featureTitle" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The name of the custom activation dependency.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: FeatureDescription -->
+        <xsd:attribute name="featureDescription" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The description of the custom activation dependency.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: FeatureId -->
+        <xsd:attribute name="featureId" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The SharePoint ID of the Feature represented by the custom activation dependency.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: SolutionId -->
+        <xsd:attribute name="solutionId" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The SharePoint ID of the Solution on which this Feature depends.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: SolutionName -->
+        <xsd:attribute name="solutionName" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The file name of the WSP.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: SolutionTitle -->
+        <xsd:attribute name="solutionTitle" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The title of the Solution.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: SolutionUrl -->
+        <xsd:attribute name="solutionUrl" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The URL where users can obtain the Solution.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CustomFeatureActivationDependency Moniker -->
+  <xsd:element name="customFeatureActivationDependencyMoniker" abstract="true" type="CustomFeatureActivationDependencyMoniker" substitutionGroup="featureActivationDependencyMoniker" />
+  <xsd:complexType name="CustomFeatureActivationDependencyMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for CustomFeatureActivationDependency instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="FeatureActivationDependencyMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Feature -->
+  <xsd:element name="feature" type="Feature" substitutionGroup="featureManifest" />
+  <xsd:complexType name="Feature">
+    <xsd:annotation>
+      <xsd:documentation>Represents the definition of a Feature within the SharePoint project system.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="FeatureManifest">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: FeatureHasProjectItems -->
+          <xsd:element name="projectItems" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of FeatureHasProjectItems</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="featureHasProjectItems">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from FeatureHasProjectItems needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="projectItemReference" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- dslVersion -->
+        <xsd:attribute name="dslVersion" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Version of the model serialized in this file.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: DeploymentPath -->
+        <xsd:attribute name="deploymentPath" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The path within the package to which the Feature will deployed.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsDesignerEnabled -->
+        <xsd:attribute name="isDesignerEnabled" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Indicates whether the designer for the Feature is enabled.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Feature Moniker -->
+  <xsd:element name="featureMoniker" type="FeatureMoniker" substitutionGroup="featureManifestMoniker" />
+  <xsd:complexType name="FeatureMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Feature instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="FeatureManifestMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- UpgradeAction -->
+  <xsd:element name="upgradeAction" abstract="true" type="UpgradeAction" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="UpgradeAction" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents an action executed during the upgrade of a Feature.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Property: Description -->
+        <xsd:attribute name="description" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Indicates what the upgrade action does.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- UpgradeAction Moniker -->
+  <xsd:element name="upgradeActionMoniker" abstract="true" type="UpgradeActionMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="UpgradeActionMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for UpgradeAction instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- VersionRange -->
+  <xsd:element name="versionRange" type="VersionRange" substitutionGroup="upgradeAction" />
+  <xsd:complexType name="VersionRange">
+    <xsd:annotation>
+      <xsd:documentation>Represents a collection of actions executed during the upgrade of a specific version of a Feature.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="UpgradeAction">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: VersionRangeHasUpgradeActions -->
+          <xsd:element name="upgradeActions" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of VersionRangeHasUpgradeActions</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="versionRangeHasUpgradeActions">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from VersionRangeHasUpgradeActions needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="discreteUpgradeAction" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Property: BeginVersion -->
+        <xsd:attribute name="beginVersion" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The starting version (inclusive) of Features for which the upgrade actions will be executed.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: EndVersion -->
+        <xsd:attribute name="endVersion" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The ending version (exclusive) of Features for which the upgrade actions will be executed.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- VersionRange Moniker -->
+  <xsd:element name="versionRangeMoniker" abstract="true" type="VersionRangeMoniker" substitutionGroup="upgradeActionMoniker" />
+  <xsd:complexType name="VersionRangeMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for VersionRange instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="UpgradeActionMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CustomUpgradeAction -->
+  <xsd:element name="customUpgradeAction" type="CustomUpgradeAction" substitutionGroup="discreteUpgradeAction" />
+  <xsd:complexType name="CustomUpgradeAction">
+    <xsd:annotation>
+      <xsd:documentation>Represents an upgrade action which executes a Feature event receiver.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="DiscreteUpgradeAction">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: CustomUpgradeActionHasParameters -->
+          <xsd:element name="parameters" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of CustomUpgradeActionHasParameters</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="customUpgradeActionHasParameters">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from CustomUpgradeActionHasParameters needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="customUpgradeActionParameter" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The name of the upgrade action.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CustomUpgradeAction Moniker -->
+  <xsd:element name="customUpgradeActionMoniker" abstract="true" type="CustomUpgradeActionMoniker" substitutionGroup="discreteUpgradeActionMoniker" />
+  <xsd:complexType name="CustomUpgradeActionMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for CustomUpgradeAction instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="DiscreteUpgradeActionMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ApplyElementManifestsUpgradeAction -->
+  <xsd:element name="applyElementManifestsUpgradeAction" type="ApplyElementManifestsUpgradeAction" substitutionGroup="discreteUpgradeAction" />
+  <xsd:complexType name="ApplyElementManifestsUpgradeAction">
+    <xsd:annotation>
+      <xsd:documentation>Represents an upgrade action which provisions new feature elements.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="DiscreteUpgradeAction">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: ApplyElementManifestsUpgradeActionHasElements -->
+          <xsd:element name="elements" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ApplyElementManifestsUpgradeActionHasElements</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="applyElementManifestsUpgradeActionHasElements">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from ApplyElementManifestsUpgradeActionHasElements needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="element" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ApplyElementManifestsUpgradeAction Moniker -->
+  <xsd:element name="applyElementManifestsUpgradeActionMoniker" abstract="true" type="ApplyElementManifestsUpgradeActionMoniker" substitutionGroup="discreteUpgradeActionMoniker" />
+  <xsd:complexType name="ApplyElementManifestsUpgradeActionMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ApplyElementManifestsUpgradeAction instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="DiscreteUpgradeActionMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AddContentTypeFieldUpgradeAction -->
+  <xsd:element name="addContentTypeFieldUpgradeAction" type="AddContentTypeFieldUpgradeAction" substitutionGroup="discreteUpgradeAction" />
+  <xsd:complexType name="AddContentTypeFieldUpgradeAction">
+    <xsd:annotation>
+      <xsd:documentation>Represents an upgrade action which adds a new field to an existing content type.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="DiscreteUpgradeAction">
+        <!-- Property: ContentTypeId -->
+        <xsd:attribute name="contentTypeId" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The ID of the content type that will be affected.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: FieldId -->
+        <xsd:attribute name="fieldId" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The column template ID.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsPushedDown -->
+        <xsd:attribute name="isPushedDown" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Indicates whether the specified modified content type is pushed down to its child content types and lists.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AddContentTypeFieldUpgradeAction Moniker -->
+  <xsd:element name="addContentTypeFieldUpgradeActionMoniker" abstract="true" type="AddContentTypeFieldUpgradeActionMoniker" substitutionGroup="discreteUpgradeActionMoniker" />
+  <xsd:complexType name="AddContentTypeFieldUpgradeActionMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for AddContentTypeFieldUpgradeAction instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="DiscreteUpgradeActionMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- MapFileUpgradeAction -->
+  <xsd:element name="mapFileUpgradeAction" type="MapFileUpgradeAction" substitutionGroup="discreteUpgradeAction" />
+  <xsd:complexType name="MapFileUpgradeAction">
+    <xsd:annotation>
+      <xsd:documentation>Represents an upgrade action which remaps an un-customized file to a different SetupPath on the WFE file system.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="DiscreteUpgradeAction">
+        <!-- Property: FromPath -->
+        <xsd:attribute name="fromPath" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The SetupPath of the file in the AllDocs table.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ToPath -->
+        <xsd:attribute name="toPath" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The new value for SetupPath in the AllDocs table.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- MapFileUpgradeAction Moniker -->
+  <xsd:element name="mapFileUpgradeActionMoniker" abstract="true" type="MapFileUpgradeActionMoniker" substitutionGroup="discreteUpgradeActionMoniker" />
+  <xsd:complexType name="MapFileUpgradeActionMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for MapFileUpgradeAction instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="DiscreteUpgradeActionMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CustomUpgradeActionParameter -->
+  <xsd:element name="customUpgradeActionParameter" type="CustomUpgradeActionParameter" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="CustomUpgradeActionParameter">
+    <xsd:annotation>
+      <xsd:documentation>Represents a custom upgrade action parameter.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The name of the parameter.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Value -->
+        <xsd:attribute name="value" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The value of the parameter.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CustomUpgradeActionParameter Moniker -->
+  <xsd:element name="customUpgradeActionParameterMoniker" abstract="true" type="CustomUpgradeActionParameterMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="CustomUpgradeActionParameterMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for CustomUpgradeActionParameter instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DiscreteUpgradeAction -->
+  <xsd:element name="discreteUpgradeAction" abstract="true" type="DiscreteUpgradeAction" substitutionGroup="upgradeAction" />
+  <xsd:complexType name="DiscreteUpgradeAction" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a discrete action executed during the upgrade of a Feature.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="UpgradeAction">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DiscreteUpgradeAction Moniker -->
+  <xsd:element name="discreteUpgradeActionMoniker" abstract="true" type="DiscreteUpgradeActionMoniker" substitutionGroup="upgradeActionMoniker" />
+  <xsd:complexType name="DiscreteUpgradeActionMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for DiscreteUpgradeAction instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="UpgradeActionMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- FeatureManifestHasActivationDependencies -->
+  <xsd:element name="featureManifestHasActivationDependencies" abstract="true" type="FeatureManifestHasActivationDependencies" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="FeatureManifestHasActivationDependencies" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a collection of Feature activation dependencies.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end FeatureActivationDependency -->
+          <xsd:element ref="featureActivationDependency" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- FeatureManifestHasActivationDependencies Moniker -->
+  <xsd:element name="featureManifestHasActivationDependenciesMoniker" abstract="true" type="FeatureManifestHasActivationDependenciesMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="FeatureManifestHasActivationDependenciesMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for FeatureManifestHasActivationDependencies instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- FeatureManifestHasElements -->
+  <xsd:element name="featureManifestHasElements" abstract="true" type="FeatureManifestHasElements" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="FeatureManifestHasElements" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a collection of Feature elements.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Element -->
+          <xsd:element ref="element" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- FeatureManifestHasElements Moniker -->
+  <xsd:element name="featureManifestHasElementsMoniker" abstract="true" type="FeatureManifestHasElementsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="FeatureManifestHasElementsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for FeatureManifestHasElements instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- FeatureManifestHasProperties -->
+  <xsd:element name="featureManifestHasProperties" abstract="true" type="FeatureManifestHasProperties" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="FeatureManifestHasProperties" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a collection of default values for Feature properties.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Property -->
+          <xsd:element ref="property" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- FeatureManifestHasProperties Moniker -->
+  <xsd:element name="featureManifestHasPropertiesMoniker" abstract="true" type="FeatureManifestHasPropertiesMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="FeatureManifestHasPropertiesMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for FeatureManifestHasProperties instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- FeatureHasProjectItems -->
+  <xsd:element name="featureHasProjectItems" abstract="true" type="FeatureHasProjectItems" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="FeatureHasProjectItems" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a collection of Project Items.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end ProjectItemReference -->
+          <xsd:element ref="projectItemReference" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- FeatureHasProjectItems Moniker -->
+  <xsd:element name="featureHasProjectItemsMoniker" abstract="true" type="FeatureHasProjectItemsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="FeatureHasProjectItemsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for FeatureHasProjectItems instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ApplyElementManifestsUpgradeActionHasElements -->
+  <xsd:element name="applyElementManifestsUpgradeActionHasElements" abstract="true" type="ApplyElementManifestsUpgradeActionHasElements" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ApplyElementManifestsUpgradeActionHasElements" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a collection of Feature elements.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Element -->
+          <xsd:element ref="element" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ApplyElementManifestsUpgradeActionHasElements Moniker -->
+  <xsd:element name="applyElementManifestsUpgradeActionHasElementsMoniker" abstract="true" type="ApplyElementManifestsUpgradeActionHasElementsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ApplyElementManifestsUpgradeActionHasElementsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ApplyElementManifestsUpgradeActionHasElements instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CustomUpgradeActionHasParameters -->
+  <xsd:element name="customUpgradeActionHasParameters" abstract="true" type="CustomUpgradeActionHasParameters" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="CustomUpgradeActionHasParameters" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a collection of custom upgrade action parameters.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end CustomUpgradeActionParameter -->
+          <xsd:element ref="customUpgradeActionParameter" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CustomUpgradeActionHasParameters Moniker -->
+  <xsd:element name="customUpgradeActionHasParametersMoniker" abstract="true" type="CustomUpgradeActionHasParametersMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="CustomUpgradeActionHasParametersMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for CustomUpgradeActionHasParameters instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- VersionRangeHasUpgradeActions -->
+  <xsd:element name="versionRangeHasUpgradeActions" abstract="true" type="VersionRangeHasUpgradeActions" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="VersionRangeHasUpgradeActions" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a collection of Feature upgrade actions.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end DiscreteUpgradeAction -->
+          <xsd:element ref="discreteUpgradeAction" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- VersionRangeHasUpgradeActions Moniker -->
+  <xsd:element name="versionRangeHasUpgradeActionsMoniker" abstract="true" type="VersionRangeHasUpgradeActionsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="VersionRangeHasUpgradeActionsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for VersionRangeHasUpgradeActions instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- FeatureManifestHasUpgradeActions -->
+  <xsd:element name="featureManifestHasUpgradeActions" abstract="true" type="FeatureManifestHasUpgradeActions" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="FeatureManifestHasUpgradeActions" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a collection of Feature upgrade actions.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end UpgradeAction -->
+          <xsd:element ref="upgradeAction" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- FeatureManifestHasUpgradeActions Moniker -->
+  <xsd:element name="featureManifestHasUpgradeActionsMoniker" abstract="true" type="FeatureManifestHasUpgradeActionsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="FeatureManifestHasUpgradeActionsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for FeatureManifestHasUpgradeActions instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Enum FeatureScope -->
+  <xsd:simpleType name="FeatureScope">
+    <xsd:annotation>
+      <xsd:documentation>Specifies the context in which a Feature is activated.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Web">
+        <xsd:annotation>
+          <xsd:documentation>Activates a Feature for a specific web site.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Farm">
+        <xsd:annotation>
+          <xsd:documentation>Activates a Feature for an entire server farm.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="WebApplication">
+        <xsd:annotation>
+          <xsd:documentation>Activates a Feature for all web sites in a web application.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Site">
+        <xsd:annotation>
+          <xsd:documentation>Activates a Feature for all web sites in a site collection.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum FeatureElementType -->
+  <xsd:simpleType name="FeatureElementType">
+    <xsd:annotation>
+      <xsd:documentation>Specifies how the Element will be treated by SharePoint when the Feature is deployed.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="ElementFile">
+        <xsd:annotation>
+          <xsd:documentation>Specifies a support file required for the Feature.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ElementManifest">
+        <xsd:annotation>
+          <xsd:documentation>Specifies a file that contains a definition for a Feature element.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum DiscreteUpgradeActionType -->
+  <xsd:simpleType name="DiscreteUpgradeActionType">
+    <xsd:annotation>
+      <xsd:documentation>Specifies the type of action executed when upgrading a Feature.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="AddContentTypeField">
+        <xsd:annotation>
+          <xsd:documentation>Adds a new field to an existing content type.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ApplyElementManifests">
+        <xsd:annotation>
+          <xsd:documentation>Provisions new Feature elements.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Custom">
+        <xsd:annotation>
+          <xsd:documentation>Executes custom code in a Feature event receiver.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="MapFile">
+        <xsd:annotation>
+          <xsd:documentation>Remaps un-customized files to a different SetupPath on the WFE file system.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+</xsd:schema>
+

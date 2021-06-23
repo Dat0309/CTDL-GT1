@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vs="http://schemas.microsoft.com/Visual-Studio-Intellisense" elementFormDefault="qualified" attributeFormDefault="unqualified" vs:helpNamespace="http://schemas.microsoft.com/RazorCustomSection">
+
+  <xs:element name="system.web.webPages.razor">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="host" >          
+          <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="1" >
+            </xs:choice>
+            <xs:attribute name="factoryType" type="xs:string"  use="required">
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="pages">
+          <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="1">
+              <xs:element name="namespaces">
+                <xs:complexType>
+                  <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="add">
+                      <xs:complexType>
+                        <xs:attribute name="namespace" use="required" type="xs:string"></xs:attribute>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="clear">
+                      <xs:complexType><!--tag is empty --></xs:complexType>
+                    </xs:element>
+                  </xs:choice>
+            
+                </xs:complexType>
+              </xs:element>
+            </xs:choice>
+            <xs:attribute name="pageBaseType" type="xs:string" use="required"></xs:attribute>
+            
+          </xs:complexType>
+          
+        </xs:element>
+      </xs:choice>
+      </xs:complexType>    
+  </xs:element>
+  
+</xs:schema>

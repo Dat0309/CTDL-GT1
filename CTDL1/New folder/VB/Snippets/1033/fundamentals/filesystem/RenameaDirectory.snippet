@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Rename a Directory</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Renames a directory.</Description>
+      <Shortcut>filRenDir</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>old</ID>
+          <ToolTip>Replace with old directory name and path.</ToolTip>
+          <Default>"C:\OldDirectory"</Default>
+        </Literal>
+        <Literal>
+          <ID>NewName</ID>
+          <ToolTip>Replace with new directory name</ToolTip>
+          <Default>"NewDirectory"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[My.Computer.FileSystem.RenameDirectory($old$, $NewName$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

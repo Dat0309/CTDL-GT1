@@ -1,0 +1,17 @@
+﻿Copyright 2002-2012 PreEmptive Solutions, LLC, 767 Beta Dr. Suite A, 
+Mayfield Village, OH 44143, U.S.A. All rights reserved.
+
+PreEmptive Solutions, LLC has intellectual property rights relating to 
+technology embodied in this product. In particular, and without 
+limitation, these intellectual property rights may include one or more 
+of U.S. patents or pending patent applications in the U.S. and/or other countries.
+
+This product is distributed under licenses restricting its use, copying 
+distribution, and decompilation. No part of this product may be 
+reproduced in any form by any means without prior written authorization 
+of preEmptive.
+
+PreEmptive Solutions, DashO and DotFuscator are trademarks of PreEmptive 
+Solutions, LLC.
+
+

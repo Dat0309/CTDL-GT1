@@ -1,0 +1,31 @@
+handler_stdafx.cpp
+handler_stdafx.h
+handler_targetver.h
+handler_root.cpp
+handler_resource.h
+handler_root.rc
+handler_readme.txt
+handler_root.rgs
+handler_dllmain.cpp
+handler_dllmain.h
+handler_root.idl
+handler_root.def
+handler_xdlldata.c
+handler_xdlldata.h
+handler_root_i.c
+handler_root_i.h
+
+[!if PREVIEW_HANDLER]
+handler_preview.h
+handler_preview.rgs
+[!endif]
+
+[!if THUMBNAIL_HANDLER]
+handler_thumbnail.h
+handler_thumbnail.rgs
+[!endif]
+
+[!if SEARCH_HANDLER]
+handler_search.h
+handler_search.rgs
+[!endif]

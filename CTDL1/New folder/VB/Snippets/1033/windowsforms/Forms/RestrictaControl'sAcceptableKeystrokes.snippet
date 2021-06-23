@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Restrict a Control's Acceptable Keystrokes</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Overrides the default ProcessCmdKey function of a Windows Forms Control and restricts user input to numeric and navigation keys.</Description>
+      <Shortcut>formRestrict</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Drawing.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>baseClass</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the type of the class you want to restrict.</ToolTip>
+          <Default>ComboBox</Default>
+        </Literal>
+        <Literal>
+          <ID>restrictedControlClass</ID>
+          <Type>String</Type>
+          <ToolTip>The name of the derived class.</ToolTip>
+          <Default>restrictedComboBoxClass</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="type decl"><![CDATA[Class $restrictedControlClass$
+    Inherits $baseClass$
+    Const WM_KEYDOWN As Integer = &H100
+
+    Protected Overrides Function ProcessCmdKey _
+        (ByRef msg As Message, _
+        ByVal keyData As Keys) As Boolean
+
+        If msg.Msg = WM_KEYDOWN Then
+            Return Not ((keyData >= Keys.D0 And keyData <= Keys.D9) _
+                Or keyData = Keys.Back Or keyData = Keys.Left _
+                Or keyData = Keys.Right Or keyData = Keys.Up _
+                Or keyData = Keys.Down Or keyData = Keys.Delete
+        End If
+        Return MyBase.ProcessCmdKey(msg, keyData)
+    End Function
+End Class
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,9 @@
+Program Files(x86)\MsBuild\Microsoft\Visual Studio\v12.0\SharePointTools\
+Microsoft.VisualStudio.SharePoint.targets
+Microsoft.VisualStudio.SharePoint.Tasks.dll
+
+Windows\Microsoft.NET\assembly\GAC_MSIL\
+Microsoft.VisualStudio.SharePoint.Designers.Models.dll
+Microsoft.VisualStudio.SharePoint.Designers.Models.Features.dll
+Microsoft.VisualStudio.SharePoint.Designers.Models.Packages.dll
+Microsoft.VisualStudio.SharePoint.dll

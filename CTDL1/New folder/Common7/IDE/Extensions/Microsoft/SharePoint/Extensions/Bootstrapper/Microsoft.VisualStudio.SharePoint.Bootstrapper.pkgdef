@@ -1,0 +1,13 @@
+﻿[$RootKey$\Packages\{E8CEC674-55A6-478F-BAE7-D306BE6DA96D}]
+@="Microsoft.VisualStudio.SharePoint.Bootstrapper.VSPackage, Microsoft.VisualStudio.SharePoint.Bootstrapper, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"InprocServer32"="$WinDir$\SYSTEM32\MSCOREE.DLL"
+"Class"="Microsoft.VisualStudio.SharePoint.Bootstrapper.VSPackage"
+"CodeBase"="$PackageFolder$\Microsoft.VisualStudio.SharePoint.Bootstrapper.dll"
+
+[$RootKey$\Menus]
+"{E8CEC674-55A6-478F-BAE7-D306BE6DA96D}"=", 1000.ctmenu, 1"
+
+// {349C5852-65DF-11DA-9384-00065B846F21} is WAP project GUID.
+// Only load bootstrapper in WAP project context.
+[$RootKey$\AutoLoadPackages\{349C5852-65DF-11DA-9384-00065B846F21}]
+"{E8CEC674-55A6-478F-BAE7-D306BE6DA96D}"=dword:00000000

@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Query over a query</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>A query over the results from another query.</Description>
+      <Shortcut>qQueryQ</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+	      <Literal>
+          <ID>queryResult1</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the first query.</ToolTip>
+          <Default>longFruits</Default>
+        </Literal>
+	      <Literal>
+          <ID>queryResult2</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the second query.</ToolTip>
+          <Default>bFruits</Default>
+        </Literal>
+        <Literal>
+          <ID>item1</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the  first variable that represents an item from your data source.</ToolTip>
+          <Default>fruit</Default>
+        </Literal>
+        <Literal>
+          <ID>item2</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the  second variable that represents an item from your data source.</ToolTip>
+          <Default>fruitName</Default>
+        </Literal>       
+        <Literal>
+          <ID>dataSource</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the identifier for your data source.</ToolTip>
+          <Default>New String() {"apple", "orange", "pear", "banana", "strawberry", "blueberry"}</Default>
+        </Literal>
+        <Literal>
+          <ID>filterfield1</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the first field to filter your first source by.</ToolTip>
+          <Default>Length</Default>
+        </Literal>
+        <Literal>
+          <ID>filterCondition1</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the condition used as your first filter.</ToolTip>
+          <Default>>= 6</Default>
+        </Literal>
+	      <Literal>
+          <ID>filterfield2</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the field to filter your second source by.</ToolTip>
+          <Default>ToLower.SubString(0,1)</Default>
+        </Literal>
+        <Literal>
+          <ID>filterCondition2</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the condition used as your second filter.</ToolTip>
+          <Default>= "b"</Default>
+        </Literal>
+        <Literal>
+          <ID>field1</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the first field to retrieve from your first data source.</ToolTip>
+          <Default>ToLower()</Default>
+        </Literal>
+        <Literal>
+          <ID>field2</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the second field to retrieve from your first data source.</ToolTip>
+          <Default>Length</Default>
+        </Literal>
+        <Literal>
+          <ID>field3</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the field to retrieve from your second query.</ToolTip>
+          <Default>ToLower</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $queryResult1$ = From $item1$ In $dataSource$ _
+                             Where $item1$.$filterField1$ $filterCondition1$ _
+                             Select $item1$.$field1$, $item1$.$field2$
+
+        Dim $queryResult2$ = From $item2$ In $queryResult1$ _
+                     Where $item2$.$filterfield2$ $filterCondition2$ _
+                     Select $item2$.$field3$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,10 @@
+// [!output SAFE_IDL_NAME].idl : file di origine della libreria dei tipi per [!output PROJECT_NAME].dll
+// Tale file verrà elaborato dal compilatore MIDL per produrre la
+// libreria dei tipi ([!output SAFE_IDL_NAME].tlb).
+
+[ uuid([!output LIBID_REGISTRY_FORMAT]), version(1.0) ]
+library [!output LIB_NAME]
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+};

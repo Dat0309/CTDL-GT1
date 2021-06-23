@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="ms-design-extensionType" content="ShareTarget" />
+    <title>Kontrakt sdílení cílů</title>
+
+    <!-- Odkazy WinJS -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="$fileinputname$.css" rel="stylesheet" />
+    <script src="$fileinputname$.js"></script>
+</head>
+<body>
+    <!-- Obsah, který bude načten a zobrazen -->
+    <section aria-label="Main content" role="main">
+        <header>
+            <div>
+                <img class="shared-thumbnail" src="#" alt="Sdílet obrázek metadat" />
+            </div>
+            <div class="shared-metadata">
+                <h2 class="shared-title win-type-ellipsis"></h2>
+                <h4 class="shared-description"></h4>
+            </div>
+        </header>
+
+        <input class="commentbox" placeholder="Add a comment" type="text" />
+        <div class="sharecontrols">
+            <div class="progressindicators">
+                <progress></progress>
+                <span>Sdílení...</span>
+            </div>
+            <input class="submitbutton" type="button" value="Sdílet" />
+        </div>
+    </section>
+</body>
+</html>

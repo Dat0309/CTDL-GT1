@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Define a Function to Call a Windows API</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Defines a function to call a Windows API.</Description>
+      <Keywords>
+		  <Keyword>pinvoke</Keyword>
+		  <Keyword>declare</Keyword>
+		  <Keyword>win32</Keyword>
+      </Keywords>
+      <Shortcut>WinApi</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>dllName</ID>
+          <Type />
+          <ToolTip>Replace with the name of the .dll file that contains the API method.</ToolTip>
+          <Default>"user32.dll"</Default>
+        </Literal>
+        <Literal>
+          <ID>apiName</ID>
+          <Type />
+          <ToolTip>Replace with the name of the method in the .dll file.</ToolTip>
+          <Default>"MessageBox"</Default>
+        </Literal>
+        <Literal>
+          <ID>parameters</ID>
+          <Type />
+          <ToolTip>Replace with the parameters as declared in the .dll file.</ToolTip>
+          <Default>ByVal hWnd As Integer, ByVal txt As String, ByVal caption As String, ByVal type As Integer</Default>
+        </Literal>
+        <Literal>
+          <ID>matchingCall</ID>
+          <Type />
+          <ToolTip>Replace with the name you want to call from your project.</ToolTip>
+          <Default>Win32MessageBox</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[Declare Function $matchingCall$ Lib $dllName$ Alias $apiName$ ($parameters$) As Integer]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

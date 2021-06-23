@@ -1,0 +1,13 @@
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="AC685232-AFCD-4F95-B058-7D4AAAC6E8B6" Version="12.0.30626.00" Language="en-US" Publisher="Microsoft Corporation" />
+    <DisplayName>Microsoft Office Developer Tools Package</DisplayName>
+    <Description xml:space="preserve">Provides the latest office developer tools.</Description>
+  </Metadata>
+  <Installation Scope="ProductExtension" AllUsers="true" InstalledByMsi="true" >
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="12.0" ProductUpdate="true"/>
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" Version="4.5" />
+  </Dependencies>
+</PackageManifest>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Akce</Name>
+    <Description>Šablona jazyka JavaScript pro akce programu Blend</Description>
+    <Icon>Action.ico</Icon>
+    <TemplateID>Microsoft.JavaScript.Action</TemplateID>
+    <TemplateGroupID>JavaScript_Windows_8.1_GroupID</TemplateGroupID>
+    <ProjectType>JavaScript</ProjectType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>Action.js</DefaultName>
+    <TargetPlatformName>Windows</TargetPlatformName> 
+    <RequiredPlatformVersion>6.3.0</RequiredPlatformVersion>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.js">Action.js</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="js/Interactivity.1.1.js">Interactivity.1.1.js</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

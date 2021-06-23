@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Group By and rename the group</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Creates a query that groups the results and renames the group.</Description>
+      <Shortcut>qGroupRename</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>queryResult</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the query.</ToolTip>
+          <Default>query</Default>
+        </Literal>
+        <Literal>
+          <ID>item</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the variable that represents an item from your data source.</ToolTip>
+          <Default>fruit</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSource</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the identifier for your data source.</ToolTip>
+          <Default>New String() {"apple", "orange", "pear", "banana"}</Default>
+        </Literal>
+        <Literal>
+          <ID>field</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the name of the field used to group the results.</ToolTip>
+          <Default>Length</Default>
+       </Literal>
+        <Literal>
+          <ID>groupName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the alias to give to your group.</ToolTip>
+          <Default>CharCount</Default>
+        </Literal>
+        <Literal>
+          <ID>aggregateName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the alias to give to the aggregate.</ToolTip>
+          <Default>FruitCount</Default>
+        </Literal>
+        <Literal>
+          <ID>groupingCondition</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the aggregator to call on your group.</ToolTip>
+          <Default>Count</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $queryResult$ = From $item$ In $dataSource$ _
+                    Group By $groupName$ = $item$.$field$ Into $aggregateName$ = $groupingCondition$() _
+                    Select $groupName$, $aggregateName$ _
+                    Order By $aggregateName$ Descending, $groupName$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

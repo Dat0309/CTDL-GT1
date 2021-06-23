@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="1038" />
+    <Description Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="1039" />
+    <Icon Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="4023" />
+    <TemplateID>Microsoft.VC.WinRT.ResourceDictionary</TemplateID>
+    <TemplateGroupID>WinRT-Native</TemplateGroupID>
+    <ProjectType>VC</ProjectType>
+    <NumberOfParentCategoriesToRollUp>0</NumberOfParentCategoriesToRollUp>
+    <DefaultName>Dictionary.xaml</DefaultName>
+    <SortOrder>70</SortOrder>
+    <TargetPlatformName>Windows</TargetPlatformName>
+    <RequiredPlatformVersion>6.2.0</RequiredPlatformVersion>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ItemType="XAML Page" FileType="Document" DeploymentContent="true" ReplaceParameters="true" OpenInEditor="true">ResourceDictionary.xaml</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

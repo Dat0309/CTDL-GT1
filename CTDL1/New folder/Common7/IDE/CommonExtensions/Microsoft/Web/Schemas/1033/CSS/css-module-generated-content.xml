@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Generated and Replaced Content" standard-reference="http://www.w3.org/TR/css3-content/" status="WD" pub-date="2003-05-14">
+
+  <CssPseudo name="::before(2)"
+             _locID="before-pseudo-function"
+             _locAttrData="description"
+             version="3.0"
+             browsers="none"
+             syntax="span::before(2) { content: 'B'; }"
+             description="Pseudo-element is used to insert content immediately before the content of an element (or other pseudo-element). The number parameter is used when multiple '::before()' functions are used in conjunction. The 'content' property is used to specify the content to insert."
+             standard-reference="http://www.w3.org/TR/css3-content/#inserting" />
+
+  <CssPseudo name="::after(2)"
+             _locID="after-pseudo-function"
+             _locAttrData="description"
+             version="3.0"
+             browsers="none"
+             syntax="span::after(2) { content: 'B'; }"
+             description="Pseudo-element is used to insert content immediately after the content of an element (or other pseudo-element). The number parameter is used when multiple '::after()' functions are used in conjunction. The 'content' property is used to specify the content to insert."
+             standard-reference="http://www.w3.org/TR/css3-content/#inserting" />
+
+  <CssPseudo name="::outside"
+             _locID="outside-pseudo-element"
+             _locAttrData="description"
+             version="3.0"
+             browsers="none"
+             syntax="span::outside::before { content: 'A'; }"
+             description="An '::outside' pseudo-element is one that is generated immediately outside the pseudo-element's superior."
+             standard-reference="http://www.w3.org/TR/css3-content/#wrapping" />
+
+  <CssPseudo name="::outside(2)"
+             _locID="outside-pseudo-function"
+             _locAttrData="description"
+             version="3.0"
+             browsers="none"
+             syntax="span::outside(1)::before { content: 'A'; }"
+             description="An '::outside' pseudo-element is one that is generated immediately outside the pseudo-element's superior. When given a parameter, '::outside(n)' represents an nth pseudo-element generated immediately around the n-1th pseudo-element."
+             standard-reference="http://www.w3.org/TR/css3-content/#wrapping" />
+
+  <CssPseudo name="::alternate"
+             _locID="alternate-pseudo-element"
+             _locAttrData="description"
+             version="3.0"
+             browsers="none"
+             description="This pseudo-element is created by setting its 'move-to' property to an identifier. It is rendered at the next occurrence of 'pending()' in a 'content' property."
+             syntax="span::after::alternate { content: 'alternate2'; move-to: example; }"
+             standard-reference="http://www.w3.org/TR/css3-content/#inserting1" />
+
+  <CssPseudo name="::marker"
+             _locID="marker-selector"
+             _locAttrData="description"
+             version="3.0"
+             browsers="none"
+             syntax="li::marker { content: counter(item, decimal) '.'; }"
+             description="For a '::marker' pseudo-element to be generated, its superior parent must have a computed 'display' value of 'list-item'."
+             standard-reference="http://www.w3.org/TR/css3-content/#block" />
+
+  <CssPseudo name="::line-marker"
+             _locID="line-marker-selector"
+             _locAttrData="description"
+             version="3.0"
+             browsers="none"
+             syntax="pre::line-marker { width: 2em; }"
+             description="The '::line-marker' pseudo-element is positioned in exactly the same way as the '::marker' pseudo-element, but appears on every line, not just the first."
+             standard-reference="http://www.w3.org/TR/css3-content/#block" />
+
+  <CssProperty _locID="crop"
+               _locAttrData="description"
+               version="3.0"
+               browsers="none"
+               restriction="enum"
+               description="Allows a replaced element to be just a rectangular area of an object, instead of the whole object."
+               syntax="&lt;shape&gt; | auto"
+               standard-reference="http://www.w3.org/TR/css3-content/#the-crop">
+
+    <entry _locID="crop_auto"
+           _locAttrData="description"
+           value="auto"
+           description="The element's computed intrinsic width and height are the same as its actual intrinsic width and height." />
+    <entry _locID="crop_rect"
+           _locAttrData="description"
+           value="rect(top, right, bottom, left)"
+           description="Each of the four arguments can be a &lt;length&gt; or a &lt;percentage&gt;. All percentage values are computed relative to the intrinsic dimensions of the element, if there is one. Values are offsets relative to the top left of the element." />
+    <entry _locID="crop_insert-rect"
+           _locAttrData="description"
+           value="insert-rect(top, right, bottom, left)"
+           description="Each of the four arguments can be a &lt;length&gt; or a &lt;percentage&gt;. All percentage values are computed relative to the intrinsic dimensions of the element, if there is one. Values are offsets relative to the respective edges of the element." />
+  </CssProperty>
+
+  <CssProperty _locID="move-to"
+               _locAttrData="description"
+               version="3.0"
+               browsers="none"
+               restriction="identifier"
+               description="Property causes the element or pseudo-element to be removed from the flow and reinserted at a later point in the document."
+               syntax="normal | here | &lt;identifier&gt;"
+               standard-reference="http://www.w3.org/TR/css3-content/#moving">
+
+    <entry _locID="move-to_normal"
+           _locAttrData="description"
+           value="normal"
+           description="For '::alternate' pseudo-elements, if the superior parent uses the 'footnote' counter in its 'content' property then the computed value of 'move-to' is 'footnotes'." />
+    <entry _locID="move-to_here"
+           _locAttrData="description"
+           value="here"
+           description="The element or pseudo-element is not moved. This value inhibits the creation of '::alternate' pseudo-elements and any pseudo-elements that have such a pseudo-element as a superior." />
+  </CssProperty>
+
+  <CssProperty _locID="quotes"
+               _locAttrData="description"
+               version="2.0"
+               browsers="C,FF1.5,IE8,O8,S5.1"
+               restriction="string"
+               description="Specifies quotation marks for any number of embedded quotations."
+               syntax="none | [ &lt;string&gt; &lt;string&gt; ]+"
+               standard-reference="http://www.w3.org/TR/css3-content/#quotes">
+
+    <entry _locID="quotes_none"
+           _locAttrData="description"
+           value="none"
+           description="The 'open-quote' and 'close-quote' values of the 'content' property produce no quotations marks, as if they were 'no-open-quote' and 'no-close-quote' respectively." />
+  </CssProperty>
+
+  <CssProperty _locID="counter-increment"
+               _locAttrData="description"
+               version="2.0"
+               browsers="C,FF1.5,IE8,O10.5,S3"
+               restriction="identifier, integer"
+               description="Counters are used with the 'counter()' and 'counters()' functions of the the 'content' property."
+               syntax="h1:before { $(name): section; }"
+               standard-reference="http://www.w3.org/TR/css3-content/#counters">
+
+    <entry _locID="counter-increment_none"
+           _locAttrData="description"
+           value="none"
+           description="The counter is not modified." />
+  </CssProperty>
+
+  <CssProperty _locID="counter-reset"
+               _locAttrData="description"
+               version="2.0"
+               browsers="C,FF1.5,IE8,O10.5,S3"
+               restriction="identifier, integer"
+               syntax="h1 { $(name): section; }"
+               description="Property accepts one or more names of counters (identifiers), each one optionally followed by an integer. The integer gives the value that the counter is set to on each occurrence of the element."
+               standard-reference="http://www.w3.org/TR/css3-content/#counters">
+
+    <entry _locID="counter-increment_none"
+           _locAttrData="description"
+           value="none"
+           description="The counter is not modified." />
+  </CssProperty>
+
+  <CssProperty _locID="page-policy"
+               _locAttrData="description"
+               version="3.0"
+               browsers="none"
+               restriction="enum"
+               syntax="@string chapter { $(name): last; }"
+               description="Determines which page-based occurrence of a given element is applied to a counter or string value."
+               standard-reference="http://www.w3.org/TR/css3-content/#page-policy">
+
+    <entry _locID="page-policy_start"
+           _locAttrData="description"
+           value="start"
+           description="Takes the value of the counter or string at the beginning of the page (before applying style to the elements of the page, but after applying it to the @page context itself)." />
+    <entry _locID="page-policy_first"
+           _locAttrData="description"
+           value="first"
+           description="Takes the value after the first state change in the counter or string during processing of the page." />
+    <entry _locID="page-policy_last"
+           _locAttrData="description"
+           value="last"
+           description="Takes the value following the final state change on the page." />
+  </CssProperty>
+
+  <CssAtDirective name="counter"
+                  _locID="counter-rule"
+                  _locAttrData="description"
+                  version="3.0"
+                  browsers="none"
+                  include-root-properties="false"
+                  include-root-directives="false"
+                  syntax="@counter footnote { list-style-type: super-decimal; }"
+                  description="Authors may use @counter declaration blocks and the 'page-policy' property, which applies only to strings and counters."
+                  standard-reference="http://www.w3.org/TR/css3-content/#counter0">
+
+    <CssProperty ref="list-style-type" />
+  </CssAtDirective>
+
+  <CssAtDirective name="string"
+                  _locID="string-rule"
+                  _locAttrData="description"
+                  version="3.0"
+                  syntax="@string chapter { page-policy: last; }"
+                  browsers="none"
+                  description="Authors may use @string declaration blocks and the 'page-policy' property, which applies only to strings and counters."
+                  standard-reference="http://www.w3.org/TR/css3-content/#string" />
+
+  <CssProperty _locID="content"
+               _locAttrData="description"
+               version="2.0"
+               browsers="C,FF1,IE8,O4,S1"
+               restriction="string, url"
+               description="Determines which page-based occurrence of a given element is applied to a counter or string value."
+               syntax="a:after { $(name): ' ( attr(href))';}"
+               standard-reference="http://www.w3.org/TR/css3-content/#content">
+
+    <entry _locID="content_normal"
+           _locAttrData="description"
+           value="normal"
+           description="See http://www.w3.org/TR/css3-content/#content for computation rules." />
+    <entry _locID="content_none"
+           _locAttrData="description"
+           value="none"
+           description="On elements, this inhibits the children of the element from being rendered as children of this element, as if the element was empty. On pseudo-elements it causes the pseudo-element to have no content." />
+    <entry _locID="content_inhibit"
+           _locAttrData="description"
+           value="inhibit"
+           version="3.0"
+           browsers="none"
+           description="On elements, this inhibits the children of the element from being rendered as children of this element, as if the element was empty. On pseudo-elements, this inhibits the creation of the pseudo-element, as if 'display' computed to 'none'." />
+    <entry _locID="content_contents"
+           _locAttrData="description"
+           value="contents"
+           version="3.0"
+           browsers="none"
+           description="Displays the element's descendents." />
+    <entry _locID="content_footnote"
+           _locAttrData="description"
+           value="footnote"
+           version="3.0"
+           browsers="none"
+           description="Shorthand for 'counter(footnote, normal)'. This is intended to be used on the in-flow part of a footnote." />
+    <entry _locID="content_endnote"
+           _locAttrData="description"
+           value="endnote"
+           version="3.0"
+           browsers="none"
+           description="Shorthand for 'counter(endnote, normal)'. This is intended to be used on the in-flow part of a endnote." />
+    <entry _locID="content_section-note"
+           _locAttrData="description"
+           value="section-note"
+           version="3.0"
+           browsers="none"
+           description="Shorthand for 'counter(section-note, normal)'. This is intended to be used on the in-flow part of a section-note." />
+    <entry _locID="content_list-item"
+           _locAttrData="description"
+           value="list-item"
+           version="3.0"
+           browsers="none"
+           description="Shorthand for 'counter(list-item, normal)'. Note that this is not equivalent to 'normal' when set on a '::marker' pseudo-element that has a superior with 'display' set to 'list-item', as it ignores the 'list-style' properties." />
+    <entry _locID="content_open-quote"
+           _locAttrData="description"
+           value="open-quote"
+           browsers="none"
+           description="Value is replaced by the appropriate string from the 'quotes' property." />
+    <entry _locID="content_close-quote"
+           _locAttrData="description"
+           value="close-quote"
+           browsers="none"
+           description="Value is replaced by the appropriate string from the 'quotes' property." />
+    <entry _locID="content_no-open-quote"
+           _locAttrData="description"
+           value="no-open-quote"
+           browsers="none"
+           description="Inserts nothing (as in 'none'), but increments (decrements) the level of nesting for quotes." />
+    <entry _locID="content_no-close-quote"
+           _locAttrData="description"
+           value="no-close-quote"
+           browsers="none"
+           description="Inserts nothing (as in 'none'), but increments (decrements) the level of nesting for quotes." />
+    <entry _locID="content_box"
+           _locAttrData="description"
+           value="box"
+           version="3.0"
+           browsers="none"
+           description="A hollow square." />
+    <entry _locID="content_check"
+           _locAttrData="description"
+           value="check"
+           version="3.0"
+           browsers="none"
+           description="A check mark." />
+    <entry _locID="content_circle"
+           _locAttrData="description"
+           value="circle"
+           version="3.0"
+           browsers="none"
+           description="A hollow circle." />
+    <entry _locID="content_diamond"
+           _locAttrData="description"
+           value="diamond"
+           version="3.0"
+           browsers="none"
+           description="A filled diamond. On some platforms, this is similar to 'disc'." />
+    <entry _locID="content_disc"
+           _locAttrData="description"
+           value="disc"
+           version="3.0"
+           browsers="none"
+           description="A filled circle." />
+    <entry _locID="content_hyphen"
+           _locAttrData="description"
+           value="hyphen"
+           version="3.0"
+           browsers="none"
+           description="A hyphen bullet." />
+    <entry _locID="content_square"
+           _locAttrData="description"
+           value="square"
+           version="3.0"
+           browsers="none"
+           description="A filled square." />
+    <entry _locID="content_attr"
+           _locAttrData="description"
+           value="attr()"
+           description="The attr(n) function returns as a string the value of attribute n for the subject of the selector" />
+    <entry _locID="content_date"
+           _locAttrData="description"
+           value="date(format)"
+           version="3.0"
+           browsers="none"
+           description="Current date and/or time, formatted according to the specified formatting string. Format is based on POSIX date formatting strings." />
+    <entry _locID="content_counterN"
+           _locAttrData="description"
+           value="counter(name)"
+           description="Counters are denoted by identifiers (see the 'counter-increment' and 'counter-reset' properties)." />
+    <entry _locID="content_counterNSty"
+           _locAttrData="description"
+           value="counter(name, style)"
+           browsers="none"
+           description="Counters are denoted by identifiers (see the 'counter-increment' and 'counter-reset' properties)." />
+    <entry _locID="content_counterstr"
+           _locAttrData="description"
+           value="counters(name, string)"
+           browsers="none"
+           description="Counters are denoted by identifiers (see the 'counter-increment' and 'counter-reset' properties)." />
+    <entry _locID="content_countersNSS"
+           _locAttrData="description"
+           browsers="none"
+           value="counters(name, string, style)"
+           description="Counters are denoted by identifiers (see the 'counter-increment' and 'counter-reset' properties)." />
+    <entry _locID="content_string"
+           _locAttrData="description"
+           browsers="none"
+           value="string(name)"
+           description="Specifies a string value" />
+    <entry _locID="content_pending"
+           _locAttrData="description"
+           browsers="none"
+           value="pending()"
+           description="This causes all elements and pseudo-elements whose 'move-to' property computes to the specified identifier to be inserted as children of the current element (or pseudo-element)." />
+    <entry value="url()" />
+  </CssProperty>
+
+  <CssProperty _locID="display">
+    <entry value="normal" version="3.0" />
+  </CssProperty>
+
+</CssModule>

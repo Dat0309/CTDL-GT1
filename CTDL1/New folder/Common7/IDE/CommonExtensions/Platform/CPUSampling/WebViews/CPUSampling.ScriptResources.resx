@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CPUViewSearchWatermark" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="CpuUsageTreeGrid_SelfSamplesHeader" xml:space="preserve">
+    <value>Self CPU (ms)</value>
+  </data>
+  <data name="CpuUsageTreeGrid_SelfSamplesHeaderTooltip" xml:space="preserve">
+    <value>CPU time spent executing code in this function, excluding time in functions called by this function</value>
+  </data>
+  <data name="CpuUsageTreeGrid_FunctionNameHeader" xml:space="preserve">
+    <value>Function Name</value>
+  </data>
+  <data name="CpuUsageTreeGrid_FunctionNameTooltip" xml:space="preserve">
+    <value>Function Name</value>
+  </data>
+  <data name="CpuUsageTreeGrid_TotalSamplesHeader" xml:space="preserve">
+    <value>Total CPU (ms)</value>
+  </data>
+  <data name="CpuUsageTreeGrid_TotalSamplesHeaderTooltip" xml:space="preserve">
+    <value>CPU time spent executing code in this function and in functions called by this function</value>
+  </data>
+  <data name="CpuUsageTreeGrid_ContextMenu_Copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="CpuUsageTreeGrid_ContextMenu_ViewSource" xml:space="preserve">
+    <value>View Source</value>
+  </data>
+  <data name="Label_Filter" xml:space="preserve">
+    <value>Filter:</value>
+  </data>
+  <data name="Label_ThreadsSelection" xml:space="preserve">
+    <value>Thread:</value>
+  </data>
+  <data name="Message_SearchNoMatches" xml:space="preserve">
+    <value>Could not find any matches.</value>
+  </data>
+  <data name="Message_SearchStartFromTop" xml:space="preserve">
+    <value>Reached the end of the document. Do you want to restart the search from the beginning?</value>
+  </data>
+  <data name="ThreadsSelection_All" xml:space="preserve">
+    <value>[Select]</value>
+  </data>
+  <data name="ThreadsSelection_Thread" xml:space="preserve">
+    <value>Thread #</value>
+    <comment>Thread #6321</comment>
+  </data>
+  <data name="ThreadsSelection_UIThread" xml:space="preserve">
+    <value>UI thread</value>
+  </data>
+  <data name="CPUViewFilterView" xml:space="preserve">
+    <value>Filter view</value>
+  </data>
+  <data name="CPUViewSelectAll" xml:space="preserve">
+    <value>(Select all)</value>
+  </data>
+  <data name="CPUViewSelectAllAriaText" xml:space="preserve">
+    <value>Select all checkbox</value>
+  </data>
+  <data name="CPUViewThreadListboxLabel" xml:space="preserve">
+    <value>Threads:</value>
+  </data>
+  <data name="CPUViewThreadListboxTooltip" xml:space="preserve">
+    <value>Threads</value>
+  </data>
+  <data name="ErrMsg_FailedToCreateDetailedReport" xml:space="preserve">
+    <value>Failed to create detailed report.</value>
+  </data>
+  <data name="Button_CreateDetailedReport" xml:space="preserve">
+    <value>Create detailed report...</value>
+  </data>
+  <data name="CPUViewCaseSensitive" xml:space="preserve">
+    <value>Match case</value>
+  </data>
+  <data name="CPUViewRegularExpression" xml:space="preserve">
+    <value>Use Regular Expressions</value>
+  </data>
+  <data name="CPUViewSearchAriaText" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="CPUViewSearchOptionsTitle" xml:space="preserve">
+    <value>Search options</value>
+  </data>
+  <data name="SampleCountLabel" xml:space="preserve">
+    <value>Sample count: </value>
+  </data>
+  <data name="ThreadRoleLabel" xml:space="preserve">
+    <value>Role: </value>
+  </data>
+  <data name="SamplePercentOfProcessLabel" xml:space="preserve">
+    <value>Sample % of process: </value>
+  </data>
+  <data name="Button_CPUViewCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Button_CPUViewApply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="CPUViewShowExternalCodeLabel" xml:space="preserve">
+    <value>Show External Code</value>
+  </data>
+  <data name="CpuUsageTreeGrid_SelfSamplesPercentHeader" xml:space="preserve">
+    <value>Self CPU (%)</value>
+  </data>
+  <data name="CpuUsageTreeGrid_SelfSamplesPercentHeaderTooltip" xml:space="preserve">
+    <value>Percentage of selected CPU activity in this function, excluding activity in functions called by this function</value>
+  </data>
+  <data name="CpuUsageTreeGrid_TotalSamplesPercentHeader" xml:space="preserve">
+    <value>Total CPU (%)</value>
+  </data>
+  <data name="CpuUsageTreeGrid_TotalSamplesPercentHeaderTooltip" xml:space="preserve">
+    <value>Percentage of selected CPU activity in this function and in functions called by this function</value>
+  </data>
+  <data name="ExternalCodeLabel" xml:space="preserve">
+    <value>[External Code]</value>
+  </data>
+  <data name="SystemCodeLabel" xml:space="preserve">
+    <value>[System Code]</value>
+  </data>
+  <data name="CpuUsageTreeGrid_ModuleHeader" xml:space="preserve">
+    <value>Module</value>
+  </data>
+  <data name="CpuUsageTreeGrid_ModuleTooltip" xml:space="preserve">
+    <value>Module(s) where stack frame occured</value>
+  </data>
+  <data name="MultipleModuleLabel" xml:space="preserve">
+    <value>{0} modules</value>
+    <comment>"X modules" The X is replaced during application with the number of modules found. This will be &gt; 1 so plural is okay in this case.</comment>
+  </data>
+  <data name="LoadDataProgressMessage" xml:space="preserve">
+    <value>Analyzing...</value>
+  </data>
+  <data name="SearchProgressMessage" xml:space="preserve">
+    <value>Searching...</value>
+  </data>
+  <data name="ErrMsg_InvalidRegularExpression" xml:space="preserve">
+    <value>The supplied regular expression for searching is invalid.</value>
+  </data>
+  <data name="CpuUsageTreeGrid_PercentageTooltip" xml:space="preserve">
+    <value>{0} of selected CPU activity ({1} samples out of {2})</value>
+  </data>
+  <data name="CpuUsageTreeGrid_SamplesTooltip" xml:space="preserve">
+    <value>{0} ms of CPU time ({1} sample(s) at 1 sample/ms)</value>
+  </data>
+</root>

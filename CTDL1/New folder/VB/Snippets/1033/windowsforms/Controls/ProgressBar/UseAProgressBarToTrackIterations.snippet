@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Use a ProgressBar to Track an Iteration</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Increments a ProgressBar by a fixed amount, upon each iteration.</Description>
+      <Shortcut>pbIterate</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Windows.Forms</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>progressBar</ID>
+          <Type>ProgressBar</Type>
+          <ToolTip>Replace with a ProgressBar on your form.</ToolTip>
+          <Default>ProgressBar1</Default>
+        </Object>
+        <Literal>
+          <ID>minProgress</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with an integer minimum value for the ProgressBar range.</ToolTip>
+          <Default>1</Default>
+        </Literal>
+        <Literal>
+          <ID>maxProgress</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with an integer maximum value for the ProgressBar range.</ToolTip>
+          <Default>100000</Default>
+        </Literal>
+        <Literal>
+          <ID>initValue</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with an integer which represents the initial position of the ProgressBar.</ToolTip>
+          <Default>1</Default>
+        </Literal>
+        <Literal>
+          <ID>step</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with an integer specifying the amount that the ProgressBar increases upon each call to PerformStep.</ToolTip>
+          <Default>1</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[With $progressBar$
+    .Minimum = $minProgress$
+    .Maximum = $maxProgress$
+    .Value = $initValue$
+    .Step = $step$
+
+    For i As Integer = .Minimum To .Maximum
+        ' Perform one step of the action being tracked.
+        .PerformStep()
+    Next i
+
+End With]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

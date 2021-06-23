@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+	<TemplateData>
+		<TemplateID>Microsoft.CPP.WinRT.AAP.Lib.Windows</TemplateID>
+		<ProjectType>VC</ProjectType>
+		<DefaultName>Lib</DefaultName>
+		<TargetPlatformName>Windows</TargetPlatformName>
+		<RequiredPlatformVersion>8.1</RequiredPlatformVersion>
+		<CreateInPlace>true</CreateInPlace>
+		<CreateNewFolder>false</CreateNewFolder>
+		<SortOrder>53</SortOrder>
+		<Hidden>true</Hidden>
+		<ProvideDefaultName>true</ProvideDefaultName>
+		<PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+		<SpecialTemplateType>EmptyNode</SpecialTemplateType>
+		<AppliesTo>Lib</AppliesTo>
+	</TemplateData>
+	<TemplateContent>
+		<Project File="Windows.vcxproj" ReplaceParameters="true">
+			<ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.vcxproj.filters">Windows.vcxproj.filters</ProjectItem>
+			<ProjectItem ReplaceParameters="true" TargetFileName="$sharedbaseprojectname$.h">Lib.h</ProjectItem>
+			<ProjectItem ReplaceParameters="true" TargetFileName="$sharedbaseprojectname$.cpp" OpenInEditor="true">Lib.cpp</ProjectItem>
+			<ProjectItem ReplaceParameters="true" TargetFileName="targetver.h">targetver.h</ProjectItem>
+			<ProjectItem ReplaceParameters="true" TargetFileName="pch.cpp">pch.cpp</ProjectItem>
+			<ProjectItem ReplaceParameters="true" TargetFileName="pch.h">pch.h</ProjectItem>
+		</Project>
+	</TemplateContent>
+</VSTemplate>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ClientWebPart Name="$ProjectItemName$" Title="$loc_client_web_part_title$" Description="$loc_client_web_part_description$" DefaultWidth="300" DefaultHeight="200">
+
+    <!-- $loc_client_web_part_content_1$
+         $loc_client_web_part_content_2$
+         $loc_client_web_part_content_3$ Src="~appWebUrl/Pages/ClientWebPart1.aspx?Property1=_property1_" -->
+    <Content Type="html" Src="$ClientWebPartPageUrl$" />
+
+    <!-- $loc_client_web_part_property_1$
+         $loc_client_web_part_property_2$ -->
+    <Properties>$ClientWebPartPageProperties$
+    </Properties>
+
+  </ClientWebPart>
+</Elements>

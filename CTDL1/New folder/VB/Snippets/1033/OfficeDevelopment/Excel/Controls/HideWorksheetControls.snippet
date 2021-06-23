@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Hide Worksheet Controls</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Hides all controls on an Excel Worksheet.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Excel.dll</Assembly>
+          <Url></Url>
+        </Reference>
+        <Reference>
+          <Assembly>Microsoft.Office.Tools.Excel.dll</Assembly>
+          <Url></Url>
+        </Reference>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Excel = Microsoft.Office.Interop.Excel</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Office.Tools.Excel</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object Editable="true">
+          <ID>obj</ID>
+          <Type>Object</Type>
+          <ToolTip>Replace with a temporary variable for enumerating the controls on the worksheet.</ToolTip>
+          <Default>obj</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>worksheet</ID>
+          <Type>Microsoft.Office.Tools.Excel.Worksheet</Type>
+          <ToolTip>Replace with the worksheet that has the controls you want to hide.</ToolTip>
+          <Default>worksheet</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="" Delimiter="$"><![CDATA[
+Dim $obj$ As Object
+For Each $obj$ As System.Windows.Forms.Control In $worksheet$.Controls
+   CType($obj$, System.Windows.Forms.Control).Hide()
+Next
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

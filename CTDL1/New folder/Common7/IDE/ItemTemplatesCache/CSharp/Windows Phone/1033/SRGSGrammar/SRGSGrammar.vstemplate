@@ -1,0 +1,19 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <DefaultName>SRGSGrammar.xml</DefaultName>
+    <Name Package="{7D4626A3-18C3-43A4-A66C-169D1D609803}" ID="1132" />
+    <Description Package="{7D4626A3-18C3-43A4-A66C-169D1D609803}" ID="1133" />	
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>WindowsPhone</ProjectSubType>
+    <TemplateID>Microsoft.WindowsPhone.CSharp.SRGSGrammer</TemplateID>
+    <TemplateGroupID>Windows Phone</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+    <SortOrder>15</SortOrder>
+    <Icon>__TemplateIcon.ico</Icon>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+  </TemplateData>
+  <TemplateContent>
+    <References />
+    <ProjectItem TargetFileName="$fileinputname$.xml" ReplaceParameters="true" OpenInEditor="true">SRGSGrammar.xml</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

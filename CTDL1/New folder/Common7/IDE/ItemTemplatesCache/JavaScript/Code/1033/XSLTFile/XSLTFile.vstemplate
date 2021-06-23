@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name _locID="JSP_Item_XSLTFileName">XSLT File</Name>
+    <Description _locID="JSP_Item_XSLTFileDesc">A stylesheet used to transform XML documents.</Description>
+    <Icon>XSLTFile.ico</Icon>
+    <TemplateID>Microsoft.JavaScript.XSLTFile</TemplateID>
+    <TemplateGroupID>JavaScript_Neutral_GroupID</TemplateGroupID>
+    <ProjectType>JavaScript</ProjectType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>xsltfile.xslt</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem>XSLTFile.xslt</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

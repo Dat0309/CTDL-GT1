@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Copy an Image to the Clipboard</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Copies an Image to the Clipboard.</Description>
+      <Shortcut>clipCopyImage</Shortcut>
+    </Header>
+    <Snippet>
+		<References>
+			<Reference>
+				<Assembly>System.Drawing.dll</Assembly>
+			</Reference>
+			<Reference>
+				<Assembly>System.Windows.Forms.dll</Assembly>
+			</Reference>
+		</References>
+		<Imports>
+			<Import>
+				<Namespace>Microsoft.VisualBasic</Namespace>
+			</Import>
+			<Import>
+				<Namespace>System.Drawing</Namespace>
+			</Import>
+			<Import>
+				<Namespace>System.Windows.Forms</Namespace>
+			</Import>
+		</Imports>
+		<Declarations>
+        <Object>
+          <ID>image</ID>
+          <Type>Image</Type>
+          <ToolTip>Replace with the image you want to copy to the clipboard.</ToolTip>
+          <Default>picture</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[My.Computer.Clipboard.SetImage($image$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

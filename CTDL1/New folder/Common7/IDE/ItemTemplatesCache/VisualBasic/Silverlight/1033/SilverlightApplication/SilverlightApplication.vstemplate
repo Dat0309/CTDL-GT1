@@ -1,0 +1,19 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <Name Package="{CB22EE0E-4072-4ae7-96E2-90FCCF879544}" ID="1002"/>
+        <Description Package="{CB22EE0E-4072-4ae7-96E2-90FCCF879544}" ID="1003"/>
+        <Icon Package="{CB22EE0E-4072-4ae7-96E2-90FCCF879544}" ID="9010"/>
+        <TemplateID>Microsoft.Silverlight.VisualBasic.Application</TemplateID>
+        <TemplateGroupID>Silverlight</TemplateGroupID>
+        <ProjectType>VisualBasic</ProjectType>
+        <ShowByDefault>false</ShowByDefault>
+        <SortOrder>11</SortOrder>
+        <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+        <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+        <DefaultName>App.xaml</DefaultName>
+    </TemplateData>
+    <TemplateContent>
+        <ProjectItem OpenInEditor="false" SubType="Designer" ReplaceParameters="true" TargetFileName="$fileinputname$.xaml">SilverlightApplication.xaml</ProjectItem>
+        <ProjectItem OpenInEditor="true" ReplaceParameters="true" TargetFileName="$fileinputname$.xaml.vb">SilverlightApplication.xaml.vb</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

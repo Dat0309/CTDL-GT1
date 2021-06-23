@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Update Application Asynchronously using ClickOnce</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Updates ClickOnce application asynchronously.</Description>
+      <Shortcut>appUpdateAsync</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Deployment.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Deployment</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="VB" Kind="method body"><![CDATA[If My.Application.IsNetworkDeployed Then
+	My.Application.Deployment.UpdateAsync()
+End If]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

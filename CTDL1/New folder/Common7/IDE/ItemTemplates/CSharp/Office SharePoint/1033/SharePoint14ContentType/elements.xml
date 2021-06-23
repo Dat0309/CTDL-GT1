@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- $loc_ParentContentTypeComment$: $ParentContentTypeName$ ($ParentContentTypeId$) -->
+  <ContentType ID="$contentTypeId$"
+               Name="$DisplayName$"
+               Group="$loc_ContentTypeGroupName$"
+               Description="$loc_ContentTypeDescription$"
+               Inherits="TRUE"
+               Version="0">
+    <FieldRefs>
+    </FieldRefs>
+$if$ ($DocumentTemplateTargetName$ != )    <DocumentTemplate TargetName="$DocumentTemplateTargetName$" />
+$endif$  </ContentType>
+</Elements>

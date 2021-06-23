@@ -1,0 +1,4 @@
+﻿1>------ Build started: Project: Bai4_D_ql__MDT, Configuration: Debug Win32 ------
+1>  program.cpp
+1>  Bai4_D_ql__MDT.vcxproj -> D:\CTDL1\Bai4_D_ql__MDT\Debug\Bai4_D_ql__MDT.exe
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========

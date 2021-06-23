@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Resize Windows Forms</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Resizes a form.</Description>
+      <Shortcut>formResize</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Drawing.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>formName</ID>
+          <Type>Form</Type>
+          <ToolTip>Replace with a reference to a form.</ToolTip>
+          <Default>Me</Default>
+        </Object>
+        <Literal>
+          <ID>newWidth</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with the new width.</ToolTip>
+          <Default>100</Default>
+        </Literal>
+        <Literal>
+          <ID>newHeight</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with the new height.</ToolTip>
+          <Default>100</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[$formName$.Size = New Size($newWidth$, $newHeight$)
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

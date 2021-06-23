@@ -1,0 +1,24 @@
+﻿// Per i dettagli sulla localizzazione di un'applicazione Windows, vedere: http://go.microsoft.com/fwlink/?LinkId=212836
+
+{
+    "Section1": "Sezione 1",
+	"Section1Title": "Titolo sezione 1",
+    "Section1Subtext": "Lorem ipsum dolor sit amet",
+    "Section1Description": "Lorem ipsum dolor sit amet, consectetur ising elit, sed diam nonummy nibh uismod tincidunt ut laoreet suscipit lobortis nisl ut wisi quipexerci quis consequat minim veniam, quis nostrud. exerci tation ullam corper.",
+
+    "Section2": "Sezione 2",
+    "Section2ItemTitle": "Titolo elemento",
+    "Section2ItemSubtitle": "Sottotitolo elemento",
+    "Section2Subtext": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.",
+    "Section2Description": "Lorem ipsum dolor sit amet, consectetur ising elit, sed diam nonummy nibh uismod tincidunt ut laoreet suscipit lobortis nisl ut wisi quipexerci quis consequat minim veniam, quis nostrud. exerci tation ullam corper.",
+    
+    "Section3": "Sezione 3",
+	"Section3ItemTitle": "Titolo elemento",
+	"Section3Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+    
+    "Section4": "Sezione 4",
+    "Section4Description": "Lorem ipsum dolor sit amet, consectetur ising elit, sed diam nonummy nibh uismod tincidunt ut laoreet suscipit lobortis nisl ut wisi quipexerci quis consequat minim veniam, quis nostrud. exerci tation ullam corper.",
+
+    "DescriptionText": "Lorem ipsum dolor sit amet:",
+    "SectionSubtitle": "Sottotitolo della sezione"
+}

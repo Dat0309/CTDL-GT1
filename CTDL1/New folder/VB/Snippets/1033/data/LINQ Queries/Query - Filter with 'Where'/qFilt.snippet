@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Filter by a single field</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Creates a query that filters the results based on a single condition on one field.</Description>
+      <Shortcut>qFilt</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>queryResult</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the query.</ToolTip>
+          <Default>query</Default>
+        </Literal>
+        <Literal>
+          <ID>item</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the variable that represents an item from your data source.</ToolTip>
+          <Default>fruit</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSource</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the identifier for your data source.</ToolTip>
+          <Default>New String() {"apple", "orange", "pear", "banana"}</Default>
+        </Literal>
+        <Literal>
+          <ID>whereField</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the name of the field being filtered on.</ToolTip>
+          <Default>Length</Default>
+        </Literal>
+        <Literal>
+          <ID>condition</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the condition being filtered by.</ToolTip>
+          <Default>>= 5</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $queryResult$ = From $item$ In $dataSource$ _
+                    Where $item$.$whereField$ $condition$ _
+                    Select $item$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Protect a Worksheet</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Protects a worksheet and its contents.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Excel.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Excel = Microsoft.Office.Interop.Excel</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>password</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the password to protect the worksheet with.</ToolTip>
+          <Default>"Password"</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>protectDrawingObjects</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True to protect shapes in the worksheet.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>protectContents</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True protects all locked cells in the worksheet.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>protectScenarios</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True protects the scenarios in the worksheet.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>userInterfaceOnly</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True to allow code behind the document to alter its contents.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>allowFormattingCells</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True allows the user to format any cell in the worksheet.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>allowFormattingColumns</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True allows the user to format any column in the worksheet.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>allowFormattingRows</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True allows the user to format any rows in the worksheet.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>allowInsertingColumns</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True allows the user to insert columns in the worksheet.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>allowInsertingRows</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True allows the user to insert rows in the worksheet.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>allowInsertingHyperlinks</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True allows the user to insert hyperlinks in the worksheet.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>allowDeletingColumns</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True allows the user to delete columns of unlocked cells in the worksheet.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>allowDeletingRows</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True allows the user to delete rows of unlocked cells in the worksheet.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>allowSorting</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True allows the user to sort a range of unlocked cells in the worksheet.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>allowFiltering</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True allows filtering in the worksheet.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>allowUsingPivotTables</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. True allows the use of PivotTable reports in the worksheet.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>worksheet</ID>
+          <Type>Microsoft.Office.Interop.Excel.Worksheet</Type>
+          <ToolTip>Replace with the worksheet to protect.</ToolTip>
+          <Default>worksheet</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="" Delimiter="$"><![CDATA[
+$worksheet$.Protect( Password:=$password$, _
+					 DrawingObjects:=$protectDrawingObjects$, _
+                     Contents:=$protectContents$, _
+					 Scenarios:=$protectScenarios$, _
+					 UserInterfaceOnly:=$userInterfaceOnly$, _
+					 AllowFormattingCells:=$allowFormattingCells$, _
+					 AllowFormattingColumns:=$allowFormattingColumns$, _
+					 AllowFormattingRows:=$allowFormattingRows$, _
+					 AllowInsertingColumns:=$allowInsertingColumns$, _
+					 AllowInsertingRows:=$allowInsertingRows$, _
+					 AllowInsertingHyperlinks:=$allowInsertingHyperlinks$, _
+					 AllowDeletingColumns:=$allowDeletingColumns$, _
+					 AllowDeletingRows:=$allowDeletingRows$, _
+					 AllowSorting:=$allowSorting$, _
+					 AllowFiltering:=$allowFiltering$, _
+					 AllowUsingPivotTables:=$allowUsingPivotTables$)
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

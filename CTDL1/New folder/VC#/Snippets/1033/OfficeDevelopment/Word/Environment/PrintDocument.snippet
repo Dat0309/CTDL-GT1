@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Print a Word Document</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Sets up the printer options and prints a Word document.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Word.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Word = Microsoft.Office.Interop.Word</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>backGroundValue</ID>
+          <Type>System.Bool</Type>
+          <ToolTip>Replace with a Boolean value. True to print the document in the background. Use System.Type.Missing to omit this optional parameter.</ToolTip>
+          <Default>true</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>appendValue</ID>
+          <Type>System.Bool</Type>
+          <ToolTip>Replace with a Boolean value. True to append the document to the file specified by the OutputFileName argument; false to overwrite the contents of OutputFileName; System.Type.Missing to omit the parameter.</ToolTip>
+          <Default>true</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>rangeValue</ID>
+          <Type>Word.WdPrintOutRange</Type>
+          <ToolTip>Replace with the page range. Can be any Word.WdPrintOutRange constant, or blank to omit.</ToolTip>
+          <Default>wdPrintAllDocument</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>outputFileNameValue</ID>
+          <Type>System.Bool</Type>
+          <ToolTip>If PrintToFile is true, replace with the path and file name of the output file. Use System.Type.Missing otherwise.</ToolTip>
+          <Default>true</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>fromPageValue</ID>
+          <Type>System.Int</Type>
+          <ToolTip>Replace with the starting page number when Range is set to Word.wdPrintFromTo. Leave blank otherwise.</ToolTip>
+          <Default>1</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>toPageValue</ID>
+          <Type>System.Int</Type>
+          <ToolTip>Replace with the ending page number when Range is set to Word.wdPrintFromTo. Leave blank otherwise.</ToolTip>
+          <Default>10</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>itemValue</ID>
+          <Type>Word.WdPrintOutItem</Type>
+          <ToolTip>Replace with the item to be printed. Can be any Word.WdPrintOutItem constant. Leave blank to omit this argument.</ToolTip>
+          <Default>wdPrintDocumentContent</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>copiesValue</ID>
+          <Type>System.Int</Type>
+          <ToolTip>Replace with the number of copies to be printed, or leave blank to use the default value.</ToolTip>
+          <Default>1</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>pagesValue</ID>
+          <Type>System.String</Type>
+          <ToolTip>Replace with the page numbers and page ranges to be printed, separated by commas. For example, "2, 6-10" prints page 2 and pages 6 through 10. Use System.Type.Missing to omit.</ToolTip>
+          <Default>"6-10"</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>pageTypeValue</ID>
+          <Type>Word.WdPrintOutPages</Type>
+          <ToolTip>Replace with the type of pages to be printed. Can be any Word.WdPrintOutPages constant, or blank to omit.</ToolTip>
+          <Default>wdPrintAllPages</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>collateValue</ID>
+          <Type>System.Bool</Type>
+          <ToolTip>Replace with a Boolean value. True to print all pages of the document before printing the next copy, when printing multiple copies of a document.</ToolTip>
+          <Default>true</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>manualDuplexPrintValue</ID>
+          <Type>System.Bool</Type>
+          <ToolTip>Replace with a Boolean value. True to print a two-sided document on a printer without a duplex printing kit.</ToolTip>
+          <Default>true</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>printZoomColumnValue</ID>
+          <Type>System.Int</Type>
+          <ToolTip>Replace with the number of pages you want Word to fit horizontally on one page. Can be 1, 2, 3, or 4, or leave blank to omit.</ToolTip>
+          <Default>1</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>printZoomRowValue</ID>
+          <Type>System.Int</Type>
+          <ToolTip>Replace with the number of pages you want Word to fit vertically on one page. Can be 1, 2, or 4, or leave blank to omit.</ToolTip>
+          <Default>1</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>printZoomWidthValue</ID>
+          <Type>System.Int</Type>
+          <ToolTip>Replace with the width to which you want Word to scale printed pages, in twips (20 twips = 1 point; 72 points = 1 inch).</ToolTip>
+          <Default>20</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>printZooHeightValue</ID>
+          <Type>System.Int</Type>
+          <ToolTip>Replace with the height to which you want Word to scale printed pages, in twips (20 twips = 1 point; 72 points = 1 inch).</ToolTip>
+          <Default>10</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>printToFileValue</ID>
+          <Type>System.Bool</Type>
+          <ToolTip>True to send printer instructions to a file. Make sure to specify a file name with OutputFileName.</ToolTip>
+          <Default>true</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>printToFile</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a Boolean value. True to send printer instructions to a file. Make sure to specify a file name with outputFileName.</ToolTip>
+          <Default>printToFile</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>background</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a variable to hold the background value.</ToolTip>
+          <Default>background</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>append</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a variable to hold the append value.</ToolTip>
+          <Default>append</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>range</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a variable to hold the range value.</ToolTip>
+          <Default>range</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>outputFileName</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a variable to hold the outputFileName value.</ToolTip>
+          <Default>outputFileName</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>fromPage</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a variable to hold the fromPage value.</ToolTip>
+          <Default>fromPage</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>toPage</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a variable to hold the toPage value.</ToolTip>
+          <Default>toPage</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>item</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a variable to hold the item value.</ToolTip>
+          <Default>item</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>copies</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a variable to hold the copies value.</ToolTip>
+          <Default>copies</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>pages</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a variable to hold the pages value.</ToolTip>
+          <Default>pages</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>pageType</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a variable to hold the pageType value.</ToolTip>
+          <Default>pageType</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>printToFile</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a variable to hold the printToFile value.</ToolTip>
+          <Default>printToFile</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>collate</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a variable to hold the collate value.</ToolTip>
+          <Default>collate</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>manualDuplexPrint</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a variable to hold the manualDuplexPrint value.</ToolTip>
+          <Default>manualDuplexPrint</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>printZoomColumn</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a variable to hold the printZoomColumn value.</ToolTip>
+          <Default>printZoomColumn</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>printZoomRow</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a variable to hold the printZoomRow value.</ToolTip>
+          <Default>printZoomRow</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>printZoomPaperWidth</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a variable to hold the printZoomPaperWidth value.</ToolTip>
+          <Default>printZoomPaperWidth</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>printZoomPaperHeight</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a variable to hold the printZoomPaperHeight value.</ToolTip>
+          <Default>printZoomPaperHeight</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>document</ID>
+          <Type>Microsoft.Office.Interop.Word.Document</Type>
+          <ToolTip>Replace with the document to print.</ToolTip>
+          <Default>document</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>ActivePrinterMacGX</ID>
+          <Type>System.Object</Type>
+          <ToolTip>This argument is available only in Microsoft Office Macintosh Edition. For additional information about this argument, consult the language reference Help included with Microsoft Office Macintosh Edition.</ToolTip>
+          <Default>ActivePrinterMacGX</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="CSharp" Kind="" Delimiter="$"><![CDATA[            
+$document$.PrintOut( Background:$background$, 
+					 Append:$append$, 
+					 Range:$range$, 
+					 OutputFileName:$outputFileName$, 
+					 From:$fromPage$, 
+					 To:$toPage$, 
+					 Item:$item$, 
+					 Copies:$copies$, 
+					 Pages:$pages$, 
+					 PageType:$pageType$, 
+					 PrintToFile:$printToFile$, 
+					 Collate:$collate$, 
+					 ActivePrinterMacGX:$ActivePrinterMacGX$, 
+					 ManualDuplexPrint:$manualDuplexPrint$, 
+					 PrintZoomColumn:$printZoomColumn$, 
+					 PrintZoomRow:$printZoomRow$, 
+					 PrintZoomPaperWidth:$printZoomPaperWidth$, 
+					 PrintZoomPaperHeight$printZoomPaperHeight$);
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

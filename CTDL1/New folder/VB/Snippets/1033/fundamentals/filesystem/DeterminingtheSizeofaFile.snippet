@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Determine the Size of a File</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Obtains the size of a file and assigns it to a variable</Description>
+      <Shortcut>filSize</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>filename</ID>
+          <ToolTip>Replace with the file name.</ToolTip>
+          <Default>"filename.txt"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim fileSize As Long 
+fileSize = My.Computer.FileSystem.GetFileInfo($filename$).Length]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

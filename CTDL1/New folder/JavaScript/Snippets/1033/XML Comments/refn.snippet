@@ -1,0 +1,21 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>refn</Title>
+    <Author>Microsoft Corporation</Author>
+    <Shortcut>refn</Shortcut>
+    <Description>Code snippet for a reference assembly XML comment</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>name</ID>
+        <ToolTip>Assembly resource name</ToolTip>
+        <Default>MicrosoftAjax.js</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="JavaScript"><![CDATA[/// <reference name="$name$"/>$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

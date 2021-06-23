@@ -1,0 +1,30 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>media query</Title>
+    <Author>Microsoft Corporation</Author>
+    <Shortcut>@media</Shortcut>
+    <Description>A media query example</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>width</ID>
+        <ToolTip>Width value</ToolTip>
+        <Default>1024px</Default>
+      </Literal>
+      <Literal>
+        <ID>height</ID>
+        <ToolTip>Height value</ToolTip>
+        <Default>768px</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="css" Kind="AtDirectiveName">
+        <![CDATA[@media only screen and (max-width: $width$) and (max-height: $height$) {
+  $selected$$end$
+}]]></Code>
+  </Snippet>
+</CodeSnippet>

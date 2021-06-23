@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="$fileinputname$">
+    <File Path="$fileinputname$\DataBinding\DataBinding.css" Url="$fileinputname$/DataBinding/DataBinding.css" ReplaceContent="TRUE" />
+    <File Path="$fileinputname$\DataBinding\DataBinding.html" Url="$fileinputname$/DataBinding/DataBinding.html" ReplaceContent="TRUE" />
+    <File Path="$fileinputname$\DataBinding\DataBinding.js" Url="$fileinputname$/DataBinding/DataBinding.js" ReplaceContent="TRUE" />
+    <File Path="$fileinputname$\Home\Home.css" Url="$fileinputname$/Home/Home.css" ReplaceContent="TRUE" />
+    <File Path="$fileinputname$\Home\Home.html" Url="$fileinputname$/Home/Home.html" ReplaceContent="TRUE" />
+    <File Path="$fileinputname$\Home\Home.js" Url="$fileinputname$/Home/Home.js" ReplaceContent="TRUE" />
+    <File Path="$fileinputname$\App.css" Url="$fileinputname$/App.css" ReplaceContent="TRUE" />
+    <File Path="$fileinputname$\App.js" Url="$fileinputname$/App.js" ReplaceContent="TRUE" />
+    <File Path="$fileinputname$\Visualization.js" Url="$fileinputname$/Visualization.js" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

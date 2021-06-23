@@ -1,0 +1,721 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<html dir="LTR">
+<head>
+	<title>MFC アプリケーション ウィザード</title>
+	<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+	<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+	<meta http-equiv="MSThemeCompatible" content="Yes">
+	<link id="LINKURL" rel="stylesheet" href="../../../../../1041/NewStyles.css">
+</head>
+<body bgcolor="BUTTONFACE" topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0"
+	onload="InitDocument(document);" onkeydown="if (!bValidating) OnKey();" onkeypress="if (!bValidating) OnPress();">
+	<table class="ONE" height="100%" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<col class="LinkPane">
+		<col>
+		<!--OPEN OF INTRODUCTORY INFORMATION TABLE//-->
+		<tr valign="TOP">
+			<td height="79" width="100%" colspan="2">
+				<table class="TWO" border="0" cellpadding="0" cellspacing="0">
+					<col width="12">
+					<col>
+					<col width="12">
+					<tr>
+						<td valign="TOP" height="12" width="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="12" width="12">
+							&nbsp;
+						</td>
+						<td class="IMAGE" valign="BOTTOM" width="110" rowspan="2">
+							<div class="SMALLA" id="SINGLE_DOC_IMAGE">
+								<img class="SMALL" src="../../Images/DocTemplateString.gif" width="98" height="70"
+									alt="" border="0">
+							</div>
+						</td>
+						<td valign="TOP" height="12" width="6" rowspan="2">
+							&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td valign="TOP" height="65" width="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="65">
+							<h4 class="HEAD" id="HEAD">ドキュメント テンプレート プロパティ</h4>
+							<p class="SUBHEAD" id="SUBHEAD">
+								新しいドキュメントの作成に使用する、アプリケーションのドキュメント テンプレートの値を
+								指定します。</p>
+						</td>
+						<td valign="TOP" height="65" width="12">
+							&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td valign="TOP" class="RULE" colspan="5" height="2">
+							<table border="0" width="100%" height="1" cellpadding="0" cellspacing="0">
+								<tr valign="TOP">
+									<td height="1" width="100%" bgcolor="BUTTONSHADOW">
+									</td>
+									<td height="1" width="1" bgcolor="WINDOW">
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<!--CLOSE OF INTRODUCTORY INFORMATION TABLE//-->
+		<!--OPEN OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+		<tr valign="TOP">
+			<td class="Three" valign="TOP" height="100%" width="100%">
+				<table class="fixedSize" height="100%" width="100%" border="0" cellpadding="0" cellspacing="0">
+					<tr valign="TOP">
+						<td class="threeCustom" valign="TOP">
+							<!--OPEN OF NAVIGATION TABLE//-->
+							<table class="THREE" border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col>
+								<col width="1">
+								<tr>
+									<td valign="TOP" colspan="3" height="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="100%">
+										&nbsp;
+									</td>
+									<td valign="TOP" height="100%">
+										<!--OPEN OF NAVIGATIONAL LINKS//-->
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="Default" title="選択項目の概要です。"
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } Next(document, 'Default.htm');"
+															tabindex="1">概要</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="AppType" title="アプリケーションのドキュメント/ビュー アーキテクチャのサポート、言語、およびインターフェイス形式を指定します。"
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } Next(document, 'AppType.htm');"
+															tabindex="2">アプリケーションの種類</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXTINDENT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="CompoundDoc" title="OLE コンテナー、またはサーバー オプションおよびアクティブ ドキュメントのサポートを指定します。"
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } onClick(this);"
+															tabindex="3">複合ドキュメント サポート</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINKSELECTED">
+											<span class="VERTLINE1">
+												<img src="../../../../../1033/Images/spacer.gif" width="1" height="1" alt="" border="0">
+											</span><span class="HORILINE1">
+												<table width="167" height="100%" border="0" cellpadding="0" cellspacing="0">
+													<tr valign="TOP">
+														<td class="DOTTEDLINE" height="1">
+														</td>
+													</tr>
+													<tr valign="TOP">
+														<td height="100%">
+															<img src="../../../../../1033/Images/spacer.gif" width="165" height="28" alt="" border="0">
+														</td>
+													</tr>
+													<tr valign="TOP">
+														<td class="DOTTEDLINE" height="1">
+														</td>
+													</tr>
+												</table>
+											</span>
+											<table width="160" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXTSELECTEDINDENT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span id="DocTemp" title="新しいドキュメントの作成に使用する、アプリケーションのドキュメント テンプレートの値を指定します。">
+															ドキュメント テンプレート プロパティ</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="DBSupport" title="データ ソースをすべて含むデータベース サポートを指定します。"
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } onClick(this);"
+															tabindex="4">データベース サポート</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="UIFeatures" title="アプリケーションの外観を設定します。"
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } Next(document, 'UIFeatures.htm');"
+															tabindex="5">ユーザー インターフェイス機能</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="Advanced" title="アプリケーションに追加するサポートを指定します。"
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } Next(document, 'Advanced.htm');"
+															tabindex="6">高度な機能</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="GeneratedClasses" title="生成されたクラスを確認し、アプリケーションの基底クラスを指定します。"
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } Next(document, 'GeneratedClasses.htm');"
+															tabindex="7">生成されたクラス</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<!--CLOSE OF NAVIGATIONAL LINKS//-->
+									</td>
+									<td width="1">
+										<div class="VERTLINE">
+											<img src="../../../../../1033/Images/spacer.gif" width="1" height="1" alt="" border="0">
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				<!--CLOSE OF NAVIGATION TABLE//-->
+			</td>
+			<td valign="TOP" height="100%">
+				<!--OPEN OF CONTENT AND BUTTON TABLE//-->
+				<table class="ONE" border="0" cellpadding="0" cellspacing="0">
+					<col width="100%">
+					<tr valign="TOP">
+						<td height="100%">
+							<!--OPEN OF CONTENT//-->
+							<table class="CONTENT" border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col width="398">
+								<col width="12">
+								<tr>
+									<td valign="TOP" height="9" colspan="3">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP">
+										<table class="FixedSize" border="0" cellpadding="0" cellspacing="0">
+											<col width="193">
+											<col width="12">
+											<col width="193">
+											<tr>
+												<td valign="TOP">
+													<span class="itemText" id="FILE_EXTENSION_TEXT" title="アプリケーション ドキュメントのファイルの拡張子です。">
+														<label id="EXTENSION_TEXT" for="FILE_EXTENSION">ファイルの拡張子(<u>X</u>):</label>
+														<br>
+														<input class="sideBtn" type="text" name="FileExt" id="FILE_EXTENSION" accesskey="x"
+															onpropertychange="ExtensionChanged(true);" title="アプリケーション ドキュメントのファイルの拡張子です。推奨される拡張子の形式は 'ドキュメントの種類-会社名' (例: 'xlsx-microsoft) です。"
+															tabindex="8">
+													</span>
+												</td>
+												<td valign="TOP" width="12">
+													&nbsp;
+												</td>
+												<td valign="TOP">
+													<span class="itemText" id="DOCTYPE_WILDCARD_TEXT" title="quot;ワークシート (*.xls)&quot; のような、ドキュメントの種類およびワイルドカード フィルターです。">
+														<label id="FILTER_TEXT" for="FILTER_NAME">フィルター名(<u>N</u>):</label>
+														<br>
+														<input class="sideBtn" type="text" name="FilterName" id="FILTER_NAME" accesskey="n"
+															title="quot;ワークシート (*.xls)&quot; のような、ドキュメントの種類およびワイルドカード フィルターです。"
+															tabindex="9">
+													</span>
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="17" colspan="3">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP">
+										<span class="itemText" id="preview_handler_title">
+											<input class="CheckBox" type="checkbox" id="PREVIEW_HANDLER" accesskey="R" title="プレビュー ハンドラーのサポートを有効にします。エクスプローラーのプレビュー ウィンドウに、ドキュメント データが表示されます。ファイル拡張子を指定してください。ハンドラーを含む個別の ATL DLL プロジェクトが作成されます。"
+												class="SINGLECHECKBOX" tabindex="10">
+											<div class="itemTextCheckboxA" id="SELECT_PREVIEW_HANDLER_TEXT" title="プレビュー ハンドラーのサポートを有効にします。エクスプローラーのプレビュー ウィンドウに、ドキュメント データが表示されます。ファイル拡張子を指定してください。ハンドラーを含む個別の ATL DLL プロジェクトが作成されます。">
+												<label id="PREVIEW_HANDLER_TEXT" for="PREVIEW_HANDLER">ファイルの種類のプレビュー ハンドラー サポート(<u>R</u>)</label>
+											</div>
+										</span>
+										<p class="ElementSpacer2">
+											&nbsp;</p>
+										<span class="itemText" id="thumbnail_handler_title">
+											<input class="CheckBox" type="checkbox" id="THUMBNAIL_HANDLER" accesskey="U" title="検索および縮小版ハンドラーから呼び出される CDocument および CView 派生クラスのコードを生成し、DLL に実装されたハンドラーのコードを使用してアプリケーション コードの共有を可能にします。ファイル拡張子を指定してください。ハンドラーを含む個別の ATL DLL プロジェクトが作成されます。"
+												class="SINGLECHECKBOX" tabindex="11">
+											<div class="itemTextCheckboxA" id="SELECT_THUMBNAIL_HANDLER_TEXT" title="縮小版ハンドラーから呼び出される CDocument および CView 派生クラスのコードを生成し、DLL に実装されたハンドラーのコードを使用してアプリケーション コードの共有を可能にします。ファイル拡張子を指定してください。ハンドラーを含む個別の ATL DLL プロジェクトが作成されます。">
+												<label id="THUMBNAIL_HANDLER_TEXT" for="THUMBNAIL_HANDLER">ファイルの種類のサムネイル ハンドラー サポート(<u>U</u>)</label>
+											</div>
+										</span>
+										<p class="ElementSpacer2">
+											&nbsp;</p>
+										<span class="itemText" id="search_handler_title">
+											<input class="CheckBox" type="checkbox" id="SEARCH_HANDLER" accesskey="E" title="検索および縮小版ハンドラーから呼び出される CDocument および CView 派生クラスのコードを生成し、DLL に実装されたハンドラーのコードを使用してアプリケーション コードの共有を可能にします。ファイル拡張子を指定してください。ハンドラーを含む個別の ATL DLL プロジェクトが作成されます。"
+												class="SINGLECHECKBOX" tabindex="11">
+											<div class="itemTextCheckboxA" id="SELECT_SEARCH_HANDLER_TEXT" title="検索ハンドラーから呼び出される CDocument および CView 派生クラスのコードを生成し、DLL に実装されたハンドラーのコードを使用してアプリケーション コードの共有を可能にします。ファイル拡張子を指定してください。ハンドラーを含む個別の ATL DLL プロジェクトが作成されます。">
+												<label id="SEARCH_HANDLER_TEXT" for="SEARCH_HANDLER">ファイルの種類の検索ハンドラー サポート(<u>E</u>)</label>
+											</div>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="17" colspan="3">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP">
+										<table class="FixedSize" border="0" cellpadding="0" cellspacing="0">
+											<col width="193">
+											<col width="12">
+											<col width="193">
+											<tr>
+												<td valign="TOP">
+													<span class="itemText" id="MAIN_FRAME_CAPTION_TEXT" title="メイン アプリケーション フレームの最上部に表示されるテキストです。通常はアプリケーションの名前です。">
+														<label id="MAIN_FRAME_TEXT" for="MAIN_FRAME_CAPTION">メイン フレームのキャプション(<u>P</u>):</label>
+														<br>
+														<input class="sideBtn" type="text" name="MainFrCap" id="MAIN_FRAME_CAPTION" accesskey="p"
+															title="メイン アプリケーション フレームの最上部に表示されるテキストです。通常はアプリケーションの名前です。"
+															tabindex="12">
+													</span>
+													<p class="ElementSpacer2">
+														&nbsp;</p>
+													<span class="itemText" id="ROOT_NAME_TEXT" title="新しいドキュメント ファイルのルート名です。既定の名前は &quot;プロジェクト&quot; です。">
+														<label id="DOC_TYPE_TEXT" for="DOC_TYPE_NAME">ドキュメントの種類の名前(<u>T</u>):</label>
+														<br>
+														<input class="sideBtn" type="text" name="DocTypeName" id="DOC_TYPE_NAME" accesskey="t"
+															title="新しいドキュメント ファイルのルート名です。既定値は &quot;無題&quot; です。" tabindex="14">
+													</span>
+													<p class="ElementSpacer2">
+														&nbsp;</p>
+													<span class="itemText" id="SHORT_NAME_TEXT" title="&quot;ワークシート&quot; のような、ドキュメントの短い名前です。">
+														<label id="NEW_SHORT_NAME_TEXT" for="FILE_NEW_NAME_SHORT">ファイルの新しい短い名前(<u>S</u>):</label>
+														<br>
+														<input class="sideBtn" type="text" name="FileNameShort" id="FILE_NEW_NAME_SHORT"
+															accesskey="s" title="&quot;ワークシート&quot; のような、ドキュメント タイプの短い名前です。"
+															tabindex="16">
+													</span>
+												</td>
+												<td valign="TOP" width="12">
+													&nbsp;
+												</td>
+												<td valign="TOP">
+													<span class="itemText" id="IDENTIFIER_TEXT" title="Windows レジストリ データベースに保存する、ドキュメント タイプの識別子です。">
+														<label id="ID_TEXT" for="FILE_TYPE_ID">ファイルの種類の ID(<u>I</u>):</label>
+														<br>
+														<input class="sideBtn" type="text" name="FileID" id="FILE_TYPE_ID" accesskey="i"
+															title="Windows レジストリ データベースに保存する、ドキュメント タイプの識別子です。"
+															tabindex="13">
+													</span>
+													<p class="ElementSpacer2">
+														&nbsp;</p>
+													<span class="itemText" id="DOC_NAME_TEXT" title="Windows 登録情報データベースに保存されるドキュメントの種類名です。">
+														<label id="LONG_NAME_TEXT" for="FILE_NEW_NAME_LONG">ファイルの種類の長い名前(<u>L</u>):</label>
+														<br>
+														<input class="sideBtn" type="text" name="FileNameLong" id="FILE_NEW_NAME_LONG" accesskey="l"
+															title="Windows 登録情報データベースに保存されるドキュメントの種類名です。"
+															tabindex="15">
+													</span>
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="100%" colspan="3">
+										&nbsp;
+									</td>
+								</tr>
+							</table>
+							<!--CLOSE OF CONTENT//-->
+						</td>
+					</tr>
+					<tr valign="BOTTOM">
+						<td>
+							<!--OPEN OF BUTTON HTML//-->
+							<table border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col>
+								<col width="75">
+								<col width="4">
+								<col width="75">
+								<col width="4">
+								<col width="75">
+								<col width="12">
+								<tr>
+									<td valign="TOP" class="RULE" colspan="8" height="2">
+										<table border="0" width="100%" height="1" cellpadding="0" cellspacing="0">
+											<tr valign="TOP">
+												<td height="1" width="100%" bgcolor="BUTTONSHADOW">
+												</td>
+												<td height="1" width="1" bgcolor="WINDOW">
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="11" colspan="8">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="MIDDLE" height="23" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP" height="23">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="FinishBtn" onclick="OnFinish(document);">
+											完了</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="4">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="CancelBtn" onclick="window.external.Finish(document, 'cancel');">
+											キャンセル</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="4">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="HelpBtn" onclick="window.external.OnHelp('vc.appwiz.mfc.exe.doctemp');">
+											ヘルプ</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="12" colspan="8">
+										&nbsp;
+									</td>
+								</tr>
+							</table>
+							<!--CLOSE OF BUTTON HTML//-->
+						</td>
+					</tr>
+				</table>
+				<!--CLOSE OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+<script language="JSCRIPT">
+
+	var tab_array = new Array();
+	tab_array[0] = Default;
+	tab_array[1] = AppType;
+	tab_array[2] = CompoundDoc;
+	tab_array[3] = DocTemp;
+	tab_array[4] = DBSupport;
+	tab_array[5] = UIFeatures;
+	tab_array[6] = Advanced;
+	tab_array[7] = GeneratedClasses;
+
+	var ProjName = window.external.FindSymbol("PROJECT_NAME");
+
+	function InitDocument(document) {
+		setDirection();
+		InitTabs();
+		window.external.Load(document);
+
+		var max = new Number;
+		max = window.external.FindSymbol("MAX_DOC_TYPE_NAME");
+		DOC_TYPE_NAME.maxLength = max;
+
+		max = window.external.FindSymbol("MAX_FILE_NEW_NAME_SHORT");
+		FILE_NEW_NAME_SHORT.maxLength = max;
+
+		max = window.external.FindSymbol("MAX_FILE_TYPE_ID");
+		FILE_TYPE_ID.maxLength = max;
+
+		max = window.external.FindSymbol("MAX_FILE_NEW_NAME_LONG");
+		FILE_NEW_NAME_LONG.maxLength = max;
+
+		max = window.external.FindSymbol("MAX_FILTER_NAME");
+		FILTER_NAME.maxLength = max;
+
+		ExtensionChanged(false);
+	}
+
+	function InitTabs() {
+		MouseOut(DBSupport);
+		MouseOut(CompoundDoc);
+	}
+
+	function Next(document, linkto) {
+		window.external.Next(document, linkto);
+	}
+
+	function onClick(obj) {
+		if (obj == null || typeof (obj) == "undefined") {
+			return;
+		}
+
+		if (obj.id == "DBSupport") {
+			if (!window.external.FindSymbol("APP_TYPE_DLG")) {
+				Next(document, "DBSupport.htm");
+			}
+		}
+
+		if (obj.id == "CompoundDoc") {
+			if (window.external.FindSymbol("DOCVIEW") && !window.external.IsSymbolDisabled("DOCVIEW")) {
+				Next(document, "CompoundDoc.htm");
+			}
+		}
+	}
+
+	function CheckDataSource() {
+		if (window.external.FindSymbol("DB_CONNECTION_STRING") == "" && (window.external.FindSymbol("OLEDB") || window.external.FindSymbol("ODBC"))) {
+			L_Err1_Text = "データベース ビューを選択した場合は、データ ソースを指定する必要があります。";
+			window.external.ReportError(L_Err1_Text);
+			return false;
+		}
+
+		return true;
+	}
+
+	function OnFinish(document) {
+		bValidating = true;
+		if (!ValidateInput()) {
+			bValidating = false;
+			return;
+		}
+
+		if (!CheckDataSource())
+			return;
+
+		if (window.external.FindSymbol("ACTIVE_DOC_SERVER")) {
+			var strExtension = window.external.FindSymbol("FILE_EXTENSION");
+			if (strExtension == "") {
+				L_Err2_Text = "Active ドキュメント サーバー オプションが選択されています。ドキュメント ファイル拡張子を指定してください。";
+				window.external.ReportError(L_Err2_Text);
+				FILE_EXTENSION.focus();
+				return;
+			}
+		}
+
+		OnWizFinish(document);
+	}
+
+	function ExtensionChanged(fValueChanged) {
+		var strExtension = TrimStr(FILE_EXTENSION.value);
+		window.external.AddSymbol("FILE_EXTENSION", strExtension);
+		if (strExtension == "") {
+			FILTER_NAME.value = strExtension;
+			window.external.AddSymbol("HAS_SUFFIX", false);
+			PREVIEW_HANDLER.checked = false;
+			PREVIEW_HANDLER.disabled = true;
+			PREVIEW_HANDLER_TEXT.disabled = true;
+			THUMBNAIL_HANDLER.checked = false;
+			THUMBNAIL_HANDLER.disabled = true;
+			THUMBNAIL_HANDLER_TEXT.disabled = true;
+			SEARCH_HANDLER.checked = false;
+			SEARCH_HANDLER.disabled = true;
+			SEARCH_HANDLER_TEXT.disabled = true;
+		}
+		else {
+			if (fValueChanged) {
+				FILTER_NAME.value = ProjName + " Files (*." + strExtension + ")";
+			}
+			window.external.AddSymbol("HAS_SUFFIX", true);
+			PREVIEW_HANDLER.disabled = false;
+			PREVIEW_HANDLER_TEXT.disabled = false;
+			THUMBNAIL_HANDLER.disabled = false;
+			THUMBNAIL_HANDLER_TEXT.disabled = false;
+			SEARCH_HANDLER.disabled = false;
+			SEARCH_HANDLER_TEXT.disabled = false;
+		}
+	}
+
+	function ValidateInput() {
+		var oInvalid = null;
+
+		if (!Validate(FILE_EXTENSION)) {
+			oInvalid = FILE_EXTENSION;
+		}
+
+		if (oInvalid == null) {
+			if (!Validate(FILE_TYPE_ID)) {
+				oInvalid = FILE_TYPE_ID;
+			}
+		}
+
+		if (oInvalid == null) {
+			if (!Validate(DOC_TYPE_NAME)) {
+				oInvalid = DOC_TYPE_NAME;
+			}
+		}
+
+		if (oInvalid == null) {
+			if (!Validate(FILTER_NAME)) {
+				oInvalid = FILTER_NAME;
+			}
+		}
+
+		if (oInvalid == null) {
+			if (!Validate(FILE_NEW_NAME_SHORT)) {
+				oInvalid = FILE_NEW_NAME_SHORT;
+			}
+		}
+
+		if (oInvalid == null) {
+			if (!Validate(FILE_NEW_NAME_LONG)) {
+				oInvalid = FILE_NEW_NAME_LONG;
+			}
+		}
+
+		if (oInvalid != null) {
+			window.external.ReportError();
+			oInvalid.focus();
+			return false;
+		}
+		return true;
+	}
+
+	function ValidateFileExtension(strExt) {
+		if (strExt.length == 0 && (PREVIEW_HANDLER.checked || THUMBNAIL_HANDLER.checked || SEARCH_HANDLER.checked)) {
+			L_Err4_Text = "プレビュー ハンドラーのサポートが有効な場合は、ファイル拡張子を空にできません。";
+			oErrObj = new Error(L_Err4_Text);
+			SetErrorInfo(oErrObj);
+			return false;
+		}
+
+		if (!ValidateExtension(strExt) || !window.external.dte.VCLanguageManager.ValidateFileName(strExt, vsCMValidateFileExtNone)) {
+			L_Err5_Text = "ファイル拡張子が無効です。拡張子に空白または <>.\"\\/|:?* 文字のいずれかを含めることはできません。";
+			oErrObj = new Error(L_Err5_Text);
+			SetErrorInfo(oErrObj);
+			return false;
+		}
+
+		return true;
+	}
+
+	function ValidateExtension(strExt) {
+		if (strExt.indexOf("<") >= 0 || strExt.indexOf(">") >= 0 || strExt.indexOf("\"") >= 0 || strExt.indexOf(" ") >= 0 ||
+		strExt.indexOf("/") >= 0 || strExt.indexOf("\\") >= 0 || strExt.indexOf("|") >= 0 || strExt.indexOf(":") >= 0 ||
+		strExt.indexOf("?") >= 0 || strExt.indexOf("*") >= 0 || strExt.indexOf(".") >= 0) {
+			return false;
+		}
+
+		return true;
+	}
+
+	function Validate(obj) {
+		var bValid = true;
+		switch (obj.id) {
+			case "FILE_EXTENSION":
+				{
+					if (!FILE_EXTENSION.value.length && !PREVIEW_HANDLER.checked && !THUMBNAIL_HANDLER.checked && !SEARCH_HANDLER.checked) {
+						bValid = true;
+						break;
+					}
+					bValid = ValidateFileExtension(obj.value);
+					break;
+				}
+			case "DOC_TYPE_NAME":
+				bValid = window.external.dte.VCLanguageManager.ValidateQualifiedName(obj.value);
+				break;
+			case "FILE_TYPE_ID":
+				bValid = window.external.IsValidProgID(obj.value);
+				break;
+			default:
+				break;
+		}
+
+		if (typeof (bValid) == "undefined")
+			bValid = false;
+
+		return bValid;
+	}
+
+</script>
+
+<script id="INCLUDE_SCRIPT" language="JSCRIPT"></script>
+
+<script id="INCLUDE_COMMON" language="JSCRIPT"></script>
+
+<script>
+	document.scripts("INCLUDE_SCRIPT").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Script.js";
+	document.scripts("INCLUDE_COMMON").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Common.js";
+</script>
+

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Add a Menu Item</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Adds a menu item to an Office menu.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>office.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Office = Microsoft.Office.Core</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>controlType</ID>
+          <Type>Office.MsoControlType</Type>
+          <ToolTip>Replace with the type of control to add to the command bar. One of the Office.MsoControlType values.</ToolTip>
+          <Default>msoControlPopup</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>position</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with a number that indicates the position of the new control on the command bar. The new control is inserted before the control at this position. If this argument is omitted, the control is added at the end of the specified command bar.</ToolTip>
+          <Default>1</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>temporary</ID>
+          <Type>Bool</Type>
+          <ToolTip>Replace with a Boolean value. True to delete the menu item when the workbook is closed. Word ignores this parameter. Set the CustomizationContext property of the Word document to control the object lifetime in Word.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>controlTag</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with a unique tag value.</ToolTip>
+          <Default>"ControlTag"</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>newMenuItem</ID>
+          <Type>Microsoft.Office.Core.CommandBarControl</Type>
+          <ToolTip>Replace with a variable to hold the new menu item.</ToolTip>
+          <Default>newMenuItem</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>commandBar</ID>
+          <Type>Microsoft.Office.Core.CommandBar</Type>
+          <ToolTip>Replace with the command bar to add the menu item to.</ToolTip>
+          <Default>commandBar</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="" Delimiter="$"><![CDATA[
+$newMenuItem$ = $commandBar$.Controls.Add(Type:=Office.MsoControlType.$controlType$, Before:=$position$, Temporary:=$temporary$)
+$newMenuItem$.Tag = $controlTag$
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

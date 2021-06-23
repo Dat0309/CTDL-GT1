@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name _locID="JSP_Project_Blank_Univ_AAP_Name">Blank App (Universal App)</Name>
+    <Description _locID="JSP_Project_Blank_Univ_AAP_Desc">A project for a single-page Windows and Windows Phone app that has no predefined controls or layout.</Description>
+    <Icon>blankunivaap.ico</Icon>
+    <TemplateID>Microsoft.JavaScript.BlankUnivAAP</TemplateID>
+    <ProjectType>JavaScript</ProjectType>
+    <DefaultName>BlankSharedApp</DefaultName>
+    <TargetPlatformName>Windows</TargetPlatformName>
+    <RequiredPlatformVersion>8.1</RequiredPlatformVersion>
+    <CreateInPlace>true</CreateInPlace>
+    <PreviewImage>blankunivaap.png</PreviewImage>
+    <CreateNewFolder>false</CreateNewFolder>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <SortOrder>10</SortOrder>
+    <SpecialTemplateType>EmptyShared</SpecialTemplateType>
+    <Hidden>true</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="Application.shproj" ReplaceParameters="true">
+      <ProjectItem TargetFileName="$safeprojectname$.projitems" ReplaceParameters="true">Shared.projitems</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

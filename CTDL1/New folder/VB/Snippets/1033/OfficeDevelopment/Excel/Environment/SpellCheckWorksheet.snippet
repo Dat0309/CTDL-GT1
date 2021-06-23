@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Spell Check a Worksheet</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Checks spelling in an Excel worksheet.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Excel.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Excel = Microsoft.Office.Interop.Excel</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>customDictionary</ID>
+          <Type>String</Type>
+          <ToolTip>To use a custom dictionary, pass the value as a string. If a custom dictionary should not be used, leave empty.</ToolTip>
+          <Default>"MyDictionary"</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>ignoreUppercase</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with true to ignore words that are all uppercase, false to spell check them, and System.Type.Missing to use Excel's current setting.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>alwaysSuggest</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with true to have Excel suggest a list of alternative spellings, false to have Excel wait for the user to correct it, and System.Type.Missing to use Excel's current setting.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>apellLang</ID>
+          <Type>Object</Type>
+          <ToolTip>Replace with the location ID for the language to use, or leave empty to use the default language.</ToolTip>
+          <Default>msoLanguageIDEnglishUS</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>worksheet</ID>
+          <Type>Microsoft.Office.Interop.Excel.Worksheet</Type>
+          <ToolTip>Replace with the worksheet to check the spelling in.</ToolTip>
+          <Default>worksheet</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="" Delimiter="$"><![CDATA[
+$worksheet$.CheckSpelling($customDictionary$, $ignoreUppercase$, _
+						  $alwaysSuggest$, $apellLang$)
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

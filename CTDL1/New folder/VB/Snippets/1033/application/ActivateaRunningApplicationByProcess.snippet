@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Activate a Running Application by Process ID</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Activates a running application using the process ID of the application.</Description>
+      <Shortcut>appActPro</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>applicationFileName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the filename of the application to be executed.</ToolTip>
+          <Default>"NOTEPAD.EXE"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim processID As Integer
+
+processID = Shell($applicationFileName$, AppWinStyle.NormalFocus)
+
+AppActivate(processID)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

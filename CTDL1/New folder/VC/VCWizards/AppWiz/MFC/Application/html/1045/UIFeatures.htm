@@ -1,0 +1,1049 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<html dir="LTR">
+<head>
+	<title>Kreator aplikacji MFC</title>
+	<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+	<meta http-equiv="MSThemeCompatible" content="Yes">
+	<link id="LINKURL" rel="stylesheet" href="../../../../../1045/NewStyles.css">
+</head>
+<body bgcolor="BUTTONFACE" topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0"
+	onload="InitDocument(document);" onkeydown="if (!bValidating) OnKey();" onkeypress="if (!bValidating) OnPress();">
+	<table class="ONE" height="100%" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<col class="LinkPane">
+		<col>
+		<!--OPEN OF INTRODUCTORY INFORMATION TABLE//-->
+		<tr valign="TOP">
+			<td height="79" width="100%" colspan="2">
+				<table class="TWO" border="0" cellpadding="0" cellspacing="0">
+					<col width="12">
+					<col>
+					<col width="12">
+					<tr>
+						<td valign="TOP" height="12" width="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="12" width="12">
+							&nbsp;
+						</td>
+						<td class="IMAGE" valign="BOTTOM" width="110" rowspan="2">
+							<div class="SMALLA" id="NO_TOOLBARS_IMAGE">
+								<img src="../../Images/NoToolBars.gif" width="98" height="70" alt="" border="0">
+							</div>
+							<div class="SMALLA" id="ABOUT_IMAGE">
+								<img src="../../Images/UIAboutBox.gif" width="98" height="70" alt="" border="0">
+							</div>
+							<div class="SMALL" id="BROWSER_IMAGE">
+								<img src="../../Images/UIBrowser.gif" width="98" height="70" alt="" border="0">
+							</div>
+							<div class="SMALL" id="BROWSER_SPLIT_IMAGE">
+								<img src="../../Images/UIBrowserSplit.gif" width="98" height="70" alt="" border="0">
+							</div>
+							<div class="SMALL" id="BROWSER_STAT_IMAGE">
+								<img src="../../Images/UIBrowserStat.gif" width="98" height="70" alt="" border="0">
+							</div>
+							<div class="SMALL" id="BROWSER_SPLIT_STAT_IMAGE">
+								<img src="../../Images/UIBrowserSplitStat.gif" width="98" height="70" alt="" border="0">
+							</div>
+							<div class="SMALL" id="DOCKING_IMAGE">
+								<img src="../../Images/UIDocking.gif" width="98" height="70" alt="" border="0">
+							</div>
+							<div class="SMALL" id="MENUBAR_IMAGE">
+								<img src="../../Images/MenuBarToolbar.gif" width="98" height="70" alt="" border="0">
+							</div>
+							<div class="SMALL" id="RIBBON_IMAGE">
+								<img src="../../Images/Ribbon.gif" width="98" height="70" alt="" border="0">
+							</div>
+							<div class="SMALL" id="SPLIT_IMAGE">
+								<img src="../../Images/UISplit.gif" width="98" height="70" alt="" border="0">
+							</div>
+							<div class="SMALL" id="STAT_SPLIT_IMAGE">
+								<img src="../../Images/UIStatSplit.gif" width="98" height="70" alt="" border="0">
+							</div>
+							<div class="SMALL" id="STAT_IMAGE">
+								<img src="../../Images/UIStatusBar.gif" width="98" height="70" alt="" border="0">
+							</div>
+						</td>
+						<td valign="TOP" height="12" width="6" rowspan="2">
+							&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td valign="TOP" height="65" width="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="65">
+							<h4 class="HEAD" id="HEAD">Funkcje interfejsu użytkownika</h4>
+							<p class="SUBHEAD" id="SUBHEAD">
+								Określ opcje kontrolujące wygląd i działanie aplikacji.</p>
+						</td>
+						<td valign="TOP" height="65" width="12">
+							&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td valign="TOP" class="RULE" colspan="5" height="2">
+							<table border="0" width="100%" height="1" cellpadding="0" cellspacing="0">
+								<tr valign="TOP">
+									<td height="1" width="100%" bgcolor="BUTTONSHADOW">
+									</td>
+									<td height="1" width="1" bgcolor="WINDOW">
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<!--CLOSE OF INTRODUCTORY INFORMATION TABLE//-->
+		<!--OPEN OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+		<tr valign="TOP">
+			<td class="Three" valign="TOP" height="100%" width="100%">
+				<table class="fixedSize" height="100%" width="100%" border="0" cellpadding="0" cellspacing="0">
+					<tr valign="TOP">
+						<td class="threeCustom" valign="TOP">
+							<!--OPEN OF NAVIGATION TABLE//-->
+							<table class="THREE" border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col>
+								<col width="1">
+								<tr>
+									<td valign="TOP" colspan="3" height="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="100%">
+										&nbsp;
+									</td>
+									<td valign="TOP" height="100%">
+										<!--OPEN OF NAVIGATIONAL LINKS//-->
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="Default" title="Zbadaj przegląd zaznaczeń."
+															onclick="Next(document, 'Default.htm');" tabindex="1">Przegląd</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="AppType" title="Określ wsparcie dla architektury dokument/widok, język i opcje stylu interfejsu aplikacji."
+															onclick="Next(document, 'AppType.htm');" tabindex="2">Typ aplikacji</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXTINDENT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="CompoundDoc" title="Określ kontener OLE lub obsługę opcji serwera i dokumentów aktywnych."
+															onclick="onClick(this);" tabindex="3">Obsługa dokumentów złożonych</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXTINDENT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="DocTemp" title="Określ wartości dla szablonu dokumentów aplikacji, używane podczas tworzenia nowego dokumentu."
+															onclick="onClick(this);" tabindex="4">Właściwości szablonu dokumentu</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="DBSupport" title="Określ obsługę bazy danych, w tym wszelkich źródeł danych."
+															onclick="onClick(this);" tabindex="5">Obsługa bazy danych</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINKSELECTED">
+											<span class="VERTLINE1">
+												<img src="../../../../../1033/Images/spacer.gif" width="1" height="1" alt="" border="0">
+											</span><span class="HORILINE1">
+												<table width="167" height="100%" border="0" cellpadding="0" cellspacing="0">
+													<tr valign="TOP">
+														<td class="DOTTEDLINE" height="1">
+														</td>
+													</tr>
+													<tr valign="TOP">
+														<td height="100%">
+															<img src="../../../../../1033/Images/spacer.gif" width="165" height="28" alt="" border="0">
+														</td>
+													</tr>
+													<tr valign="TOP">
+														<td class="DOTTEDLINE" height="1">
+														</td>
+													</tr>
+												</table>
+											</span>
+											<table width="160" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXTSELECTED">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span id="UIFeatures" title="Określ opcje kontrolujące wygląd i działanie aplikacji.">
+															Funkcje interfejsu użytkownika</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="Advanced" title="Określ obsługę dodatkowych modułów do wkompilowania w aplikację."
+															onclick="Next(document, 'Advanced.htm');" tabindex="6">Funkcje zaawansowane</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="GeneratedClasses" title="Przejrzyj wygenerowane klasy i określ klasy podstawowe aplikacji."
+															onclick="Next(document, 'GeneratedClasses.htm');" tabindex="7">Wygenerowane klasy</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<!--CLOSE OF NAVIGATIONAL LINKS//-->
+									</td>
+									<td width="1">
+										<div class="VERTLINE">
+											<img src="../../../../../1033/Images/spacer.gif" width="1" height="1" alt="" border="0">
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				<!--CLOSE OF NAVIGATION TABLE//-->
+			</td>
+			<td valign="TOP" height="100%">
+				<!--OPEN OF CONTENT AND BUTTON TABLE//-->
+				<table class="ONE" border="0" cellpadding="0" cellspacing="0">
+					<col width="100%">
+					<tr valign="TOP">
+						<td height="100%">
+							<!--OPEN OF CONTENT//-->
+							<table class="CONTENT" border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col>
+								<col width="12">
+								<col>
+								<col width="12">
+								<tr>
+									<td valign="TOP" height="12" colspan="5">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP">
+										<span class="ItemTextTop" id="mainframe_styles_title" title="Określ style okien ramowych aplikacji.">
+											Style ramki głównej:</span> <span class="ItemText">
+												<p class="Spacer">
+													&nbsp;</p>
+												<input type="checkbox" class="CheckBoxA" id="MAIN_FRAME_THICK_FRAME" accesskey="t"
+													title="Określa okno główne z grubą ramką, która może być użyta to zmiany rozmiaru okna."
+													onpropertychange="OnMainFrameStyle(this);">
+												<div class="itemTextCheckboxB" id="mainframe_thick_frame_title" title="Określa okno główne z grubą ramką, która może być użyta to zmiany rozmiaru okna.">
+													<label id="THICK_FRAME_TEXT" for="MAIN_FRAME_THICK_FRAME">
+														Gru<u>b</u>a ramka</label>
+												</div>
+												<br>
+												<input type="checkbox" class="CheckBoxA" id="MAIN_FRAME_MINIMIZE_BOX" accesskey="i"
+													title="Określa okno główne posiadające przycisk Minimalizuj." onpropertychange="OnMainFrameStyle(this);">
+												<div class="itemTextCheckboxB" id="mainframe_min_box_title" title="Określa okno główne posiadające przycisk Minimalizuj.">
+													<label id="MINIMIZE_BOX_TEXT" for="MAIN_FRAME_MINIMIZE_BOX">
+														M<u>i</u>nimalizuj okno</label>
+												</div>
+												<br>
+												<input type="checkbox" class="CheckBoxA" id="MAIN_FRAME_MAXIMIZE_BOX" accesskey="a"
+													title="Określa okno główne posiadające przycisk Maksymalizuj." onpropertychange="OnMainFrameStyle(this);">
+												<div class="itemTextCheckboxB" id="mainframe_max_box_title" title="Określa okno główne posiadające przycisk Maksymalizuj.">
+													<label id="MAXIMIZE_BOX_TEXT" for="MAIN_FRAME_MAXIMIZE_BOX">
+														M<u>a</u>ksymalizuj okno</label>
+												</div>
+												<br>
+												<input type="checkbox" class="CheckBoxA" id="MAIN_FRAME_MINIMIZED" accesskey="n"
+													title="Określa okno główne, które jest początkowo zminimalizowane." onpropertychange="OnMainFrameStyle(this);">
+												<div class="itemTextCheckboxB" id="mainframe_minimized_title" title="Określa okno główne, które jest początkowo zminimalizowane.">
+													<label id="MINIMIZED_TEXT" for="MAIN_FRAME_MINIMIZED">
+														Zmi<u>n</u>imalizowany</label>
+												</div>
+												<br>
+												<input type="checkbox" class="CheckBoxA" id="MAIN_FRAME_MAXIMIZED" accesskey="x"
+													title="Określa okno główne, które jest początkowo zmaksymalizowane." onpropertychange="OnMainFrameStyle(this);">
+												<div class="itemTextCheckboxB" id="mainframe_maximized_title" title="Określa okno główne, które jest początkowo zmaksymalizowane.">
+													<label id="MAXIMIZED_TEXT" for="MAIN_FRAME_MAXIMIZED">
+														Zmaksyma<u>l</u>izowane</label>
+												</div>
+												<br>
+												<input type="checkbox" class="CheckBoxA" id="MAIN_FRAME_SYSTEM_MENU" accesskey="t"
+													title="Określa okno główne posiadające pole menu sterowania na pasku tytułu."
+													onpropertychange="OnMainFrameStyle(this);">
+												<div class="itemTextCheckboxB" id="mainframe_sysmenu_title" title="Określa okno główne posiadające pole menu sterowania na pasku tytułu.">
+													<label id="SYSTEM_MENU_TEXT" for="MAIN_FRAME_SYSTEM_MENU">
+														Menu s<u>y</u>stemowe</label>
+												</div>
+												<br>
+												<input type="checkbox" class="CheckBoxA" id="ABOUT_BOX" accesskey="b" title="Włącza okno dialogowe &quot;Informacje o&quot; aplikacji."
+													onclick="ToggleImage();">
+												<div class="itemTextCheckboxB" id="about_box_title" title="Włącza okno dialogowe quot;Informacje o&quot; aplikacji.">
+													<label id="ABOUT_BOX_TEXT" for="ABOUT_BOX">
+														Okno in<u>f</u>ormacji o programie</label>
+												</div>
+												<br>
+												<input type="checkbox" class="CheckBoxA" id="STATUS_BAR" accesskey="u" title="Włącza okno stanu w aplikacji."
+													onclick="ToggleImage();">
+												<div class="itemTextCheckboxB" id="status_bar_title" title="Włącza okno stanu w aplikacji.">
+													<label id="STATUS_BAR_TEXT" for="STATUS_BAR">
+														Początkowy pasek stan<u>u</u></label>
+												</div>
+												<br>
+												<input type="checkbox" class="CheckBoxA" id="SPLITTER" accesskey="p" title="Włącz okna podziału dla dokumentów aplikacji."
+													onclick="ToggleImage();">
+												<div class="itemTextCheckboxB" id="splitter_title" title="Włącz okna podziału dla dokumentów aplikacji.">
+													<label id="SPLIT_WINDOW_TEXT" for="SPLITTER">
+														Okno <u>p</u>odziału</label>
+												</div>
+											</span>
+										<p class="ElementSpacer">
+											&nbsp;</p>
+										<span class="itemText" id="childframe_styles_title" title="Określ style podrzędnych okien ramowych.">
+											Style ramki podrzędnej:</span> <span class="ItemText">
+												<p class="Spacer">
+													&nbsp;</p>
+												<input type="checkbox" class="CheckBoxA" id="CHILD_FRAME_MINIMIZE_BOX" accesskey="m"
+													title="Określa okno podrzędne posiadające przycisk Minimalizuj." onpropertychange="OnChildFrameStyle(this);">
+												<div class="itemTextCheckboxB" id="childframe_min_box_title" title="Określa okno podrzędne posiadające przycisk Minimalizuj.">
+													<label id="CHILD_MINIMIZE_BOX_TEXT" for="CHILD_FRAME_MINIMIZE_BOX">
+														Z<u>m</u>inimalizowane okno podrzędne</label>
+												</div>
+												<br>
+												<input type="checkbox" class="CheckBoxA" id="CHILD_FRAME_MAXIMIZE_BOX" accesskey="z"
+													title="Określa okno podrzędne posiadające przycisk Maksymalizuj." onpropertychange="OnChildFrameStyle(this);">
+												<div class="itemTextCheckboxB" id="childframe_max_box_title" title="Określa okno podrzędne posiadające przycisk Maksymalizuj.">
+													<label id="CHILD_MAXIMIZE_BOX_TEXT" for="CHILD_FRAME_MAXIMIZE_BOX">
+														<u>Z</u>maksymalizowane okno podrzędne</label>
+												</div>
+												<br>
+												<input type="checkbox" class="CheckBoxA" id="CHILD_FRAME_MAXIMIZED" accesskey="d"
+													title="Określa okno podrzędne, które jest początkowo zmaksymalizowane." onpropertychange="OnChildFrameStyle(this);">
+												<div class="itemTextCheckboxB" id="childframe_maximized_title" title="Określa okno podrzędne, które jest początkowo zmaksymalizowane.">
+													<label id="CHILD_MAXIMIZED_TEXT" for="CHILD_FRAME_MAXIMIZED">
+														Okno po<u>d</u>rzędne zmaksymalizowane</label>
+												</div>
+											</span>
+									</td>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP">
+										<span class="itemTextTop" id="toolbars_title" title="Określ typ interfejsu użytkownika używanego przez aplikację.">
+											Paski poleceń (menu/pasek narzędzi/wstążka):</span> <span class="ItemText">
+												<p class="Spacer">
+													&nbsp;</p>
+												<input type="radio" class="radio" name="toolbarsyle" id="TOOLBAR_NONE" accesskey="s"
+													title="Użyj klasycznego menu systemu Windows w aplikacji." onpropertychange="OnToolbar(this);"
+													onclick="ToggleImage();">
+												<div class="itemTextRadioB" id="toolbar_none_title" title="Użyj klasycznego menu systemu Windows w aplikacji.">
+													<label id="TOOLBAR_NONE_TEXT" for="TOOLBAR_NONE">
+														Użyj kla<u>s</u>ycznego menu</label>
+												</div>
+												<br>
+												<input type="checkbox" class="CheckboxIndent" name="toolbarsyle" id="DOCKING_TOOLBAR"
+													accesskey="k" title="Użyj klasycznego, dokującego paska narzędzi w aplikacji." onpropertychange="OnToolbarType(this);"
+													onclick="ToggleImage();">
+												<div class="itemTextCheckboxIndentB" id="docking_toolbar_title" title="Użyj klasycznego, dokującego paska narzędzi w aplikacji.">
+													<label id="DOCKING_TOOLBAR_TEXT" for="DOCKING_TOOLBAR">
+														Użyj <u>k</u>lasycznego, dokującego paska narzędzi</label>
+												</div>
+												<br>
+												<input type="checkbox" class="CheckboxIndent" name="toolbarsyle" id="TOOLBAR_STYLE_REBAR"
+													accesskey="Służbowy 1" title="Użyj paska narzędzi w stylu programu Internet Explorer w aplikacji."
+													onpropertychange="OnToolbarType(this);" onclick="ToggleImage();">
+												<div class="itemTextCheckboxIndentB" id="toolbar_rebar_title" title="Użyj paska narzędzi w stylu programu Internet Explorer w aplikacji.">
+													<label id="BROWSER_STYLE_TEXT" for="TOOLBAR_STYLE_REBAR">
+														Użyj paska narzędzi <u>w</u> stylu przeglądarki</label>
+												</div>
+												<p class="ElementSpacer">
+													&nbsp;</p>
+												<input type="radio" class="radio" name="toolbarsyle" id="MENUBAR_TOOLBAR" accesskey="o"
+													title="Użyj paska menu i paska narzędzi w stylu środowiska Visual Studio w aplikacji." onpropertychange="OnToolbar(this);"
+													onclick="ToggleImage();">
+												<div class="itemTextRadioB" id="menubar_toolbar_title" title="Użyj paska menu i paska narzędzi w stylu środowiska Visual Studio w aplikacji.">
+													<label id="MENUBAR_TOOLBAR_TEXT" for="MENUBAR_TOOLBAR">
+														Użyj paska menu i paska na<u>r</u>zędzi</label>
+												</div>
+												<br>
+												<input type="checkbox" class="CheckboxIndent" id="TOOLBAR_CUST_USER" accesskey="e"
+													title="Użytkownik może dostosowywać paski narzędzi i obrazy pasków narzędzi.">
+												<div class="itemTextCheckboxIndentB" id="toolbar_cust_user_label" title="Użytkownik może dostosowywać paski narzędzi i obrazy pasków narzędzi.">
+													<label id="TOOLBAR_CUST_USER_LABEL" for="TOOLBAR_CUST_USER">
+														Paski narzędzi i obrazy zd<u>e</u>finiowane przez użytkownika</label>
+												</div>
+												<br>
+												<input type="checkbox" class="CheckboxIndent" id="TOOLBAR_CUST_PERSONAL" accesskey="g"
+													title="Menu pokazuje częściowy zestaw poleceń i dostosowuje się do sposobu korzystania.">
+												<div class="itemTextCheckboxIndentB" id="toolbar_cust_personal_label" title="Menu pokazuje częściowy zestaw poleceń i dostosowuje się do sposobu korzystania.">
+													<label id="TOOLBAR_CUST_PERSONAL_LABEL" for="TOOLBAR_CUST_PERSONAL">
+														Zac<u>h</u>owanie menu spersonalizowanego</label>
+												</div>
+												<p class="ElementSpacer">
+													&nbsp;</p>
+												<input type="radio" class="radio" name="toolbarsyle" id="RIBBON_TOOLBAR" accesskey="r"
+													title="Użyj wstążki (styl interfejsu pakietu Office 2007) w aplikacji." onpropertychange="OnToolbar(this);"
+													onclick="ToggleImage();">
+												<div class="itemTextRadioB" id="ribbon_toolbar_title" title="Użyj wstążki (styl interfejsu pakietu Office 2007) w aplikacji.">
+													<label id="RIBBON_TOOLBAR_TEXT" for="RIBBON_TOOLBAR">
+														Użyj ws<u>t</u>ążki</label>
+												</div>
+											</span>
+										<p class="ElementSpacer">
+											&nbsp;</p>
+										<span class="itemText" id="dialog_title" title="Dla aplikacji opartych na oknach dialogowych, określ nazwę wyświetlaną w oknach dialogowych aplikacji.">
+											<label id="DIALOG_TITLE_TEXT" for="DIALOG_TITLE">
+												Tytuł okna dialo<u>g</u>owego:</label>
+											<br>
+											<input class="sideBtnLoc" id="DIALOG_TITLE" accesskey="g" title="Dla aplikacji opartych na oknach dialogowych, określ nazwę wyświetlaną w oknach dialogowych aplikacji."
+												type="text" value="">
+										</span>
+									</td>
+								</tr>
+							</table>
+							<!--CLOSE OF CONTENT//-->
+						</td>
+					</tr>
+					<tr valign="BOTTOM">
+						<td>
+							<!--OPEN OF BUTTON HTML//-->
+							<table border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col>
+								<col width="75">
+								<col width="4">
+								<col width="75">
+								<col width="4">
+								<col width="75">
+								<col width="12">
+								<tr>
+									<td valign="TOP" class="RULE" colspan="8" height="2">
+										<table border="0" width="100%" height="1" cellpadding="0" cellspacing="0">
+											<tr valign="TOP">
+												<td height="1" width="100%" bgcolor="BUTTONSHADOW">
+												</td>
+												<td height="1" width="1" bgcolor="WINDOW">
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="11" colspan="8">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="MIDDLE" height="23" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP" height="23">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="FinishBtn" onclick="OnFinish(document);">
+											Zakończ</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="4">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="CancelBtn" onclick="window.external.Finish(document, 'cancel');">
+											Anuluj</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="4">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="HelpBtn" onclick="window.external.OnHelp('vc.appwiz.mfc.exe.ui');">
+											Pomoc</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="12" colspan="8">
+										&nbsp;
+									</td>
+								</tr>
+							</table>
+							<!--CLOSE OF BUTTON HTML//-->
+						</td>
+					</tr>
+				</table>
+				<!--CLOSE OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+<script language="JSCRIPT">
+
+	var tab_array = new Array();
+	tab_array[0] = Default;
+	tab_array[1] = AppType;
+	tab_array[2] = CompoundDoc;
+	tab_array[3] = DocTemp;
+	tab_array[4] = DBSupport;
+	tab_array[5] = UIFeatures;
+	tab_array[6] = Advanced;
+	tab_array[7] = GeneratedClasses;
+
+	function InitDocument(document) {
+		setDirection();
+		InitTabs();
+		window.external.Load(document);
+		InitControls();
+		ToggleImage();
+	}
+
+	function InitTabs() {
+		MouseOut(CompoundDoc);
+		MouseOut(DBSupport);
+		MouseOut(DocTemp);
+	}
+
+	function Next(document, linkto) {
+		window.external.Next(document, linkto);
+	}
+
+	function onClick(obj) {
+		if (obj == null || typeof (obj) == "undefined")
+			return;
+
+		if (obj.id == "DBSupport") {
+			if (!window.external.FindSymbol("APP_TYPE_DLG")) {
+				Next(document, "DBSupport.htm");
+			}
+		}
+		if (obj.id == "CompoundDoc") {
+			if (window.external.FindSymbol("DOCVIEW") && !window.external.IsSymbolDisabled("DOCVIEW")) {
+				Next(document, "CompoundDoc.htm");
+			}
+		}
+		if (obj.id == "DocTemp") {
+			if (window.external.FindSymbol("DOCVIEW") && !window.external.IsSymbolDisabled("DOCVIEW")) {
+				Next(document, "DocTemp.htm");
+			}
+		}
+	}
+
+	function InitControls() {
+		mainframe_styles_title.disabled = false;
+		MAIN_FRAME_THICK_FRAME.disabled = false;
+		mainframe_thick_frame_title.disabled = false;
+		MAIN_FRAME_MINIMIZE_BOX.disabled = false;
+		mainframe_min_box_title.disabled = false;
+		MAIN_FRAME_MAXIMIZE_BOX.disabled = false;
+		mainframe_max_box_title.disabled = false;
+		MAIN_FRAME_SYSTEM_MENU.disabled = false;
+		mainframe_sysmenu_title.disabled = false;
+		MAIN_FRAME_MINIMIZED.disabled = false;
+		mainframe_minimized_title.disabled = false;
+		MAIN_FRAME_MAXIMIZED.disabled = false;
+		mainframe_maximized_title.disabled = false;
+		MAIN_FRAME_THICK_FRAME.focus();
+
+		childframe_styles_title.disabled = false;
+		CHILD_FRAME_MINIMIZE_BOX.disabled = false;
+		childframe_min_box_title.disabled = false;
+		CHILD_FRAME_MAXIMIZE_BOX.disabled = false;
+		childframe_max_box_title.disabled = false;
+		CHILD_FRAME_MAXIMIZED.disabled = false;
+		childframe_maximized_title.disabled = false;
+
+		SPLITTER.disabled = false;
+		splitter_title.disabled = false;
+		STATUS_BAR.disabled = false;
+		status_bar_title.disabled = false;
+
+		toolbars_title.disabled = false;
+		TOOLBAR_STYLE_REBAR.disabled = true;
+		toolbar_rebar_title.disabled = true;
+		DOCKING_TOOLBAR.disabled = true;
+		docking_toolbar_title.disabled = true;
+		MENUBAR_TOOLBAR.disabled = false;
+		menubar_toolbar_title.disabled = false;
+		RIBBON_TOOLBAR.disabled = false;
+		ribbon_toolbar_title.disabled = false;
+		TOOLBAR_NONE.disabled = false;
+		toolbar_none_title.disabled = false;
+
+		CHILD_FRAME_MINIMIZE_BOX.disabled = false;
+		childframe_min_box_title.disabled = false;
+		CHILD_FRAME_MAXIMIZE_BOX.disabled = false;
+		childframe_max_box_title.disabled = false;
+		CHILD_FRAME_MAXIMIZED.disabled = false;
+		childframe_maximized_title.disabled = false;
+
+		if (TOOLBAR_NONE.checked) {
+			DOCKING_TOOLBAR.disabled = false;
+			docking_toolbar_title.disabled = false;
+			TOOLBAR_STYLE_REBAR.disabled = false;
+			toolbar_rebar_title.disabled = false;
+		}
+
+		if (!MENUBAR_TOOLBAR.checked || window.external.FindSymbol("APP_TYPE_DLG")) {
+			TOOLBAR_CUST_USER.disabled = true;
+			toolbar_cust_user_label.disabled = true;
+			TOOLBAR_CUST_PERSONAL.disabled = true;
+			toolbar_cust_personal_label.disabled = true;
+		}
+		else {
+			TOOLBAR_CUST_USER.disabled = false;
+			toolbar_cust_user_label.disabled = false;
+			TOOLBAR_CUST_PERSONAL.disabled = false;
+			toolbar_cust_personal_label.disabled = false;
+			window.external.AddSymbol("LAST_SELECTED_UI", "MENUBAR");
+		}
+
+		if (RIBBON_TOOLBAR.checked) {
+			MAIN_FRAME_MINIMIZED.disabled = true;
+			mainframe_minimized_title.disabled = true;
+			MAIN_FRAME_MINIMIZED.checked = false;
+			MAIN_FRAME_THICK_FRAME.disabled = true;
+			mainframe_thick_frame_title.disabled = true;
+			MAIN_FRAME_THICK_FRAME.checked = true;
+			MAIN_FRAME_MINIMIZE_BOX.focus();
+			window.external.AddSymbol("LAST_SELECTED_UI", "RIBBON");
+		}
+
+		if (!window.external.FindSymbol("DOCVIEW") || window.external.IsSymbolDisabled("DOCVIEW")) {
+			SPLITTER.disabled = true;
+			splitter_title.disabled = true;
+		}
+
+		if (!window.external.FindSymbol("APP_TYPE_MDI") || window.external.FindSymbol("APP_TYPE_TABBED_MDI")) {
+			childframe_styles_title.disabled = true;
+			CHILD_FRAME_MINIMIZE_BOX.disabled = true;
+			childframe_min_box_title.disabled = true;
+			CHILD_FRAME_MAXIMIZE_BOX.disabled = true;
+			childframe_max_box_title.disabled = true;
+			CHILD_FRAME_MAXIMIZED.disabled = true;
+			childframe_maximized_title.disabled = true;
+		}
+
+		ABOUT_BOX.disabled = true;
+		about_box_title.disabled = true;
+		DIALOG_TITLE.disabled = true;
+		dialog_title.disabled = true;
+
+		if (window.external.FindSymbol("APP_TYPE_DLG")) {
+			mainframe_styles_title.disabled = false;
+			MAIN_FRAME_THICK_FRAME.disabled = false;
+			mainframe_thick_frame_title.disabled = false;
+			MAIN_FRAME_MINIMIZE_BOX.disabled = false;
+			mainframe_min_box_title.disabled = false;
+			MAIN_FRAME_MAXIMIZE_BOX.disabled = false;
+			mainframe_max_box_title.disabled = false;
+			MAIN_FRAME_SYSTEM_MENU.disabled = false;
+			mainframe_sysmenu_title.disabled = false;
+			MAIN_FRAME_MINIMIZED.disabled = false;
+			mainframe_minimized_title.disabled = false;
+			MAIN_FRAME_MAXIMIZED.disabled = false;
+			mainframe_maximized_title.disabled = false;
+
+			STATUS_BAR.disabled = true;
+			status_bar_title.disabled = true;
+			ABOUT_BOX.disabled = false;
+			about_box_title.disabled = false;
+			DIALOG_TITLE.disabled = false;
+			dialog_title.disabled = false;
+			SPLITTER.disabled = true;
+			splitter_title.disabled = true;
+			TOOLBAR_STYLE_REBAR.disabled = true;
+			toolbar_rebar_title.disabled = true;
+			DOCKING_TOOLBAR.disabled = true;
+			docking_toolbar_title.disabled = true;
+			MENUBAR_TOOLBAR.disabled = true;
+			menubar_toolbar_title.disabled = true;
+			RIBBON_TOOLBAR.disabled = true;
+			ribbon_toolbar_title.disabled = true;
+			TOOLBAR_NONE.disabled = true;
+			toolbar_none_title.disabled = true;
+			toolbars_title.disabled = true;
+			ABOUT_BOX.focus();
+		}
+		else {
+			if (window.external.FindSymbol("PROJECT_STYLE_VISUALSTUDIO") || window.external.FindSymbol("PROJECT_STYLE_OFFICE")) {
+				MAIN_FRAME_MINIMIZED.disabled = true;
+				mainframe_minimized_title.disabled = true;
+				TOOLBAR_NONE.disabled = true;
+				toolbar_none_title.disabled = true;
+				DOCKING_TOOLBAR.disabled = true;
+				docking_toolbar_title.disabled = true;
+				TOOLBAR_STYLE_REBAR.disabled = true;
+				toolbar_rebar_title.disabled = true;
+			}
+			else {
+				if (MENUBAR_TOOLBAR.checked || RIBBON_TOOLBAR.checked) {
+					MAIN_FRAME_MINIMIZED.disabled = true;
+					mainframe_minimized_title.disabled = true;
+				}
+			}
+		}
+	}
+
+	function CheckDataSource() {
+		if (window.external.FindSymbol("DB_CONNECTION_STRING") == "" && window.external.FindSymbol("OLEDB")) {
+			L_Err1_Text = "Źródło danych musi zostać określone, gdy zaznaczona jest opcja widok bazy danych.";
+			window.external.ReportError(L_Err1_Text);
+			return false;
+		}
+		return true;
+	}
+
+	function OnFinish(document) {
+		if (!CheckDataSource())
+			return;
+
+		if (window.external.FindSymbol("ACTIVE_DOC_SERVER")) {
+			var strExtension = window.external.FindSymbol("FILE_EXTENSION");
+			if (strExtension == "") {
+				L_Err2_Text = "Określ rozszerzenie pliku dokumentu na stronie właściwości szablonu dokumentu";
+				window.external.ReportError(L_Err2_Text);
+				return;
+			}
+		}
+		OnWizFinish(document);
+	}
+
+	function OnMainFrameStyle(obj) {
+		if (window.external.FindSymbol("APP_TYPE_DLG")) {
+			if (MAIN_FRAME_SYSTEM_MENU.checked) {
+				ABOUT_BOX.disabled = false;
+				about_box_title.disabled = false;
+			}
+			else {
+				ABOUT_BOX.disabled = true;
+				about_box_title.disabled = true;
+			}
+		}
+
+		if (obj.id == "MAIN_FRAME_MAXIMIZED" && MAIN_FRAME_MAXIMIZED.checked) {
+			MAIN_FRAME_MINIMIZED.checked = false;
+		}
+		else if (obj.id == "MAIN_FRAME_MINIMIZED" && MAIN_FRAME_MINIMIZED.checked) {
+			MAIN_FRAME_MAXIMIZED.checked = false;
+		}
+
+		if (MAIN_FRAME_THICK_FRAME.checked &&
+		MAIN_FRAME_MINIMIZE_BOX.checked &&
+		MAIN_FRAME_MAXIMIZE_BOX.checked &&
+		!MAIN_FRAME_MINIMIZED.checked &&
+		!MAIN_FRAME_MAXIMIZED.checked &&
+		MAIN_FRAME_SYSTEM_MENU.checked) {
+			window.external.AddSymbol("MAIN_FRAME_DEFAULT_STYLES", true);
+			window.external.AddSymbol("MAIN_FRAME_STYLE_FLAGS", "");
+		}
+		else {
+			window.external.AddSymbol("MAIN_FRAME_DEFAULT_STYLES", false);
+
+			var strStyles = "";
+			if (MAIN_FRAME_THICK_FRAME.checked) {
+				strStyles = strStyles + " | WS_THICKFRAME";
+			}
+			if (MAIN_FRAME_MINIMIZE_BOX.checked) {
+				strStyles = strStyles + " | WS_MINIMIZEBOX";
+			}
+			if (MAIN_FRAME_MAXIMIZE_BOX.checked) {
+				strStyles = strStyles + " | WS_MAXIMIZEBOX";
+			}
+			if (MAIN_FRAME_MAXIMIZED.checked) {
+				strStyles = strStyles + " | WS_MAXIMIZE";
+			}
+			else if (MAIN_FRAME_MINIMIZED.checked) {
+				strStyles = strStyles + " | WS_MINIMIZE";
+			}
+			if (MAIN_FRAME_SYSTEM_MENU.checked) {
+				strStyles = strStyles + " | WS_SYSMENU";
+			}
+
+			window.external.AddSymbol("MAIN_FRAME_STYLE_FLAGS", strStyles);
+		}
+	}
+
+	function OnChildFrameStyle(obj) {
+		if (CHILD_FRAME_MINIMIZE_BOX.checked &&
+		CHILD_FRAME_MAXIMIZE_BOX.checked &&
+		!CHILD_FRAME_MAXIMIZED.checked) {
+			window.external.AddSymbol("CHILD_FRAME_DEFAULT_STYLES", true);
+			window.external.AddSymbol("CHILD_FRAME_STYLE_FLAGS", "");
+		}
+		else {
+			window.external.AddSymbol("CHILD_FRAME_DEFAULT_STYLES", false);
+
+			// WS_THICKFRAME must always be specified
+
+			var strStyles = " | WS_THICKFRAME"
+
+			if (CHILD_FRAME_MINIMIZE_BOX.checked) {
+				strStyles = strStyles + " | WS_MINIMIZEBOX";
+			}
+			if (CHILD_FRAME_MAXIMIZE_BOX.checked) {
+				strStyles = strStyles + " | WS_MAXIMIZEBOX";
+			}
+			if (CHILD_FRAME_MAXIMIZED.checked) {
+				strStyles = strStyles + " | WS_MAXIMIZE";
+			}
+			window.external.AddSymbol("CHILD_FRAME_STYLE_FLAGS", strStyles);
+		}
+	}
+
+	function OnToolbar(obj) {
+		DOCKING_TOOLBAR.disabled = true;
+		docking_toolbar_title.disabled = true;
+		TOOLBAR_STYLE_REBAR.disabled = true;
+		toolbar_rebar_title.disabled = true;
+
+		MAIN_FRAME_THICK_FRAME.disabled = false;
+		mainframe_thick_frame_title.disabled = false;
+		MAIN_FRAME_THICK_FRAME.checked = true;
+
+		if (TOOLBAR_NONE.checked && !window.external.FindSymbol("APP_TYPE_DLG")) {
+			DOCKING_TOOLBAR.disabled = false;
+			docking_toolbar_title.disabled = false;
+			TOOLBAR_STYLE_REBAR.disabled = false;
+			toolbar_rebar_title.disabled = false;
+		}
+
+		TOOLBAR_CUST_USER.disabled = true;
+		toolbar_cust_user_label.disabled = true;
+		TOOLBAR_CUST_PERSONAL.disabled = true;
+		toolbar_cust_personal_label.disabled = true;
+
+		if (MENUBAR_TOOLBAR.checked && !window.external.FindSymbol("APP_TYPE_DLG")) {
+			TOOLBAR_CUST_USER.disabled = false;
+			toolbar_cust_user_label.disabled = false;
+			TOOLBAR_CUST_PERSONAL.disabled = false;
+			toolbar_cust_personal_label.disabled = false;
+			window.external.AddSymbol("LAST_SELECTED_UI", "MENUBAR");
+		}
+
+		MAIN_FRAME_MINIMIZED.disabled = false;
+		mainframe_minimized_title.disabled = false;
+
+		if (RIBBON_TOOLBAR.checked && !window.external.FindSymbol("APP_TYPE_DLG")) {
+			MAIN_FRAME_MINIMIZED.disabled = true;
+			mainframe_minimized_title.disabled = true;
+			MAIN_FRAME_MINIMIZED.checked = false;
+			MAIN_FRAME_THICK_FRAME.disabled = true;
+			mainframe_thick_frame_title.disabled = true;
+			MAIN_FRAME_THICK_FRAME.checked = true;
+			window.external.AddSymbol("LAST_SELECTED_UI", "RIBBON");
+		}
+
+		if (!window.external.FindSymbol("APP_TYPE_DLG") && ((obj.id == "RIBBON_TOOLBAR" && RIBBON_TOOLBAR.checked) || (obj.id == "MENUBAR_TOOLBAR" && MENUBAR_TOOLBAR.checked))) {
+			if (window.external.FindSymbol("USE_STANDARD_MENU_TOOLBAR") == true) {
+				window.external.AddSymbol("USE_STANDARD_MENU_TOOLBAR", false);
+
+				window.external.AddSymbol("VISUAL_STYLE_COMBO", "OFF2007_BLUE");
+				window.external.AddSymbol("VISUAL_STYLE", "Office2007_LunaBlue");
+				window.external.AddSymbol("ENABLE_VISUAL_STYLE_SWITCHING", true);
+			}
+
+			if (window.external.FindSymbol("APP_TYPE_MDI")) {
+				window.external.AddSymbol("MAIN_FRAME_BASE_CLASS", "CMDIFrameWndEx");
+				window.external.AddSymbol("CHILD_FRAME_BASE_CLASS", "CMDIChildWndEx");
+			}
+			else {
+				window.external.AddSymbol("MAIN_FRAME_BASE_CLASS", "CFrameWndEx");
+			}
+
+			window.external.AddSymbol("APP_BASE_CLASS", "CWinAppEx");
+			MAIN_FRAME_MINIMIZED.disabled = true;
+			mainframe_minimized_title.disabled = true;
+			MAIN_FRAME_MINIMIZED.checked = false;
+		}
+
+		if (!window.external.FindSymbol("APP_TYPE_DLG") && ((obj.id == "TOOLBAR_NONE" && TOOLBAR_NONE.checked) || (obj.id == "DOCKING_TOOLBAR" && DOCKING_TOOLBAR.checked))) {
+			if (window.external.FindSymbol("USE_STANDARD_MENU_TOOLBAR") == false) {
+				var UseClassic = true;
+				if ((window.external.FindSymbol("APP_TYPE_TABBED_MDI")) || (window.external.FindSymbol("VISUAL_STYLE_COMBO") != "DEFMFC_LOOK")) {
+					var L_Message_Text = "Wybranie klasycznego menu, paska narzędzi lub paska narzędzi w stylu przeglądarki, wyłączy wszystkie z następujących, nowych funkcji wyglądu wybranych na stronie typu aplikacji: dokumenty na kartach, style wizualne i kolory. Czy chcesz kontynuować?";
+					UseClassic = window.external.YesNoAlert(L_Message_Text);
+				}
+
+				if (UseClassic) {
+					window.external.AddSymbol("USE_STANDARD_MENU_TOOLBAR", true);
+
+					window.external.AddSymbol("APP_TYPE_TABBED_MDI", false);
+					window.external.AddSymbol("VISUAL_STYLE_COMBO", "DEFMFC_LOOK");
+					window.external.AddSymbol("VISUAL_STYLE", "");
+					window.external.AddSymbol("ENABLE_VISUAL_STYLE_SWITCHING", false);
+				}
+				else {
+					if (window.external.FindSymbol("LAST_SELECTED_UI") == "RIBBON") {
+						RIBBON_TOOLBAR.checked = true;
+					}
+					else {
+						MENUBAR_TOOLBAR.checked = true;
+					}
+					return;
+				}
+			}
+
+			if (window.external.FindSymbol("APP_TYPE_MDI")) {
+				window.external.AddSymbol("MAIN_FRAME_BASE_CLASS", "CMDIFrameWnd");
+				window.external.AddSymbol("CHILD_FRAME_BASE_CLASS", "CMDIChildWnd");
+			}
+			else {
+				window.external.AddSymbol("MAIN_FRAME_BASE_CLASS", "CFrameWnd");
+			}
+
+			window.external.AddSymbol("APP_BASE_CLASS", "CWinApp");
+			MAIN_FRAME_MINIMIZED.disabled = false;
+			mainframe_minimized_title.disabled = false;
+		}
+	}
+
+	function OnToolbarType(obj) {
+		if (obj.id == "DOCKING_TOOLBAR" && DOCKING_TOOLBAR.checked) {
+			TOOLBAR_STYLE_REBAR.checked = false;
+		}
+
+		if (obj.id == "TOOLBAR_STYLE_REBAR" && TOOLBAR_STYLE_REBAR.checked) {
+			DOCKING_TOOLBAR.checked = false;
+		}
+	}
+
+	function ToggleImage() {
+		NO_TOOLBARS_IMAGE.style.display = "none";
+		RIBBON_IMAGE.style.display = "none";
+		MENUBAR_IMAGE.style.display = "none";
+		ABOUT_IMAGE.style.display = "none";
+		BROWSER_IMAGE.style.display = "none";
+		BROWSER_SPLIT_IMAGE.style.display = "none";
+		BROWSER_STAT_IMAGE.style.display = "none";
+		BROWSER_SPLIT_STAT_IMAGE.style.display = "none";
+		DOCKING_IMAGE.style.display = "none";
+		SPLIT_IMAGE.style.display = "none";
+		STAT_SPLIT_IMAGE.style.display = "none";
+		STAT_IMAGE.style.display = "none";
+
+		if (RIBBON_TOOLBAR.checked && !RIBBON_TOOLBAR.disabled) {
+			RIBBON_IMAGE.style.display = "block";
+			return;
+		}
+
+		if (MENUBAR_TOOLBAR.checked && !MENUBAR_TOOLBAR.disabled) {
+			MENUBAR_IMAGE.style.display = "block";
+			return;
+		}
+
+		if (ABOUT_BOX.checked && !ABOUT_BOX.disabled) {
+			ABOUT_IMAGE.style.display = "block";
+			return;
+		}
+
+		if (TOOLBAR_STYLE_REBAR.checked && SPLITTER.checked && STATUS_BAR.checked) {
+			BROWSER_SPLIT_STAT_IMAGE.style.display = "block";
+			return;
+		}
+
+		if (TOOLBAR_STYLE_REBAR.checked && SPLITTER.checked) {
+			BROWSER_SPLIT_IMAGE.style.display = "block";
+			return;
+		}
+
+		if (TOOLBAR_STYLE_REBAR.checked && STATUS_BAR.checked) {
+			BROWSER_STAT_IMAGE.style.display = "block";
+			return;
+		}
+
+		if (SPLITTER.checked && STATUS_BAR.checked) {
+			STAT_SPLIT_IMAGE.style.display = "block";
+			return;
+		}
+
+		if (SPLITTER.checked) {
+			SPLIT_IMAGE.style.display = "block";
+			return;
+		}
+
+		if (STATUS_BAR.checked) {
+			STAT_IMAGE.style.display = "block";
+			return;
+		}
+
+		if (TOOLBAR_STYLE_REBAR.checked) {
+			BROWSER_IMAGE.style.display = "block";
+			return;
+		}
+
+		if (DOCKING_TOOLBAR.checked) {
+			DOCKING_IMAGE.style.display = "block";
+			return;
+		}
+
+		// default image
+		NO_TOOLBARS_IMAGE.style.display = "block";
+	}
+
+</script>
+
+<script id="INCLUDE_SCRIPT" language="JSCRIPT"></script>
+
+<script id="INCLUDE_COMMON" language="JSCRIPT"></script>
+
+<script>
+	document.scripts("INCLUDE_SCRIPT").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Script.js";
+	document.scripts("INCLUDE_COMMON").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Common.js";
+</script>
+

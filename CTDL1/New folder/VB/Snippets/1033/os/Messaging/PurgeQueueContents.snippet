@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Purge Queue Contents</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Uses the Purge method to clear the contents of any queue to which you have access rights in the Message Queuing system.</Description>
+      <Shortcut>mqPurge</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Messaging.dll</Assembly>
+          <Url />
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Messaging</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>QueueName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the path of the queue. The "." represents the local computer.</ToolTip>
+          <Default>".\QueueName"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim queue As New MessageQueue($QueueName$)
+queue.Purge()]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

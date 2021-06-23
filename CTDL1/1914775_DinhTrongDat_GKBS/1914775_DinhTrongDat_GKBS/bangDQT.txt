@@ -1,0 +1,12 @@
+CT20249 Nguyen Van   Canh  1986 CTK20 5   7   10 10
+CT19271 Hoang  Dat   Vo    1985 CTK19 8   4   7  10
+CT18282 Nguyen Dat   Hoa   1984 CTK18 9   6   6  10
+CT20263 Khen   Di    Vo    1986 CTK20 9   9   9  10
+CT20258 Kieu   Duyen Tan   1986 CTK20 6   5   4  6
+CT19022 To     Duyen Hoa   1985 CTK19 6   6   6  10
+CT19031 Do_Van Huong Van   1985 CTK19 8   7   9  10
+CT18295 Nguyen Huy   Tan   1984 CTK18 10  10  10 10
+CT17302 Nguyen Khanh Dan   1983 CTK17 8   7   6  10
+CT18041 Vo     Kiet  Tam   1984 CTK18 5   5   5  10
+CT20316 Lam    Le    Hoa   1986 CTK20 4   6   6  6
+CT19312 K      -     Luyt  1985 CTK19 5   6   5  10

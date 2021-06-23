@@ -1,0 +1,14 @@
+; [!output PROJECT_NAME].def: declara los parámetros de módulo del archivo DLL.
+
+LIBRARY
+
+EXPORTS
+    ; Colocar aquí las exportaciones explícitas
+[!if DLL_TYPE_REGULAR || DLL_TYPE_REGULAR_STATIC]
+[!if AUTOMATION]
+	DllCanUnloadNow     PRIVATE
+	DllGetClassObject   PRIVATE
+	DllRegisterServer   PRIVATE
+	DllUnregisterServer PRIVATE
+[!endif]
+[!endif]

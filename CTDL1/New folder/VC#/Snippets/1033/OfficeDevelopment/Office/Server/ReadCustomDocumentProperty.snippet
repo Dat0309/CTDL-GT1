@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Read a Custom Document Property</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Reads the value of a custom document property from a Word document or Excel workbook.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Office.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Office = Microsoft.Office.Core</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>propertyType</ID>
+          <Type></Type>
+          <ToolTip>Replace with the type of the property. Can be string, boolean, integer, double, or DateTime.</ToolTip>
+          <Default>String</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>propertyName</ID>
+          <Type>System.String</Type>
+          <ToolTip>Replace with the name of the property.</ToolTip>
+          <Default>"Name"</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>propertyValue</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a variable to store the property value in.</ToolTip>
+          <Default>propertyValue</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>document</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a Word document or Excel workbook to read the property from.</ToolTip>
+          <Default>document</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="CSharp" Kind="" Delimiter="$"><![CDATA[
+$propertyType$ $propertyValue$ = ($propertyType$)((Microsoft.Office.Core.DocumentProperties)$document$.CustomDocumentProperties)[$propertyName$].Value;
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

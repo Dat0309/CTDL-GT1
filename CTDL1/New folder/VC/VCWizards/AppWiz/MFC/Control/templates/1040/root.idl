@@ -1,0 +1,63 @@
+// [!output SAFE_IDL_NAME].idl : file di origine della libreria dei tipi per il progetto Controllo ActiveX.
+
+// Questo file verrà elaborato dal compilatore MIDL per
+// produrre la libreria dei tipi ([!output SAFE_IDL_NAME].tlb) che diventerà una risorsa in
+// [!output PROJECT_NAME].ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid([!output LIBID_REGISTRY_FORMAT]), version(1.0),
+  control ]
+library [!output LIB_NAME]Lib
+{
+	importlib(STDOLE_TLB);
+
+	//  Interfaccia dispatch per [!output CONTROL_CLASS]
+	[ 
+		uuid([!output PRIMARY_IID_REGISTRY_FORMAT])	
+	]
+	dispinterface _D[!output SAFE_PROJECT_IDENTIFIER_NAME]
+	{
+		properties:
+[!if ASYNC_PROPERTY_LOAD]
+			[id(DISPID_READYSTATE), readonly] long ReadyState;
+[!endif]
+		methods:
+[!if ABOUT_BOX]
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+[!endif]
+	};
+
+	//  Interfaccia dispatch di eventi per [!output CONTROL_CLASS]
+
+	[ 
+		uuid([!output EVENT_IID_REGISTRY_FORMAT])	
+	]
+	dispinterface _D[!output SAFE_PROJECT_IDENTIFIER_NAME]Events
+	{
+		properties:
+			//  L'interfaccia eventi non ha proprietà
+
+		methods:
+[!if ASYNC_PROPERTY_LOAD]
+			[id(DISPID_READYSTATECHANGE)] void ReadyStateChange();
+[!endif]
+	};
+
+	//  Informazioni sulla classe per [!output CONTROL_CLASS]
+	[
+[!if RUNTIME_LICENSE]
+		uuid([!output CONTROL_CLSID]), licensed
+[!else]	
+		uuid([!output CONTROL_CLSID])
+[!endif]	
+	]
+	coclass [!output LIB_NAME]
+	{
+		[default] dispinterface _D[!output SAFE_PROJECT_IDENTIFIER_NAME];
+		[default, source] dispinterface _D[!output SAFE_PROJECT_IDENTIFIER_NAME]Events;
+	};
+
+};

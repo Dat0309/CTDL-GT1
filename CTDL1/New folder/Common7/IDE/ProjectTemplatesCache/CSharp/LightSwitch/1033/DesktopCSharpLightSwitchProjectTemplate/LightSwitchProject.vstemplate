@@ -1,0 +1,63 @@
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{783E7E99-F1EC-4B21-91E2-D36F20B7C81D}" ID="2108" />
+    <Description  Package="{783E7E99-F1EC-4B21-91E2-D36F20B7C81D}" ID="2110" />
+    <Icon Package="{783E7E99-F1EC-4B21-91E2-D36F20B7C81D}" ID="3000" />
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>LightSwitch</ProjectSubType>
+    <TemplateID>Microsoft.LightSwitch.BlankLightSwitchApplication.SL.CS</TemplateID>
+    <SortOrder>80</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <CreateNewFolder>true</CreateNewFolder>
+    <CreateInPlace>true</CreateInPlace>
+    <DefaultName>Application</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <RequiredFrameworkVersion>4.5</RequiredFrameworkVersion>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+  </TemplateData>
+  <TemplateContent>
+    <CustomParameters>
+      <CustomParameter Name="$InitialClientProjectType$" Value="Silverlight" />
+      <CustomParameter Name="$ClientProjectName$" Value="DesktopClient" />
+      <CustomParameter Name="$ClientProjectSuffix$" Value=".DesktopClient" />
+      <CustomParameter Name="$ServerProjectReference$" Value="..\$projectname$.Server\$projectname$.Server.csproj" />
+    </CustomParameters>
+    <Project File="LightSwitchProject.lsxtproj" ReplaceParameters="true">
+      <!-- Root project -->
+      <ProjectItem TargetFileName="ServiceConfiguration.cscfg" ReplaceParameters="true">ServiceConfiguration.cscfg</ProjectItem>
+      <ProjectItem TargetFileName="ServiceDefinition.csdef" ReplaceParameters="true">ServiceDefinition.csdef</ProjectItem>
+      <ProjectItem TargetFileName="diagnostics.wadcfg">diagnostics.wadcfg</ProjectItem>
+      <!-- Client project -->
+      <ProjectItem TargetFileName="$projectname$.DesktopClient\$projectname$.DesktopClient.csproj" ReplaceParameters="true">Client.csproj</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.DesktopClient\Properties\AssemblyInfo.cs" ReplaceParameters="true">Client.AssemblyInfo.cs</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.DesktopClient\Properties\Client.lsml" ReplaceParameters="true">Client.lsml</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.DesktopClient\Properties\AppManifest.xml" ReplaceParameters="true">AppManifest.xml</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.DesktopClient\Properties\OutOfBrowserSettings.xml" ReplaceParameters="true">OutOfBrowserSettings.xml</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.DesktopClient\Properties\Config.xml" ReplaceParameters="true">Config.xml</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.DesktopClient\default.htm" ReplaceParameters="true">default.htm</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.DesktopClient\Silverlight.js">Silverlight.js</ProjectItem>
+      <Folder Name="Screens" TargetFolderName="$projectname$.DesktopClient\Screens"/>
+      <!-- Server project -->
+      <ProjectItem TargetFileName="$projectname$.Server\$projectname$.Server.csproj" ReplaceParameters="true">Server.csproj</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.Server\Properties\AssemblyInfo.cs" ReplaceParameters="true">Server.AssemblyInfo.cs</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.Server\Properties\Service.lsml">Service.lsml</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.Server\Web.config" ReplaceParameters="true">Web.config</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.Server\Web.Debug.config">Web.Debug.config</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.Server\Web.Release.config">Web.Release.config</ProjectItem>
+      <ProjectItem TargetFileName="$projectname$.Server\packages.config">Server.packages.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.Server\default.aspx">default.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.Server\default.aspx.cs">default.aspx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.Server\default.aspx.designer.cs">default.aspx.designer.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.LightSwitch.Design.VSTemplateWizard, Version=12.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, Custom=null</Assembly>
+    <FullClassName>Microsoft.LightSwitch.Design.VSTemplateWizard.TemplateWizardImplementation</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <ProjectReferenceInformation DefaultName="Server" Extension="csproj" />
+    <ProjectReferenceInformation DefaultName="DesktopClient" Extension="csproj" />
+
+    <NuGetPackageInfo Type="Server" Id="System.IdentityModel.Tokens.Jwt" Version="1.0.0" TargetFramework="net45" />
+  </WizardData>
+</VSTemplate>

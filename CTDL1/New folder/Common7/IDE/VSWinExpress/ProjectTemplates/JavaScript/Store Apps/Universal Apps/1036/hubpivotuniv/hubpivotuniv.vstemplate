@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="ProjectGroup">
+  <TemplateData>
+    <Name>Application Pivot/Hub (Applications universelles)</Name>
+    <Description>Projet pour une application universelle de trois pages pour Windows qui utilise un contrôle Hub et une application Windows Phone qui utilise un contrôle Pivot et Windows Runtime. Des pages dédiées affichent des détails sur les groupes et les éléments.</Description>
+    <Icon>hubpivotuniv.ico</Icon>
+    <TemplateID>Microsoft.JavaScript.HubPivotUniv</TemplateID>
+    <BlendTemplateID>Microsoft.Blend.HubPivotUniversalWWA</BlendTemplateID>
+    <BlendTemplateGroupID>HTML (Universal)</BlendTemplateGroupID>
+    <BlendProjectSubType>WJApplication</BlendProjectSubType>
+    <ProjectType>JavaScript</ProjectType>
+    <DefaultName>HubPivotSharedApp</DefaultName>
+    <TargetPlatformName>Windows</TargetPlatformName>
+    <RequiredPlatformVersion>6.3.1</RequiredPlatformVersion>
+    <CreateInPlace>true</CreateInPlace>
+    <PreviewImage>hubpivotuniv.png</PreviewImage>
+    <CreateNewFolder>true</CreateNewFolder>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <SortOrder>10</SortOrder>
+    <BlendCreateNewFolder>true</BlendCreateNewFolder>
+    <NumberOfParentCategoriesToRollUp>2</NumberOfParentCategoriesToRollUp>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+      <SolutionFolder Name="SharedApp">
+        <ProjectTemplateLink ProjectName="$safeprojectname$.Shared" CopyParameters="true">Shared\hubpivotuniv.Shared.vstemplate</ProjectTemplateLink>
+        <ProjectTemplateLink ProjectName="$safeprojectname$.Windows" CopyParameters="true">Store\hubpivotuniv.Store.vstemplate</ProjectTemplateLink>
+        <ProjectTemplateLink ProjectName="$safeprojectname$.WindowsPhone" CopyParameters="true">Phone\hubpivotuniv.Phone.vstemplate</ProjectTemplateLink>
+      </SolutionFolder>
+    </ProjectCollection>
+  </TemplateContent>
+</VSTemplate>

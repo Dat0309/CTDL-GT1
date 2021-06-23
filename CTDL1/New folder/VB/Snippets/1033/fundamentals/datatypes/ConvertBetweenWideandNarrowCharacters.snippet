@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Convert between Wide and Narrow Characters</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Converts between Wide and Narrow characters in Strings.</Description>
+      <Shortcut>typeWidth</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>Wide</ID>
+          <Type />
+          <ToolTip>Replace with Wide String.</ToolTip>
+          <Default>"Wide String"</Default>
+          <Function />
+        </Literal>
+        <Literal>
+          <ID>Narrow</ID>
+          <Type />
+          <ToolTip>Replace with Narrow String.</ToolTip>
+          <Default>"Narrow String"</Default>
+          <Function />
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[' Convert Wide to Narrow.
+Dim nString As String = StrConv($Wide$, VbStrConv.Narrow)
+' Convert Narrow to Wide.
+Dim wString As String = StrConv($Narrow$, VbStrConv.Wide)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

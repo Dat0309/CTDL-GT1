@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="ProjectGroup">
+  <TemplateData>
+    <Name>Boş Uygulama (Evrensel Uygulamalar)</Name>
+    <Description>Tek sayfalık bir Windows ve Windows Phone uygulaması için, önceden tanımlanmış denetimleri ve düzeni olmayan bir proje.</Description>
+    <Icon>blankuniv.ico</Icon>
+    <TemplateID>Microsoft.JavaScript.BlankUniv</TemplateID>
+    <BlendTemplateID>Microsoft.Blend.BlankUniversalWWA</BlendTemplateID>
+    <BlendTemplateGroupID>HTML (Universal)</BlendTemplateGroupID>
+    <BlendProjectSubType>WJApplication</BlendProjectSubType>
+    <ProjectType>JavaScript</ProjectType>
+    <DefaultName>BlankSharedApp</DefaultName>
+    <TargetPlatformName>Windows</TargetPlatformName>
+    <RequiredPlatformVersion>6.3.1</RequiredPlatformVersion>
+    <CreateInPlace>true</CreateInPlace>
+    <PreviewImage>blankuniv.png</PreviewImage>
+    <CreateNewFolder>true</CreateNewFolder>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <SortOrder>10</SortOrder>
+    <BlendCreateNewFolder>true</BlendCreateNewFolder>
+    <NumberOfParentCategoriesToRollUp>2</NumberOfParentCategoriesToRollUp>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+      <SolutionFolder Name="SharedApp">
+        <ProjectTemplateLink ProjectName="$safeprojectname$.Shared" CopyParameters="true">Shared\blankuniv.Shared.vstemplate</ProjectTemplateLink>
+        <ProjectTemplateLink ProjectName="$safeprojectname$.Windows" CopyParameters="true">Store\blankuniv.Store.vstemplate</ProjectTemplateLink>
+        <ProjectTemplateLink ProjectName="$safeprojectname$.WindowsPhone" CopyParameters="true">Phone\blankuniv.Phone.vstemplate</ProjectTemplateLink>
+      </SolutionFolder>
+    </ProjectCollection>
+  </TemplateContent>
+</VSTemplate>

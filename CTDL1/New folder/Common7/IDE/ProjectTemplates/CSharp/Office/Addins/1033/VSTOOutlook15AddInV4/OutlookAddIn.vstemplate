@@ -1,0 +1,39 @@
+﻿<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{59B99E29-E334-44A5-B522-B8C467AEC0D0}" ID="159" />
+    <Description Package="{59B99E29-E334-44A5-B522-B8C467AEC0D0}" ID="160" />
+    <Icon Package="{59B99E29-E334-44A5-B522-B8C467AEC0D0}" ID="350" />
+    <TemplateID>VSTO_Outlook15AddIn_CS</TemplateID>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>140</SortOrder>
+    <NumberOfParentCategoriesToRollUp>2</NumberOfParentCategoriesToRollUp>
+    <CreateNewFolder>true</CreateNewFolder>
+    <CreateInPlace>true</CreateInPlace>
+    <DefaultName>OutlookAddIn</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="OutlookAddIn.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Properties\Resources.resx">Resources.resx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\Resources.Designer.cs">Resources.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Properties\Settings.settings">Settings.settings</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\Settings.Designer.cs">Settings.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ThisAddIn.cs">ThisAddIn.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ThisAddIn.Designer.xml">ThisAddIn.Designer.xml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ThisAddIn.Designer.cs">ThisAddIn.Designer.cs</ProjectItem>
+    </Project>
+    <CustomParameters>
+      <CustomParameter Name="VSTOHostService" Value="{29A7B9D7-A7F1-4328-8EF0-6B2D1A56B2C1}" />
+      <CustomParameter Name="VSTOHostApp" Value="Outlook" />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.Tools.Office.AddInProject, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, Custom=null</Assembly>
+    <FullClassName>Microsoft.VisualStudio.OfficeTools.AddinProject.Office15Wizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

@@ -1,0 +1,208 @@
+﻿<AzureEnvironmentDefinitionFile xmlns="http://schemas.datacontract.org/2004/07/Microsoft.WindowsAzure.Client" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>1.0.2.0</Version>
+  <AzureEnvironments>
+    <AzureEnvironment>
+      <Hostname>management.core.windows.net</Hostname>
+      <AzureWebsiteDomain>azurewebsites.net</AzureWebsiteDomain>
+      <SqlAzureDomain>database.windows.net</SqlAzureDomain>
+      <SqlAzureLocations>
+        <AzureEnvironmentLocation>
+          <InvariantName>Southeast Asia</InvariantName>
+        </AzureEnvironmentLocation>
+        <AzureEnvironmentLocation>
+          <InvariantName>East Asia</InvariantName>
+        </AzureEnvironmentLocation>
+        <AzureEnvironmentLocation>
+          <InvariantName>East US</InvariantName>
+        </AzureEnvironmentLocation>
+        <AzureEnvironmentLocation>
+          <InvariantName>North Europe</InvariantName>
+        </AzureEnvironmentLocation>
+        <AzureEnvironmentLocation>
+          <InvariantName>West Europe</InvariantName>
+        </AzureEnvironmentLocation>
+        <AzureEnvironmentLocation>
+          <InvariantName>West US</InvariantName>
+        </AzureEnvironmentLocation>
+        <AzureEnvironmentLocation>
+          <InvariantName>North Central US</InvariantName>
+        </AzureEnvironmentLocation>
+        <AzureEnvironmentLocation>
+          <InvariantName>South Central US</InvariantName>
+        </AzureEnvironmentLocation>
+        <AzureEnvironmentLocation>
+          <InvariantName>Japan East</InvariantName>
+        </AzureEnvironmentLocation>
+        <AzureEnvironmentLocation>
+          <InvariantName>Japan West</InvariantName>
+        </AzureEnvironmentLocation>
+        <AzureEnvironmentLocation>
+          <InvariantName>Brazil South</InvariantName>
+        </AzureEnvironmentLocation>
+      </SqlAzureLocations>
+      <AzurePortalDomain>manage.windowsazure.com</AzurePortalDomain>
+      <AzurePortalLinks>
+        <Link>
+          <LinkId>configure</LinkId>
+          <Destination>/#Workspaces/WebsiteExtension/Website/{0}/configure</Destination>
+        </Link>
+        <Link>
+          <LinkId>dashboard</LinkId>
+          <Destination>/#Workspaces/WebsiteExtension/Website/{0}/dashboard</Destination>
+        </Link>
+        <Link>
+          <LinkId>monitoring</LinkId>
+          <Destination>/#Workspaces/WebsiteExtension/Website/{0}/monitoring</Destination>
+        </Link>
+        <Link>
+          <LinkId>scale</LinkId>
+          <Destination>/#Workspaces/WebsiteExtension/Website/{0}/scale</Destination>
+        </Link>
+        <Link>
+          <LinkId>store</LinkId>
+          <Destination>/#Workspaces/StoreExtension/openStore</Destination>
+        </Link>
+      </AzurePortalLinks>
+    </AzureEnvironment>
+
+    <AzureEnvironment>
+      <Hostname>management.core.chinacloudapi.cn</Hostname>
+      <AzureWebsiteDomain>chinacloudsites.cn</AzureWebsiteDomain>
+      <SqlAzureDomain>database.chinacloudapi.cn</SqlAzureDomain>
+      <SqlAzureLocations>
+        <AzureEnvironmentLocation>
+          <InvariantName>China North</InvariantName>
+        </AzureEnvironmentLocation>
+        <AzureEnvironmentLocation>
+          <InvariantName>China East</InvariantName>
+        </AzureEnvironmentLocation>
+      </SqlAzureLocations>
+      <AzurePortalDomain>manage.windowsazure.com</AzurePortalDomain>
+      <AzurePortalLinks>
+        <Link>
+          <LinkId>configure</LinkId>
+          <Destination>/#Workspaces/WebsiteExtension/Website/{0}/configure</Destination>
+        </Link>
+        <Link>
+          <LinkId>dashboard</LinkId>
+          <Destination>/#Workspaces/WebsiteExtension/Website/{0}/dashboard</Destination>
+        </Link>
+        <Link>
+          <LinkId>monitoring</LinkId>
+          <Destination>/#Workspaces/WebsiteExtension/Website/{0}/monitoring</Destination>
+        </Link>
+        <Link>
+          <LinkId>scale</LinkId>
+          <Destination>/#Workspaces/WebsiteExtension/Website/{0}/scale</Destination>
+        </Link>
+        <Link>
+          <LinkId>store</LinkId>
+          <Destination>/#Workspaces/StoreExtension/openStore</Destination>
+        </Link>
+      </AzurePortalLinks>
+    </AzureEnvironment>
+
+    <AzureEnvironment>
+      <Hostname>managementnext.rdfetest.dnsdemo4.com</Hostname>
+      <AzureWebsiteDomain>antares-int.windows-int.net</AzureWebsiteDomain>
+      <SqlAzureDomain>ssmsawacluster4.windowsazure.mscds.com</SqlAzureDomain>
+      <SqlAzureLocations>
+        <AzureEnvironmentLocation>
+          <InvariantName>North Central US</InvariantName>
+        </AzureEnvironmentLocation>
+      </SqlAzureLocations>
+      <AzurePortalDomain>auxnext.windows.azure-test.net</AzurePortalDomain>
+      <AzurePortalLinks>
+        <Link>
+          <LinkId>configure</LinkId>
+          <Destination>/#Workspaces/WebsiteExtension/Website/{0}/configure</Destination>
+        </Link>
+        <Link>
+          <LinkId>dashboard</LinkId>
+          <Destination>/#Workspaces/WebsiteExtension/Website/{0}/dashboard</Destination>
+        </Link>
+        <Link>
+          <LinkId>monitoring</LinkId>
+          <Destination>/#Workspaces/WebsiteExtension/Website/{0}/monitoring</Destination>
+        </Link>
+        <Link>
+          <LinkId>scale</LinkId>
+          <Destination>/#Workspaces/WebsiteExtension/Website/{0}/scale</Destination>
+        </Link>
+        <Link>
+          <LinkId>store</LinkId>
+          <Destination>/#Workspaces/StoreExtension/openStore</Destination>
+        </Link>
+      </AzurePortalLinks>
+    </AzureEnvironment>
+
+    <AzureEnvironment>
+      <Hostname>management.rdfetest.dnsdemo4.com</Hostname>
+      <AzureWebsiteDomain>antdir0.antares-test.windows-int.net</AzureWebsiteDomain>
+      <SqlAzureDomain>bigbean.windowsazure.mscds.com</SqlAzureDomain>
+      <SqlAzureLocations>
+        <AzureEnvironmentLocation>
+          <InvariantName>East US</InvariantName>
+        </AzureEnvironmentLocation>
+      </SqlAzureLocations>
+      <AzurePortalDomain>auxcurrent.windows.azure-test.net</AzurePortalDomain>
+      <AzurePortalLinks>
+        <Link>
+          <LinkId>configure</LinkId>
+          <Destination>/#Workspaces/WebsiteExtension/Website/{0}/configure</Destination>
+        </Link>
+        <Link>
+          <LinkId>dashboard</LinkId>
+          <Destination>/#Workspaces/WebsiteExtension/Website/{0}/dashboard</Destination>
+        </Link>
+        <Link>
+          <LinkId>monitoring</LinkId>
+          <Destination>/#Workspaces/WebsiteExtension/Website/{0}/monitoring</Destination>
+        </Link>
+        <Link>
+          <LinkId>scale</LinkId>
+          <Destination>/#Workspaces/WebsiteExtension/Website/{0}/scale</Destination>
+        </Link>
+        <Link>
+          <LinkId>store</LinkId>
+          <Destination>/#Workspaces/StoreExtension/openStore</Destination>
+        </Link>
+      </AzurePortalLinks>
+    </AzureEnvironment>
+
+    <AzureEnvironment>
+      <Hostname>management-preview.core.windows-int.net</Hostname>
+      <AzureWebsiteDomain>ant-intapp.windows-int.net</AzureWebsiteDomain>
+      <SqlAzureDomain>sqldogfood.sqlazurelabs.com</SqlAzureDomain>
+      <SqlAzureLocations>
+        <AzureEnvironmentLocation>
+          <InvariantName>northwest US</InvariantName>
+        </AzureEnvironmentLocation>
+      </SqlAzureLocations>
+      <AzurePortalDomain>windows.azure-preview.com</AzurePortalDomain>
+      <AzurePortalLinks>
+        <Link>
+          <LinkId>configure</LinkId>
+          <Destination>/#Workspaces/WebsiteExtension/Website/{0}/configure</Destination>
+        </Link>
+        <Link>
+          <LinkId>dashboard</LinkId>
+          <Destination>/#Workspaces/WebsiteExtension/Website/{0}/dashboard</Destination>
+        </Link>
+        <Link>
+          <LinkId>monitoring</LinkId>
+          <Destination>/#Workspaces/WebsiteExtension/Website/{0}/monitoring</Destination>
+        </Link>
+        <Link>
+          <LinkId>scale</LinkId>
+          <Destination>/#Workspaces/WebsiteExtension/Website/{0}/scale</Destination>
+        </Link>
+        <Link>
+          <LinkId>store</LinkId>
+          <Destination>/#Workspaces/StoreExtension/openStore</Destination>
+        </Link>
+      </AzurePortalLinks>
+    </AzureEnvironment>
+
+  </AzureEnvironments>
+</AzureEnvironmentDefinitionFile>

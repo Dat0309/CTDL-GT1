@@ -1,0 +1,96 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    
+    <TemplateID>SharePoint16MailAppWebFormItem_VB_ITEM</TemplateID>
+    <ProjectType>VisualBasic</ProjectType>
+    <DefaultName>WebForm.aspx</DefaultName>
+    <Hidden>true</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="Content\SharePointProjectItem.spdata">Content\SharePointProjectItem_sharepoint.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="Images\SharePointProjectItem.spdata">Images\SharePointProjectItem_sharepoint.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="$fileinputnameread$\SharePointProjectItem.spdata">SharePointMailAppWebFormItemRead\SharePointMailAppWebFormItemRead_sharepoint.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="$fileinputnamecompose$\SharePointProjectItem.spdata">SharePointMailAppWebFormItemCompose\SharePointMailAppWebFormItemCompose_sharepoint.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="Scripts\SharePointProjectItem.spdata">Scripts\SharePointProjectItem_sharepoint.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="Content\Elements.xml">Content\Elements_sharepoint.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="Content\Office.css">Content\Office.css</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="Images\Elements.xml">Images\Elements_sharepoint.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="false" OpenInEditor="false" TargetFileName="Images\Close.png">Images\Close.png</ProjectItem>
+    
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="$fileinputnameread$\Elements.xml">SharePointMailAppWebFormItemRead\Elements_sharepoint.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="$fileinputnameread$\App.css">SharePointMailAppWebFormItemRead\App.css</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="$fileinputnameread$\Home\Home.css">SharePointMailAppWebFormItemRead\Home\Home.css</ProjectItem>
+
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="$fileinputnamecompose$\Elements.xml">SharePointMailAppWebFormItemCompose\Elements_sharepoint.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="$fileinputnamecompose$\App.css">SharePointMailAppWebFormItemCompose\App.css</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="$fileinputnamecompose$\Home\Home.css">SharePointMailAppWebFormItemCompose\Home\Home.css</ProjectItem>
+
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="$fileinputnameread$\App.js">SharePointMailAppWebFormItemRead\App.js</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="$fileinputnameread$\Home\Home.js">SharePointMailAppWebFormItemRead\Home\Home.js</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="true" TargetFileName="$fileinputnameread$\Home\Home.html">SharePointMailAppWebFormItemRead\Home\Home.html</ProjectItem>
+    
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="$fileinputnamecompose$\App.js">SharePointMailAppWebFormItemCompose\App.js</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="$fileinputnamecompose$\Home\Home.js">SharePointMailAppWebFormItemCompose\Home\Home.js</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="true" TargetFileName="$fileinputnamecompose$\Home\Home.html">SharePointMailAppWebFormItemCompose\Home\Home.html</ProjectItem>
+
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="Scripts\Elements.xml">Scripts\Elements_sharepoint.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="Scripts\_officeintellisense.js">Scripts\_officeintellisense.js</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="Scripts\Office\MicrosoftAjax.js">Scripts\Office\MicrosoftAjax.js</ProjectItem>
+
+    <CustomParameters>
+      <CustomParameter Name="$JQueryJsPath$" Value="$JQueryJsPath$"/>
+      <CustomParameter Name="$OfficeJsPath$" Value="$OfficeJsPath$"/>
+      <CustomParameter Name="$OfficeJSVersion$" Value="$OfficeJSVersion$"/>
+      <CustomParameter Name="$loc_office_css_1$" _locID="$loc_office_css_1$" _locAttrData="Value" Value="Office CSS library" />
+      <CustomParameter Name="$loc_office_css_2$" _locID="$loc_office_css_2$" _locAttrData="Value" Value="Version: 1.0.2.0" />
+      <CustomParameter Name="$loc_office_css_3$" _locID="$loc_office_css_3$" _locAttrData="Value" Value="Base" />
+      <CustomParameter Name="$loc_office_css_4$" _locID="$loc_office_css_4$" _locAttrData="Value" Value="Typography" />
+      <CustomParameter Name="$loc_office_css_5$" _locID="$loc_office_css_5$" _locAttrData="Value" Value="General" />
+      <CustomParameter Name="$loc_office_css_6$" _locID="$loc_office_css_6$" _locAttrData="Value" Value="Forms" />
+      <CustomParameter Name="$loc_office_css_7$" _locID="$loc_office_css_7$" _locAttrData="Value" Value="Scrollbars" />
+      <CustomParameter Name="$loc_script_Compose_App_css_comment1$" _locID="$loc_script_Compose_App_css_comment1$" _locAttrData="Value" Value="Common app styling" />
+      <CustomParameter Name="$loc_script_Compose_App_css_comment2$" _locID="$loc_script_Compose_App_css_comment2$" _locAttrData="Value" Value="Fixed header height" />
+      <CustomParameter Name="$loc_script_Compose_App_css_comment3$" _locID="$loc_script_Compose_App_css_comment3$" _locAttrData="Value" Value="Disable scrollbars for header" />
+      <CustomParameter Name="$loc_script_Compose_App_css_comment4$" _locID="$loc_script_Compose_App_css_comment4$" _locAttrData="Value" Value="Same value as #content-header's height" />
+      <CustomParameter Name="$loc_script_Compose_App_css_comment5$" _locID="$loc_script_Compose_App_css_comment5$" _locAttrData="Value" Value="Enable scrollbars within main content section" />
+      <CustomParameter Name="$loc_script_Compose_App_css_comment6$" _locID="$loc_script_Compose_App_css_comment6$" _locAttrData="Value" Value="Hidden until invoked" />
+      <CustomParameter Name="$loc_script_Compose_App_js_comment1$" _locID="$loc_script_Compose_App_js_comment1$" _locAttrData="Value" Value="Common app functionality" />
+      <CustomParameter Name="$loc_script_Compose_App_js_comment2$" _locID="$loc_script_Compose_App_js_comment2$" _locAttrData="Value" Value="Common initialization function (to be called from each page)" />
+      <CustomParameter Name="$loc_script_Compose_App_js_comment3$" _locID="$loc_script_Compose_App_js_comment3$" _locAttrData="Value" Value="After initialization, expose a common notification function" />
+      <CustomParameter Name="$loc_script_Compose_Home_css_comment1$" _locID="$loc_script_Compose_Home_css_comment1$" _locAttrData="Value" Value="Page-specific styling" />
+      <CustomParameter Name="$loc_script_Compose_Home_css_comment2$" _locID="$loc_script_Compose_Home_css_comment2$" _locAttrData="Value" Value="Formatting for the sample buttons" />
+      <CustomParameter Name="$loc_script_Compose_Home_html_comment1$" _locID="$loc_script_Compose_Home_html_comment1$" _locAttrData="Value" Value="To enable offline debugging using a local reference to Office.js, use:" />
+      <CustomParameter Name="$loc_script_Compose_Home_html_comment2$" _locID="$loc_script_Compose_Home_html_comment2$" _locAttrData="Value" Value="Add home screen content here." />
+      <CustomParameter Name="$loc_script_Compose_Home_html_comment3$" _locID="$loc_script_Compose_Home_html_comment3$" _locAttrData="Value" Value="For example:" />
+      <CustomParameter Name="$loc_script_Compose_Home_html_comment4$" _locID="$loc_script_Compose_Home_html_comment4$" _locAttrData="Value" Value="Set subject" />
+      <CustomParameter Name="$loc_script_Compose_Home_html_comment5$" _locID="$loc_script_Compose_Home_html_comment5$" _locAttrData="Value" Value="Get subject" />
+      <CustomParameter Name="$loc_script_Compose_Home_html_comment6$" _locID="$loc_script_Compose_Home_html_comment6$" _locAttrData="Value" Value="Add yourself to recipients list" />
+      <CustomParameter Name="$loc_script_Compose_Home_html_comment7$" _locID="$loc_script_Compose_Home_html_comment7$" _locAttrData="Value" Value="Find more samples online..." />
+      <CustomParameter Name="$loc_script_Compose_Home_js_comment1$" _locID="$loc_script_Compose_Home_js_comment1$" _locAttrData="Value" Value="The initialize function must be run each time a new page is loaded" />
+      <CustomParameter Name="$loc_script_Compose_Home_js_comment2$" _locID="$loc_script_Compose_Home_js_comment2$" _locAttrData="Value" Value="Hello world!" />
+      <CustomParameter Name="$loc_script_Compose_Home_js_comment3$" _locID="$loc_script_Compose_Home_js_comment3$" _locAttrData="Value" Value="The current subject is" />
+      <CustomParameter Name="$loc_script_Read_App_css_comment1$" _locID="$loc_script_Read_App_css_comment1$" _locAttrData="Value" Value="Common app styling" />
+      <CustomParameter Name="$loc_script_Read_App_css_comment2$" _locID="$loc_script_Read_App_css_comment2$" _locAttrData="Value" Value="Same value as #content-footer's height" />
+      <CustomParameter Name="$loc_script_Read_App_css_comment3$" _locID="$loc_script_Read_App_css_comment3$" _locAttrData="Value" Value="Enable scrollbars within main content section" />
+      <CustomParameter Name="$loc_script_Read_App_css_comment4$" _locID="$loc_script_Read_App_css_comment4$" _locAttrData="Value" Value="Fixed footer height" />
+      <CustomParameter Name="$loc_script_Read_App_css_comment5$" _locID="$loc_script_Read_App_css_comment5$" _locAttrData="Value" Value="Disable scrollbars for footer" />
+      <CustomParameter Name="$loc_script_Read_App_css_comment6$" _locID="$loc_script_Read_App_css_comment6$" _locAttrData="Value" Value="Hidden until invoked" />
+      <CustomParameter Name="$loc_script_Read_App_js_comment1$" _locID="$loc_script_Read_App_js_comment1$" _locAttrData="Value" Value="Common app functionality" />
+      <CustomParameter Name="$loc_script_Read_App_js_comment2$" _locID="$loc_script_Read_App_js_comment2$" _locAttrData="Value" Value="Common initialization function (to be called from each page)" />
+      <CustomParameter Name="$loc_script_Read_App_js_comment3$" _locID="$loc_script_Read_App_js_comment3$" _locAttrData="Value" Value="After initialization, expose a common notification function" />
+      <CustomParameter Name="$loc_script_Read_Home_css_comment1$" _locID="$loc_script_Read_Home_css_comment1$" _locAttrData="Value" Value="Page-specific styling" />
+      <CustomParameter Name="$loc_script_Read_Home_html_comment1$" _locID="$loc_script_Read_Home_html_comment1$" _locAttrData="Value" Value="To enable offline debugging using a local reference to Office.js, use:" />
+      <CustomParameter Name="$loc_script_Read_Home_html_comment3$" _locID="$loc_script_Read_Home_html_comment3$" _locAttrData="Value" Value="Add home screen content here" />
+      <CustomParameter Name="$loc_script_Read_Home_html_comment4$" _locID="$loc_script_Read_Home_html_comment4$" _locAttrData="Value" Value="For example, this app was activated with following details:" />
+      <CustomParameter Name="$loc_script_Read_Home_html_comment5$" _locID="$loc_script_Read_Home_html_comment5$" _locAttrData="Value" Value="Subject:" />
+      <CustomParameter Name="$loc_script_Read_Home_html_comment6$" _locID="$loc_script_Read_Home_html_comment6$" _locAttrData="Value" Value="From:" />
+      <CustomParameter Name="$loc_script_Read_Home_html_comment7$" _locID="$loc_script_Read_Home_html_comment7$" _locAttrData="Value" Value="Find more samples online..." />
+      <CustomParameter Name="$loc_script_Read_Home_js_comment1$" _locID="$loc_script_Read_Home_js_comment1$" _locAttrData="Value" Value="The Office initialize function must be run each time a new page is loaded" />
+      <CustomParameter Name="$loc_script_Read_Home_js_comment2$" _locID="$loc_script_Read_Home_js_comment2$" _locAttrData="Value" Value="Displays the &quot;Subject&quot; and &quot;From&quot; fields, based on the current mail item" />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.OfficeAppWebFormProjectItemWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

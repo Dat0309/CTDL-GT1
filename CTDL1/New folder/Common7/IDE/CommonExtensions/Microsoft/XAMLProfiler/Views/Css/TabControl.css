@@ -1,0 +1,59 @@
+﻿/* 
+ *   TabControl styles 
+ */
+
+.tabControl {
+    height: 100%;
+    display: -ms-grid;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: auto minmax(min-content, 1fr);
+    box-sizing: border-box;
+}
+
+    .tabControl > .tabBarContainer {
+        -ms-grid-column: 1;
+        -ms-grid-row: 1;
+        -ms-grid-column-align: end;
+        box-sizing: border-box;
+    }
+
+    .tabControl ul.tabBar {
+        list-style-type: none;
+        margin: 0;
+        margin-top: 5px;
+        margin-right: 42px;
+        padding: 0;
+        cursor: default;
+    }
+
+        .tabControl ul.tabBar li {
+            display: inline-block;
+            margin: 5px 10px 5px 10px;
+            color: #1e1e1e; /*[{vs-start-page-text-sub-heading-selected-color}]*/
+            font-size: 1.1em; /*[{plugin-font-size}]*/
+            font-family: Segoe UI; /*[{plugin-font-family}]*/
+        }
+
+            .tabControl ul.tabBar li:hover {
+                color: #007acc; /*[{vs-start-page-text-sub-heading-mouse-over-color}]*/
+                cursor: pointer;
+            }
+
+            .tabControl ul.tabBar li.active {
+                font-weight: bolder;
+                color: #007acc; /*[{vs-start-page-text-sub-heading-mouse-over-color}]*/
+            }
+
+    .tabControl > .tabContentPane {
+        -ms-grid-column: 1;
+        -ms-grid-row: 2;
+        box-sizing: border-box;
+    }
+
+        .tabControl > .tabContentPane > .tabItemContent {
+            display: none;
+        }
+
+        .tabControl > .tabContentPane > .active {
+            display: block;
+        }

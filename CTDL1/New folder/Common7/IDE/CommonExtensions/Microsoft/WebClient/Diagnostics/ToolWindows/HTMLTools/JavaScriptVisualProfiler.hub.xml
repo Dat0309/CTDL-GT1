@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Components xmlns="urn:diagnosticshub-components-definition-1-3">
+  <ToolComponent Exclusive="false">
+    <ResourceBaseName>PerfTools\VisualProfiler\Resources\Resources</ResourceBaseName>
+    <Id>0615d892-30b0-4ada-afab-93bfe13d9538</Id>
+    <Name ResourceId="HubToolName" />
+    <Description ResourceId="HubToolDescription" />
+    <HostIEVersion MinVersion="11.0" />
+    <SupportedTargets>
+      <VisualStudio DebuggerContext="LocalOrRemote">
+        <!-- JavaScript Windows Store App -->
+        <ProjectType>262852c6-cd72-467d-83fe-5eeb1973a190</ProjectType>
+        <TargetPlatform Name="Windows" />
+        <TargetPlatform Name="WindowsPhone" />
+      </VisualStudio>
+      <WindowsStoreApp Type="JavaScript">
+        <TargetPlatform Name="Windows" Attach="LocalOnly" Launch="LocalOrRemote" MinOSVersion="6.3" />
+      </WindowsStoreApp>
+      <InternetExplorer MinVersion="11.0">
+        <TargetPlatform Name="Windows" Attach="Unsupported" Launch="LocalOrRemote" MinOSVersion="6.1" />
+        <TargetPlatform Name="WindowsPhone" Attach="Unsupported" Launch="RemoteOnly" MinOSVersion="6.3" />
+      </InternetExplorer>
+    </SupportedTargets>
+    <EnabledCollectors>
+      <CustomCollector Id="72089E7A-A3C8-4652-9817-F33C8149AFFC" />
+      <StandardCollector>
+        <EtwProvider Id="9E814AAD-3204-11D2-9A82-006008A86939">
+          <Keyword>0x00000001</Keyword> <!-- process -->
+          <Keyword>0x00000002</Keyword> <!-- thread -->
+          <Keyword>0x00000010</Keyword> <!-- cswitch -->
+        </EtwProvider>
+        <EtwProvider Id="9e3b3947-ca5d-4614-91a2-7b624e0e7244">
+          <Keyword>0x00000001</Keyword> <!-- element_rundown -->
+          <Keyword>0x00000010</Keyword> <!-- eventsandtimers -->
+          <Keyword>0x00000100</Keyword> <!-- primarynav -->
+          <Keyword>0x00000200</Keyword> <!-- subsystem -->
+          <Keyword>0x00000800</Keyword> <!-- verbose -->
+          <Keyword>0x00001000</Keyword> <!-- mshtml -->
+          <Keyword>0x00002000</Keyword> <!-- marshalling -->
+          <Keyword>0x00004000</Keyword> <!-- DDT -->
+          <Keyword>0x00008000</Keyword> <!-- jscript -->
+          <Keyword>0x00800000</Keyword> <!-- paintbeat -->
+          <Keyword>0x10000000</Keyword> <!-- composition -->
+        </EtwProvider>
+        <EtwProvider Id="57277741-3638-4A4B-BDBA-0AC6E45DA56C">
+          <Keyword>0x01</Keyword> <!-- JScriptRuntime -->
+          <Keyword>0x02</Keyword> <!-- JScriptStartRundown -->
+          <Keyword>0x10</Keyword> <!-- JScriptProjection -->
+        </EtwProvider>
+        <EtwProvider Id="43D1A55C-76D6-4f7e-995C-64C711E5CAFE">
+          <Keyword>0x80</Keyword> <!-- WININET_KEYWORD_IE -->
+        </EtwProvider>
+        <EtwProvider Id="4BD2826E-54A1-4BA9-BF63-92B73EA1AC4A"> <!-- Microsoft-Windows-Diagnostics-LoggingChannel -->
+          <Keyword>0x1</Keyword> <!-- K_LogMsg -->
+        </EtwProvider>
+        <DeviceDeployment>
+          <!-- JavaScriptCollectionAgent Package -->
+          <Package Id="4DF7FAFD-FB8C-490A-90B2-7420C37E94AE" />
+        </DeviceDeployment>
+      </StandardCollector>
+    </EnabledCollectors>
+    <DataWarehouse>
+      <CustomAnalyzers>
+        <Location Arch="Amd64" LocalDllRelativePath="PerfTools\VisualProfiler\amd64\Timeline.dll" />
+        <Location Arch="X86" LocalDllRelativePath="PerfTools\VisualProfiler\x86\Timeline.dll" />
+        <Analyzer Clsid="3A649979-5A30-4542-A12F-1E0C09858804" />
+      </CustomAnalyzers>
+    </DataWarehouse>
+    <Views>
+      <StandardSwimLane Destination="Analysis">
+        <Title ResourceId="Ruler_UserMarks" />
+        <JsonConfiguration>
+          {
+            "View": "Ruler",
+            "Series": [{
+                "SeriesType": "Mark",
+                "MarkType": 1,
+                "DataSource": {
+                    "CounterId": "lifeCycleMarks",
+                    "AnalyzerId": "3A649979-5A30-4542-A12F-1E0C09858804"
+                }
+            }, {
+                "SeriesType": "Mark",
+                "MarkType": 2,
+                "DataSource": {
+                    "CounterId": "userMarks",
+                    "AnalyzerId": "3A649979-5A30-4542-A12F-1E0C09858804"
+                }
+            }]
+          }
+        </JsonConfiguration>
+      </StandardSwimLane>
+      <CustomSwimLane Destination="Analysis">
+        <Title ResourceId="CPUChartTitle" />
+        <Description ResourceId="CPUGraphAriaLabel" />
+        <JsonConfiguration>
+           {
+             "View": "Graph",
+             "GraphBehaviour": 2,
+             "Series": [{
+                 "Legend": "Loading_Category",
+                 "LegendTooltip": "LoadingLegendTooltip",
+                 "Category": "Loading_Category",
+                 "Color": "#0072c6",
+                 "CssClass": "dataLoading",
+                 "DataSource": {
+                     "CounterId": "CPUUsage",
+                     "AnalyzerId": "3A649979-5A30-4542-A12F-1E0C09858804"
+                 }
+             }, {
+                 "Legend": "Scripting_Category",
+                 "LegendTooltip": "ScriptingLegendTooltip",
+                 "Category": "Scripting_Category",
+                 "Color": "#dd5900",
+                 "CssClass": "dataScripting"
+             }, {
+                 "Legend": "GC_Category",
+                 "LegendTooltip": "GCLegendTooltip",
+                 "Category": "GC_Category",
+                 "Color": "#f1ad00",
+                 "CssClass": "dataScriptingGc"
+             }, {
+                 "Legend": "Styling_Category",
+                 "LegendTooltip": "StylingLegendTooltip",
+                 "Category": "Styling_Category",
+                 "Color": "#7fba00",
+                 "CssClass": "dataStyling"
+             }, {
+                 "Legend": "Rendering_Category",
+                 "LegendTooltip": "RenderingLegendTooltip",
+                 "Category": "Rendering_Category",
+                 "Color": "#9b4f96",
+                 "CssClass": "dataRendering"
+             }, {
+                 "Legend": "ImageDecoding_Category",
+                 "LegendTooltip": "ImageDecodingLegendTooltip",
+                 "Category": "ImageDecoding_Category",
+                 "Color": "#79d7f2",
+                 "CssClass": "dataImageDecoding"
+             }],
+             "BarWidth": 4,
+             "BarGap": 1,
+             "ShowStackGap": true,
+             "Height": 60
+           }
+        </JsonConfiguration>
+        <Resources>
+          <JavaScriptResource JavaScriptKey="CPUBarAriaLabel" ResourceId="CPUBarAriaLabel" />
+          <JavaScriptResource JavaScriptKey="CPUGraphAriaLabel" ResourceId="CPUGraphAriaLabel" />
+          <JavaScriptResource JavaScriptKey="CPUTooltipCategoryLabel" ResourceId="CPUTooltipCategoryLabel" />
+          <JavaScriptResource JavaScriptKey="CPUTooltipUtilizationLabel" ResourceId="CPUTooltipCategoryLabel" />
+          <JavaScriptResource JavaScriptKey="GC_Category" ResourceId="GC_Category" />
+          <JavaScriptResource JavaScriptKey="GCLegendTooltip" ResourceId="GCLegendTooltip" />
+          <JavaScriptResource JavaScriptKey="ImageDecoding_Category" ResourceId="ImageDecoding_Category" />
+          <JavaScriptResource JavaScriptKey="ImageDecodingLegendTooltip" ResourceId="ImageDecodingLegendTooltip" />
+          <JavaScriptResource JavaScriptKey="Loading_Category" ResourceId="Loading_Category" />
+          <JavaScriptResource JavaScriptKey="LoadingLegendTooltip" ResourceId="LoadingLegendTooltip" />
+          <JavaScriptResource JavaScriptKey="Rendering_Category" ResourceId="Rendering_Category" />
+          <JavaScriptResource JavaScriptKey="RenderingLegendTooltip" ResourceId="RenderingLegendTooltip" />
+          <JavaScriptResource JavaScriptKey="Scripting_Category" ResourceId="Scripting_Category" />
+          <JavaScriptResource JavaScriptKey="ScriptingLegendTooltip" ResourceId="ScriptingLegendTooltip" />
+          <JavaScriptResource JavaScriptKey="Styling_Category" ResourceId="Styling_Category" />
+          <JavaScriptResource JavaScriptKey="StylingLegendTooltip" ResourceId="StylingLegendTooltip" />
+          <JavaScriptResource JavaScriptKey="Unknown_Category" ResourceId="Unknown_Category" />
+          <JavaScriptResource JavaScriptKey="UnknownLegendTooltip" ResourceId="UnknownLegendTooltip" />
+        </Resources>
+        <PathToJavaScript>PerfTools\VisualProfiler\HubGraphs.js</PathToJavaScript>
+        <ClassName>VisualProfiler.Graphs.StackedBarGraph</ClassName>
+      </CustomSwimLane>
+      <StandardSwimLane Destination="Analysis">
+        <Title ResourceId="AFG_Title" />
+        <Description ResourceId="VisualThroughputGraphAriaLabel" />
+        <JsonConfiguration>
+          {
+            "View": "Graph",
+            "GraphBehaviour": 2,
+            "Series": [{
+                "SeriesType": "StepLine",
+                "Legend": "AFG_Legend",
+                "DataSource": {
+                    "CounterId": "frameRate",
+                    "AnalyzerId": "3A649979-5A30-4542-A12F-1E0C09858804"
+                }
+            }],
+            "Axes": [{ "value": 30 }, { "value": 60 }],
+            "ScaleType": 2,
+            "MinValue": 0,
+            "MaxValue": 70,
+            "Unit": "AFG_Unit",
+            "Height": 50
+          }
+        </JsonConfiguration>
+        <Resources>
+          <JavaScriptResource JavaScriptKey="AFG_Legend" ResourceId="AFG_Legend" />
+          <JavaScriptResource JavaScriptKey="AFG_Unit" ResourceId="AFG_Unit" />
+        </Resources>
+      </StandardSwimLane>      
+      <DetailsView Destination="Analysis">
+        <Title ResourceId="HubToolName" />
+        <Description ResourceId="HubToolDescription" />
+        <ScriptedControl>
+          <BaseDirectory>.</BaseDirectory>
+          <Manifest>PerfTools\VisualProfiler\manifest.json</Manifest>
+          <VisualStudioIntegration PackageId="2FA86802-6C0C-4820-B09A-F947036A1002"
+                                   MenuCommandServiceAutomationObject="PackageCommandService">
+            <MarshalerObject AutomationObject="HostShell" JavaScriptObjectName="Microsoft.VisualStudio.WebClient.Diagnostics.PerformanceToolHost.Package.Extensions.Core.HostShell" />
+          </VisualStudioIntegration>
+        </ScriptedControl>
+      </DetailsView>
+    </Views>
+  </ToolComponent>
+</Components>

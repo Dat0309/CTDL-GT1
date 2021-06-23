@@ -1,0 +1,23 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{CB22EE0E-4072-4ae7-96E2-90FCCF879544}" ID="1023"/>
+    <Description Package="{CB22EE0E-4072-4ae7-96E2-90FCCF879544}" ID="1024"/>
+    <Icon Package="{CB22EE0E-4072-4ae7-96E2-90FCCF879544}" ID="9018"/>
+    <TemplateID>Microsoft.Silverlight.CSharp.TemplatedControl</TemplateID>
+    <TemplateGroupID>Silverlight</TemplateGroupID>
+    <ProjectType>CSharp</ProjectType>
+    <ShowByDefault>false</ShowByDefault>
+    <SortOrder>14</SortOrder>
+    <RequiredFrameworkVersion>3.0</RequiredFrameworkVersion>
+    <DefaultName>TemplatedControl.cs</DefaultName>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.cs">Control1.cs</ProjectItem>
+  </TemplateContent>
+
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.Silverlight, Version=12.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.Silverlight.CustomControlItemTemplateWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

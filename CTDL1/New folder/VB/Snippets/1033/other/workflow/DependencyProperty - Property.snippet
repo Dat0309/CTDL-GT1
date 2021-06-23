@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title _locID="vbPropTitle1">Add Dependency Property - Property</Title>
+      <Shortcut>wdp</Shortcut>
+      <Description _locID="vbPropDesc1">Code snippet for creating a dependency property in a Windows Workflow Activity.</Description>
+      <Author>Microsoft Corporation</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>property</ID>
+          <ToolTip _locID="vbPropTip1">Replace with the property name.</ToolTip>
+          <Default>MyProperty</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>classname</ID>
+          <ToolTip _locID="vbPropTip2">Replace with the enclosing activity class name.</ToolTip>
+          <Default>ActivityClassName</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>type</ID>
+          <ToolTip _locID="vbPropTip3">Replace with the property type.</ToolTip>
+          <Default>String</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="vb"><![CDATA[Public shared $property$Property as DependencyProperty = DependencyProperty.Register("$property$", GetType($type$), GetType($classname$))
+  
+  <Description("$property$")> _
+  <Category("$property$ Category")> _
+  <Browsable(True)> _
+  <DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)> _
+  Public Property $property$ as $type$ 
+    Get 
+      Return (Ctype((MyBase.GetValue($classname$.$property$Property)), $type$))
+    End Get
+    Set (ByVal Value as $type$)
+      MyBase.SetValue($classname$.$property$Property, value)
+    End Set
+  End Property]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

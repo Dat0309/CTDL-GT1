@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Define a Sub with a ByRef parameter</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Defines a Sub with an argument whose value can be changed by the code in the method.</Description>
+      <Shortcut>SubByRef</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>MethodName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the method name.</ToolTip>
+          <Default>MyMethod</Default>
+        </Literal>
+        <Literal>
+          <ID>ParameterName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the parameter name.</ToolTip>
+          <Default>paramName</Default>
+        </Literal>
+        <Object>
+          <ID>ParameterType</ID>
+          <Type>Type</Type>
+          <ToolTip>Replace with the Type of the parameter</ToolTip>
+          <Default>String</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[Sub $MethodName$(ByRef $ParameterName$ As $ParameterType$)
+
+End Sub]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,18 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <Name Package="{FAE04EC1-301F-11d3-BF4B-00C04F79EFBC}" ID="2245" />
+        <Description Package="{FAE04EC1-301F-11d3-BF4B-00C04F79EFBC}" ID="2262" />
+        <Icon Package="{FAE04EC1-301F-11d3-BF4B-00C04F79EFBC}" ID="4515" />
+        <TemplateID>Microsoft.Silverlight.CSharp.Class</TemplateID>
+        <TemplateGroupID>Silverlight</TemplateGroupID>
+        <ProjectType>CSharp</ProjectType>
+        <ShowByDefault>false</ShowByDefault>
+        <SortOrder>15</SortOrder>
+        <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+        <DefaultName>Class.cs</DefaultName>
+         <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    </TemplateData>
+    <TemplateContent>
+        <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.cs">SilverlightClass.cs</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

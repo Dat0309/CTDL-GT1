@@ -1,0 +1,146 @@
+// Copyright (c) Microsoft Corporation. All Rights Reserved.
+// Microsoft Report Designer - Visual Studio Integration
+
+[$RootKey$\Editors\{46F6D2A1-5E86-4080-A799-01F3D0E23796}]
+"AcceptBinaryFiles"=dword:00000000
+"DisplayName"="#217"
+"ExcludeDefTextEditor"=dword:00000001
+"CommonPhysicalViewAttributes"=dword:00000002
+"Package"="{F3A96850-E2AE-4e00-9278-8FE23F225A0D}"
+@="Report Designer"
+
+// Adding .rdlc file extension as a recognizable extension and associated with the editor
+[$RootKey$\Editors\{46F6D2A1-5E86-4080-A799-01F3D0E23796}\Extensions]
+"rdlc"=dword:00000028
+
+// The following defines what view to display for .rdlc file extension
+// {7651a700-06e5-11d1-8ebd-00a0c90f26ea} is the guid for the debugger view
+// {7651a701-06e5-11d1-8ebd-00a0c90f26ea} is the guid for the Code view - XML is the code editor for RDLC
+// {7651a702-06e5-11d1-8ebd-00a0c90f26ea} is the guid for designer view
+// {7651A703-06e5-11d1-8ebd-00a0c90f26ea} is the guid for text view
+[$RootKey$\Editors\{46F6D2A1-5E86-4080-A799-01F3D0E23796}\LogicalViews]
+"{7651a700-06e5-11d1-8ebd-00a0c90f26ea}"=""
+"{7651a701-06e5-11d1-8ebd-00a0c90f26ea}"="XML"
+"{7651a702-06e5-11d1-8ebd-00a0c90f26ea}"=""
+"{7651A703-06e5-11d1-8ebd-00a0c90f26ea}"=""
+
+[$RootKey$\Editors\{46F6D2A1-5E86-4080-A799-01F3D0E23796}\UntrustedLogicalViews]
+"{7651a702-06e5-11d1-8ebd-00a0c90f26ea}"=""
+
+[$RootKey$\ToolWindows\{3FD5E0CC-709A-4f8c-94C3-7F0F8DFF5BB2}]
+"Name"="Report Datasets"
+"Orientation"="Left"
+"Style"="Tabbed"
+"Window"="{B1E99781-AB81-11D0-B683-00AA00A3EE26}"
+@="{F3A96850-E2AE-4e00-9278-8FE23F225A0D}"
+
+[$RootKey$\ToolWindows\{3FD5E0CC-709A-4f8c-94C3-7F0F8DFF5BB2}\Visibility]
+"{AA92FE53-7623-493e-8E47-DBDFCA248D1C}"=dword:00000000
+
+[$RootKey$\KeyBindingTables\{CB3675B8-701E-4f56-9167-2714E167FF3F}]
+"Package"="{F3A96850-E2AE-4e00-9278-8FE23F225A0D}"
+@="#217"
+
+[$RootKey$\Languages\Language Services\RDL Expression]
+"Default to Non Hot URLs"=dword:00000000
+"DefaultToInsertSpaces"=dword:00000000
+"EnableAdvancedMembersOption"=dword:00000000
+"LangResID"=dword:00000000
+"NotALanguage"=dword:00000001
+"Package"="{F3A96850-E2AE-4e00-9278-8FE23F225A0D}"
+"RequestStockColors"=dword:00000001
+"ShowCompletion"=dword:00000001
+"ShowDropdownBarOption"=dword:00000000
+"ShowHotURLs"=dword:00000000
+"ShowSmartIndent"=dword:00000000
+"Single Code Window Only"=dword:00000000
+"Support CF_HTML"=dword:00000000
+@="{855D5105-E206-40f1-86B3-D9EA0C5A0F1F}"
+
+[$RootKey$\Menus]
+"{F3A96850-E2AE-4e00-9278-8FE23F225A0D}"=",1000, 1"
+
+[$RootKey$\Packages\{F3A96850-E2AE-4e00-9278-8FE23F225A0D}]
+"Assembly"="Microsoft.ReportDesigner12, Version=11.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91"
+"Class"="Microsoft.ReportDesigner.Shell.ReportDesignerPackage"
+"CompanyName"="Microsoft"
+"ID"=dword:00000001
+"InprocServer32"="mscoree.dll"
+"MinEdition"="Standard"
+"ProductName"="Microsoft Report Designer"
+"ProductVersion"="11.0"
+"ThreadingModel"="Both"
+@="Microsoft Report Designer"
+
+[$RootKey$\Packages\{F3A96850-E2AE-4e00-9278-8FE23F225A0D}\SatelliteDll]
+"DllName"="Microsoft.ReportDesignerUI.dll"
+"Path"="$ShellFolder$\Common7\IDE\PrivateAssemblies\"
+
+[$RootKey$\Packages\{F3A96850-E2AE-4e00-9278-8FE23F225A0D}\Toolbox]
+"Default Items"=dword:00000001
+
+[$RootKey$\Services\{855D5105-E206-40f1-86B3-D9EA0C5A0F1F}]
+"Name"="Report Expression Language Service"
+@="{F3A96850-E2AE-4e00-9278-8FE23F225A0D}"
+
+[$RootKey$\ShellFileAssociations\.rdlc]
+@="VisualStudio.rdlc.11.0"
+
+// Web Site
+[$RootKey$\Projects\{E24C65DC-7377-472b-9ABA-BC803B73C61A}\Filters\Report]
+"CommonOpenFilesFilter"=dword:00000000
+"Package"="{F3A96850-E2AE-4e00-9278-8FE23F225A0D}"
+@="#224"
+
+[$RootKey$\Projects\{E24C65DC-7377-472b-9ABA-BC803B73C61A}\FileExtensions\.rdlc]
+"EditorFactoryNotify"="{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
+
+// Visual Basic Project
+[$RootKey$\Projects\{F184B08F-C81C-45F6-A57F-5ABD9991F28F}\Filters\Report]
+"CommonOpenFilesFilter"=dword:00000000
+"Package"="{F3A96850-E2AE-4e00-9278-8FE23F225A0D}"
+@="#224"
+
+[$RootKey$\Projects\{F184B08F-C81C-45F6-A57F-5ABD9991F28F}\FileExtensions\.rdlc]
+"DefaultBuildAction"=dword:00000003
+
+// C# Project
+[$RootKey$\Projects\{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}\Filters\Report]
+"CommonOpenFilesFilter"=dword:00000000
+"Package"="{F3A96850-E2AE-4e00-9278-8FE23F225A0D}"
+@="#224"
+
+[$RootKey$\Projects\{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}\FileExtensions\.rdlc]
+"DefaultBuildAction"=dword:00000003
+
+// WPF Project Flavor C# Templates
+[$RootKey$\Projects\{1d6d3185-e7ba-44a5-8dbe-00485ef28094}\Filters\Report]
+"CommonOpenFilesFilter"=dword:00000000
+"Package"="{F3A96850-E2AE-4e00-9278-8FE23F225A0D}"
+@="#224"
+
+[$RootKey$\Projects\{1d6d3185-e7ba-44a5-8dbe-00485ef28094}\FileExtensions\.rdlc]
+"DefaultBuildAction"=dword:00000003
+
+// WPF Project Flavor Visual Basic Templates
+[$RootKey$\Projects\{58839851-977a-4c1b-a0d3-79157d5f2bbf}\Filters\Report]
+"CommonOpenFilesFilter"=dword:00000000
+"Package"="{F3A96850-E2AE-4e00-9278-8FE23F225A0D}"
+@="#224"
+
+[$RootKey$\Projects\{58839851-977a-4c1b-a0d3-79157d5f2bbf}\FileExtensions\.rdlc]
+"DefaultBuildAction"=dword:00000003
+
+// Adding the ReportViewer controls to the toolbox
+// #221 is the name if the toolbox group that the controls are registered under (i.e. "Reporting")
+[$RootKey$\ToolboxControlsInstaller\Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken= 89845dcd8080cc91]
+@="#221;{F3A96850-E2AE-4e00-9278-8FE23F225A0D}"
+"Codebase"="$BaseInstallDir$\ReportViewer\Microsoft.ReportViewer.WinForms.dll"
+"TargetFramework"=".NETFramework,Version=v3.5"
+"Index"=dword:00002328
+
+[$RootKey$\ToolboxControlsInstaller\Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken= 89845dcd8080cc91]
+@="#221;{F3A96850-E2AE-4e00-9278-8FE23F225A0D}"
+"Codebase"="$BaseInstallDir$\ReportViewer\Microsoft.ReportViewer.WebForms.dll"
+"TargetFramework"=".NETFramework,Version=v3.5"
+"Index"=dword:00002328

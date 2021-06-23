@@ -1,0 +1,41 @@
+﻿<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{D5A8BA1C-E38F-4CC8-98DF-8DC7A45CC646}" ID="126" />
+    <Description Package="{D5A8BA1C-E38F-4CC8-98DF-8DC7A45CC646}" ID="127" />
+    <Icon Package="{D5A8BA1C-E38F-4CC8-98DF-8DC7A45CC646}" ID="300" />
+    <TemplateID>VSTO_Word2010Document_VB</TemplateID>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+    <ProjectType>VisualBasic</ProjectType>
+    <SortOrder>390</SortOrder>
+    <NumberOfParentCategoriesToRollUp>2</NumberOfParentCategoriesToRollUp>
+    <CreateNewFolder>true</CreateNewFolder>
+    <CreateInPlace>true</CreateInPlace>
+    <DefaultName>WordDocument</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <PromptForSaveOnCreation>false</PromptForSaveOnCreation>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="VSTOProject.vbproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="false" TargetFileName="$VSTOProjectHostDocumentName$">Empty.doc</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="ThisDocument.vb">ThisDocument.vb</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ThisDocument.Designer.xml">ThisDocument.Designer.xml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ThisDocument.Designer.vb">ThisDocument.Designer.vb</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="My Project\AssemblyInfo.vb">AssemblyInfo.vb</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="My Project\Resources.resx">Resources.resx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="My Project\Resources.Designer.vb">Resources.Designer.vb</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="My Project\Settings.settings">Settings.settings</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="My Project\Settings.Designer.vb">Settings.Designer.vb</ProjectItem>
+    </Project>
+    <CustomParameters>
+      <CustomParameter Name="VSTOLanguage" Value="VB" />
+      <CustomParameter Name="VSTODocumentType" Value="DOC" />
+      <CustomParameter Name="VSTOHostService" Value="{763FDC83-64E5-4651-AC9B-28C4FEB985A1}" />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.Tools.Applications.Project, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, Custom=null</Assembly>
+    <FullClassName>Microsoft.VisualStudio.Tools.Applications.Project.Wizard.Office2010Wizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

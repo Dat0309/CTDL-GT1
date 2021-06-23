@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Draw a Rubber Band Rectangle</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Draws a rubber band rectangle on the form.</Description>
+      <Shortcut>drawBand</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Windows.Forms</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Drawing</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="VB" Kind="method decl"><![CDATA[Dim originalPoint As Point
+Dim lastPoint As Point
+Dim mouseIsDown As Boolean
+
+Public Sub MyMouseDown(ByVal sender As Object, ByVal e As MouseEventArgs) Handles MyBase.MouseDown
+
+    mouseIsDown = True
+    originalPoint.X = e.X
+    originalPoint.Y = e.Y
+    lastPoint.X = -1
+    lastPoint.Y = -1
+
+End Sub
+
+Private Sub MyDrawReversibleRectangle(ByVal point1 As Point, ByVal point2 As Point)
+
+    Dim rect As Rectangle
+
+    point1 = PointToScreen(point1)
+    point2 = PointToScreen(point2)
+
+    If point1.X < point2.X Then
+        rect.X = point1.X
+        rect.Width = point2.X - point1.X
+    Else
+        rect.X = point2.X
+        rect.Width = point1.X - point2.X
+    End If
+
+    If point1.Y < point2.Y Then
+        rect.Y = point1.Y
+        rect.Height = point2.Y - point1.Y
+    Else
+        rect.Y = point2.Y
+        rect.Height = point1.Y - point2.Y
+    End If
+
+    ControlPaint.DrawReversibleFrame(rect, Color.Yellow, FrameStyle.Thick)
+
+End Sub
+
+Public Sub MyMouseUp(ByVal sender As Object, ByVal e As MouseEventArgs) Handles Me.MouseUp
+
+    mouseIsDown = False
+
+    If lastPoint.X <> -1 Then
+        Dim currentPoint As New Point(e.X, e.Y)
+        MyDrawReversibleRectangle(originalPoint, lastPoint)
+    End If
+
+    lastPoint.X = -1
+    lastPoint.Y = -1
+    originalPoint.X = -1
+    originalPoint.Y = -1
+
+End Sub
+
+Public Sub MyMouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles Me.MouseMove
+
+    Dim currentPoint As New Point(e.X, e.Y)
+
+    If mouseIsDown Then
+
+        If lastPoint.X <> -1 Then
+            MyDrawReversibleRectangle(originalPoint, lastPoint)
+        End If
+
+        lastPoint = currentPoint
+        MyDrawReversibleRectangle(originalPoint, currentPoint)
+    End If
+
+End Sub
+
+Protected Overrides Sub OnLoad(ByVal e As EventArgs)
+    mouseIsDown = False
+End Sub]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

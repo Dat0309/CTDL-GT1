@@ -1,0 +1,40 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="410" />
+    <Description Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="333" />
+    <Icon Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="246" />
+    <TemplateID>SharePoint15Workflow4InitiationForm_CS_ITEM</TemplateID>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>105</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>InitForm.aspx</DefaultName>
+    <TemplateGroupID>SharePointItemTemplateGroupID</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.$fileinputextension$">InitForm.aspx</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="SharePointProjectParentFilter" Value="ProjectItem"/>
+      <CustomParameter Name="SharePointProjectProjectModeFilter" Value="SharePointApp;Customization"/>
+      <CustomParameter Name="SharePointRequiredItemFilter" Value="Microsoft.VisualStudio.SharePoint.Workflow4;Microsoft.VisualStudio.SharePoint.Workflow4App"/>
+      <CustomParameter Name="$loc_CannotLoadSubscriptionComment$" _locID="$loc_CannotLoadSubscriptionComment$" _locAttrData="Value" Value="Cannot load the workflow subscription without a subscriptionId, so workflow cannot be started." />
+      <CustomParameter Name="$loc_ErrorComment$" _locID="$loc_ErrorComment$" _locAttrData="Value" Value="Error" />
+      <CustomParameter Name="$loc_FailToLoadSubscriptionComment$" _locID="$loc_FailToLoadSubscriptionComment$" _locAttrData="Value" Value="Failed to load the workflow subscription, so workflow cannot be started." />
+      <CustomParameter Name="$loc_GetWorkflowParametersComment$" _locID="$loc_GetWorkflowParametersComment$" _locAttrData="Value" Value="Get workflow subscription and then start the workflow" />
+      <CustomParameter Name="$loc_InitFormCodeSampleComment$" _locID="$loc_InitFormCodeSampleComment$" _locAttrData="Value" Value="The following sample code creates a simple workflow Initiation Form that allows end users to enter values for workflow parameters when initiating a workflow instance.&#xD;&#xA;        The sample JavaScript below will start a workflow instance using the initiation parameter values provided by the user." />
+      <CustomParameter Name="$loc_LoadSubscriptionComment$" _locID="$loc_LoadSubscriptionComment$" _locAttrData="Value" Value="Load the workflow subscription" />
+      <CustomParameter Name="$loc_RedirectFromPageComment$" _locID="$loc_RedirectFromPageComment$" _locAttrData="Value" Value="Redirect from page" />
+      <CustomParameter Name="$loc_ReturnAssociativeArrayComment$" _locID="$loc_ReturnAssociativeArrayComment$" _locAttrData="Value" Value="Returns an associative array (object) of URL params" />
+      <CustomParameter Name="$loc_SetWorkflowParametersComment$" _locID="$loc_SetWorkflowParametersComment$" _locAttrData="Value" Value="Set workflow in-arguments/initiation parameters" />
+      <CustomParameter Name="$loc_StartListWorkflowComment$" _locID="$loc_StartListWorkflowComment$" _locAttrData="Value" Value="Start list workflow" />
+      <CustomParameter Name="$loc_StartSiteWorkflowComment$" _locID="$loc_StartSiteWorkflowComment$" _locAttrData="Value" Value="Start site workflow" />
+      <CustomParameter Name="$loc_StartWorkflowComment$" _locID="$loc_StartWorkflowComment$" _locAttrData="Value" Value="Start workflow" />
+      <CustomParameter Name="$loc_SuccessComment$" _locID="$loc_SuccessComment$" _locAttrData="Value" Value="Success" />
+      <CustomParameter Name="$loc_UpdateInitFormUrlComment$" _locID="$loc_UpdateInitFormUrlComment$" _locAttrData="Value" Value="        IMPORTANT NOTE: &#xD;&#xA;        Be sure to update the InitiationUrl property value to the URL of the custom initiation form.&#xD;&#xA;        InitiationUrl property can be updated from the workflow's property grid." />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.Workflow4InitiationWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

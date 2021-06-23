@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Create Transparent Windows Forms</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Sets the opacity of a form to make it transparent.</Description>
+      <Shortcut>formTrans</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Drawing.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>formName</ID>
+          <Type>Form</Type>
+          <ToolTip>Replace with a reference to the form that will be transparent.</ToolTip>
+          <Default>frmTransparentForm</Default>
+        </Object>
+        <Literal>
+          <ID>opacity</ID>
+          <Type>Double</Type>
+          <ToolTip>Replace with desired opacity between 0 and 1.</ToolTip>
+          <Default>0.83</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[$formName$.Opacity = $opacity$
+
+            ]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

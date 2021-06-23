@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Create a Table</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Creates a table in a Word document.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Word.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Word = Microsoft.Office.Interop.Word</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>defaultTableBehaviorValue</ID>
+          <Type>Word.WdDefaultTableBehavior</Type>
+          <ToolTip>Replace with a value that specifies whether Word resizes cells in tables to fit the cells' contents. Can be: wdWord8TableBehavior (AutoFit disabled) or wdWord9TableBehavior (AutoFit enabled). If omitted, wdWord8TableBehavior is used.</ToolTip>
+          <Default>wdWord9TableBehavior</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>autoFitBehaviorValue</ID>
+          <Type>Word.WdAutoFitBehavior</Type>
+          <ToolTip>Replace with a value that specifies how Word sizes tables. Can be: wdAutoFitContent, wdAutoFitFixed, or wdAutoFitWindow. If DefaultTableBehavior is set to wdWord8TableBehavior, this argument is ignored.</ToolTip>
+          <Default>wdAutoFitContent</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>numRows</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with the number of rows to add to the table.</ToolTip>
+          <Default>2</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>numColumns</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with the number of columns to add to the table.</ToolTip>
+          <Default>5</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>defaultTableBehavior</ID>
+          <Type>Object</Type>
+          <ToolTip>Replace with a variable to hold the defaultTableBehaviorValue.</ToolTip>
+          <Default>defaultTableBehavior</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>autoFitBehavior</ID>
+          <Type>Object</Type>
+          <ToolTip>Replace with a variable to hold the autoFitBehaviorValue.</ToolTip>
+          <Default>autoFitBehavior</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>document</ID>
+          <Type>Microsoft.Office.Interop.Word.Document</Type>
+          <ToolTip>Replace with the document to add the table to.</ToolTip>
+          <Default>document</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>Range</ID>
+          <Type>Microsoft.Office.Interop.Word.Document</Type>
+          <ToolTip>Replace with a range in the document to add the table to.</ToolTip>
+          <Default>Range</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="" Delimiter="$"><![CDATA[
+Dim $defaultTableBehavior$ As Object = Word.WdDefaultTableBehavior.$defaultTableBehaviorValue$
+Dim $autoFitBehavior$ As Object = Word.WdAutoFitBehavior.$autoFitBehaviorValue$
+$document$.Tables.Add($Range$, $numRows$, $numColumns$, $defaultTableBehavior$, $autoFitBehavior$)
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,721 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<html dir="LTR">
+<head>
+	<title>Мастер приложений MFC</title>
+	<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<meta http-equiv="MSThemeCompatible" content="Yes">
+	<link id="LINKURL" rel="stylesheet" href="../../../../../1049/NewStyles.css">
+</head>
+<body bgcolor="BUTTONFACE" topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0"
+	onload="InitDocument(document);" onkeydown="if (!bValidating) OnKey();" onkeypress="if (!bValidating) OnPress();">
+	<table class="ONE" height="100%" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<col class="LinkPane">
+		<col>
+		<!--OPEN OF INTRODUCTORY INFORMATION TABLE//-->
+		<tr valign="TOP">
+			<td height="79" width="100%" colspan="2">
+				<table class="TWO" border="0" cellpadding="0" cellspacing="0">
+					<col width="12">
+					<col>
+					<col width="12">
+					<tr>
+						<td valign="TOP" height="12" width="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="12" width="12">
+							&nbsp;
+						</td>
+						<td class="IMAGE" valign="BOTTOM" width="110" rowspan="2">
+							<div class="SMALLA" id="SINGLE_DOC_IMAGE">
+								<img class="SMALL" src="../../Images/DocTemplateString.gif" width="98" height="70"
+									alt="" border="0">
+							</div>
+						</td>
+						<td valign="TOP" height="12" width="6" rowspan="2">
+							&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td valign="TOP" height="65" width="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="65">
+							<h4 class="HEAD" id="HEAD">Свойства шаблона документов</h4>
+							<p class="SUBHEAD" id="SUBHEAD">
+								Укажите значения, используемые шаблоном документа приложения при создании нового
+								документа.</p>
+						</td>
+						<td valign="TOP" height="65" width="12">
+							&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td valign="TOP" class="RULE" colspan="5" height="2">
+							<table border="0" width="100%" height="1" cellpadding="0" cellspacing="0">
+								<tr valign="TOP">
+									<td height="1" width="100%" bgcolor="BUTTONSHADOW">
+									</td>
+									<td height="1" width="1" bgcolor="WINDOW">
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<!--CLOSE OF INTRODUCTORY INFORMATION TABLE//-->
+		<!--OPEN OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+		<tr valign="TOP">
+			<td class="Three" valign="TOP" height="100%" width="100%">
+				<table class="fixedSize" height="100%" width="100%" border="0" cellpadding="0" cellspacing="0">
+					<tr valign="TOP">
+						<td class="threeCustom" valign="TOP">
+							<!--OPEN OF NAVIGATION TABLE//-->
+							<table class="THREE" border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col>
+								<col width="1">
+								<tr>
+									<td valign="TOP" colspan="3" height="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="100%">
+										&nbsp;
+									</td>
+									<td valign="TOP" height="100%">
+										<!--OPEN OF NAVIGATIONAL LINKS//-->
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="Default" title="Проверьте выбранные элементы."
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } Next(document, 'Default.htm');"
+															tabindex="1">Обзор</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="AppType" title="Укажите параметры поддержки, языка и стиля интерфейса для архитектуры Document/View в приложении."
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } Next(document, 'AppType.htm');"
+															tabindex="2">Тип приложения</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXTINDENT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="CompoundDoc" title="Задайте параметры контейнера или сервера OLE и поддержку активного документа."
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } onClick(this);"
+															tabindex="3">Поддержка составн. док-тов</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINKSELECTED">
+											<span class="VERTLINE1">
+												<img src="../../../../../1033/Images/spacer.gif" width="1" height="1" alt="" border="0">
+											</span><span class="HORILINE1">
+												<table width="167" height="100%" border="0" cellpadding="0" cellspacing="0">
+													<tr valign="TOP">
+														<td class="DOTTEDLINE" height="1">
+														</td>
+													</tr>
+													<tr valign="TOP">
+														<td height="100%">
+															<img src="../../../../../1033/Images/spacer.gif" width="165" height="28" alt="" border="0">
+														</td>
+													</tr>
+													<tr valign="TOP">
+														<td class="DOTTEDLINE" height="1">
+														</td>
+													</tr>
+												</table>
+											</span>
+											<table width="160" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXTSELECTEDINDENT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span id="DocTemp" title="Укажите значения, используемые шаблоном документа приложения при создании нового документа.">
+															Свойства шаблона документов</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="DBSupport" title="Задайте поддержку базы данных, включая источники данных."
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } onClick(this);"
+															tabindex="4">Поддержка базы данных</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="UIFeatures" title="Задайте параметры, управляющие видом и восприятием приложения."
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } Next(document, 'UIFeatures.htm');"
+															tabindex="5">Свойства интерфейса пользователя</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="Advanced" title="Задайте дополнительную поддержку для добавления в приложение."
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } Next(document, 'Advanced.htm');"
+															tabindex="6">Дополнительные параметры</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="GeneratedClasses" title="Просмотрите созданные классы и укажите базовые классы для приложения."
+															onclick="bValidating = true; if (!ValidateInput()) { bValidating = false; return; } Next(document, 'GeneratedClasses.htm');"
+															tabindex="7">Созданные классы</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<!--CLOSE OF NAVIGATIONAL LINKS//-->
+									</td>
+									<td width="1">
+										<div class="VERTLINE">
+											<img src="../../../../../1033/Images/spacer.gif" width="1" height="1" alt="" border="0">
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				<!--CLOSE OF NAVIGATION TABLE//-->
+			</td>
+			<td valign="TOP" height="100%">
+				<!--OPEN OF CONTENT AND BUTTON TABLE//-->
+				<table class="ONE" border="0" cellpadding="0" cellspacing="0">
+					<col width="100%">
+					<tr valign="TOP">
+						<td height="100%">
+							<!--OPEN OF CONTENT//-->
+							<table class="CONTENT" border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col width="398">
+								<col width="12">
+								<tr>
+									<td valign="TOP" height="9" colspan="3">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP">
+										<table class="FixedSize" border="0" cellpadding="0" cellspacing="0">
+											<col width="193">
+											<col width="12">
+											<col width="193">
+											<tr>
+												<td valign="TOP">
+													<span class="itemText" id="FILE_EXTENSION_TEXT" title="Расширение файла для документов приложения.">
+														<label id="EXTENSION_TEXT" for="FILE_EXTENSION">Рас<u>ш</u>ирение файла:</label>
+														<br>
+														<input class="sideBtn" type="text" name="FileExt" id="FILE_EXTENSION" accesskey="ш"
+															onpropertychange="ExtensionChanged(true);" title="Расширение файла для документов приложения.  Рекомендуемый формат расширения - ''тип_документа-организация'', например: ''xlsx-microsoft''."
+															tabindex="8">
+													</span>
+												</td>
+												<td valign="TOP" width="12">
+													&nbsp;
+												</td>
+												<td valign="TOP">
+													<span class="itemText" id="DOCTYPE_WILDCARD_TEXT" title="Тип документа и шаблон фильтра, например, &quot;Рабочие листы Excel (*.xls)&quot;.">
+														<label id="FILTER_TEXT" for="FILTER_NAME">Имя ф<u>и</u>льтра:</label>
+														<br>
+														<input class="sideBtn" type="text" name="FilterName" id="FILTER_NAME" accesskey="и"
+															title="Тип документа и шаблон фильтра, например, &quot;Рабочие листы Excel (*.xls)&quot;."
+															tabindex="9">
+													</span>
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="17" colspan="3">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP">
+										<span class="itemText" id="preview_handler_title">
+											<input class="CheckBox" type="checkbox" id="PREVIEW_HANDLER" accesskey="В" title="Включение поддержки обработчика предварительного просмотра. Данные документа будут отображаться в области предварительного просмотра обозревателя.  Необходимо указать расширение файла.  Для размещения обработчиков будет создан отдельный проект DLL ATL."
+												class="SINGLECHECKBOX" tabindex="10">
+											<div class="itemTextCheckboxA" id="SELECT_PREVIEW_HANDLER_TEXT" title="Включение поддержки обработчика предварительного просмотра. Данные документа будут отображаться в области предварительного просмотра обозревателя.  Необходимо указать расширение файла.  Для размещения обработчиков будет создан отдельный проект DLL ATL.">
+												<label id="PREVIEW_HANDLER_TEXT" for="PREVIEW_HANDLER"><u>П</u>оддержка предварительного просмотра для типа файлов</label>
+											</div>
+										</span>
+										<p class="ElementSpacer2">
+											&nbsp;</p>
+										<span class="itemText" id="thumbnail_handler_title">
+											<input class="CheckBox" type="checkbox" id="THUMBNAIL_HANDLER" accesskey="э" title="Создание кода в классах, производных от CDocument и CView, который будет вызываться из обработчиков поиска и эскиза и позволит совместно использовать код приложения и код обработчика, реализованный в DLL.  Необходимо указать расширение файла.  Для размещения обработчиков будет создан отдельный проект DLL ATL."
+												class="SINGLECHECKBOX" tabindex="11">
+											<div class="itemTextCheckboxA" id="SELECT_THUMBNAIL_HANDLER_TEXT" title="Создание кода в классах, производных от CDocument и CView, который будет вызываться из обработчика эскиза и позволит совместно использовать код приложения и код обработчика, реализованный в DLL.  Необходимо указать расширение файла.  Для размещения обработчиков будет создан отдельный проект DLL ATL.">
+												<label id="THUMBNAIL_HANDLER_TEXT" for="THUMBNAIL_HANDLER">Поддержка обработчика <u>э</u>скиза для типа файлов</label>
+											</div>
+										</span>
+										<p class="ElementSpacer2">
+											&nbsp;</p>
+										<span class="itemText" id="search_handler_title">
+											<input class="CheckBox" type="checkbox" id="SEARCH_HANDLER" accesskey="о" title="Создание кода в классах, производных от CDocument и CView, который будет вызываться из обработчиков поиска и эскиза и позволит совместно использовать код приложения и код обработчика, реализованный в DLL.  Необходимо указать расширение файла.  Для размещения обработчиков будет создан отдельный проект DLL ATL."
+												class="SINGLECHECKBOX" tabindex="11">
+											<div class="itemTextCheckboxA" id="SELECT_SEARCH_HANDLER_TEXT" title="Создание кода в классах, производных от CDocument и CView, который будет вызываться из обработчика поиска и позволит совместно использовать код приложения и код обработчика, реализованный в DLL.  Необходимо указать расширение файла.  Для размещения обработчиков будет создан отдельный проект DLL ATL.">
+												<label id="SEARCH_HANDLER_TEXT" for="SEARCH_HANDLER">Поддержка <u>о</u>бработчика поиска для типа файлов</label>
+											</div>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="17" colspan="3">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP">
+										<table class="FixedSize" border="0" cellpadding="0" cellspacing="0">
+											<col width="193">
+											<col width="12">
+											<col width="193">
+											<tr>
+												<td valign="TOP">
+													<span class="itemText" id="MAIN_FRAME_CAPTION_TEXT" title="Текст, отображаемый вверху главного фрейма приложения; обычно это имя приложения.">
+														<label id="MAIN_FRAME_TEXT" for="MAIN_FRAME_CAPTION">Подпись <u>г</u>лавного фрейма:</label>
+														<br>
+														<input class="sideBtn" type="text" name="MainFrCap" id="MAIN_FRAME_CAPTION" accesskey="г"
+															title="Текст, отображаемый вверху главного фрейма приложения; обычно это название приложения."
+															tabindex="12">
+													</span>
+													<p class="ElementSpacer2">
+														&nbsp;</p>
+													<span class="itemText" id="ROOT_NAME_TEXT" title="Имя корневого элемента в новом документе. По умолчанию - &quot;Untitled&quot;.">
+														<label id="DOC_TYPE_TEXT" for="DOC_TYPE_NAME">Имя <u>т</u>ипа документа:</label>
+														<br>
+														<input class="sideBtn" type="text" name="DocTypeName" id="DOC_TYPE_NAME" accesskey="т"
+															title="Имя корневого элемента в новом документе. По умолчанию -&quot;Untitled&quot;." tabindex="14">
+													</span>
+													<p class="ElementSpacer2">
+														&nbsp;</p>
+													<span class="itemText" id="SHORT_NAME_TEXT" title="Короткое имя типа документа, например, &quot;Рабочий лист&quot;.">
+														<label id="NEW_SHORT_NAME_TEXT" for="FILE_NEW_NAME_SHORT"><u>Н</u>овое короткое имя файла:</label>
+														<br>
+														<input class="sideBtn" type="text" name="FileNameShort" id="FILE_NEW_NAME_SHORT"
+															accesskey="н" title="Короткое имя типа документа, например, &quot;Рабочий лист&quot;."
+															tabindex="16">
+													</span>
+												</td>
+												<td valign="TOP" width="12">
+													&nbsp;
+												</td>
+												<td valign="TOP">
+													<span class="itemText" id="IDENTIFIER_TEXT" title="Идентификатор типа документа, который будет записан в регистрационную базу данных Windows.">
+														<label id="ID_TEXT" for="FILE_TYPE_ID">ИД типа фа<u>й</u>лов:</label>
+														<br>
+														<input class="sideBtn" type="text" name="FileID" id="FILE_TYPE_ID" accesskey="т"
+															title="Идентификатор типа документа, который будет записан в регистрационную базу данных Windows."
+															tabindex="13">
+													</span>
+													<p class="ElementSpacer2">
+														&nbsp;</p>
+													<span class="itemText" id="DOC_NAME_TEXT" title="Имя типа документа, который будет записан в регистрационную базу данных Windows.">
+														<label id="LONG_NAME_TEXT" for="FILE_NEW_NAME_LONG">Длинное им<u>я</u> типа файла:</label>
+														<br>
+														<input class="sideBtn" type="text" name="FileNameLong" id="FILE_NEW_NAME_LONG" accesskey="н"
+															title="Имя типа документа, который будет записан в регистрационную базу данных Windows."
+															tabindex="15">
+													</span>
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="100%" colspan="3">
+										&nbsp;
+									</td>
+								</tr>
+							</table>
+							<!--CLOSE OF CONTENT//-->
+						</td>
+					</tr>
+					<tr valign="BOTTOM">
+						<td>
+							<!--OPEN OF BUTTON HTML//-->
+							<table border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col>
+								<col width="75">
+								<col width="4">
+								<col width="75">
+								<col width="4">
+								<col width="75">
+								<col width="12">
+								<tr>
+									<td valign="TOP" class="RULE" colspan="8" height="2">
+										<table border="0" width="100%" height="1" cellpadding="0" cellspacing="0">
+											<tr valign="TOP">
+												<td height="1" width="100%" bgcolor="BUTTONSHADOW">
+												</td>
+												<td height="1" width="1" bgcolor="WINDOW">
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="11" colspan="8">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="MIDDLE" height="23" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP" height="23">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="FinishBtn" onclick="OnFinish(document);">
+											Готово</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="4">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="CancelBtn" onclick="window.external.Finish(document, 'cancel');">
+											Отмена</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="4">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="HelpBtn" onclick="window.external.OnHelp('vc.appwiz.mfc.exe.doctemp');">
+											Справка</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="12" colspan="8">
+										&nbsp;
+									</td>
+								</tr>
+							</table>
+							<!--CLOSE OF BUTTON HTML//-->
+						</td>
+					</tr>
+				</table>
+				<!--CLOSE OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+<script language="JSCRIPT">
+
+	var tab_array = new Array();
+	tab_array[0] = Default;
+	tab_array[1] = AppType;
+	tab_array[2] = CompoundDoc;
+	tab_array[3] = DocTemp;
+	tab_array[4] = DBSupport;
+	tab_array[5] = UIFeatures;
+	tab_array[6] = Advanced;
+	tab_array[7] = GeneratedClasses;
+
+	var ProjName = window.external.FindSymbol("PROJECT_NAME");
+
+	function InitDocument(document) {
+		setDirection();
+		InitTabs();
+		window.external.Load(document);
+
+		var max = new Number;
+		max = window.external.FindSymbol("MAX_DOC_TYPE_NAME");
+		DOC_TYPE_NAME.maxLength = max;
+
+		max = window.external.FindSymbol("MAX_FILE_NEW_NAME_SHORT");
+		FILE_NEW_NAME_SHORT.maxLength = max;
+
+		max = window.external.FindSymbol("MAX_FILE_TYPE_ID");
+		FILE_TYPE_ID.maxLength = max;
+
+		max = window.external.FindSymbol("MAX_FILE_NEW_NAME_LONG");
+		FILE_NEW_NAME_LONG.maxLength = max;
+
+		max = window.external.FindSymbol("MAX_FILTER_NAME");
+		FILTER_NAME.maxLength = max;
+
+		ExtensionChanged(false);
+	}
+
+	function InitTabs() {
+		MouseOut(DBSupport);
+		MouseOut(CompoundDoc);
+	}
+
+	function Next(document, linkto) {
+		window.external.Next(document, linkto);
+	}
+
+	function onClick(obj) {
+		if (obj == null || typeof (obj) == "undefined") {
+			return;
+		}
+
+		if (obj.id == "DBSupport") {
+			if (!window.external.FindSymbol("APP_TYPE_DLG")) {
+				Next(document, "DBSupport.htm");
+			}
+		}
+
+		if (obj.id == "CompoundDoc") {
+			if (window.external.FindSymbol("DOCVIEW") && !window.external.IsSymbolDisabled("DOCVIEW")) {
+				Next(document, "CompoundDoc.htm");
+			}
+		}
+	}
+
+	function CheckDataSource() {
+		if (window.external.FindSymbol("DB_CONNECTION_STRING") == "" && (window.external.FindSymbol("OLEDB") || window.external.FindSymbol("ODBC"))) {
+			L_Err1_Text = "При выборе параметра представления базы данных необходимо указать источник данных";
+			window.external.ReportError(L_Err1_Text);
+			return false;
+		}
+
+		return true;
+	}
+
+	function OnFinish(document) {
+		bValidating = true;
+		if (!ValidateInput()) {
+			bValidating = false;
+			return;
+		}
+
+		if (!CheckDataSource())
+			return;
+
+		if (window.external.FindSymbol("ACTIVE_DOC_SERVER")) {
+			var strExtension = window.external.FindSymbol("FILE_EXTENSION");
+			if (strExtension == "") {
+				L_Err2_Text = "Выбран параметр ''Сервер активных документов''.  Необходимо указать расширение файла документа";
+				window.external.ReportError(L_Err2_Text);
+				FILE_EXTENSION.focus();
+				return;
+			}
+		}
+
+		OnWizFinish(document);
+	}
+
+	function ExtensionChanged(fValueChanged) {
+		var strExtension = TrimStr(FILE_EXTENSION.value);
+		window.external.AddSymbol("FILE_EXTENSION", strExtension);
+		if (strExtension == "") {
+			FILTER_NAME.value = strExtension;
+			window.external.AddSymbol("HAS_SUFFIX", false);
+			PREVIEW_HANDLER.checked = false;
+			PREVIEW_HANDLER.disabled = true;
+			PREVIEW_HANDLER_TEXT.disabled = true;
+			THUMBNAIL_HANDLER.checked = false;
+			THUMBNAIL_HANDLER.disabled = true;
+			THUMBNAIL_HANDLER_TEXT.disabled = true;
+			SEARCH_HANDLER.checked = false;
+			SEARCH_HANDLER.disabled = true;
+			SEARCH_HANDLER_TEXT.disabled = true;
+		}
+		else {
+			if (fValueChanged) {
+				FILTER_NAME.value = ProjName + " Files (*." + strExtension + ")";
+			}
+			window.external.AddSymbol("HAS_SUFFIX", true);
+			PREVIEW_HANDLER.disabled = false;
+			PREVIEW_HANDLER_TEXT.disabled = false;
+			THUMBNAIL_HANDLER.disabled = false;
+			THUMBNAIL_HANDLER_TEXT.disabled = false;
+			SEARCH_HANDLER.disabled = false;
+			SEARCH_HANDLER_TEXT.disabled = false;
+		}
+	}
+
+	function ValidateInput() {
+		var oInvalid = null;
+
+		if (!Validate(FILE_EXTENSION)) {
+			oInvalid = FILE_EXTENSION;
+		}
+
+		if (oInvalid == null) {
+			if (!Validate(FILE_TYPE_ID)) {
+				oInvalid = FILE_TYPE_ID;
+			}
+		}
+
+		if (oInvalid == null) {
+			if (!Validate(DOC_TYPE_NAME)) {
+				oInvalid = DOC_TYPE_NAME;
+			}
+		}
+
+		if (oInvalid == null) {
+			if (!Validate(FILTER_NAME)) {
+				oInvalid = FILTER_NAME;
+			}
+		}
+
+		if (oInvalid == null) {
+			if (!Validate(FILE_NEW_NAME_SHORT)) {
+				oInvalid = FILE_NEW_NAME_SHORT;
+			}
+		}
+
+		if (oInvalid == null) {
+			if (!Validate(FILE_NEW_NAME_LONG)) {
+				oInvalid = FILE_NEW_NAME_LONG;
+			}
+		}
+
+		if (oInvalid != null) {
+			window.external.ReportError();
+			oInvalid.focus();
+			return false;
+		}
+		return true;
+	}
+
+	function ValidateFileExtension(strExt) {
+		if (strExt.length == 0 && (PREVIEW_HANDLER.checked || THUMBNAIL_HANDLER.checked || SEARCH_HANDLER.checked)) {
+			L_Err4_Text = "Расширение файла не может быть пустым, если включена поддержка обработчика предварительного просмотра";
+			oErrObj = new Error(L_Err4_Text);
+			SetErrorInfo(oErrObj);
+			return false;
+		}
+
+		if (!ValidateExtension(strExt) || !window.external.dte.VCLanguageManager.ValidateFileName(strExt, vsCMValidateFileExtNone)) {
+			L_Err5_Text = "Недопустимое расширение файла.  Расширение не может содержать пробелы и следующие знаки: <>.\"\\/|:?*";
+			oErrObj = new Error(L_Err5_Text);
+			SetErrorInfo(oErrObj);
+			return false;
+		}
+
+		return true;
+	}
+
+	function ValidateExtension(strExt) {
+		if (strExt.indexOf("<") >= 0 || strExt.indexOf(">") >= 0 || strExt.indexOf("\"") >= 0 || strExt.indexOf(" ") >= 0 ||
+		strExt.indexOf("/") >= 0 || strExt.indexOf("\\") >= 0 || strExt.indexOf("|") >= 0 || strExt.indexOf(":") >= 0 ||
+		strExt.indexOf("?") >= 0 || strExt.indexOf("*") >= 0 || strExt.indexOf(".") >= 0) {
+			return false;
+		}
+
+		return true;
+	}
+
+	function Validate(obj) {
+		var bValid = true;
+		switch (obj.id) {
+			case "FILE_EXTENSION":
+				{
+					if (!FILE_EXTENSION.value.length && !PREVIEW_HANDLER.checked && !THUMBNAIL_HANDLER.checked && !SEARCH_HANDLER.checked) {
+						bValid = true;
+						break;
+					}
+					bValid = ValidateFileExtension(obj.value);
+					break;
+				}
+			case "DOC_TYPE_NAME":
+				bValid = window.external.dte.VCLanguageManager.ValidateQualifiedName(obj.value);
+				break;
+			case "FILE_TYPE_ID":
+				bValid = window.external.IsValidProgID(obj.value);
+				break;
+			default:
+				break;
+		}
+
+		if (typeof (bValid) == "undefined")
+			bValid = false;
+
+		return bValid;
+	}
+
+</script>
+
+<script id="INCLUDE_SCRIPT" language="JSCRIPT"></script>
+
+<script id="INCLUDE_COMMON" language="JSCRIPT"></script>
+
+<script>
+	document.scripts("INCLUDE_SCRIPT").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Script.js";
+	document.scripts("INCLUDE_COMMON").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Common.js";
+</script>
+

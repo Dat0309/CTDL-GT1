@@ -1,0 +1,16 @@
+	//  Interface de despache primário para [!output CLASS_NAME_ROOT]
+		
+	[ uuid([!output DISPIID_REGISTRY_FORMAT]) ]
+	dispinterface I[!output CLASS_NAME_ROOT]
+	{
+		properties:
+		methods:
+	};
+
+	//  Informação de classe para [!output CLASS_NAME_ROOT]
+
+	[ uuid([!output CLSID_REGISTRY_FORMAT]) ]
+	coclass [!output CLASS_NAME_ROOT]
+	{
+		[default] dispinterface I[!output CLASS_NAME_ROOT];
+	};

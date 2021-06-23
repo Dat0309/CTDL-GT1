@@ -1,0 +1,24 @@
+﻿// Windows uygulama yerelleştirmesi ile ilgili ayrıntılar için bakınız: http://go.microsoft.com/fwlink/?LinkId=212836
+
+{
+    "Section1": "Bölüm 1",
+	"Section1Title": "Bölüm 1 Başlığı",
+    "Section1Subtext": "Lorem ipsum dolor sit amet",
+    "Section1Description": "Lorem ipsum dolor sit amet, consectetur ising elit, sed diam nonummy nibh uismod tincidunt ut laoreet suscipit lobortis nisl ut wisi quipexerci quis consequat minim veniam, quis nostrud. exerci tation ullam corper.",
+
+    "Section2": "Bölüm 2",
+    "Section2ItemTitle": "Öğe Başlığı",
+    "Section2ItemSubtitle": "Öğe Alt Başlığı",
+    "Section2Subtext": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.",
+    "Section2Description": "Lorem ipsum dolor sit amet, consectetur ising elit, sed diam nonummy nibh uismod tincidunt ut laoreet suscipit lobortis nisl ut wisi quipexerci quis consequat minim veniam, quis nostrud. exerci tation ullam corper.",
+    
+    "Section3": "Bölüm 3",
+	"Section3ItemTitle": "Öğe Başlığı",
+	"Section3Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+    
+    "Section4": "Bölüm 4",
+    "Section4Description": "Lorem ipsum dolor sit amet, consectetur ising elit, sed diam nonummy nibh uismod tincidunt ut laoreet suscipit lobortis nisl ut wisi quipexerci quis consequat minim veniam, quis nostrud. exerci tation ullam corper.",
+
+    "DescriptionText": "Lorem ipsum dolor sit amet:",
+    "SectionSubtitle": "Bölüm alt başlığı"
+}

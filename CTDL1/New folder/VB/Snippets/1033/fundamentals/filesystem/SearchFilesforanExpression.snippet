@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Search Files for an Expression</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Searches files in a directory for an expression.</Description>
+      <Shortcut>filSearchTxt</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Collections.ObjectModel</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>search</ID>
+          <ToolTip>Replace with the string to search for in the files.</ToolTip>
+          <Default>"Text To Search For"</Default>
+        </Literal>
+        <Literal>
+          <ID>dir</ID>
+          <ToolTip>Replace with the directory to search.</ToolTip>
+          <Default>"C:\"</Default>
+        </Literal>
+        <Literal>
+          <ID>wild</ID>
+          <ToolTip>Replace with wildcard to determine files to search.</ToolTip>
+          <Default>"*.txt"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim files As ReadOnlyCollection(Of String)
+files = My.Computer.FileSystem.FindInFiles($dir$, $search$, True, FileIO.SearchOption.SearchAllSubDirectories, $wild$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

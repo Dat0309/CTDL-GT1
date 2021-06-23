@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="$fileinputnameread$">
+    <File Path="$fileinputnameread$\Home\Home.css" Url="$fileinputnameread$/Home/Home.css" ReplaceContent="TRUE" />
+    <File Path="$fileinputnameread$\Home\Home.html" Url="$fileinputnameread$/Home/Home.html" ReplaceContent="TRUE" />
+    <File Path="$fileinputnameread$\Home\Home.js" Url="$fileinputnameread$/Home/Home.js" ReplaceContent="TRUE" />
+    <File Path="$fileinputnameread$\App.css" Url="$fileinputnameread$/App.css" ReplaceContent="TRUE" />
+    <File Path="$fileinputnameread$\App.js" Url="$fileinputnameread$/App.js" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

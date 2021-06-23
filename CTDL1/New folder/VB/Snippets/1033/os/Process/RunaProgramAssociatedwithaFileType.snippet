@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Run a Program Associated with a File Type</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Runs a program associated with a file type.</Description>
+      <Shortcut>procRun</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.Win32</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Diagnostics</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>programName</ID>
+          <ToolTip>Replace with the program or document you wish to open</ToolTip>
+          <Default>"C:\Test.txt"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[Process.Start($programName$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

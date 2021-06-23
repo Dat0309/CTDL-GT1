@@ -1,0 +1,124 @@
+﻿#outputList .consoleItemAssert > .listview-grid-cell-icon {
+    background-image: url('../common/images/critical.png'); /*[url({plugin-console-image-icon-critical})]*/
+    background-size: 16px 16px;
+    background-position-y: 0;
+}
+
+#outputList .consoleItemError > .listview-grid-cell-icon {
+    background-image: url('../common/images/critical.png'); /*[url({plugin-console-image-icon-critical})]*/
+    background-size: 16px 16px;
+    background-position-y: 0;
+}
+
+#outputList .consoleItemInfo > .listview-grid-cell-icon {
+    background-image: url('images/info.png'); /*[url({plugin-console-image-icon-info})]*/
+    background-size: 16px 16px;
+    background-position-y: 0;
+}
+#outputList .consoleItemWarn > .listview-grid-cell-icon {
+    background-image: url('images/warning.png'); /*[url({plugin-console-image-icon-warning})]*/
+    background-size: 16px 16px;
+    background-position-y: 0;
+}
+#outputList .consoleItemScriptError > .listview-grid-cell-icon {
+    background-image: url('../common/images/critical.png'); /*[url({plugin-console-image-icon-critical})]*/
+    background-size: 16px 16px;
+    background-position-y: 0;
+}
+
+.BPT-WarnMessageIcon {
+    background-image: url('images/warning.png'); /*[url({plugin-console-image-icon-warning})]*/
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    float: left;
+    vertical-align: middle;
+}
+
+.BPT-Toolbar .errorButton {
+    background-image: url('../common/images/critical.png'); /*[url({plugin-console-image-icon-button-critical})]*/
+    background-size: 16px 16px;
+}
+
+.BPT-Toolbar .warnButton {
+    background-image: url('images/warning.png'); /*[url({plugin-console-image-icon-button-warning})]*/
+    background-size: 16px 16px;
+}
+
+.BPT-Toolbar .infoButton {
+    background-image: url('images/info.png'); /*[url({plugin-console-image-icon-button-info})]*/
+    background-size: 16px 16px;
+}
+
+.BPT-Toolbar .clearButton {
+    background-image: url('images/delete_32x.png'); /*[url({plugin-console-image-icon-button-delete-32x})]*/
+    background-size: 16px 16px;
+}
+
+.Toolbar-ControlsButton[disabled] .clearButton {
+    background-image: url('images/DeleteDisabled_32x.png'); /*[url({plugin-console-image-icon-button-delete-disabled-32x})]*/
+    background-size: 16px 16px;
+}
+
+.BPT-Toolbar .clearOnNavigateButton {
+    background-image: url('images/i_clear-on-navigate_16x.png'); /*[url({plugin-console-image-icon-button-clear-on-navigate-16x})]*/
+    background-size: 16px 16px;
+}
+
+/* Override part of this rule from toolbar.css */
+.BPT-Toolbar > .BPT-ToolbarContents > .shellButtonSpacer {
+    display: none;
+}
+
+#executeButton {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-image: url('images/Run_24x.png'); /*[url({plugin-console-image-icon-button-run-24x})]*/
+    background-size: 12px 12px;
+    background-position: center center;
+    width: 16px;
+    height: 16px;
+    margin: 2px;
+}
+
+#executeButton:hover {
+    background-color: TRANSPARENT; /*[{f12-toolbar-button-hover-color}] */
+}
+
+#clearInputButton {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-image: url('images/delete_24x.png'); /*[url({plugin-console-image-icon-button-delete-24x})]*/
+    background-size: 12px 12px;
+    background-position: center center;
+    width: 16px;
+    height: 16px;
+    margin: 2px;
+}
+#clearInputButton:hover {
+    background-color: TRANSPARENT; /*[{f12-toolbar-button-hover-color}] */
+}
+
+#toggleButton {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    background-position: center center;
+    width: 16px;
+    height: 16px;
+    margin: 2px;
+}
+
+#toggleButton:hover {
+    background-color: TRANSPARENT; /*[{f12-toolbar-button-hover-color}] */
+}
+
+.BPT-Toggle-MultiIcon {
+    background-image: url('images/CollapseMultiline_24x.png'); /*[url({plugin-console-image-icon-button-multi-24x})]*/
+}
+
+.BPT-Toggle-SingleIcon {
+    background-image: url('images/CollapseSingle_24x.png'); /*[url({plugin-console-image-icon-button-single-24x})]*/
+}

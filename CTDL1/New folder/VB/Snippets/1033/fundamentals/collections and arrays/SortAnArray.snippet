@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Sort An Array</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Declares an array of String objects, populates it, and then sorts it alphabetically.</Description>
+      <Keywords>
+      </Keywords>
+      <Shortcut>arrSort</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>InitialValues</ID>
+          <Type>Object</Type>
+          <ToolTip>Replace with the initial values of the array.</ToolTip>
+          <Default>{"lion", "turtle", "ostrich"}</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim animals() As String = $InitialValues$
+Array.Sort(animals)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

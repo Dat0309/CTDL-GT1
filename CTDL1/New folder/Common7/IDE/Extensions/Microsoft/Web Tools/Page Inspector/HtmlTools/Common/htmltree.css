@@ -1,0 +1,279 @@
+.BPT-HtmlTree-Container:focus {
+    outline: 0;
+}
+
+.BPT-HTML {
+    font-family: "Consolas", Lucida Console, monospace; /*[{VSFONTFAMILY_EDITOR} , Lucida Console, monospace]*/
+    font-size: 9pt; /*[{VSFONTSIZE_EDITOR}]*/
+    font-weight: "normal"; /*[{VSFONTWEIGHT_HTML_TAG_DELIMITER}]*/
+    color: #0000FF; /*[{VSFONTCOLOR_HTML_TAG_DELIMITER}]*/
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_HTML_TAG_DELIMITER}]*/
+}
+
+.BPT-HTML-Tag {
+    color: #800000; /*[{VSFONTCOLOR_HTML_ELEMENT_NAME}]*/
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_HTML_ELEMENT_NAME}]*/
+    font-weight: "normal"; /*[{VSFONTWEIGHT_HTML_ELEMENT_NAME}]*/
+}
+
+.BPT-HTML-DocType, .BPT-HTML-DocType + .BPT-HTML-Text {
+    color: #006400; /*[{VSFONTCOLOR_HTML_COMMENT}]*/
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_HTML_COMMENT}]*/
+    font-weight: "normal"; /*[{VSFONTWEIGHT_HTML_COMMENT}]*/
+}
+
+.BPT-HTML-Comment, .BPT-HTML-Comment + .BPT-HTML-Text {
+    color: #006400; /*[{VSFONTCOLOR_HTML_COMMENT}]*/
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_HTML_COMMENT}]*/
+    font-weight: "normal"; /*[{VSFONTWEIGHT_HTML_COMMENT}]*/
+}
+            
+.BPT-HTML-Attribute {
+    color: #FF0000; /*[{VSFONTCOLOR_HTML_ATTRIBUTE_NAME}]*/
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_HTML_ATTRIBUTE_NAME}]*/
+    font-weight: "normal"; /*[{VSFONTWEIGHT_HTML_ATTRIBUTE_NAME}]*/
+}
+            
+.BPT-HTML-Value {
+    color: #0000FF; /*[{VSFONTCOLOR_HTML_ATTRIBUTE_VALUE}]*/
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_HTML_ATTRIBUTE_VALUE}]*/
+    font-weight: "normal"; /*[{VSFONTWEIGHT_HTML_ATTRIBUTE_VALUE}]*/
+}
+
+.BPT-HTML-Operator {
+    color: #000000; /*[{VSFONTCOLOR_HTML_OPERATOR}]*/
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_HTML_OPERATOR}]*/
+    font-weight: "normal"; /*[{VSFONTWEIGHT_HTML_OPERATOR}]*/
+}
+
+.BPT-HTML-Text {
+    color: #000000; /*[{VSFONTCOLOR_EDITOR}]*/
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_EDITOR}]*/
+    font-weight: "normal"; /*[{VSFONTWEIGHT_EDITOR}]*/
+    white-space: pre-wrap;
+}
+
+.BPT-HTML-CSS-Name {
+    color: #FF0000; /*[{VSFONTCOLOR_CSS_PROPERTY_NAME}]*/
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_CSS_PROPERTY_NAME}]*/
+    font-weight: "normal"; /*[{VSFONTWEIGHT_CSS_PROPERTY_NAME}]*/
+}
+
+.BPT-HTML-CSS-Value {
+    color: #0000FF; /*[{VSFONTCOLOR_CSS_PROPERTY_VALUE}]*/
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_CSS_PROPERTY_VALUE}]*/
+    font-weight: "normal"; /*[{VSFONTWEIGHT_CSS_PROPERTY_VALUE}]*/
+}
+
+.BPT-HTML-CSS-Selector {
+    color: #880000; /*[{VSFONTCOLOR_CSS_SELECTOR}]*/
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_CSS_SELECTOR}]*/
+    font-weight: "normal"; /*[{VSFONTWEIGHT_CSS_SELECTOR}]*/
+}
+/*+VWD*/
+    .BPT-HTML-CSS-Selector:hover {
+        text-decoration: underline;
+    }
+/*-VWD*/
+.BPT-HTML-CSS-Text {
+    color: #000000; /*[{VSFONTCOLOR_EDITOR}]*/
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_EDITOR}]*/
+    font-weight: "normal"; /*[{VSFONTWEIGHT_EDITOR}]*/
+}
+
+.BPT-HTML-CSS-SelectorTag {
+    font-style:italic;
+}
+
+.BPT-HTML-CSS-InlinedSelector {
+    font-style:italic;
+}
+
+.BPT-HTML-Numbering {
+    display: inline-block;
+    min-width: 25px;
+}
+
+.BPT-HTML-Tag > input {
+    vertical-align: -2px
+}
+
+.BPT-Style-Disabled span {
+    text-decoration: line-through;
+} 
+
+.BPT-HtmlTreeItem {
+    padding-left: 7px;
+    border-left: 1px solid transparent;
+    cursor: default;
+    position: relative;
+    margin: -3px 0px;
+    word-wrap: break-word;
+}
+
+.BPT-HtmlTreeItem-HiddenRoot {
+    padding-left: 0px;
+}
+
+.BPT-HtmlTreeItem-Expanded {
+    background-repeat: no-repeat;
+    background-position: 3px 5px;
+}
+
+.BPT-HtmlTreeItem-Collapsed {
+    background-repeat: no-repeat;
+    background-position: 3px 5px;
+}
+
+.BPT-HtmlTreeItem-Expanded .BPT-HtmlTreeItem {
+    display: block;
+}
+
+.BPT-HtmlTreeItem-Collapsed .BPT-HtmlTreeItem {
+    display: none;
+}
+
+.BPT-HtmlTreeItem-ExpandIcon {
+    left: 3px;
+    top: 5px;
+    position: absolute;
+    width: 11px;
+    height: 11px;    
+}
+
+.BPT-HtmlTree:not(.BPT-Tree-DarkTheme) .BPT-HtmlTreeItem-Collapsed > .BPT-HtmlTreeItem-ExpandIcon {
+    background-image: url('../common/itemCollapsedIcon.png');
+}
+
+.BPT-HtmlTree:not(.BPT-Tree-DarkTheme) .BPT-HtmlTreeItem-Expanded > .BPT-HtmlTreeItem-ExpandIcon {
+    background-image: url('../common/itemExpandedIcon.png');
+}
+
+.BPT-Tree-DarkTheme .BPT-HtmlTreeItem-Collapsed > .BPT-HtmlTreeItem-ExpandIcon {
+    background-image: url('../common/itemCollapsedDarkThemeIcon.png');
+}
+
+.BPT-Tree-DarkTheme .BPT-HtmlTreeItem-Expanded > .BPT-HtmlTreeItem-ExpandIcon {
+    background-image: url('../common/itemExpandedDarkThemeIcon.png');
+}
+
+.BPT-HtmlTreeItem-Header {
+    left: 0px;
+    right: 0px;
+    font-size: 12px;
+    border: 1px solid transparent;
+    margin-left: 8px;
+    margin-bottom: 3px;
+}
+
+.BPT-HtmlTreeItem-Footer {
+    left: 0px;
+    right: 0px;
+    font-size: 12px;
+    margin-left: 8px;
+    margin-bottom: 3px;
+    display: none;
+}
+
+.BPT-HtmlTreeItem-Expanded > .BPT-HtmlTreeItem-Footer {
+    display: block;
+}
+
+.BPT-HtmlTreeItem-Expanded > .BPT-HtmlTreeItem-Header > .BPT-HtmlTreeItem-CollapsedFooter {
+    display: none;
+}
+
+.BPT-HtmlTreeItem-Header:hover {
+    background-color: transparent;
+    border-color: #EAEAF2; /*[{VSFONTCOLOR_CURRENT_LINE_ACTIVE_FORMAT}]*/
+}
+
+body.BPT-ToolWindow-NoFocus .BPT-HtmlTreeItem-Header:hover {
+    border-color: #EAEAF2; /*[{VSFONTCOLOR_CURRENT_LINE_INACTIVE_FORMAT}]*/
+}
+
+.BPT-HtmlTreeItem-HiddenRoot > .BPT-HtmlTreeItem-Header:hover {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.BPT-HtmlTreeItem-Selected {
+    border-left: 1px solid transparent;
+}
+
+.BPT-HtmlTreeItem-Selected > .BPT-HtmlTreeItem-Header {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+body .BPT-HtmlTree-Container:focus .BPT-HtmlTreeItem-Selected,
+body .BPT-HtmlTree-Container-KeepSelection .BPT-HtmlTreeItem-Selected {
+    border-left-color: #3399FF; /*[{VSFONTCOLORBACKGROUND_SELECTED_TEXT}]*/
+}
+
+body .BPT-HtmlTree-Container:focus .BPT-HtmlTreeItem-Selected > .BPT-HtmlTreeItem-Header,
+body .BPT-HtmlTree-Container-KeepSelection .BPT-HtmlTreeItem-Selected > .BPT-HtmlTreeItem-Header {
+    background: rgba(51, 153, 255, 0.25); /*[{VSFONTCOLORBACKGROUND_SELECTED_TEXT rgba(0.25)}]*/
+    border-color: #3399FF; /*[{VSFONTCOLORBACKGROUND_SELECTED_TEXT}]*/
+}
+
+body.BPT-ToolWindow-NoFocus .BPT-HtmlTree-Container:focus .BPT-HtmlTreeItem-Selected,
+body.BPT-ToolWindow-NoFocus .BPT-HtmlTree-Container-KeepSelection .BPT-HtmlTreeItem-Selected {
+    border-left-color: transparent;
+}
+
+body.BPT-ToolWindow-NoFocus .BPT-HtmlTree-Container:focus .BPT-HtmlTreeItem-Selected > .BPT-HtmlTreeItem-Header,
+body.BPT-ToolWindow-NoFocus .BPT-HtmlTree-Container-KeepSelection .BPT-HtmlTreeItem-Selected > .BPT-HtmlTreeItem-Header {
+    background: transparent;
+    border-color: transparent;
+}
+
+.BPT-HtmlTreeItem-Selected > .BPT-HtmlTreeItem-Header .BPT-HTML, 
+.BPT-HtmlTreeItem-Selected > .BPT-HtmlTreeItem-Header .BPT-HTML-Tag, 
+.BPT-HtmlTreeItem-Selected > .BPT-HtmlTreeItem-Header .BPT-HTML-Attribute, 
+.BPT-HtmlTreeItem-Selected > .BPT-HtmlTreeItem-Header .BPT-HTML-Value, 
+.BPT-HtmlTreeItem-Selected > .BPT-HtmlTreeItem-Header .BPT-HTML-Operator, 
+.BPT-HtmlTreeItem-Selected > .BPT-HtmlTreeItem-Header .BPT-HTML-Text, 
+.BPT-HtmlTreeItem-Selected > .BPT-HtmlTreeItem-Header .BPT-HTML-Comment, 
+.BPT-HtmlTreeItem-Selected > .BPT-HtmlTreeItem-Header .BPT-HTML-Comment + .BPT-HTML-Text, 
+.BPT-HtmlTreeItem-Selected > .BPT-HtmlTreeItem-Header .BPT-HTML-DocType + .BPT-HTML-Text,
+.BPT-HtmlTreeItem-Selected > .BPT-HtmlTreeItem-Header .BPT-HTML-CSS-Name,
+.BPT-HtmlTreeItem-Selected > .BPT-HtmlTreeItem-Header .BPT-HTML-CSS-Value,
+.BPT-HtmlTreeItem-Selected > .BPT-HtmlTreeItem-Header .BPT-HTML-CSS-Selector,
+.BPT-HtmlTreeItem-Selected > .BPT-HtmlTreeItem-Header .BPT-HTML-CSS-Text {
+    background: transparent;
+}
+
+.BPT-HtmlTreeItem-Selected > .BPT-HtmlTreeItem-Header .BPT-HTML-Attribute-Changed, .BPT-HTML-Attribute-Changed {
+    background-color: #FFFF00; /*[{VSFONTCOLORBACKGROUND_CURRENT_STATEMENT}]*/
+    color: #000000; /*[{VSFONTCOLOR_CURRENT_STATEMENT}]*/
+    text-decoration: underline;
+}
+
+
+.BPT-HtmlTree-ChildCollection-ShowAll {
+    color: #000000; /*[{VSFONTCOLOR_EDITOR}]*/
+    background-color: #FFFFFF; /*[{VSFONTCOLORBACKGROUND_EDITOR}]*/
+    font-weight: normal; /*[{VSFONTWEIGHT_EDITOR}]*/
+    white-space: pre-wrap;
+
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+    margin-bottom: 1px;
+}
+
+.BPT-HtmlTree-ChildCollection-ShowAll:hover, .BPT-HtmlTree-ChildCollection-ShowAll.BPT-HtmlTreeItem-Selected {
+    text-decoration: underline;
+}
+
+/*+VWD*/
+.BPT-HTML-Attribute-Changed .BPT-HTML-CSS-Name,
+.BPT-HTML-Attribute-Changed .BPT-HTML-CSS-Value,
+.BPT-HTML-Attribute-Changed .BPT-HTML-CSS-Selector,
+.BPT-HTML-Attribute-Changed .BPT-HTML-CSS-Text {
+    background-color: #FFFF00; /*[{VSFONTCOLORBACKGROUND_CURRENT_STATEMENT}]*/
+    color: #000000; /*[{VSFONTCOLOR_CURRENT_STATEMENT}]*/
+    text-decoration: none;
+}
+/*-VWD*/

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.SilverlightWebPart" DefaultFile="$fileinputname$.webpart" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="$ProjectItemName$\" Type="ElementManifest" />
+    <ProjectItemFile Source="$fileinputname$.webpart" Target="$ProjectItemName$\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

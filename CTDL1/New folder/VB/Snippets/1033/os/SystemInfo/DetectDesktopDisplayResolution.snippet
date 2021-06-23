@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Determine Desktop Display Resolution </Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Determines the width and height, in pixels, of the desktop.</Description>
+      <Shortcut>sysRes</Shortcut>
+      <Keywords>
+        <Keyword>EventLog component</Keyword>
+        <Keyword>logging events</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Drawing.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim height = My.Computer.Screen.Bounds.Height
+Dim width = My.Computer.Screen.Bounds.Width]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

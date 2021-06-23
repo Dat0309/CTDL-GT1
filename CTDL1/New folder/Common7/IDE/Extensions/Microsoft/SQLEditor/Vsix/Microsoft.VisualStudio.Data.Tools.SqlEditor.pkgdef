@@ -1,0 +1,156 @@
+﻿[$RootKey$\Packages\{fef13793-c947-4fb1-b864-c9f0be9d9cf6}]
+@="SqlStudio Editor Package"
+"Assembly"="Microsoft.VisualStudio.Data.Tools.SqlEditor, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"Class"="Microsoft.VisualStudio.Data.Tools.SqlEditor.VSIntegration.SqlEditorPackage"
+"CodeBase"="$RootFolder$\Common7\IDE\Extensions\Microsoft\SQLEditor\Microsoft.VisualStudio.Data.Tools.SqlEditor.dll"
+"CompanyName"="Microsoft Corporation"
+"ID"=dword:00000065
+"InprocServer32"="%SystemRoot%\\system32\\mscoree.dll"
+"ProductName"="Microsoft SQL Server Data Tools, TSql Editor"
+
+[$RootKey$\Menus]
+"{fef13793-c947-4fb1-b864-c9f0be9d9cf6}"=", Menus.ctmenu, 1"
+
+[$RootKey$\Editors\{cc5d8df0-88f4-4bb2-9dbb-b48cee65c30a}]
+@="SQL Script Editor"
+"DisplayName"="#1"
+"Package"="{fef13793-c947-4fb1-b864-c9f0be9d9cf6}"
+"CommonPhysicalViewAttributes"=dword:00000002
+
+[$RootKey$\Editors\{cc5d8df0-88f4-4bb2-9dbb-b48cee65c30a}\Extensions]
+"sql"=dword:00000064
+
+[$RootKey$\Editors\{cc5d8df0-88f4-4bb2-9dbb-b48cee65c30a}\LogicalViews]
+"{7651A700-06E5-11D1-8EBD-00A0C90F26EA}"=""
+"{7651A701-06E5-11D1-8EBD-00A0C90F26EA}"=""
+"{7651A702-06E5-11D1-8EBD-00A0C90F26EA}"=""
+"{7651A703-06E5-11D1-8EBD-00A0C90F26EA}"=""
+
+[$RootKey$\FileExtensionMapping\{cc5d8df0-88f4-4bb2-9dbb-b48cee65c30a}]
+@="SQL Script Editor"
+"DisplayName"="#1"
+"Package"="{fef13793-c947-4fb1-b864-c9f0be9d9cf6}"
+"EditorGUID"="{cc5d8df0-88f4-4bb2-9dbb-b48cee65c30a}"
+
+[$RootKey$\Editors\{F9D1E5B1-8A59-439C-9BB9-D5598B830ECB}]
+@="SQL Script Editor With Encoding"
+"Package"="{fef13793-c947-4fb1-b864-c9f0be9d9cf6}"
+"DisplayName"="#7"
+"CommonPhysicalViewAttributes"=dword:00000002
+
+[$RootKey$\Editors\{F9D1E5B1-8A59-439C-9BB9-D5598B830ECB}\Extensions]
+"sql"=dword:00000060
+
+[$RootKey$\Editors\{F9D1E5B1-8A59-439C-9BB9-D5598B830ECB}\LogicalViews]
+"{7651A700-06E5-11D1-8EBD-00A0C90F26EA}"=""
+"{7651A701-06E5-11D1-8EBD-00A0C90F26EA}"=""
+"{7651A702-06E5-11D1-8EBD-00A0C90F26EA}"=""
+"{7651A703-06E5-11D1-8EBD-00A0C90F26EA}"=""
+
+[$RootKey$\FileExtensionMapping\{F9D1E5B1-8A59-439C-9BB9-D5598B830ECB}]
+@="SQL Script Editor With Encoding"
+"DisplayName"="#7"
+"Package"="{fef13793-c947-4fb1-b864-c9f0be9d9cf6}"
+"EditorGUID"="{F9D1E5B1-8A59-439C-9BB9-D5598B830ECB}"
+
+[$RootKey$\Editors\{11529016-D3AF-45D4-8C05-279BEDB9A43D}]
+@="SQL Results Window"
+"Package"="{fef13793-c947-4fb1-b864-c9f0be9d9cf6}"
+"DisplayName"="#2"
+"CommonPhysicalViewAttributes"=dword:00000000
+
+[$RootKey$\Editors\{11529016-D3AF-45D4-8C05-279BEDB9A43D}\LogicalViews]
+"{7651A700-06E5-11D1-8EBD-00A0C90F26EA}"=""
+"{7651A701-06E5-11D1-8EBD-00A0C90F26EA}"=""
+"{7651A702-06E5-11D1-8EBD-00A0C90F26EA}"=""
+"{7651A703-06E5-11D1-8EBD-00A0C90F26EA}"=""
+
+[$RootKey$\Services\{5B7CCF80-3C0A-4B8F-90EC-9560FAB97C96}]
+@="{fef13793-c947-4fb1-b864-c9f0be9d9cf6}"
+"Name"="SQL Marker Service"
+
+[$RootKey$\Text Editor\External Markers\{E08D10C8-D5C9-493C-AEE3-87C5419F9C6F}]
+@="Error Message"
+"DisplayName"="T-SQL Editor message error marker"
+"Package"="{fef13793-c947-4fb1-b864-c9f0be9d9cf6}"
+"Service"="{5B7CCF80-3C0A-4B8F-90EC-9560FAB97C96}"
+
+
+[$RootKey$\Services\{DB3EFF94-3F4D-45DE-97E8-FA7EE79736CC}]
+@="{fef13793-c947-4fb1-b864-c9f0be9d9cf6}"
+"Name"="Sql Results Font and Color service"
+
+[$RootKey$\FontAndColors\SqlResultsText]
+"Category"="{587D0421-E473-4032-B214-9359F3B7BC80}"
+"Package"="{DB3EFF94-3F4D-45DE-97E8-FA7EE79736CC}"
+
+[$RootKey$\FontAndColors\SqlResultsGrid]
+"Category"="{6202FF3E-488E-4EAD-92CB-BE089659F8D7}"
+"Package"="{DB3EFF94-3F4D-45DE-97E8-FA7EE79736CC}"
+
+[$RootKey$\FontAndColors\SqlResultsExecutionPlan]
+"Category"="{93D586A1-64DC-4802-9B83-7007FAD2C861}"
+"Package"="{DB3EFF94-3F4D-45DE-97E8-FA7EE79736CC}"
+
+ [$RootKey$\ToolsOptionsPages\SQL Server Tools\Transact-SQL Editor]
+ "Package"="{fef13793-c947-4fb1-b864-c9f0be9d9cf6}"
+ "Sort"=dword:00000001
+ @="#11"
+ 
+ [$RootKey$\ToolsOptionsPages\SQL Server Tools\Transact-SQL Editor\General]
+ "Package"="{fef13793-c947-4fb1-b864-c9f0be9d9cf6}"
+ "Page"="{60226996-0375-4633-A607-D93892CB62B9}"
+ "Sort"=dword:00000002
+ @="#20"
+
+ [$RootKey$\ToolsOptionsPages\SQL Server Tools\Transact-SQL Editor\Query Execution]
+ "Package"="{fef13793-c947-4fb1-b864-c9f0be9d9cf6}"
+ "Sort"=dword:00000003
+ @="#13"
+
+ [$RootKey$\ToolsOptionsPages\SQL Server Tools\Transact-SQL Editor\Query Results]
+ "Package"="{fef13793-c947-4fb1-b864-c9f0be9d9cf6}"
+ "Sort"=dword:00000004
+ @="#14"
+
+ [$RootKey$\ToolsOptionsPages\SQL Server Tools\Transact-SQL Editor\Query Execution\General]
+ "Package"="{fef13793-c947-4fb1-b864-c9f0be9d9cf6}"
+ "Page"="{130058C2-06E8-443E-B843-62325E4CA308}"
+ "Sort"=dword:00000001
+ @="#15"
+
+ [$RootKey$\ToolsOptionsPages\SQL Server Tools\Transact-SQL Editor\Query Execution\Advanced]
+ "Package"="{fef13793-c947-4fb1-b864-c9f0be9d9cf6}"
+ "Page"="{40048CB0-F4A7-4D70-8780-6C9A586FB96B}"
+ "Sort"=dword:00000002
+ @="#16"
+
+ [$RootKey$\ToolsOptionsPages\SQL Server Tools\Transact-SQL Editor\Query Execution\ANSI]
+ "Package"="{fef13793-c947-4fb1-b864-c9f0be9d9cf6}"
+ "Page"="{C593E47D-AADA-4740-9E89-906CA4087742}"
+ "Sort"=dword:00000003
+ @="#17"
+
+ [$RootKey$\ToolsOptionsPages\SQL Server Tools\Transact-SQL Editor\Query Results\General]
+ "Package"="{fef13793-c947-4fb1-b864-c9f0be9d9cf6}"
+ "Page"="{9A5DA0A5-2077-4408-95A9-99F9E91FABE9}"
+ "Sort"=dword:00000001
+ @="#15"
+
+ [$RootKey$\ToolsOptionsPages\SQL Server Tools\Transact-SQL Editor\Query Results\Results To Grid]
+ "Package"="{fef13793-c947-4fb1-b864-c9f0be9d9cf6}"
+ "Page"="{F073BE2D-89FC-46E0-920B-34CD408B58A5}"
+ "Sort"=dword:00000002
+ @="#18"
+
+ [$RootKey$\ToolsOptionsPages\SQL Server Tools\Transact-SQL Editor\Query Results\Results To Text]
+ "Package"="{fef13793-c947-4fb1-b864-c9f0be9d9cf6}"
+ "Page"="{7B7D1405-6F16-4019-802F-6898C0640D9F}"
+ "Sort"=dword:00000003
+ @="#19"
+ 
+ [$RootKey$\ToolsOptionsPages\SQL Server Tools\Transact-SQL Editor\Editor Tab and Status Bar]
+ "Package"="{fef13793-c947-4fb1-b864-c9f0be9d9cf6}"
+ "Page"="{A0F4E3FC-297F-4D94-8AA4-B391557BE9EB}"
+ "Sort"=dword:00000005
+ @="#21"

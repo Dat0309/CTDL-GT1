@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Tables" standard-reference="http://www.w3.org/TR/CSS2/tables.html" status="REC" pub-date="2011-06-07">
+
+  <CssProperty _locID="table-layout"
+               _locAttrData="description"
+               version="2.0"
+               browsers="all"
+               restriction="enum"
+               syntax="table { $(name): fixed; }"
+               description="Controls the algorithm used to lay out the table cells, rows, and columns."
+               standard-reference="http://www.w3.org/TR/CSS2/tables.html#width-layout">
+
+    <entry _locID="table-layout_auto"
+           _locAttrData="description"
+           value="auto"
+           description="Use any automatic table layout algorithm." />
+    <entry _locID="table-layout_fixed"
+           _locAttrData="description"
+           value="fixed"
+           description="Use the fixed table layout algorithm." />
+  </CssProperty>
+
+  <CssProperty _locID="caption-side"
+               _locAttrData="description"
+               version="2.0"
+               browsers="C,FF,IE8,O,S"
+               restriction="enum"
+               syntax="caption { $(name): bottom; }"
+               description="Specifies the position of the caption box with respect to the table box."
+               standard-reference="http://www.w3.org/TR/CSS2/tables.html#caption-position">
+
+    <entry _locID="caption-side_top"
+           _locAttrData="description"
+           value="top"
+           description="Positions the caption box above the table box." />
+    <entry _locID="caption-side_bottom"
+           _locAttrData="description"
+           value="bottom"
+           description="Positions the caption box below the table box." />
+  </CssProperty>
+
+  <CssProperty _locID="border-spacing"
+               _locAttrData="description"
+               version="2.0"
+               browsers="C,FF1,IE8,O7,S1.2"
+               restriction="length"
+               description="The lengths specify the distance that separates adjoining cell borders. If one length is specified, it gives both the horizontal and vertical spacing. If two are specified, the first gives the horizontal spacing and the second the vertical spacing. Lengths may not be negative."
+               syntax="table { $(name): 10px 50px; }"
+               standard-reference="http://www.w3.org/TR/CSS2/tables.html#borders" />
+
+  <CssProperty _locID="border-collapse"
+               _locAttrData="description"
+               version="2.0"
+               restriction="enum"
+               syntax="table { $(name): collapse; }"
+               description="Selects a table's border model."
+               standard-reference="http://www.w3.org/TR/CSS2/tables.html#borders">
+    
+    <entry _locID="border-collapse_collapse"
+           _locAttrData="description"
+           value="collapse"
+           description="Selects the collapsing borders model." />
+    <entry _locID="border-collapse_separate"
+           _locAttrData="description"
+           value="separate"
+           description="Selects the separated borders border model." />
+  </CssProperty>
+
+  <CssProperty _locID="empty-cells"
+               _locAttrData="description"
+               version="2.0"
+               browsers="C,FF1,IE7,O4,S1.2"
+               restriction="enum"
+               syntax="table { $(name): hide; }"
+               description="In the separated borders model, this property controls the rendering of borders and backgrounds around cells that have no visible content."
+               standard-reference="http://www.w3.org/TR/CSS2/tables.html#empty-cells">
+
+    <entry _locID="empty-cells_show"
+           _locAttrData="description"
+           value="show"
+           description="Borders and backgrounds are drawn around/behind empty cells (like normal cells)." />
+    <entry _locID="empty-cells_hide"
+           _locAttrData="description"
+           value="hide"
+           description="No borders or backgrounds are drawn around/behind empty cells." />
+  </CssProperty>
+
+</CssModule>

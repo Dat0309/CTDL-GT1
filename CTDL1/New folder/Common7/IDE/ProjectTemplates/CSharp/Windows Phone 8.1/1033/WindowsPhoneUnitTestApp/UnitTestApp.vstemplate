@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="1094" />
+    <Description Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="1095" />
+    <Icon Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="4032" />
+    <TemplateID>Microsoft.CS.WindowsPhoneApp.UnitTestApp</TemplateID>
+    <TemplateGroupID>WindowsPhoneApp-Managed-Win81</TemplateGroupID>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>60</SortOrder>
+    <NumberOfParentCategoriesToRollUp>0</NumberOfParentCategoriesToRollUp>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>UnitTestApp</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <TargetPlatformName>Windows</TargetPlatformName>
+    <RequiredPlatformVersion>6.3.0</RequiredPlatformVersion>
+    <CreateInPlace>true</CreateInPlace>
+    <PreviewImage>__PreviewImage.PNG</PreviewImage>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="UnitTestApp.csproj" ReplaceParameters="true">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Properties\AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="true">UnitTest1.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Package.appxmanifest">Package-PhoneUTAppx.appxmanifest</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="$projectname$_TemporaryKey.pfx" BlendDoNotCreate="true">Application_TemporaryKey.pfx</ProjectItem>
+        <Folder Name="Assets">
+            <ProjectItem ReplaceParameters="false" TargetFileName="Logo.scale-240.png">Phone.Logo.png</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="SmallLogo.scale-240.png">Phone.SmallLogo.png</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="SplashScreen.scale-240.png">Phone.SplashScreen.png</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="Square71x71Logo.scale-240.png">Phone.Square71x71Logo.png</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="StoreLogo.scale-240.png">Phone.StoreLogo.png</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="WideLogo.scale-240.png">Phone.WideLogo.png</ProjectItem>
+        </Folder>
+    </Project>
+  </TemplateContent>
+ <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.WinRT.TemplateWizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.WinRT.TemplateWizards.PhoneAppxWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

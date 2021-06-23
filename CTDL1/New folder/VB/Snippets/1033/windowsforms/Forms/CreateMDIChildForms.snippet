@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Create MDI Child Forms</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Creates and displays a new MDI child form.</Description>
+      <Shortcut>mdiNew</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Drawing.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>formName</ID>
+          <Type>Form</Type>
+          <ToolTip>Replace with a reference to the form that is the parent of the MDI child form. That form needs to have IsMDIContainer = True.</ToolTip>
+          <Default>Me</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim newMDIChild As New Form()
+newMDIChild.MdiParent = $formName$
+newMDIChild.Show()
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

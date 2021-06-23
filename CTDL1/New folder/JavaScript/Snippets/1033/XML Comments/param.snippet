@@ -1,0 +1,31 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>param</Title>
+    <Author>Microsoft Corporation</Author>
+    <Shortcut>param</Shortcut>
+    <Description>Code snippet for a param XML comment</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>name</ID>
+        <ToolTip>Parameter name</ToolTip>
+        <Default>name</Default>
+      </Literal>
+      <Literal>
+        <ID>type</ID>
+        <ToolTip>Parameter type</ToolTip>
+        <Default>String</Default>
+      </Literal>
+      <Literal>
+        <ID>desc</ID>
+        <ToolTip>Description</ToolTip>
+        <Default>Description</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="JavaScript"><![CDATA[/// <param name="$name$" type="$type$">$desc$</param>$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

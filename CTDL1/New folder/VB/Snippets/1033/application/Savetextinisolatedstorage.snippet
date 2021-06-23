@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Save Text in Isolated Storage</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Writes a string to the assembly or user-isolated storage.</Description>
+      <Shortcut>appIsoSave</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.IO</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.IO.IsolatedStorage</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>varName</ID>
+          <Type>String</Type>
+          <ToolTip>The variable name for the isolated storage.</ToolTip>
+          <Default>isolatedStorage</Default>
+        </Object>
+        <Literal>
+          <ID>fileName</ID>
+          <Type>String</Type>
+          <ToolTip>The file name of the file in isolated storage.</ToolTip>
+          <Default>"TestStore.txt"</Default>
+        </Literal>
+        <Object>
+          <ID>fileContents</ID>
+          <Type>String</Type>
+          <ToolTip>The String variable that stores the value to be written to the file in the store.</ToolTip>
+          <Default>"The Data"</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[
+        Dim $varName$ = IsolatedStorageFile.GetStore(IsolatedStorageScope.User Or IsolatedStorageScope.Assembly Or IsolatedStorageScope.Domain, Nothing, Nothing)
+        Dim isoStream As New IsolatedStorageFileStream($fileName$, FileMode.Append, FileAccess.Write, isolatedStore)
+
+        Using writer As New StreamWriter(isoStream)
+		    writer.WriteLine($fileContents$)
+	    End Using]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

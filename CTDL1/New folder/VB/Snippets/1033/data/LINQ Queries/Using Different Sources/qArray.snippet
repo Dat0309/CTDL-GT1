@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Query over an array</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>A query over an array.</Description>
+      <Shortcut>qArray</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>queryResult</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the query.</ToolTip>
+          <Default>query</Default>
+        </Literal>
+        <Literal>
+          <ID>item</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the variable that represents an item from your data source.</ToolTip>
+          <Default>process</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSource</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the identifier for your data source.</ToolTip>
+          <Default>scores</Default>
+        </Literal>
+        <Literal>
+          <ID>condition</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the condition for your Where clause.</ToolTip>
+          <Default>>= 50</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSourceType</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the type of your data source.</ToolTip>
+          <Default>Integer</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $dataSource$ = New $dataSourceType$() {50, 42, 76, 93, 65, 51, 79}
+
+                 Dim $queryResult$ = From $item$ In $dataSource$ _
+                     Where $item$ $condition$ _
+                     Order By $item$ _
+                     Select $item$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

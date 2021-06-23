@@ -1,0 +1,16 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name _locID="JSP_Item_JScriptName">JavaScript File</Name>
+    <Description _locID="JSP_Item_JScriptDesc">A script file containing JavaScript code.</Description>
+    <Icon>JScript.ico</Icon>
+    <TemplateID>Microsoft.JavaScript.JavaScript</TemplateID>
+    <TemplateGroupID>JavaScript_Neutral_GroupID</TemplateGroupID>
+    <ProjectType>JavaScript</ProjectType>
+    <BlendProjectSubType>WJApplication</BlendProjectSubType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>script.js</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem>JScript.js</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

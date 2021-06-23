@@ -1,0 +1,33 @@
+// [!output SAFE_IDL_NAME].idl : [!output PROJECT_NAME].exe에 대한 형식 라이브러리 소스
+
+// 이 파일은 MIDL 컴파일러에 의해 처리되어
+// 형식 라이브러리([!output SAFE_IDL_NAME].tlb)를 생성합니다.
+
+[ uuid([!output LIBID_REGISTRY_FORMAT]), version(1.0) ]
+library [!output LIB_NAME]
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	//  [!output DOC_CLASS]의 기본 디스패치 인터페이스
+	
+	[ uuid([!output DISPIID_REGISTRY_FORMAT]) ]
+	dispinterface I[!output SAFE_PROJECT_IDENTIFIER_NAME]
+	{
+		properties:
+			
+		methods:
+	};
+
+	//  [!output DOC_CLASS]의 클래스 정보
+	
+	[ uuid([!output APP_CLSID_REGISTRY_FORMAT]) ]
+[!if APP_TYPE_DLG]
+	coclass [!output SAFE_PROJECT_IDENTIFIER_NAME]
+[!else]
+	coclass [!output DOC_CLASS]
+[!endif]
+	{
+		[default] dispinterface I[!output SAFE_PROJECT_IDENTIFIER_NAME];
+	};
+};

@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BytesAbbreviation" xml:space="preserve">
+    <value>bytes</value>
+  </data>
+  <data name="CPU_Category" xml:space="preserve">
+    <value>CPU</value>
+  </data>
+  <data name="DescriptionLabel" xml:space="preserve">
+    <value>Descripción del evento</value>
+  </data>
+  <data name="Display_Category" xml:space="preserve">
+    <value>Apariencia</value>
+  </data>
+  <data name="DownloadDataLabel" xml:space="preserve">
+    <value>Descargar datos</value>
+  </data>
+  <data name="DrillDownViewTitle" xml:space="preserve">
+    <value>Detalles</value>
+  </data>
+  <data name="DrillDownViewTooltip" xml:space="preserve">
+    <value>Detalles</value>
+  </data>
+  <data name="EnergySummaryDescriptionForSelection" xml:space="preserve">
+    <value>La región seleccionada consumió aproximadamente {0} de carga de la batería en {1}. Esta tasa de uso agotará una batería estándar completamente cargada en aproximadamente {2}.</value>
+  </data>
+  <data name="EventsTimelineAriaLabel" xml:space="preserve">
+    <value>Diagrama de Gantt desplazable que muestra la secuencia de eventos ocurridos durante la selección temporal actual. Presione las flechas arriba y abajo para navegar.</value>
+  </data>
+  <data name="GigaBytesAbbreviation" xml:space="preserve">
+    <value>GB</value>
+  </data>
+  <data name="HoursAbbreviation" xml:space="preserve">
+    <value>h.</value>
+  </data>
+  <data name="KiloBytesAbbreviation" xml:space="preserve">
+    <value>KB</value>
+  </data>
+  <data name="KiloWattAbbreviation" xml:space="preserve">
+    <value>KW</value>
+  </data>
+  <data name="KiloWattHourAbbreviation" xml:space="preserve">
+    <value>KW h.</value>
+  </data>
+  <data name="MegaBytesAbbreviation" xml:space="preserve">
+    <value>MB</value>
+  </data>
+  <data name="MillisecondsAbbreviation" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="MillisecondsLabel" xml:space="preserve">
+    <value>milisegundos</value>
+  </data>
+  <data name="MilliWattHrAbbreviation" xml:space="preserve">
+    <value>mW-h</value>
+  </data>
+  <data name="MilliWattsAbbreviation" xml:space="preserve">
+    <value>mW</value>
+  </data>
+  <data name="MinutesAbbreviation" xml:space="preserve">
+    <value>min</value>
+  </data>
+  <data name="MinutesLabel" xml:space="preserve">
+    <value>minutos</value>
+  </data>
+  <data name="Network2GState" xml:space="preserve">
+    <value>Red 2G</value>
+  </data>
+  <data name="Network3GState" xml:space="preserve">
+    <value>Red 3G</value>
+  </data>
+  <data name="Network4GState" xml:space="preserve">
+    <value>Red 4G</value>
+  </data>
+  <data name="NetworkLANState" xml:space="preserve">
+    <value>Red Ethernet</value>
+  </data>
+  <data name="NetworkTraffic" xml:space="preserve">
+    <value>Transferencia de datos</value>
+  </data>
+  <data name="NetworkWIFIState" xml:space="preserve">
+    <value>Red Wi-Fi</value>
+  </data>
+  <data name="Network_Category" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="EnergyConsumedLabel" xml:space="preserve">
+    <value>Energía consumida</value>
+  </data>
+  <data name="PowerMultilineGraphTitle" xml:space="preserve">
+    <value>Uso de potencia estimado</value>
+  </data>
+  <data name="PowerProfilerDetailsViewTitle" xml:space="preserve">
+    <value>Consumo de energía</value>
+  </data>
+  <data name="PowerProfilerToolDescription" xml:space="preserve">
+    <value>Examinar las partes de su aplicación donde se consume energía</value>
+  </data>
+  <data name="PowerProfilerToolName" xml:space="preserve">
+    <value>Consumo de energía</value>
+  </data>
+  <data name="PowerTimelineViewEventHeaderLabel" xml:space="preserve">
+    <value>Recursos (activados/desactivados)</value>
+  </data>
+  <data name="PowerUnit" xml:space="preserve">
+    <value>mW</value>
+  </data>
+  <data name="RulerAriaLabel" xml:space="preserve">
+    <value>La regla tiene un valor mínimo de {0} y un valor máximo de {1}</value>
+  </data>
+  <data name="RulerLeftSliderAriaLabel" xml:space="preserve">
+    <value>Control deslizante izquierdo</value>
+  </data>
+  <data name="RulerLifecycleMarkLabel" xml:space="preserve">
+    <value>Marca del ciclo de vida de la aplicación</value>
+  </data>
+  <data name="RulerRightSliderAriaLabel" xml:space="preserve">
+    <value>Control deslizante derecho</value>
+  </data>
+  <data name="RulerSliderAriaValueText" xml:space="preserve">
+    <value>El valor actual es {0}. El valor mínimo es {1}. El valor máximo es {2}.</value>
+  </data>
+  <data name="RulerTitle" xml:space="preserve">
+    <value>Sesión de diagnóstico</value>
+  </data>
+  <data name="RulerUserMarkLabel" xml:space="preserve">
+    <value>Marcas de usuario</value>
+  </data>
+  <data name="Ruler_LifeCycleEvents" xml:space="preserve">
+    <value>Marca del ciclo de vida de la aplicación</value>
+  </data>
+  <data name="Ruler_UserMarks" xml:space="preserve">
+    <value>Marca de usuario</value>
+  </data>
+  <data name="RulerMarkLabel" xml:space="preserve">
+    <value>Marca de regla que indica que se producen los siguientes eventos: {0}</value>
+    <comment>{0} is replaced with the tooltip content of the ruler mark(s)</comment>
+  </data>
+  <data name="SecondsAbbreviation" xml:space="preserve">
+    <value>s</value>
+  </data>
+  <data name="SecondsLabel" xml:space="preserve">
+    <value>segundos</value>
+  </data>
+  <data name="SectorToolTip" xml:space="preserve">
+    <value>{0} : {1}% ({2})</value>
+  </data>
+  <data name="SummaryViewTabTitle" xml:space="preserve">
+    <value>Resumen</value>
+  </data>
+  <data name="SummaryViewTabTooltip" xml:space="preserve">
+    <value>Resumen</value>
+  </data>
+  <data name="Total_Category" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="UploadDataLabel" xml:space="preserve">
+    <value>Cargar datos</value>
+  </data>
+  <data name="WattHrAbbreviation" xml:space="preserve">
+    <value>W h.</value>
+  </data>
+  <data name="WattsAbbreviation" xml:space="preserve">
+    <value>W</value>
+  </data>
+  <data name="EnerguSummarySectorAriaLabel" xml:space="preserve">
+    <value>{0} consume un {1}% de la energía. Energía total consumida: {2}</value>
+    <comment>{0} -&gt; Energy Consumer, {1} -&gt; percentage of energy Consumed, {2} -&gt; Energy consumed</comment>
+  </data>
+  <data name="InclusiveTimeSVGLabelString" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="summaryGraphAriaLabel" xml:space="preserve">
+    <value>Gráfico de anillos que muestra qué recurso consumió el porcentaje de energía más elevado.</value>
+  </data>
+  <data name="SummaryTitle" xml:space="preserve">
+    <value>Resumen de uso de energía estimado ({0})</value>
+    <comment>Energy Usage Summary (units)</comment>
+  </data>
+  <data name="EnergySummaryDescriptionForSession" xml:space="preserve">
+    <value>La sesión consumió aproximadamente {0} de carga de la batería en {1}. Esta tasa de uso agotará una batería estándar completamente cargada en aproximadamente {2}.</value>
+  </data>
+  <data name="RulerMarkTooltipLabel" xml:space="preserve">
+    <value> a las {0}</value>
+    <comment>placeholder 0 is replaced with the formatted time the mark fired.</comment>
+  </data>
+</root>

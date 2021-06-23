@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Define a Function with a Parameter Array</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Defines a Function that takes a variable number of parameters.</Description>
+      <Shortcut>FuncParArr</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>MethodName</ID>
+          <Type></Type>
+          <ToolTip>Replace with the name of the function.</ToolTip>
+          <Default>MyMethod</Default>
+        </Literal>
+        <Literal>
+          <ID>ParamType</ID>
+          <Type></Type>
+          <ToolTip>Replace with the data type of the parameter.</ToolTip>
+          <Default>Integer</Default>
+        </Literal>
+        <Literal>
+          <ID>ParamName</ID>
+          <Type></Type>
+          <ToolTip>Replace with the name of the parameter.</ToolTip>
+          <Default>paramOne</Default>
+        </Literal>
+        <Literal>
+          <ID>ReturnType</ID>
+          <Type></Type>
+          <ToolTip>Replace with the return type of the function.</ToolTip>
+          <Default>Integer</Default>
+        </Literal>
+        <Literal>
+          <ID>ReturnValue</ID>
+          <Type></Type>
+          <ToolTip>Replace with the return value of the function.</ToolTip>
+          <Default>0</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[Function $MethodName$(ByVal ParamArray $ParamName$() As $ParamType$) As $ReturnType$
+    For index = 0 To $paramName$.Length - 1
+
+    Next
+    Return $ReturnValue$
+End Function]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

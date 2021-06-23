@@ -1,0 +1,14 @@
+[$RootKey$\Packages\{dfe21000-2a85-444f-8c75-f28376aa1c0f}]
+@="PlaceholderProjectPackage"
+"InprocServer32"="$WinDir$\system32\MSCOREE.DLL"
+"Class"="Microsoft.VisualStudio.VsipSupport.PlaceholderProject.PlaceholderProjectPackage"
+"Assembly"="Microsoft.VisualStudio.VsipSupport.PlaceholderProject,version=12.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+[$RootKey$\Projects\{57c4a424-b37b-4482-bbbc-ac0311b7e048}]
+@="Placeholder Project"
+"Package"="{dfe21000-2a85-444f-8c75-f28376aa1c0f}"
+[$RootKey$\RuntimeConfiguration\dependentAssembly\codeBase\{dfe21000-2a85-444f-8c75-f28376aa1c0f}]
+"name"="Microsoft.VisualStudio.VsipSupport.PlaceholderProject"
+"publicKeyToken"="b03f5f7f11d50a3a"
+"culture"="neutral"
+"version"="12.0.0.0"
+"codeBase"="$PackageFolder$\Microsoft.VisualStudio.VsipSupport.PlaceholderProject.dll"

@@ -1,0 +1,16 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{462b036f-7349-4835-9e21-bec60e989b9c}" ID="3134" />
+    <Description Package="{462b036f-7349-4835-9e21-bec60e989b9c}" ID="3135" />
+    <Icon Package="{462b036f-7349-4835-9e21-bec60e989b9c}" ID="4502" />
+    <ProjectType>VisualBasic</ProjectType>
+    <TemplateGroupID>SqlServerProjects</TemplateGroupID>
+    <TemplateID>SqlStoredProcedure</TemplateID>
+    <ShowByDefault>false</ShowByDefault>
+    <SortOrder>1</SortOrder>
+    <DefaultName>StoredProcedure.vb</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true">StoredProcedure.vb</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

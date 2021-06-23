@@ -1,0 +1,38 @@
+[$RootKey$\Packages\{001ec92e-f8a6-48eb-8c07-c2a41a7da51a}]
+@="SQL Data Compare Package"
+"Assembly"="Microsoft.VisualStudio.Data.Tools.DataCompare, VSPackage, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"Class"="Microsoft.VisualStudio.Data.Tools.DataCompare.VSPackage"
+"CodeBase"="$RootFolder$Common7\IDE\Extensions\Microsoft\SQLDB\Microsoft.VisualStudio.Data.Tools.DataCompare.dll"
+"CompanyName"="Microsoft Corporation"
+"ID"=dword:00000065
+"InprocServer32"="$WinDir$\SYSTEM32\MSCOREE.DLL"
+"ProductName"="Microsoft SQL Server Data Tools"
+
+[$RootKey$\Menus]
+"{001ec92e-f8a6-48eb-8c07-c2a41a7da51a}"=", Menus.ctmenu, 1"
+
+[$RootKey$\Editors\{001fbb15-95c6-42b2-b6a2-509a4c60fd02}]
+@="Data Compare"
+"DisplayName"="#120"
+"Package"="{001ec92e-f8a6-48eb-8c07-c2a41a7da51a}"
+
+[$RootKey$\Editors\{001fbb15-95c6-42b2-b6a2-509a4c60fd02}\Extensions]
+"dcmp"=dword:00000042
+
+[$RootKey$\Editors\{001fbb15-95c6-42b2-b6a2-509a4c60fd02}\LogicalViews]
+"{7651A702-06E5-11D1-8EBD-00A0C90F26EA}"=""
+
+[$RootKey$\ToolsOptionsPages\SQL Server Tools\Data Compare]
+@="#110"
+"Package"="{001ec92e-f8a6-48eb-8c07-c2a41a7da51a}"
+"Page"="{00578903-3fe9-4988-a0a6-a8eda7a1421c}"
+
+[$RootKey$\AutomationProperties\SQL Server Tools\Data Compare]
+"Name"="SQL Server Tools.Data Compare"
+"Package"="{001ec92e-f8a6-48eb-8c07-c2a41a7da51a}"
+
+[$RootKey$\AutoLoadPackages\{fbcae063-e2c0-4ab1-a516-996ea3dafb72}]
+"{001ec92e-f8a6-48eb-8c07-c2a41a7da51a}"=dword:00000000
+
+[$RootKey$\Editors\{001ec92e-f8a6-48eb-8c07-c2a41a7da51a}\Extensions]
+"dcmp"=dword:00000042

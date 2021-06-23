@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Convert Color to OLE Color</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Converts a System.Drawing.Color object to the OLE color format.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations>
+        <Literal Editable="true">
+          <ID>oleColor</ID>
+          <Type>System.Int</Type>
+          <ToolTip>Replace with an integer to store the OLE color in.</ToolTip>
+          <Default>0xFF00</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>color</ID>
+          <Type>System.Drawing.Color</Type>
+          <ToolTip>Replace with a Color object to convert to OLE format.</ToolTip>
+          <Default>color</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="CSharp" Kind="" Delimiter="$"><![CDATA[
+$oleColor$ = ColorTranslator.ToOle($color$);
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

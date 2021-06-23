@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Filter a List Object</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Sets the filter options for an Excel list object.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Excel.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Excel = Microsoft.Office.Interop.Excel</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>column</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with the column to filter.</ToolTip>
+          <Default>1</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>criteria1</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the criteria as a string. Use "=" for blanks, "&lt;&gt;" for nonblanks. Default is "All". If Operator is xlTop10Items, this is the number of items (for example, "10").</ToolTip>
+          <Default>"="</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>operator</ID>
+          <Type>Excel.XlAutoFilterOperator</Type>
+          <ToolTip>Replace with the operator. From the XlAutoFilterOperator enum, choose xlTop10Items, xlBottom10Items, xlTop10Percent, xlBottom10Percent, xlAnd or xlOr.</ToolTip>
+          <Default>xlTop10Items</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>criteria2</ID>
+          <Type>XlAutoFilterOperator</Type>
+          <ToolTip>Replace with the second criteria as a string. Used with criteria1 and operator to construct compound criteria when operator is xlAnd or xlOr.</ToolTip>
+          <Default>xlAnd</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>visibleDropDown</ID>
+          <Type>Boolean</Type>
+          <ToolTip>Replace with a Boolean value. Shows or hides the drop-down arrow on the list object.</ToolTip>
+          <Default>True</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>listObject</ID>
+          <Type>Microsoft.Office.Interop.Excel.ListObject</Type>
+          <ToolTip>Replace with the list object to filter.</ToolTip>
+          <Default>listObject</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="" Delimiter="$"><![CDATA[
+$listObject$.Range.AutoFilter( Field:=$column$, _
+                               Criteria1:=$criteria1$, _
+                               Operator:=Excel.XlAutoFilterOperator.$operator$, _
+                               Criteria2:=$criteria2$, _
+                               VisibleDropDown:=$visibleDropDown$)
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

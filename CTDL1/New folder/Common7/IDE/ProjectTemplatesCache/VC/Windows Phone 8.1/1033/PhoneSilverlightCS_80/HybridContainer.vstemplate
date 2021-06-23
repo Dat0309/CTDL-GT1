@@ -1,0 +1,31 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="ProjectGroup">
+  <TemplateData>
+    <Name Package="{1B027A40-8F43-11D0-8D11-00A0C91BC942}" ID="3256" />
+    <Description Package="{1B027A40-8F43-11D0-8D11-00A0C91BC942}" ID="3257" />
+    <ProjectType>VC</ProjectType>
+    <ProjectSubType>WindowsPhone</ProjectSubType>
+    <TemplateID>Microsoft.WindowsPhone.CSharp.HybridContainer</TemplateID>
+    <TemplateGroupID>Windows Phone</TemplateGroupID>
+    <SortOrder>80</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>SilverlightDirect3DInterop</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__templateicon.ico</Icon>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <PreviewImage>preview.png</PreviewImage>
+    <TargetPlatformName>WindowsPhone</TargetPlatformName>
+    <RequiredPlatformVersion>6.2.0</RequiredPlatformVersion>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+      <ProjectTemplateLink ProjectName="$projectname$">D3DInteropApp\D3DInteropApp.vstemplate</ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$projectname$Comp">D3DInteropComp\D3DInteropComp.vstemplate</ProjectTemplateLink>
+    </ProjectCollection>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SmartDevice.ProjectSystem.Base, Version=12.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SmartDevice.ProjectSystem.Wizards.ProjectTemplateWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

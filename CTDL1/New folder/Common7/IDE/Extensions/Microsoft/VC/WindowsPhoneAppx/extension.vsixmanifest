@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+   <Metadata>
+    <Identity Id="WindowsPhone8.1.NativeProjectSystem.Microsoft IT.B2656F14-3E31-4BE8-9C4A-3B61A5BD7F7A" Version="1.0" Language="en-US" Publisher="Microsoft" />
+    <DisplayName>WindowsPhoneAppNativeProjectSystem</DisplayName>
+    <Description>The Native Project System for Windows Phone App</Description>
+  </Metadata>
+  <Installation InstalledByMsi="false" SystemComponent="true">
+    <InstallationTarget Version="12.0" Id="Microsoft.VisualStudio.Pro" />
+  </Installation>
+  <Dependencies/>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="$RootFolder$Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.SmartDevice.NativeProjectSystem.Appx.dll" />
+  </Assets>
+</PackageManifest>

@@ -1,0 +1,17 @@
+﻿.flexbox-horizontal
+{
+	display: flex;
+	flex-direction: row;
+}
+.flexbox-horizontal div:empty
+{
+	background-image: linear-gradient(60deg, black, rgba(193, 193, 193, 0.498) 42.6%, rgb(121, 121, 121) 52.6%, black);
+	background-size: 8px 8px;
+	opacity: 0.2;
+	border: 1px solid #101010;
+}
+.flexbox-horizontal > div
+{
+	width: 200px;
+	height: 200px;
+}

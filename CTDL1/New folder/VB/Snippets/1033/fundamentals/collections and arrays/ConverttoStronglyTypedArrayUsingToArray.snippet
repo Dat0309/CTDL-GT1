@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Convert an ArrayList to a Strongly Typed Array</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Converts an ArrayList to a strongly typed array using ToArray(Type)</Description>
+      <Shortcut>arrConv</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Collections</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>Datatype</ID>
+          <Type />
+          <ToolTip>Replace with the type to convert to.</ToolTip>
+          <Default>String</Default>
+        </Literal>
+        <Object>
+          <ID>ExistingArray</ID>
+          <Type>ArrayList</Type>
+          <ToolTip>Replace with the existing ArrayList to convert.</ToolTip>
+          <Default>existingArrayList</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim newArray() As $Datatype$ = CType($ExistingArray$.ToArray(GetType($Datatype$)), $Datatype$())]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

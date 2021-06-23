@@ -1,0 +1,38 @@
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Boş Depo Alt Şablonu</Name>
+    <Description>Boş Paylaşılan Varlık Projesi için Depo Alt Şablonu.</Description>
+    <ProjectType>JavaScript</ProjectType>
+    <CreateNewFolder>false</CreateNewFolder>
+    <BlendCreateNewFolder>true</BlendCreateNewFolder>
+    <DefaultName>App</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <TargetPlatformName>Windows</TargetPlatformName>
+    <RequiredPlatformVersion>6.3.0</RequiredPlatformVersion>
+    <CreateInPlace>true</CreateInPlace>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="Application.Store.jsproj" ReplaceParameters="true">
+      <ProjectItem TargetFileName="default.html" ReplaceParameters="true" BlendOpenInEditor="true">default.html</ProjectItem>
+      <ProjectItem TargetFileName="package.appxmanifest" ReplaceParameters="true">package.appxmanifest</ProjectItem>
+      <ProjectItem TargetFileName="images\logo.png">logo@scale-1x.png</ProjectItem>
+      <ProjectItem TargetFileName="images\smalllogo.png">smalllogo@scale-1x.png</ProjectItem>
+      <ProjectItem TargetFileName="images\splashscreen.png">splashscreen@scale-1x.png</ProjectItem>
+      <ProjectItem TargetFileName="images\storelogo.png">storelogo@scale-1x.png</ProjectItem>
+      <ProjectItem TargetFileName="css\default.css">default.css</ProjectItem>
+      <ProjectItem TargetFileName="pages\hub\hub.html" ReplaceParameters="true">hub.html</ProjectItem>
+      <ProjectItem TargetFileName="pages\hub\hub.css">hub.css</ProjectItem>
+      <ProjectItem TargetFileName="pages\section\section.html">section.html</ProjectItem>
+      <ProjectItem TargetFileName="pages\section\section.js">section.js</ProjectItem>
+      <ProjectItem TargetFileName="pages\section\section.css">section.css</ProjectItem>
+      <ProjectItem TargetFileName="pages\hub\section3Page.html">section3Page.html</ProjectItem>
+      <ProjectItem TargetFileName="$ext_safeprojectname$_TemporaryKey.pfx" ReplaceParameters="false" BlendDoNotCreate="true">Application_TemporaryKey.pfx</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.WinRT.TemplateWizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.WinRT.TemplateWizards.CreateProjectCertificate.Wizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

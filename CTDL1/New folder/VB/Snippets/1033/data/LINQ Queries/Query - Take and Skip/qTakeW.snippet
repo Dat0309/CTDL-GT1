@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Take While</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>A query that Takes While a specific condition is true.</Description>
+      <Shortcut>qTakeW</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>queryResult</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the query.</ToolTip>
+          <Default>query</Default>
+        </Literal>
+        <Literal>
+          <ID>item</ID>
+          <Type>item</Type>
+          <ToolTip>Replace with the identifier for the variable that represents an item from your data source.</ToolTip>
+          <Default>fruit</Default>
+        </Literal>
+        <Literal>
+          <ID>dataSource</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the idetnfier for your data source.</ToolTip>
+          <Default>New String() {"apple", "orange", "pear", "banana", "strawberry", "blueberry"}</Default>
+        </Literal>
+        <Literal>
+          <ID>orderField</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the field to order the query by.</ToolTip>
+          <Default>ToUpper()</Default>
+        </Literal>
+        <Literal>
+          <ID>orderDirection</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the direction in which the field is ordered (Ascending/Descending).</ToolTip>
+          <Default>Descending</Default>
+        </Literal>
+        <Literal>
+          <ID>takeField</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with the field being used to determine when to stop taking.</ToolTip>
+          <Default>Length</Default>
+        </Literal>
+        <Literal>
+          <ID>takeCondition</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with the condition used to determine when to stop taking.</ToolTip>
+          <Default>> 5</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim $queryResult$ = From $item$ In $dataSource$ _
+                    Order By $item$.$orderField$ $orderDirection$ _
+                    take While $item$.$takeField$ $takeCondition$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

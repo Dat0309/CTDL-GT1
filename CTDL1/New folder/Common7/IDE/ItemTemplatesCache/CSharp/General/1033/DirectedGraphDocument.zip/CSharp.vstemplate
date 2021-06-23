@@ -1,0 +1,19 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+		<Name Package="{AD1A73B0-C489-4c9c-B1FE-EEA54CD19A4F}" ID="101"/>
+		<Description Package="{AD1A73B0-C489-4c9c-B1FE-EEA54CD19A4F}" ID="102"/>
+		<Icon Package="{AD1A73B0-C489-4c9c-B1FE-EEA54CD19A4F}" ID="201" />
+		<ProjectType>CSharp</ProjectType>
+		<TemplateID>Microsoft.CSharp.GraphModel.DirectedGraph</TemplateID>
+		<SortOrder>360</SortOrder>
+		<NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+        <DefaultName>Graph.dgml</DefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem TargetFileName="$fileinputname$.dgml">graph.dgml</ProjectItem>
+	</TemplateContent>
+	<WizardExtension>
+		<Assembly>Microsoft.VSDesigner, Version=10.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+		<FullClassName>Microsoft.VSDesigner.ProjectWizard.ItemPropertyWizard</FullClassName>
+	</WizardExtension>
+</VSTemplate>

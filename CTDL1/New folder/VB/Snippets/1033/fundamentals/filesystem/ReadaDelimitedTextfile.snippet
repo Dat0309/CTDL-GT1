@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Read a Delimited Text File</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Returns the values in each column and row from a text file with comma-delimited data. Other delimiters may be used.</Description>
+      <Shortcut>filParseText</Shortcut>
+    </Header>
+    <Snippet>
+	<Imports>
+          <Import>
+            <Namespace>Microsoft.VisualBasic.FileIO</Namespace>
+          </Import>
+  </Imports>
+      <Declarations>
+        <Literal>
+          <ID>Filename</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the file name of the text file.</ToolTip>
+          <Default>"C:\Test.txt"</Default>
+        </Literal>
+        <Literal>
+          <ID>Delimiter</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the delimiter strings.</ToolTip>
+          <Default>","</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim filename As String = $Filename$
+        Dim fields As String()
+        Dim delimiter As String = $Delimiter$
+        Using parser As New TextFieldParser(filename)
+            parser.SetDelimiters(delimiter)
+            While Not parser.EndOfData
+                ' Read in the fields for the current line
+                fields = parser.ReadFields()
+                ' Add code here to use data in fields variable.
+
+            End While
+        End Using]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

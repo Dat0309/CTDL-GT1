@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Find all descendant elements in XML data by using the element name</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Locates all descendant elements in an XML file by element name.</Description>
+      <Shortcut>xmlDesc</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.XML.Linq.dll</Assembly>          
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Xml.Linq</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>TagName</ID>
+          <Type>XName</Type>
+          <ToolTip>Replace with the qualified name of the element. </ToolTip>
+          <Default>ElementName</Default>
+        </Literal>
+        <Object>
+          <ID>XmlVariable</ID>
+          <Type>XElement</Type>
+          <ToolTip>Replace with an XElement variable.</ToolTip>
+          <Default>xmlEle</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim childElements = $XmlVariable$...<$TagName$>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

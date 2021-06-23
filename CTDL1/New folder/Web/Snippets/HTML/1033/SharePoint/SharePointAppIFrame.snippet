@@ -1,0 +1,21 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>spappiframe</Title>
+    <Author>Microsoft Corporation</Author>
+    <Shortcut>spif</Shortcut>
+    <Description>Markup snippet for a SharePoint SPAppIFrame control</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>srcUrl</ID>
+        <ToolTip>URL of the page to show in an AppIFrame</ToolTip>
+        <Default>http://example.com/MyPage.aspx</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="html"><![CDATA[<SharePoint:SPAppIFrame runat="server" src="$srcUrl$"></SharePoint:SPAppIFrame>$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

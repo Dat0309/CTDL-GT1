@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Get XML from a Range</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Gets the XML data without the WordML markup from a range in a Word document.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Word.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Word = Microsoft.Office.Interop.Word</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object Editable="true">
+          <ID>xmlData</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with a string variable to store the XML data in.</ToolTip>
+          <Default>xmlData</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>range</ID>
+          <Type>Microsoft.Office.Interop.Word.Range</Type>
+          <ToolTip>Replace with the range to get the XML data from.</ToolTip>
+          <Default>range</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="" Delimiter="$"><![CDATA[
+$xmlData$ = $range$.XML(true)
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

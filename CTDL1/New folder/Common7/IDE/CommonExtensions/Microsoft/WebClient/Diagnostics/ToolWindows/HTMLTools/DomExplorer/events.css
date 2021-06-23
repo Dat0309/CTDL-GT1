@@ -1,0 +1,14 @@
+﻿.BPT-Events-EventName {
+    color: #FF0000;                  /* [{plugin-font-editor-html-attribute-name-color}] */
+    -ms-grid-column: 2;
+}
+
+.BPT-Events-Function-Name {
+    float: left;
+}
+
+.BPT-Events-Location {
+    float: right;
+    margin-left: 10px;
+    margin-right: 4px;
+}

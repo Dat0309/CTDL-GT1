@@ -1,0 +1,15 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{DD1683A7-5A4C-4234-81B3-A4CC91DBEAC9}" ID="102"/>
+    <Description Package="{DD1683A7-5A4C-4234-81B3-A4CC91DBEAC9}" ID="103"/>
+    <Icon Package="{DD1683A7-5A4C-4234-81B3-A4CC91DBEAC9}" ID="101"/>
+    <TemplateID>Microsoft.Web.VisualBasic.ClassDiagram</TemplateID>
+    <ProjectType>Web</ProjectType>
+    <ProjectSubType>VisualBasic</ProjectSubType>
+    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+    <DefaultName>ClassDiagram.cd</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem>ClassDiagram.cd</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

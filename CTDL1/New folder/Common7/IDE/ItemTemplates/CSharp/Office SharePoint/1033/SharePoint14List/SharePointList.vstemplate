@@ -1,0 +1,74 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="357" />
+    <Description Package ="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID ="358" />
+    <Icon Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="233" />
+    <TemplateID>SharePoint14List_CS_ITEM</TemplateID>
+    <RequiredFrameworkVersion>3.5</RequiredFrameworkVersion>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>40</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>List</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <CreateInPlace>true</CreateInPlace>
+    <TemplateGroupID>SharePointItemTemplateGroupID</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+  </TemplateData>
+  <TemplateContent>
+    <!-- The order of the spdata files are important, the list instance needs to be added before the list definition. -->
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ListInstanceFolder$\SharePointProjectItem.spdata" OpenInEditor="false">Instance\ListInstance.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ProjectItemName$\SharePointProjectItem.spdata" OpenInEditor="false">SharePointList.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ListInstanceFolder$\Elements.xml" OpenInEditor="false">Instance\Elements.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ProjectItemName$\Elements.xml" OpenInEditor="false">AnnouncementsList\Elements.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ProjectItemName$\Schema.xml" OpenInEditor="false">AnnouncementsList\schema.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ProjectItemName$\Elements.xml" OpenInEditor="false">CalendarList\Elements.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ProjectItemName$\Schema.xml" OpenInEditor="false">CalendarList\schema.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ProjectItemName$\Elements.xml" OpenInEditor="false">ContactsList\Elements.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ProjectItemName$\Schema.xml" OpenInEditor="false">ContactsList\schema.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ProjectItemName$\Elements.xml" OpenInEditor="false">CustomList\Elements.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ProjectItemName$\Schema.xml" OpenInEditor="false">CustomList\schema.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ProjectItemName$\Elements.xml" OpenInEditor="false">DocumentLibrary\Elements.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ProjectItemName$\Schema.xml" OpenInEditor="false">DocumentLibrary\schema.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ProjectItemName$\EditDlg.htm" OpenInEditor="false">DocumentLibrary\EditDlg.htm</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ProjectItemName$\FileDlg.htm" OpenInEditor="false">DocumentLibrary\FileDlg.htm</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ProjectItemName$\Repair.aspx" OpenInEditor="false">DocumentLibrary\Repair.aspx</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ProjectItemName$\Upload.aspx" OpenInEditor="false">DocumentLibrary\Upload.aspx</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ProjectItemName$\Elements.xml" OpenInEditor="false">LinksList\Elements.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ProjectItemName$\Schema.xml" OpenInEditor="false">LinksList\schema.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ProjectItemName$\Elements.xml" OpenInEditor="false">TasksList\Elements.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ProjectItemName$\Schema.xml" OpenInEditor="false">TasksList\schema.xml</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="SharePointProjectTemplateAttributes" Value="ProjectItem"/>
+      <CustomParameter Name="SharePointProjectParentFilter" Value="General;ProjectItem"/>
+      <CustomParameter Name="$TemplateType$" Value="104"/>
+      <CustomParameter Name="$ProjectItemName$" Value="$fileinputname$"/>
+      <CustomParameter Name="$loc_ListInstanceDescription$" _locID="$loc_ListInstanceDescription$" _locAttrData="Value" Value="My List Instance" />
+      <CustomParameter Name="$loc_ListTemplateDescription$" _locID="$loc_ListTemplateDescription$" _locAttrData="Value" Value="My List Definition" />
+      <CustomParameter Name="$loc_NameAttributeComment$" _locID="$loc_NameAttributeComment$" _locAttrData="Value" Value="Do not change the value of the Name attribute below. If it does not match the folder name of the List project item, an error will occur when the project is run." />
+      <CustomParameter Name="$loc_ListDefAnnouncements$" _locID="$loc_ListDefAnnouncements$" _locAttrData="Value" Value="Announcements" />
+      <CustomParameter Name="$loc_ListDefCalendar$" _locID="$loc_ListDefCalendar$" _locAttrData="Value" Value="Calendar" />
+      <CustomParameter Name="$loc_ListDefContacts$" _locID="$loc_ListDefContacts$" _locAttrData="Value" Value="Contacts" />
+      <CustomParameter Name="$loc_ListDefCustomList$" _locID="$loc_ListDefCustomList$" _locAttrData="Value" Value="Custom List" />
+      <CustomParameter Name="$loc_ListDefDocumentLibrary$" _locID="$loc_ListDefDocumentLibrary$" _locAttrData="Value" Value="Document Library" />
+      <CustomParameter Name="$loc_ListDefLinks$" _locID="$loc_ListDefLinks$" _locAttrData="Value" Value="Links" />
+      <CustomParameter Name="$loc_ListDefTasks$" _locID="$loc_ListDefTasks$" _locAttrData="Value" Value="Tasks" />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.ListWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <ListDefinitionData>
+      <ListDefinitions>
+        <ListDefinition Name="$loc_ListDefAnnouncements$" TemplateFolder="AnnouncementsList" TemplateType="104" />
+        <ListDefinition Name="$loc_ListDefCalendar$" TemplateFolder="CalendarList" TemplateType="106" />
+        <ListDefinition Name="$loc_ListDefContacts$" TemplateFolder="ContactsList" TemplateType="105" />
+        <ListDefinition Name="$loc_ListDefCustomList$" TemplateFolder="CustomList" TemplateType="100" />
+        <ListDefinition Name="$loc_ListDefDocumentLibrary$" TemplateFolder="DocumentLibrary" TemplateType="101" />
+        <ListDefinition Name="$loc_ListDefLinks$" TemplateFolder="LinksList" TemplateType="103" />
+        <ListDefinition Name="$loc_ListDefTasks$" TemplateFolder="TasksList" TemplateType="107" />
+      </ListDefinitions>
+    </ListDefinitionData>
+  </WizardData>
+</VSTemplate>

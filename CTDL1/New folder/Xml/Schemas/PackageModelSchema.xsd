@@ -1,0 +1,1947 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema id="PackageModelSchema" targetNamespace="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" elementFormDefault="qualified" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" xmlns:core="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import id="CoreSchema" namespace="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" />
+  <!-- PackageManifest -->
+  <xsd:element name="packageManifest" abstract="true" type="PackageManifest" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="PackageManifest" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents the manifest of a SharePoint Package.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: PackageManifestHasApplicationResourceFiles -->
+          <xsd:element name="applicationResourceFiles" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of PackageManifestHasApplicationResourceFiles</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="packageManifestHasApplicationResourceFiles">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from PackageManifestHasApplicationResourceFiles needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="applicationResource" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: PackageManifestHasAssemblies -->
+          <xsd:element name="assemblies" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of PackageManifestHasAssemblies</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="packageManifestHasAssemblies">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from PackageManifestHasAssemblies needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="assembly" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: PackageManifestHasDwpFiles -->
+          <xsd:element name="dwpFiles" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of PackageManifestHasDwpFiles</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="packageManifestHasDwpFiles">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from PackageManifestHasDwpFiles needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="dwpFile" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: PackageManifestHasResources -->
+          <xsd:element name="resources" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of PackageManifestHasResources</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="packageManifestHasResources">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from PackageManifestHasResources needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="resource" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: PackageManifestHasRootFiles -->
+          <xsd:element name="rootFiles" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of PackageManifestHasRootFiles</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="packageManifestHasRootFiles">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from PackageManifestHasRootFiles needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="rootFile" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: PackageManifestHasSiteDefinitionManifests -->
+          <xsd:element name="siteDefinitionManifests" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of PackageManifestHasSiteDefinitionManifests</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="packageManifestHasSiteDefinitionManifests">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from PackageManifestHasSiteDefinitionManifests needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="siteDefinitionManifest" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: PackageManifestHasTemplateFiles -->
+          <xsd:element name="templateFiles" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of PackageManifestHasTemplateFiles</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="packageManifestHasTemplateFiles">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from PackageManifestHasTemplateFiles needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="templateFile" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: PackageManifestHasFeatureManifests -->
+          <xsd:element name="featureManifests" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of PackageManifestHasFeatureManifests</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="packageManifestHasFeatureManifests">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from PackageManifestHasFeatureManifests needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="featureManifestReference" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: PackageManifestHasPolicyItems -->
+          <xsd:element name="policyItems" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of PackageManifestHasPolicyItems</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="packageManifestHasPolicyItems">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from PackageManifestHasPolicyItems needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="policyItem" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: PackageManifestHasActivationDependencies -->
+          <xsd:element name="activationDependencies" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of PackageManifestHasActivationDependencies</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="packageManifestHasActivationDependencies">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from PackageManifestHasActivationDependencies needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="solutionActivationDependency" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Property: SolutionId -->
+        <xsd:attribute name="solutionId" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The ID of the Package.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ResetWebServer -->
+        <xsd:attribute name="resetWebServer" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Indicates whether IIS will be restarted after installing the Package.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: DeploymentServerType -->
+        <xsd:attribute name="deploymentServerType" type="DeploymentServerType" >
+          <xsd:annotation>
+            <xsd:documentation>The type of server that will host the Package.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Title -->
+        <xsd:attribute name="title" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The title of the Package.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Description -->
+        <xsd:attribute name="description" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The description of the Package.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ResetWebServerModeOnUpgrade -->
+        <xsd:attribute name="resetWebServerModeOnUpgrade" type="ResetWebServerModeOnUpgrade" >
+          <xsd:annotation>
+            <xsd:documentation>Indicates how IIS will be restarted after upgrading the package.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: SharePointProductVersion -->
+        <xsd:attribute name="sharePointProductVersion" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Specifies the version number of the SharePoint product targeted by your project in &quot;&lt;major&gt;.&lt;minor&gt;&quot; format, such as &quot;14.0&quot;. SharePoint uses this property for compatibility purposes.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PackageManifest Moniker -->
+  <xsd:element name="packageManifestMoniker" abstract="true" type="PackageManifestMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="PackageManifestMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for PackageManifest instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- FeatureReference -->
+  <xsd:element name="featureReference" type="FeatureReference" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="FeatureReference">
+    <xsd:annotation>
+      <xsd:documentation>Represents a reference to a Feature in a Package.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Property: ItemId -->
+        <xsd:attribute name="itemId" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The ID of the Feature.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ProjectPath -->
+        <xsd:attribute name="projectPath" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The path to the project file to which the referenced Feature belongs.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- FeatureReference Moniker -->
+  <xsd:element name="featureReferenceMoniker" abstract="true" type="FeatureReferenceMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="FeatureReferenceMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for FeatureReference instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ProjectItemReference -->
+  <xsd:element name="projectItemReference" type="ProjectItemReference" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ProjectItemReference">
+    <xsd:annotation>
+      <xsd:documentation>Represents a reference to a Project Item in a Package.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Property: ItemId -->
+        <xsd:attribute name="itemId" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The ID of the Project Item.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ProjectPath -->
+        <xsd:attribute name="projectPath" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The path to the project file to which the referenced item belongs.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ProjectItemReference Moniker -->
+  <xsd:element name="projectItemReferenceMoniker" abstract="true" type="ProjectItemReferenceMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ProjectItemReferenceMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ProjectItemReference instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ApplicationResource -->
+  <xsd:element name="applicationResource" abstract="true" type="ApplicationResource" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ApplicationResource" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents an application resource file.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Property: Location -->
+        <xsd:attribute name="location" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The relative location within the Package that contains the application resource file.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ApplicationResource Moniker -->
+  <xsd:element name="applicationResourceMoniker" abstract="true" type="ApplicationResourceMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ApplicationResourceMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ApplicationResource instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Assembly -->
+  <xsd:element name="assembly" type="Assembly" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="Assembly">
+    <xsd:annotation>
+      <xsd:documentation>Represents an assembly.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: AssemblyHasSafeControls -->
+          <xsd:element name="safeControls" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of AssemblyHasSafeControls</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="assemblyHasSafeControls">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from AssemblyHasSafeControls needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="safeControl" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: AssemblyHasClassResources -->
+          <xsd:element name="classResources" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of AssemblyHasClassResources</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="assemblyHasClassResources">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from AssemblyHasClassResources needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="classResource" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: AssemblyHasBindingRedirects -->
+          <xsd:element name="bindingRedirects" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of AssemblyHasBindingRedirects</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="assemblyHasBindingRedirects">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from AssemblyHasBindingRedirects needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="bindingRedirect" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Property: Location -->
+        <xsd:attribute name="location" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The relative location within the Package that contains the assembly.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: DeploymentTarget -->
+        <xsd:attribute name="deploymentTarget" type="DeploymentTarget" >
+          <xsd:annotation>
+            <xsd:documentation>Specifies where the assembly will be deployed on the server.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Assembly Moniker -->
+  <xsd:element name="assemblyMoniker" abstract="true" type="AssemblyMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="AssemblyMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Assembly instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- SafeControl -->
+  <xsd:element name="safeControl" type="SafeControl" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="SafeControl">
+    <xsd:annotation>
+      <xsd:documentation>Represents a safe control.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Property: AssemblyName -->
+        <xsd:attribute name="assemblyName" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The fully-qualified name of the assembly that contains the control.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: NamespaceName -->
+        <xsd:attribute name="namespaceName" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The namespace of the control.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsSafe -->
+        <xsd:attribute name="isSafe" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Indicates whether the control is safe.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: TypeName -->
+        <xsd:attribute name="typeName" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The class name of the control.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsSafeAgainstScript -->
+        <xsd:attribute name="isSafeAgainstScript" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Specifies whether the control prevents script injection by contributors and, therefore, allows contributors to edit the control.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- SafeControl Moniker -->
+  <xsd:element name="safeControlMoniker" abstract="true" type="SafeControlMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="SafeControlMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for SafeControl instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ClassResource -->
+  <xsd:element name="classResource" type="ClassResource" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ClassResource">
+    <xsd:annotation>
+      <xsd:documentation>Represents a class resource file.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Property: SourcePath -->
+        <xsd:attribute name="sourcePath" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The name of the class resource file.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Location -->
+        <xsd:attribute name="location" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The relative location within the Package that contains the class resource file.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ClassResource Moniker -->
+  <xsd:element name="classResourceMoniker" abstract="true" type="ClassResourceMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ClassResourceMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ClassResource instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PolicyItem -->
+  <xsd:element name="policyItem" type="PolicyItem" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="PolicyItem">
+    <xsd:annotation>
+      <xsd:documentation>Represents a code access security (CAS) policy.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: PolicyItemHasAssemblies -->
+          <xsd:element name="assemblies" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of PolicyItemHasAssemblies</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="policyItemHasAssemblies">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from PolicyItemHasAssemblies needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="codeAccessSecurityAssembly" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: PolicyItemHasPermissions -->
+          <xsd:element name="permissions" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of PolicyItemHasPermissions</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="policyItemHasPermissions">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from PolicyItemHasPermissions needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="permissionElement" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Property: Description -->
+        <xsd:attribute name="description" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The description of the permission set.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The name of the permission set.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Version -->
+        <xsd:attribute name="version" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The version number of the permission set.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PolicyItem Moniker -->
+  <xsd:element name="policyItemMoniker" abstract="true" type="PolicyItemMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="PolicyItemMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for PolicyItem instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CodeAccessSecurityAssembly -->
+  <xsd:element name="codeAccessSecurityAssembly" type="CodeAccessSecurityAssembly" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="CodeAccessSecurityAssembly">
+    <xsd:annotation>
+      <xsd:documentation>Represents an assembly in a code access security (CAS) policy.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The fully-qualified name of the assembly.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: PublicKeyBlob -->
+        <xsd:attribute name="publicKeyBlob" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The public key of the assembly, in binary format.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Version -->
+        <xsd:attribute name="version" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The version of the assembly.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CodeAccessSecurityAssembly Moniker -->
+  <xsd:element name="codeAccessSecurityAssemblyMoniker" abstract="true" type="CodeAccessSecurityAssemblyMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="CodeAccessSecurityAssemblyMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for CodeAccessSecurityAssembly instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DwpFile -->
+  <xsd:element name="dwpFile" type="DwpFile" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="DwpFile">
+    <xsd:annotation>
+      <xsd:documentation>Represents a Web Part file.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Property: Location -->
+        <xsd:attribute name="location" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The relative location within the Package that contains the web part.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DwpFile Moniker -->
+  <xsd:element name="dwpFileMoniker" abstract="true" type="DwpFileMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="DwpFileMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for DwpFile instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Resource -->
+  <xsd:element name="resource" type="Resource" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="Resource">
+    <xsd:annotation>
+      <xsd:documentation>Represents a resource file.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Property: Location -->
+        <xsd:attribute name="location" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The relative location within the Package that contains the resource file.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Resource Moniker -->
+  <xsd:element name="resourceMoniker" abstract="true" type="ResourceMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ResourceMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Resource instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- RootFile -->
+  <xsd:element name="rootFile" type="RootFile" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="RootFile">
+    <xsd:annotation>
+      <xsd:documentation>Represents a root file.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Property: Location -->
+        <xsd:attribute name="location" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The relative location within the Package that contains the root file.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- RootFile Moniker -->
+  <xsd:element name="rootFileMoniker" abstract="true" type="RootFileMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="RootFileMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for RootFile instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- SiteDefinitionManifest -->
+  <xsd:element name="siteDefinitionManifest" type="SiteDefinitionManifest" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="SiteDefinitionManifest">
+    <xsd:annotation>
+      <xsd:documentation>Represents a site definition manifest file.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: SiteDefinitionManifestHasWebTempFiles -->
+          <xsd:element name="webTempFiles" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of SiteDefinitionManifestHasWebTempFiles</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="siteDefinitionManifestHasWebTempFiles">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from SiteDefinitionManifestHasWebTempFiles needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="webTempFile" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Property: Location -->
+        <xsd:attribute name="location" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The relative location within the Package that contains the site definition manifest file.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- SiteDefinitionManifest Moniker -->
+  <xsd:element name="siteDefinitionManifestMoniker" abstract="true" type="SiteDefinitionManifestMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="SiteDefinitionManifestMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for SiteDefinitionManifest instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- WebTempFile -->
+  <xsd:element name="webTempFile" type="WebTempFile" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="WebTempFile">
+    <xsd:annotation>
+      <xsd:documentation>Represents a web template file.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Property: Location -->
+        <xsd:attribute name="location" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The relative location within the Package that contains the web template file.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- WebTempFile Moniker -->
+  <xsd:element name="webTempFileMoniker" abstract="true" type="WebTempFileMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="WebTempFileMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for WebTempFile instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- TemplateFile -->
+  <xsd:element name="templateFile" type="TemplateFile" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="TemplateFile">
+    <xsd:annotation>
+      <xsd:documentation>Represents a template file.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Property: Location -->
+        <xsd:attribute name="location" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The relative location within the Package that contains the template file.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- TemplateFile Moniker -->
+  <xsd:element name="templateFileMoniker" abstract="true" type="TemplateFileMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="TemplateFileMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for TemplateFile instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- FeatureManifestReference -->
+  <xsd:element name="featureManifestReference" type="FeatureManifestReference" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="FeatureManifestReference">
+    <xsd:annotation>
+      <xsd:documentation>Represents a feature manifest file.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Property: Location -->
+        <xsd:attribute name="location" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The relative location within the Package that contains the feature manifest file.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- FeatureManifestReference Moniker -->
+  <xsd:element name="featureManifestReferenceMoniker" abstract="true" type="FeatureManifestReferenceMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="FeatureManifestReferenceMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for FeatureManifestReference instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PermissionElement -->
+  <xsd:element name="permissionElement" type="PermissionElement" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="PermissionElement">
+    <xsd:annotation>
+      <xsd:documentation>Represents a code access security (CAS) permission.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Property: Xml -->
+        <xsd:attribute name="xml" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Represents the XML content of the permission.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PermissionElement Moniker -->
+  <xsd:element name="permissionElementMoniker" abstract="true" type="PermissionElementMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="PermissionElementMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for PermissionElement instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Package -->
+  <xsd:element name="package" type="Package" substitutionGroup="packageManifest" />
+  <xsd:complexType name="Package">
+    <xsd:annotation>
+      <xsd:documentation>Represents the definition of a Package within the SharePoint project system.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="PackageManifest">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: PackageHasFeatures -->
+          <xsd:element name="features" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of PackageHasFeatures</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="packageHasFeatures">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from PackageHasFeatures needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="featureReference" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: PackageHasProjectItems -->
+          <xsd:element name="projectItems" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of PackageHasProjectItems</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="packageHasProjectItems">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from PackageHasProjectItems needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="projectItemReference" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- dslVersion -->
+        <xsd:attribute name="dslVersion" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Version of the model serialized in this file.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The name of the Package file (.wsp).</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsDesignerEnabled -->
+        <xsd:attribute name="isDesignerEnabled" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Indicates whether the designer for the Package is enabled.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Package Moniker -->
+  <xsd:element name="packageMoniker" type="PackageMoniker" substitutionGroup="packageManifestMoniker" />
+  <xsd:complexType name="PackageMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Package instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="PackageManifestMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CustomAssembly -->
+  <xsd:element name="customAssembly" type="CustomAssembly" substitutionGroup="assembly" />
+  <xsd:complexType name="CustomAssembly">
+    <xsd:annotation>
+      <xsd:documentation>Represents an arbitrary assembly included within a Package.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="Assembly">
+        <!-- Property: SourcePath -->
+        <xsd:attribute name="sourcePath" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The name of the assembly to be included in the Package.  This can be an absolute path or path relative to the Package&apos;s project&apos;s root directory.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CustomAssembly Moniker -->
+  <xsd:element name="customAssemblyMoniker" abstract="true" type="CustomAssemblyMoniker" substitutionGroup="assemblyMoniker" />
+  <xsd:complexType name="CustomAssemblyMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for CustomAssembly instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="AssemblyMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- SolutionActivationDependency -->
+  <xsd:element name="solutionActivationDependency" abstract="true" type="SolutionActivationDependency" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="SolutionActivationDependency" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents an activation dependency of a SharePoint package.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Property: Description -->
+        <xsd:attribute name="description" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Indicates what this activation dependency does.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- SolutionActivationDependency Moniker -->
+  <xsd:element name="solutionActivationDependencyMoniker" abstract="true" type="SolutionActivationDependencyMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="SolutionActivationDependencyMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for SolutionActivationDependency instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AppGlobalResourceFile -->
+  <xsd:element name="appGlobalResourceFile" type="AppGlobalResourceFile" substitutionGroup="applicationResource" />
+  <xsd:complexType name="AppGlobalResourceFile">
+    <xsd:annotation>
+      <xsd:documentation>Represents an application global resource file.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ApplicationResource">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AppGlobalResourceFile Moniker -->
+  <xsd:element name="appGlobalResourceFileMoniker" abstract="true" type="AppGlobalResourceFileMoniker" substitutionGroup="applicationResourceMoniker" />
+  <xsd:complexType name="AppGlobalResourceFileMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for AppGlobalResourceFile instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ApplicationResourceMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ApplicationResourceFile -->
+  <xsd:element name="applicationResourceFile" type="ApplicationResourceFile" substitutionGroup="applicationResource" />
+  <xsd:complexType name="ApplicationResourceFile">
+    <xsd:annotation>
+      <xsd:documentation>Represents an application resource file.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ApplicationResource">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ApplicationResourceFile Moniker -->
+  <xsd:element name="applicationResourceFileMoniker" abstract="true" type="ApplicationResourceFileMoniker" substitutionGroup="applicationResourceMoniker" />
+  <xsd:complexType name="ApplicationResourceFileMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ApplicationResourceFile instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ApplicationResourceMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- BindingRedirect -->
+  <xsd:element name="bindingRedirect" type="BindingRedirect" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="BindingRedirect">
+    <xsd:annotation>
+      <xsd:documentation>Represents a binding redirection.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Property: OldVersion -->
+        <xsd:attribute name="oldVersion" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The previous version(s) of the assembly being redirected to this assembly.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- BindingRedirect Moniker -->
+  <xsd:element name="bindingRedirectMoniker" abstract="true" type="BindingRedirectMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="BindingRedirectMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for BindingRedirect instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CustomSolutionActivationDependency -->
+  <xsd:element name="customSolutionActivationDependency" type="CustomSolutionActivationDependency" substitutionGroup="solutionActivationDependency" />
+  <xsd:complexType name="CustomSolutionActivationDependency">
+    <xsd:complexContent>
+      <xsd:extension base="SolutionActivationDependency">
+        <!-- Property: SolutionId -->
+        <xsd:attribute name="solutionId" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The SharePoint ID of the Solution on which this one depends.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: SolutionName -->
+        <xsd:attribute name="solutionName" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The file name of the WSP.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: SolutionTitle -->
+        <xsd:attribute name="solutionTitle" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The title of the Solution.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: SolutionUrl -->
+        <xsd:attribute name="solutionUrl" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The URL where users can obtain the Solution.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CustomSolutionActivationDependency Moniker -->
+  <xsd:element name="customSolutionActivationDependencyMoniker" abstract="true" type="CustomSolutionActivationDependencyMoniker" substitutionGroup="solutionActivationDependencyMoniker" />
+  <xsd:complexType name="CustomSolutionActivationDependencyMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for CustomSolutionActivationDependency instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="SolutionActivationDependencyMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ProjectOutputAssembly -->
+  <xsd:element name="projectOutputAssembly" type="ProjectOutputAssembly" substitutionGroup="assembly" />
+  <xsd:complexType name="ProjectOutputAssembly">
+    <xsd:annotation>
+      <xsd:documentation>Represents a project output assembly included within a Package.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="Assembly">
+        <!-- Property: ProjectPath -->
+        <xsd:attribute name="projectPath" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The path to the project file whose output should be packaged.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ProjectOutputAssembly Moniker -->
+  <xsd:element name="projectOutputAssemblyMoniker" abstract="true" type="ProjectOutputAssemblyMoniker" substitutionGroup="assemblyMoniker" />
+  <xsd:complexType name="ProjectOutputAssemblyMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ProjectOutputAssembly instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="AssemblyMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AssemblyHasSafeControls -->
+  <xsd:element name="assemblyHasSafeControls" abstract="true" type="AssemblyHasSafeControls" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="AssemblyHasSafeControls" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a collection of safe controls.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end SafeControl -->
+          <xsd:element ref="safeControl" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AssemblyHasSafeControls Moniker -->
+  <xsd:element name="assemblyHasSafeControlsMoniker" abstract="true" type="AssemblyHasSafeControlsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="AssemblyHasSafeControlsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for AssemblyHasSafeControls instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AssemblyHasClassResources -->
+  <xsd:element name="assemblyHasClassResources" abstract="true" type="AssemblyHasClassResources" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="AssemblyHasClassResources" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a collection of class resource files.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end ClassResource -->
+          <xsd:element ref="classResource" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AssemblyHasClassResources Moniker -->
+  <xsd:element name="assemblyHasClassResourcesMoniker" abstract="true" type="AssemblyHasClassResourcesMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="AssemblyHasClassResourcesMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for AssemblyHasClassResources instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PolicyItemHasAssemblies -->
+  <xsd:element name="policyItemHasAssemblies" abstract="true" type="PolicyItemHasAssemblies" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="PolicyItemHasAssemblies" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a collection of assemblies associated with a code access security (CAS) policy.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end CodeAccessSecurityAssembly -->
+          <xsd:element ref="codeAccessSecurityAssembly" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PolicyItemHasAssemblies Moniker -->
+  <xsd:element name="policyItemHasAssembliesMoniker" abstract="true" type="PolicyItemHasAssembliesMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="PolicyItemHasAssembliesMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for PolicyItemHasAssemblies instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PackageManifestHasApplicationResourceFiles -->
+  <xsd:element name="packageManifestHasApplicationResourceFiles" abstract="true" type="PackageManifestHasApplicationResourceFiles" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="PackageManifestHasApplicationResourceFiles" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a collection of application resource files.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end ApplicationResource -->
+          <xsd:element ref="applicationResource" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PackageManifestHasApplicationResourceFiles Moniker -->
+  <xsd:element name="packageManifestHasApplicationResourceFilesMoniker" abstract="true" type="PackageManifestHasApplicationResourceFilesMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="PackageManifestHasApplicationResourceFilesMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for PackageManifestHasApplicationResourceFiles instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PackageManifestHasAssemblies -->
+  <xsd:element name="packageManifestHasAssemblies" abstract="true" type="PackageManifestHasAssemblies" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="PackageManifestHasAssemblies" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a collection of assemblies.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Assembly -->
+          <xsd:element ref="assembly" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PackageManifestHasAssemblies Moniker -->
+  <xsd:element name="packageManifestHasAssembliesMoniker" abstract="true" type="PackageManifestHasAssembliesMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="PackageManifestHasAssembliesMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for PackageManifestHasAssemblies instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PackageManifestHasDwpFiles -->
+  <xsd:element name="packageManifestHasDwpFiles" abstract="true" type="PackageManifestHasDwpFiles" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="PackageManifestHasDwpFiles" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a collection of Web Part files.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end DwpFile -->
+          <xsd:element ref="dwpFile" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PackageManifestHasDwpFiles Moniker -->
+  <xsd:element name="packageManifestHasDwpFilesMoniker" abstract="true" type="PackageManifestHasDwpFilesMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="PackageManifestHasDwpFilesMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for PackageManifestHasDwpFiles instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PackageManifestHasResources -->
+  <xsd:element name="packageManifestHasResources" abstract="true" type="PackageManifestHasResources" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="PackageManifestHasResources" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a collection of resource files.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Resource -->
+          <xsd:element ref="resource" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PackageManifestHasResources Moniker -->
+  <xsd:element name="packageManifestHasResourcesMoniker" abstract="true" type="PackageManifestHasResourcesMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="PackageManifestHasResourcesMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for PackageManifestHasResources instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PackageManifestHasRootFiles -->
+  <xsd:element name="packageManifestHasRootFiles" abstract="true" type="PackageManifestHasRootFiles" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="PackageManifestHasRootFiles" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a collection of root files.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end RootFile -->
+          <xsd:element ref="rootFile" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PackageManifestHasRootFiles Moniker -->
+  <xsd:element name="packageManifestHasRootFilesMoniker" abstract="true" type="PackageManifestHasRootFilesMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="PackageManifestHasRootFilesMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for PackageManifestHasRootFiles instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- SiteDefinitionManifestHasWebTempFiles -->
+  <xsd:element name="siteDefinitionManifestHasWebTempFiles" abstract="true" type="SiteDefinitionManifestHasWebTempFiles" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="SiteDefinitionManifestHasWebTempFiles" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a collection of web template files.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end WebTempFile -->
+          <xsd:element ref="webTempFile" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- SiteDefinitionManifestHasWebTempFiles Moniker -->
+  <xsd:element name="siteDefinitionManifestHasWebTempFilesMoniker" abstract="true" type="SiteDefinitionManifestHasWebTempFilesMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="SiteDefinitionManifestHasWebTempFilesMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for SiteDefinitionManifestHasWebTempFiles instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PackageManifestHasSiteDefinitionManifests -->
+  <xsd:element name="packageManifestHasSiteDefinitionManifests" abstract="true" type="PackageManifestHasSiteDefinitionManifests" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="PackageManifestHasSiteDefinitionManifests" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a collection of site definition manifests.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end SiteDefinitionManifest -->
+          <xsd:element ref="siteDefinitionManifest" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PackageManifestHasSiteDefinitionManifests Moniker -->
+  <xsd:element name="packageManifestHasSiteDefinitionManifestsMoniker" abstract="true" type="PackageManifestHasSiteDefinitionManifestsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="PackageManifestHasSiteDefinitionManifestsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for PackageManifestHasSiteDefinitionManifests instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PackageManifestHasTemplateFiles -->
+  <xsd:element name="packageManifestHasTemplateFiles" abstract="true" type="PackageManifestHasTemplateFiles" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="PackageManifestHasTemplateFiles" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a collection of template files.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end TemplateFile -->
+          <xsd:element ref="templateFile" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PackageManifestHasTemplateFiles Moniker -->
+  <xsd:element name="packageManifestHasTemplateFilesMoniker" abstract="true" type="PackageManifestHasTemplateFilesMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="PackageManifestHasTemplateFilesMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for PackageManifestHasTemplateFiles instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PackageManifestHasFeatureManifests -->
+  <xsd:element name="packageManifestHasFeatureManifests" abstract="true" type="PackageManifestHasFeatureManifests" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="PackageManifestHasFeatureManifests" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a collection of feature manifest files.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end FeatureManifestReference -->
+          <xsd:element ref="featureManifestReference" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PackageManifestHasFeatureManifests Moniker -->
+  <xsd:element name="packageManifestHasFeatureManifestsMoniker" abstract="true" type="PackageManifestHasFeatureManifestsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="PackageManifestHasFeatureManifestsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for PackageManifestHasFeatureManifests instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PackageManifestHasPolicyItems -->
+  <xsd:element name="packageManifestHasPolicyItems" abstract="true" type="PackageManifestHasPolicyItems" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="PackageManifestHasPolicyItems" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a collection of code access security (CAS) policy items.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end PolicyItem -->
+          <xsd:element ref="policyItem" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PackageManifestHasPolicyItems Moniker -->
+  <xsd:element name="packageManifestHasPolicyItemsMoniker" abstract="true" type="PackageManifestHasPolicyItemsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="PackageManifestHasPolicyItemsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for PackageManifestHasPolicyItems instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PackageHasFeatures -->
+  <xsd:element name="packageHasFeatures" abstract="true" type="PackageHasFeatures" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="PackageHasFeatures" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a collection of Features.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end FeatureReference -->
+          <xsd:element ref="featureReference" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PackageHasFeatures Moniker -->
+  <xsd:element name="packageHasFeaturesMoniker" abstract="true" type="PackageHasFeaturesMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="PackageHasFeaturesMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for PackageHasFeatures instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PackageHasProjectItems -->
+  <xsd:element name="packageHasProjectItems" abstract="true" type="PackageHasProjectItems" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="PackageHasProjectItems" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a collection of Project Items.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end ProjectItemReference -->
+          <xsd:element ref="projectItemReference" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PackageHasProjectItems Moniker -->
+  <xsd:element name="packageHasProjectItemsMoniker" abstract="true" type="PackageHasProjectItemsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="PackageHasProjectItemsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for PackageHasProjectItems instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PackageManifestHasActivationDependencies -->
+  <xsd:element name="packageManifestHasActivationDependencies" abstract="true" type="PackageManifestHasActivationDependencies" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="PackageManifestHasActivationDependencies" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a collection of Packages upon which activation of another Package depends.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end SolutionActivationDependency -->
+          <xsd:element ref="solutionActivationDependency" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PackageManifestHasActivationDependencies Moniker -->
+  <xsd:element name="packageManifestHasActivationDependenciesMoniker" abstract="true" type="PackageManifestHasActivationDependenciesMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="PackageManifestHasActivationDependenciesMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for PackageManifestHasActivationDependencies instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AssemblyHasBindingRedirects -->
+  <xsd:element name="assemblyHasBindingRedirects" abstract="true" type="AssemblyHasBindingRedirects" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="AssemblyHasBindingRedirects" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a collection of binding redirections.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end BindingRedirect -->
+          <xsd:element ref="bindingRedirect" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AssemblyHasBindingRedirects Moniker -->
+  <xsd:element name="assemblyHasBindingRedirectsMoniker" abstract="true" type="AssemblyHasBindingRedirectsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="AssemblyHasBindingRedirectsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for AssemblyHasBindingRedirects instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PolicyItemHasPermissions -->
+  <xsd:element name="policyItemHasPermissions" abstract="true" type="PolicyItemHasPermissions" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="PolicyItemHasPermissions" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Represents a collection of code access security (CAS) policy permissions.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end PermissionElement -->
+          <xsd:element ref="permissionElement" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PolicyItemHasPermissions Moniker -->
+  <xsd:element name="policyItemHasPermissionsMoniker" abstract="true" type="PolicyItemHasPermissionsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="PolicyItemHasPermissionsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for PolicyItemHasPermissions instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Enum DeploymentServerType -->
+  <xsd:simpleType name="DeploymentServerType">
+    <xsd:annotation>
+      <xsd:documentation>Specifies the type of server that will host the Package.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="ApplicationServer">
+        <xsd:annotation>
+          <xsd:documentation>Servers that host services.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="WebFrontEnd">
+        <xsd:annotation>
+          <xsd:documentation>Servers that host web sites.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum DeploymentTarget -->
+  <xsd:simpleType name="DeploymentTarget">
+    <xsd:annotation>
+      <xsd:documentation>Specifies where an assembly will be deployed on the server.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="GlobalAssemblyCache">
+        <xsd:annotation>
+          <xsd:documentation>The assembly will be deployed to the Global Assembly Cache.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="WebApplication">
+        <xsd:annotation>
+          <xsd:documentation>The assembly will be deployed to the web application&apos;s bin directory.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum ApplicationResourceType -->
+  <xsd:simpleType name="ApplicationResourceType">
+    <xsd:annotation>
+      <xsd:documentation>Specifies where an application resource file will be deployed on the server.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="AppGlobalResourceFile">
+        <xsd:annotation>
+          <xsd:documentation>The application resource file will be deployed to the App_GlobalResources folder.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ApplicationResourceFile">
+        <xsd:annotation>
+          <xsd:documentation>The application resource file will be deployed to the Resources folder.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum ResetWebServerModeOnUpgrade -->
+  <xsd:simpleType name="ResetWebServerModeOnUpgrade">
+    <xsd:annotation>
+      <xsd:documentation>Specifies how the web server will be restarted during an upgrade.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Recycle">
+        <xsd:annotation>
+          <xsd:documentation>The application pools will be recycled.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="StartStop">
+        <xsd:annotation>
+          <xsd:documentation>The application pools will be stopped and then restarted.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+</xsd:schema>
+

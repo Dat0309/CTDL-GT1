@@ -1,0 +1,39 @@
+﻿<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{59B99E29-E334-44A5-B522-B8C467AEC0D0}" ID="148" />
+    <Description Package="{59B99E29-E334-44A5-B522-B8C467AEC0D0}" ID="149" />
+    <Icon Package="{59B99E29-E334-44A5-B522-B8C467AEC0D0}" ID="310" />
+    <TemplateID>VSTO_Visio2010AddIn_CS</TemplateID>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>370</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <CreateNewFolder>true</CreateNewFolder>
+    <CreateInPlace>true</CreateInPlace>
+    <DefaultName>VisioAddIn</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="VisioAddIn.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Properties\Resources.resx">Resources.resx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\Resources.Designer.cs">Resources.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Properties\Settings.settings">Settings.settings</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\Settings.Designer.cs">Settings.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ThisAddIn.cs">ThisAddIn.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ThisAddIn.Designer.xml">ThisAddIn.Designer.xml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ThisAddIn.Designer.cs">ThisAddIn.Designer.cs</ProjectItem>
+    </Project>
+    <CustomParameters>
+      <CustomParameter Name="VSTOHostService" Value="{20A848B8-E01F-4801-962E-25DB0FF57389}" />
+      <CustomParameter Name="VSTOHostApp" Value="Visio" />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.Tools.Office.AddInProject, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, Custom=null</Assembly>
+    <FullClassName>Microsoft.VisualStudio.OfficeTools.AddinProject.Office2010Wizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

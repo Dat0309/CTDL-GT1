@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Retrieve a List of Message Queues on the Local Computer</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Retreives the message queues on the local computer.</Description>
+      <Shortcut>mqList</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Messaging.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Messaging</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>Server</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with another server if you want a list of queues from another server.</ToolTip>
+          <Default>"."</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim queues() As MessageQueue
+queues = System.Messaging.MessageQueue.GetPublicQueuesByMachine($Server$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

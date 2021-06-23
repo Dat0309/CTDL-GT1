@@ -1,0 +1,11 @@
+﻿[$RootKey$\Packages\{f97fc405-54eb-4873-9215-24b7cfa8a75d}]
+@="Microsoft.VisualStudio.Web.PasteJson.JsonPackage, Microsoft.VisualStudio.Web.PasteJson"
+"InprocServer32"="$WinDir$\SYSTEM32\MSCOREE.DLL"
+"Class"="Microsoft.VisualStudio.Web.PasteJson.JsonPackage"
+"CodeBase"="$PackageFolder$\Microsoft.VisualStudio.Web.PasteJson.dll"
+[$RootKey$\AutoLoadPackages\{f1536ef8-92ec-443c-9ed7-fdadf150da82}]
+"{f97fc405-54eb-4873-9215-24b7cfa8a75d}"=dword:00000000
+[$RootKey$\Menus]
+"{f97fc405-54eb-4873-9215-24b7cfa8a75d}"=", Menus.ctmenu, 1"
+
+

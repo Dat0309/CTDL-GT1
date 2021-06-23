@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Define a Sub that is Public</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Uses the Sub keyword to define a method that does not return a value.</Description>
+      <Keywords>
+      </Keywords>
+      <Shortcut>SubPub</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>MethodName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the method name.</ToolTip>
+          <Default>MyMethod</Default>
+        </Literal>
+      </Declarations>      
+      <Code Language="VB" Kind="method decl"><![CDATA[Public Sub $MethodName$()
+
+End Sub]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

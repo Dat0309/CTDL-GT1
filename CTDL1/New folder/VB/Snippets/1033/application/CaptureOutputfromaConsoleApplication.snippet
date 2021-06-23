@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Capture Output from a Console Application</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Saves the output from a command console application to a string.</Description>
+      <Shortcut>appOutCap</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Diagnostics</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>consoleExeFile</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with file name of the console application to execute.</ToolTip>
+          <Default>"ConsoleApplication.exe"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim consoleApp As New Process
+With consoleApp
+    .StartInfo.UseShellExecute = False
+    .StartInfo.RedirectStandardOutput = True
+    .StartInfo.FileName = $consoleExeFile$
+    .Start()
+    .WaitForExit()
+End With
+
+Dim output As String = consoleApp.StandardOutput.ReadToEnd()
+
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

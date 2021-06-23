@@ -1,0 +1,35 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{D26B5834-CA88-4677-912A-EF20D6C4D589}" ID="300" />
+    <Description Package="{D26B5834-CA88-4677-912A-EF20D6C4D589}" ID="301" />
+    <Icon Package="{FAE04EC1-301F-11d3-BF4B-00C04F79EFBC}" ID="4532" />
+    <ProjectType>CSharp</ProjectType>
+    <TemplateGroupID>VSTO1</TemplateGroupID>
+    <TemplateID>VSTO-ActionPane</TemplateID>
+    <ShowByDefault>false</ShowByDefault>
+    <SortOrder>11</SortOrder>
+    <DefaultName>ActionsPaneControl.cs</DefaultName>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Data</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Drawing</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Windows.Forms</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Xml</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem ReplaceParameters="true" SubType="Form">ActionsPaneControl.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true">ActionsPaneControl.Designer.cs</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

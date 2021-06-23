@@ -1,0 +1,10 @@
+
+[$RootKey$\Projects\{57c4a424-b37b-4482-bbbc-ac0311b7e048}]
+@="Placeholder Project"
+"ProjectTemplatesDir"="\.\NullPath"
+"Language(VsTemplate)"="SetupAndDeployment"
+[$RootKey$\NewProjectTemplates\TemplateDirs\{dfe21000-2a85-444f-8c75-f28376aa1c0f}\/1]
+@="#200"
+"SortPriority"=dword:00000064
+"TemplatesDir"="\.\NullPath"
+"Folder"="{dcf2a94a-45b0-11d1-adbf-00c04fb6be4c}"

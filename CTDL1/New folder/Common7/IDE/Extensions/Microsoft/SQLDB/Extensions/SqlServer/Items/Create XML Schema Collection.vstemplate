@@ -1,0 +1,22 @@
+<VSTemplate Type="Item" Version="3.0.0"
+    xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>XML Schema Collection</Name>
+    <Description>SQL script for XML Schema Collection</Description>
+    <Icon></Icon>
+    <ProjectType>Database Projects</ProjectType>
+    <SortOrder>10</SortOrder>
+    <DefaultName>$(XMLSchemaCollection)XML Schema Collection</DefaultName>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$changedFilename$">Create XML Schema Collection.sql</ProjectItem>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.Data.Tools.Package, Version=12.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a, Custom=null</Assembly>
+    <FullClassName>Microsoft.VisualStudio.Data.Tools.Package.Project.TemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <SqlItemType>XMLSchemaCollection</SqlItemType>
+  </WizardData>
+</VSTemplate>

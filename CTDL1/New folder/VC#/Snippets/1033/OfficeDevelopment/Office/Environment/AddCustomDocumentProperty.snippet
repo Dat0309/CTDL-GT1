@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Add a Custom Document Property</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Adds a custom document property to a Word document or an Excel workbook.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Office.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.Office.Core</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>propertyName</ID>
+          <Type>System.String</Type>
+          <ToolTip>Replace with the name of the property.</ToolTip>
+          <Default>"Property Name"</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>propertyType</ID>
+          <Type>Office.MsoDocProperties</Type>
+          <ToolTip>Replace with the data type of the property. One of the Office.MsoDocProperties values.</ToolTip>
+          <Default>msoPropertyTypeString</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>propertyValue</ID>
+          <Type>System.String</Type>
+          <ToolTip>Replace with the value of the property.</ToolTip>
+          <Default>"Property Value"</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>newProperty</ID>
+          <Type>Microsoft.Office.Core.DocumentProperty</Type>
+          <ToolTip>Replace with the new DocumentProperty object.</ToolTip>
+          <Default>newProperty</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>document</ID>
+          <Type>Microsoft.Office.Core.Document</Type>
+          <ToolTip>Replace with the document or workbook to add the property to.</ToolTip>
+          <Default>document</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="CSharp" Kind="" Delimiter="$"><![CDATA[
+Microsoft.Office.Core.DocumentProperty $newProperty$ = 
+((Microsoft.Office.Core.DocumentProperties)$document$.CustomDocumentProperties).Add(
+$propertyName$, false, Office.MsoDocProperties.$propertyType$, $propertyValue$);
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Read a Word Built-In Property</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Reads a built-in property value from a Word document.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Word.dll</Assembly>
+          <Url></Url>
+        </Reference>
+        <Reference>
+          <Assembly>office.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Word = Microsoft.Office.Interop.Word</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Office = Microsoft.Office.Core</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>propertyIdentifier</ID>
+          <Type>Word.WdBuiltInProperty</Type>
+          <ToolTip>Replace with the property to read. One of the Word.WdBuiltInProperty values.</ToolTip>
+          <Default>wdPropertyTitle</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>propertyValue</ID>
+          <Type>Object</Type>
+          <ToolTip>Replace with an object that can store the value of the property.</ToolTip>
+          <Default>propertyValue</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>document</ID>
+          <Type>Word.Document</Type>
+          <ToolTip>Replace with the document to read the built-in property from.</ToolTip>
+          <Default>document</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="" Delimiter="$"><![CDATA[
+Dim docProperties as Office.DocumentProperties = CType($document$.BuiltInDocumentProperties, Office.DocumentProperties)
+Dim $propertyValue$ As Object = docProperties.Item(Word.WdBuiltInProperty.$propertyIdentifier$).Value
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

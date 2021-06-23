@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Return all elements in an XDocument</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Returns all elements in an XDocument.</Description>
+      <Shortcut>xmlAllElem</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.XML.Linq.dll</Assembly>          
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Xml.Linq</Namespace>
+        </Import>        
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>xmlDoc</ID>
+          <Type>XDocument</Type>
+          <ToolTip>Replace with an XDocument instance.</ToolTip>
+          <Default>xmlDoc</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[$xmlDoc$.Descendants()]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

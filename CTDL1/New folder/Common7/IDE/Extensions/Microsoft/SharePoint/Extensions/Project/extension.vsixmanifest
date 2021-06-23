@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Vsix Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="Microsoft.VisualStudio.SharePoint.Project.Extensions">
+    <Name>SharePoint Project Extensions</Name>
+    <Author>Microsoft Corp.</Author>
+    <Version>12.0</Version>
+    <Description>Extensions for SharePoint Project.</Description>
+    <Locale>1033</Locale>
+    <InstalledByMsi>true</InstalledByMsi>
+    <SupportedProducts>
+      <VisualStudio Version="12.0">
+        <Edition>Pro</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+    <SystemComponent>true</SystemComponent>
+  </Identifier>
+  <References />
+  <Content>
+    <MefComponent>Microsoft.VisualStudio.SharePoint.ProjectExtensions.VSPackage.dll</MefComponent>
+    <MefComponent>$ShellFolder$\Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.SharePoint.Project.dll</MefComponent>
+  </Content>
+</Vsix>

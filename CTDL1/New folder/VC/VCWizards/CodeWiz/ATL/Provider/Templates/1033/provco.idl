@@ -1,0 +1,7 @@
+	[
+		uuid([!output CLSID_REGISTRY_FORMAT])		
+	]
+	coclass [!output COCLASS]
+	{
+		interface IUnknown;
+	};

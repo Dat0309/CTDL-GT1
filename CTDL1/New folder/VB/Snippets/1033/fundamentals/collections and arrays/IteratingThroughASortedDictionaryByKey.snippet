@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Iterate through a sorted dictionary by key.</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Iterates through all the items in a dictionary based on the sorted list of keys.</Description>
+      <Shortcut>colIterSort</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>itemVar</ID>
+          <ToolTip>Replace with an identifier for an item in the collection.</ToolTip>
+          <Default>student</Default>
+        </Literal>
+        <Literal>
+          <ID>keyVar</ID>
+          <ToolTip>Replace with an identifier for a key in the collection.</ToolTip>
+          <Default>rank</Default>
+        </Literal>
+        <Literal>
+          <ID>keyType</ID>
+          <ToolTip>Replace with the type of a key in the collection.</ToolTip>
+          <Default>Integer</Default>
+        </Literal>
+        <Literal>
+          <ID>itemType</ID>
+          <ToolTip>Replace with the type of items in the collection.</ToolTip>
+          <Default>String</Default>
+        </Literal>
+        <Object>
+          <ID>dicVar</ID>
+          <Type>IDictionary(Of TKey, TValue)</Type>
+          <ToolTip>Replace with the sorted dictionary to iterate over.</ToolTip>
+          <Default>sortedStudents</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[ ' Loop through the items based on key
+        For Each $keyVar$ As $keyType$ In $dicVar$.Keys
+            Dim $itemVar$ As $itemType$ = $dicVar$.Item($keyVar$)
+
+        Next]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

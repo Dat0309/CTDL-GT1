@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Install a Schema in Library</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Installs an XML schema in Word's schema library.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Word.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Word = Microsoft.Office.Interop.Word</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>allUsers</ID>
+          <Type>System.Bool</Type>
+          <ToolTip>Replace with a Boolean value. True if all users that log on to a computer can access and use the new schema. The default is false.</ToolTip>
+          <Default>false</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>xmlNamespaceURIValue</ID>
+          <Type>System.String</Type>
+          <ToolTip>Replace with the string value to use as the xmlnsURI parameter.</ToolTip>
+          <Default>"http://tempuri.org/schemauri.xsd"</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>wmlNamespaceAliasValue</ID>
+          <Type>System.String</Type>
+          <ToolTip>Replace with the string value to use as the alias for the schema.</ToolTip>
+          <Default>"Schema Alias"</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>schemaPath</ID>
+          <Type>System.String</Type>
+          <ToolTip>Replace with a string variable that contains the path and file name of the schema. This can be a local file path, a network path, or an Internet address.</ToolTip>
+          <Default>"Sschema Path"</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>xmlNamespace</ID>
+          <Type>Microsoft.Office.Interop.Word.XMLNamespace</Type>
+          <ToolTip>Replace with an XMLNamespace object that represents a schema that is added to the schema library.</ToolTip>
+          <Default>xmlNamespace</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>document</ID>
+          <Type>Microsoft.Office.Interop.Word.Document</Type>
+          <ToolTip>Replace with a Word Document object.</ToolTip>
+          <Default>document</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>xmlNamespaceURI</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with the namespace Uniform Resource Indicator as specified in the schema. The xmlnsURI parameter is case-sensitive and must be spelled exactly as specified in the schema.</ToolTip>
+          <Default>xmlNamespaceURI</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>xmlNamespaceAlias</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with the name of the schema as it appears on the Schemas tab in Word's Templates and Add-ins dialog box.</ToolTip>
+          <Default>xmlNamespaceAlias</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="CSharp" Kind="" Delimiter="$"><![CDATA[
+object $xmlNamespaceURI$ = (object)$xmlNamespaceURIValue$;
+object $xmlNamespaceAlias$ = (object)$wmlNamespaceAliasValue$;
+
+$xmlNamespace$ = $document$.Application.XMLNamespaces.Add($schemaPath$, ref $xmlNamespaceURI$, ref $xmlNamespaceAlias$, $allUsers$);
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

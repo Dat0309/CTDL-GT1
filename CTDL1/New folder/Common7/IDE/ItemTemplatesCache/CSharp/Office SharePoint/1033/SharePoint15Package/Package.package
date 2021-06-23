@@ -1,0 +1,3 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" name="$safeprojectname$" Id="$guid1$" solutionId="$guid1$" sharePointProductVersion="15.0" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+</package>

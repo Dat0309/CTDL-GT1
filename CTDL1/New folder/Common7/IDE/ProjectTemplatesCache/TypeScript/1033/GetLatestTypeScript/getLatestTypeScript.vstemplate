@@ -1,0 +1,29 @@
+﻿<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name _locID="GetLatestTypeScript_Name">Install the Latest TypeScript for Visual Studio</Name>
+    <Description _locID="GetLatestTypeScript_Desc">To develop with TypeScript you will need to install TypeScript for Visual Studio.</Description>
+    <Icon>getLatestTypeScript.ico</Icon>
+    <ProjectType>HidingThisTemplate</ProjectType>
+    <NumberOfParentCategoriesToRollUp>0</NumberOfParentCategoriesToRollUp>
+    <CreateNewFolder>false</CreateNewFolder>
+    <TemplateID>Microsoft.JavaScript.GetLatestTypeScript</TemplateID>
+    <DefaultName>GetLatestTypeScript</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <SortOrder>100</SortOrder>
+    <PromptForSaveOnCreation>false</PromptForSaveOnCreation>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Hidden>false</Hidden>
+  </TemplateData>
+
+  <TemplateContent>
+    <CustomParameters>
+      <CustomParameter Name="htmlRelPath" Value="ProjectTemplates\TypeScript\$LCID$\GetLatestTypeScript\Get Latest TypeScript.html" />
+    </CustomParameters>
+  </TemplateContent>
+
+  <WizardExtension> 
+    <Assembly>Microsoft.VisualStudio.VsipSupport.PlaceholderProject, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly> 
+    <FullClassName>Microsoft.VisualStudio.VsipSupport.WizardExtension</FullClassName> 
+  </WizardExtension>
+</VSTemplate>

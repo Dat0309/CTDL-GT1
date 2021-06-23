@@ -1,0 +1,578 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<HTML DIR="LTR">
+
+<HEAD>
+	<TITLE>Generic C++ Class Wizard</TITLE>
+	<META NAME="vs_targetSchema" CONTENT="http://schemas.microsoft.com/intellisense/ie5">
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+	<META HTTP-EQUIV="MSThemeCompatible" CONTENT="Yes">
+	<LINK ID="LINKURL" REL="stylesheet" HREF="../../../../../1033/NewStyles.css">
+	<SYMBOL NAME="CLASS_NAME" TYPE="text" VALUE=""></SYMBOL>
+	<SYMBOL NAME="HEADER_FILE" TYPE="text" VALUE=""></SYMBOL>
+	<SYMBOL NAME="IMPL_FILE" TYPE="text" VALUE=""></SYMBOL>
+	<SYMBOL NAME="BASE_CLASS_NAME" TYPE="text" VALUE=""></SYMBOL>
+	<SYMBOL NAME="ACCESS" TYPE="select-one" VALUE="1"></SYMBOL>
+	<SYMBOL NAME="VIRTUAL_DTOR" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="INLINE" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="MANAGED" TYPE="checkbox" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="HEADER_FILE_VALID" TYPE=bool VALUE=false></SYMBOL>
+	<SYMBOL NAME="IMPL_FILE_VALID" TYPE=bool VALUE=false></SYMBOL>
+</HEAD>
+
+<BODY BGCOLOR="BUTTONFACE" TOPMARGIN="0" LEFTMARGIN="0" RIGHTMARGIN="0" BOTTOMMARGIN="0" ONLOAD="InitDocument(document);" ONKEYDOWN="OnKey();" ONKEYPRESS="OnPress();">
+
+<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<COL WIDTH="100%">
+  <TR VALIGN="TOP">
+	<TD HEIGHT="79">
+	<!--OPEN OF ALL ENCOMPASSING TABLE ROW ONE//-->
+	 <TABLE CLASS="TWO" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	 <COL WIDTH="12"><COL><COL WIDTH="12">
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+
+	   <TD VALIGN="TOP" HEIGHT="12">
+	  	&nbsp;
+	   </TD>
+
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+
+	   <TD CLASS="IMAGE" VALIGN="BOTTOM" WIDTH="110" ROWSPAN="2">
+		<DIV CLASS="SMALLA" ID="Layer0">
+		 <IMG CLASS="SMALLEST" SRC="../../Images/Generic.gif" WIDTH="63" HEIGHT="63" ALT="" BORDER="0">
+		</DIV>
+	   </TD>
+
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="6" ROWSPAN="2">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+
+	   <TD VALIGN="TOP" HEIGHT="65">
+		<H4 CLASS="HEAD" ID="HEAD">Welcome to the Generic C++ Class Wizard</H4>
+		<P CLASS="SUBHEAD" ID="SUBHEAD">This wizard adds a C++ class that does not inherit from ATL or MFC to your project.</P>
+	   </TD>
+
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+
+	  <TR>
+	   <TD VALIGN="TOP" CLASS="RULE" COLSPAN="5" HEIGHT="2">
+		<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+	  	 <TR VALIGN="TOP">
+	  	  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+	  	  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+	  	 </TR>
+		</TABLE>
+	   </TD>
+	  </TR>
+	 </TABLE>
+
+	<!--CLOSE OF ALL ENCOMPASSING TABLE ROW ONE//-->
+	</TD>
+	</TR>
+	<TR VALIGN="TOP">
+	<TD HEIGHT="100%">
+	<!--OPEN OF ALL ENCOMPASSING TABLE ROW TWO//-->
+
+	 <TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	 <COL>
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="100%">
+	   <!--OPEN OF CONTENT AND BUTTON TABLE//-->
+
+	   	<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+		<COL WIDTH="100%">
+		 <TR VALIGN="TOP">
+		  <TD HEIGHT="100%">
+	   	  <!--OPEN OF CONTENT//-->
+
+		  	<TABLE CLASS="CONTENT" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL WIDTH="185"><COL WIDTH="12"><COL WIDTH="185"><COL WIDTH="12"><COL WIDTH="185"><COL WIDTH="12">
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="7">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+
+ 			 <TR VALIGN="TOP">
+ 			 <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP">
+ 				<SPAN CLASS="itemTextTop" TITLE="">
+	  	 			 <LABEL FOR="CLASS_NAME" ID="CLASS_NAME_LABEL" TITLE="Enter the name for the class you want to add.">C<U>l</U>ass name:</LABEL>
+	  	 			 <BR>
+	  	 			 <INPUT CLASS="sideBtnThreeColumn" ID="CLASS_NAME" TYPE="text" ACCESSKEY="l" TITLE="Enter the name for the class you want to add." VALUE="" onPropertychange="OnClassName();" TABINDEX="1">
+				</SPAN>
+
+				<P CLASS="ElementSpacer2">&nbsp;</P>
+
+				<SPAN CLASS="itemText" TITLE="">
+	  	 			 <LABEL FOR="BASE_CLASS_NAME" ID="BASE_CLASS_NAME_LABEL" TITLE="Enter the name for the base class from which the class is to be derived."><U>B</U>ase class:</LABEL>
+	  	 			 <BR>
+	  	 			 <INPUT CLASS="sideBtnThreeColumn" ID="BASE_CLASS_NAME" TYPE="text" ACCESSKEY="b" TITLE="Enter the name for the base class from which the class is to be derived." TABINDEX="6">
+				</SPAN>
+			  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+			  <TD VALIGN="TOP">
+ 				<NOBR>
+				  <SPAN CLASS="itemTextTop">
+	  	 			<LABEL FOR="HEADER_FILE" ID="HEADER_FILE_LABEL"  TITLE="The generated name of the header file where you want to insert the declaration.  Edit the name if you like, or select browse to specify a different file.">.h <U>f</U>ile:</LABEL>
+					<BR>
+	  	 			<INPUT CLASS="sideBtn2ThreeColumn" ID="HEADER_FILE" ACCESSKEY="f" TITLE="The generated name of the header file where you want to insert the declaration.  Edit the name if you like, or select browse to specify a different file." TYPE="text" TABINDEX="2" onPropertyChange="window.external.AddSymbol('HEADER_FILE_VALID', false);">
+				  	<BUTTON CLASS="buttonClass3Custom" ID="BrowseHeaderBtn" TYPE="BUTTON" TITLE="Browse for the header file to insert the class declaration." onClick="OnBrowseHeaderFile();" TABINDEX="3">...</BUTTON>
+				  </SPAN>
+				</NOBR>
+
+				<P CLASS="ElementSpacer2">&nbsp;</P>
+
+				<SPAN CLASS="itemText">
+					 <LABEL FOR="ACCESS" ID="ACCESS_LABEL" TITLE="Choose the type of inheritance for the base class."><U>A</U>ccess:</LABEL>
+					 <BR>
+					 <SELECT CLASS="sideBtnThreeColumn" ID="ACCESS" SIZE="1" ACCESSKEY="a" TITLE="Choose the type of inheritance for the base class." VALUE="1" TABINDEX="7">
+						<-- vsCMAccessPublic  = 1  -->
+						<OPTION VALUE="32" ID="32_OPTION">default</OPTION>
+						<-- vsCMAccessDefault = 32 -->
+						<OPTION VALUE="1" ID="1_OPTION" SELECTED>public</OPTION>
+						<-- vsCMAccessPublic  = 1  -->
+						<OPTION VALUE="8" ID="8_OPTION">protected</OPTION>
+						<-- vsCMAccessProtected=8  -->
+						<OPTION VALUE="2" ID="2_OPTION">private</OPTION>
+						<-- vsCMAccessPrivate =2  -->
+					 </SELECT>
+				 </SPAN>
+  		  	  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+			  <TD VALIGN="TOP">
+ 				<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+ 	 			 <TR>
+  	  			  <TD VALIGN="TOP">
+				   	<NOBR>
+					  <SPAN CLASS="itemTextTop">
+	  	 			 	<LABEL FOR="IMPL_FILE" ID="IMPL_FILE_LABEL" TITLE="The generated name of the .CPP file where you want to insert the implementation. Edit the name if you like, or select browse to specify a different file.">.c<U>p</U>p file:</LABEL>
+					 	<BR>
+	  	 			 	<INPUT CLASS="sideBtn2ThreeColumn" ID="IMPL_FILE" ACCESSKEY="p" TITLE="The generated name of the .CPP file where you want to insert the implementation.  Edit the name if you like, or select browse to specify a different file." TYPE="text" TABINDEX="4" onPropertyChange="window.external.AddSymbol('IMPL_FILE_VALID', false);">
+					  	<BUTTON CLASS="buttonClass3Custom" ID="BrowseImplBtn" TYPE="BUTTON" onClick="OnBrowseImplFile();" TABINDEX="5" TITLE="Browse for the .CPP file to insert the class implementation.">...</BUTTON>
+					  </SPAN>
+					</NOBR>
+
+					 <P CLASS="ElementSpacer12">&nbsp;</P>
+
+  					<SPAN CLASS="itemText">
+					<BR>
+	  				 <INPUT CLASS="CheckBox" TYPE="checkbox" ID="VIRTUAL_DTOR" ACCESSKEY="v" TITLE="Generate a virtual destructor for the class." TABINDEX="8">
+	  	 			 <DIV CLASS="itemTextCheckboxA" >
+		  			  <LABEL FOR="VIRTUAL_DTOR" ID="VIRTUAL_DTOR_LABEL" TITLE="Generate a virtual destructor for the class."><U>V</U>irtual destructor</LABEL>
+	  	 			 </DIV>
+					 <BR>
+	  				 <INPUT CLASS="CheckBox" TYPE="checkbox" ID="INLINE" ACCESSKEY="i" TITLE="Generate both the definition and declaration of the class in the header file." onClick="OnInline();" TABINDEX="9">
+	  	 			 <DIV CLASS="itemTextCheckboxA" >
+		  			  <LABEL FOR="INLINE" ID="INLINE_LABEL" TITLE="Generate both the definition and declaration of the class in the header file."><U>I</U>nline</LABEL>
+	  	 			 </DIV>
+					 <BR>
+					 <INPUT CLASS="CheckBox" TYPE="checkbox" ID="MANAGED" ACCESSKEY="m" TITLE="Generate a managed class." TABINDEX="10">
+	  	 			 <DIV CLASS="itemTextCheckboxA" >
+		  			  <LABEL FOR="MANAGED" ID="MANAGED_LABEL" TITLE="Generate a managed class"><U>M</U>anaged</LABEL>
+	  	 			 </DIV>
+					 </SPAN>
+				   </TD>
+ 	 		 	 </TR>
+				</TABLE>
+  		  	  </TD>
+
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+ 		  	 </TR>
+		 	</TABLE>
+
+	   	  <!--CLOSE OF CONTENT//-->
+		  </TD>
+		 </TR>
+		 <TR VALIGN="BOTTOM">
+		  <TD>
+	   	  <!--OPEN OF BUTTON HTML//-->
+
+		  	<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="12">
+			 <TR>
+  			  <TD VALIGN="TOP" CLASS="RULE" COLSPAN="8" HEIGHT="2">
+				<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+  	 			 <TR VALIGN="TOP">
+  	  			  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+  	  			  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+  	 			 </TR>
+				</TABLE>
+  			  </TD>
+ 			  </TR>
+
+ 			  <TR>
+  			  <TD VALIGN="TOP" HEIGHT="11" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+
+ 			<TR>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" HEIGHT="23">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="FinishBtn" onClick="OnFinish(document);">Finish</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="CancelBtn" onClick="window.external.Finish(document, 'cancel');">Cancel</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="HelpBtn" onClick="window.external.OnHelp('vc.codewiz.class.generic');">Help</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			</TABLE>
+
+	   	  <!--CLOSE OF BUTTON HTML//-->
+		  </TD>
+		 </TR>
+		</TABLE>
+
+	   <!--CLOSE OF CONTENT AND BUTTON TABLE//-->
+	   </TD>
+	  </TR>
+	 </TABLE>
+
+	<!--CLOSE OF ALL ENCOMPASSING TABLE ROW TWO//-->
+	</TD>
+  </TR>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<SCRIPT LANGUAGE="JSCRIPT">
+
+var tab_array = new Array();
+
+function InitDocument(document)
+{
+	setDirection();
+	CLASS_NAME.focus();
+
+	if (window.external.FindSymbol("DOCUMENT_FIRST_LOAD"))
+	{
+		var L_WizardDialogTitle_Text = "Generic C++ Class Wizard";
+		window.external.AddSymbol("WIZARD_DIALOG_TITLE", L_WizardDialogTitle_Text);
+		window.external.SetDefaults(document);
+	}
+
+	window.external.Load(document);
+
+	if (IsManagedProject(window.external.ProjectObject))
+	{
+		MANAGED.checked = true;
+	}
+	else if (IsWinStoreProject(window.external.ProjectObject))
+	{
+		MANAGED.checked = true;
+		var L_WindowsStore_Label = "<U>W</U>indows Store";
+		MANAGED_LABEL.innerHTML = L_WindowsStore_Label;
+	}
+	else
+	{
+		MANAGED.disabled = true;
+		MANAGED_LABEL.disabled = true;
+	}
+}
+
+function IsManagedProject(selProj)
+{
+	try
+	{
+	    var bIsManaged =
+	        selProj.Object.Configurations(1).ManagedExtensions != 4 /* managedAssemblyOldSyntax */ &&
+	        selProj.Object.Configurations(1).ManagedExtensions != 0 /* managedNotSet */;
+	    return bIsManaged;
+	}
+	catch(e)
+	{
+	    return false;
+	}
+
+}
+
+
+function Next(document, linkto)
+{
+	window.external.AddSymbol("DOCUMENT_FIRST_LOAD", true);
+	window.external.Next(document, linkto);
+}
+
+function OnFinish(document)
+{
+	if (!ValidateInput())
+		return;
+
+	if(CLASS_NAME.value==BASE_CLASS_NAME.value)
+	{
+		L_ERROR1_Text = "The class cannot be derived from itself";
+		window.external.ReportError(L_ERROR1_Text);
+		CLASS_NAME.focus();
+		return;
+	}
+	if(BASE_CLASS_NAME.value.length)
+	{
+		window.external.ProjectObject.CodeModel.Synchronize();
+		var oBase = window.external.ProjectObject.CodeModel.CodeTypeFromFullName(BASE_CLASS_NAME.value);
+		if (oBase == null)
+		{
+			L_PART1_Text = "Base class '";
+			L_PART2_Text = "' not found in the project. Continue adding the class?";
+			if(false==window.external.YesNoAlert(L_PART1_Text + BASE_CLASS_NAME.value + L_PART2_Text))
+				return;
+		}
+		else if (oBase.IsManaged && !MANAGED.checked)
+		{
+			L_NOTMANAGED_Text = "The class cannot be derived from a managed class.";
+			window.external.ReportError(L_NOTMANAGED_Text);
+			BASE_CLASS_NAME.focus();
+			return;
+		}
+		else if (!oBase.IsManaged && MANAGED.checked)
+		{
+			L_MANAGED_Text = "The managed class cannot be derived from a non-managed class.";
+			window.external.ReportError(L_MANAGED_Text);
+			BASE_CLASS_NAME.focus();
+			return;
+		}
+	}
+
+	if (IMPL_FILE.disabled == true)
+		IMPL_FILE.value = "";
+
+	OnWizFinish(document);
+}
+
+function OnClassName()
+{
+	var strClassName = CLASS_NAME.value;
+	var strLen = strClassName.length;
+	if (strLen)
+	{
+		if ((strClassName.substr(0,1) == "C") &&
+			((strLen == 1) || !(strClassName.charAt(1).toLowerCase() == strClassName.charAt(1)))
+			)
+		{
+			if (strLen == 1)
+			{
+				HEADER_FILE.value = "";
+				IMPL_FILE.value = "";
+			}
+			else
+			{
+				HEADER_FILE.value = strClassName.substr(1, strLen) + ".h";
+				IMPL_FILE.value = strClassName.substr(1, strLen) + ".cpp";
+			}
+		}
+		else
+		{
+			HEADER_FILE.value = strClassName + ".h";
+			IMPL_FILE.value = strClassName + ".cpp";
+		}
+	}
+	else
+	{
+		HEADER_FILE.value = "";
+		IMPL_FILE.value = "";
+	}
+}
+
+function OnBrowseHeaderFile()
+{
+	var strFile;
+	try
+	{
+		L_Title1_Text = "VS Wizards Select File";
+		L_Title2_Text = "Visual C++ Header Files (*.h)\0*.h\0\0";
+		strFile = window.external.GetOpenFileNameViaDlg(L_Title1_Text, window.external.FindSymbol("PROJECT_PATH"), L_Title2_Text, HEADER_FILE.value);
+	}
+	catch(e)
+	{
+		if (e.number != OLE_E_PROMPTSAVECANCELLED)
+		{
+			var L_ErrMsg1_Text = "Error in OnBrowseHeaderFile()";
+			if (e.description.length != 0)
+			{
+				L_ErrMsg1_Text += ": ";
+				L_ErrMsg1_Text += e.description;
+			}
+			window.external.ReportError(L_ErrMsg1_Text);
+		}
+		return;
+	}
+	HEADER_FILE.value = strFile;
+}
+
+function OnBrowseImplFile()
+{
+	var strFile;
+	try
+	{
+		L_Title3_Text = "VS Wizards Select File";
+		L_Title4_Text = "Visual C++ Files (*.cpp;*.h;*.inl;*.c)\0*.cpp;*.h;*.inl;*.c\0\0";
+		strFile = window.external.GetOpenFileNameViaDlg(L_Title3_Text, window.external.FindSymbol("PROJECT_PATH"), L_Title4_Text, IMPL_FILE.value);
+	}
+	catch(e)
+	{
+		if (e.number != OLE_E_PROMPTSAVECANCELLED)
+		{
+			var L_ErrMsg2_Text = "Error in OnBrowseImplFile()";
+			if (e.description.length != 0)
+			{
+				L_ErrMsg2_Text += ": ";
+				L_ErrMsg2_Text += e.description;
+			}
+			window.external.ReportError(L_ErrMsg2_Text);
+		}
+		return;
+	}
+	IMPL_FILE.value = strFile;
+}
+
+function OnInline()
+{
+	IMPL_FILE.disabled = false;
+	IMPL_FILE_LABEL.disabled = false;
+	BrowseImplBtn.disabled = false;
+	if (INLINE.checked)
+	{
+		IMPL_FILE.disabled = true;
+		IMPL_FILE_LABEL.disabled = true;
+		BrowseImplBtn.disabled = true;
+	}
+}
+
+function ValidateInput()
+{
+	var oInvalid = null;
+
+	if (!Validate(BASE_CLASS_NAME))
+		oInvalid = BASE_CLASS_NAME;
+
+	if (oInvalid == null)
+	{
+		if (!CLASS_NAME.value.length)
+		{
+			L_ERROR3_Text = "You must enter a class name.";
+			oErrObj = new Error(L_ERROR3_Text);
+			SetErrorInfo(oErrObj);
+			oInvalid = CLASS_NAME;
+		}
+		else
+		{
+			if (!Validate(CLASS_NAME))
+				oInvalid = CLASS_NAME;
+		}
+	}
+
+	if (oInvalid == null)
+		if (!Validate(HEADER_FILE))
+			oInvalid = HEADER_FILE;
+
+	if (oInvalid == null && IMPL_FILE.disabled == false)
+		if (!Validate(IMPL_FILE))
+			oInvalid = IMPL_FILE;
+
+	if (oInvalid != null)
+	{
+		if (gbShowError)
+			window.external.ReportError();
+		else
+			gbShowError = true;
+		oInvalid.focus();
+		return false;
+	}
+	return true;
+}
+
+var gbShowError = true;
+
+function Validate(obj)
+{
+	var bValid = true;
+	switch(obj.id)
+	{
+		case "BASE_CLASS_NAME":
+			if(BASE_CLASS_NAME.value.length)
+				bValid = window.external.dte.VCLanguageManager.ValidateQualifiedName(obj.value);
+			break;
+		case "CLASS_NAME":
+			bValid = window.external.ParentObject.ValidateMember(obj.value, vsCMElementClass);
+			break;
+		case "HEADER_FILE":
+			if (!window.external.FindSymbol("HEADER_FILE_VALID"))
+			{
+				gbShowError = bValid = CanUseFileName(obj.value, true);
+				if (!bValid)
+					break;
+				window.external.AddSymbol("HEADER_FILE_VALID", true)
+			}
+			bValid = ValidateFileNameAndEnsureInProject(obj.value, vsCMValidateFileExtCpp);
+			break;
+		case "IMPL_FILE":
+			if (!window.external.FindSymbol("IMPL_FILE_VALID"))
+			{
+				gbShowError = bValid = CanUseFileName(obj.value);
+				if (!bValid)
+					break;
+				window.external.AddSymbol("IMPL_FILE_VALID", true)
+			}
+			bValid = ValidateFileNameAndEnsureInProject(obj.value, vsCMValidateFileExtCppSource);
+			break;
+		default:
+			break;
+	}
+
+	if (typeof(bValid) == "undefined")
+		bValid = false;
+
+	return bValid;
+}
+
+</SCRIPT>
+<SCRIPT ID="INCLUDE_SCRIPT" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT ID="INCLUDE_COMMON" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT>
+	document.scripts("INCLUDE_SCRIPT").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Script.js";
+	document.scripts("INCLUDE_COMMON").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Common.js";
+</SCRIPT>

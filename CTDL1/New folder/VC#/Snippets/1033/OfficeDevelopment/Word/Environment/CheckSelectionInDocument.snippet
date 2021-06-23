@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Check for Selection in Document</Title>
+			<Author>Microsoft Corporation</Author>
+			<Description>Checks whether the current selection in Word is in the specified Word document.</Description>
+			<HelpUrl></HelpUrl>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+			<Keywords>
+				<Keyword></Keyword>
+			</Keywords>
+			<Shortcut></Shortcut>
+		</Header>
+		<Snippet>
+			<References>
+				<Reference>
+					<Assembly>Microsoft.Office.Interop.Word.dll</Assembly>
+				</Reference>
+			</References>
+			<Imports>
+				<Import>
+					<Namespace>Word = Microsoft.Office.Interop.Word</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<Object Editable="true">
+					<ID>document</ID>
+					<Type>Microsoft.Office.Interop.Word.Document</Type>
+					<ToolTip>Replace with the document to check.</ToolTip>
+					<Default>document</Default>
+				</Object>
+			</Declarations>
+			<Code Language="CSharp"><![CDATA[
+if ($document$.Application.Selection.InRange($document$.Range(ref System.Type.Missing, ref System.Type.Missing)))
+{
+// TODO: Insert code to run if the selection is in the current document.
+}
+else
+{
+// TODO: Insert code to run if the selection is not in the current document.
+}
+			]]></Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

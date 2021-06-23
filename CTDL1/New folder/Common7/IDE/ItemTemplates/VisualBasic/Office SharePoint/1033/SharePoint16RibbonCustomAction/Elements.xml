@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction Id="$guid2$.$ProjectItemName$"
+                RegistrationType="$UICustomAction_RegistrationType$"
+                RegistrationId="$UICustomAction_RegistrationId$"
+                Location="CommandUI.Ribbon"
+                Sequence="10001"
+                Title="$UICustomAction_Title$">
+    <CommandUIExtension>
+      <!-- 
+      $loc_custom_action_ui_definition_comment1$
+      $loc_custom_action_ui_definition_comment2$
+      -->
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="$UICustomAction_RibbonLocation$">
+          <Button Id="$UICustomAction_RibbonLocationId$.$ProjectItemName$Button"
+                  Alt="$UICustomAction_RibbonLabelText$"
+                  Sequence="100"
+                  Command="Invoke_$ProjectItemName$ButtonRequest"
+                  LabelText="$UICustomAction_RibbonLabelText$"
+                  TemplateAlias="o1"
+                  Image32by32="_layouts/15/images/placeholder32x32.png"
+                  Image16by16="_layouts/15/images/placeholder16x16.png" />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+      <CommandUIHandlers>
+        <CommandUIHandler Command="Invoke_$ProjectItemName$ButtonRequest"
+                          CommandAction="$UICustomAction_NavigationTarget$"/>
+      </CommandUIHandlers>
+    </CommandUIExtension >
+  </CustomAction>
+</Elements>

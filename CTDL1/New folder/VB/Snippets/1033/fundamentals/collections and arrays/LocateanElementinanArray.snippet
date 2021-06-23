@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Locate an Element in an Array </Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Finds the index of a given element in an array.</Description>
+      <Keywords>
+      </Keywords>
+      <Shortcut>arrLoc</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Object>
+          <ID>arrayName</ID>
+          <Type>Array</Type>
+          <ToolTip>Replace with the name of the array you want to search.</ToolTip>
+          <Default>myArray</Default>
+        </Object>
+        <Literal>
+          <ID>SearchString</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the value to search for.</ToolTip>
+          <Default>"value"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim index As Integer
+        index = Array.IndexOf($arrayName$, $SearchString$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

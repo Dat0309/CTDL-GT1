@@ -1,0 +1,26 @@
+readme.txt
+stdafx.cpp
+stdafx.h
+targetver.h
+root.cpp
+root.h
+root.def
+resource.h
+root.rc
+root.idl
+[!if ABOUT_BOX]
+CopyOnly | root.ico
+[!endif]
+ctl.h
+ctl.cpp
+ppg.h
+ppg.cpp
+CopyOnly | ctl.bmp
+[!if RUNTIME_LICENSE]
+root.lic
+[!endif]
+[!if HELP_FILES]
+root.hpj
+CopyOnly | ctlcore.rtf
+CopyOnly | bullet.bmp
+[!endif]

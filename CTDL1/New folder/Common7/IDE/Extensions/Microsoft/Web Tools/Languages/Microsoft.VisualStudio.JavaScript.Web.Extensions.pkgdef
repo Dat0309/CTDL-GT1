@@ -1,0 +1,11 @@
+[$RootKey$\Packages\{30db8f9b-ec9f-44d6-b377-83c7c27a1a8b}]
+@="JavaScriptWebExtensionsPackage"
+"InprocServer32"="$WinDir$\SYSTEM32\MSCOREE.DLL"
+"Class"="Microsoft.VisualStudio.JavaScript.Web.Extensions.JavaScriptWebExtensionsPackage"
+"CodeBase"="$PackageFolder$\Microsoft.VisualStudio.JavaScript.Web.Extensions.dll"
+[$RootKey$\AutoLoadPackages\{349c5852-65df-11da-9384-00065b846f21}]
+"{30db8f9b-ec9f-44d6-b377-83c7c27a1a8b}"=dword:00000000
+[$RootKey$\AutoLoadPackages\{e24c65dc-7377-472b-9aba-bc803b73c61a}]
+"{30db8f9b-ec9f-44d6-b377-83c7c27a1a8b}"=dword:00000000
+[$RootKey$\Menus]
+"{30db8f9b-ec9f-44d6-b377-83c7c27a1a8b}"=", Menus.ctmenu, 1"

@@ -1,0 +1,1242 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<HTML DIR="LTR">
+	<HEAD>
+		<TITLE>Assistent zum Hinzufügen von Klassen aus ActiveX-Steuerelementen</TITLE>
+		<META NAME="vs_targetSchema" CONTENT="http://schemas.microsoft.com/intellisense/ie5">
+		<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+		<META HTTP-EQUIV="MSThemeCompatible" CONTENT="Yes">
+		<LINK ID="LINKURL" REL="stylesheet" HREF="../../../../../1031/NewStyles.css">
+		<SYMBOL NAME="HEADER_FILE" TYPE=text VALUE=""></SYMBOL>
+		<SYMBOL NAME="IMPL_FILE" TYPE=text VALUE=""></SYMBOL>
+		<SYMBOL NAME="CLASS_NAME" TYPE=text VALUE=""></SYMBOL>
+		<SYMBOL NAME="BASE_CLASS" TYPE=text VALUE="CWnd"></SYMBOL>
+		<SYMBOL NAME="INTERFACE_COUNT" TYPE=num VALUE=1></SYMBOL>
+		<SYMBOL NAME="CLASS_TEXT" TYPE=text VALUE=""></SYMBOL>
+	</HEAD>
+
+<BODY BGCOLOR="BUTTONFACE" TOPMARGIN="0" LEFTMARGIN="0" RIGHTMARGIN="0" BOTTOMMARGIN="0" ONLOAD="InitDocument(document);" ONKEYDOWN="OnKey();" ONKEYPRESS="OnPress();">
+
+<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<COL WIDTH="100%">
+  <TR VALIGN="TOP">
+	<TD HEIGHT="79">
+	<!--OPEN OF ALL ENCOMPASSING TABLE ROW ONE//-->
+	 <TABLE CLASS="TWO" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	 <COL WIDTH="12"><COL><COL WIDTH="12">
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD CLASS="IMAGE" VALIGN="BOTTOM" WIDTH="110" ROWSPAN="2">
+		<DIV CLASS="SMALLA" ID="Layer0">
+		 <IMG CLASS="SMALLEST" SRC="../../Images/ClActiveXControl.gif" WIDTH="63" HEIGHT="63" ALT="" BORDER="0">
+		</DIV>
+	   </TD>
+
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="6" ROWSPAN="2">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+	 
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="65">
+		<H4 CLASS="HEAD" ID="HEAD">Willkommen</H4>
+		<P CLASS="SUBHEAD" ID="SUBHEAD">Dieser Assistent fügt Klassen basierend auf einem ActiveX-Steuerelement zum Projekt hinzu.</P>
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+	 
+	  <TR>
+	   <TD VALIGN="TOP" CLASS="RULE" COLSPAN="5" HEIGHT="2">
+		<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+	  	 <TR VALIGN="TOP">
+	  	  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+	  	  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+	  	 </TR>
+		</TABLE>
+	   </TD>
+	  </TR>
+	 </TABLE>
+	 
+	<!--CLOSE OF ALL ENCOMPASSING TABLE ROW ONE//-->
+	</TD>
+	</TR>
+	<TR VALIGN="TOP">
+	<TD HEIGHT="100%">
+	<!--OPEN OF ALL ENCOMPASSING TABLE ROW TWO//-->
+	
+	 <TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	 <COL>
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="100%">
+	   <!--OPEN OF CONTENT AND BUTTON TABLE//-->
+	   
+	   	<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+		<COL WIDTH="100%">
+		 <TR VALIGN="TOP">
+		  <TD HEIGHT="100%">
+	   	  <!--OPEN OF CONTENT//-->
+		  
+		  	<TABLE CLASS="CONTENT" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL><COL WIDTH="12"><COL><COL WIDTH="12">
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="5">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			 
+ 			 <TR VALIGN="TOP">
+ 			 <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" COLSPAN="3">
+		  	   <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+				<COL><COL WIDTH="12"><COL width=100%>
+				<TR VALIGN="TOP">
+ 			 	  <TD ALIGN="LEFT">
+ 					<SPAN CLASS="itemText" ID="GroupTitle">Klasse einfügen von:
+					<BR>
+			 		 <NOBR>
+					 <SPAN ID="BYVAL_SPAN" TITLE="Sucht die Typbibliothek in der Registrierung.">
+					  <INPUT TYPE="radio" CHECKED NAME="typelibtype" ID="TYPELIB_REG" ACCESSKEY="R" onClick="OnSourceOfTypeLib();">
+					  <LABEL CLASS="UpABit" FOR="TYPELIB_REG" ID="TYPELIB_REG_LABEL"><U>R</U>egistrierung</LABEL>
+					 </SPAN>
+					 <SPAN ID="BYREF_SPAN" TITLE="Wählen Sie die Typbibliothek aus der Datei.">
+					  <INPUT TYPE="radio" NAME="typelibtype" ID="TYPELIB_FILE" ACCESSKEY="D" onClick="OnSourceOfTypeLib();">
+					  <LABEL CLASS="UpABit" FOR="TYPELIB_FILE" ID="TYPELIB_FILE_LABEL"><U>D</U>atei</LABEL>
+					 </SPAN>
+					 </NOBR>
+					</SPAN>
+				  </TD>
+  		  	  	   <TD VALIGN="TOP" WIDTH="12">
+    			  	<IMG SRC="../../../../../1033/Images/spacer.gif" HEIGHT="1" WIDTH="12">
+  		  	   	   </TD>
+ 			 	  <TD VALIGN="TOP" ALIGN=LEFT>
+				 	<SPAN CLASS="itemText">
+	  	 			 <LABEL FOR="REG_TYPELIB_NAME" ID="REG_TYPELIB_NAME_LABEL" TITLE="Wählen Sie die Typbibliothek zum Generieren der Klassen aus.">Verfügbare Ac<U>t</U>iveX-Steuerelemente:</LABEL>
+					 <BR>
+	  	 			 <SELECT CLASS="TwoColumnLongButton" SIZE="1" ID="REG_TYPELIB_NAME" ACCESSKEY="T" TITLE="Wählen Sie die Typbibliothek zum Generieren der Klassen aus." VALUE="" onChange="OnActiveXControl();" STYLE="WIDTH:100%;"></SELECT>
+	  	 			 <SELECT CLASS="TwoColumnLongButton" SIZE="1" ID="FILE_TYPELIB_NAME" ACCESSKEY="T" TITLE="Wählen Sie die Typbibliothek zum Generieren der Klassen aus." VALUE="" onChange="OnActiveXControl();" STYLE="WIDTH:100%;"></SELECT>
+				  	</SPAN>
+  		  	  	   </TD>
+				  </TR>
+				  
+				  <TR VALIGN="TOP">
+  			  	   <TD VALIGN="TOP" COLSPAN="3">
+ 					<SPAN CLASS="itemTextTop">
+	  	 			 <LABEL FOR="LOCATION" ID="LOCATION_LABEL" TITLE="Speicherort der gewählten Typbibliothek."><U>S</U>peicherort:</LABEL>
+	  	 			 <table width=100%><tr><td width=100% VALIGN=BOTTOM>
+	  	 			 <INPUT ID="LOCATION" ACCESSKEY="S" TYPE="TEXT" TITLE="Speicherort der gewählten Typbibliothek." onBlur="OnChangeLocation();" onmouseOver="this.title=this.value;" STYLE="WIDTH:100%;">
+	  	 			 </td><td VALIGN=BOTTOM>
+				  	<BUTTON ID="BrowseTLB" TYPE="BUTTON" TITLE="Typbibliothek in der Datei suchen." onClick="OnBrowseForTLB();" onmouseover="this.title=LOCATION.value;" STYLE="height: 19px;">...</BUTTON>
+				  	 </td></tr></table>
+					</SPAN>
+			  	   </TD>
+				  </TR>
+				 </TABLE>
+			  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+ 		  	 </TR>
+			 
+ 			 <TR VALIGN="TOP">
+  			  <TD VALIGN="TOP" HEIGHT="11" COLSPAN="5">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			 
+			 <TR VALIGN="TOP">
+ 			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" COLSPAN="3">
+ 				<TABLE CLASS="FixedSize" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+				<COL WIDTH="50%"><COL WIDTH="12"><COL WIDTH="25"><COL WIDTH="12"><COL WIDTH="50%">
+ 			 	 <TR>
+  			  	  <TD VALIGN="TOP">
+  				   <SPAN CLASS="itemText">
+	  	 			 <LABEL FOR="INTERFACE_NAME" ID="INTERFACE_NAME_LABEL" TITLE="Wählen Sie die Schnittstellen aus, für die Wrapperklassen erstellt werden.">Schnittst<u>e</u>llen:</LABEL>
+				 	<BR>
+	  	 			<SELECT CLASS="sideBtn3" ID="INTERFACE_NAME" SIZE="8" ACCESSKEY="E" TITLE="Wählen Sie die Schnittstellen aus, für die Wrapperklassen erstellt werden." onChange="ToggleButtons();" onClick="ToggleButtons();" onDblClick="AddInterface(false);" STYLE="WIDTH:100%;">
+				 	</SELECT>
+				   </SPAN>
+  			  	  </TD>
+  			  	  <TD VALIGN="TOP" WIDTH="12">
+  					&nbsp;
+  			  	  </TD>
+  			  	  <TD VALIGN="TOP" ALIGN="MIDDLE" WIDTH="25">
+			  		<P CLASS="ElementSpacer22">&nbsp;</P>
+  					<BUTTON ID="AddBtn" CLASS="ButtonClass4" ALIGN="CENTER" TITLE="Wählen Sie eine Schnittstelle, und klicken Sie auf 'Hinzufügen', um die entsprechende Klasse zu generieren." onClick="AddInterface(false);" STYLE="MARGIN-BOTTOM:2PX;"><B CLASS="BigFont">&rsaquo;</B></BUTTON>
+					<BUTTON ID="AddAllBtn" CLASS="ButtonClass4" ALIGN="CENTER" TITLE="Alle Schnittstellen hinzufügen" onClick="AddInterface(true);"><B CLASS="BigFont">&raquo;</B></BUTTON>
+					<P STYLE="MARGIN-TOP:0PX; MARGIN-BOTTOM:7PX;"></P>
+					<BUTTON ID="RemoveBtn" CLASS="ButtonClass4" ALIGN="CENTER" TITLE="Schnittstelle entfernen" onClick="RemoveInterface(false);" STYLE="MARGIN-LEFT:0PX; MARGIN-BOTTOM:2PX;"><B CLASS="BigFont">&lsaquo;</B></BUTTON>
+					<BUTTON ID="RemoveAllBtn" CLASS="ButtonClass4" ALIGN="CENTER" TITLE="Alle Schnittstellen entfernen" onClick="RemoveInterface(true);" ALIGN="CENTER"><B CLASS="BigFont">&laquo;</B></BUTTON>
+  			  	  </TD>
+				
+  			  	  <TD VALIGN="TOP" WIDTH="12">
+  					&nbsp;
+  			  	  </TD>
+  			  	  <TD VALIGN="TOP">
+			  		<SPAN CLASS="itemText">
+	  	 			 <LABEL FOR="GENERATED_CLASS_NAME" ID="GENERATED_CLASS_NAME_LABEL" TITLE="Liste der Klassen, die generiert werden."><U>G</U>enerierte Klassen:</LABEL>
+				 	 <BR>
+				 	 <SELECT CLASS="sideBtn3" ID="GENERATED_CLASS_NAME" SIZE="8" ACCESSKEY="G" TITLE="Liste der Klassen, die generiert werden." onChange="OnSelectClass();" STYLE="WIDTH:100%;"></SELECT>
+				 	</SPAN>
+  			  	  </TD>
+ 		 	 	 </TR>
+		 		</TABLE>
+  		  	  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+ 		  	 </TR>
+			 
+ 			 <TR VALIGN="TOP">
+  			  <TD VALIGN="TOP" HEIGHT="6" COLSPAN="5">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+
+ 			 <TR VALIGN="TOP">
+ 				 <TD VALIGN="TOP" WIDTH="12">
+  					&nbsp;
+  				 </TD>
+				 <TD VALIGN="TOP" COLSPAN="3">
+				  <TABLE CLASS="FIXEDSIZE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+				  <COL WIDTH="33%"><COL WIDTH="12"><COL WIDTH="33%"><COL WIDTH="12"><COL WIDTH="33%">
+				   <TR VALIGN="TOP">
+				    <TD VALIGN="TOP">
+ 					 <SPAN CLASS="itemText">
+	  	 				 <LABEL FOR="CLASS_NAME" ID="CLASS_NAME_LABEL" TITLE="Geben Sie den Namen der zu generierenden Wrapperklasse ein.">Kla<u>s</u>sen:</LABEL>
+	  	 				<table width=100%><tr><td valign=bottom width=100%>
+	  	 				 <INPUT ID="CLASS_NAME" TYPE="text" ACCESSKEY="S" TITLE="Geben Sie den Namen der zu generierenden Wrapperklasse ein." onBlur="OnChangeClassName();" STYLE="width: 100%;">
+					  	</td></tr></table>
+					 </SPAN>
+				 	</TD>
+   		  		  	<TD VALIGN="TOP" WIDTH="12">
+  						&nbsp;
+  		  		  	</TD>
+				  	<TD VALIGN="TOP">
+ 					 <NOBR>
+					  <SPAN CLASS="itemText">
+	  	 				<LABEL FOR="HEADER_FILE" ID="HEADER_FILE_LABEL" TITLE="Der generierte Name der Headerdatei für die Wrapperklasse.  Bearbeiten Sie den Namen oder klicken Sie auf 'Durchsuchen', um eine andere Datei anzugeben.">H-Date<U>i</U>:</LABEL>
+	  	 				<table width=100%><tr><td valign=bottom width=100%>
+	  	 				<INPUT ID="HEADER_FILE" ACCESSKEY="I" TITLE="Der generierte Name der Headerdatei für die Wrapperklasse.  Bearbeiten Sie den Namen oder klicken Sie auf 'Durchsuchen', um eine andere Datei anzugeben." TYPE="text" onBlur="OnChangeHeaderFileName();" STYLE="width: 100%;">
+	  	 				</tr><td><td valign=bottom>
+					  	<BUTTON ID="HdrBrowseBtn" TYPE="BUTTON" TITLE="Headerdatei suchen." onClick="OnBrowseHeaderFile();" STYLE="height: 19px;">...</BUTTON>
+					  	</td></tr></table>
+					  </SPAN>
+					 </NOBR>
+  		  		  	</TD>
+   		  		  	<TD VALIGN="TOP" WIDTH="12">
+  						&nbsp;
+  		  		  	</TD>
+  				  	<TD VALIGN="TOP"> 
+ 					 <NOBR>
+					  <SPAN CLASS="itemText">
+	  	 				<LABEL FOR="IMPL_FILE" ID="IMPL_FILE_LABEL" TITLE="Der generierte Name der CPP-Datei für die Wrapperklasse.  Bearbeiten Sie den Namen, oder klicken Sie auf 'Durchsuchen', um eine andere Datei anzugeben.">C<U>P</U>P-Datei:</LABEL>
+						<BR>
+	  	 				<table width=100%><tr><td valign=bottom width=100%>
+	  	 				<INPUT ID="IMPL_FILE" ACCESSKEY="p" TITLE="Der generierte Name der CPP-Datei für die Wrapperklasse.  Bearbeiten Sie den Namen, oder klicken Sie auf 'Durchsuchen', um eine andere Datei anzugeben." TYPE="text" onBlur="OnChangeImplFileName();" STYLE="width: 100%;">
+	  	 				</tr><td><td valign=bottom>
+					  	<BUTTON ID="ImplBrowseBtn" TYPE="BUTTON" TITLE="CPP-Datei suchen." onClick="OnBrowseImplFile();" STYLE="height: 19px;">...</BUTTON>
+					  	</td></tr></table>
+					  </SPAN>
+					 </NOBR>
+					</TD>
+				   </TR>
+			  	  </TABLE>
+  		  		 </TD>
+
+  		  		 <TD VALIGN="TOP" WIDTH="12">
+  					&nbsp;
+  		  		 </TD>
+ 		  	 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="6" COLSPAN="5">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+		 	</TABLE>
+			
+	   	  <!--CLOSE OF CONTENT//-->
+		  </TD>
+		 </TR>
+		 <TR VALIGN="BOTTOM">
+		  <TD>
+	   	  <!--OPEN OF BUTTON HTML//-->
+		  
+		  	<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="12">
+			 <TR>
+  			  <TD VALIGN="TOP" CLASS="RULE" COLSPAN="8" HEIGHT="2">
+				<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+  	 			 <TR VALIGN="TOP">
+  	  			  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+  	  			  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+  	 			 </TR>
+				</TABLE>
+  			  </TD>
+ 			  </TR>
+ 
+ 			  <TR>
+  			  <TD VALIGN="TOP" HEIGHT="11" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 
+ 			<TR>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" HEIGHT="23">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="FinishBtn" onClick="OnFinish(document);">Fertig stellen</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="CancelBtn" onClick="window.external.Finish(document, 'cancel');">Abbrechen</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="HelpBtn" onClick="window.external.OnHelp('vc.codewiz.class.axcontrol');">Hilfe</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			</TABLE>
+			
+	   	  <!--CLOSE OF BUTTON HTML//-->
+		  </TD>
+		 </TR>
+		</TABLE>
+	
+	   <!--CLOSE OF CONTENT AND BUTTON TABLE//-->
+	   </TD>
+	  </TR>
+	 </TABLE>
+	
+	<!--CLOSE OF ALL ENCOMPASSING TABLE ROW TWO//-->
+	</TD>
+  </TR>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<SCRIPT LANGUAGE="JSCRIPT">
+
+var oTypeLibs;
+
+var oInterfaces = document.all.tags("SELECT").item("INTERFACE_NAME");
+
+var oGeneratedClasses = document.all.tags("SELECT").item("GENERATED_CLASS_NAME");
+var Header_Files_Array = new Array();
+var Impl_Files_Array = new Array();
+var Gen_Interface_Array = new Array();
+var Gen_Interface_Array_TLB = new Array();
+
+var collTypeLibs; //pointing to collFileTypeLibs or collRegTypeLibs, depending on context
+
+var collRegTypeLibs;
+var collFileTypeLibs;
+var LastIndex = 0;
+var SkipCheck = 1;
+
+function InitDocument(document)
+{
+	setDirection();
+	
+	if (window.external.FindSymbol("DOCUMENT_FIRST_LOAD"))
+	{
+		var L_WizardDialogTitle_Text = "Assistent zum Hinzufügen von Klassen aus ActiveX-Steuerelementen";
+		window.external.AddSymbol("WIZARD_DIALOG_TITLE", L_WizardDialogTitle_Text);
+		window.external.SetDefaults(document);
+	}
+	CLASS_NAME_LABEL.disabled = true;
+	CLASS_NAME.disabled = true;
+	HEADER_FILE_LABEL.disabled = true;
+	HEADER_FILE.disabled = true;
+	HdrBrowseBtn.disabled = true;
+	IMPL_FILE_LABEL.disabled = true;
+	IMPL_FILE.disabled = true;
+	ImplBrowseBtn.disabled = true;
+
+	window.external.Load(document);
+	OnSourceOfTypeLib();
+}
+
+function OnSourceOfTypeLib()
+{
+	if(TYPELIB_FILE.checked)
+	{
+		//show the FILE_TYPELIB_NAME SELECT
+		oTypeLibs = document.all.tags("SELECT").item("FILE_TYPELIB_NAME");
+		FILE_TYPELIB_NAME.style.display="inline";
+		REG_TYPELIB_NAME.style.display="none";
+
+		LOCATION_LABEL.disabled = false;
+		LOCATION.disabled = false;
+		BrowseTLB.disabled = false;
+		if(collFileTypeLibs == null)
+		{
+			collFileTypeLibs = window.external.FileTypeLibs;
+			collTypeLibs = collFileTypeLibs;
+			PopulateTypeLibs();
+		}
+		else
+			collTypeLibs = collFileTypeLibs;
+	}
+	else
+	{
+		//show the REG_TYPELIB_NAME SELECT
+		oTypeLibs = document.all.tags("SELECT").item("REG_TYPELIB_NAME");
+		REG_TYPELIB_NAME.style.display="inline";
+		FILE_TYPELIB_NAME.style.display="none";
+
+		LOCATION_LABEL.disabled = true;
+		LOCATION.disabled = true;
+		BrowseTLB.disabled = true;
+		if(collRegTypeLibs == null)
+		{
+			collRegTypeLibs = window.external.ActiveXControls;
+			collTypeLibs = collRegTypeLibs;
+			PopulateTypeLibs();
+		}
+		else
+			collTypeLibs = collRegTypeLibs;
+	}
+
+	oTypeLibs.disabled = (collTypeLibs.Count==0);
+	OnActiveXControl();
+	ToggleButtons();
+}
+
+function Next(document, linkto)
+{
+	window.external.Next(document, linkto);
+}
+
+function OnFinish(document)
+{
+	if (oGeneratedClasses.options.length == 0)
+	{
+		var L_ErrorSelection_Text = "Fügen Sie mindestens eine Klasse zur generierten Klassenliste hinzu.";
+		window.external.ReportError(L_ErrorSelection_Text);
+		window.focus();
+		return;
+	}
+
+	if (!ValidateInput())
+		return;
+
+	SetSymbols();
+	OnWizFinish(document);
+}
+
+function PopulateTypeLibs()
+{
+	oTypeLibs.options.length = 0;
+//	var glob = window.external.ProjectObject.Globals;
+
+	var len = collTypeLibs.Count;
+	for (var i = 1; i <= len; i++)
+	{
+		var oTypeLib = collTypeLibs.item(i);
+		//check if the formatted GUID for strControlType wrapper exists in "globals" section of the project file 
+//REVIEW(CHRISKOZ) the wrappers are per typelib in addvariable wizard while per interface here
+//also the constructors in the wrappers are different in addvariable and here
+//so I disabled this code
+//		if(glob.VariableExists(oTypeLib.Guid))
+//			continue;//yes, it exists, so use its class name and don't allow to generate any different name		
+		var option = document.createElement("OPTION");
+		option.text = oTypeLib.Name + "<" + (oTypeLib.Version.length ? oTypeLib.Version : "1.0") + ">";
+		option.value = oTypeLib.Location;
+		oTypeLibs.add(option);
+	}
+}
+      
+function OnActiveXControl()
+{
+	if (oTypeLibs.selectedIndex == -1)
+		oTypeLibs.selectedIndex = 0;
+
+	oInterfaces.options.length = 0;
+	if(oTypeLibs.options.length==0)
+	{
+		LOCATION.value = "";
+		return;
+	}
+	AddAllBtn.disabled = false;
+	LOCATION.value = oTypeLibs.options(oTypeLibs.selectedIndex).value;
+	PopulateInterfaces();
+	ToggleButtons();
+}
+
+function PopulateInterfaces()
+{
+	var oControl = collTypeLibs.item(oTypeLibs.selectedIndex+1);
+	var strTypeLib = oControl.Name;
+	var collInterfaces = oControl.Interfaces;
+	var nCount = collInterfaces.Count;
+	for (var j = 1; j <=  nCount; j++)
+	{
+		var item = collInterfaces.item(j);
+		var oOption = document.createElement("OPTION");
+		var strInterface = item.Name;
+		oOption.value = strInterface;
+		oOption.text = strInterface;
+		oInterfaces.add(oOption);
+	}
+}
+
+function OnChangeLocation()
+{
+	if(LOCATION.value!=null && LOCATION.value!="")
+	{
+		var strLocation = LOCATION.value.toUpperCase();
+		var strOrgLocation = "";
+		if (oTypeLibs.selectedIndex != -1)
+		{
+			strOrgLocation = oTypeLibs.options(oTypeLibs.selectedIndex).value.toUpperCase();
+		}
+		if(strLocation!=strOrgLocation)
+			AddTLBFromFile(LOCATION.value);
+	}
+	else if(oTypeLibs.selectedIndex>=0)
+	{
+		LOCATION.value = oTypeLibs.options(oTypeLibs.selectedIndex).value;
+	}
+}
+
+function OnBrowseForTLB()
+{
+	var strFile;
+	try
+	{
+		L_Title1_Text = "VS-Assistenten-Dateiauswahl";
+		L_Title2_Text = "TypeLib-Dateien (*.exe; *.dll; *.olb; *.tlb; *.ocx)\0*.exe; *.dll; *.olb; *.tlb; *.ocx\0\0";
+		strFile = window.external.GetExistingFileNameViaDlg(L_Title1_Text, "", L_Title2_Text, "");
+	}
+	catch(e)
+	{
+		if (e.number != OLE_E_PROMPTSAVECANCELLED)
+		{
+			var L_ErrMsg1_Text = "Fehler in OnBrowseForTLB()";
+			if (e.description.length != 0)
+			{
+				L_ErrMsg1_Text += ": ";
+				L_ErrMsg1_Text += e.description;
+			}
+			window.external.ReportError(L_ErrMsg1_Text);
+		}
+		return;
+	}
+	AddTLBFromFile(strFile);
+}
+
+function AddTLBFromFile(strFile)
+{
+	var len = collTypeLibs.Count;
+	var bFound = false;
+
+	var strFileUpcase = strFile.toUpperCase();
+	for (i = 0; i < len; i++)
+	{
+		if (oTypeLibs(i).value.toUpperCase() == strFileUpcase)
+		{
+			oTypeLibs.selectedIndex = i;
+			bFound = true;
+			break;
+		}
+	}
+	if (!bFound)
+	{
+		//create a new filetypelib collection and add it to the existing collection
+		var collNewFileTypeLibs = window.external.FileTypeLibs(strFile);
+		var addCounts = collNewFileTypeLibs.Count;
+		if(0==addCounts)
+		{
+			L_ErrorNoTLB_Text = "In der Datei wurde keine Typbibliothek gefunden: ";
+			window.external.ReportError(L_ErrorNoTLB_Text + strFile);
+			return false;
+		}
+		oTypeLibs.disabled = false;
+		var oldCounds = collTypeLibs.Count;
+		for(var i=1; i<=addCounts; i++)
+		{
+			var item = collNewFileTypeLibs.item(i);
+			collTypeLibs.AddItem(item);
+			//update UI
+			var option = document.createElement("OPTION");
+			option.text = item.Name;
+			option.value = item.Location;
+			oTypeLibs.add(option);
+		}
+		//finally, set the index to the first added type library
+		oTypeLibs.selectedIndex = oldCounds;
+		collFileTypeLibs = collTypeLibs;
+		OnActiveXControl();
+	}
+	else
+	{
+		L_ErrorTLBAlreadyInList_Text = ": die Typbibliothek ist bereits in der Liste enthalten";
+		window.external.ReportError(strFile + L_ErrorTLBAlreadyInList_Text);
+	}
+	return !bFound;
+}
+
+function OnBrowseImplFile()
+{
+	var strFile;
+	try
+	{
+		L_Title3_Text = "VS-Assistenten-Dateiauswahl";
+		L_Title4_Text = "Visual C++-Dateien (*.cpp;*.h;*.inl;*.c)\0*.cpp;*.h;*.inl;*.c\0\0";
+		strFile = window.external.GetExistingFileNameViaDlg(L_Title3_Text, window.external.FindSymbol("PROJECT_PATH"), L_Title4_Text, HEADER_FILE.value);
+	}
+	catch(e)
+	{
+		if (e.number != OLE_E_PROMPTSAVECANCELLED)
+		{
+			var L_ErrMsg2_Text = "Fehler in OnBrowseImplFile()";
+			if (e.description.length != 0)
+			{
+				L_ErrMsg2_Text += ": ";
+				L_ErrMsg2_Text += e.description;
+			}
+			window.external.ReportError(L_ErrMsg2_Text);
+		}
+		return;
+	}
+
+	IMPL_FILE.value = strFile;
+}
+
+function OnBrowseHeaderFile()
+{
+	var strFile;
+	try
+	{
+		L_Title3_Text = "VS-Assistenten-Dateiauswahl";
+		L_TitleHeader_Text = "Visual C++-Headerdateien (*.h)\0*.h\0\0";
+		strFile = window.external.GetExistingFileNameViaDlg(L_Title3_Text, window.external.FindSymbol("PROJECT_PATH"), L_TitleHeader_Text, IMPL_FILE.value);
+
+	}
+	catch(e)
+	{
+		if (e.number != OLE_E_PROMPTSAVECANCELLED)
+		{
+			var L_ErrMsg3_Text = "Fehler in OnBrowseHeaderFile()";
+			if (e.description.length != 0)
+			{
+				L_ErrMsg3_Text += ": ";
+				L_ErrMsg3_Text += e.description;
+			}
+			window.external.ReportError(L_ErrMsg3_Text);
+		}
+		return;
+	}
+	HEADER_FILE.value = strFile;
+}
+
+function ValidateInput()
+{
+	var oInvalid = null;
+
+	if (!CLASS_NAME.value.length)
+	{
+		var L_EnterClassNameErr_Text = "Geben Sie einen Klassennamen ein.";
+		oErrObj = new Error(L_EnterClassNameErr_Text);
+		SetErrorInfo(oErrObj);
+		oInvalid = CLASS_NAME;
+	}
+	else
+	{
+		if (!Validate(CLASS_NAME))
+			oInvalid = CLASS_NAME;
+	}
+
+	if (oInvalid == null)
+	{
+		if (!Validate(HEADER_FILE))
+			oInvalid = HEADER_FILE;
+	}
+	if (oInvalid == null)
+	{
+		if (!Validate(IMPL_FILE))
+			oInvalid = IMPL_FILE;
+	}
+
+	if (oInvalid != null)
+	{
+		if(!oInvalid.disabled)
+		{
+			window.external.ReportError();
+			oInvalid.focus();
+		}
+		return false;
+	}
+	return true;
+}
+
+function Validate(obj)
+{
+	var bValid = true;
+	switch(obj.id)
+	{
+		case "CLASS_NAME":
+			bValid = window.external.ParentObject.ValidateMember(obj.value, vsCMElementClass);
+			if (bValid)
+				bValid = validateGeneratedList(obj.value, true);
+			break;
+		case "HEADER_FILE":
+			bValid = window.external.dte.VCLanguageManager.ValidateFileName(obj.value);
+			if (HEADER_FILE.value == IMPL_FILE.value)
+			{
+				var L_ErrMsg_Text = "Header- und Implementierungsdateien dürfen nicht den gleichen Namen haben.";
+				oErrObj = new Error(L_ErrMsg_Text);
+				SetErrorInfo(oErrObj);
+				bValid = false;
+			}
+			break;
+		case "IMPL_FILE":
+			bValid = window.external.dte.VCLanguageManager.ValidateFileName(obj.value, vsCMValidateFileExtCppSource);
+			break;
+		default:
+			break;
+	}
+
+	if (typeof(bValid) == "undefined")
+		bValid = false;
+
+	return bValid;
+}
+
+function SetSymbols()
+{
+	var nCount = oGeneratedClasses.options.length;
+	window.external.AddSymbol("INTERFACE_COUNT", nCount);
+	for (i = 0; i <  nCount; i++)
+	{
+		var strInterface = oGeneratedClasses.options[i].value;
+
+		var strClassSymbolName = "CLASS_NAME_" + (i.toString());
+		var strClassTextSymbolName = "CLASS_TEXT_" + (i.toString());
+		var strCLSIDSymbolName = "CONTROL_CLSID_" + (i.toString());
+		var strUnformattedCLSIDSymbolName = "CONTROL_UNFORMATTED_CLSID_" + (i.toString());
+		var strHeaderSymbolName = "HEADER_FILE_" + (i.toString());
+		var strImplSymbolName = "IMPL_FILE_" + (i.toString());
+
+		var strClassText = GetFuncText(Gen_Interface_Array[i]);
+
+		window.external.AddSymbol(strClassSymbolName, oGeneratedClasses.options[i].text);
+		window.external.AddSymbol(strHeaderSymbolName, Header_Files_Array[i]);
+		window.external.AddSymbol(strImplSymbolName, Impl_Files_Array[i]);
+		window.external.AddSymbol(strClassTextSymbolName, strClassText);
+		window.external.AddSymbol(strCLSIDSymbolName, GetFormattedGuid(Gen_Interface_Array_TLB[i]));
+		window.external.AddSymbol(strUnformattedCLSIDSymbolName, Gen_Interface_Array_TLB[i].Guid);
+
+//REVIEW(CHRISKOZ) the wrappers are per typelib in addvariable wizard while per interface here
+//also the constructors in the wrappers are different in addvariable and here
+//so I disabled this code
+//		var glob = window.external.ProjectObject.Globals;
+//		if(!glob.VariableExists(Gen_Interface_Array_TLB[i].Guid))
+//		{
+			//store the GUIDS for ActiveX control wrapper we've added in the "globals" section of the project file
+//			glob.VariableValue(Gen_Interface_Array_TLB[i].Guid) = oGeneratedClasses.options[i].text;
+//			glob.VariablePersists(Gen_Interface_Array_TLB[i].Guid) = true;
+//		}
+	}
+}
+
+function GetFuncText(oInterface)
+{
+	var oFuncs = oInterface.Functions;
+	var funcCount = oFuncs.Count;
+	var strText = "";
+	var oFunc;
+
+	for (j = 1; j <= funcCount; j++)
+	{
+		var strFuncText = "\t";
+		oFunc = oFuncs.item(j);
+		if(oFunc.Name == "AddRef" || oFunc.Name == "Release" || oFunc.Name == "QueryInterface")
+			continue;
+
+		if (oFunc.TypeString != "HRESULT")
+		{
+			strFuncText += ((oFunc.TypeString == "BSTR") ? "CString" : oFunc.TypeString.replace("VARIANT_BOOL", "BOOL"));
+			strFuncText += " ";
+			strFuncText += oFunc.Name;
+			strFuncText += "(";
+		}
+		else
+		{
+			strFuncText += "STDMETHOD(";
+			strFuncText += oFunc.Name;
+			strFuncText += ")(";
+		}
+		var oParams = oFunc.Parameters;
+		var paramCount = oParams.Count;
+
+		for (iParam = 1; iParam <= paramCount; iParam++)
+		{
+			var oParam = oParams.item(iParam);
+			if(iParam > 1) 
+				strFuncText += ", ";
+			strFuncText += (oParam.TypeString == "BSTR") ? "LPCTSTR" : oParam.TypeString.replace("VARIANT_BOOL", "BOOL");
+			strFuncText += " ";
+			if (oParam.Name.length)
+				strFuncText += oParam.Name;
+			else
+				strFuncText += "newValue";
+		}			
+		strFuncText += ")\r\n\t{\r\n\t\t";
+
+		if (oFunc.ReturnType != "VT_EMPTY" && oFunc.ReturnType != "VT_VOID")
+		{
+			strFuncText += ((oFunc.TypeString == "BSTR") ? "CString" : oFunc.TypeString.replace("VARIANT_BOOL", "BOOL"));
+			strFuncText += " result;\r\n\t\t";
+		}
+
+		if (paramCount)
+		{
+			strFuncText += "static BYTE parms[] = ";
+			for (count = 1; count <= paramCount; count++)
+			{
+				strFuncText += oFunc.Parameters.item(count).VTSType;
+				strFuncText += " ";
+			}
+			strFuncText += ";\r\n\t\t";
+		}
+			
+		strFuncText += "InvokeHelper(";
+		strFuncText += oFunc.DispID;
+		strFuncText += ", DISPATCH_";
+		strFuncText += oFunc.InvokeKind;
+		strFuncText += ", " + oFunc.ReturnType;
+
+		if (oFunc.ReturnType == "VT_EMPTY" || oFunc.ReturnType == "VT_VOID")
+			strFuncText += ", NULL";
+		else
+			strFuncText += ", (void*)&result";
+
+		if (paramCount)
+		{
+			strFuncText += ", parms";
+			if (oFunc.InvokeKind == "PROPERTYPUT" || oFunc.InvokeKind == "PROPERTYPUTREF")
+			{
+				if (paramCount > 1)
+				{
+					for (n = 1; n < paramCount; n++)
+					{
+						var oParam = oParams.item(n);
+						strFuncText += ", ";
+						if (oParam.VTSType == "VTS_CY" || oParam.VTSType == "VTS_VARIANT")
+							strFuncText += "&";
+						strFuncText += oParam.Name;
+					}
+					if (oParams.item(paramCount).VTSType == "VTS_CY" || oParams.item(paramCount).VTSType == "VTS_VARIANT")
+						strFuncText += ", &newValue);"
+					else
+						strFuncText += ", newValue);"
+				}
+				else
+				{
+					if (oParams.item(paramCount).VTSType == "VTS_CY" || oParams.item(paramCount).VTSType == "VTS_VARIANT")
+						strFuncText += ", &newValue);"
+					else
+						strFuncText += ", newValue);"
+				}
+			}
+			else
+			{
+				for (n = 1; n <= paramCount; n++)
+				{
+					var oParam = oParams.item(n);
+					strFuncText += ", ";
+					if (oParam.VTSType == "VTS_CY" || oParam.VTSType == "VTS_VARIANT")
+						strFuncText += "&";
+					strFuncText += oParam.Name;
+				}
+				strFuncText += ");"
+			}
+		}
+		else
+		{
+			strFuncText += ", NULL);"
+		}
+		if (oFunc.ReturnType != "VT_EMPTY" && oFunc.ReturnType != "VT_VOID")
+			strFuncText += "\r\n\t\treturn result;";
+
+		strFuncText += "\r\n\t}\r\n";
+		strText += strFuncText;
+	}
+	return strText;
+}
+
+function GetFormattedGuid(oInterface)
+{
+	var strGuid = oInterface.Guid;
+	return window.external.FormatGuid(strGuid, 2);
+}
+
+function GetInterfaceClsid(oControl, oInterface)
+{
+	// Search through all the interfaces of all the co-classes of the control for the
+	// specified interface. Record how many co-classes has been found and how many of
+	// them implements the interface.
+	var oMatchingCoClass;
+	var oLastCoClass;
+	var nCoClasses = 0;
+	var nImplementors = 0;
+	if (oControl.Coclasses == null)
+	{
+		// No coclasses (probably control from registry). Using module GUID.
+		// This should really be an error if oControl comes from a TLB (not from registry)
+		return oControl;
+	}
+	// For each co-class of the control...
+	for (var i = 1; i <= oControl.Coclasses.Count; i++)
+	{
+		var oCurCoClass = oControl.Coclasses.item(i);
+		if (oCurCoClass.Name == "")
+			continue;
+		oLastCoClass = oCurCoClass;
+		nCoClasses++;
+		// Look through all the implemented interfaces
+		for (var j = 1; j <= oCurCoClass.Interfaces.Count; ++j)
+		{
+			var oCurInterface = oCurCoClass.Interfaces.item(j);
+			if (oCurInterface.Name == oInterface.Name)
+			{
+				// We've found a co-class that implements the interface.
+				// Keep searching though to make sure it's unique...
+				oMatchingCoClass = oCurCoClass;
+				nImplementors++;
+				break;
+			}
+		}
+	}
+	if (nImplementors == 0)
+	{
+		if (nCoClasses == 1)
+		{
+			// No coclass implements the requested interface, but there's only a single co-class.
+			// Return that as our best bet.
+			return oLastCoClass;
+		}
+		// No coclass implements the interface, and there are multiple ones. Just report an error...
+		return 0;
+	}
+	if (nImplementors > 1)
+	{
+		// More than one co-class implement interface. Can't decide so report an error...
+		return 1;
+	}
+
+	// We've found a single co-class that implemented the interface, so return it.	
+	return oMatchingCoClass;
+}
+
+function AddInterface(bAll)
+{
+	if (oInterfaces.selectedIndex == -1 && !bAll)
+		return;
+
+	if (oTypeLibs.selectedIndex == -1)
+		oTypeLibs.selectedIndex = 0;
+
+	if (oInterfaces.selectedIndex == -1)
+		oInterfaces.selectedIndex = 0;
+
+	var oControl = collTypeLibs.item(oTypeLibs.selectedIndex+1);
+
+	var i;
+	var len;
+	if(bAll)
+	{
+		i = 0;
+		len = oInterfaces.options.length;
+		AddAllBtn.disabled = true;
+	}
+	else
+	{
+		i = oInterfaces.selectedIndex;
+		len = i+1;
+	}
+	if (oGeneratedClasses.options.length == 0)
+		SkipCheck = 1;
+
+	for (; i < len; i++)
+	{
+		var strInterfaceName = oInterfaces.options[i].value;
+		if (IsInGeneratedList(strInterfaceName))
+		{
+			if (!bAll)
+			{
+				var L_Err3_Text = "Die Klasse wurde bereits für diese Schnittstelle ausgewählt: ";
+				window.external.ReportError(L_Err3_Text + strInterfaceName);
+				return;
+			}
+			continue;
+		}
+
+		var oCoclass = GetInterfaceClsid(oControl, oControl.Interfaces.item(i+1));
+		if (oCoclass === 0 || oCoclass === 1)
+		{
+			if (oCoclass == 1)
+			{
+				var L_Err_MoreThanOneCoClass = "There is more than one coclass implementing interface ";
+				window.external.ReportError(L_Err_MoreThanOneCoClass + strInterfaceName);
+			}
+			else
+			{
+				var L_Err_NoCoClass = "Cannot find coclass for interface ";
+				window.external.ReportError(L_Err_NoCoClass + strInterfaceName);
+			}
+			return;
+		}
+
+		var oOption = document.createElement("OPTION");
+		oOption.value = strInterfaceName;
+		//remove the leading 'I' 'i' or '_' from the interface name to form a class name and file names 
+		if ((strInterfaceName.substr(0, 1) == '_') || (strInterfaceName.substr(0, 1) == 'I') || (strInterfaceName.substr(0, 1) == 'i'))
+			strInterfaceName = strInterfaceName.substr(1);
+		var strClassName = "C" + strInterfaceName;
+
+		var j = 0;
+		var rootClassName = strClassName;
+		while (!window.external.ParentObject.ValidateMember(strClassName, vsCMElementClass)
+				|| !validateGeneratedList(strClassName, false))
+		{
+			strClassName = rootClassName + j;
+			j++;
+		}
+		
+		oOption.text = strClassName;
+		oGeneratedClasses.add(oOption);
+
+		Header_Files_Array[oGeneratedClasses.options.length-1] = strClassName + ".h";
+		Impl_Files_Array[oGeneratedClasses.options.length-1] = strClassName + ".cpp";
+		Gen_Interface_Array[oGeneratedClasses.options.length-1] = oControl.Interfaces.item(i+1);
+		Gen_Interface_Array_TLB[oGeneratedClasses.options.length-1] = oCoclass;
+	}
+
+	oGeneratedClasses.selectedIndex = oGeneratedClasses.options.length-1;
+	ToggleButtons();
+	OnSelectClass();
+}
+
+function OnSelectClass()
+{
+	var nIndex = oGeneratedClasses.selectedIndex;
+	if (nIndex == -1)
+	{
+		CLASS_NAME_LABEL.disabled = true;
+		CLASS_NAME.disabled = true;
+		HEADER_FILE_LABEL.disabled = true;
+		HEADER_FILE.disabled = true;
+		HdrBrowseBtn.disabled = true;
+		IMPL_FILE_LABEL.disabled = true;
+		IMPL_FILE.disabled = true;
+		ImplBrowseBtn.disabled = true;
+		return;
+	}
+	if (!SkipCheck)
+	{
+		if (!ValidateInput())
+		{
+			oGeneratedClasses.selectedIndex = LastIndex;
+			return;
+		}
+	}
+	LastIndex = nIndex;
+	SkipCheck = 0;
+	var strClassName = oGeneratedClasses.options[nIndex].text;
+	CLASS_NAME.value = strClassName;
+	CLASS_NAME_LABEL.disabled = false;
+	CLASS_NAME.disabled = false;
+	HEADER_FILE.value = Header_Files_Array[nIndex];
+	HEADER_FILE_LABEL.disabled = false;
+	HEADER_FILE.disabled = false;
+	HdrBrowseBtn.disabled = false;
+	IMPL_FILE.value = Impl_Files_Array[nIndex];
+	IMPL_FILE_LABEL.disabled = false;
+	IMPL_FILE.disabled = false;
+	ImplBrowseBtn.disabled = false;
+}
+
+function OnChangeClassName()
+{
+	var nIndex = oGeneratedClasses.selectedIndex;
+	if (nIndex == -1)
+		return;
+	var strNewClassName = CLASS_NAME.value;
+	oGeneratedClasses.options[nIndex].text = strNewClassName;
+}
+
+function OnChangeHeaderFileName()
+{
+	var nIndex = oGeneratedClasses.selectedIndex;
+	if (nIndex == -1)
+		return;
+
+	Header_Files_Array[nIndex] = HEADER_FILE.value;
+}
+
+function OnChangeImplFileName()
+{
+	var nIndex = oGeneratedClasses.selectedIndex;
+	if (nIndex == -1)
+		return;
+
+	Impl_Files_Array[nIndex] = IMPL_FILE.value;
+}
+
+function RemoveInterface(bAll)
+{
+	if (oGeneratedClasses.selectedIndex == -1 && !bAll)
+		return;
+
+	SkipCheck = 1;
+	var Index = -1;
+	if (bAll)
+	{
+		oGeneratedClasses.options.length = 0;
+		Header_Files_Array.length = 0;
+		Impl_Files_Array.length = 0;
+		Gen_Interface_Array.length = 0;
+		Gen_Interface_Array_TLB.length = 0;
+
+		HEADER_FILE.value = "";
+		IMPL_FILE.value = "";
+		CLASS_NAME.value = "";
+	}
+	else
+	{
+		Index = oGeneratedClasses.selectedIndex;
+		oGeneratedClasses.options.remove(Index);
+
+		Header_Files_Array.splice(Index, 1);
+		Impl_Files_Array.splice(Index, 1);
+		Gen_Interface_Array.splice(Index, 1);
+		Gen_Interface_Array_TLB.splice(Index, 1);
+		if(Index>0 || oGeneratedClasses.options.length==0)
+			Index = Index - 1;
+	}
+
+	AddAllBtn.disabled = false;
+
+	oGeneratedClasses.selectedIndex = Index;
+	if (Index < 0)
+	{
+		HEADER_FILE.value = "";
+		IMPL_FILE.value = "";
+		CLASS_NAME.value = "";
+	}
+	ToggleButtons();
+	OnSelectClass();
+}
+
+function ToggleButtons()
+{
+	RemoveBtn.disabled = true;
+	RemoveAllBtn.disabled = true;
+
+	var interfaceCount = oInterfaces.options.length;
+	var genInterfaceCount = oGeneratedClasses.options.length;
+
+	if (interfaceCount == 0 )
+	{
+		AddBtn.disabled = true;
+		AddAllBtn.disabled = true;
+	}
+	else if (oInterfaces.selectedIndex == -1)
+	{
+		AddBtn.disabled = true;
+	}
+	else
+	{
+		AddBtn.disabled = false;
+	}
+
+	if (genInterfaceCount)
+	{
+		if (oGeneratedClasses.selectedIndex != -1)
+			RemoveBtn.disabled = false;
+		RemoveAllBtn.disabled = false;
+	}
+}
+
+function IsInGeneratedList(strClassName)
+{
+	var nLen = oGeneratedClasses.options.length;
+	for (n = 0; n < nLen; n++)
+	{
+		if (oGeneratedClasses.options(n).value == strClassName)
+			return true;
+	}
+	return false;
+}
+
+function validateGeneratedList(strClassName, pInList)
+{
+	var nLen = oGeneratedClasses.options.length;
+	for (n = 0; n < nLen; n++)
+	{
+		if ( pInList && (n == LastIndex))
+			continue;
+		if (oGeneratedClasses.options(n).text == strClassName)
+		{
+			var L_DUPNAME_Text = "Dieser Klassenname wird von folgender Schnittstelle verwendet: ";
+			L_DUPNAME_Text += "\"" 
+			L_DUPNAME_Text += oGeneratedClasses.options(n).value
+			L_DUPNAME_Text += "\".";
+			oErrObj = new Error(L_DUPNAME_Text);
+			SetErrorInfo(oErrObj);		
+			return false;
+		}
+	}
+	return true;
+}
+
+</SCRIPT>
+<SCRIPT ID="INCLUDE_SCRIPT" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT ID="INCLUDE_COMMON" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT>
+	document.scripts("INCLUDE_SCRIPT").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Script.js";
+	document.scripts("INCLUDE_COMMON").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Common.js";
+</SCRIPT>

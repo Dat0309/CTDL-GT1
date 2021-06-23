@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Retrieve Information from the Parent MDI Form of a Dialog Box</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Retrieves information from the parent MDI form.</Description>
+      <Shortcut>formBox</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Drawing.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>formName</ID>
+          <Type>Form</Type>
+          <ToolTip>Replace with a reference to the form you are trying to find the parent of.</ToolTip>
+          <Default>Me</Default>
+        </Object>
+        <Object>
+          <ID>text</ID>
+          <Type>String</Type>
+          <ToolTip>Stores the text of the parent form.</ToolTip>
+          <Default>text</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[$text$ = $formName$.ParentForm.Text
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

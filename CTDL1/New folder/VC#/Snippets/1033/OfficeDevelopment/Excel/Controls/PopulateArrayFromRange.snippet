@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Populate Array from Range</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Populates an array of objects using the values in a range.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Excel.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Excel = Microsoft.Office.Interop.Excel</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object Editable="true">
+          <ID>range</ID>
+          <Type>Microsoft.Office.Interop.Excel.Range</Type>
+          <ToolTip>Replace with the range to populate the array from.</ToolTip>
+          <Default>range</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>values</ID>
+          <Type>System.Object[,]</Type>
+          <ToolTip>Replace with an array to populate with the range values.</ToolTip>
+          <Default>values</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="CSharp" Kind="" Delimiter="$"><![CDATA[
+// This will fail if the range is a single cell.
+$values$ = (object[,])$range$.Value2;
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

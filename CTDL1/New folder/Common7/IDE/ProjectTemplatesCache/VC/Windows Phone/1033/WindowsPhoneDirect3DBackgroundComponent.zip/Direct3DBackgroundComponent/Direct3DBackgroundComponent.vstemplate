@@ -1,0 +1,25 @@
+﻿<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <ProjectType>VC</ProjectType>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>$safeprojectname$Component</DefaultName>
+  </TemplateData>
+  <TemplateContent BuildOnLoad="true">
+    <Project File="Direct3DBackgroundComponent.vcxproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="false" TargetFileName="BasicTimer.h">BasicTimer.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="CubeRenderer.cpp">CubeRenderer.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="CubeRenderer.h">CubeRenderer.h</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.cpp">Direct3DBackground.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.h">Direct3DBackground.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Direct3DBase.cpp">Direct3DBase.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Direct3DBase.h">Direct3DBase.h</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Direct3DContentProvider.cpp">Direct3DContentProvider.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Direct3DContentProvider.h">Direct3DContentProvider.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="DirectXHelper.h">DirectXHelper.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="pch.cpp">pch.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="pch.h">pch.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="SimplePixelShader.hlsl">SimplePixelShader.hlsl</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="SimpleVertexShader.hlsl">SimpleVertexShader.hlsl</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

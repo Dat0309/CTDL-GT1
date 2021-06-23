@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title _locID="csEventTitle1">Add DependencyProperty - EventHandler</Title>
+      <Author>Microsoft Corporation</Author>
+      <Shortcut>wde</Shortcut>
+      <Description _locID="csEventDesc1">Code snippet for creating a dependency property (EventHandler) in a Windows Workflow Activity</Description>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip _locID="csEventTip1">Property type</ToolTip>
+          <Default>string</Default>
+        </Literal>
+        <Literal>
+          <ID>eventName</ID>
+          <ToolTip _locID="csEventTip2">Replace with the event name.</ToolTip>
+          <Default>Invoke</Default>
+        </Literal>
+        <Literal Editable="false">
+          <ID>classname</ID>
+          <Function>ClassName()</Function>
+          <Default>ClassNamePlaceholder</Default>
+        </Literal>
+        <Literal Editable="false">
+          <ID>DependencyPropertyType</ID>
+          <Function>SimpleTypeName(global::System.Workflow.ComponentModel.DependencyProperty)</Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>EventHandlerType</ID>
+          <Function>SimpleTypeName(global::System.EventHandler)</Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>DescriptionAttributeType</ID>
+          <Function>SimpleTypeName(global::System.ComponentModel.DescriptionAttribute)</Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>CategoryAttributeType</ID>
+          <Function>SimpleTypeName(global::System.ComponentModel.CategoryAttribute)</Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>BrowsableAttributeType</ID>
+          <Function>SimpleTypeName(global::System.ComponentModel.BrowsableAttribute)</Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>DesignerSerializationVisibilityAttributeType</ID>
+          <Function>SimpleTypeName(global::System.ComponentModel.DesignerSerializationVisibilityAttribute)</Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>DesignerSerializationVisibilityType</ID>
+          <Function>SimpleTypeName(global::System.ComponentModel.DesignerSerializationVisibility)</Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[public static $DependencyPropertyType$ $eventName$Event = $DependencyPropertyType$.Register("$eventName$", typeof($EventHandlerType$), typeof($classname$));
+  
+  [$DescriptionAttributeType$("$eventName$")]
+  [$CategoryAttributeType$("$eventName$ Category")]
+  [$BrowsableAttributeType$(true)]
+  [$DesignerSerializationVisibilityAttributeType$($DesignerSerializationVisibilityType$.Visible)]
+  public event $EventHandlerType$ $eventName$
+  {
+    add
+    {
+      base.AddHandler($classname$.$eventName$Event, value);
+    }
+    remove
+    {
+      base.RemoveHandler($classname$.$eventName$Event, value);
+    }
+  }]]>
+      </Code>
+    </Snippet>
+   </CodeSnippet>
+  </CodeSnippets>

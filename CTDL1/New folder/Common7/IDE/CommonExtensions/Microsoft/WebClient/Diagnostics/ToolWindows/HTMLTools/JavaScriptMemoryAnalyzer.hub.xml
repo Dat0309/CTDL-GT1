@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Components xmlns="urn:diagnosticshub-components-definition-1-3">
+  <ToolComponent Exclusive="true">
+    <ResourceBaseName>PerfTools\MemoryAnalyzer\Resources\Resources</ResourceBaseName>
+    <Id>BE2D5223-40F7-4428-A9A0-AF888725C1FB</Id>
+    <Name ResourceId="HubToolName" />
+    <Description ResourceId="HubToolDescription" />
+    <HostIEVersion MinVersion="11.0" />
+    <SupportedTargets>
+      <VisualStudio DebuggerContext="LocalOrRemote">
+        <!-- JavaScript Windows Store App -->
+        <ProjectType>262852c6-cd72-467d-83fe-5eeb1973a190</ProjectType>
+        <TargetPlatform Name="Windows" />
+        <TargetPlatform Name="WindowsPhone" />
+      </VisualStudio>
+      <WindowsStoreApp Type="JavaScript">
+        <TargetPlatform Name="Windows" Attach="LocalOnly" Launch="LocalOrRemote" MinOSVersion="6.3" />
+      </WindowsStoreApp>
+      <InternetExplorer MinVersion="11.0">
+        <TargetPlatform Name="Windows" Attach="Unsupported" Launch="LocalOrRemote" MinOSVersion="6.1" />
+        <TargetPlatform Name="WindowsPhone" Attach="Unsupported" Launch="RemoteOnly" MinOSVersion="6.3" />
+      </InternetExplorer>
+    </SupportedTargets>
+    <EnabledCollectors>
+      <CustomCollector Id="72089E7A-A3C8-4652-9817-F33C8149AFFC" IsPauseSupported="false" />
+      <StandardCollector>
+        <CollectorAgent Clsid="B9B36E3F-BC87-440C-901E-7FC364FC5BBB" LocalDllRelativePath="PerfTools\JavaScriptCollectionAgent.dll" RemoteDllRelativePath="JavaScriptCollectionAgent.dll">
+          <EtwProvider Id="9E3B3947-CA5D-4614-91A2-7B624E0E7244">
+            <Keyword>0x00000100</Keyword> <!-- primarynav -->
+          </EtwProvider>
+          <EtwProvider Id="4BD2826E-54A1-4BA9-BF63-92B73EA1AC4A"> <!-- Microsoft-Windows-Diagnostics-LoggingChannel -->
+            <Keyword>0x1</Keyword> <!-- K_LogMsg -->
+          </EtwProvider>
+        </CollectorAgent>
+        <DeviceDeployment>
+          <!-- JavaScriptCollectionAgent Package -->
+          <Package Id="4DF7FAFD-FB8C-490A-90B2-7420C37E94AE" />
+          <!-- Msvsmon Script Package -->
+          <Package Id="2B933ED0-1235-4338-95D8-43C033397DEC" />
+        </DeviceDeployment>
+      </StandardCollector>
+    </EnabledCollectors>
+    <Views>
+      <StandardSwimLane Destination="Collection">
+        <Title ResourceId="HubTimelineTitle" />
+        <Description ResourceId="HubTimelineDescription" />
+        <JsonConfiguration xml:space="preserve">
+          {
+            "Series":[
+              {
+                "SeriesType":"Line",
+                "Legend":"LineSeriesTitle",
+                "DataSource":{
+                  "CounterId":"DiagnosticsHub.Counters.Process.PrivateBytes"
+                }
+              }],
+            "MinValue":0,
+            "MaxValue":100,
+            "Units":[
+              {
+                "Unit":"ByteUnits",
+                "FromValue":0,
+                "ToValue":1023,
+                "Divider":1,
+                "Decimals":1
+              }, {
+                "Unit":"KilobyteUnits",
+                "FromValue":1024,
+                "ToValue":1048575,
+                "Divider":1024,
+                "Decimals":1
+              }, {
+                "Unit":"MegabyteUnits",
+                "FromValue":1048576,
+                "ToValue":1073741823,
+                "Divider":1048576,
+                "Decimals":1
+              }, {
+                "Unit":"GigabyteUnits",
+                "FromValue":1073741824,
+                "ToValue":1.7976931348623157E+308,
+                "Divider":1073741824,
+                "Decimals":1
+              }
+            ]
+          }
+        </JsonConfiguration>
+        <Resources>
+          <JavaScriptResource JavaScriptKey="LineSeriesTitle" ResourceId="HubGraphHeapLegend" />
+          <JavaScriptResource JavaScriptKey="ByteUnits" ResourceId="ByteUnits" />
+          <JavaScriptResource JavaScriptKey="KilobyteUnits" ResourceId="KilobyteUnits" />
+          <JavaScriptResource JavaScriptKey="MegabyteUnits" ResourceId="MegabyteUnits" />
+          <JavaScriptResource JavaScriptKey="GigabyteUnits" ResourceId="GigabyteUnits" />
+        </Resources>
+        <CollectionDataSources>
+          <ProcessCounterDataSource CounterId="PrivateBytes" />
+        </CollectionDataSources>
+      </StandardSwimLane>
+      <StandardSwimLane Destination="Collection">
+        <Title ResourceId="HubTimelineTitle" />
+        <Description ResourceId="HubTimelineDescription" />
+        <JsonConfiguration xml:space="preserve">
+          {
+            "View": "Ruler",
+            "Series":[
+              {
+                "SeriesType":"Mark",
+                "MarkType": 2,
+                "Legend":"MarkSeriesTitle",
+                "DataSource":{
+                  "CounterId":"performancemark"
+                }
+              }
+            ]
+          }
+        </JsonConfiguration>
+        <Resources>
+          <JavaScriptResource JavaScriptKey="MarkSeriesTitle" ResourceId="HubGraphUserMarkLegend" />
+        </Resources>
+        <CollectionDataSources>
+          <DataSource AgentClassId="B9B36E3F-BC87-440C-901E-7FC364FC5BBB" CounterId="performancemark" />
+        </CollectionDataSources>
+      </StandardSwimLane>
+      <DetailsView Destination="Collection">
+        <Title>Details View</Title>
+        <ScriptedControl>
+          <BaseDirectory>.</BaseDirectory>
+          <Manifest>PerfTools\MemoryAnalyzer\manifest.json</Manifest>
+          <VisualStudioIntegration PackageId="2FA86802-6C0C-4820-B09A-F947036A1002"
+                                   MenuCommandServiceAutomationObject="PackageCommandService">
+            <MarshalerObject AutomationObject="HostShell" JavaScriptObjectName="Microsoft.VisualStudio.WebClient.Diagnostics.PerformanceToolHost.Package.Extensions.Core.HostShell" />
+            <MarshalerObject AutomationObject="InternalFeedback" JavaScriptObjectName="Microsoft.VisualStudio.WebClient.Diagnostics.PerformanceToolHost.Package.Extensions.InternalFeedback" />
+          </VisualStudioIntegration>
+        </ScriptedControl>
+      </DetailsView>
+    </Views>
+  </ToolComponent>
+</Components>

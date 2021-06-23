@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Peek at Messages</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Uses the Peek method to look at the first message on the queue without removing that message from the queue.</Description>
+      <Shortcut>mqPeek</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Messaging.dll</Assembly>
+          <Url />
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Messaging</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>QueueName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the name of the queue. The "." represents the local computer.</ToolTip>
+          <Default>".\QueueName"</Default>
+        </Literal>
+        <Literal>
+          <ID>BodyType</ID>
+          <Type>System.Type</Type>
+          <ToolTip>Replace with the type of the message body.</ToolTip>
+          <Default>GetType(String)</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim queue As New MessageQueue($QueueName$)
+Dim firstMessage As Message
+firstMessage = queue.Peek
+firstMessage.Formatter = New XmlMessageFormatter(New Type() {$BodyType$})
+Dim text As String = firstMessage.Body.ToString]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

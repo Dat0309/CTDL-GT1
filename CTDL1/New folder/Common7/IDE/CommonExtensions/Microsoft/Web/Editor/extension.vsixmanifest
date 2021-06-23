@@ -1,0 +1,24 @@
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="253494CC-4063-44A3-B97B-F49CF2DAD653" Version="11.0" Language="en-US" Publisher="Microsoft" />
+    <DisplayName>Microsoft Visual Studio HTML Editor</DisplayName>
+    <Description>Microsoft Visual Studio HTML Editor</Description>
+  </Metadata>
+  <Installation SystemComponent="true" InstalledByMsi="true" AllUsers="true">
+    <InstallationTarget Version="11.0" Id="Microsoft.VisualStudio.Premium" />
+    <InstallationTarget Version="11.0" Id="Microsoft.VisualStudio.Ultimate" />
+    <InstallationTarget Version="11.0" Id="Microsoft.VisualStudio.Pro" />
+    <InstallationTarget Version="11.0" Id="Microsoft.VisualStudio.VWDExpress" />
+  </Installation>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.Assembly" Path="Microsoft.Web.Core.dll" />
+    <Asset Type="Microsoft.VisualStudio.Assembly" Path="Microsoft.CSS.Core.dll" />
+    <Asset Type="Microsoft.VisualStudio.Assembly" Path="Microsoft.Html.Core.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="Microsoft.Web.Editor.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="Microsoft.CSS.Editor.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="Microsoft.Html.Editor.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="Microsoft.VisualStudio.Html.Package.dll" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="Microsoft.VisualStudio.Html.Package.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="Microsoft.VisualStudio.Html.Package.Colors.pkgdef" />
+  </Assets>
+</PackageManifest>

@@ -1,0 +1,81 @@
+﻿html, body {
+    -ms-high-contrast-adjust: none;
+    cursor: default;
+}
+
+/*Color for Network power usage line in swimlane graph - rgb(17,122,209) - A shade of Blue */
+.networkInterface {
+    background-color: rgb(17, 122, 209);
+}
+
+.networkData {
+    background-color: rgb(17, 122, 209);
+    fill: none;
+    stroke: rgb(17, 122, 209);
+}
+
+/*Color for CPU power usage line in swimlane graph  - rgb(252, 183, 20) - A shade of Yellow */
+.cpuData {
+    background-color: rgb(252, 183, 20);
+    fill: none;
+    stroke: rgb(252, 183, 20);
+}
+
+/*Color for Display power usage line in swimlane graph - rgb(181, 181, 181) - A shade of Grey */
+.displayData {
+    background-color: rgb(181, 181, 181);
+    fill: none;
+    stroke: rgb(181, 181, 181);
+}
+
+/*Color for Total power usage line in swimlane graph - rgb(191, 63, 0) - A shade of Red */
+.totalData {
+    background-color: rgb(191, 63, 0);
+}
+
+.mainView {
+    display: -ms-grid;
+    height: 100vh;
+    width: 100vw;
+    -ms-grid-columns: minmax(670px, 1fr) 280px;
+    -ms-grid-rows: minmax(15em, 1fr);
+}
+
+    .mainView .powerTimelineViewContainer {
+        -ms-grid-column: 1;
+        -ms-grid-row: 1;
+        height: 100%;
+        width: 100%;
+    }
+
+    .mainView .summaryViewContainer {
+        -ms-grid-column: 2;
+        -ms-grid-row: 1;
+        border-left: 1px solid #c0c0c0; /*[1px solid {vs-combo-box-popup-border-color}]*/
+        border-top: 1px solid #c0c0c0; /*[1px solid {vs-combo-box-popup-border-color}]*/
+        height: 100%;
+        overflow-y: auto;
+        width: 280px;
+    }
+
+        .mainView .summaryViewContainer .summaryDiv {
+            margin: 5px 10px 0px 10px;
+        }
+
+            .mainView .summaryViewContainer .summaryDiv .summaryTitle {
+                font-weight: 600;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+.networkDataTooltip .label {
+    display: inline;
+}
+
+    .networkDataTooltip .label::after {
+        content: ":";
+    }
+
+.networkDataTooltip .value {
+    display: inline-block;
+}

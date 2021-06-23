@@ -1,0 +1,52 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="375" />
+    <TemplateID>SharePoint16WcfService_VB_ITEM</TemplateID>
+    <ProjectType>VisualBasic</ProjectType>
+    <DefaultName>Service.svc</DefaultName>
+    <Hidden>true</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Runtime.Serialization</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>Microsoft.SharePoint.Client, Version=16.0.0.0</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>Microsoft.SharePoint.Client.Runtime, Version=16.0.0.0</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.IdentityModel</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>Microsoft.IdentityModel.Extensions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=69c3241e6f0468ca, processorArchitecture=MSIL</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem TargetFileName="$fileinputname$.svc" ReplaceParameters="true" OpenInEditor="false">Service.svc</ProjectItem>
+    <ProjectItem TargetFileName="$fileinputname$.svc.vb" ReplaceParameters="true" OpenInEditor="true">Service.vb</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="$loc_service_comment1$" _locID="$loc_service_comment1$" _locAttrData="Value" Value="Handles app events that occur after the app is installed or upgraded, or when app is being uninstalled." />
+      <CustomParameter Name="$loc_service_comment10$" _locID="$loc_service_comment10$" _locAttrData="Value" Value="Holds information about the remote event." />
+      <CustomParameter Name="$loc_service_comment2$" _locID="$loc_service_comment2$" _locAttrData="Value" Value="Holds information about the app event." />
+      <CustomParameter Name="$loc_service_comment3$" _locID="$loc_service_comment3$" _locAttrData="Value" Value="Holds information returned from the app event." />
+      <CustomParameter Name="$loc_service_comment4$" _locID="$loc_service_comment4$" _locAttrData="Value" Value="This method is a required placeholder, but is not used by app events." />
+      <CustomParameter Name="$loc_service_comment5$" _locID="$loc_service_comment5$" _locAttrData="Value" Value="Unused." />
+      <CustomParameter Name="$loc_service_comment6$" _locID="$loc_service_comment6$" _locAttrData="Value" Value="Handles events that occur before an action occurs, such as when a user adds or deletes a list item." />
+      <CustomParameter Name="$loc_service_comment7$" _locID="$loc_service_comment7$" _locAttrData="Value" Value="Holds information about the remote event." />
+      <CustomParameter Name="$loc_service_comment8$" _locID="$loc_service_comment8$" _locAttrData="Value" Value="Holds information returned from the remote event." />
+      <CustomParameter Name="$loc_service_comment9$" _locID="$loc_service_comment9$" _locAttrData="Value" Value="Handles events that occur after an action occurs, such as after a user adds an item to a list or deletes an item from a list." />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.GenericWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

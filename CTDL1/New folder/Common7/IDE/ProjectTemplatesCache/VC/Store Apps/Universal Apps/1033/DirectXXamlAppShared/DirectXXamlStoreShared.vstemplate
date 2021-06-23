@@ -1,0 +1,37 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="ProjectGroup">
+	<TemplateData>
+		<Name Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="1069" />
+		<Description Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="1070" />
+		<Icon Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="4002" />
+		<ProjectType>VC</ProjectType>
+		<TemplateGroupID>WinRT-Native</TemplateGroupID>
+		<TemplateID>Microsoft.DirectX.DirectXXamlAppShared</TemplateID>
+		<SortOrder>46</SortOrder>
+		<CreateNewFolder>true</CreateNewFolder>
+		<CreateInPlace>true</CreateInPlace>
+		<DefaultName>DirectXApp</DefaultName>
+		<ProvideDefaultName>true</ProvideDefaultName>
+		<LocationField>Enabled</LocationField>
+		<EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+		<NumberOfParentCategoriesToRollUp>2</NumberOfParentCategoriesToRollUp>
+		<TargetPlatformName>Windows</TargetPlatformName>
+		<RequiredPlatformVersion>6.3.0</RequiredPlatformVersion>
+		<PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+		<PreviewImage>preview.png</PreviewImage>
+	</TemplateData>
+	<TemplateContent>
+    <ProjectCollection>
+      <SolutionFolder Name="$projectname$">
+        <ProjectTemplateLink ProjectName="$projectname$.Shared" CopyParameters="true">
+          Shared\Shared.vstemplate
+        </ProjectTemplateLink>
+        <ProjectTemplateLink ProjectName="$projectname$.Windows" CopyParameters="true">
+          Windows\Windows.vstemplate
+        </ProjectTemplateLink>
+        <ProjectTemplateLink ProjectName="$projectname$.WindowsPhone" CopyParameters="true">
+          WindowsPhone\WindowsPhone.vstemplate
+        </ProjectTemplateLink>
+      </SolutionFolder>
+    </ProjectCollection>
+	</TemplateContent>
+</VSTemplate>

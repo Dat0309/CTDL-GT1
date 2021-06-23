@@ -1,0 +1,30 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <DefaultName>PivotPage.xaml</DefaultName>
+    <Name Package="{7D4626A3-18C3-43A4-A66C-169D1D609803}" ID="1109" />
+    <Description Package="{7D4626A3-18C3-43A4-A66C-169D1D609803}" ID="1110" />
+    <ProjectType>VisualBasic</ProjectType>
+    <ProjectSubType>WindowsPhone</ProjectSubType>
+    <TemplateID>Microsoft.WindowsPhone.VisualBasic.PivotPage</TemplateID>
+    <TemplateGroupID>Windows Phone</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+    <SortOrder>14</SortOrder>
+    <Icon>__TemplateIcon.ico</Icon>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>Microsoft.Phone</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>Microsoft.Phone.Interop</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>Microsoft.Phone.Controls</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem SubType="Designer" TargetFileName="$fileinputname$.xaml" OpenInEditor="true" ReplaceParameters="true" CustomTool="MSBuild:Compile">PivotPage.xaml</ProjectItem>
+    <ProjectItem SubType="Code" TargetFileName="$fileinputname$.xaml.vb" ReplaceParameters="true">PivotPage.xaml.vb</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Create a Temporary File Name</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Creates a name for a temporary file.</Description>
+      <Shortcut>filCreateTemp</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim fileName As String 
+fileName = My.Computer.FileSystem.GetTempFileName()]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

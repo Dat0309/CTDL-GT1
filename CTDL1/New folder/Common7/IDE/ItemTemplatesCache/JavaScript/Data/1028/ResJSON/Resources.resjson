@@ -1,0 +1,6 @@
+﻿// 如需當地語系化 Windows 應用程式的詳細資訊，請參閱: http://go.microsoft.com/fwlink/?LinkId=212836
+
+{
+    "greeting"              : "Hello World!",
+    "_greeting.comment"     : "這是給當地語系化人員的註解"
+}

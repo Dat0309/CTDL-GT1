@@ -1,0 +1,30 @@
+﻿<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name Package="{7D4626A3-18C3-43A4-A66C-169D1D609803}" ID="1121" />
+    <Description Package="{7D4626A3-18C3-43A4-A66C-169D1D609803}" ID="1125" />
+    <ProjectType>VC</ProjectType>
+    <TemplateID>Microsoft.WindowsPhone.VC.StaticLibrary.Project</TemplateID>
+    <TemplateGroupID>Windows Phone</TemplateGroupID>
+    <SortOrder>1115</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>PhoneLib</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <TargetPlatformName>Windows Phone</TargetPlatformName>
+    <!--<RequiredPlatformVersion>8</RequiredPlatformVersion>-->
+    <Icon>__templateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="BlankLib.vcxproj" ReplaceParameters="true">
+      <ProjectItem OpenInEditor="false" ReplaceParameters="true" TargetFileName="$projectname$.vcxproj.filters">BlankLib.vcxproj.filters</ProjectItem>
+      <ProjectItem OpenInEditor="true" ReplaceParameters="true" TargetFileName="$projectname$.cpp">BlankLib.cpp</ProjectItem>
+      <ProjectItem OpenInEditor="true" ReplaceParameters="true" TargetFileName="$projectname$.h">BlankLib.h</ProjectItem>
+      <ProjectItem OpenInEditor="false" ReplaceParameters="false" TargetFileName="pch.cpp">pch.cpp</ProjectItem>
+      <ProjectItem OpenInEditor="false" ReplaceParameters="false" TargetFileName="pch.h">pch.h</ProjectItem>
+      <ProjectItem OpenInEditor="false" ReplaceParameters="false" TargetFileName="targetver.h">targetver.h</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

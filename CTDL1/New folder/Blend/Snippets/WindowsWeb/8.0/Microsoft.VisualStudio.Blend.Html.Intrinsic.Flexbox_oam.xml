@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<widget spec="1.0" id="ms-blend://Microsoft.VisualStudio.Blend.Html.Intrinsic.Flexbox" name="Microsoft.VisualStudio.Blend.Html.Intrinsic.Flexbox" version="1.0" xmlns="http://openajax.org/metadata" xmlns:blend="http://schemas.microsoft.com/winjs/Blend/2011">
+	<locale messages="..\..\..\intrinsics\all-all.xml" />
+	<locale lang="en-us" messages="..\..\..\intrinsics\en-us.xml" />
+	<locale lang="de-de" messages="..\..\..\intrinsics\de-de.xml" />
+	<locale lang="es-es" messages="..\..\..\intrinsics\es-es.xml" />
+	<locale lang="fr-fr" messages="..\..\..\intrinsics\fr-fr.xml" />
+	<locale lang="it-it" messages="..\..\..\intrinsics\it-it.xml" />
+	<locale lang="ja" messages="..\..\..\intrinsics\ja.xml" />
+	<locale lang="ko" messages="..\..\..\intrinsics\ko.xml" />
+	<locale lang="ru-ru" messages="..\..\..\intrinsics\ru-ru.xml" />
+	<locale lang="zh-cn" messages="..\..\..\intrinsics\zh-cn.xml" />
+	<locale lang="zh-tw" messages="..\..\..\intrinsics\zh-tw.xml" />
+	<author name="Microsoft Corporation" />
+	<title type="text/plain" locid="Microsoft.VisualStudio.Blend.Html.Intrinsic.Flexbox.Title"><![CDATA[Flexbox]]></title>
+	<description type="text/plain" locid="Microsoft.VisualStudio.Blend.Html.Intrinsic.Flexbox.Description"><![CDATA[Flexbox provides a flexible CSS box model optimized for layout design.]]></description>
+	<requires>
+		<require type="css" src="Microsoft.VisualStudio.Blend.Html.Intrinsic.Flexbox.css" target="css/Microsoft.VisualStudio.Blend.Html.Intrinsic.Flexbox.css" />
+	</requires>
+	<content><![CDATA[<div class="ms-flexbox"></div>]]></content>
+	<icons>
+		<icon src="..\8.1\Microsoft.VisualStudio.Blend.Html.Intrinsic.Flexbox.16x16.png" width="16" height="16" />
+		<icon src="..\8.1\Microsoft.VisualStudio.Blend.Html.Intrinsic.Flexbox.12x12.png" width="12" height="12" />
+	</icons>
+	<categories>
+		<category name="HTML Elements"/>
+		<category name="HTML Elements::Snippets"/>
+	</categories>
+</widget>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Make an Asynchronous Method Call</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Makes an asynchronous method call using the BackgroundWorker component.</Description>
+      <Shortcut>appAsynchMeth</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Threading</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>backgroundWorkerInstance</ID>
+          <Type>System.ComponentModel.BackgroundWorker</Type>
+          <ToolTip>BackgroundWorker component instance to manage the background thread.  Can be created by dragging a BackgroundWorker component instance from the Toolbox.</ToolTip>
+          <Default>BackgroundWorker1</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[    Private Sub startBackgroundTask()
+        ' Execute the Background Task
+        $backgroundWorkerInstance$.RunWorkerAsync()
+    End Sub
+
+    Private Sub $backgroundWorkerInstance$_DoWork(ByVal sender As Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles $backgroundWorkerInstance$.DoWork
+        ' This method will execute in the background thread created by the BackgroundWorker componet
+
+    End Sub
+
+    Private Sub $backgroundWorkerInstance$_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles $backgroundWorkerInstance$.RunWorkerCompleted
+        ' This event fires when the DoWork event completes
+
+    End Sub]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,55 @@
+﻿[$RootKey$\Packages\{DF308C9B-1270-403A-93E2-C05EDFB56A93}]
+@="SQLPDW Package"
+"Assembly"="Microsoft.VisualStudio.Data.Tools.SqlPdwExtensions.SqlPdwExtensionsPackage, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"Class"="Microsoft.VisualStudio.Data.Tools.SqlPdwExtensions.SqlPdwExtensionsPackage"
+"CodeBase"="$PackageFolder$\Microsoft.VisualStudio.Data.Tools.SqlPdwExtensions.dll"
+"CompanyName"="Microsoft Corporation"
+"ID"=dword:00000065
+"InprocServer32"="$WinDir$\SYSTEM32\MSCOREE.DLL"
+"ProductName"="Microsoft SQL Server Data Tools, SQL PDW Extensions"
+
+[$RootKey$\AutoLoadPackages\{fbcae063-e2c0-4ab1-a516-996ea3dafb72}]
+"{df308c9b-1270-403a-93e2-c05edfb56a93}"=dword:00000000
+
+
+[$RootKey$\Editors\{958a4c1d-6313-401d-9b35-4bf62de94b0f}]
+@="SQL PDW Script Editor (With Encoding)"
+"DisplayName"="#2"
+"Package"="{df308c9b-1270-403a-93e2-c05edfb56a93}"
+"CommonPhysicalViewAttributes"=dword:00000002
+
+[$RootKey$\Editors\{958a4c1d-6313-401d-9b35-4bf62de94b0f}\Extensions]
+"sql"=dword:00000050
+"dsql"=dword:00000050
+
+[$RootKey$\Editors\{c9626b29-6a42-411c-bd76-dad855c86913}]
+@="SQL PDW Script Editor"
+"DisplayName"="#1"
+"Package"="{df308c9b-1270-403a-93e2-c05edfb56a93}"
+"CommonPhysicalViewAttributes"=dword:00000002
+
+[$RootKey$\Editors\{c9626b29-6a42-411c-bd76-dad855c86913}\Extensions]
+"sql"=dword:00000051
+"dsql"=dword:00000051
+
+[$RootKey$\Menus]
+"{DF308C9B-1270-403A-93E2-C05EDFB56A93}"=", Menus.ctmenu, 1"
+
+
+[$RootKey$\Editors\{c9626b29-6a42-411c-bd76-dad855c86913}\LogicalViews]
+"{7651A700-06E5-11D1-8EBD-00A0C90F26EA}"=""
+"{7651A701-06E5-11D1-8EBD-00A0C90F26EA}"=""
+"{7651A702-06E5-11D1-8EBD-00A0C90F26EA}"=""
+"{7651A703-06E5-11D1-8EBD-00A0C90F26EA}"=""
+
+
+[$RootKey$\Editors\{958a4c1d-6313-401d-9b35-4bf62de94b0f}\LogicalViews]
+"{7651A700-06E5-11D1-8EBD-00A0C90F26EA}"=""
+"{7651A701-06E5-11D1-8EBD-00A0C90F26EA}"=""
+"{7651A702-06E5-11D1-8EBD-00A0C90F26EA}"=""
+"{7651A703-06E5-11D1-8EBD-00A0C90F26EA}"=""
+
+[$RootKey$\BindingPaths\{DF308C9B-1270-403A-93E2-C05EDFB56A93}]
+"$RootFolder$Common7\IDE\Extensions\Microsoft\SQLDB"=""
+"$RootFolder$Common7\IDE\Extensions\Microsoft\SQLEditor"=""
+"$RootFolder$Common7\IDE\Extensions\Microsoft\SQLDB\Dac\120"=""

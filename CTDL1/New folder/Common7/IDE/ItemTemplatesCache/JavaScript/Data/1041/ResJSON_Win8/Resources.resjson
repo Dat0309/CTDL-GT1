@@ -1,0 +1,6 @@
+﻿// Windows アプリケーションのローカライズの詳細については、次を参照してください: http://go.microsoft.com/fwlink/?LinkId=212836
+
+{
+    "greeting"              : "Hello World!",
+    "_greeting.comment"     : "これはローカライザーに対するコメントです"
+}

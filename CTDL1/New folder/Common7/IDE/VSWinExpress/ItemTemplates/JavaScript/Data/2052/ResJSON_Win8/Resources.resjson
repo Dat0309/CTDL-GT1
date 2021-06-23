@@ -1,0 +1,6 @@
+﻿// 有关本地化 Windows 应用程序的详细信息，请参阅: http://go.microsoft.com/fwlink/?LinkId=212836
+
+{
+    "greeting"              : "Hello World!",
+    "_greeting.comment"     : "这是提供给本地化人员的注释"
+}

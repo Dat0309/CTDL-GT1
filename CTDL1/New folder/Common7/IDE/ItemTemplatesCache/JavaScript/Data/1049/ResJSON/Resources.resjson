@@ -1,0 +1,6 @@
+﻿// Сведения о локализации приложений Windows см. по адресу: http://go.microsoft.com/fwlink/?LinkId=212836
+
+{
+    "greeting"              : "Здравствуй, мир!",
+    "_greeting.comment"     : "Это комментарий для локализатора"
+}

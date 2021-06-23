@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>DirectXXamlStoreShared.Shared</Name>
+    <TemplateID>Microsoft.DirectX.DirectXXamlAppShared.Shared</TemplateID>
+    <TemplateGroupID>WinRT-Native</TemplateGroupID>
+    <ProjectType>VC</ProjectType>
+    <TargetPlatformName>Windows</TargetPlatformName>
+    <RequiredPlatformVersion>6.3.0</RequiredPlatformVersion>
+    <CreateInPlace>true</CreateInPlace>
+    <CreateNewFolder>true</CreateNewFolder>
+    <LocationField>Enabled</LocationField>
+    <Hidden>true</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="Shared.Application.Shared.vcxitems" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="$ext_projectname$.Shared.vcxitems.filters">Shared.Application.Shared.vcxitems.filters</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="pch.cpp">pch.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="pch.h">pch.h</ProjectItem>
+      <ProjectItem OpenInEditor="true" ReplaceParameters="true" TargetFileName="$ext_projectname$Main.cpp">Main.cpp</ProjectItem>
+      <ProjectItem OpenInEditor="true" ReplaceParameters="true" TargetFileName="$ext_projectname$Main.h">Main.h</ProjectItem>
+      <Folder Name="Common">
+        <ProjectItem OpenInEditor="false" ReplaceParameters="true" TargetFileName="DeviceResources.cpp">DeviceResources.cpp</ProjectItem>
+        <ProjectItem OpenInEditor="false" ReplaceParameters="true" TargetFileName="DeviceResources.h">DeviceResources.h</ProjectItem>
+        <ProjectItem OpenInEditor="false" ReplaceParameters="false" TargetFileName="DirectXHelper.h">DirectXHelper.h</ProjectItem>
+        <ProjectItem OpenInEditor="false" ReplaceParameters="false" TargetFileName="StepTimer.h">StepTimer.h</ProjectItem>
+      </Folder>
+      <Folder Name="Content">
+        <ProjectItem OpenInEditor="false" ReplaceParameters="true" TargetFileName="Sample3DSceneRenderer.cpp">Sample3DSceneRenderer.cpp</ProjectItem>
+        <ProjectItem OpenInEditor="false" ReplaceParameters="true" TargetFileName="Sample3DSceneRenderer.h">Sample3DSceneRenderer.h</ProjectItem>
+        <ProjectItem OpenInEditor="false" ReplaceParameters="true" TargetFileName="SampleFpsTextRenderer.cpp">SampleFpsTextRenderer.cpp</ProjectItem>
+        <ProjectItem OpenInEditor="false" ReplaceParameters="true" TargetFileName="SampleFpsTextRenderer.h">SampleFpsTextRenderer.h</ProjectItem>
+        <ProjectItem OpenInEditor="false" ReplaceParameters="false" TargetFileName="SamplePixelShader.hlsl">SamplePixelShader.hlsl</ProjectItem>
+        <ProjectItem OpenInEditor="false" ReplaceParameters="false" TargetFileName="SampleVertexShader.hlsl">SampleVertexShader.hlsl</ProjectItem>
+        <ProjectItem OpenInEditor="false" ReplaceParameters="true" TargetFileName="ShaderStructures.h">ShaderStructures.h</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

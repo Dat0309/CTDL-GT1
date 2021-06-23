@@ -1,0 +1,135 @@
+﻿<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="502" />
+    <Description Package ="{0E109BD6-39F8-41AC-97B5-257344833610}" ID ="501" />
+    <Icon Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="212" />
+    <TemplateID>SharePoint15StandaloneApp_CS</TemplateID>
+    <ProjectType>CSharp</ProjectType>
+    <CreateNewFolder>true</CreateNewFolder>
+    <CreateInPlace>true</CreateInPlace>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>SharePointApp</DefaultName>
+    <SortOrder>5</SortOrder>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="SharePointStandaloneApp.csproj" ReplaceParameters="true">
+      <Folder Name="Package" TargetFolderName="Package">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Package.package">Package.package</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Package.Template.xml">manifest.xml</ProjectItem>
+      </Folder>
+      <Folder Name="Features" TargetFolderName="Features">
+        <Folder Name="Feature1" TargetFolderName="Feature1">
+          <ProjectItem ReplaceParameters="true" TargetFileName="Feature1.feature">Feature.feature</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Feature1.Template.xml">feature.xml</ProjectItem>
+        </Folder>
+      </Folder>
+      <Folder Name="Pages" TargetFolderName="Pages">
+        <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="Elements.xml">Pages_Elements.xml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="true" TargetFileName="Default.aspx">Pages_Default.aspx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="SharePointProjectItem.spdata">Pages_SharePointProjectItem.spdata</ProjectItem>
+      </Folder>
+      <Folder Name="Scripts" TargetFolderName="Scripts">
+        <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="Elements.xml">Scripts_Elements.xml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="App.js">Scripts_App.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="_references.js">Scripts__references.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="SharePointProjectItem.spdata">Scripts_SharePointProjectItem.spdata</ProjectItem>
+      </Folder>
+      <Folder Name="Content" TargetFolderName="Content">
+        <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="Elements.xml">Styles_Elements.xml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="App.css">Styles_App.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="SharePointProjectItem.spdata">Styles_SharePointProjectItem.spdata</ProjectItem>
+      </Folder>
+      <Folder Name="Images" TargetFolderName="Images">
+        <ProjectItem ReplaceParameters="false" OpenInEditor="false" TargetFileName="AppIcon.png">Images_AppIcon.png</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="Elements.xml">Images_Elements.xml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="SharePointProjectItem.spdata">Images_SharePointProjectItem.spdata</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="false">AppManifest.xml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="AppManifest.xml">AppManifest_autohost.xml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="AppManifest.xml">AppManifest_selfhost.xml</ProjectItem>
+      <ProjectItem ReplaceParameters="false" OpenInEditor="false" TargetFileName="AppIcon.png">AppIcon_autohost_selfhost.png</ProjectItem>
+    </Project>
+    <CustomParameters>
+      <CustomParameter Name="$TargetOfficeVersion$" Value="15.0" />
+      <CustomParameter Name="$JQueryMinJsPath$" Value="$JQueryJsPath$"/>
+
+      <CustomParameter Name="$ProjectMode$" Value="SharePointApp" />
+      <CustomParameter Name="$SharePointAppSentinel$" Value="SharePointAppSentinel" />
+      <CustomParameter Name="$loc_feature_description$" _locID="$loc_feature_description$" _locAttrData="Value" Value="SharePoint App Feature" />
+
+      <CustomParameter Name="$loc_js_script_comment1$" _locID="$loc_js_script_comment1$" _locAttrData="Value" Value="This code runs when the DOM is ready and creates a context object which is needed to use the SharePoint object model" />
+      <CustomParameter Name="$loc_js_script_comment2$" _locID="$loc_js_script_comment2$" _locAttrData="Value" Value="This function prepares, loads, and then executes a SharePoint query to get the current users information" />
+      <CustomParameter Name="$loc_js_script_comment3$" _locID="$loc_js_script_comment3$" _locAttrData="Value" Value="This function is executed if the above call is successful" />
+      <CustomParameter Name="$loc_js_script_comment4$" _locID="$loc_js_script_comment4$" _locAttrData="Value" Value="It replaces the contents of the 'message' element with the user name" />
+      <CustomParameter Name="$loc_js_script_comment5$" _locID="$loc_js_script_comment5$" _locAttrData="Value" Value="This function is executed if the above call fails" />
+
+      <CustomParameter Name="$loc_css_style_comment$" _locID="$loc_css_style_comment$" _locAttrData="Value" Value="Place custom styles below" />
+
+      <CustomParameter Name="$loc_pages_default_aspx_comment1$" _locID="$loc_pages_default_aspx_comment1$" _locAttrData="Value" Value="The following 4 lines are ASP.NET directives needed when using SharePoint components" />
+      <CustomParameter Name="$loc_pages_default_aspx_comment2$" _locID="$loc_pages_default_aspx_comment2$" _locAttrData="Value" Value="The markup and script in the following Content element will be placed in the &lt;head&gt; of the page" />
+      <CustomParameter Name="$loc_pages_default_aspx_comment3$" _locID="$loc_pages_default_aspx_comment3$" _locAttrData="Value" Value="Add your CSS styles to the following file" />
+      <CustomParameter Name="$loc_pages_default_aspx_comment4$" _locID="$loc_pages_default_aspx_comment4$" _locAttrData="Value" Value="Add your JavaScript to the following file" />
+      <CustomParameter Name="$loc_pages_default_aspx_comment5$" _locID="$loc_pages_default_aspx_comment5$" _locAttrData="Value" Value="The markup in the following Content element will be placed in the TitleArea of the page" />
+      <CustomParameter Name="$loc_pages_default_aspx_comment7$" _locID="$loc_pages_default_aspx_comment7$" _locAttrData="Value" Value="The markup and script in the following Content element will be placed in the &lt;body&gt; of the page" />
+      <CustomParameter Name="$loc_pages_default_aspx_comment8$" _locID="$loc_pages_default_aspx_comment8$" _locAttrData="Value" Value="The following content will be replaced with the user name when you run the app - see App.js" />
+      <CustomParameter Name="$StandaloneItems$" Value='  &lt;ItemGroup&gt;
+    &lt;None Include="Pages\SharePointProjectItem.spdata"&gt;
+      &lt;SharePointProjectItemId&gt;{$guid2$}&lt;/SharePointProjectItemId&gt;
+    &lt;/None&gt;
+    &lt;Content Include="Pages\Elements.xml" /&gt;
+    &lt;Content Include="Pages\Default.aspx" /&gt;
+  &lt;/ItemGroup&gt;
+  &lt;ItemGroup&gt;
+    &lt;None Include="Scripts\SharePointProjectItem.spdata"&gt;
+      &lt;SharePointProjectItemId&gt;{$guid9$}&lt;/SharePointProjectItemId&gt;
+    &lt;/None&gt;
+    &lt;Content Include="Scripts\Elements.xml" /&gt;
+    &lt;Content Include="Scripts\App.js" /&gt;
+    &lt;Content Include="Scripts\_references.js" /&gt;
+  &lt;/ItemGroup&gt;
+  &lt;ItemGroup&gt;
+    &lt;None Include="Content\SharePointProjectItem.spdata"&gt;
+      &lt;SharePointProjectItemId&gt;{$guid10$}&lt;/SharePointProjectItemId&gt;
+    &lt;/None&gt;
+    &lt;Content Include="Content\Elements.xml" /&gt;
+    &lt;Content Include="Content\App.css" /&gt;
+  &lt;/ItemGroup&gt;
+  &lt;ItemGroup&gt;
+    &lt;Content Include="Images\AppIcon.png"&gt;
+      &lt;OpcRelationship&gt;manifest-icon&lt;/OpcRelationship&gt;
+    &lt;/Content&gt;
+    &lt;Content Include="Images\Elements.xml" /&gt;
+    &lt;None Include="Images\SharePointProjectItem.spdata"&gt;
+      &lt;SharePointProjectItemId&gt;{$guid11$}&lt;/SharePointProjectItemId&gt;
+    &lt;/None&gt;
+  &lt;/ItemGroup&gt;
+  &lt;ItemGroup&gt;
+    &lt;None Include="Package\Package.package"&gt;
+        &lt;PackageId&gt;{$guid3$}&lt;/PackageId&gt;
+    &lt;/None&gt;
+    &lt;None Include="Package\Package.Template.xml"&gt;
+        &lt;DependentUpon&gt;Package.package&lt;/DependentUpon&gt;
+    &lt;/None&gt;
+    &lt;None Include="Features\Feature1\Feature1.feature"&gt;
+      &lt;FeatureId&gt;{$guid4$}&lt;/FeatureId&gt;
+    &lt;/None&gt;
+    &lt;None Include="Features\Feature1\Feature1.Template.xml"&gt;
+      &lt;DependentUpon&gt;Feature1.feature&lt;/DependentUpon&gt;
+    &lt;/None&gt;
+  &lt;/ItemGroup&gt;' />
+      <CustomParameter Name="$MultiItems$" Value='  &lt;ItemGroup&gt;
+    &lt;Content Include="AppIcon.png"&gt;
+      &lt;OpcRelationship&gt;manifest-icon&lt;/OpcRelationship&gt;
+    &lt;/Content&gt;
+  &lt;/ItemGroup&gt;' />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.MultiProjectWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

@@ -1,0 +1,14 @@
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>FormsAuth_VisualBasic</Name>
+    <Description>Login/Logout .aspx files for LightSwitch</Description>
+    <ProjectType>VisualBasic</ProjectType>
+    <TemplateID>Microsoft.LightSwitch.FormsAuth.VB</TemplateID>
+    <Hidden>true</Hidden>
+    <Icon></Icon>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ItemType="_ServerFile" TargetFileName="LogIn.aspx" OpenInEditor="false">LogIn.aspx</ProjectItem>
+    <ProjectItem ItemType="_ServerFile" TargetFileName="LogOut.aspx" OpenInEditor="false">LogOut.aspx</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

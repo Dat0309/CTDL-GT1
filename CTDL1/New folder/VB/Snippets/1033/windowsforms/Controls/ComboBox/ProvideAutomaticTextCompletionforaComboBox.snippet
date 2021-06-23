@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Provide Automatic Text Completion for a ComboBox</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Provides automatic text completion for a combobox.</Description>
+      <Shortcut>cbComplete</Shortcut>
+    </Header>
+    <Snippet>
+		<References>
+			<Reference>
+				<Assembly>System.Windows.Forms</Assembly>
+			</Reference>
+		</References>
+		<Imports>
+			<Import>
+				<Namespace>Microsoft.VisualBasic</Namespace>
+			</Import>
+			<Import>
+				<Namespace>System.Windows.Forms</Namespace>
+			</Import>
+		</Imports>
+      <Declarations>
+        <Object>
+          <ID>comboBoxName</ID>
+          <Type>ComboBox</Type>
+          <ToolTip>Replace with a ComboxBox on your form.</ToolTip>
+          <Default>ComboBox1</Default>
+        </Object>
+        <Literal>
+          <ID>mode</ID>
+          <ToolTip>Replace with the mode of autocomplete you want (Append, None, Suggest, or SuggestAttend).</ToolTip>
+          <Default>Suggest</Default>
+        </Literal>
+        <Literal>
+          <ID>source</ID>
+          <ToolTip>Replace with the source to use for the autocomplete.</ToolTip>
+          <Default>AllUrl</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[$comboBoxName$.AutoCompleteMode = AutoCompleteMode.$mode$
+$comboBoxName$.AutoCompleteSource = AutoCompleteSource.$source$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

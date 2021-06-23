@@ -1,0 +1,61 @@
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Pivot-App (Windows Phone)</Name>
+    <Description>Ein Projekt für eine Windows Phone-App, die ein Pivot-Steuerelement und die Windows-Runtime verwendet.</Description>
+    <Icon>pivotwpj.ico</Icon>
+    <ProjectType>JavaScript</ProjectType>
+    <BlendProjectSubType>WJApplication</BlendProjectSubType>
+    <TemplateID>Microsoft.JavaScript.PivotWPJ</TemplateID>
+    <BlendTemplateID>Microsoft.Blend.PivotWWA</BlendTemplateID>
+    <BlendTemplateGroupID>HTML (Windows Phone)</BlendTemplateGroupID>
+    <SortOrder>40</SortOrder>
+    <CreateNewFolder>false</CreateNewFolder>
+    <BlendCreateNewFolder>true</BlendCreateNewFolder>
+    <DefaultName>App</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <NumberOfParentCategoriesToRollUp>2</NumberOfParentCategoriesToRollUp>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <TargetPlatformName>WindowsPhoneApp</TargetPlatformName>
+    <RequiredPlatformVersion>6.3.1</RequiredPlatformVersion>
+    <PreviewImage>pivotwpj.png</PreviewImage>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="Application.jsproj" ReplaceParameters="true">
+      <ProjectItem TargetFileName="default.html" ReplaceParameters="true" BlendOpenInEditor="true">default.html</ProjectItem>
+      <ProjectItem TargetFileName="js\default.js" ReplaceParameters="true" OpenInEditor="true" BlendOpenInEditor="false">default.js</ProjectItem>
+      <ProjectItem TargetFileName="js\navigator.js" ReplaceParameters="true">navigator.js</ProjectItem>
+      <ProjectItem TargetFileName="js\data.js">data.js</ProjectItem>
+      <ProjectItem TargetFileName="css\phone.css" ReplaceParameters="true">phone.css</ProjectItem>
+      <ProjectItem TargetFileName="css\ui-themed.css">ui-themed.css</ProjectItem>
+      <ProjectItem TargetFileName="css\ui-themed.theme-dark.css">ui-themed.theme-dark.css</ProjectItem>
+      <ProjectItem TargetFileName="css\ui-themed.theme-light.css">ui-themed.theme-light.css</ProjectItem>
+      <ProjectItem TargetFileName="pages\hub\hubPhone.css" ReplaceParameters="true">hubPhone.css</ProjectItem>
+      <ProjectItem TargetFileName="pages\hub\hub.html" ReplaceParameters="true">hub.html</ProjectItem>
+      <ProjectItem TargetFileName="pages\hub\hub.js" ReplaceParameters="true">hub.js</ProjectItem>
+      <ProjectItem TargetFileName="pages\hub\section1Page.html" ReplaceParameters="true">section1Page.html</ProjectItem>
+      <ProjectItem TargetFileName="pages\hub\section1Page.js" ReplaceParameters="true">section1Page.js</ProjectItem>
+      <ProjectItem TargetFileName="pages\hub\section2Page.html" ReplaceParameters="true">section2Page.html</ProjectItem>
+      <ProjectItem TargetFileName="pages\hub\section2Page.js" ReplaceParameters="true">section2Page.js</ProjectItem>
+      <ProjectItem TargetFileName="pages\hub\section3Page.html" ReplaceParameters="true">section3Page.html</ProjectItem>
+      <ProjectItem TargetFileName="pages\hub\section3Page.js" ReplaceParameters="true">section3Page.js</ProjectItem>
+      <ProjectItem TargetFileName="pages\hub\section4Page.html" ReplaceParameters="true">section4Page.html</ProjectItem>
+      <ProjectItem TargetFileName="pages\hub\section4Page.js" ReplaceParameters="true">section4Page.js</ProjectItem>
+      <ProjectItem TargetFileName="pages\item\item.css" ReplaceParameters="true">item.css</ProjectItem>
+      <ProjectItem TargetFileName="pages\item\item.html" ReplaceParameters="true">item.html</ProjectItem>
+      <ProjectItem TargetFileName="pages\item\item.js" ReplaceParameters="true">item.js</ProjectItem>
+      <ProjectItem TargetFileName="images\Square150x150Logo.scale-240.png">SquareTile150x150@scale-240.png</ProjectItem>
+      <ProjectItem TargetFileName="images\Square44x44Logo.scale-240.png">SquareTile44x44@scale-240.png</ProjectItem>
+      <ProjectItem TargetFileName="images\Wide310x150Logo.scale-240.png">SquareTile310x150@scale-240.png</ProjectItem>
+      <ProjectItem TargetFileName="images\Square71x71Logo.scale-240.png">SquareTile71x71@scale-240.png</ProjectItem>
+      <ProjectItem TargetFileName="images\SplashScreen.scale-240.png">SplashScreen@scale-240.png</ProjectItem>
+      <ProjectItem TargetFileName="images\StoreLogo.scale-240.png">StoreLogo@scale-240.png</ProjectItem>
+      <ProjectItem TargetFileName="images\gray.png">gray.png</ProjectItem>
+      <ProjectItem TargetFileName="strings\$currentuiculturename$\resources.resjson">resources.resjson</ProjectItem>
+      <ProjectItem TargetFileName="package.appxmanifest" ReplaceParameters="true">package.appxmanifest</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.WinRT.TemplateWizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.WinRT.TemplateWizards.PhoneAppxWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

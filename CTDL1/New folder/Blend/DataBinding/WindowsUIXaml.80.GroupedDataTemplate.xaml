@@ -1,0 +1,9 @@
+﻿<Grid HorizontalAlignment="Left" Width="250" Height="250"  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
+    <Image x:Name="Replace_Windows.UI.Xaml.Media.ImageSource" Source="{Binding}"/>
+  </Border>
+  <StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}">
+    <TextBlock x:Name="Replace_Title_System.String" Text="{Binding}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextStyle}" Height="60" TextWrapping="NoWrap" Margin="15,0,15,0"/>
+    <TextBlock x:Name="Replace_Subtitle_System.String" Text="{Binding}" Foreground="{StaticResource ListViewItemOverlaySecondaryForegroundThemeBrush}" Style="{StaticResource CaptionTextStyle}" TextWrapping="NoWrap" Margin="15,0,15,10"/>
+  </StackPanel>
+</Grid>

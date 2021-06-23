@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Stop an Application</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Closes all the running instances of Notepad.</Description>
+      <Shortcut>appStop</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Diagnostics</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>processName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the friendly name of the process.</ToolTip>
+          <Default>"Untitled - Notepad"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[	For Each proc In Process.GetProcessesByName($processName$)
+		proc.CloseMainWindow()
+	Next]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

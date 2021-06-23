@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Define an Addition Operator (+)</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Defines the addition (+) operator on a class. </Description>
+      <Keywords>
+        <Keyword>operators</Keyword>
+        <Keyword>overloading operators</Keyword>
+        <Keyword>overloading</Keyword>
+      </Keywords>
+      <Shortcut>OpAdd</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+         <Literal>
+          <ID>ClassName</ID>
+          <Type>
+          </Type>
+          <ToolTip>Replace with the name of the class you are implementing.</ToolTip>
+          <Default>ThisClass</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="type decl"><![CDATA[Public Shared Operator +(ByVal class1 As $ClassName$, ByVal class2 As $ClassName$) As $ClassName$
+
+End Operator]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

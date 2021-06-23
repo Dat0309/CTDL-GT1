@@ -1,0 +1,34 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="311" />
+    <Description Package ="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID ="312" />
+    <Icon Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="216" />
+    <TemplateID>SharePoint14BlankSiteDefinition_VB_ITEM</TemplateID>
+    <RequiredFrameworkVersion>3.5</RequiredFrameworkVersion>
+    <ProjectType>VisualBasic</ProjectType>
+    <SortOrder>170</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>SiteDefinition</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <CreateInPlace>true</CreateInPlace>
+    <TemplateGroupID>SharePointItemTemplateGroupID</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="false" TargetFileName="$SafeSiteDefName$\SharePointProjectItem.spdata">SharePointBlankSiteDefinition.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$SafeSiteDefName$\webtemp_$SafeSiteDefName$.xml">webtemp_SharePointBlankSiteDefinition.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="true" TargetFileName="$SafeSiteDefName$\onet.xml">onet.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$SafeSiteDefName$\default.aspx">default.aspx</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="SharePointProjectTemplateAttributes" Value="ProjectItem"/>
+      <CustomParameter Name="SharePointProjectParentFilter" Value="General;ProjectItem"/>
+      <CustomParameter Name="$loc_SiteDefinition_GroupName$" _locID="$loc_SiteDefinition_GroupName$" _locAttrData="Value" Value="SharePoint Customizations" />
+      <CustomParameter Name="$loc_SiteDefinition_Homepage_Text$" _locID="$loc_SiteDefinition_Homepage_Text$" _locAttrData="Value" Value="Welcome to the custom site" />
+      <CustomParameter Name="$loc_WebTemp_Folder_Lcid$" _locID="$loc_WebTemp_Folder_Lcid$" _locAttrData="Value" Value="1033" />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.BlankSiteDefinitionWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

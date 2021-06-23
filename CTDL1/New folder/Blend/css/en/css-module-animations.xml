@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="Animations" standard-reference="http://www.w3.org/TR/css3-animations/" status="WD" pub-date="2012-04-03">
+
+  <CssAtDirective name="keyframes"
+                  _locID="keyframes-rule"
+                  _locAttrData="description"
+                  version="3.0"
+                  browsers="FF16,IE10,O12.5"
+                  syntax="@keyframes animation-name"
+                  description="Defines set of animation key frames."
+                  standard-reference="http://www.w3.org/TR/css3-animations/#keyframes" />
+
+  <CssProperty _locID="animation-name"
+               _locAttrData="description"
+               version="3.0"
+               browsers="FF16,IE10,O12.5"
+               restriction="identifier"
+               type="animation-name"
+               syntax="div { $(name): movearound; }"
+               description="Defines a list of animations that apply. Each name is used to select the keyframe at-rule that provides the property values for the animation."
+               standard-reference="http://www.w3.org/TR/css3-animations/#the-animation-name-property-" />
+
+
+  <CssPropertyValue type="animation-name">
+    <entry _locID="animation-name_none"
+           _locAttrData="description"
+           value="none"
+           description="No animation is performed" />
+  </CssPropertyValue>
+
+  <CssProperty _locID="animation-duration"
+               _locAttrData="description"
+               version="3.0"
+               browsers="FF16,IE10,O12.5"
+               restriction="time"
+               syntax="div { $(name): 4s; }"
+               description="Defines the length of time that an animation takes to complete one cycle."
+               standard-reference="http://www.w3.org/TR/css3-animations/#animation-duration" />
+
+  <CssProperty _locID="animation-timing-function"
+               _locAttrData="description"
+               version="3.0"
+               browsers="FF16,IE10,O12.5"
+               type="timing-functions"
+               restriction="enum"
+               syntax="div { $(name): ease; }"
+               description="Describes how the animation will progress over one cycle of its duration. See the 'transition-timing-function'."
+               standard-reference="http://www.w3.org/TR/css3-animations/#animation-timing-function" />
+
+  <CssProperty _locID="animation-iteration-count"
+               _locAttrData="description"
+               version="3.0"
+               browsers="FF16,IE10,O12.5"
+               restriction="number"
+               type="animation-iteration-count"
+               syntax="div { $(name): 3; }"
+               description="Defines the number of times an animation cycle is played. The default value is one, meaning the animation will play from beginning to end once."
+               standard-reference="http://www.w3.org/TR/css3-animations/#animation-iteration-count" />
+
+  <CssPropertyValue type="animation-iteration-count">
+    <entry _locID="animation-iteration-count_infinite"
+           _locAttrData="description"
+           value="infinite"
+           description="Causes the animation to repeat forever." />
+  </CssPropertyValue>
+
+  <CssProperty _locID="animation-direction"
+               _locAttrData="description"
+               version="3.0"
+               browsers="FF16,IE10,O12.5"
+               type="animation-directions"
+               restriction="enum"
+               syntax="div { $(name): normal; }"
+               description="Defines whether or not the animation should play in reverse on alternate cycles."
+               standard-reference="http://www.w3.org/TR/css3-animations/#animation-direction" />
+
+  <CssPropertyValue type="animation-directions">
+    <entry _locID="animation-direction_normal"
+           _locAttrData="description"
+           value="normal"
+           description="Normal playback." />
+    <entry _locID="animation-direction_alternate"
+           _locAttrData="description"
+           value="alternate"
+           description="The animation cycle iterations that are odd counts are played in the normal direction, and the animation cycle iterations that are even counts are played in a reverse direction." />
+    <entry _locID="animation-direction_reverse"
+           _locAttrData="description"
+           value="reverse"
+           description="All iterations of the animation are played in the reverse direction from the way they were specified." />
+    <entry _locID="animation-direction_alternate-reverse"
+           _locAttrData="description"
+           value="alternate-reverse"
+           description="The animation cycle iterations that are odd counts are played in the reverse direction, and the animation cycle iterations that are even counts are played in a normal direction." />
+  </CssPropertyValue>
+
+  <CssProperty _locID="animation-play-state"
+               _locAttrData="description"
+               version="3.0"
+               browsers="FF16,IE10,O12.5"
+               type="animation-play-states"
+               restriction="enum"
+               syntax="div { $(name): running; }"
+               description="Defines whether the animation is running or paused."
+               standard-reference="http://www.w3.org/TR/css3-animations/#animation-play-state" />
+
+  <CssPropertyValue type="animation-play-states">
+    <entry _locID="animation-play-state_running"
+           _locAttrData="description"
+           value="running"
+           description="Resume playback of a paused animation." />
+    <entry _locID="animation-play-state_paused"
+           _locAttrData="description"
+           value="paused"
+           description="A running animation will be paused." />
+  </CssPropertyValue>
+
+  <CssProperty _locID="animation-delay"
+               _locAttrData="description"
+               version="3.0"
+               browsers="FF16,IE10,O12.5"
+               restriction="time"
+               syntax="div { $(name): 4s; }"
+               description="Defines when the animation will start. An 'animation-delay' value of '0' means the animation will execute as soon as it is applied. Otherwise, the value specifies an offset from the moment the animation is applied, and the animation will delay execution by that offset."
+               standard-reference="http://www.w3.org/TR/css3-animations/#animation-delay" />
+
+  <CssPropertyValue type="animation-fill-modes">
+    <entry _locID="animation-fill-mode_none"
+           _locAttrData="description"
+           value="none"
+           description="There is no change to the property value between the time the animation is applied and the time the animation begins playing or after the animation completes." />
+    <entry _locID="animation-fill-mode_forwards"
+           _locAttrData="description"
+           value="forwards"
+           description="The final property value (as defined in the last @keyframes at-rule) is maintained after the animation completes." />
+    <entry _locID="animation-fill-mode_backwards"
+           _locAttrData="description"
+           value="backwards"
+           description="The beginning property value (as defined in the first @keyframes at-rule) is applied before the animation is displayed, during the period defined by 'animation-delay'." />
+    <entry _locID="animation-fill-mode_both"
+           _locAttrData="description"
+           value="both"
+           description="Both forwards and backwards fill modes are applied." />
+  </CssPropertyValue>
+
+  <CssProperty _locID="animation-fill-mode"
+         _locAttrData="description"
+         version="3.0"
+         browsers="FF16,IE10,O12.5"
+         type="animation-fill-modes"
+         restriction="enum"
+         syntax="div { $(name): forwards; }"
+         description="Defines what values are applied by the animation outside the time it is executing."
+         standard-reference="http://www.w3.org/TR/css3-animations/#animation-fill-mode-property" />
+
+  <CssProperty _locID="animation"
+               _locAttrData="description"
+               version="3.0"
+               browsers="FF16,IE10,O12.5"
+               restriction="time, enum, identifier, number"
+               type="animation-fill-modes, timing-functions, animation-directions, animation-iteration-count, animation-name"
+               syntax="div { $(name): movearound 4s ease 3 normal; }"
+               description="Shorthand property combines six of the animation properties into a single property."
+               standard-reference="http://www.w3.org/TR/css3-animations/#animation" />
+
+</CssModule>
+

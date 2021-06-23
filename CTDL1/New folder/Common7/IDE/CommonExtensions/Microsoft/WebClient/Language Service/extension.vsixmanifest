@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="Microsoft.VisualStudio.JavaScript.LanguageService">
+    <Name>JavaScript Language Service</Name>
+    <Author>Microsoft Corporation</Author>
+    <Version>12.0</Version>
+    <Description>Microsoft Visual Studio JavaScript Language Service</Description>
+    <Locale>1033</Locale>
+    <SupportedProducts>
+      <VisualStudio Version="12.0">
+        <Edition>Pro</Edition>
+        <Edition>Express_All</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" />
+    <InstalledByMsi>true</InstalledByMsi>
+    <SystemComponent>true</SystemComponent>
+  </Identifier>
+  <References />
+  <Content>
+    <MefComponent>Microsoft.JavaScript.Services.Implementation.dll</MefComponent>
+    <MefComponent>Microsoft.VisualStudio.JSLS.dll</MefComponent>
+    <VsPackage>Microsoft.VisualStudio.JSLS.pkgdef</VsPackage>
+  </Content>
+</Vsix>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="VisualFSharpTools.Microsoft.29C07F22-0984-4495-9645-77E76FF08758" Version="3.1.0.0" Language="en-US" Publisher="Microsoft Corp." />
+    <DisplayName>Visual F# 3.1</DisplayName>
+    <Description xml:space="preserve">A collection of tools to develop F# applications using Visual Studio 2013</Description>
+    <MoreInfo>http://msdn.microsoft.com/en-us/vstudio/hh388569.aspx</MoreInfo>
+  </Metadata>
+  <Installation InstalledByMsi="true" AllUsers="true">
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="12.0" />
+  </Installation>
+  <Dependencies/>
+  <Assets/>
+</PackageManifest>

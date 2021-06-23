@@ -1,0 +1,22 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{540DCB6B-915E-4a16-A7D8-838D154377A8}" ID="401"/>
+    <Description Package="{540DCB6B-915E-4a16-A7D8-838D154377A8}" ID="402"/>
+    <Icon Package="{540DCB6B-915E-4a16-A7D8-838D154377A8}" ID="403"/>
+    <TemplateID>SharePoint16Package_VB_ITEM</TemplateID>
+    <ProjectType>VisualBasic</ProjectType>
+    <DefaultName>Package.package</DefaultName>
+    <Hidden>true</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem TargetFileName="$fileinputname$.package" ReplaceParameters="true" OpenInEditor="false">Package.package</ProjectItem>
+    <ProjectItem TargetFileName="$fileinputname$.Template.xml" ReplaceParameters="true" OpenInEditor="false">Manifest.xml</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="$RootNodeFileExtension$" Value=".package"/>
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.PackagingItemsWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

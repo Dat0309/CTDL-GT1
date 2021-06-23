@@ -1,0 +1,28 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>select</Title>
+    <Author>Microsoft Corporation</Author>
+    <Shortcut>select</Shortcut>
+    <Description>Markup snippet for a drop-down list</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>value</ID>
+        <ToolTip>value</ToolTip>
+        <Default>value</Default>
+      </Literal>
+      <Literal>
+        <ID>text</ID>
+        <ToolTip>text</ToolTip>
+        <Default>text</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="html"><![CDATA[<select>
+    <option value="$value$">$text$</option>
+</select>$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

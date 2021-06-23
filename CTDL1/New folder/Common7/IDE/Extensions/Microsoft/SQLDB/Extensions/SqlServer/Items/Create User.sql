@@ -1,0 +1,7 @@
+﻿CREATE USER [$rawname$]
+	WITHOUT LOGIN
+	WITH DEFAULT_SCHEMA = dbo
+
+GO
+
+GRANT CONNECT TO [$rawname$]

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Insert XML into a Word Range</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Inserts XML data into a range in a Word document.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Word.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Word = Microsoft.Office.Interop.Word</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>transformValue</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with the transform to apply to the inserted XML text, or blank to omit.</ToolTip>
+          <Default>transformValue</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>xmlData</ID>
+          <Type>System.String</Type>
+          <ToolTip>Replace with a string variable that contains the XML data to insert into the range. A string literal can also be used.</ToolTip>
+          <Default>"xmlData"</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>transform</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a variable to hold the transform value.</ToolTip>
+          <Default>transform</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>range</ID>
+          <Type>Microsoft.Office.Interop.Word.Range</Type>
+          <ToolTip>Replace with the range to insert the XML into.</ToolTip>
+          <Default>range</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="CSharp" Kind="" Delimiter="$"><![CDATA[
+object $transform$ = $transformValue$;
+
+$range$.InsertXML($xmlData$, ref $transform$);
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

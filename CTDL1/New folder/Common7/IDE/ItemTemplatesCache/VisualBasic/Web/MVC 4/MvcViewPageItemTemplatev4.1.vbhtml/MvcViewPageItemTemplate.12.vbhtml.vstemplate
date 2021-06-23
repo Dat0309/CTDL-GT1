@@ -1,0 +1,29 @@
+﻿<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+    <TemplateData>
+        <DefaultName>ViewPage.vbhtml</DefaultName>
+        <Name Package="{141DA93E-88A7-45D5-B15B-89117F514D64}" ID="21116"/>
+        <Description Package="{141DA93E-88A7-45D5-B15B-89117F514D64}" ID="21122"/>
+        <Icon Package="{141DA93E-88A7-45D5-B15B-89117F514D64}" ID="22003"/>
+        <ProjectType>VisualBasic</ProjectType>
+        <SortOrder>4</SortOrder>
+        <NumberOfParentCategoriesToRollUp>2</NumberOfParentCategoriesToRollUp>
+        <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+        <TemplateID>MvcViewPageItemTemplate.vbhtml.vstemplate.v401</TemplateID>
+        <TemplateGroupID>MVC4</TemplateGroupID>
+        <ShowByDefault>false</ShowByDefault>
+    </TemplateData>
+    <TemplateContent>
+        <CustomParameters>
+            <CustomParameter Name="$language$" Value="VB" />
+            <CustomParameter Name="$viewname$" Value="" />
+            <CustomParameter Name="$ParentExtension$" Value=".vbhtml"/>
+            <CustomParameter Name="$ChildExtension$" Value=".vb"/>
+        </CustomParameters>
+        <References />
+        <ProjectItem SubType="" TargetFileName="$fileinputname$.vbhtml" ReplaceParameters="true">Views\Home\ViewPage.vbhtml</ProjectItem>
+    </TemplateContent>
+    <WizardExtension>
+        <Assembly>Microsoft.VisualStudio.Web.Mvc.4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</Assembly>
+        <FullClassName>Microsoft.VisualStudio.Web.Mvc.UserInterface.MvcRazorItemTemplateWizard</FullClassName>
+    </WizardExtension>
+</VSTemplate>

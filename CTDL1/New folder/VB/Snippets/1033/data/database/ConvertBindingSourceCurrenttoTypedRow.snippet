@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Convert BindingSource.Current to a specific row in a DataTable</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Gets the current row within a binding source and converts it to the specific row.  Recomended method for capturing the current, rather than using BindingSource.Position which may return a different row based on the sorting of the DataView</Description>
+      <Shortcut>dtBindingSourceCurrent</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Data</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.XML</Assembly>
+        </Reference>
+      </References>
+      <Declarations>
+        <Object>
+          <ID>rowType</ID>
+          <Type>DataRow</Type>
+          <ToolTip>Replace with the type for the DataRow from your dataset</ToolTip>
+          <Default>NorthwindDataSet.CustomersRow</Default>
+        </Object>
+        <Object>
+          <ID>bindingSource</ID>
+          <Type>BindingSource</Type>
+          <ToolTip>Replace with the BindingSource to capture the row from</ToolTip>
+          <Default>CustomersBindingSource</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB"><![CDATA[Dim row As $rowType$
+row = CType(CType(Me.$bindingSource$.Current, DataRowView).Row, $rowType$)
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

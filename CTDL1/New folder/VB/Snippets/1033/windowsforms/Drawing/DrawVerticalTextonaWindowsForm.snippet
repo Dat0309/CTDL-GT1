@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Draw Vertical Text on a Windows Form</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Draws text on a form in a vertical orientation.</Description>
+      <Shortcut>drawVertText</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Drawing.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>FontName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the font name and size.</ToolTip>
+          <Default>"Arial"</Default>
+        </Literal>
+        <Literal>
+          <ID>FontSize</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with the font size.</ToolTip>
+          <Default>16</Default>
+        </Literal>
+        <Object>
+          <ID>text</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the text to be written.</ToolTip>
+          <Default>"hello"</Default>
+        </Object>
+        <Literal>
+          <ID>Xlocation</ID>
+          <Type>Single</Type>
+          <ToolTip>Replace with the X coordinate for the where the text will appear.</ToolTip>
+          <Default>150.0</Default>
+        </Literal>
+        <Literal>
+          <ID>Ylocation</ID>
+          <Type>Single</Type>
+          <ToolTip>Replace with the Y coordinate for the where the text will appear.</ToolTip>
+          <Default>50.0</Default>
+        </Literal>
+        <Literal>
+          <ID>color</ID>
+          <ToolTip>Replace with the color of the text.</ToolTip>
+          <Default>Color.Red</Default>
+        </Literal>
+        <Object>
+          <ID>form</ID>
+          <Type>System.Windows.Forms.Form</Type>
+          <ToolTip>Replace with a reference for the form or control to draw the text on.</ToolTip>
+          <Default>Me</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[    Dim drawFormat As New StringFormat()
+
+    Using formGraphics As Graphics = $form$.CreateGraphics(), _
+        drawFont As New System.Drawing.Font($FontName$, $FontSize$), _
+        drawBrush As New SolidBrush($color$)
+
+        drawFormat.FormatFlags = StringFormatFlags.DirectionVertical
+        formGraphics.DrawString($text$, drawFont, drawBrush, _
+            $Xlocation$, $Ylocation$, drawFormat)
+    End Using
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,17 @@
+readme.txt
+customwiz.inf
+customwiz.vsz
+customwiz.js
+customwiz.vcxproj
+customwiz.vsdir
+CopyOnly | customwiz.ico
+[!if CUSTOM_WIZARD_UI]
+customwiz.htm
+CopyOnly | sample.txt
+CopyOnly | Custom.gif
+CopyOnly | Custom_Background.gif
+CopyOnly | customwiz.css
+CopyOnly | DottedHori.gif
+CopyOnly | DottedVert.gif
+CopyOnly | spacer.gif
+[!endif]

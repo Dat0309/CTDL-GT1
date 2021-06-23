@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Visual Studio 2012: http://microsoft.com/visualstudio
+Some portions are "Copyright© 2012 World Wide Web Consortium, 
+(Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University), 
+All Rights Reserved" and are included "AS IS" under the W3C® Software License [http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231].
+-->
+<CssModule name="CSS Legacy" standard-reference="http://www.w3.org/TR/CSS2/visuren.html" status="WD" pub-date="2011-11-29">
+
+  <CssProperty _locID="position"
+               version="2.0"
+               restriction="enum"
+               syntax="div { $(name): absolute; }"
+               standard-reference="http://www.w3.org/TR/CSS2/visuren.html#propdef-position">
+
+    <entry _locID="position_absolute"
+           _locAttrData="description"
+           value="absolute"
+           description="The box's position (and possibly size) is specified with the 'top', 'right', 'bottom', and 'left' properties. These properties specify offsets with respect to the box's 'containing block'." />
+    <entry _locID="position_fixed"
+           _locAttrData="description"
+           value="fixed"
+           description="The box's position is calculated according to the 'absolute' model, but in addition, the box is fixed with respect to some reference. As with the 'absolute' model, the box's margins do not collapse with any other margins." />
+    <entry _locID="position_relative"
+           _locAttrData="description"
+           value="relative"
+           description="The box's position is calculated according to the normal flow (this is called the position in normal flow). Then the box is offset relative to its normal position." />
+    <entry _locID="position_static"
+           _locAttrData="description"
+           value="static"
+           description="The box is a normal box, laid out according to the normal flow. The 'top', 'right', 'bottom', and 'left' properties do not apply." />
+    <entry _locID="position_sticky"
+           _locAttrData="description"
+           value="sticky"
+           description="The box's position is calculated according to the normal flow. Then the box is offset relative to its flow root and containing block and in all cases, including table elements, does not affect the position of any following boxes." />
+    <entry _locID="position_center"
+           _locAttrData="description"
+           value="center"
+           description="Center positioned boxes are taken out of the normal flow. This means they have no impact on the layout of later siblings." />
+    <entry _locID="position_page"
+           _locAttrData="description"
+           value="page"
+           description="The box's position is calculated according to the 'absolute' model." />
+  </CssProperty>
+
+  <CssProperty _locID="left"
+               _locAttrData="description"
+               version="2.0"
+               restriction="length, percentage"
+               description="Specifies how far an absolutely positioned box's left margin edge is offset to the right of the left edge of the box's 'containing block'."
+               syntax="article { $(name): 50px; }"
+               standard-reference="http://www.w3.org/TR/CSS2/visuren.html#propdef-left">
+    
+    <entry _locID="left_auto"
+           _locAttrData="description"
+           value="auto"
+           description="For non-replaced elements, the effect of this value depends on which of related properties have the value 'auto' as well" />
+  </CssProperty>
+
+  <CssProperty _locID="top"
+               _locAttrData="description"
+               ref="left"
+               description="Specifies how far an absolutely positioned box's top margin edge is offset below the top edge of the box's 'containing block'."
+               standard-reference="http://www.w3.org/TR/CSS2/visuren.html#propdef-top" />
+
+  <CssProperty _locID="right"
+               _locAttrData="description"
+               ref="left"
+               description="Specifies how far an absolutely positioned box's right margin edge is offset to the left of the right edge of the box's 'containing block'."
+               standard-reference="http://www.w3.org/TR/CSS2/visuren.html#propdef-right" />
+
+  <CssProperty _locID="bottom"
+               _locAttrData="description"
+               ref="left"
+               description="Specifies how far an absolutely positioned box's bottom margin edge is offset above the bottom edge of the box's 'containing block'."
+               standard-reference="http://www.w3.org/TR/CSS2/visuren.html#propdef-bottom" />
+
+  <CssProperty _locID="z-index"
+               _locAttrData="description"
+               version="2.0"
+               restriction="integer"
+               description="For a positioned box, the 'z-index' property specifies the stack level of the box in the current stacking context and whether the box establishes a local stacking context."
+               syntax="img { $(name): 3; }"
+               standard-reference="http://www.w3.org/TR/CSS2/visuren.html#propdef-z-index">
+
+    <entry _locID="z-index_auto"
+           _locAttrData="description"
+           value="auto"
+           description="The stack level of the generated box in the current stacking context is 0. The box does not establish a new stacking context unless it is the root element." />
+  </CssProperty>
+
+  <CssProperty _locID="line-height"
+               _locAttrData="description"
+               version="1.0"
+               restriction="number, length, percentage"
+               description="Determines the block-progression dimension of the text content area of an inline box."
+               syntax="#menu { $(name): 22px; }"
+               standard-reference="http://www.w3.org/TR/css3-linebox/#line-height">
+    <entry _locID="line-height_normal"
+           _locAttrData="description"
+           value="normal"
+           description="Tells user agents to set the computed value to a 'reasonable' value based on the font size of the element." />
+    <entry _locID="line-height_none"
+           _locAttrData="description"
+           value="none"
+           description="The computed value of the property is the ancestor block element font-size." />
+  </CssProperty>
+
+  <CssProperty _locID="vertical-align"
+               _locAttrData="description"
+               version="1.0"
+               restriction="percentage, length"
+               description="Affects the vertical positioning of the inline boxes generated by an inline-level element inside a line box."
+               syntax="div { $(name): middle; }"
+               standard-reference="http://www.w3.org/TR/css3-linebox/#vertical-align">
+
+    <entry _locID="vertical-align_baseline"
+           _locAttrData="description"
+           value="baseline"
+           description="Align the 'alphabetic' baseline of the element with the 'alphabetic' baseline of the parent element." />
+    <entry _locID="vertical-align_sub"
+           _locAttrData="description"
+           value="sub"
+           description="Lower the baseline of the box to the proper position for subscripts of the parent's box. (This value has no effect on the font size of the element's text.)" />
+    <entry _locID="vertical-align_super"
+           _locAttrData="description"
+           value="super"
+           description="Raise the baseline of the box to the proper position for superscripts of the parent's box. (This value has no effect on the font size of the element's text.)" />
+    <entry _locID="vertical-align_top"
+           _locAttrData="description"
+           value="top"
+           description="Align the before edge of the extended inline box with the before-edge of the line box." />
+    <entry _locID="vertical-align_text-top"
+           _locAttrData="description"
+           value="text-top"
+           description="Align the top of the box with the before-edge of the parent element's font." />
+    <entry _locID="vertical-align_bottom"
+           _locAttrData="description"
+           value="bottom"
+           description="Align the after edge of the extended inline box with the after-edge of the line box." />
+    <entry _locID="vertical-align_text-bottom"
+           _locAttrData="description"
+           value="text-bottom"
+           description="Align the bottom of the box with the after-edge of the parent element's font." />
+    <entry _locID="vertical-align_auto"
+           _locAttrData="description"
+           value="auto"
+           version="3.0"
+           description="Align the dominant baseline of the parent box with the equivalent, or heuristically reconstructed, baseline of the element inline box." />
+    <entry _locID="vertical-align_use-script"
+           _locAttrData="description"
+           value="use-script"
+           version="3.0"
+           browsers="none"
+           description="Align the script preferred baseline of the element (determined by the computed script value) with the equivalent baseline of the parent element." />
+    <entry _locID="vertical-align_central"
+           _locAttrData="description"
+           value="central"
+           browsers="none"
+           version="3.0"
+           description="Align the 'central' baseline of the inline element with the central baseline of the parent." />
+    <entry _locID="vertical-align_middle"
+           _locAttrData="description"
+           value="middle"
+           version="3.0"
+           description="Align the 'middle' baseline of the inline element with the middle baseline of the parent." />
+  </CssProperty>
+
+  <!--<CssProperty _locID="chains"
+               _locAttrData="syntax"
+               version="3.0"
+               browsers="none"
+               restriction="integer"
+               syntax="Example: @page:first { chains: a b c d e f; }"
+               standard-reference="http://www.w3.org/TR/css3-layout/#chains">
+
+    <entry _locID="z-index_auto"
+           _locAttrData="description"
+           value="auto"
+           description="The stack level of the generated box in the current stacking context is the same as its parent's box. The box does not establish a new local stacking context." />
+  </CssProperty>
+
+  <CssPseudo name="::slot(b)"
+           _locID="slot-pseudo-function"
+           _locAttrData="description"
+           version="3.0"
+           browsers="none"
+           syntax="body::slot(b) { background: #FF0 }"
+           description="'::slot(X)' pseudo-element selects the slot with name X (a letter or &quot;@&quot;) of the subject of a selector. If that subject is not a template element, or if it has no such slot, the pseudo-element selects nothing."
+           standard-referece="http://www.w3.org/TR/css3-layout/#slot" />
+
+  <CssProperty _locID="break-inside">
+    <entry value="avoid-slot" />
+  </CssProperty>
+
+  <CssProperty _locID="break-before">
+    <entry value="slot" />
+    <entry value="avoid-slot" />
+  </CssProperty>
+
+  <CssProperty _locID="break-after">
+    <entry value="slot" />
+    <entry value="avoid-slot" />
+  </CssProperty>-->
+</CssModule>

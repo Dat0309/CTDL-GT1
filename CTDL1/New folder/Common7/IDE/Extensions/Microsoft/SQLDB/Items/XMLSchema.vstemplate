@@ -1,0 +1,18 @@
+<VSTemplate Type="Item" Version="2.0.0"
+    xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{97358C99-E52D-42C7-8B7C-B59CC4425F4B}" ID="730"/>
+    <Description Package="{97358C99-E52D-42C7-8B7C-B59CC4425F4B}" ID="731"/>
+    <Icon></Icon>
+    <ProjectType>Database Projects</ProjectType>
+    <SortOrder>0</SortOrder>
+    <DefaultName>XMLSchema.xsd</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true" >XMLSchema.xsd</ProjectItem>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.Data.Tools.Package, Version=12.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a, Custom=null</Assembly>
+    <FullClassName>Microsoft.VisualStudio.Data.Tools.Package.Internal.ItemPropertyWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

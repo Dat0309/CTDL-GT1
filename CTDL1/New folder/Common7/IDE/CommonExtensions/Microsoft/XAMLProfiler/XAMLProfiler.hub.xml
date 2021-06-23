@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Components xmlns="urn:diagnosticshub-components-definition-1-3">
+    <ToolComponent Exclusive="false">
+        <ResourceBaseName>Resources\XAMLProfilerResources</ResourceBaseName>
+        <Id>96DCF139-9A62-4ADF-B9FA-7AEC44C0B9CC</Id>
+        <Name ResourceId="XamlProfilerToolName" />
+        <Description ResourceId="XamlProfilerToolDescription" />
+        <HostOSVersion MinVersion="6.3" />
+        <!-- don't show this profiler on Windows8 or less -->
+        <SupportedTargets>
+            <!-- C# Windows Store Apps -->
+            <VisualStudio DebuggerContext="LocalOrRemote">
+                <ProjectType>BC8A1FFA-BEE3-4634-8014-F334798102B3</ProjectType>
+                <ProjectType>FAE04EC0-301F-11D3-BF4B-00C04F79EFBC</ProjectType>
+                <TargetPlatform Name="Windows"/>
+            </VisualStudio>
+            <!-- VB Windows Store Apps -->
+            <VisualStudio DebuggerContext="LocalOrRemote">
+                <ProjectType>BC8A1FFA-BEE3-4634-8014-F334798102B3</ProjectType>
+                <ProjectType>F184B08F-C81C-45F6-A57F-5ABD9991F28F</ProjectType>
+                <TargetPlatform Name="Windows"/>
+            </VisualStudio>
+            <!-- C++ Windows and Windows Phone Store Apps -->
+            <VisualStudio DebuggerContext="LocalOrRemote">
+                <ProjectType>8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942</ProjectType>
+                <TargetPlatform Name="Windows"/>
+                <TargetPlatform Name="WindowsPhone"/>
+                <!--Filtering out C++ desktop applications -->
+                <ExpectedProperty Id="VSHPROPID_AppContainer" Value="True" />
+            </VisualStudio>
+
+            <!-- C# Windows Phone Store Apps -->
+            <VisualStudio DebuggerContext="RemoteOnly">
+                <ProjectType>76F1466A-8B6D-4E39-A767-685A06062A39</ProjectType>
+                <ProjectType>FAE04EC0-301F-11D3-BF4B-00C04F79EFBC</ProjectType>
+                <TargetPlatform Name="WindowsPhone"/>
+            </VisualStudio>
+            <!-- VB Windows Phone Store Apps -->
+            <VisualStudio DebuggerContext="RemoteOnly">
+                <ProjectType>76F1466A-8B6D-4E39-A767-685A06062A39</ProjectType>
+                <ProjectType>F184B08F-C81C-45F6-A57F-5ABD9991F28F</ProjectType>
+                <TargetPlatform Name="WindowsPhone"/>
+            </VisualStudio>
+            
+            <WindowsStoreApp Type="ManagedAndNative">
+                <TargetPlatform Name="Windows" Attach="Unsupported" Launch="LocalOrRemote" MinOSVersion="6.3"/>
+            </WindowsStoreApp>
+        </SupportedTargets>
+        <EnabledCollectors>
+            <StandardCollector IsPauseSupported="false">
+                <!-- Windows Kernel Trace -->
+                <EtwProvider Id="9E814AAD-3204-11D2-9A82-006008A86939" FilterByProcessId="true" Level="Information">
+                    <!-- process -->
+                    <Keyword>0x00000001</Keyword>
+                    <!-- thread -->
+                    <Keyword>0x00000002</Keyword>
+                    <!-- img -->
+                    <Keyword>0x00000004</Keyword>
+                    <!-- cswitch -->
+                    <Keyword CollectStacks="true">0x00000010</Keyword>
+                    <!-- dispatcher -->
+                    <Keyword CollectStacks="true">0x00000800</Keyword>
+
+                    <!-- profile -->
+                    <Keyword CollectStacks="true">0x01000000</Keyword>
+                </EtwProvider>
+
+                <!-- CLR Runtime Provider -->
+                <EtwProvider Id="e13c0d23-ccbc-4e12-931b-d9cc2eee27e4" FilterByProcessId="true" Level="Information">
+                    <!-- Binder -->
+                    <Keyword>0x4</Keyword>
+                    <!-- Loader: Logging when modules actually get loaded and unloaded. -->
+                    <Keyword>0x8</Keyword>
+                    <!-- NGEN: Logging when pre-compiled native (NGEN) images are loaded. -->
+                    <Keyword>0x20</Keyword>
+                    <!-- ILToNativeMap: Log events associated with IL to native code map for JITted method. -->
+                    <Keyword>0x20000</Keyword>
+                    <!-- OverrideAndSuppressNgenEvents: Suppress extremely expensive Ngen events on newer CLRs which support Ngen PDBs.-->
+                    <Keyword>0x40000</Keyword>
+                </EtwProvider>
+
+                <!-- Microsoft-Windows-UI-XAML -->
+                <EtwProvider Id="531a35ab-63ce-4bcf-aa98-f88c7a89e455" Level="Verbose" FilterByProcessId="true">
+                </EtwProvider>
+
+                <!-- Microsoft-Windows-Dwm-Core -->
+                <EtwProvider Id="9e9bba3c-2e38-40cb-99f4-9e8281425164" FilterByProcessId="false">
+                    <Keyword>0x00000008</Keyword>
+                    <!-- DwmFrameRate -->
+                </EtwProvider>
+                <!-- Microsoft-Windows-Immersive-Shell Provider. Used for App Life Cycle Events as of now only for app activation start & end event -->
+                <EtwProvider Id="315a8872-923e-4ea2-9889-33cd4754bf64" Level="Information" FilterByProcessId="false">
+                    <Keyword>0x8000000000000000</Keyword>
+                </EtwProvider>
+                <!-- Microsoft-Windows-Diagnostics-LoggingChannel -->
+                <EtwProvider Id="4BD2826E-54A1-4BA9-BF63-92B73EA1AC4A" Level="Information" FilterByProcessId="true">
+                </EtwProvider>
+            </StandardCollector>
+        </EnabledCollectors>
+        <DataWarehouse>
+            <CustomAnalyzers>
+                <Location Arch="Amd64" LocalDllRelativePath="Extensions\amd64\XAMLProfilerDataModel.dll" />
+                <Location Arch="X86" LocalDllRelativePath="Extensions\XAMLProfilerDataModel.dll" />
+                <Analyzer Clsid="997028ba-9574-4713-9b39-5898fa850769"/>
+            </CustomAnalyzers>
+            <CustomAnalyzers>
+                <Location Arch="Amd64" LocalDllRelativePath="Extensions\amd64\MarkerEventsDataModel.dll" />
+                <Location Arch="X86" LocalDllRelativePath="Extensions\MarkerEventsDataModel.dll" />
+                <Analyzer Clsid="212e4115-6ef3-4d06-9305-e336173c9dc9"/>
+            </CustomAnalyzers>
+        </DataWarehouse>
+        <Views>
+            <StandardSwimLane Destination="Analysis">
+                <Title>XAML Profiler Ruler</Title>
+                <Description>Shared ruler for the XAML Profiler</Description>
+                <JsonConfiguration>
+                    {
+                        "View": "Ruler",
+                        "Series": [
+                            {
+                                "SeriesType": "Mark",
+                                "MarkType": 2,
+                                "DataSource":
+                                {
+                                    "CounterId": "2", <!-- enum value MarkType::UserMark declared in is_MarkerEvents.hpp -->
+                                    "AnalyzerId": "212e4115-6ef3-4d06-9305-e336173c9dc9"
+                                }
+                            },{
+                                "SeriesType": "Mark",
+                                "MarkType": 1,
+                                "DataSource":
+                                {
+                                    "CounterId": "1", <!-- enum value MarkType::LifeCycleEvent declared in is_MarkerEvents.hpp -->
+                                    "AnalyzerId": "212e4115-6ef3-4d06-9305-e336173c9dc9"
+                                }
+                            }
+                        ]
+                    }
+                </JsonConfiguration>
+            </StandardSwimLane>
+            <CustomSwimLane Destination="Analysis">
+                <Title ResourceId="UiThreadActivityChartTitle" />
+                <Description ResourceId="UiThreadActivityAriaLabel" />
+                <JsonConfiguration>
+                    {
+                        "View": "Graph",
+                        "GraphBehaviour": 2,
+                        "Series": [{
+                            "Legend": "Parsing_Category",
+                            "LegendTooltip": "ParsingLegendTooltip",
+                            "Category": "Parsing_Category",
+                            "Color": "#0072c6",
+                            "CssClass": "dataParsing",
+                            "DataSource": {
+                                "CounterId": "1",
+                                "AnalyzerId": "997028ba-9574-4713-9b39-5898fa850769"
+                            }
+                        }, {
+                             "Legend": "Layout_Category",
+                             "LegendTooltip": "LayoutLegendTooltip",
+                             "Category": "Layout_Category",
+                             "Color": "#dd5900",
+                             "CssClass": "dataLayout"
+                        }, {
+                             "Legend": "AppCode_Category",
+                             "LegendTooltip": "AppCodeLegendTooltip",
+                             "Category": "AppCode_Category",
+                             "Color": "#aecd00",
+                             "CssClass": "dataAppCode"
+                        }, {
+                             "Legend": "XamlOther_Category",
+                             "LegendTooltip": "XamlOtherLegendTooltip",
+                             "Category": "XamlOther_Category",
+                             "Color": "#b5b5b5",
+                             "CssClass": "dataXamlOther"
+                        }],
+                        "BarWidth": 4,
+                        "BarGap": 1,
+                        "ShowStackGap": true,
+                        "Height": 88
+                     }
+                </JsonConfiguration>
+                <Resources>
+                    <JavaScriptResource JavaScriptKey="Parsing_Category" ResourceId="Parsing_Category" />
+                    <JavaScriptResource JavaScriptKey="ParsingLegendTooltip" ResourceId="ParsingLegendTooltip" />
+                    <JavaScriptResource JavaScriptKey="Layout_Category" ResourceId="Layout_Category" />
+                    <JavaScriptResource JavaScriptKey="LayoutLegendTooltip" ResourceId="LayoutLegendTooltip" />
+                    <JavaScriptResource JavaScriptKey="AppCode_Category" ResourceId="AppCode_Category" />
+                    <JavaScriptResource JavaScriptKey="AppCodeLegendTooltip" ResourceId="AppCodeLegendTooltip" />
+                    <JavaScriptResource JavaScriptKey="XamlOther_Category" ResourceId="XamlOther_Category" />
+                    <JavaScriptResource JavaScriptKey="XamlOtherLegendTooltip" ResourceId="XamlOtherLegendTooltip" />
+                    <JavaScriptResource JavaScriptKey="UiThreadActivityChartTitle" ResourceId="UiThreadActivityChartTitle" />
+                    <JavaScriptResource JavaScriptKey="UiThreadActivityAriaLabel" ResourceId="UiThreadActivityAriaLabel" />
+                    <JavaScriptResource JavaScriptKey="UiThreadActivityBarAriaLabel" ResourceId="UiThreadActivityBarAriaLabel" />
+                </Resources>
+                <PathToJavaScript>Views\Script\HubGraphs.js</PathToJavaScript>
+                <ClassName>VisualProfiler.Graphs.StackedBarGraph</ClassName>
+            </CustomSwimLane>
+            <StandardSwimLane Destination="Analysis">
+                <Title ResourceId="FrameRateGraphGraphTitle" />
+                <JsonConfiguration>
+                    {
+                        "GraphType": "MultiLineGraph",
+                        "Series": [
+                            {
+                                "SeriesType": "Line",
+                                "Legend": "DWM_Category",
+                                "Color": {
+                                    "Line": "rgb(121, 215, 242)"
+                                },
+                                "DataSource": {
+                                    "CounterId": "DWMFrameRate", <!--JSInterfaceMemberAttributes::DWMFrames in XamlProfiler\DataModel\src\Constants.cpp -->
+                                    "CustomDomain": {
+                                        "task": "2" <!--AnalysisTaskType::GetFrameRateData in XamlProfiler\DataModel\XamlAnalyzer.h -->
+                                    },
+                                    "AnalyzerId": "997028ba-9574-4713-9b39-5898fa850769"
+                                }
+                            },
+                            {
+                                "SeriesType": "Line",
+                                "Legend": "UI_Category",
+                                "Color": {
+                                    "Line": "rgb(155, 79, 150)"
+                                },
+                                "DataSource": {
+                                    "CounterId": "UIFrameRate", <!--JSInterfaceMemberAttributes::UIFrames in XamlProfiler\DataModel\src\Constants.cpp-->
+                                    "CustomDomain": {
+                                        "task": "2" <!--AnalysisTaskType::GetFrameRateData in XamlProfiler\DataModel\XamlAnalyzer.h -->
+                                    },
+                                    "AnalyzerId": "997028ba-9574-4713-9b39-5898fa850769"
+                                }
+                            }
+                        ],
+                        "RefreshDataOnResizeAndZoom": true,
+                        "Axes": [{ "value": 30 }, { "value": 60 }],
+                        "MinValue": 0,
+                        "MaxValue": 100,
+                        "Unit": "FrameRateUnit"
+                    }
+                </JsonConfiguration>
+                <Resources>
+                    <JavaScriptResource JavaScriptKey="DWM_Category" ResourceId="DWM_Category" />
+                    <JavaScriptResource JavaScriptKey="UI_Category" ResourceId="UI_Category" />
+                    <JavaScriptResource JavaScriptKey="FrameRateUnit" ResourceId="FrameRateUnit" />
+                </Resources>
+            </StandardSwimLane>
+            <DetailsView Destination="Analysis">
+                <Title ResourceId="XamlProfilerDetailsViewTitle" />
+                <Description ResourceId="XamlProfilerToolDescription"/>
+                <ScriptedControl>
+                    <Manifest>XAMLProfiler.manifest.json</Manifest>
+                </ScriptedControl>
+            </DetailsView>
+        </Views>
+    </ToolComponent>
+</Components>

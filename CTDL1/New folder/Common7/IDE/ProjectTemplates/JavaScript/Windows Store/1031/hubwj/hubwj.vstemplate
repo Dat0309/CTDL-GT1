@@ -1,0 +1,52 @@
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Hub-App (Windows)</Name>
+    <Description>Ein Projekt für eine dreiseitige Windows-App, die ein Hub-Steuerelement verwendet. Auf dezidierten Seiten werden Details zu Gruppe und Elementen angezeigt.</Description>
+    <Icon>hubwj.ico</Icon>
+    <ProjectType>JavaScript</ProjectType>
+    <BlendProjectSubType>WJApplication</BlendProjectSubType>
+    <TemplateID>Microsoft.JavaScript.HubWJ</TemplateID>
+    <BlendTemplateID>Microsoft.Blend.HubWWA</BlendTemplateID>
+    <BlendTemplateGroupID>HTML (Windows Store)</BlendTemplateGroupID>
+    <SortOrder>40</SortOrder>
+    <CreateNewFolder>false</CreateNewFolder>
+    <BlendCreateNewFolder>true</BlendCreateNewFolder>
+    <DefaultName>App</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <NumberOfParentCategoriesToRollUp>2</NumberOfParentCategoriesToRollUp>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <TargetPlatformName>Windows</TargetPlatformName>
+    <RequiredPlatformVersion>6.3.0</RequiredPlatformVersion>
+    <PreviewImage>hubwj.png</PreviewImage>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="Application.jsproj" ReplaceParameters="true">
+      <ProjectItem TargetFileName="default.html" ReplaceParameters="true" BlendOpenInEditor="true">default.html</ProjectItem>
+      <ProjectItem TargetFileName="js\default.js" ReplaceParameters="true" OpenInEditor="true" BlendOpenInEditor="false">default.js</ProjectItem>
+      <ProjectItem TargetFileName="js\navigator.js" ReplaceParameters="true">navigator.js</ProjectItem>
+      <ProjectItem TargetFileName="js\data.js">data.js</ProjectItem>
+      <ProjectItem TargetFileName="css\default.css" ReplaceParameters="true">default.css</ProjectItem>
+      <ProjectItem TargetFileName="pages\hub\hub.css" ReplaceParameters="true">hubPage.css</ProjectItem>
+      <ProjectItem TargetFileName="pages\hub\hub.html" ReplaceParameters="true">hubPage.html</ProjectItem>
+      <ProjectItem TargetFileName="pages\hub\hub.js" ReplaceParameters="true">hubPage.js</ProjectItem>
+      <ProjectItem TargetFileName="pages\section\section.css" ReplaceParameters="true">sectionPage.css</ProjectItem>
+      <ProjectItem TargetFileName="pages\section\section.html" ReplaceParameters="true">sectionPage.html</ProjectItem>
+      <ProjectItem TargetFileName="pages\section\section.js" ReplaceParameters="true">sectionPage.js</ProjectItem>
+      <ProjectItem TargetFileName="pages\item\item.css" ReplaceParameters="true">itemPage.css</ProjectItem>
+      <ProjectItem TargetFileName="pages\item\item.html" ReplaceParameters="true">itemPage.html</ProjectItem>
+      <ProjectItem TargetFileName="pages\item\item.js" ReplaceParameters="true">itemPage.js</ProjectItem>
+      <ProjectItem TargetFileName="images\logo.scale-100.png">logo@scale-1x.png</ProjectItem>
+      <ProjectItem TargetFileName="images\smalllogo.scale-100.png">smalllogo@scale-1x.png</ProjectItem>
+      <ProjectItem TargetFileName="images\splashscreen.scale-100.png">splashscreen@scale-1x.png</ProjectItem>
+      <ProjectItem TargetFileName="images\storelogo.scale-100.png">storelogo@scale-1x.png</ProjectItem>
+      <ProjectItem TargetFileName="images\gray.png">gray.png</ProjectItem>
+      <ProjectItem TargetFileName="strings\$currentuiculturename$\resources.resjson">resources.resjson</ProjectItem>
+      <ProjectItem TargetFileName="package.appxmanifest" ReplaceParameters="true">package.appxmanifest</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="$projectname$_TemporaryKey.pfx" BlendDoNotCreate="true">Application_TemporaryKey.pfx</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.WinRT.TemplateWizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.WinRT.TemplateWizards.CreateProjectCertificate.Wizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

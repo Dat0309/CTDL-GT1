@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Define Equality Operators (= and &lt;&gt;)</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Defines the equality Operators (= and &lt;&gt;).</Description>
+      <Shortcut>OpEqual</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>ClassName</ID>
+          <Type />
+          <ToolTip>Replace with your class name.</ToolTip>
+          <Default>Example</Default>
+          <Function />
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="type decl"><![CDATA[Public Shared Operator <>(ByVal left As $ClassName$, ByVal right As $ClassName$) As Boolean
+
+
+    End Operator
+
+    Public Shared Operator =(ByVal left As $ClassName$,ByVal right As $ClassName$) As Boolean
+
+
+    End Operator]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

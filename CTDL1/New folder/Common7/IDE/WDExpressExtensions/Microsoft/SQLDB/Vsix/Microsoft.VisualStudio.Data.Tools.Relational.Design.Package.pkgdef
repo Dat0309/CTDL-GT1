@@ -1,0 +1,45 @@
+﻿
+[$RootKey$\Packages\{74bc53b2-d9b7-4579-abe5-43d11a7ecd03}]
+@="SQL Designer Package"
+"Assembly"="Microsoft.Data.Relational.Design.Package.DesignerPackage, Microsoft.VisualStudio.Data.Tools.Relational.Design.Package, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"InprocServer32"="$WinDir$\SYSTEM32\MSCOREE.DLL"
+"Class"="Microsoft.Data.Relational.Design.Package.DesignerPackage"
+"CodeBase"="$RootFolder$\Common7\IDE\Extensions\Microsoft\SQLDB\Designers\Microsoft.VisualStudio.Data.Tools.Relational.Design.Package.dll"
+"ID"=dword:00000065
+"CompanyName"="Microsoft Corporation"
+"ProductVersion"="12.0"
+"ProductName"="Microsoft SQL Server Data Tools - Table Designer Package"
+
+// DatabaseProjectNodeFactory
+[$RootKey$\AutoLoadPackages\{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}]
+"{74bc53b2-d9b7-4579-abe5-43d11a7ecd03}"=dword:00000000
+
+[$RootKey$\Editors\{d4f134c3-8182-4d72-b910-17d8da055303}]
+@="Microsoft.Data.Relational.Design.Package.Table.DesignerEditorFactory"
+"DisplayName"="#110"
+"Package"="{74bc53b2-d9b7-4579-abe5-43d11a7ecd03}"
+"EditorTrustLevel"=dword:00000000
+"CommonPhysicalViewAttributes"=dword:00000000
+
+[$RootKey$\Editors\{d4f134c3-8182-4d72-b910-17d8da055303}\LogicalViews]
+"{7651a702-06e5-11d1-8ebd-00a0c90f26ea}"=""
+
+[$RootKey$\Editors\{2366CF66-2394-4701-AFCA-37ED7FD41648}]
+@="Microsoft.Data.Relational.Design.Package.TabbedEditor.TabbedViewEditorFactory"
+"DisplayName"="#110"
+"Package"="{74bc53b2-d9b7-4579-abe5-43d11a7ecd03}"
+"EditorTrustLevel"=dword:00000000
+"CommonPhysicalViewAttributes"=dword:00000002
+
+[$RootKey$\Editors\{2366CF66-2394-4701-AFCA-37ED7FD41648}\LogicalViews]
+"{7651a700-06e5-11d1-8ebd-00a0c90f26ea}"=""
+"{7651a701-06e5-11d1-8ebd-00a0c90f26ea}"=""
+"{7651a702-06e5-11d1-8ebd-00a0c90f26ea}"=""
+"{7651a703-06e5-11d1-8ebd-00a0c90f26ea}"=""
+
+[$RootKey$\Menus]
+"{74bc53b2-d9b7-4579-abe5-43d11a7ecd03}"=", Menus.ctmenu, 1"
+
+[$RootKey$\BindingPaths\{74bc53b2-d9b7-4579-abe5-43d11a7ecd03}]
+"$RootFolder$Common7\IDE\Extensions\Microsoft\SQLDB\Designers"=""
+"$RootFolder$Common7\IDE\Extensions\Microsoft\SQLEditor"=""

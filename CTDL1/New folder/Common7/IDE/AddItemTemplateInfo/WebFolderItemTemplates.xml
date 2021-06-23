@@ -1,0 +1,314 @@
+﻿<folderTemplates>
+  <!--C# WAP-->
+  <project guid="{349c5853-65df-11da-9384-00065b846f21}">
+    <folder>
+      <template id="Microsoft.WAP.CSharp.HTMLPage"/>
+      <template id="Microsoft.WAP.CSharp.WebJScript"/>
+      <template id="Microsoft.WAP.CSharp.WebStyleSheet"/>
+      <template id="Microsoft.WAP.CSharp.WebForm"/>
+      <template id="MvcViewPageItemTemplate.cshtml.vstemplate.v5" />
+      <template id="WebApiControllerItemTemplate.WAP.12.cs.vstemplate.v5" />
+    </folder>
+    <folder name="App_Browsers">
+      <template id="Microsoft.WAP.CSharp.BrowserFile"/>
+    </folder>
+    <folder name="App_Data">
+      <template id="Microsoft.CSharp.XmlFile"/>
+    </folder>
+    <folder name="App_GlobalResources">
+      <template id="Microsoft.CSharp.Resource"/>
+    </folder>
+    <folder name="App_LocalResources" mustBeAtRoot="false">
+      <template id="Microsoft.CSharp.Resource"/>
+    </folder>
+    <folder name="App_Themes">
+      <template id="Microsoft.WAP.CSharp.WebStyleSheet"/>
+      <template id="Microsoft.WAP.CSharp.StyleSheetLESS"/>
+      <template id="Microsoft.WAP.CSharp.SkinFile"/>
+    </folder>
+    <!--The following to are empty to prevent the default set from applying to this folder-->
+    <folder name="App_Code">
+    </folder>
+    <folder name="App_WebReferences">
+    </folder>
+    <folder name="Content">
+      <template id="Microsoft.WAP.CSharp.WebJScript"/>
+      <template id="Microsoft.WAP.CSharp.CoffeeScript"/>
+      <template id="Microsoft.WAP.CSharp.WebStyleSheet"/>
+      <template id="Microsoft.WAP.CSharp.StyleSheetLESS"/>
+    </folder>
+    <folder name="JavaScript">
+      <template id="Microsoft.WAP.CSharp.WebJScript"/>
+      <template id="Microsoft.WAP.CSharp.CoffeeScript"/>
+    </folder>
+    <folder name="JS">
+      <template id="Microsoft.WAP.CSharp.WebJScript"/>
+      <template id="Microsoft.WAP.CSharp.CoffeeScript"/>
+    </folder>
+    <folder name="Scripts">
+      <template id="Microsoft.WAP.CSharp.WebJScript"/>
+      <template id="Microsoft.WAP.CSharp.CoffeeScript"/>
+    </folder>
+    <folder name="Style">
+      <template id="Microsoft.WAP.CSharp.WebStyleSheet"/>
+      <template id="Microsoft.WAP.CSharp.StyleSheetLESS"/>
+    </folder>
+    <folder name="Styles">
+      <template id="Microsoft.WAP.CSharp.WebStyleSheet"/>
+      <template id="Microsoft.WAP.CSharp.StyleSheetLESS"/>
+    </folder>
+    <folder name="StyleSheet">
+      <template id="Microsoft.WAP.CSharp.WebStyleSheet"/>
+      <template id="Microsoft.WAP.CSharp.StyleSheetLESS"/>
+    </folder>
+    <folder name="StyleSheets">
+      <template id="Microsoft.WAP.CSharp.WebStyleSheet"/>
+      <template id="Microsoft.WAP.CSharp.StyleSheetLESS"/>
+    </folder>
+    <folder name="CSS">
+      <template id="Microsoft.WAP.CSharp.WebStyleSheet"/>
+      <template id="Microsoft.WAP.CSharp.StyleSheetLESS"/>
+    </folder>
+    <folder name="Views">
+      <template id="MvcViewPageItemTemplate.cshtml.vstemplate.v5" />
+      <template id="MvcViewPageWithLayoutItemTemplate.cshtml.vstemplate.v5" />
+      <template id="MvcLayoutPageItemTemplate.cshtml.vstemplate.v5" />
+      <template id="MvcPartialPageItemTemplate.cshtml.vstemplate.v5" />
+    </folder>
+    <folder name="Controllers">
+      <template id="WebApiControllerItemTemplate.WAP.12.cs.vstemplate.v5" />
+    </folder>
+    <folder name="Models">
+    </folder>
+  </project>
+
+  <!--VB WAP-->
+  <project guid="{349c5854-65df-11da-9384-00065b846f21}">
+    <folder>
+      <template id="Microsoft.WAP.VisualBasic.HTMLPage"/>
+      <template id="Microsoft.WAP.VisualBasic.WebJScript"/>
+      <template id="Microsoft.WAP.VisualBasic.WebStyleSheet"/>
+      <template id="Microsoft.WAP.VisualBasic.WebForm"/>
+      <template id="MvcViewPageItemTemplate.vbhtml.vstemplate.v5" />
+      <template id="WebApiControllerItemTemplate.WAP.12.vb.vstemplate.v5" />
+    </folder>
+    <folder name="App_Browsers">
+      <template id="Microsoft.WAP.VisualBasic.BrowserFile"/>
+    </folder>
+    <folder name="App_Data">
+      <template id="Microsoft.VisualBasic.Data.XmlFile"/>
+    </folder>
+    <folder name="App_GlobalResources">
+      <template id="Microsoft.VisualBasic.General.Resource"/>
+    </folder>
+    <folder name="App_LocalResources" mustBeAtRoot="false">
+      <template id="Microsoft.VisualBasic.General.Resource"/>
+    </folder>
+    <folder name="App_Themes">
+      <template id="Microsoft.WAP.VisualBasic.WebStyleSheet"/>
+      <template id="Microsoft.WAP.VisualBasic.StyleSheetLESS"/>
+      <template id="Microsoft.WAP.VisualBasic.SkinFile"/>
+    </folder>
+    <!--The following to are empty to prevent the default set from applying to this folder-->
+    <folder name="App_Code">
+    </folder>
+    <folder name="App_WebReferences">
+    </folder>
+    <folder name="Content">
+      <template id="Microsoft.WAP.VisualBasic.WebJScript"/>
+      <template id="Microsoft.WAP.VisualBasic.CoffeeScript"/>
+      <template id="Microsoft.WAP.VisualBasic.WebStyleSheet"/>
+      <template id="Microsoft.WAP.VisualBasic.StyleSheetLESS"/>
+    </folder>
+    <folder name="JavaScript">
+      <template id="Microsoft.WAP.VisualBasic.WebJScript"/>
+      <template id="Microsoft.WAP.VisualBasic.CoffeeScript"/>
+    </folder>
+    <folder name="JS">
+      <template id="Microsoft.WAP.VisualBasic.WebJScript"/>
+      <template id="Microsoft.WAP.VisualBasic.CoffeeScript"/>
+    </folder>
+    <folder name="Scripts">
+      <template id="Microsoft.WAP.VisualBasic.WebJScript"/>
+      <template id="Microsoft.WAP.VisualBasic.CoffeeScript"/>
+    </folder>
+    <folder name="Style">
+      <template id="Microsoft.WAP.VisualBasic.WebStyleSheet"/>
+      <template id="Microsoft.WAP.VisualBasic.StyleSheetLESS"/>
+    </folder>
+    <folder name="Styles">
+      <template id="Microsoft.WAP.VisualBasic.WebStyleSheet"/>
+      <template id="Microsoft.WAP.VisualBasic.StyleSheetLESS"/>
+    </folder>
+    <folder name="StyleSheet">
+      <template id="Microsoft.WAP.VisualBasic.WebStyleSheet"/>
+      <template id="Microsoft.WAP.VisualBasic.StyleSheetLESS"/>
+    </folder>
+    <folder name="StyleSheets">
+      <template id="Microsoft.WAP.VisualBasic.WebStyleSheet"/>
+      <template id="Microsoft.WAP.VisualBasic.StyleSheetLESS"/>
+    </folder>
+    <folder name="CSS">
+      <template id="Microsoft.WAP.VisualBasic.WebStyleSheet"/>
+      <template id="Microsoft.WAP.VisualBasic.StyleSheetLESS"/>
+    </folder>
+    <folder name="Views">
+      <template id="MvcViewPageItemTemplate.vbhtml.vstemplate.v5" />
+      <template id="MvcViewPageWithLayoutItemTemplate.vbhtml.vstemplate.v5" />
+      <template id="MvcLayoutPageItemTemplate.vbhtml.vstemplate.v5" />
+      <template id="MvcPartialPageItemTemplate.vbhtml.vstemplate.v5" />
+    </folder>
+    <folder name="Controllers">
+      <template id="WebApiControllerItemTemplate.WAP.12.vb.vstemplate.v5" />
+    </folder>
+    <folder name="Models">
+    </folder>
+  </project>
+
+  <!--C# Website-->
+  <project guid="{e24c65dc-7377-472b-9aba-bc803b73c61a}" language="Visual C#">
+    <folder>
+      <template id="Microsoft.Web.CSharp.WebForm"/>
+      <template id="Microsoft.Web.CSharp.WebUserControl"/>
+      <template id="Microsoft.Web.CSharp.JScript"/>
+      <template id="Microsoft.Web.CSharp.StyleSheet"  />
+    </folder>
+    <folder name="App_Browsers">
+      <template id="Microsoft.Web.CSharp.BrowserFile"/>
+    </folder>
+    <folder name="App_Code">
+      <template id="Microsoft.Web.CSharp.Class"/>
+    </folder>
+    <folder name="App_Data">
+      <template id="Microsoft.Web.CSharp.XMLFile"/>
+    </folder>
+    <folder name="App_GlobalResources">
+      <template id="Microsoft.Web.CSharp.Resource"/>
+    </folder>
+    <folder name="App_LocalResources" mustBeAtRoot="false">
+      <template id="Microsoft.Web.CSharp.Resource"/>
+    </folder>
+    <folder name="App_Themes">
+      <template id="Microsoft.Web.CSharp.StyleSheet"/>
+      <template id="Microsoft.Web.CSharp.StyleSheetLESS"/>
+      <template id="Microsoft.Web.CSharp.SkinFile"/>
+    </folder>
+    <!--This is empty to prevent the default set from applying to this folder-->
+    <folder name="App_WebReferences">
+    </folder>
+    <folder name="Content">
+      <template id="Microsoft.Web.CSharp.JScript"/>
+      <template id="Microsoft.Web.CSharp.CoffeeScript"/>
+      <template id="Microsoft.Web.CSharp.StyleSheet"  />
+      <template id="Microsoft.Web.CSharp.StyleSheetLESS"/>
+    </folder>
+    <folder name="JavaScript">
+      <template id="Microsoft.Web.CSharp.JScript"/>
+      <template id="Microsoft.Web.CSharp.CoffeeScript"/>
+    </folder>
+    <folder name="JS">
+      <template id="Microsoft.Web.CSharp.JScript"/>
+      <template id="Microsoft.Web.CSharp.CoffeeScript"/>
+    </folder>
+    <folder name="Scripts">
+      <template id="Microsoft.Web.CSharp.JScript"/>
+      <template id="Microsoft.Web.CSharp.CoffeeScript"/>
+    </folder>
+    <folder name="Style">
+      <template id="Microsoft.Web.CSharp.StyleSheet"  />
+      <template id="Microsoft.Web.CSharp.StyleSheetLESS"/>
+    </folder>
+    <folder name="Styles">
+      <template id="Microsoft.Web.CSharp.StyleSheet"  />
+      <template id="Microsoft.Web.CSharp.StyleSheetLESS"/>
+    </folder>
+    <folder name="StyleSheet">
+      <template id="Microsoft.Web.CSharp.StyleSheet"  />
+      <template id="Microsoft.Web.CSharp.StyleSheetLESS"/>
+    </folder>
+    <folder name="StyleSheets">
+      <template id="Microsoft.Web.CSharp.StyleSheet"  />
+      <template id="Microsoft.Web.CSharp.StyleSheetLESS"/>
+    </folder>
+    <folder name="CSS">
+      <template id="Microsoft.Web.CSharp.StyleSheet"  />
+      <template id="Microsoft.Web.CSharp.StyleSheetLESS"/>
+    </folder>
+    <folder name="Bin">
+    </folder>
+  </project>
+
+  <!--VB Website-->
+  <project guid="{e24c65dc-7377-472b-9aba-bc803b73c61a}" language="Visual Basic">
+    <folder>
+      <template id="Microsoft.Web.VisualBasic.WebForm"/>
+      <template id="Microsoft.Web.VisualBasic.WebUserControl"/>
+      <template id="Microsoft.Web.VisualBasic.JScript"/>
+      <template id="Microsoft.Web.VisualBasic.StyleSheet"  />
+    </folder>
+    <folder name="App_Browsers">
+      <template id="Microsoft.Web.VisualBasic.BrowserFile"/>
+    </folder>
+    <folder name="App_Code">
+      <template id="Microsoft.Web.VisualBasic.Class"/>
+    </folder>
+    <folder name="App_Data">
+      <template id="Microsoft.Web.VisualBasic.XMLFile"/>
+    </folder>
+    <folder name="App_GlobalResources">
+      <template id="Microsoft.Web.VisualBasic.Resource"/>
+    </folder>
+    <folder name="App_LocalResources" mustBeAtRoot="false">
+      <template id="Microsoft.Web.VisualBasic.Resource"/>
+    </folder>
+    <folder name="App_Themes">
+      <template id="Microsoft.Web.VisualBasic.StyleSheet"/>
+      <template id="Microsoft.Web.VisualBasic.StyleSheetLESS"/>
+      <template id="Microsoft.Web.VisualBasic.SkinFile"/>
+    </folder>
+    <!--This is empty to prevent the default set from applying to this folder-->
+    <folder name="App_WebReferences">
+    </folder>
+    <folder name="Content">
+      <template id="Microsoft.Web.VisualBasic.JScript"/>
+      <template id="Microsoft.Web.VisualBasic.CoffeeScript"/>
+      <template id="Microsoft.Web.VisualBasic.StyleSheet"  />
+      <template id="Microsoft.Web.VisualBasic.StyleSheetLESS"/>
+    </folder>
+    <folder name="JavaScript">
+      <template id="Microsoft.Web.VisualBasic.JScript"/>
+      <template id="Microsoft.Web.VisualBasic.CoffeeScript"/>
+    </folder>
+    <folder name="JS">
+      <template id="Microsoft.Web.VisualBasic.JScript"/>
+      <template id="Microsoft.Web.VisualBasic.CoffeeScript"/>
+    </folder>
+    <folder name="Scripts">
+      <template id="Microsoft.Web.VisualBasic.JScript"/>
+      <template id="Microsoft.Web.VisualBasic.CoffeeScript"/>
+    </folder>
+    <folder name="Style">
+      <template id="Microsoft.Web.VisualBasic.StyleSheet"  />
+      <template id="Microsoft.Web.VisualBasic.StyleSheetLESS"/>
+    </folder>
+    <folder name="Styles">
+      <template id="Microsoft.Web.VisualBasic.StyleSheet"  />
+      <template id="Microsoft.Web.VisualBasic.StyleSheetLESS"/>
+    </folder>
+    <folder name="StyleSheet">
+      <template id="Microsoft.Web.VisualBasic.StyleSheet"  />
+      <template id="Microsoft.Web.VisualBasic.StyleSheetLESS"/>
+    </folder>
+    <folder name="StyleSheets">
+      <template id="Microsoft.Web.VisualBasic.StyleSheet"  />
+      <template id="Microsoft.Web.VisualBasic.StyleSheetLESS"/>
+    </folder>
+    <folder name="CSS">
+      <template id="Microsoft.Web.VisualBasic.StyleSheet"  />
+      <template id="Microsoft.Web.VisualBasic.StyleSheetLESS"/>
+    </folder>
+    <folder name="Bin">
+    </folder>
+  </project>
+
+</folderTemplates>

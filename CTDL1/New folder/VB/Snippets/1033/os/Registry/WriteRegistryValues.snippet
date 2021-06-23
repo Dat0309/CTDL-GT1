@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Write a Registry Value</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Writes a string registry value to the current user hive. </Description>
+      <Shortcut>regWrite</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>Setting</ID>
+          <ToolTip>Replace with the new value data.</ToolTip>
+          <Default>"value"</Default>
+        </Literal>
+        <Literal>
+          <ID>Key</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the registry key name you want to write to.</ToolTip>
+          <Default>"Name"</Default>
+        </Literal>
+        <Literal>
+          <ID>Path</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the path to the key.</ToolTip>
+          <Default>"HKEY_CURRENT_USER\Software\CompanyName\ProductName\KeyName"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[My.Computer.Registry.SetValue($Path$, $Key$, $Setting$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

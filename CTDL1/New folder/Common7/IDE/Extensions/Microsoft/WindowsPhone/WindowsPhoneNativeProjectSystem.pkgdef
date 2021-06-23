@@ -1,0 +1,8 @@
+[$RootKey$\Packages\{33c9fe2e-1943-4edb-b1b1-a7f2411d7aef}]
+@="Windows Phone Native Project System Package"
+"InprocServer32"="%SystemRoot%\\system32\\mscoree.dll"
+"Class"="Microsoft.VisualStudio.SmartDevice.NativeProjectSystem.WindowsPhoneNativeProjectSystemPackage"
+"CodeBase"="$RootFolder$Common7\IDE\PrivateAssemblies\Microsoft.VisualStudio.SmartDevice.NativeProjectSystem.dll"
+
+[$RootKey$\AutoLoadPackages\{de9f6b31-c1e5-b965-95f3-1885af956fc9}]
+"{33c9fe2e-1943-4edb-b1b1-a7f2411d7aef}"=dword:00000000

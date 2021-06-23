@@ -1,0 +1,24 @@
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <Name Package="{CB22EE0E-4072-4ae7-96E2-90FCCF879544}" ID="1019"/>
+        <Description Package="{CB22EE0E-4072-4ae7-96E2-90FCCF879544}" ID="1020"/>
+        <Icon Package="{CB22EE0E-4072-4ae7-96E2-90FCCF879544}" ID="9017"/>
+        <TemplateID>Microsoft.Silverlight.VisualBasic.ChildWindow</TemplateID>
+        <TemplateGroupID>Silverlight</TemplateGroupID>
+        <ProjectType>VisualBasic</ProjectType>
+        <ShowByDefault>false</ShowByDefault>
+        <SortOrder>13</SortOrder>
+        <RequiredFrameworkVersion>3.0</RequiredFrameworkVersion>
+        <DefaultName>ChildWindow.xaml</DefaultName>
+        <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>System.Windows.Controls</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem OpenInEditor="true" SubType="Designer" TargetFileName="$fileinputname$.xaml" ReplaceParameters="true">ChildWindow.xaml</ProjectItem>
+    <ProjectItem OpenInEditor="false" SubType="Code" TargetFileName="$fileinputname$.xaml.vb" ReplaceParameters="true">ChildWindow.xaml.vb</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

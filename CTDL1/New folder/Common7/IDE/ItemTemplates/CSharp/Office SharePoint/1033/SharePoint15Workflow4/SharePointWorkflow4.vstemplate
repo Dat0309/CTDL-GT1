@@ -1,0 +1,71 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="318" />
+    <Description Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="329" />
+    <Icon Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="202" />
+    <TemplateID>SharePoint15Workflow4_CS_ITEM</TemplateID>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>70</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>Workflow</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <CreateInPlace>true</CreateInPlace>
+    <TemplateGroupID>SharePointItemTemplateGroupID</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Core</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Data</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Activities</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Runtime.Serialization</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.ServiceModel.Activities</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Xaml</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Xml</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Xml.Linq</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>Microsoft.Activities</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>Microsoft.SharePoint.DesignTime.Activities, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>PresentationFramework</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ProjectItemName$\SharePointProjectItem.spdata" OpenInEditor="false">SharePointWorkflow4.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ProjectItemName$\Workflow.xaml" OpenInEditor="true">Workflow.xaml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$ProjectItemName$\Elements.xml" OpenInEditor="false">Elements.xml</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="SharePointProjectTemplateAttributes" Value="ProjectItem"/>
+      <CustomParameter Name="SharePointProjectParentFilter" Value="General;ProjectItem"/>
+      <CustomParameter Name="SharePointProjectProjectModeFilter" Value="Customization"/>
+      <CustomParameter Name="$loc_RememberToUpdateUrlComment$" _locID="$loc_RememberToUpdateUrlComment$" _locAttrData="Value" Value="If you change the name or Url of your custom initiation or association form, &#xD;&#xA;           remember to update the corresponding property value (InitiationUrl or AssociationUrl) to match the new web relative url." />
+      <CustomParameter Name="$loc_WSDescription$" _locID="$loc_WSDescription$" _locAttrData="Value" Value="My '$WorkflowTemplateName$' Workflow" />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.Workflow4Wizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

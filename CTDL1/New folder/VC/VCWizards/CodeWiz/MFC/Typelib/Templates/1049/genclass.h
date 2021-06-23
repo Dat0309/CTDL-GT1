@@ -1,0 +1,1 @@
+[!output CLASS_TEXT]

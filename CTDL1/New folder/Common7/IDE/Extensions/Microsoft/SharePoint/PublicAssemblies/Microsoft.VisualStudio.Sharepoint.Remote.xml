@@ -1,0 +1,344 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.VisualStudio.SharePoint.Remote</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.VisualStudio.SharePoint.Remote.Authentication.CertificateVerificationDialogWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.SharePoint.Remote.Authentication.CredentialManager">
+            <summary>
+            Manages the user credentials used by Visual Studio for communicating with SharePoint.
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.SharePoint.Remote.Authentication.CredentialManager.InvalidCredentials">
+            <remarks>
+            If HttpWebRequest.Credentials is not set, the default credentials will be used for authentication.
+            In order to avoid the default behavior, we pass this invalid credentials so that the
+            Windows Security Dialog will pop up to get user's input.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.SharePoint.Remote.Authentication.CredentialManager.GetCredentials(System.Uri,System.Boolean)">
+            <summary>
+            Retrieves the user credential with the given site url.
+            </summary>
+            <param name="siteUrl">The url to the SharePoint site</param>
+            <param name="disallowDefaultCredentials">
+            Indicates if <see cref="P:System.Net.CredentialCache.DefaultCredentials"/> is allowed to return if user has not provided the credential
+            for the given site url during the session.
+            </param>
+            <returns>The user credentials</returns>
+        </member>
+        <member name="P:Microsoft.VisualStudio.SharePoint.Remote.Authentication.CredentialManager.Instance">
+            <summary>
+            Singleton of CredentialManager
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.SharePoint.Remote.Authentication.CredentialsProviderHelper.FailedUserName(System.Uri,System.Net.ICredentials)">
+            <summary>
+            Given a URI and credentials which failed to authenticate, returns
+            the username which failed to authenticate, in DOMAIN\user form.
+            </summary>
+            <param name="uri">Uri to which the credentials failed to authenticate</param>
+            <param name="failedCredentials">Credentials which failed to authenticate</param>
+            <returns>DOMAIN\user which failed to authenticate, or string.Empty</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.SharePoint.Remote.Authentication.CredentialsProviderHelper.GetNetworkCredential(System.String,System.Text.StringBuilder)">
+            <summary>
+            Returns a NetworkCredential instance created from a username and password.
+            </summary>
+            <param name="username">Username, possibly in the form DOMAIN\user</param>
+            <param name="password">Password</param>
+            <returns>NetworkCredential instance</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.SharePoint.Remote.Authentication.CredentialsProviderHelper.GetPrimerCredentialsBlob(System.String)">
+            <summary>
+            Builds the credentials blob used to prime the credentials prompt.
+            The input may be in either "DOMAIN\user" form or just "user".
+            This method may return null, in which case no blob should be passed to
+            CredUIPromptForWindowsCredentials.
+            </summary>
+            <param name="userName">Username used to prepopulate the username field.</param>
+            <returns>Blob to pass to CredUIPromptForWindowsCredentials</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.SharePoint.Remote.Authentication.CredentialsProviderHelper.ZeroStringBuilder(System.Text.StringBuilder)">
+            <summary>
+            Zeroes out a StringBuilder
+            </summary>
+            <param name="toZero">StringBuilder to zero out</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.SharePoint.Remote.Authentication.CredentialsProviderHelper.ZeroString(System.String)">
+            <summary>
+            Zeroes out a string
+            </summary>
+            <param name="toZero">string to zero</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.SharePoint.Remote.Authentication.IUICredentialsProvider.GetCredentials(System.Uri,System.Net.ICredentials,System.String,System.String,System.IntPtr)">
+            <summary>
+            IUICredentialsProvider
+            
+            Note that the HttpWebRequest.Credentials property requires that the object be either a
+            NetworkCredential or CredentialCache.
+            </summary>
+            <param name="uri">The Uri of the server.</param>
+            <param name="failedCredentials">The crendentials that failed to authenticate (may be
+              null, default credentials which return empty string for user name, a CredentialCache
+              object, or a NetworkCredential object).  Functions like CredUIPromptForCredentials()
+              can use the failed credentials to populate the user name box in the dialog.</param>
+            <param name="caption">Alternate dialog caption</param>
+            <param name="messageText">Alternate dialog message text</param>         
+            <param name="parentWindowHandle">The parent window handle, if set the dialog will show up modal and cetered to the parent window, modeless if not set</param>         
+            <returns>The credential to use when authenticating with the server.</returns>
+        </member>
+        <member name="F:Microsoft.VisualStudio.SharePoint.Remote.Authentication.NativeMethods.INTERNET_COOKIE_HTTPONLY">
+            <summary>
+            Enables the retrieval of cookies that are marked as "HTTPOnly". 
+            Do not use this flag if you expose a scriptable interface, 
+            because this has security implications. It is imperative that 
+            you use this flag only if you can guarantee that you will never 
+            expose the cookie to third-party code by way of an 
+            extensibility mechanism you provide. 
+            Version:  Requires Internet Explorer 8.0 or later.
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.SharePoint.Remote.Authentication.NativeMethods.INTERNET_OPTION_END_BROWSER_SESSION">
+            <summary>
+            Flushes entries not in use from the password cache on the hard disk drive. 
+            Also resets the cache time used when the synchronization mode is once-per-session. 
+            No buffer is required for this option. This is used by InternetSetOption.
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.SharePoint.Remote.Authentication.NativeMethods.INTERNET_OPTION_SUPPRESS_BEHAVIOR">
+            <summary>
+            A general purpose option that is used to suppress behaviors on a process-wide basis.
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.SharePoint.Remote.Authentication.NativeMethods.INTERNET_SUPPRESS_COOKIE_PERSIST">
+            <summary>
+            Suppresses the persistence of cookies, even if the server has specified them as persistent.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.SharePoint.Remote.Authentication.CookieHeaderManager">
+            <summary>
+            Manages the authentication cookie headers used by Visual Studio for communicating with SharePoint.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.SharePoint.Remote.Authentication.CookieHeaderManager.GetCookieHeader(System.Uri)">
+            <summary>
+            Retrieves the authentication cookie header with the given site url.
+            </summary>
+            <param name="siteUrl">The url to the SharePoint site</param>
+            <returns>The cookie header. Null if it is not found.</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.SharePoint.Remote.Authentication.CookieHeaderManager.PromptForCookieHeader(System.Uri,System.Uri,System.Uri,System.String)">
+            <summary>
+            Prompt a login page for user to input user name and password.
+            </summary>
+            <param name="siteUrl">The site that needs login info</param>
+            <param name="loginUrl">The login page url</param>
+            <param name="returnUrl">The return page url</param>
+            <param name="failedCookieHeader">The cookie header used last time which is not valid.</param>
+            <returns>The cookie string</returns>
+            <remarks>
+            If the returned cookie header is empty, it means the login succeeds, but the cookie is not retrieved for some reason. For example, the browser is blocking all cookies.
+            If the returned cookie header is null, it means user cancels the login dialog.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.VisualStudio.SharePoint.Remote.Authentication.CookieHeaderManager.Instance">
+            <summary>
+            Singleton of CookieHeaderManager
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.SharePoint.Remote.Authentication.WinInetWrapper">
+            <summary>
+            wininet.dll wrapper
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.SharePoint.Remote.Authentication.WinInetWrapper.InternetGetCookieEx(System.Uri)">
+            <summary>
+            Get the cookie of the given site, null if not existing.
+            </summary>
+            <param name="url">The url of the given site</param>
+            <returns>The cookie data, null if not available</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.SharePoint.Remote.Authentication.WinInetWrapper.ResetBrowserSession">
+            <summary>
+            Reset the current browser session within the process in order to clear cookies, caches, etc.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.SharePoint.Remote.Authentication.WinInetWrapper.SuppressCookiePersist">
+            <summary>
+            Suppresses the persistence of cookies, even if the server has specified them as persistent.
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.SharePoint.Remote.Authentication.FormsBasedAuthenticationDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.SharePoint.Remote.Authentication.FormsBasedAuthenticationDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.SharePoint.Remote.Authentication.FormsBasedAuthenticationDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.SharePoint.Remote.Commands.SharePointRemoteCommand">
+            <summary>
+            SharePointRemoteCommand is used to attribute a method as a remote command.
+            
+            Any static/instance methods will be considered as a remote command and loaded through MEF as long as the method:
+            1. Has the attribute: [Export(typeof(SharePointRemoteCommand))]
+            2. Has the metadata:  [ExportMetadata("CommandId", "MyCommandId")]
+            3. Takes 1 or 2 parameters and the 1st parameter is of ISharePointRemoteCommandContext
+            
+            Example:
+            
+            internal class RemoteCommands
+            {
+                [Export(typeof(SharePointRemoteCommand))]
+                [ExportMetadata("CommandId", "AddSolution")]
+                internal void AddSolution(ISharePointRemoteCommandContext context, AddSolutionCommandArgument arg)
+                {
+                }
+            
+                [Export(typeof(SharePointRemoteCommand))]
+                [ExportMetadata("CommandId", "RetrieveServerInfoCommand")]
+                internal static RetrieveServerInfoCommandResult RetrieveServerInfo(ISharePointRemoteCommandContext context)
+                {
+                }
+            }
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.SharePoint.Remote.Commands.ISharePointRemoteCommandContext">
+            <summary>
+            Context in which SharePoint command executes.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.SharePoint.Remote.Commands.ISharePointRemoteCommandContext.ClientContext">
+            <summary>
+            SharePoint client context.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.SharePoint.Remote.Commands.ISharePointRemoteCommandContext.Logger">
+            <summary>
+            SharePoint project logger.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.SharePoint.Remote.Commands.SharePointRemoteCommandManager">
+            <summary>
+            SharePointRemoteCommandManager manages all the remote commands loaded through MEF.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.SharePoint.BlockReentrancyService">
+            <summary>
+            The service that can detect reentrancy and help to prevent the code from entering reentrancy.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.SharePoint.BlockReentrancyService.#ctor">
+            <summary>
+            Private constructor.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.SharePoint.BlockReentrancyService.BlockReentrancy">
+            <summary>
+            Returns an IDisposable object that is used in the using block, within which the code should be kept away from reentrancy.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.SharePoint.BlockReentrancyService.Instance">
+            <summary>
+            The singleton instance of BlockReentrancyService.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.SharePoint.BlockReentrancyService.IsReentrancyBlocked">
+            <summary>
+            Returns true if reentrancy is being blocked on the UI thread.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.SharePoint.Remote.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.SharePoint.Remote.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.SharePoint.Remote.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.SharePoint.Remote.Resources.CommandIdNotMatch">
+            <summary>
+              Looks up a localized string similar to The specified command ID &apos;{0}&apos; does not match any available SharePoint remote commands..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.SharePoint.Remote.Resources.CommandSignatureNotMatch">
+            <summary>
+              Looks up a localized string similar to The parameter type of the SharePoint remote command does not match the T type, or the return value type of the SharePoint remote command does not match the TResult type..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.SharePoint.Remote.Resources.ConnectToSharePoint">
+            <summary>
+              Looks up a localized string similar to Connect to SharePoint.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.SharePoint.Remote.Resources.ConnectToSite">
+            <summary>
+              Looks up a localized string similar to Connecting to {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.SharePoint.Remote.Resources.CookiesBlocked">
+            <summary>
+              Looks up a localized string similar to Your browser is currently set to block cookies. It must allow cookies before you can publish to remote site..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.SharePoint.Remote.Resources.ImportCommandsError">
+            <summary>
+              Looks up a localized string similar to Unexpected error occurred during SharePoint remote commands being imported..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.SharePoint.Remote.Resources.InvalidCommandsError">
+            <summary>
+              Looks up a localized string similar to The method associated with the command ID &apos;{0}&apos; violates the signature contract of SharePoint Remote Commands..
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.SharePoint.Remote.RequestExecutor.ApplyAuthenticationInfo(System.Net.HttpWebRequest)">
+            <summary>
+            Apply the authentication info related to the request uri to the given HttpWebRequest.
+            </summary>        
+        </member>
+        <member name="M:Microsoft.VisualStudio.SharePoint.Remote.RequestExecutor.ProvideAuthenticationInfoIfRequired(System.Net.WebException)">
+            <summary>
+            Provide necessary authentication info if required.
+            </summary>
+            <param name="ex">The web exception which may contain the http web response from server.</param>
+            <returns>
+            True if authentication info of either forms-based or integrated-windows is provided/updated by user.
+            False if user cancels login, or the exception is even not about authentication.
+            </returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.SharePoint.Remote.RequestExecutor.GetFirstHeaderValue(System.Net.WebHeaderCollection,System.String)">
+            <summary>
+            Returns the first non-empty value of the given header if the header exists in the WebHeaderCollection,
+            otherwise returns null.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.SharePoint.Remote.ShellUtilities.GetVsMainWindowHandle">
+            <remarks>
+            Note that the method call should be called on the UI thread.
+            </remarks>
+        </member>
+    </members>
+</doc>

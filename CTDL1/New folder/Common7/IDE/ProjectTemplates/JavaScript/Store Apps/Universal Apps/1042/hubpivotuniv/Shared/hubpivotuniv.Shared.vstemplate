@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>허브/피벗 공유 서브 템플릿</Name>
+    <Description>허브/피벗 공유 자산 프로젝트용 공유 서브 템플릿입니다.</Description>
+    <ProjectType>JavaScript</ProjectType>
+    <CreateInPlace>true</CreateInPlace>
+    <CreateNewFolder>true</CreateNewFolder>
+    <BlendCreateNewFolder>true</BlendCreateNewFolder>
+    <DefaultName>App</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <TargetPlatformName>WindowsPhoneApp</TargetPlatformName>
+    <RequiredPlatformVersion>6.3.1</RequiredPlatformVersion>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="Application.Shared.shproj" ReplaceParameters="true">
+      <ProjectItem TargetFileName="$ext_safeprojectname$.Shared.projitems" ReplaceParameters="true">Shared.projitems</ProjectItem>
+      <ProjectItem TargetFileName="js\default.js" ReplaceParameters="true">default.js</ProjectItem>
+      <ProjectItem TargetFileName="js\data.js">data.js</ProjectItem>
+      <ProjectItem TargetFileName="js\navigator.js">navigator.js</ProjectItem>
+      <ProjectItem TargetFileName="pages\hub\hub.js">hub.js</ProjectItem>
+      <ProjectItem TargetFileName="pages\hub\section1Page.html">section1Page.html</ProjectItem>
+      <ProjectItem TargetFileName="pages\hub\section1Page.js">section1Page.js</ProjectItem>
+      <ProjectItem TargetFileName="pages\hub\section2Page.html">section2Page.html</ProjectItem>
+      <ProjectItem TargetFileName="pages\hub\section2Page.js">section2Page.js</ProjectItem>
+      <ProjectItem TargetFileName="pages\hub\section3Page.js">section3Page.js</ProjectItem>
+      <ProjectItem TargetFileName="pages\hub\section4Page.html">section4Page.html</ProjectItem>
+      <ProjectItem TargetFileName="pages\hub\section4Page.js">section4Page.js</ProjectItem>
+      <ProjectItem TargetFileName="pages\item\item.css">item.css</ProjectItem>
+      <ProjectItem TargetFileName="pages\item\item.html">item.html</ProjectItem>
+      <ProjectItem TargetFileName="pages\item\item.js">item.js</ProjectItem>
+      <ProjectItem TargetFileName="images\gray.png">gray.png</ProjectItem>
+      <ProjectItem TargetFileName="strings\$currentuiculturename$\resources.resjson" ReplaceParameters="true">resources.resjson</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

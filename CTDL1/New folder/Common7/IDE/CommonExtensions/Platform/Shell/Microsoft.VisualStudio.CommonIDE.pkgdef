@@ -1,0 +1,165 @@
+[$RootKey$\CLSID\{6E87CFAD-6C05-4adf-9CD7-3B7943875B7C}]
+@="Visual Studio Common IDE Package"
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"Class"="Microsoft.VisualStudio.CommonIDE.CommonIDEPackage"
+"Assembly"="Microsoft.VisualStudio.CommonIDE,version=12.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+[$RootKey$\Packages\{6E87CFAD-6C05-4adf-9CD7-3B7943875B7C}]
+@="Visual Studio Common IDE Package"
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"Class"="Microsoft.VisualStudio.CommonIDE.CommonIDEPackage"
+"Assembly"="Microsoft.VisualStudio.CommonIDE,version=12.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+[$RootKey$\Services\{6454F7CA-478C-4932-B007-ABB100905BD4}]
+@="{6E87CFAD-6C05-4adf-9CD7-3B7943875B7C}"
+"Name"="SVsWebProxy"
+[$RootKey$\Services\{6F209208-4D8F-4412-B125-CD839B055D52}]
+@="{6E87CFAD-6C05-4adf-9CD7-3B7943875B7C}"
+"Name"="SVsFrameworkMultiTargeting service"
+[$RootKey$\Services\{530462A8-1ECB-4f7f-979E-A0237FEA12C3}]
+@="{6E87CFAD-6C05-4adf-9CD7-3B7943875B7C}"
+"Name"="SVsTrackProjectRetargeting service"
+[$RootKey$\Services\{DACC14E1-EE78-4D57-8777-190CFE555380}]
+@="{6E87CFAD-6C05-4adf-9CD7-3B7943875B7C}"
+"Name"="SVsCompressionPrivate service"
+[$RootKey$\Services\{2EEE6DAD-5986-4F91-A805-523AF01DFC4D}]
+@="{6E87CFAD-6C05-4adf-9CD7-3B7943875B7C}"
+"Name"="SVsProjectCompatibilityDlg service"
+[$RootKey$\Services\{4BD1CA55-31F0-4FD5-9A82-6E8F20B039BC}]
+@="{6E87CFAD-6C05-4adf-9CD7-3B7943875B7C}"
+"Name"="SVsProductKeyDialogLauncher service"
+[$RootKey$\Services\{89291C82-99BC-4FA3-98C0-802EEB2FBD70}]
+@="{6E87CFAD-6C05-4adf-9CD7-3B7943875B7C}"
+"Name"="SVsDebugTargetSelectionService service"
+[$RootKey$\Services\{E269CBA1-C9FB-45a8-91CA-EC8D3474FDD2}]
+@="{6E87CFAD-6C05-4adf-9CD7-3B7943875B7C}"
+"Name"="SVsCommonMessagePumpFactory service"
+[$RootKey$\Services\{51589EF5-A51B-4B76-A6C4-103F7ED7DEAF}]
+@="{6E87CFAD-6C05-4adf-9CD7-3B7943875B7C}"
+"Name"="CRC service"
+[$RootKey$\Services\{1DFCC05F-B568-458B-B60F-4894281F527A}]
+@="{6E87CFAD-6C05-4adf-9CD7-3B7943875B7C}"
+"Name"="Licensing Notifications service"
+[$RootKey$\Services\{C6164D85-E897-41C7-9785-A0450D7221B8}]
+@="{6E87CFAD-6C05-4adf-9CD7-3B7943875B7C}"
+"Name"="SVsTargetPlatformCatalog  service"
+[$RootKey$\Services\{C72C7627-CE60-4B24-BD91-C025DAACB619}]
+@="{6E87CFAD-6C05-4adf-9CD7-3B7943875B7C}"
+"Name"="SVsConvergedProjectManager  service"
+[$RootKey$\Menus]
+"{6E87CFAD-6C05-4adf-9CD7-3B7943875B7C}"=", 1000.ctmenu, 1"
+[$RootKey$\AutoLoadPackages\{93694FA0-0397-11D1-9F4E-00A0C911004F}]
+"{6E87CFAD-6C05-4adf-9CD7-3B7943875B7C}"=dword:00000000
+[$RootKey$\AutoLoadPackages\{ADFC4E66-0397-11D1-9F4E-00A0C911004F}]
+"{6E87CFAD-6C05-4adf-9CD7-3B7943875B7C}"=dword:00000000
+[$RootKey$\AutoLoadPackages\{ADFC4E61-0397-11D1-9F4E-00A0C911004F}]
+"{6E87CFAD-6C05-4adf-9CD7-3B7943875B7C}"=dword:00000000
+[$RootKey$\CLSID\{F74C5077-D848-4630-80C9-B00E68A1CA0C}]
+@="Visual Studio VsSettings Package"
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"Class"="Microsoft.VisualStudio.CommonIDE.VsSettings.VsSettingsPackage"
+"Assembly"="Microsoft.VisualStudio.CommonIDE,version=12.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+[$RootKey$\Packages\{F74C5077-D848-4630-80C9-B00E68A1CA0C}]
+@="Visual Studio VsSettings Package"
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"Class"="Microsoft.VisualStudio.CommonIDE.VsSettings.VsSettingsPackage"
+"Assembly"="Microsoft.VisualStudio.CommonIDE,version=12.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+[$RootKey$\Services\{3B0749FF-31E8-42d8-9CD2-F612148D7BDC}]
+@="{F74C5077-D848-4630-80C9-B00E68A1CA0C}"
+"Name"="SVsProfilesManagerUI"
+[$RootKey$\CLSID\{B718A162-0361-4b0e-920B-D88D70BE609B}]
+ @="Visual Studio Build Manager Package"
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"Class"="Microsoft.VisualStudio.CommonIDE.BuildManager.BuildManagerPackage"
+"Assembly"="Microsoft.VisualStudio.CommonIDE,version=12.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+[$RootKey$\Packages\{B718A162-0361-4b0e-920B-D88D70BE609B}]
+@="Visual Studio Build Manager Package"
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"Class"="Microsoft.VisualStudio.CommonIDE.BuildManager.BuildManagerPackage"
+"Assembly"="Microsoft.VisualStudio.CommonIDE,version=12.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+[$RootKey$\Services\{9A9569D2-2F7E-4af6-9E40-630F86D3F3F9}]
+@="{B718A162-0361-4b0e-920B-D88D70BE609B}"
+"Name"="SVsBuildManagerAccessor service"
+[$RootKey$\AutoLoadPackages\{ADFC4E60-0397-11D1-9F4E-00A0C911004F}]
+@="UICONTEXT_SolutionBuilding"
+"{B718A162-0361-4b0e-920B-D88D70BE609B}"=dword:00000000
+[$RootKey$\AutoLoadPackages\{D2567162-F94F-4091-8798-A096E61B8B50}]
+@="UICONTEXT_SolutionOpening"
+"{B718A162-0361-4b0e-920B-D88D70BE609B}"=dword:00000000
+[$RootKey$\Packages\{05b0dcb8-5f74-4a94-ab2f-8b2354c977ef}]
+@="Visual Studio Solution Telemetry Package"
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"Class"="Microsoft.VisualStudio.CommonIDE.SolutionTelemetryPackage"
+"Assembly"="Microsoft.VisualStudio.CommonIDE,version=12.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+[$RootKey$\AutoLoadPackages\{F1536EF8-92EC-443C-9ED7-FDADF150DA82}]
+@="UICONTEXT_SolutionExists"
+"{05b0dcb8-5f74-4a94-ab2f-8b2354c977ef}"=dword:00000000
+[$RootKey$\CLSID\{232ce68f-32bb-48c9-9808-0e1d6e71c57b}]
+@="Microsoft.VisualStudio.CommonIDE.ResourceLoader.8.0"
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="Microsoft.VisualStudio.CommonIDE.ResourceLoader"
+"Assembly"="Microsoft.VisualStudio.CommonIDE,version=12.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+[$RootKey$\CLSID\{232ce68f-32bb-48c9-9808-0e1d6e71c57b}\InprocServer32\12.0.0.0]
+"Class"="Microsoft.VisualStudio.CommonIDE.ResourceLoader"
+"Assembly"="Microsoft.VisualStudio.CommonIDE,version=12.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+[$RootKey$\CLSID\{232ce68f-32bb-48c9-9808-0e1d6e71c57b}\ProgId]
+@="Microsoft.VisualStudio.CommonIDE.ResourceLoader.8.0"
+[$RootKey$\CLSID\{E854283E-911D-4F26-BFC0-F3479607FD8A}]
+@=".Net Reflection (Private)"
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="Microsoft.VisualStudio.CommonIDE.DotNetReflection"
+"Assembly"="Microsoft.VisualStudio.CommonIDE,version=12.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+[$RootKey$\CLSID\{221ABF8C-4CE2-42e5-AFD9-916A2012450B}]
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="Microsoft.VisualStudio.Build.ComInteropWrapper.ProjectFileConverterShim"
+"Assembly"="Microsoft.VisualStudio.CommonIDE,version=12.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+[$RootKey$\CLSID\{94E98D53-F5E5-4bdd-9011-E28C21D42FAD}]
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="Microsoft.VisualStudio.Build.ComInteropWrapper.GlobalEngineAccessor"
+"Assembly"="Microsoft.VisualStudio.CommonIDE,version=12.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+[$RootKey$\CLSID\{B97AB07B-633A-462d-81C9-291A45E507DE}]
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="Microsoft.VisualStudio.Build.ComInteropWrapper.EngineShim"
+"Assembly"="Microsoft.VisualStudio.CommonIDE,version=12.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+[$RootKey$\CLSID\{863937C4-36E4-4685-AEF6-BA3C9F7F2056}]
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="Microsoft.VisualStudio.Build.ComInteropWrapper.ToolLocationHelperShim"
+"Assembly"="Microsoft.VisualStudio.CommonIDE,version=12.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+[$RootKey$\CLSID\{4750B7F2-A515-4e96-8BB2-1C4A7AD8B242}]
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="Microsoft.VisualStudio.Build.ComInteropWrapper.ProjectShim"
+"Assembly"="Microsoft.VisualStudio.CommonIDE,version=12.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+[$RootKey$\CLSID\{DEA1C31F-312F-4f9a-A929-9938CE6EAB80}]
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="Microsoft.VisualStudio.Build.ComInteropWrapper.HostLogger"
+"Assembly"="Microsoft.VisualStudio.CommonIDE,version=12.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+[$RootKey$\CLSID\{ED10B48E-92A4-47a2-B262-52A52E58B4FA}]
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="Microsoft.VisualStudio.Build.ComInteropWrapper.Utilities"
+"Assembly"="Microsoft.VisualStudio.CommonIDE,version=12.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+[$RootKey$\CLSID\{9ECE3780-CFEB-4A79-8000-3200E4430C0A}]
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="Microsoft.VisualStudio.Build.ComInteropWrapper.SecurityCheckHelper"
+"Assembly"="Microsoft.VisualStudio.CommonIDE,version=12.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+[$RootKey$\CLSID\{1C9FE389-4216-4b95-9C1A-6DAEA2236B70}]
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder"
+"Assembly"="Microsoft.Build.Tasks.v12.0,version=12.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+[$RootKey$\CLSID\{5D13802C-C830-4b41-8E7A-F69D9DD6A095}]
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings"
+"Assembly"="Microsoft.Build.Tasks.v12.0,version=12.0.0.0,publicKeyToken=b03f5f7f11d50a3a,culture=neutral"
+[$RootKey$\XmlEditor\DisableDataBreakpoints]
+"msbuilddisable1"="http://schemas.microsoft.com/developer/msbuild/2003"
+"Package"="{87569308-4813-40a0-9cd0-d7a30838ca3f}"
+"Category"="{B0906BD5-5690-4437-A380-B2B546175E71}"

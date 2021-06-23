@@ -1,0 +1,19 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <Name Package="{CB22EE0E-4072-4ae7-96E2-90FCCF879544}" ID="1008"/>
+        <Description Package="{CB22EE0E-4072-4ae7-96E2-90FCCF879544}" ID="1009"/>
+        <Icon Package="{CB22EE0E-4072-4ae7-96E2-90FCCF879544}" ID="9009"/>
+        <TemplateID>Microsoft.Silverlight.CSharp.Control</TemplateID>
+        <TemplateGroupID>Silverlight</TemplateGroupID>
+        <ProjectType>CSharp</ProjectType>
+        <ShowByDefault>false</ShowByDefault>
+        <SortOrder>10</SortOrder>
+        <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+        <DefaultName>SilverlightControl.xaml</DefaultName>
+        <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    </TemplateData>
+    <TemplateContent>
+        <ProjectItem OpenInEditor="true" SubType="Designer" ReplaceParameters="true" TargetFileName="$fileinputname$.xaml">SilverlightControl.xaml</ProjectItem>
+        <ProjectItem OpenInEditor="false" ReplaceParameters="true" TargetFileName="$fileinputname$.xaml.cs">SilverlightControl.xaml.cs</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

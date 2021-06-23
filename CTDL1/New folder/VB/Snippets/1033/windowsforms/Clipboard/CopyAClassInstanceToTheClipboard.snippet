@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Copy a Class Instance to the Clipboard</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Copies an instance of a serializable class to the Clipboard.</Description>
+      <Shortcut>clipCopyClass</Shortcut>
+    </Header>
+    <Snippet>
+		<References>
+			<Reference>
+				<Assembly>System.Windows.Forms.dll</Assembly>
+			</Reference>
+		</References>
+		<Imports>
+			<Import>
+				<Namespace>System</Namespace>
+			</Import>
+			<Import>
+				<Namespace>Microsoft.VisualBasic</Namespace>
+			</Import>
+			<Import>
+				<Namespace>System.Windows.Forms</Namespace>
+			</Import>
+		</Imports>
+      <Declarations>
+        <Literal>
+          <ID>className</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the type of the instance (as a String) that you want to copy to the clipboard.  Note that the type must be serializable.</ToolTip>
+          <Default>Object</Default>
+        </Literal>
+        <Object>
+          <ID>classInstance</ID>
+          <Type>Object</Type>
+          <ToolTip>Replace with the instance that you want to copy to the clipboard.</ToolTip>
+          <Default>classInstance</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[My.Computer.Clipboard.SetData("$className$", $classInstance$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

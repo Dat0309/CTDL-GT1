@@ -1,0 +1,19 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="375" />
+    <TemplateID>SharePoint15ClientWebPartPageForMvcWeb_VB_ITEM</TemplateID>
+    <ProjectType>VisualBasic</ProjectType>
+    <Hidden>true</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem TargetFileName="Controllers\$fileinputname$Controller.vb" ReplaceParameters="true" OpenInEditor="false">Controller.vb</ProjectItem>
+    <ProjectItem TargetFileName="Views\$fileinputname$\Index.vbhtml" ReplaceParameters="true" OpenInEditor="false">Index.vbhtml</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="$loc_client_web_part_page_script_comment_1$" _locID="$loc_client_web_part_page_script_comment_1$" _locAttrData="Value" Value="Set the style of the client web part page to be consistent with the host web." />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.GenericWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

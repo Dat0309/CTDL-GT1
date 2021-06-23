@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VWDFormatOptions>
+	<Category id="Default Settings" readonly="true" _locAttrData="id" _locID="Default Settings">
+		<Element id="Server tag supports contents" DefaultSettingType="ServerContainer" readonly="true" ClosingTag="2" DisableClosingTag="0" LineBreaks="4" IndentContents="1" Outlining="1" OutliningMinLines="3" _locAttrData="id" _locID="Server tag supports contents"/>
+		<Element id="Server tag does not support contents" DefaultSettingType="ServerNonContainer" readonly="true" ClosingTag="1" DisableClosingTag="0" LineBreaks="1" IndentContents="1" Outlining="1" OutliningMinLines="3" _locAttrData="id" _locID="Server tag does not support contents"/>
+		<Element id="Client tag supports contents" DefaultSettingType="ClientContainer" readonly="true" ClosingTag="2" DisableClosingTag="0" LineBreaks="4" IndentContents="1" Outlining="1" OutliningMinLines="3" _locAttrData="id" _locID="Client tag supports contents"/>
+		<Element id="Client tag does not support contents" DefaultSettingType="ClientNonContainer" readonly="true" ClosingTag="1" DisableClosingTag="2" LineBreaks="1" IndentContents="1" Outlining="1" OutliningMinLines="3" _locAttrData="id" _locID="Client tag does not support contents"/>
+	</Category>
+	<Category id="Client HTML Tags" _locAttrData="id" _locID="Client HTML Tags">
+		<Element id="a" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="acronym" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="article" ClosingTag="2" LineBreaks="4" IndentContents="1" Outlining="1" OutliningMinLines="3"/>
+		<Element id="aside" ClosingTag="2" LineBreaks="4" IndentContents="1" Outlining="1" OutliningMinLines="3"/>
+		<Element id="audio" ClosingTag="2" LineBreaks="4" IndentContents="1" Outlining="1" OutliningMinLines="3"/>
+		<Element id="b" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="basefont" ClosingTag="0" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="bdo" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="big" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="body" ClosingTag="2" LineBreaks="4" IndentContents="1" Outlining="1" OutliningMinLines="3"/>
+		<Element id="canvas" ClosingTag="2" LineBreaks="1" IndentContents="1" Outlining="0" />
+		<Element id="cite" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="code" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="command" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="dd" ClosingTag="2" LineBreaks="1" IndentContents="1" Outlining="0"/>
+		<Element id="del" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="details" ClosingTag="2" LineBreaks="4" IndentContents="1" Outlining="1" OutliningMinLines="3"/>
+		<Element id="dfn" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="div" ClosingTag="2" LineBreaks="4" IndentContents="1" Outlining="1" OutliningMinLines="3"/>
+		<Element id="dt" ClosingTag="2" LineBreaks="1" IndentContents="1" Outlining="0"/>
+		<Element id="em" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="embed" ClosingTag="1" LineBreaks="1" IndentContents="1" Outlining="0"/>
+		<Element id="figcaption" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="figure" ClosingTag="2" LineBreaks="4" IndentContents="1" Outlining="1" OutliningMinLines="3"/>
+		<Element id="footer" ClosingTag="2" LineBreaks="4" IndentContents="1" Outlining="1" OutliningMinLines="3"/>
+		<Element id="font" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="form" ClosingTag="2" LineBreaks="4" IndentContents="1" Outlining="1" OutliningMinLines="3"/>
+		<Element id="h1" ClosingTag="2" LineBreaks="1" IndentContents="1" Outlining="0" />
+		<Element id="h2" ClosingTag="2" LineBreaks="1" IndentContents="1" Outlining="0" />
+		<Element id="h3" ClosingTag="2" LineBreaks="1" IndentContents="1" Outlining="0" />
+		<Element id="h4" ClosingTag="2" LineBreaks="1" IndentContents="1" Outlining="0" />
+		<Element id="h5" ClosingTag="2" LineBreaks="1" IndentContents="1" Outlining="0" />
+		<Element id="h6" ClosingTag="2" LineBreaks="1" IndentContents="1" Outlining="0" />
+		<Element id="head" ClosingTag="2" LineBreaks="4" IndentContents="1" Outlining="1" OutliningMinLines="3"/>
+		<Element id="header" ClosingTag="2" LineBreaks="4" IndentContents="1" Outlining="1" OutliningMinLines="3"/>
+		<Element id="hgroup" ClosingTag="2" LineBreaks="4" IndentContents="1" Outlining="1" OutliningMinLines="3"/>
+		<Element id="html" ClosingTag="2" LineBreaks="4" IndentContents="0" Outlining="1" OutliningMinLines="3"/>
+		<Element id="i" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="iframe" ClosingTag="2" LineBreaks="1" IndentContents="1" Outlining="0"/>
+		<Element id="ins" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="kbd" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="keygen" ClosingTag="1" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="legend" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="li" ClosingTag="2" LineBreaks="1" IndentContents="1" Outlining="0"/>
+		<Element id="mark" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="meter" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="nav" ClosingTag="2" LineBreaks="4" IndentContents="1" Outlining="1" OutliningMinLines="3"/>
+		<Element id="option" ClosingTag="2" LineBreaks="1" IndentContents="1" Outlining="0"/>
+		<Element id="progress" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="q" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="rp" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="rt" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="ruby" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="s" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="script" ClosingTag="2" LineBreaks="4" IndentContents="1" Outlining="1" OutliningMinLines="3"/>
+		<Element id="section" ClosingTag="2" LineBreaks="4" IndentContents="1" Outlining="1" OutliningMinLines="3"/>
+		<Element id="small" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="span" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="strike" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="strong" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="sub" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="sup" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="table" ClosingTag="2" LineBreaks="4" IndentContents="1" Outlining="1" OutliningMinLines="5"/>
+		<Element id="tbody" ClosingTag="2" LineBreaks="4" IndentContents="1" Outlining="1" OutliningMinLines="5"/>
+		<Element id="td" ClosingTag="2" LineBreaks="1" IndentContents="1" Outlining="1" OutliningMinLines="3"/>
+		<Element id="th" ClosingTag="2" LineBreaks="1" IndentContents="1" Outlining="1" OutliningMinLines="3"/>
+		<Element id="tfoot" ClosingTag="2" LineBreaks="4" IndentContents="1" Outlining="1" OutliningMinLines="5"/>
+		<Element id="thead" ClosingTag="2" LineBreaks="4" IndentContents="1" Outlining="1" OutliningMinLines="5"/>
+		<Element id="time" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="title" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="1" OutliningMinLines="3"/>
+		<Element id="tr" ClosingTag="2" LineBreaks="4" IndentContents="1" Outlining="1" OutliningMinLines="5"/>
+		<Element id="tt" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="u" ClosingTag="2" LineBreaks="0" IndentContents="1" Outlining="0"/>
+		<Element id="video" ClosingTag="2" LineBreaks="4" IndentContents="1" Outlining="1" OutliningMinLines="3"/>
+	</Category>
+	<Category id="ASP.NET Controls" _locAttrData="id" _locID="ASP.NET Controls">
+		<Element id="AddVerb" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="AlternatingItemStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="AlternatingRowStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="ApplyVerb" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:AccessDataSource" OutliningMinLines="3" ClosingTag="2" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:BoundColumn" OutliningMinLines="3" ClosingTag="2" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:BoundField" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:Button" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:ButtonColumn" OutliningMinLines="3" ClosingTag="2" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:ButtonField" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:Calendar" OutliningMinLines="3" ClosingTag="2" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:CheckBoxField" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:CircleHotSpot" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:CommandField" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:ControlParameter" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:CookieParameter" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:DynamicControl" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:DynamicDataManager" OutliningMinLines="3" ClosingTag="2" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:DynamicField" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:DynamicValidator" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:EditCommandColumn" OutliningMinLines="3" ClosingTag="2" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:FormParameter" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:HyperLinkColumn" OutliningMinLines="3" ClosingTag="2" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:HyperLinkField" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:Label" OutliningMinLines="3" ClosingTag="2" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:ListBox" OutliningMinLines="3" ClosingTag="2" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:Literal" OutliningMinLines="3" ClosingTag="2" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:MenuItem" OutliningMinLines="3" ClosingTag="2" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:MenuItemBinding" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:MenuItemStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:ObjectDataSource" OutliningMinLines="3" ClosingTag="2" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:Parameter" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:PlaceHolder" OutliningMinLines="3" ClosingTag="2" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:PolygonHotSpot" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:QueryStringParameter" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:RectangleHotSpot" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:SessionParameter" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:SiteMapDataSource" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:SqlDataSource" OutliningMinLines="3" ClosingTag="2" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:Style" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:SubMenuStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:TableItemStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:TableStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:TemplateColumn" OutliningMinLines="3" ClosingTag="2" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:TemplateField" OutliningMinLines="3" ClosingTag="2" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:TreeNode" OutliningMinLines="3" ClosingTag="2" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:TreeNodeBinding" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:TreeNodeStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:WebPartMenuStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="asp:XmlDataSource" OutliningMinLines="3" ClosingTag="2" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="CancelButtonStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="CancelVerb" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="ChangePasswordButtonStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="CheckBoxStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="CloseVerb" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="CommandRowStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="CompleteSuccessTextStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="ConfigureVerb" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="ConnectVerb" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="ContinueButtonStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="ControlStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="CreateUserButtonStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="CurrentNodeStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="DayHeaderStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="DayStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="DeleteVerb" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="DetailLinkStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="DetailTitleStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="DisconnectVerb" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="DynamicHoverStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="DynamicMenuItemStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="DynamicMenuStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="DynamicSelectedStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="EditItemStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="EditRowStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="EditUIStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="EditVerb" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="EmptyDataRowStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="EmptyZoneTextStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="ErrorStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="ErrorMessageStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="ExportVerb" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="FailureTextStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="FieldHeaderStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="FinishStepButtonStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="FinishStepPreviousButtonStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="FooterStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="HeaderCloseVerb" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="HeaderStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="HeaderVerbStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="HelpVerb" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="HoverNodeStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="HyperLinkStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="InsertRowStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="InstructionTextStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="ItemStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="LabelStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="LeafNodeStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="LevelMenuItemStyles" OutliningMinLines="3" ClosingTag="2" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="LevelSelectedStyles" OutliningMinLines="3" ClosingTag="2" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="LevelStyles" OutliningMinLines="3" ClosingTag="2" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="LevelSubMenuStyles" OutliningMinLines="3" ClosingTag="2" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="LoginButtonStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="MenuCheckImageStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="MenuItemStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="MenuLabelHoverStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="MenuLabelStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="MenuStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="MenuVerbStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="MenuVerbHoverStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="MinimizeVerb" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="NavigationButtonStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="NavigationStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="NextPrevStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="NextStepButtonStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="NodeStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="OKVerb" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="OtherMonthDayStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="PagerStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="ParentNodeStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="PartChromeStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="PartLinkStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="PartStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="PartTitleStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="PasswordHintStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="PathSeparatorStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="PreviousStepButtonStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="RestoreVerb" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="RootNodeStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="RowStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="SelectedDayStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="SelectedItemStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="SelectedNodeStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="SelectedPartChromeStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="SelectedPartLinkStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="SelectedRowStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="SelectorStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="SeparatorStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="SideBarButtonStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="SideBarStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="StartStepNextButtonStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="StaticHoverStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="StaticMenuItemStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="StaticMenuStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="StaticSelectedStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="StepStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="SubMenuStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="SubmitButtonStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="SuccessTextStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="SummaryTitleStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="TextBoxStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="TitleStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="TitleTextStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="TodayDayStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="TreeNodeStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="ValidatorTextStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="VerbStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="WeekendDayStyle" OutliningMinLines="3" ClosingTag="1" IndentContents="1" Outlining="1" LineBreaks="1"/>
+		<Element id="Page" ClosingTag="1" LineBreaks="5" IndentContents="1" Outlining="0" OutliningMinLines="0"/>
+		<Element id="Master" ClosingTag="1" LineBreaks="5" IndentContents="1" Outlining="0" OutliningMinLines="0"/>
+	</Category>
+</VWDFormatOptions>

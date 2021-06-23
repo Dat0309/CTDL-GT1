@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Find Nth instance of an element in an XML file</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Finds the Nth instance of an element in an XML file.</Description>
+      <Shortcut>xmlNElem</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.XML.Linq.dll</Assembly>          
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Xml.Linq</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+     <Literal>
+          <ID>FileName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace this with your file name.</ToolTip>
+          <Default>"data.xml"</Default>
+        </Literal>
+        <Literal>
+          <ID>NodePath</ID>
+          <Type>String</Type>
+          <ToolTip>Replace this with your axis property expression.</ToolTip>
+          <Default>&lt;parent&gt;</Default>
+        </Literal>
+        <Literal>
+          <ID>Indexer</ID>
+          <Type>String</Type>
+          <ToolTip>Replace this with the index number to retrieve. Indexing of results starts from 0.</ToolTip>
+          <Default>(5)</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim element = XElement.Load($FileName$)
+      Dim result = element.$NodePath$$Indexer$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

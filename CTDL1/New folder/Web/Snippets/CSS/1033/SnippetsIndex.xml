@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SnippetCollection>
+    <Language Lang="CSS" Guid="{A764E898-518D-11d2-9A89-00C04F79EFC3}">
+        <SnippetDir>
+            <OnOff>On</OnOff>
+            <Installed>true</Installed>
+            <Locale>1033</Locale>
+            <DirPath>%InstallRoot%\Web\Snippets\CSS\%LCID%\CSS\</DirPath>	
+            <LocalizedName>CSS</LocalizedName>
+        </SnippetDir>
+    </Language>
+</SnippetCollection>

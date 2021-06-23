@@ -1,0 +1,19 @@
+﻿.scrollbar-container {
+    width:100%;
+    height: 100%;
+}
+
+    .scrollbar-container .scrollbar {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow-x: scroll !important;
+        display: none;
+        border-bottom: 1px solid grey; /*[1px solid {diagnostics-host-swimlane-border}]*/
+    }
+
+        .scrollbar-container .scrollbar .scrollbar-width-calculator {
+            position: relative;
+            height: 1px;
+            width: 1px;
+        }

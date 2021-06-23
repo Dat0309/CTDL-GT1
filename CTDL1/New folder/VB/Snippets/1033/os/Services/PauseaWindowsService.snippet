@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Pause a Windows Service </Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Uses the ServiceController component to pause the a service on the local computer.</Description>
+      <Shortcut>servPause</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.ServiceProcess.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.ServiceProcess</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>serviceName</ID>
+          <ToolTip>Replace with the name of the service to be paused.</ToolTip>
+          <Default>"IISAdmin"</Default>
+        </Literal>
+        <Literal>
+          <ID>ErrorMessage</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with an error message.</ToolTip>
+          <Default>"Cannot pause the service."</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim controller As New ServiceController($serviceName$)
+controller.Pause()]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

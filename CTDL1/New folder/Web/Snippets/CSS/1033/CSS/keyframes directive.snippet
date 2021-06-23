@@ -1,0 +1,42 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>keyframes</Title>
+    <Author>Microsoft Corporation</Author>
+    <Shortcut>@keyframes</Shortcut>
+    <Description>A animation keyframes snippet</Description>
+    <AlternativeShortcuts>
+      <Shortcut>@-moz-keyframes</Shortcut>
+      <Shortcut>@-webkit-keyframes</Shortcut>
+    </AlternativeShortcuts>    
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>name</ID>
+        <ToolTip>Name value</ToolTip>
+        <Default>name</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="css" Kind="AtDirectiveName">
+      <![CDATA[@keyframes $name$ {
+    from {
+        background: red;$end$
+    }
+
+    to {
+        background: yellow;
+    }
+}
+
+@-moz-keyframes $name$ {
+
+}
+
+@-webkit-keyframes $name$ {
+
+}]]></Code>
+  </Snippet>
+</CodeSnippet>

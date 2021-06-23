@@ -1,0 +1,11 @@
+<SchemaCatalog xmlns="http://schemas.microsoft.com/xsd/catalog">
+  <Association condition="starts-with($TargetFrameworkMoniker, '.NETFramework,Version=v3.5')"
+               extension="xml"
+               schema="%CommonProgramW6432%/Microsoft Shared/web server extensions/14/TEMPLATE/XML/wss.xsd"/>
+  <Association condition="starts-with($TargetFrameworkMoniker, '.NETFramework,Version=v4.') or $TargetFrameworkMoniker = ''"
+               extension="xml"
+               schema="%CommonProgramW6432%/Microsoft Shared/web server extensions/15/TEMPLATE/XML/wss.xsd"/>
+  <Association condition="starts-with($TargetFrameworkMoniker, '.NETFramework,Version=v4.') or $TargetFrameworkMoniker = ''"
+               extension="xml"
+               schema="%CommonProgramFiles%/Microsoft Shared/web server extensions/15/TEMPLATE/XML/wss.xsd"/>
+</SchemaCatalog>

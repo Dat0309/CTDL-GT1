@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+		xmlns:xsd='http://www.w3.org/2001/XMLSchema'
+		xmlns:vs='http://schemas.microsoft.com/Visual-Studio-Intellisense'
+		vs:ishtmlschema='false'
+		vs:isserverschema='true'
+		vs:GeneratedControlsSchema='true'
+		vs:nonbrowseable='true'>
+
+  <!-- TOP LEVEL ELEMENTS -->
+  <xsd:element name="HtmlAnchor" type="System.Web.UI.HtmlControls.HtmlAnchorDef" />
+  <xsd:element name="HtmlButton" type="System.Web.UI.HtmlControls.HtmlButtonDef" />
+  <xsd:element name="HtmlForm" type="System.Web.UI.HtmlControls.HtmlFormDef" />
+  <xsd:element name="HtmlGenericControl" type="System.Web.UI.HtmlControls.HtmlGenericControlDef" />
+  <xsd:element name="HtmlHead" type="System.Web.UI.HtmlControls.HtmlHeadDef" />
+  <xsd:element name="HtmlImage" type="System.Web.UI.HtmlControls.HtmlImageDef" />
+  <xsd:element name="HtmlInputButton" type="System.Web.UI.HtmlControls.HtmlInputButtonDef" />
+  <xsd:element name="HtmlInputCheckBox" type="System.Web.UI.HtmlControls.HtmlInputCheckBoxDef" />
+  <xsd:element name="HtmlInputFile" type="System.Web.UI.HtmlControls.HtmlInputFileDef" />
+  <xsd:element name="HtmlInputHidden" type="System.Web.UI.HtmlControls.HtmlInputHiddenDef" />
+  <xsd:element name="HtmlInputImage" type="System.Web.UI.HtmlControls.HtmlInputImageDef" />
+  <xsd:element name="HtmlInputPassword" type="System.Web.UI.HtmlControls.HtmlInputPasswordDef" />
+  <xsd:element name="HtmlInputRadioButton" type="System.Web.UI.HtmlControls.HtmlInputRadioButtonDef" />
+  <xsd:element name="HtmlInputReset" type="System.Web.UI.HtmlControls.HtmlInputResetDef" />
+  <xsd:element name="HtmlInputSubmit" type="System.Web.UI.HtmlControls.HtmlInputSubmitDef" />
+  <xsd:element name="HtmlInputText" type="System.Web.UI.HtmlControls.HtmlInputTextDef" />
+  <xsd:element name="HtmlLink" type="System.Web.UI.HtmlControls.HtmlLinkDef" />
+  <xsd:element name="HtmlSelect" type="System.Web.UI.HtmlControls.HtmlSelectDef" />
+  <xsd:element name="HtmlTable" type="System.Web.UI.HtmlControls.HtmlTableDef" />
+  <xsd:element name="HtmlTableCell" type="System.Web.UI.HtmlControls.HtmlTableCellDef" />
+  <xsd:element name="HtmlTableRow" type="System.Web.UI.HtmlControls.HtmlTableRowDef" />
+  <xsd:element name="HtmlTextArea" type="System.Web.UI.HtmlControls.HtmlTextAreaDef" />
+  <xsd:element name="HtmlTitle" type="System.Web.UI.HtmlControls.HtmlTitleDef" />
+
+
+  <!-- TOP LEVEL TYPES -->
+
+  <!-- Definition for System.Web.UI.HtmlControls.HtmlAnchor -->
+  <xsd:complexType name="System.Web.UI.HtmlControls.HtmlAnchorDef" mixed="true">
+    <xsd:attribute name="runat" type="Microsoft.VisualStudio.Web.WebControlSchemaGenerator.runatDef" use="required" vs:nonfilterable="true" />
+    <xsd:group ref="System.Web.UI.ControlExtendedElementsGroupDef" />
+    <xsd:attributeGroup ref="System.Web.UI.HtmlControls.HtmlAnchorAttributeGroupDef" />
+  </xsd:complexType>
+
+  <!-- Definition for System.Web.UI.HtmlControls.HtmlButton -->
+  <xsd:complexType name="System.Web.UI.HtmlControls.HtmlButtonDef" mixed="true">
+    <xsd:attribute name="runat" type="Microsoft.VisualStudio.Web.WebControlSchemaGenerator.runatDef" use="required" vs:nonfilterable="true" />
+    <xsd:group ref="System.Web.UI.ControlExtendedElementsGroupDef" />
+    <xsd:attributeGroup ref="System.Web.UI.HtmlControls.HtmlButtonAttributeGroupDef" />
+  </xsd:complexType>
+
+  <!-- Definition for System.Web.UI.HtmlControls.HtmlForm -->
+  <xsd:complexType name="System.Web.UI.HtmlControls.HtmlFormDef" mixed="true">
+    <xsd:attribute name="runat" type="Microsoft.VisualStudio.Web.WebControlSchemaGenerator.runatDef" use="required" vs:nonfilterable="true" />
+    <xsd:group ref="System.Web.UI.ControlExtendedElementsGroupDef" />
+    <xsd:attributeGroup ref="System.Web.UI.HtmlControls.HtmlFormAttributeGroupDef" />
+  </xsd:complexType>
+
+  <!-- Definition for System.Web.UI.HtmlControls.HtmlGenericControl -->
+  <xsd:complexType name="System.Web.UI.HtmlControls.HtmlGenericControlDef" mixed="true">
+    <xsd:attribute name="runat" type="Microsoft.VisualStudio.Web.WebControlSchemaGenerator.runatDef" use="required" vs:nonfilterable="true" />
+    <xsd:group ref="System.Web.UI.ControlExtendedElementsGroupDef" />
+    <xsd:attributeGroup ref="System.Web.UI.ControlAttributeGroupDef" />
+  </xsd:complexType>
+
+  <!-- Definition for System.Web.UI.HtmlControls.HtmlHead -->
+  <xsd:complexType name="System.Web.UI.HtmlControls.HtmlHeadDef" mixed="true">
+    <xsd:attribute name="runat" type="Microsoft.VisualStudio.Web.WebControlSchemaGenerator.runatDef" use="required" vs:nonfilterable="true" />
+    <xsd:group ref="System.Web.UI.ControlExtendedElementsGroupDef" />
+    <xsd:attributeGroup ref="System.Web.UI.ControlAttributeGroupDef" />
+  </xsd:complexType>
+
+  <!-- Definition for System.Web.UI.HtmlControls.HtmlImage -->
+  <xsd:complexType name="System.Web.UI.HtmlControls.HtmlImageDef" mixed="true">
+    <xsd:attribute name="runat" type="Microsoft.VisualStudio.Web.WebControlSchemaGenerator.runatDef" use="required" vs:nonfilterable="true" />
+    <xsd:group ref="System.Web.UI.ControlExtendedElementsGroupDef" />
+    <xsd:attributeGroup ref="System.Web.UI.ControlAttributeGroupDef" />
+  </xsd:complexType>
+
+  <!-- Definition for System.Web.UI.HtmlControls.HtmlInputButton -->
+  <xsd:complexType name="System.Web.UI.HtmlControls.HtmlInputButtonDef" mixed="true">
+    <xsd:attribute name="runat" type="Microsoft.VisualStudio.Web.WebControlSchemaGenerator.runatDef" use="required" vs:nonfilterable="true" />
+    <xsd:group ref="System.Web.UI.ControlExtendedElementsGroupDef" />
+    <xsd:attributeGroup ref="System.Web.UI.HtmlControls.HtmlInputButtonAttributeGroupDef" />
+  </xsd:complexType>
+
+  <!-- Definition for System.Web.UI.HtmlControls.HtmlInputCheckBox -->
+  <xsd:complexType name="System.Web.UI.HtmlControls.HtmlInputCheckBoxDef" mixed="true">
+    <xsd:attribute name="runat" type="Microsoft.VisualStudio.Web.WebControlSchemaGenerator.runatDef" use="required" vs:nonfilterable="true" />
+    <xsd:group ref="System.Web.UI.ControlExtendedElementsGroupDef" />
+    <xsd:attributeGroup ref="System.Web.UI.HtmlControls.HtmlInputCheckBoxAttributeGroupDef" />
+  </xsd:complexType>
+
+  <!-- Definition for System.Web.UI.HtmlControls.HtmlInputFile -->
+  <xsd:complexType name="System.Web.UI.HtmlControls.HtmlInputFileDef" mixed="true">
+    <xsd:attribute name="runat" type="Microsoft.VisualStudio.Web.WebControlSchemaGenerator.runatDef" use="required" vs:nonfilterable="true" />
+    <xsd:group ref="System.Web.UI.ControlExtendedElementsGroupDef" />
+    <xsd:attributeGroup ref="System.Web.UI.ControlAttributeGroupDef" />
+  </xsd:complexType>
+
+  <!-- Definition for System.Web.UI.HtmlControls.HtmlInputHidden -->
+  <xsd:complexType name="System.Web.UI.HtmlControls.HtmlInputHiddenDef" mixed="true">
+    <xsd:attribute name="runat" type="Microsoft.VisualStudio.Web.WebControlSchemaGenerator.runatDef" use="required" vs:nonfilterable="true" />
+    <xsd:group ref="System.Web.UI.ControlExtendedElementsGroupDef" />
+    <xsd:attributeGroup ref="System.Web.UI.HtmlControls.HtmlInputHiddenAttributeGroupDef" />
+  </xsd:complexType>
+
+  <!-- Definition for System.Web.UI.HtmlControls.HtmlInputImage -->
+  <xsd:complexType name="System.Web.UI.HtmlControls.HtmlInputImageDef" mixed="true">
+    <xsd:attribute name="runat" type="Microsoft.VisualStudio.Web.WebControlSchemaGenerator.runatDef" use="required" vs:nonfilterable="true" />
+    <xsd:group ref="System.Web.UI.ControlExtendedElementsGroupDef" />
+    <xsd:attributeGroup ref="System.Web.UI.HtmlControls.HtmlInputImageAttributeGroupDef" />
+  </xsd:complexType>
+
+  <!-- Definition for System.Web.UI.HtmlControls.HtmlInputPassword -->
+  <xsd:complexType name="System.Web.UI.HtmlControls.HtmlInputPasswordDef" mixed="true">
+    <xsd:attribute name="runat" type="Microsoft.VisualStudio.Web.WebControlSchemaGenerator.runatDef" use="required" vs:nonfilterable="true" />
+    <xsd:group ref="System.Web.UI.ControlExtendedElementsGroupDef" />
+    <xsd:attributeGroup ref="System.Web.UI.HtmlControls.HtmlInputTextAttributeGroupDef" />
+  </xsd:complexType>
+
+  <!-- Definition for System.Web.UI.HtmlControls.HtmlInputRadioButton -->
+  <xsd:complexType name="System.Web.UI.HtmlControls.HtmlInputRadioButtonDef" mixed="true">
+    <xsd:attribute name="runat" type="Microsoft.VisualStudio.Web.WebControlSchemaGenerator.runatDef" use="required" vs:nonfilterable="true" />
+    <xsd:group ref="System.Web.UI.ControlExtendedElementsGroupDef" />
+    <xsd:attributeGroup ref="System.Web.UI.HtmlControls.HtmlInputRadioButtonAttributeGroupDef" />
+  </xsd:complexType>
+
+  <!-- Definition for System.Web.UI.HtmlControls.HtmlInputReset -->
+  <xsd:complexType name="System.Web.UI.HtmlControls.HtmlInputResetDef" mixed="true">
+    <xsd:attribute name="runat" type="Microsoft.VisualStudio.Web.WebControlSchemaGenerator.runatDef" use="required" vs:nonfilterable="true" />
+    <xsd:group ref="System.Web.UI.ControlExtendedElementsGroupDef" />
+    <xsd:attributeGroup ref="System.Web.UI.ControlAttributeGroupDef" />
+  </xsd:complexType>
+
+  <!-- Definition for System.Web.UI.HtmlControls.HtmlInputSubmit -->
+  <xsd:complexType name="System.Web.UI.HtmlControls.HtmlInputSubmitDef" mixed="true">
+    <xsd:attribute name="runat" type="Microsoft.VisualStudio.Web.WebControlSchemaGenerator.runatDef" use="required" vs:nonfilterable="true" />
+    <xsd:group ref="System.Web.UI.ControlExtendedElementsGroupDef" />
+    <xsd:attributeGroup ref="System.Web.UI.HtmlControls.HtmlInputButtonAttributeGroupDef" />
+  </xsd:complexType>
+
+  <!-- Definition for System.Web.UI.HtmlControls.HtmlInputText -->
+  <xsd:complexType name="System.Web.UI.HtmlControls.HtmlInputTextDef" mixed="true">
+    <xsd:attribute name="runat" type="Microsoft.VisualStudio.Web.WebControlSchemaGenerator.runatDef" use="required" vs:nonfilterable="true" />
+    <xsd:group ref="System.Web.UI.ControlExtendedElementsGroupDef" />
+    <xsd:attributeGroup ref="System.Web.UI.HtmlControls.HtmlInputTextAttributeGroupDef" />
+  </xsd:complexType>
+
+  <!-- Definition for System.Web.UI.HtmlControls.HtmlLink -->
+  <xsd:complexType name="System.Web.UI.HtmlControls.HtmlLinkDef" mixed="true">
+    <xsd:attribute name="runat" type="Microsoft.VisualStudio.Web.WebControlSchemaGenerator.runatDef" use="required" vs:nonfilterable="true" />
+    <xsd:group ref="System.Web.UI.ControlExtendedElementsGroupDef" />
+    <xsd:attributeGroup ref="System.Web.UI.ControlAttributeGroupDef" />
+  </xsd:complexType>
+
+  <!-- Definition for System.Web.UI.HtmlControls.HtmlSelect -->
+  <xsd:complexType name="System.Web.UI.HtmlControls.HtmlSelectDef" mixed="true" vs:overrideaddparsedsubobject="true">
+    <xsd:attribute name="runat" type="Microsoft.VisualStudio.Web.WebControlSchemaGenerator.runatDef" use="required" vs:nonfilterable="true" />
+    <xsd:group ref="System.Web.UI.ControlExtendedElementsGroupDef" />
+    <xsd:attributeGroup ref="System.Web.UI.HtmlControls.HtmlSelectAttributeGroupDef" />
+  </xsd:complexType>
+
+  <!-- Definition for System.Web.UI.HtmlControls.HtmlTable -->
+  <xsd:complexType name="System.Web.UI.HtmlControls.HtmlTableDef" vs:noambientcontentmodel="true" vs:parsechildren="true">
+    <xsd:attribute name="runat" type="Microsoft.VisualStudio.Web.WebControlSchemaGenerator.runatDef" use="required" vs:nonfilterable="true" />
+    <xsd:group ref="System.Web.UI.HtmlControls.HtmlTableRowExtendedElementsGroupDef" />
+    <xsd:attributeGroup ref="System.Web.UI.ControlAttributeGroupDef" />
+  </xsd:complexType>
+
+  <!-- Definition for System.Web.UI.HtmlControls.HtmlTableCell -->
+  <xsd:complexType name="System.Web.UI.HtmlControls.HtmlTableCellDef" mixed="true">
+    <xsd:attribute name="runat" type="Microsoft.VisualStudio.Web.WebControlSchemaGenerator.runatDef" use="required" vs:nonfilterable="true" />
+    <xsd:group ref="System.Web.UI.ControlExtendedElementsGroupDef" />
+    <xsd:attributeGroup ref="System.Web.UI.ControlAttributeGroupDef" />
+  </xsd:complexType>
+
+  <!-- Definition for System.Web.UI.HtmlControls.HtmlTableRow -->
+  <xsd:complexType name="System.Web.UI.HtmlControls.HtmlTableRowDef" vs:noambientcontentmodel="true" vs:parsechildren="true">
+    <xsd:attribute name="runat" type="Microsoft.VisualStudio.Web.WebControlSchemaGenerator.runatDef" use="required" vs:nonfilterable="true" />
+    <xsd:group ref="System.Web.UI.HtmlControls.HtmlTableCellExtendedElementsGroupDef" />
+    <xsd:attributeGroup ref="System.Web.UI.ControlAttributeGroupDef" />
+  </xsd:complexType>
+
+  <!-- Definition for System.Web.UI.HtmlControls.HtmlTextArea -->
+  <xsd:complexType name="System.Web.UI.HtmlControls.HtmlTextAreaDef" mixed="true" vs:overrideaddparsedsubobject="true">
+    <xsd:attribute name="runat" type="Microsoft.VisualStudio.Web.WebControlSchemaGenerator.runatDef" use="required" vs:nonfilterable="true" />
+    <xsd:group ref="System.Web.UI.ControlExtendedElementsGroupDef" />
+    <xsd:attributeGroup ref="System.Web.UI.HtmlControls.HtmlTextAreaAttributeGroupDef" />
+  </xsd:complexType>
+
+  <!-- Definition for System.Web.UI.HtmlControls.HtmlTitle -->
+  <xsd:complexType name="System.Web.UI.HtmlControls.HtmlTitleDef" mixed="true" vs:overrideaddparsedsubobject="true">
+    <xsd:attribute name="runat" type="Microsoft.VisualStudio.Web.WebControlSchemaGenerator.runatDef" use="required" vs:nonfilterable="true" />
+    <xsd:group ref="System.Web.UI.ControlExtendedElementsGroupDef" />
+    <xsd:attributeGroup ref="System.Web.UI.ControlAttributeGroupDef" />
+  </xsd:complexType>
+
+
+  <!-- TOP LEVEL EXTENDING TYPE GROUPS -->
+
+  <xsd:group name="System.Web.UI.ControlExtendedElementsGroupDef">
+    <xsd:choice>
+      <xsd:element name="HtmlAnchor" type="System.Web.UI.HtmlControls.HtmlAnchorDef" />
+      <xsd:element name="HtmlButton" type="System.Web.UI.HtmlControls.HtmlButtonDef" />
+      <xsd:element name="HtmlForm" type="System.Web.UI.HtmlControls.HtmlFormDef" />
+      <xsd:element name="HtmlGenericControl" type="System.Web.UI.HtmlControls.HtmlGenericControlDef" />
+      <xsd:element name="HtmlHead" type="System.Web.UI.HtmlControls.HtmlHeadDef" />
+      <xsd:element name="HtmlImage" type="System.Web.UI.HtmlControls.HtmlImageDef" />
+      <xsd:element name="HtmlInputButton" type="System.Web.UI.HtmlControls.HtmlInputButtonDef" />
+      <xsd:element name="HtmlInputCheckBox" type="System.Web.UI.HtmlControls.HtmlInputCheckBoxDef" />
+      <xsd:element name="HtmlInputFile" type="System.Web.UI.HtmlControls.HtmlInputFileDef" />
+      <xsd:element name="HtmlInputHidden" type="System.Web.UI.HtmlControls.HtmlInputHiddenDef" />
+      <xsd:element name="HtmlInputImage" type="System.Web.UI.HtmlControls.HtmlInputImageDef" />
+      <xsd:element name="HtmlInputPassword" type="System.Web.UI.HtmlControls.HtmlInputPasswordDef" />
+      <xsd:element name="HtmlInputRadioButton" type="System.Web.UI.HtmlControls.HtmlInputRadioButtonDef" />
+      <xsd:element name="HtmlInputReset" type="System.Web.UI.HtmlControls.HtmlInputResetDef" />
+      <xsd:element name="HtmlInputSubmit" type="System.Web.UI.HtmlControls.HtmlInputSubmitDef" />
+      <xsd:element name="HtmlInputText" type="System.Web.UI.HtmlControls.HtmlInputTextDef" />
+      <xsd:element name="HtmlLink" type="System.Web.UI.HtmlControls.HtmlLinkDef" />
+      <xsd:element name="HtmlSelect" type="System.Web.UI.HtmlControls.HtmlSelectDef" />
+      <xsd:element name="HtmlTable" type="System.Web.UI.HtmlControls.HtmlTableDef" />
+      <xsd:element name="HtmlTableCell" type="System.Web.UI.HtmlControls.HtmlTableCellDef" />
+      <xsd:element name="HtmlTableRow" type="System.Web.UI.HtmlControls.HtmlTableRowDef" />
+      <xsd:element name="HtmlTextArea" type="System.Web.UI.HtmlControls.HtmlTextAreaDef" />
+      <xsd:element name="HtmlTitle" type="System.Web.UI.HtmlControls.HtmlTitleDef" />
+    </xsd:choice>
+  </xsd:group>
+
+  <xsd:group name="System.Web.UI.HtmlControls.HtmlTableCellExtendedElementsGroupDef">
+    <xsd:choice>
+      <xsd:element name="HtmlTableCell" type="System.Web.UI.HtmlControls.HtmlTableCellDef" />
+    </xsd:choice>
+  </xsd:group>
+
+  <xsd:group name="System.Web.UI.HtmlControls.HtmlTableRowExtendedElementsGroupDef">
+    <xsd:choice>
+      <xsd:element name="HtmlTableRow" type="System.Web.UI.HtmlControls.HtmlTableRowDef" />
+    </xsd:choice>
+  </xsd:group>
+
+
+  <!-- TOP LEVEL ELEMENT GROUPS -->
+
+
+  <!-- TOP LEVEL ATTRIBUTE GROUPS -->
+
+  <xsd:attributeGroup name="System.Web.UI.ControlAttributeGroupDef">
+    <!-- Attributes -->
+    <xsd:attribute name="ClientIDMode" type="System.Web.UI.ClientIDModeDef" vs:category="Behavior" default="Inherit" />
+    <xsd:attribute name="EnableTheming" type="xsd:boolean" vs:nonbrowseable="true" vs:category="Behavior" default="True" />
+    <xsd:attribute name="EnableViewState" type="xsd:boolean" vs:category="Behavior" default="True" />
+    <xsd:attribute name="ID" type="xsd:string" vs:nonfilterable="true" vs:renametype="classmember" />
+    <xsd:attribute name="SkinID" type="xsd:string" vs:nonbrowseable="true" vs:category="Behavior" vs:nonfilterable="true" default="" />
+    <xsd:attribute name="Visible" type="xsd:boolean" vs:category="Behavior" default="True" />
+    <!-- Events -->
+    <xsd:attribute name="OnDataBinding" vs:omtype="event" vs:nonfilterable="true" vs:category="Data" />
+    <xsd:attribute name="OnDisposed" vs:omtype="event" vs:nonfilterable="true" />
+    <xsd:attribute name="OnInit" vs:omtype="event" vs:nonfilterable="true" />
+    <xsd:attribute name="OnLoad" vs:omtype="event" vs:nonfilterable="true" />
+    <xsd:attribute name="OnPreRender" vs:omtype="event" vs:nonfilterable="true" />
+    <xsd:attribute name="OnUnload" vs:omtype="event" vs:nonfilterable="true" />
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="System.Web.UI.HtmlControls.HtmlAnchorAttributeGroupDef">
+    <xsd:attributeGroup ref="System.Web.UI.ControlAttributeGroupDef" />
+    <!-- Events -->
+    <xsd:attribute name="OnServerClick" vs:omtype="event" vs:nonfilterable="true" vs:category="Action" />
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="System.Web.UI.HtmlControls.HtmlButtonAttributeGroupDef">
+    <xsd:attributeGroup ref="System.Web.UI.ControlAttributeGroupDef" />
+    <!-- Attributes -->
+    <xsd:attribute name="CausesValidation" type="xsd:boolean" vs:category="Behavior" default="True" />
+    <xsd:attribute name="ValidationGroup" type="xsd:string" vs:category="Behavior" default="" />
+    <!-- Events -->
+    <xsd:attribute name="OnServerClick" vs:omtype="event" vs:nonfilterable="true" vs:category="Action" />
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="System.Web.UI.HtmlControls.HtmlFormAttributeGroupDef">
+    <xsd:attributeGroup ref="System.Web.UI.ControlAttributeGroupDef" />
+    <!-- Attributes -->
+    <xsd:attribute name="DefaultButton" type="xsd:string" vs:category="Behavior" default="" />
+    <xsd:attribute name="DefaultFocus" type="xsd:string" vs:category="Behavior" default="" />
+    <xsd:attribute name="SubmitDisabledControls" type="xsd:boolean" vs:category="Behavior" default="False" />
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="System.Web.UI.HtmlControls.HtmlInputButtonAttributeGroupDef">
+    <xsd:attributeGroup ref="System.Web.UI.ControlAttributeGroupDef" />
+    <!-- Attributes -->
+    <xsd:attribute name="CausesValidation" type="xsd:boolean" vs:category="Behavior" default="True" />
+    <xsd:attribute name="ValidationGroup" type="xsd:string" vs:category="Behavior" default="" />
+    <!-- Events -->
+    <xsd:attribute name="OnServerClick" vs:omtype="event" vs:nonfilterable="true" vs:category="Action" />
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="System.Web.UI.HtmlControls.HtmlInputCheckBoxAttributeGroupDef">
+    <xsd:attributeGroup ref="System.Web.UI.ControlAttributeGroupDef" />
+    <!-- Events -->
+    <xsd:attribute name="OnServerChange" vs:omtype="event" vs:nonfilterable="true" vs:category="Action" />
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="System.Web.UI.HtmlControls.HtmlInputHiddenAttributeGroupDef">
+    <xsd:attributeGroup ref="System.Web.UI.ControlAttributeGroupDef" />
+    <!-- Events -->
+    <xsd:attribute name="OnServerChange" vs:omtype="event" vs:nonfilterable="true" vs:category="Action" />
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="System.Web.UI.HtmlControls.HtmlInputImageAttributeGroupDef">
+    <xsd:attributeGroup ref="System.Web.UI.ControlAttributeGroupDef" />
+    <!-- Attributes -->
+    <xsd:attribute name="CausesValidation" type="xsd:boolean" vs:category="Behavior" default="True" />
+    <xsd:attribute name="ValidationGroup" type="xsd:string" vs:category="Behavior" default="" />
+    <!-- Events -->
+    <xsd:attribute name="OnServerClick" vs:omtype="event" vs:nonfilterable="true" vs:category="Action" />
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="System.Web.UI.HtmlControls.HtmlInputRadioButtonAttributeGroupDef">
+    <xsd:attributeGroup ref="System.Web.UI.ControlAttributeGroupDef" />
+    <!-- Events -->
+    <xsd:attribute name="OnServerChange" vs:omtype="event" vs:nonfilterable="true" vs:category="Action" />
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="System.Web.UI.HtmlControls.HtmlInputTextAttributeGroupDef">
+    <xsd:attributeGroup ref="System.Web.UI.ControlAttributeGroupDef" />
+    <!-- Events -->
+    <xsd:attribute name="OnServerChange" vs:omtype="event" vs:nonfilterable="true" vs:category="Action" />
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="System.Web.UI.HtmlControls.HtmlSelectAttributeGroupDef">
+    <xsd:attributeGroup ref="System.Web.UI.ControlAttributeGroupDef" />
+    <!-- Attributes -->
+    <xsd:attribute name="DataSourceID" type="xsd:string" vs:category="Data" default="" />
+    <xsd:attribute name="DataTextField" type="xsd:string" vs:category="Data" default="" />
+    <xsd:attribute name="DataValueField" type="xsd:string" vs:category="Data" default="" />
+    <!-- Events -->
+    <xsd:attribute name="OnServerChange" vs:omtype="event" vs:nonfilterable="true" vs:category="Action" />
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="System.Web.UI.HtmlControls.HtmlTextAreaAttributeGroupDef">
+    <xsd:attributeGroup ref="System.Web.UI.ControlAttributeGroupDef" />
+    <!-- Events -->
+    <xsd:attribute name="OnServerChange" vs:omtype="event" vs:nonfilterable="true" vs:category="Action" />
+  </xsd:attributeGroup>
+
+
+  <!-- TOP LEVEL ATTRIBUTES -->
+
+  <xsd:simpleType name="Microsoft.VisualStudio.Web.WebControlSchemaGenerator.runatDef">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="server" />
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="System.Web.UI.ClientIDModeDef">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Inherit" />
+      <xsd:enumeration value="AutoID" />
+      <xsd:enumeration value="Predictable" />
+      <xsd:enumeration value="Static" />
+    </xsd:restriction>
+  </xsd:simpleType>
+
+</xsd:schema>

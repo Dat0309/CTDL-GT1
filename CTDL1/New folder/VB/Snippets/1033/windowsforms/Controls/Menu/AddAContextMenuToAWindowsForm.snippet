@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Add a Context Menu to a Windows Form</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Adds a context menu to a windows form.</Description>
+      <Shortcut>menuContext</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>form</ID>
+          <Type>Form</Type>
+          <ToolTip>Replace with the form where the context menu should appear.</ToolTip>
+          <Default>Me</Default>
+        </Object>
+        <Literal>
+          <ID>secondItem</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with text for the second item in the menu.</ToolTip>
+          <Default>"&amp;Second Item"</Default>
+        </Literal>
+        <Literal>
+          <ID>firstItem</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with text for the first item in the menu.</ToolTip>
+          <Default>"&amp;First Item"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA[Dim newMenu As New ContextMenuStrip()
+$form$.ContextMenuStrip = newMenu
+
+Dim firstItem As New ToolStripMenuItem()
+Dim secondItem As New ToolStripMenuItem()
+firstItem.Text = $firstItem$
+secondItem.Text = $secondItem$
+
+newMenu.Items.Add(firstItem)
+newMenu.Items.Add(secondItem)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,16 @@
+	//  [!output CLASS_NAME_ROOT] 的主要分派介面
+		
+	[ uuid([!output DISPIID_REGISTRY_FORMAT]) ]
+	dispinterface I[!output CLASS_NAME_ROOT]
+	{
+		properties:
+		methods:
+	};
+
+	//  [!output CLASS_NAME_ROOT] 的類別資訊
+
+	[ uuid([!output CLSID_REGISTRY_FORMAT]) ]
+	coclass [!output CLASS_NAME_ROOT]
+	{
+		[default] dispinterface I[!output CLASS_NAME_ROOT];
+	};

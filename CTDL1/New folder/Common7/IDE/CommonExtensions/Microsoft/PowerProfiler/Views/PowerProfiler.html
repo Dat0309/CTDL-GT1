@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Power Graph</title>
+    <!-- If in future we support win 8, then we have to change this value to 10-->
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <link id="PowerProfiler.css" rel="stylesheet" href="CSS/PowerProfiler.css" type="text/css" data-plugin-theme="true" />
+
+    <link id="Ruler.css" rel="stylesheet" href="CSS/Ruler.css" type="text/css" data-plugin-theme="true" />
+
+    <!-- Gant chart -->
+    <link id="ItemContainer.css" rel="stylesheet" href="CSS/ItemContainer.css" type="text/css" data-plugin-theme="true" />
+    <link id="StackPanel.css" rel="stylesheet" href="CSS/StackPanel.css" type="text/css" data-plugin-theme="true" />
+    <link id="GanttChart.css" rel="stylesheet" href="CSS/GanttChart.css" type="text/css" data-plugin-theme="true" />
+    <link id="Divider.css" rel="stylesheet" href="CSS/Divider.css" type="text/css" data-plugin-theme="true" />
+
+    <script type="text/javascript" src="Script/enumHelper.js"></script>
+    <script type="text/javascript" src="Script/plugin.js"></script>
+    <script type="text/javascript" src="Script/DiagnosticsHub.js"></script>
+    <script type="text/javascript" src="Script/UIControls.js"></script>
+    <script type="text/javascript" src="Script/Controls.js"></script>
+
+    <script type="text/javascript" src="Script/PowerProfiler.js"></script>
+
+    <script id="summaryDataTemplate" type="text/html">
+        <div id="summaryDiv" class="summaryDiv">
+            <div id="summaryTitle" class="summaryTitle"></div>
+            <div id="summaryGraphContainer" class="summaryGraphContainer"></div>
+            <div id="summaryDecription" class="summaryDecription"></div>
+        </div>
+    </script>
+
+    <script id="mainViewTemplate" type="text/html">
+        <div id="mainView" class="mainView">
+            <div id="powerTimelineViewContainer" class="powerTimelineViewContainer">
+            </div>
+            <div id="summaryViewContainer" class="summaryViewContainer">
+            </div>
+        </div>
+    </script>
+
+    <script id="networkDataTooltipTemplate" type="text/html">
+        <div id="networkDataTooltip" class="networkDataTooltip">
+            <div id="downloadData"></div>
+            <div id="uploadData"></div>
+            <div id="energyConsumed"></div>
+        </div>
+    </script>
+</head>
+<body>
+    <div id="mainContainer" class="mainContainer"></div>
+</body>
+</html>

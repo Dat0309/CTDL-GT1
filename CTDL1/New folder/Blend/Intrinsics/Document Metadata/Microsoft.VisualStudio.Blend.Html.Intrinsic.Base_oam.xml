@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<widget spec="1.0" id="ms-blend://Microsoft.VisualStudio.Blend.Html.Intrinsic.Base" name="Microsoft.VisualStudio.Blend.Html.Intrinsic.Base" version="1.0" xmlns="http://openajax.org/metadata">
+  <locale messages="..\all-all.xml" />
+  <locale lang="en-us" messages="..\en-us.xml" />
+  <locale lang="de-de" messages="..\de-de.xml" />
+  <locale lang="es-es" messages="..\es-es.xml" />
+  <locale lang="fr-fr" messages="..\fr-fr.xml" />
+  <locale lang="it-it" messages="..\it-it.xml" />
+  <locale lang="ja" messages="..\ja.xml" />
+  <locale lang="ko" messages="..\ko.xml" />
+  <locale lang="ru-ru" messages="..\ru-ru.xml" />
+  <locale lang="zh-cn" messages="..\zh-cn.xml" />
+  <locale lang="zh-tw" messages="..\zh-tw.xml" />
+  <author name="Microsoft Corporation" />
+  <title type="text/plain" locid="Microsoft.VisualStudio.Blend.Html.Intrinsic.Base.Title"><![CDATA[<base>]]></title>
+  <description type="text/plain" locid="Microsoft.VisualStudio.Blend.Html.Intrinsic.Base.Description"><![CDATA[The base element allows authors to specify the document base URL for the purposes of resolving relative URLs and the name of the default browsing context for the purposes of following hyperlinks.]]></description>
+  <content><![CDATA[<base>]]></content>
+  <icons>
+    <icon src="Microsoft.VisualStudio.Blend.Html.Intrinsic.Base.16x16.png" width="16" height="16" />
+    <icon src="Microsoft.VisualStudio.Blend.Html.Intrinsic.Base.12x12.png" width="12" height="12" />
+  </icons>
+</widget>

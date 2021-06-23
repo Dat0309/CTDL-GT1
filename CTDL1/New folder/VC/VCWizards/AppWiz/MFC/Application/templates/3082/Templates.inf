@@ -1,0 +1,227 @@
+readme.txt
+[!if APP_TYPE_DLG]
+dlgroot.h
+dlgroot.cpp
+dialog.h
+dialog.cpp
+[!if HTML_DIALOG]
+root.htm
+[!endif]
+[!if AUTOMATION]
+dlgproxy.h
+dlgproxy.cpp
+[!endif]
+[!else]
+root.h
+root.cpp
+[!endif]
+
+[!if AUTOMATION]
+root.idl
+[!endif]
+
+stdafx.h
+targetver.h
+stdafx.cpp
+
+[!if !APP_TYPE_DLG]
+frame.h
+frame.cpp
+[!if APP_TYPE_MDI]
+childfrm.h
+childfrm.cpp
+[!endif]
+[!endif]
+
+[!if !APP_TYPE_DLG]
+[!if DOCVIEW]
+doc.h
+doc.cpp
+view.h
+view.cpp
+[!else]
+wndview.h
+wndview.cpp
+[!endif]
+[!if PROJECT_STYLE_EXPLORER]
+treeview.h
+treeview.cpp
+[!endif]
+[!endif]
+
+[!if CONTAINER_SERVER || FULL_SERVER || MINI_SERVER || AUTOMATION || HAS_SUFFIX]
+[!if !HTML_EDITVIEW]
+root.reg
+[!endif]
+[!endif]
+
+[!if OLEDB || ODBC]
+recset.h
+recset.cpp
+[!endif]
+
+[!if CONTAINER_SERVER || FULL_SERVER || MINI_SERVER]
+srvritem.h
+srvritem.cpp
+ipframe.h
+ipframe.cpp
+[!endif]
+
+[!if CONTAINER || CONTAINER_SERVER]
+cntritem.h
+cntritem.cpp
+[!endif]
+
+[!if APP_TYPE_DLG]
+dlgres.h
+dlgall.rc
+[!else]
+resource.h
+all.rc
+
+[!if ADV_DOCKING_EXPLORER]
+fileview.h
+fileview.cpp
+CopyOnly | file_view.ico
+CopyOnly | file_view_hc.ico
+classview.h
+classview.cpp
+CopyOnly | class_view.ico
+CopyOnly | class_view_hc.ico
+viewtree.h
+viewtree.cpp
+CopyOnly | fileview.bmp
+CopyOnly | fileview_hc.bmp
+CopyOnly | classview.bmp
+CopyOnly | classview_hc.bmp
+CopyOnly | explorer.bmp
+CopyOnly | explorer_hc.bmp
+CopyOnly | sort.bmp
+CopyOnly | sort_hc.bmp
+CopyOnly | menuimages.bmp
+CopyOnly | menuimages_hc.bmp
+[!endif]
+
+[!if ADV_DOCKING_OUTPUT]
+outputwnd.h
+outputwnd.cpp
+CopyOnly | output_wnd.ico
+CopyOnly | output_wnd_hc.ico
+[!endif]
+
+[!if ADV_DOCKING_PROPERTIES]
+propertieswnd.h
+propertieswnd.cpp
+CopyOnly | properties_wnd.ico
+CopyOnly | properties_wnd_hc.ico
+CopyOnly | properties.bmp
+CopyOnly | properties_hc.bmp
+[!endif]
+
+[!if ADV_DOCKING_NAVIGATION]
+calendarbar.h
+calendarbar.cpp
+CopyOnly | nav_large.bmp
+CopyOnly | nav_large_hc.bmp
+CopyOnly | pages.bmp
+CopyOnly | pages_hc.bmp
+CopyOnly | pages_small.bmp
+CopyOnly | pages_small_hc.bmp
+[!endif]
+
+[!if ADV_DOCKING_CAPTION]
+CopyOnly | info.bmp
+[!endif]
+
+[!if RIBBON_TOOLBAR]
+CopyOnly | buttons.bmp
+CopyOnly | filelarge.bmp
+CopyOnly | filesmall.bmp
+CopyOnly | main.bmp
+CopyOnly | writelarge.bmp
+CopyOnly | writesmall.bmp
+ribbon.mfcribbon-ms
+[!endif]
+
+[!if MENUBAR_TOOLBAR]
+CopyOnly | userimages.bmp
+[!endif]
+
+[!endif]
+
+root.rc2
+
+[!if DOCVIEW && !APP_TYPE_DLG]
+CopyOnly | doc.ico
+[!endif]
+
+CopyOnly | root.ico
+
+[!if !APP_TYPE_DLG && DOCKING_TOOLBAR || TOOLBAR_STYLE_REBAR || MENUBAR_TOOLBAR || RIBBON_TOOLBAR]
+        [!if DOCVIEW]
+                [!if !PROJECT_STYLE_EXPLORER && !LIST_VIEW]
+                        [!if DB_VIEW_NO_FILE]
+CopyOnly | tbd__.bmp
+                                [!if MENUBAR_TOOLBAR || RIBBON_TOOLBAR]
+CopyOnly | tbd__256.bmp
+                                [!endif]
+                        [!else]
+                                [!if OLEDB_RECORD_VIEW || ODBC_RECORD_VIEW]
+CopyOnly | tbr__.bmp
+                                        [!if MENUBAR_TOOLBAR || RIBBON_TOOLBAR]
+CopyOnly | tbr__256.bmp
+                                        [!endif]
+                                [!else]
+CopyOnly | tba__.bmp
+                                        [!if MENUBAR_TOOLBAR || RIBBON_TOOLBAR]
+CopyOnly | tba__256.bmp
+                                        [!endif]
+                                [!endif]
+                        [!endif]
+                [!else]
+                        [!if DB_VIEW_NO_FILE]
+CopyOnly | tbed_.bmp
+                                [!if MENUBAR_TOOLBAR || RIBBON_TOOLBAR]
+CopyOnly | tbed_256.bmp
+                                [!endif]
+                        [!else]
+                                [!if LIST_VIEW]
+CopyOnly | tbea_.bmp
+                                        [!if MENUBAR_TOOLBAR || RIBBON_TOOLBAR]
+CopyOnly | tbea_256.bmp
+                                        [!endif]
+                                [!else]
+CopyOnly | tba__.bmp
+                                        [!if MENUBAR_TOOLBAR || RIBBON_TOOLBAR]
+CopyOnly | tba__256.bmp
+                                        [!endif]
+                                [!endif]
+                        [!endif]
+                [!endif]
+                [!if CONTAINER_SERVER || FULL_SERVER || MINI_SERVER]
+                        [!if OLEDB_RECORD_VIEW || ODBC_RECORD_VIEW]
+CopyOnly | tbr_i.bmp
+                                [!if MENUBAR_TOOLBAR || RIBBON_TOOLBAR]
+CopyOnly | tbr_i256.bmp
+                                [!endif]
+                        [!else]
+CopyOnly | tba_i.bmp
+                                [!if MENUBAR_TOOLBAR || RIBBON_TOOLBAR]
+CopyOnly | tba_i256.bmp
+                                [!endif]
+                        [!endif]
+                [!endif]
+        [!else]
+                [!if APP_TYPE_MDI]
+CopyOnly | tbndm.bmp
+                        [!if MENUBAR_TOOLBAR || RIBBON_TOOLBAR]
+CopyOnly | tbndm256.bmp
+                        [!endif]
+                [!else]
+CopyOnly | tbnds.bmp
+                        [!if MENUBAR_TOOLBAR || RIBBON_TOOLBAR]
+CopyOnly | tbnds256.bmp
+                        [!endif]
+                [!endif]
+        [!endif]
+[!endif]

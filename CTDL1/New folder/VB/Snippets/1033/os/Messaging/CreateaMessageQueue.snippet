@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Create a Public Message Queue</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Creates a public message queue on the local computer.</Description>
+      <Shortcut>mqCreate</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Messaging.dll</Assembly>
+          <Url />
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Messaging</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>PublicQueue</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with the queue path.</ToolTip>
+          <Default>".\NewQueue"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[' Public queue
+MessageQueue.Create($PublicQueue$)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

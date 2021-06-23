@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SchemaCatalog xmlns="http://schemas.microsoft.com/xsd/catalog">
+  <Association extension="config" schema="%InstallRoot%/xml/schemas/RazorCustomSchema.xsd" condition="starts-with($TargetFrameworkMoniker, '.NETFramework,Version=v4.')" />
+</SchemaCatalog>

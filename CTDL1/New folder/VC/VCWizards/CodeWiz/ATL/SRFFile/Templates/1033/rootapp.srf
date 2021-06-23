@@ -1,0 +1,6 @@
+<html>
+{{handler [!output PROJECT_NAME].dll/Default}}
+<body>
+
+</body>
+</html>

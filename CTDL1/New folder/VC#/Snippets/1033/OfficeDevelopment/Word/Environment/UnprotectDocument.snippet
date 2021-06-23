@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Unprotect a Document</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Removes protection from a Word document.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Word.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Word = Microsoft.Office.Interop.Word</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>passwordValue</ID>
+          <Type>System.String</Type>
+          <ToolTip>Replace with the password string used to protect the document. Passwords are case-sensitive. If the document is protected with a password and the correct password is not supplied, a dialog box prompts the user for the password.</ToolTip>
+          <Default>"Password"</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>password</ID>
+          <Type>System.Object</Type>
+          <ToolTip>Replace with a variable to hold the password value.</ToolTip>
+          <Default>password</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>document</ID>
+          <Type>Microsoft.Office.Interop.Word.Document</Type>
+          <ToolTip>Replace with the document to remove the protection from.</ToolTip>
+          <Default>document</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="CSharp" Kind="" Delimiter="$"><![CDATA[
+object $password$ = $passwordValue$;
+$document$.Unprotect(ref $password$);
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

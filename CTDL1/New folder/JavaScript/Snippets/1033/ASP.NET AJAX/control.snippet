@@ -1,0 +1,41 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>control</Title>
+    <Author>Microsoft Corporation</Author>
+    <Description>Code snippet for an ASP.NET AJAX client control</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>namespace</ID>
+        <ToolTip>Namespace</ToolTip>
+        <Default>mynamespace</Default>
+      </Literal>
+      <Literal>
+        <ID>controlname</ID>
+        <ToolTip>Name of the control</ToolTip>
+        <Default>mycontrol</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="JavaScript"><![CDATA[Type.registerNamespace("$namespace$");
+
+$namespace$.$controlname$ = function(element) {
+    $namespace$.$controlname$.initializeBase(this, [element]);
+}
+
+$namespace$.$controlname$.prototype = {
+    initialize: function() {
+        $namespace$.$controlname$.callBaseMethod(this, 'initialize');
+    },
+    dispose: function() {
+        $namespace$.$controlname$.callBaseMethod(this, 'dispose');
+    }
+}
+
+$namespace$.$controlname$.registerClass('$namespace$.$controlname$', Sys.UI.Control);$end$
+]]></Code>
+  </Snippet>
+</CodeSnippet>

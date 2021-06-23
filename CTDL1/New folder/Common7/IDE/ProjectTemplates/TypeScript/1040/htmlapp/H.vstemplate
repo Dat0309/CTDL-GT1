@@ -1,0 +1,46 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+
+  <TemplateData>
+
+    <Name>Applicazione HTML con TypeScript</Name>
+
+    <Description>Applicazione HTML compilata con TypeScript</Description>
+
+    <ProjectType>TypeScript</ProjectType>
+
+    <ProjectSubType>
+
+    </ProjectSubType>
+
+    <SortOrder>1000</SortOrder>
+
+    <CreateNewFolder>true</CreateNewFolder>
+
+    <DefaultName>TypeScriptHTMLApp</DefaultName>
+
+    <ProvideDefaultName>true</ProvideDefaultName>
+
+    <LocationField>Enabled</LocationField>
+
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+
+    <Icon Package="{2ffe45c4-5c73-493c-b187-f2e955ff875e}" ID="4"></Icon>
+
+  </TemplateData>
+
+  <TemplateContent>
+
+    <Project TargetFileName="TypeScriptHTMLApp.csproj" File="TypeScriptHTMLApp.csproj" ReplaceParameters="true">
+
+      <ProjectItem ReplaceParameters="true" TargetFileName="app.css">app.css</ProjectItem>
+
+      <ProjectItem ReplaceParameters="true" TargetFileName="index.html">index.html</ProjectItem>
+
+      <ProjectItem ReplaceParameters="false" TargetFileName="app.ts" OpenInEditor="true">app.ts</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="web.config">web.config</ProjectItem>
+
+    </Project>
+
+  </TemplateContent>
+
+</VSTemplate>

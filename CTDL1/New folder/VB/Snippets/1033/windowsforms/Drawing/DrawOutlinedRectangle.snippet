@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Draw Outlined Rectangle</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Draws outlined rectangle on a form.</Description>
+      <Shortcut>drawOutRect</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>System.Drawing.dll</Assembly>
+        </Reference>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Drawing</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Object>
+          <ID>form</ID>
+          <Type>System.Windows.Forms.Form</Type>
+          <ToolTip>Replace with a reference for the form or control to draw the ellipse on.</ToolTip>
+          <Default>Me</Default>
+        </Object>
+        <Object>
+          <ID>color2</ID>
+          <Type>System.Drawing.Color</Type>
+          <ToolTip>Replace with the pen color.</ToolTip>
+          <Default>Color.Red</Default>
+        </Object>
+        <Literal>
+          <ID>location2</ID>
+          <ToolTip>Replace with coordinates for location and size of the shape.</ToolTip>
+          <Default>0, 0, 200, 300</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[    Using redPen As New Pen($color2$), _
+        formGraphics As Graphics = $form$.CreateGraphics()
+        formGraphics.DrawRectangle(redPen, New Rectangle($location2$))
+    End Using]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

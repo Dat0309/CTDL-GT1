@@ -1,0 +1,24 @@
+﻿<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+    <TemplateData>
+        <DefaultName>_PartialPage.vbhtml</DefaultName>
+        <Name Package="{141DA93E-88A7-45D5-B15B-89117F514D64}" ID="21118"/>
+        <Description Package="{141DA93E-88A7-45D5-B15B-89117F514D64}" ID="21123"/>
+        <Icon Package="{141DA93E-88A7-45D5-B15B-89117F514D64}" ID="22003"/>
+        <ProjectType>VisualBasic</ProjectType>
+        <SortOrder>4</SortOrder>
+        <NumberOfParentCategoriesToRollUp>2</NumberOfParentCategoriesToRollUp>
+        <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+        <TemplateID>MvcPartialPageItemTemplate.vbhtml.vstemplate.v401</TemplateID>
+        <TemplateGroupID>MVC4</TemplateGroupID>
+        <ShowByDefault>false</ShowByDefault>
+    </TemplateData>
+    <TemplateContent>
+        <CustomParameters>
+            <CustomParameter Name="$language$" Value="VB" />
+            <CustomParameter Name="$ParentExtension$" Value=".vbhtml"/>
+            <CustomParameter Name="$ChildExtension$" Value=".vb"/>
+        </CustomParameters>
+        <References />
+        <ProjectItem SubType="" TargetFileName="$fileinputname$.vbhtml" ReplaceParameters="true">Views\Home\_PartialPage.vbhtml</ProjectItem>
+    </TemplateContent>
+</VSTemplate>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Convert between Hiragana and Katakana Characters (Japanese Only)</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Converts between Hiragana and Katakana characters in a String.</Description>
+      <Shortcut>typeHiragana</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>Katakana</ID>
+          <Type />
+          <ToolTip>Replace with Katakana String.</ToolTip>
+          <Default>"Katakana String"</Default>
+          <Function />
+        </Literal>
+        <Literal>
+          <ID>Hiragana</ID>
+          <Type />
+          <ToolTip>Replace with Hiragana String.</ToolTip>
+          <Default>"Hiragana String"</Default>
+          <Function />
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[' Convert Katakana to Hiragana (Japanese Only).
+Dim hString As String = StrConv($Katakana$, _
+    VbStrConv.Hiragana)
+' Convert Hiragana to Katakana (Japanese Only).
+Dim kString As String = StrConv($Hiragana$, _
+    VbStrConv.Katakana)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

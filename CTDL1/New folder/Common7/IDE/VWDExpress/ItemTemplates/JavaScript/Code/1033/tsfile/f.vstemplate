@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+
+  <TemplateData>
+
+    <Name>TypeScript File</Name>
+
+    <Description>Empty TypeScript file</Description>
+
+    <Icon Package="{2ffe45c4-5c73-493c-b187-f2e955ff875e}" ID="3"></Icon>
+
+    <TemplateID>1a0b3f9d-58ec-4d3e-89ac-8bdd63253352</TemplateID>
+
+    <TemplateGroupID>JavaScript_Neutral_GroupID</TemplateGroupID>
+    <ProjectType>JavaScript</ProjectType>
+    <BlendProjectSubType>WJApplication</BlendProjectSubType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>file.ts</DefaultName>
+
+  </TemplateData>
+
+  <TemplateContent>
+
+    <ProjectItem SubType="Code" ItemType="TypeScriptCompile" TargetFileName="$fileinputname$.ts" ReplaceParameters="true">file.ts</ProjectItem>
+
+  </TemplateContent>
+
+</VSTemplate>

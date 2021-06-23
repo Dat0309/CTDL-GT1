@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Boş Paylaşılan Alt Şablonu</Name>
+    <Description>Boş Paylaşılan Varlık Projesi için Paylaşılan Alt Şablon.</Description>
+    <ProjectType>JavaScript</ProjectType>
+    <CreateInPlace>true</CreateInPlace>
+    <CreateNewFolder>true</CreateNewFolder>
+    <BlendCreateNewFolder>true</BlendCreateNewFolder>
+    <DefaultName>App</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <TargetPlatformName>WindowsPhoneApp</TargetPlatformName>
+    <RequiredPlatformVersion>6.3.1</RequiredPlatformVersion>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="Application.Shared.shproj" ReplaceParameters="true">
+      <ProjectItem TargetFileName="$ext_safeprojectname$.Shared.projitems" ReplaceParameters="true">Shared.projitems</ProjectItem>
+      <ProjectItem TargetFileName="js\default.js" ReplaceParameters="true">default.js</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

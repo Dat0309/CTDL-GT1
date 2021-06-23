@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{91DFF702-E034-4CE2-9EE6-A5BF33341908}" ID="1009" />
+    <Description Package="{91DFF702-E034-4CE2-9EE6-A5BF33341908}" ID="1010" />
+    <Icon Package="{91DFF702-E034-4CE2-9EE6-A5BF33341908}" ID="4006" />
+    <TemplateID>Microsoft.Templates.VC.WindowsPhone.Resw</TemplateID>
+    <TemplateGroupID>WinRT-Native-Phone-6.3</TemplateGroupID>
+
+    <ProjectType>VC</ProjectType>
+    <NumberOfParentCategoriesToRollUp>0</NumberOfParentCategoriesToRollUp>
+    <DefaultName>Resources.resw</DefaultName>
+    <SortOrder>1000</SortOrder>
+    <TargetPlatformName>Windows</TargetPlatformName>
+    <RequiredPlatformVersion>6.3.0</RequiredPlatformVersion>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem>Resources.resw</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

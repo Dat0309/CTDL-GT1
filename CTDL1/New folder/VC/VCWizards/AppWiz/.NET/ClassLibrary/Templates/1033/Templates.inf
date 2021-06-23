@@ -1,0 +1,9 @@
+OpenFile | root.h
+root.cpp
+readme.txt
+AssemblyInfo.cpp
+Stdafx.h
+Stdafx.cpp
+app.rc
+resource.h
+CopyOnly | app.ico

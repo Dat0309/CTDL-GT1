@@ -1,0 +1,2 @@
+﻿<SequentialWorkflowActivity x:Class="$rootnamespace$.$safeitemname$" Name="$safeitemname$" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+</SequentialWorkflowActivity>

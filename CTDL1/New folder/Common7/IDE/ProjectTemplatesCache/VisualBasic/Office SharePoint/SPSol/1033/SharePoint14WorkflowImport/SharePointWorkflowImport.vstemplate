@@ -1,0 +1,35 @@
+﻿<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="365" />
+    <Description Package ="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID ="366" />
+    <Icon Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="225" />
+    <TemplateID>SharePoint14WorkflowImport_VB</TemplateID>
+    <ProjectType>VisualBasic</ProjectType>
+    <CreateNewFolder>true</CreateNewFolder>
+    <CreateInPlace>true</CreateInPlace>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>WorkflowImportProject</DefaultName>
+    <SortOrder>9950</SortOrder>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="SharePointWorkflowImport.vbproj" ReplaceParameters="true">
+      <Folder Name="My Project" TargetFolderName="My Project">
+        <ProjectItem ReplaceParameters="true">AssemblyInfo.vb</ProjectItem>
+      </Folder>
+      <Folder Name="Package" TargetFolderName="Package">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Package.package">Package.package</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Package.Template.xml">manifest.xml</ProjectItem>
+      </Folder>
+    </Project>
+    <CustomParameters>
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.WorkflowImportWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

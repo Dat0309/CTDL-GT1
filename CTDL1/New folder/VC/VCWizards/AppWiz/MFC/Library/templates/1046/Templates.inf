@@ -1,0 +1,18 @@
+readme.txt
+root.cpp
+[!if DLL_TYPE_EXTENSION]
+dllmain.cpp
+[!endif]
+[!if DLL_TYPE_REGULAR || DLL_TYPE_REGULAR_STATIC]
+root.h
+[!endif]
+root.def
+[!if AUTOMATION]
+root.idl
+[!endif]
+stdafx.h
+targetver.h
+stdafx.cpp
+resource.h
+all.rc
+root.rc2

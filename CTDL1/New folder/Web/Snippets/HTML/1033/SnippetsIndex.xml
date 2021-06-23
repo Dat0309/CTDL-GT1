@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SnippetCollection>
+    <Language Lang="HTML" Guid="{58E975A0-F8FE-11D2-A6AE-00104BCC7269}">
+        <SnippetDir>
+            <OnOff>On</OnOff>
+            <Installed>true</Installed>
+            <Locale>1033</Locale>
+            <DirPath>%InstallRoot%\Web\Snippets\HTML\%LCID%\ASP.NET\</DirPath>	
+            <LocalizedName>ASP.NET</LocalizedName>
+        </SnippetDir>
+        <SnippetDir>
+            <OnOff>On</OnOff>
+            <Installed>true</Installed>
+            <Locale>1033</Locale>
+            <DirPath>%InstallRoot%\Web\Snippets\HTML\%LCID%\HTML\</DirPath>	
+            <LocalizedName>HTML</LocalizedName>
+        </SnippetDir>
+    </Language>
+</SnippetCollection>

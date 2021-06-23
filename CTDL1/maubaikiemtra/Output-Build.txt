@@ -1,0 +1,4 @@
+﻿1>------ Build started: Project: maubaikiemtra, Configuration: Debug Win32 ------
+1>  program.cpp
+1>  maubaikiemtra.vcxproj -> D:\CTDL1\maubaikiemtra\Debug\maubaikiemtra.exe
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========

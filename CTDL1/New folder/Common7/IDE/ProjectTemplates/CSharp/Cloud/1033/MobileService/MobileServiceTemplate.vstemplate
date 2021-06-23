@@ -1,0 +1,31 @@
+﻿<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="ProjectGroup">
+  <TemplateData>
+    <Name Package="{f1a8554a-c492-4871-92e2-7a5ee5940c00}" ID="500" />
+    <Description Package="{f1a8554a-c492-4871-92e2-7a5ee5940c00}" ID="501" />
+    <Icon>MobileServiceTemplate.ico</Icon>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>MobileService</ProjectSubType>
+    <TemplateGroupID>MobileService</TemplateGroupID>
+    <TemplateID>Microsoft.WAP.CSharp.MobileService</TemplateID>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <SortOrder>200</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>MobileService</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <RequiredFrameworkVersion>4.5</RequiredFrameworkVersion>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection />
+    <CustomParameters>
+      <CustomParameter Name="$language$" Value="CSharp" />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.WindowsAzure.Services.Wizard, Version=1.4.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.WindowsAzure.Services.Wizard.MobileServiceProjectTemplateWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>
+

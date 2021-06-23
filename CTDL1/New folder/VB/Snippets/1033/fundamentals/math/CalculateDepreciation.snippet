@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Calculate the Sum-of-Years Depreciation</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Returns a Double specifying the sum-of-years digits depreciation of an asset for a specified period.</Description>
+      <Shortcut>mathDep</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>Cost</ID>
+          <Type>Double</Type>
+          <ToolTip>Replace with the initial cost of the asset</ToolTip>
+          <Default>1000</Default>
+        </Literal>
+        <Literal>
+          <ID>EndValue</ID>
+          <Type>Double</Type>
+          <ToolTip>Replace with the value of the asset at the end of its useful life</ToolTip>
+          <Default>200</Default>
+        </Literal>
+        <Literal>
+          <ID>UsefulLife</ID>
+          <Type>Double</Type>
+          <ToolTip>Replace with the length of the useful life of the asset in years</ToolTip>
+          <Default>3</Default>
+        </Literal>
+        <Literal>
+          <ID>Year</ID>
+          <Type>Double</Type>
+          <ToolTip>Replace with the year for which asset depreciation is calculated</ToolTip>
+          <Default>2005</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim depreciation As Double
+depreciation = SYD($Cost$, $EndValue$, $UsefulLife$, $Year$)
+
+
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

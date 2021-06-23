@@ -1,0 +1,168 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+    -ms-high-contrast-adjust: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+body.showFocus *:focus {
+    outline: invert dotted thin;
+}
+
+body {
+    font-family: "Segoe UI", Arial, Sans-Serif; /*[{VSFONTFAMILY_ENVIRONMENT} , Arial, Sans-Serif]*/
+    font-size: 9pt; /*[{VSFONTSIZE_ENVIRONMENT}]*/
+    font-weight: "normal"; /*[{VSFONTWEIGHT_ENVIRONMENT}]*/
+    color: #000000; /*[{VSCOLOR_TOOLWINDOW_TEXT}]*/
+
+    scrollbar-arrow-color: #606060; /*[{EnvironmentColors.ScrollBarArrowGlyphColorKey}]*/
+    scrollbar-face-color: #CCCCCC; /*[{EnvironmentColors.ScrollBarThumbBackgroundColorKey}]*/
+    scrollbar-3dlight-color: #EFEFEF; /*[{EnvironmentColors.ScrollBarBackgroundColorKey}]*/
+    scrollbar-darkshadow-color: #EFEFEF; /*[{EnvironmentColors.ScrollBarBackgroundColorKey}]*/
+    scrollbar-highlight-color: #EFEFEF; /*[{EnvironmentColors.ScrollBarBackgroundColorKey}]*/
+    scrollbar-shadow-color: #EFEFEF; /*[{EnvironmentColors.ScrollBarBackgroundColorKey}]*/
+    scrollbar-track-color: #EFEFEF; /*[{EnvironmentColors.ScrollBarBackgroundColorKey}]*/
+}
+
+#mainContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.ScrollContainer {
+    overflow:auto;
+}
+
+.BPT-Toolbar {
+    width: 100%;
+    height: 2.18em;
+    background-color: #D1D1D2; /*[{VSCOLOR_COMMANDBAR_GRADIENT_BEGIN}]*/
+    color: #000000; /*[{VSCOLOR_TOOLWINDOW_TEXT}]*/
+    border-bottom: 1px solid #D1D1D2; /*[{VSCOLOR_COMMANDBAR_GRADIENT_BEGIN}]*/
+    overflow: visible;
+    display: table;
+    padding: 0;
+    margin: 0;
+    position:fixed;
+    z-index:1;
+}
+
+.BPT-Toolbar ::selection { 
+    background: transparent; 
+}
+
+.BPT-Toolbar-Container {
+    display: table-row;
+}
+
+.BPT-Toolbar-Left {
+    display: table-cell;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.BPT-Toolbar-Right {
+    display: table-cell;
+    white-space: nowrap;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.BPT-ToolbarSeparator {
+    color: #8591A2; /*[{VSCOLOR_COMMANDBAR_TOOLBAR_SEPARATOR}]*/
+    display: inline-block;
+    vertical-align: middle;
+    border-right: 1px solid #8591A2; /*[1px solid {VSCOLOR_COMMANDBAR_TOOLBAR_SEPARATOR}]*/
+    margin-right: 26px;
+}
+
+.BPT-ToolbarSeparator div {
+    float: left;
+}
+
+.BPT-ToolbarToggleSeparator {
+    margin: 0 3px 0 0;
+}
+
+.BPT-ToolbarButton, .BPT-ToolbarLabel {
+    cursor: default;
+    padding: 0 5px 0 5px;
+    display: inline-block;
+    border: 1px solid transparent;
+    vertical-align: middle;
+    height: 1.84em;
+}
+
+.BPT-Toolbar-Left > div:not(.BPT-ToolbarSeparator) {
+    margin-left: -23px;
+}
+.BPT-Toolbar-Left > div:not(.BPT-ToolbarSeparator):first-of-type {
+    margin-left: 2px;
+}
+
+.BPT-ToolbarButton div, .BPT-ToolbarLabel div {
+    float: right;
+    margin-top: 0.23em;
+}
+
+.BPT-ToolbarButton img {
+    margin: 2px 4px 0 -2px;
+    vertical-align: middle;
+}
+
+.BPT-ToolbarButton-StateDisabled {
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: #808080; /*[{VSCOLOR_COMMANDBAR_TEXT_INACTIVE}]*/
+}
+
+.BPT-ToolbarButton-StateDisabled img {
+    opacity: 0.4;
+}
+
+
+.BPT-ToolbarToggleButton {
+    padding-right: 4px;
+}
+
+.BPT-ToolbarToggleButton div {
+}
+
+.BPT-ToolbarToggleButton img {
+}
+
+.BPT-ToolbarToggleButton-StateOn {
+    color: #000000; /*[{VSCOLOR_COMMANDBAR_TEXT_SELECTED}]*/
+    background-color: #FFEFBB; /*[{VSCOLOR_COMMANDBAR_SELECTED}]*/
+    border: 1px solid #E5C365; /*[1px solid {VSCOLOR_COMMANDBAR_SELECTED_BORDER}]*/
+}
+
+.BPT-ToolbarButton-MouseHover {
+    color: #000000; /*[{VSCOLOR_COMMANDBAR_TEXT_SELECTED}]*/
+    background-color: #FFF3CD; /*[{VSCOLOR_COMMANDBAR_MOUSEOVER_BACKGROUND_MIDDLE1}]*/
+    border: 1px solid #E5C365; /*[1px solid {VSCOLOR_COMMANDBAR_SELECTED_BORDER}]*/
+}
+
+.BPT-ToolbarToggleButton-StateOn.BPT-ToolbarButton-MouseHover {
+    background-color: #FFFCF4; /*[{VSCOLOR_COMMANDBAR_MOUSEOVER_BACKGROUND_BEGIN}]*/
+    border: 1px solid #E5C365; /*[1px solid {VSCOLOR_COMMANDBAR_SELECTED_BORDER}]*/
+}
+
+.BPT-ToolbarButton-MouseDown {
+    background-color: #FFE8A6; /*[{VSCOLOR_COMMANDBAR_MOUSEDOWN_BACKGROUND_END}]*/
+    border: 1px solid #E5C365; /*[1px solid {VSCOLOR_COMMANDBAR_MOUSEDOWN_BORDER}]*/
+}
+
+.BPT-FileLink, .BPT-HelpLink {
+    border: 1px solid transparent;
+    color: #1382CE; /*[{EnvironmentColors.CommandBarMenuLinkTextColorKey}]*/ 
+    cursor: pointer;
+}
+
+.BPT-FileLink:hover, .BPT-HelpLink:hover{
+    color: #5C99FF; /*[{EnvironmentColors.CommandBarMenuLinkTextHoverColorKey}]*/
+    text-decoration: underline;
+}

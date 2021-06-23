@@ -1,0 +1,54 @@
+﻿<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="303" />
+    <Description Package="{0E109BD6-39F8-41AC-97B5-257344833610}" ID="302" />
+    <Icon Package="{D162022B-0058-4622-B6C2-03D6F60B2CFA}" ID="203" />
+    <TemplateID>SharePoint15BDC_VB</TemplateID>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+    <ProjectType>VisualBasic</ProjectType>
+    <SortOrder>110</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>    
+    <DefaultName>BdcModel</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName> 
+    <CreateInPlace>true</CreateInPlace>
+    <TemplateGroupID>SharePointItemTemplateGroupID</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\SharePointProjectItem.spdata" OpenInEditor="false">SharePointBDC.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\$fileinputname$.bdcm" OpenInEditor="false">SharePointBDC.bdcm</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\$fileinputname$.bdcm.diagram" OpenInEditor="false">SharePointBDC.bdcm.diagram</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Entity1.vb" OpenInEditor="false">Entity1.vb</ProjectItem>	
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Entity1Service.vb" OpenInEditor="false">Entity1Service.vb</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="SharePointProjectTemplateAttributes" Value="ProjectItem"/>
+      <CustomParameter Name="SharePointProjectParentFilter" Value="General;ProjectItem"/>
+      
+      <!-- localization tag -->    
+      <CustomParameter Name="$loc_BdcmAddTDTodoComment$" _locID="$loc_BdcmAddTDTodoComment$" _locAttrData="Value" Value="TODO: Add TypeDescriptors when you add properties to Entity1." />
+      <CustomParameter Name="$loc_BdcmFinderEndComment$" _locID="$loc_BdcmFinderEndComment$" _locAttrData="Value" Value="end finder method" />
+      <CustomParameter Name="$loc_BdcmFinderStartComment$" _locID="$loc_BdcmFinderStartComment$" _locAttrData="Value" Value="start finder method" />
+      <CustomParameter Name="$loc_BdcmFinderTodoComment$" _locID="$loc_BdcmFinderTodoComment$" _locAttrData="Value" Value="TODO: Change the name of the method if needed." />
+      <CustomParameter Name="$loc_BdcmIdTodoComment$" _locID="$loc_BdcmIdTodoComment$" _locAttrData="Value" Value="TODO: Change the name of the ID and if needed the TypeName of your identifier." />
+      <CustomParameter Name="$loc_BdcmSpecificFinderEndComment$" _locID="$loc_BdcmSpecificFinderEndComment$" _locAttrData="Value" Value="end specific finder method" />
+      <CustomParameter Name="$loc_BdcmSpecificFinderStartComment$" _locID="$loc_BdcmSpecificFinderStartComment$" _locAttrData="Value" Value="start specific finder method" />
+      <CustomParameter Name="$loc_Entity1ServiceFunctionSummary$" _locID="$loc_Entity1ServiceFunctionSummary$" _locAttrData="Value" Value="If you want to delete or rename the method think about changing the xml in the BDC model file as well." />
+      <CustomParameter Name="$loc_Entity1ServiceFunctionTodoComment$" _locID="$loc_Entity1ServiceFunctionTodoComment$" _locAttrData="Value" Value="TODO: This is just a sample. Replace this simple sample with valid code." />
+      <CustomParameter Name="$loc_Entity1ServiceReadItemSummary$" _locID="$loc_Entity1ServiceReadItemSummary$" _locAttrData="Value" Value="This is a sample specific finder method for Entity1." />
+      <CustomParameter Name="$loc_Entity1ServiceReadListReturns$" _locID="$loc_Entity1ServiceReadListReturns$" _locAttrData="Value" Value="IEnumerable of Entities" />
+      <CustomParameter Name="$loc_Entity1ServiceReadListSummary$" _locID="$loc_Entity1ServiceReadListSummary$" _locAttrData="Value" Value="This is a sample finder method for Entity1." />
+      <CustomParameter Name="$loc_Entity1ServiceSummary1$" _locID="$loc_Entity1ServiceSummary1$" _locAttrData="Value" Value="All the methods for retrieving, updating and deleting data are implemented in this class file." />
+      <CustomParameter Name="$loc_Entity1ServiceSummary2$" _locID="$loc_Entity1ServiceSummary2$" _locAttrData="Value" Value="The samples below show the finder and specific finder method for Entity1." />
+      <CustomParameter Name="$loc_Entity1Summary1$" _locID="$loc_Entity1Summary1$" _locAttrData="Value" Value="This class contains the properties for Entity1. The properties keep the data for Entity1." />
+      <CustomParameter Name="$loc_Entity1Summary2$" _locID="$loc_Entity1Summary2$" _locAttrData="Value" Value="If you want to rename the class, don't forget to rename the entity in the model xml as well." />
+      <CustomParameter Name="$loc_Entity1TodoComment$" _locID="$loc_Entity1TodoComment$" _locAttrData="Value" Value="TODO: Implement additional properties here. The property Message is just a sample how a property could look like." />
+
+      <!-- default value for strong name -->
+      <CustomParameter Name="$ProjectItemName$" Value="$fileinputname$"/>
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.Designers.BusinessDataConnectivity, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.Designers.BusinessDataConnectivity.UI.Wizards.BdcWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

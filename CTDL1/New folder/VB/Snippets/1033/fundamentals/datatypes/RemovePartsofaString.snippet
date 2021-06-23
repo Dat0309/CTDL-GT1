@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Remove Parts of a String </Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Removes all occurrences of one string from another string.</Description>
+      <Keywords>
+        <Keyword>String</Keyword>
+        <Keyword>Replace</Keyword>
+      </Keywords>
+      <Shortcut>typeRemove</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>ToRemove</ID>
+          <Type>System.String</Type>
+          <ToolTip>Replace with the string you want to remove from withParts.</ToolTip>
+          <Default>"and "</Default>
+        </Literal>
+        <Literal>
+          <ID>StringWithParts</ID>
+          <Type>System.String</Type>
+          <ToolTip>Replace with the string you want to remove parts from.</ToolTip>
+          <Default>"Books and Chapters and Pages"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim withParts As String = $StringWithParts$
+Dim withoutParts As String = withParts.Replace($ToRemove$, "")]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

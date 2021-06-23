@@ -1,0 +1,1027 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<html dir="LTR">
+<head>
+	<title>Creazione guidata applicazione MFC</title>
+	<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="MSThemeCompatible" content="Yes">
+	<link id="LINKURL" rel="stylesheet" href="../../../../../1040/NewStyles.css">
+</head>
+<body bgcolor="BUTTONFACE" topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0"
+	onload="InitDocument(document);" onkeydown="if (!bValidating) OnKey();" onkeypress="if (!bValidating) OnPress();">
+	<table class="ONE" height="100%" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<col class="LinkPane">
+		<col>
+		<!--OPEN OF INTRODUCTORY INFORMATION TABLE//-->
+		<tr valign="TOP">
+			<td height="79" width="100%" colspan="2">
+				<table class="TWO" border="0" cellpadding="0" cellspacing="0">
+					<col width="12">
+					<col>
+					<col width="12">
+					<tr>
+						<td valign="TOP" height="12" width="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="12" width="12">
+							&nbsp;
+						</td>
+						<td class="IMAGE" valign="BOTTOM" width="110" rowspan="2">
+							<div class="SMALLA" id="SINGLE_DOC_IMAGE">
+								<img class="SMALL" src="..\..\Images\SingleDocument.gif" height="70" width="98" alt="">
+							</div>
+							<div class="SMALL" id="EXPLORER_IMAGE">
+								<img class="SMALL" src="../../Images/Explorer.gif" height="70" width="98" alt="">
+							</div>
+							<div class="SMALL" id="OUTPUT_IMAGE">
+								<img class="SMALL" src="../../Images/Output.gif" height="70" width="98" alt="">
+							</div>
+							<div class="SMALL" id="PROPERTIES_IMAGE">
+								<img class="SMALL" src="../../Images/Properties.gif" height="70" width="98" alt="">
+							</div>
+							<div class="SMALL" id="OUTPUTPROPERTIES_IMAGE">
+								<img class="SMALL" src="../../Images/OutputProperties.gif" height="70" width="98"
+									alt="">
+							</div>
+							<div class="SMALL" id="OUTPUTEXPLORER_IMAGE">
+								<img class="SMALL" src="../../Images/OutputExplorer.gif" height="70" width="98" alt="">
+							</div>
+							<div class="SMALL" id="EXPLORERPROPERTIES_IMAGE">
+								<img class="SMALL" src="../../Images/ExplorerProperties.gif" height="70" width="98"
+									alt="">
+							</div>
+							<div class="SMALL" id="EXPLOREROUTPUTPROPERTIES_IMAGE">
+								<img class="SMALL" src="../../Images/ExplorerOutputProperties.gif" height="70" width="98"
+									alt="">
+							</div>
+							<div class="SMALL" id="NAVIGATION_IMAGE">
+								<img class="SMALL" src="../../Images/Navigation.gif" height="70" width="98" alt="">
+							</div>
+							<div class="SMALL" id="CAPTIONBAR_IMAGE">
+								<img class="SMALL" src="../../Images/CaptionBar.gif" height="70" width="98" alt="">
+							</div>
+							<div class="SMALL" id="NAVIGATIONCAPTIONBAR_IMAGE">
+								<img class="SMALL" src="../../Images/NavigationCaptionBar.gif" height="70" width="98"
+									alt="">
+							</div>
+							<div class="SMALL" id="NAVIGATIONCAPTIONBAREXPLORER_IMAGE">
+								<img class="SMALL" src="../../Images/NavigationCaptionBarExplorer.gif" height="70"
+									width="98" alt="">
+							</div>
+							<div class="SMALL" id="NAVIGATIONCAPTIONBAROUTPUT_IMAGE">
+								<img class="SMALL" src="../../Images/NavigationCaptionBarOutput.gif" height="70"
+									width="98" alt="">
+							</div>
+							<div class="SMALL" id="NAVIGATIONCAPTIONBARPROPERTIES_IMAGE">
+								<img class="SMALL" src="../../Images/NavigationCaptionBarProperties.gif" height="70"
+									width="98" alt="">
+							</div>
+							<div class="SMALL" id="NAVIGATIONCAPTIONBAREXPLORERPROPERTIES_IMAGE">
+								<img class="SMALL" src="../../Images/NavigationCaptionBarExplorerProperties.gif"
+									height="70" width="98" alt="">
+							</div>
+							<div class="SMALL" id="NAVIGATIONCAPTIONBAROUTPUTPROPERTIES_IMAGE">
+								<img class="SMALL" src="../../Images/NavigationCaptionBarOutputProperties.gif" height="70"
+									width="98" alt="">
+							</div>
+							<div class="SMALL" id="NAVIGATIONCAPTIONBAREXPLOREROUTPUT_IMAGE">
+								<img class="SMALL" src="../../Images/NavigationCaptionBarExplorerOutput.gif" height="70"
+									width="98" alt="">
+							</div>
+							<div class="SMALL" id="NAVIGATIONCAPTIONBAREXPLOREROUTPUTPROPERTIES_IMAGE">
+								<img class="SMALL" src="../../Images/NavigationCaptionBarExplorerOutputProperties.gif"
+									height="70" width="98" alt="">
+							</div>
+							<div class="SMALL" id="NAVIGATIONEXPLORER_IMAGE">
+								<img class="SMALL" src="../../Images/NavigationExplorer.gif" height="70" width="98"
+									alt="">
+							</div>
+							<div class="SMALL" id="NAVIGATIONOUTPUT_IMAGE">
+								<img class="SMALL" src="../../Images/NavigationOutput.gif" height="70" width="98"
+									alt="">
+							</div>
+							<div class="SMALL" id="NAVIGATIONPROPERTIES_IMAGE">
+								<img class="SMALL" src="../../Images/NavigationProperties.gif" height="70" width="98"
+									alt="">
+							</div>
+							<div class="SMALL" id="NAVIGATIONEXPLORERPROPERTIES_IMAGE">
+								<img class="SMALL" src="../../Images/NavigationExplorerProperties.gif" height="70"
+									width="98" alt="">
+							</div>
+							<div class="SMALL" id="NAVIGATIONOUTPUTPROPERTIES_IMAGE">
+								<img class="SMALL" src="../../Images/NavigationOutputProperties.gif" height="70"
+									width="98" alt="">
+							</div>
+							<div class="SMALL" id="NAVIGATIONEXPLOREROUTPUT_IMAGE">
+								<img class="SMALL" src="../../Images/NavigationExplorerOutput.gif" height="70" width="98"
+									alt="">
+							</div>
+							<div class="SMALL" id="NAVIGATIONEXPLOREROUTPUTPROPERTIES_IMAGE">
+								<img class="SMALL" src="../../Images/NavigationExplorerOutputProperties.gif" height="70"
+									width="98" alt="">
+							</div>
+							<div class="SMALL" id="CAPTIONBAREXPLORER_IMAGE">
+								<img class="SMALL" src="../../Images/CaptionBarExplorer.gif" height="70" width="98"
+									alt="">
+							</div>
+							<div class="SMALL" id="CAPTIONBAROUTPUT_IMAGE">
+								<img class="SMALL" src="../../Images/CaptionBarOutput.gif" height="70" width="98"
+									alt="">
+							</div>
+							<div class="SMALL" id="CAPTIONBARPROPERTIES_IMAGE">
+								<img class="SMALL" src="../../Images/CaptionBarProperties.gif" height="70" width="98"
+									alt="">
+							</div>
+							<div class="SMALL" id="CAPTIONBAREXPLORERPROPERTIES_IMAGE">
+								<img class="SMALL" src="../../Images/CaptionBarExplorerProperties.gif" height="70"
+									width="98" alt="">
+							</div>
+							<div class="SMALL" id="CAPTIONBAROUTPUTPROPERTIES_IMAGE">
+								<img class="SMALL" src="../../Images/CaptionBarOutputProperties.gif" height="70"
+									width="98" alt="">
+							</div>
+							<div class="SMALL" id="CAPTIONBAREXPLOREROUTPUT_IMAGE">
+								<img class="SMALL" src="../../Images/CaptionBarExplorerOutput.gif" height="70" width="98"
+									alt="">
+							</div>
+							<div class="SMALL" id="CAPTIONBAREXPLOREROUTPUTPROPERTIES_IMAGE">
+								<img class="SMALL" src="../../Images/CaptionBarExplorerOutputProperties.gif" height="70"
+									width="98" alt="">
+							</div>
+						</td>
+						<td valign="TOP" height="12" width="6" rowspan="2">
+							&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td valign="TOP" height="65" width="12">
+							&nbsp;
+						</td>
+						<td valign="TOP" height="65">
+							<h4 class="HEAD" id="HEAD">Funzionalità avanzate</h4>
+							<p class="SUBHEAD" id="SUBHEAD">
+								Selezionare le funzionalità aggiuntive da compilare nell'applicazione.</p>
+						</td>
+						<td valign="TOP" height="65" width="12">
+							&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td valign="TOP" class="RULE" colspan="5" height="2">
+							<table border="0" width="100%" height="1" cellpadding="0" cellspacing="0">
+								<tr valign="TOP">
+									<td height="1" width="100%" bgcolor="BUTTONSHADOW">
+									</td>
+									<td height="1" width="1" bgcolor="WINDOW">
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<!--CLOSE OF INTRODUCTORY INFORMATION TABLE//-->
+		<!--OPEN OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+		<tr valign="TOP">
+			<td class="Three" valign="TOP" height="100%" width="100%">
+				<table class="fixedSize" height="100%" width="100%" border="0" cellpadding="0" cellspacing="0">
+					<tr valign="TOP">
+						<td class="threeCustom" valign="TOP">
+							<!--OPEN OF NAVIGATION TABLE//-->
+							<table class="THREE" border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col>
+								<col width="1">
+								<tr>
+									<td valign="TOP" colspan="3" height="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="100%">
+										&nbsp;
+									</td>
+									<td valign="TOP" height="100%">
+										<!--OPEN OF NAVIGATIONAL LINKS//-->
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="Default" title="Panoramica delle impostazioni disponibili."
+															onclick="Next(document, 'Default.htm');" tabindex="1">Panoramica</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="AppType" title="Specificare il supporto per l'architettura documento/visualizzazione, la lingua e le opzioni relative allo stile dell'interfaccia dell'applicazione."
+															onclick="Next(document, 'AppType.htm');" tabindex="2">Tipo di applicazione</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXTINDENT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="CompoundDoc" title="Specificare le opzioni relative al server o al contenitore OLE e il supporto per i documenti attivi."
+															onclick="onClick(this);" tabindex="3">Supporto documenti compositi</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXTINDENT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="DocTemp" title="Specificare i valori per il modello di documento dell'applicazione da utilizzare per la creazione di un nuovo documento."
+															onclick="onClick(this);" tabindex="4">Proprietà modello documento</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="DBSupport" title="Specificare il tipo di supporto per database, incluse le origini dati."
+															onclick="onClick(this);" tabindex="5">Supporto database</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="UIFeatures" title="Selezionare le opzioni che determinano l'aspetto dell'applicazione."
+															onclick="Next(document, 'UIFeatures.htm');" tabindex="6">Funzionalità interfaccia utente</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINKSELECTED">
+											<span class="VERTLINE1">
+												<img src="../../../../../1033/Images/spacer.gif" width="1" height="1" alt="" border="0">
+											</span><span class="HORILINE1">
+												<table width="167" height="100%" border="0" cellpadding="0" cellspacing="0">
+													<tr valign="TOP">
+														<td class="DOTTEDLINE" height="1">
+														</td>
+													</tr>
+													<tr valign="TOP">
+														<td height="100%">
+															<img src="../../../../../1033/Images/spacer.gif" width="165" height="28" alt="" border="0">
+														</td>
+													</tr>
+													<tr valign="TOP">
+														<td class="DOTTEDLINE" height="1">
+														</td>
+													</tr>
+												</table>
+											</span>
+											<table width="160" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXTSELECTED">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span id="Advanced" title="Selezionare le funzionalità aggiuntive da compilare nell'applicazione.">
+															Funzionalità avanzate</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="LINK">
+											<table width="100%" height="28" border="0" cellpadding="0" cellspacing="0" class="LINKTEXT">
+												<tr valign="MIDDLE">
+													<td width="100%">
+														<span class="ACTIVELINK" id="GeneratedClasses" title="Analizzare le classi generate e specificare le classi base dell'applicazione."
+															onclick="Next(document, 'GeneratedClasses.htm');" tabindex="7">Classi generate</span>
+													</td>
+													<td width="4">
+														<img src="../../../../../1033/Images/spacer.gif" height="1" width="4">
+													</td>
+												</tr>
+											</table>
+										</div>
+										<!--CLOSE OF NAVIGATIONAL LINKS//-->
+									</td>
+									<td width="1">
+										<div class="VERTLINE">
+											<img src="../../../../../1033/Images/spacer.gif" width="1" height="1" alt="" border="0">
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				<!--CLOSE OF NAVIGATION TABLE//-->
+			</td>
+			<td valign="TOP" height="100%">
+				<!--OPEN OF CONTENT AND BUTTON TABLE//-->
+				<table class="ONE" border="0" cellpadding="0" cellspacing="0">
+					<col width="100%">
+					<tr valign="TOP">
+						<td height="100%">
+							<!--OPEN OF CONTENT//-->
+							<table class="CONTENT" border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col>
+								<col width="12">
+								<col>
+								<col width="12">
+								<tr>
+									<td valign="TOP" height="12" colspan="5">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP">
+										<span class="itemText" id="Span2" title="Selezionare le funzionalità avanzate supportate dall'applicazione.">
+											Funzionalità avanzate:</span> <span class="ItemText">
+												<p class="Spacer">
+													&nbsp;</p>
+												<input type="checkbox" class="CheckBoxA" accesskey="s" id="PRINTING" title="Selezionare questa opzione per generare il codice per la gestione dei comandi Stampa, Imposta stampante e Anteprima di stampa chiamando le funzioni membro della classe CView dalla libreria MFC (disponibile solo per i programmi con architettura documento/visualizzazione). I comandi relativi a tali funzioni verranno aggiunti al menu del programma. Per impostazione predefinita, i programmi dispongono del supporto di stampa.">
+												<div class="itemTextCheckboxB" id="print_title" title="Selezionare questa opzione per generare il codice per la gestione dei comandi Stampa, Imposta stampante e Anteprima di stampa chiamando le funzioni membro della classe CView dalla libreria MFC (disponibile solo per i programmi con architettura documento/visualizzazione). I comandi relativi a tali funzioni verranno aggiunti al menu del programma. Per impostazione predefinita, i programmi dispongono del supporto di stampa.">
+													<label id="PRINT_TEXT" for="PRINTING">
+														<u>S</u>tampa e anteprima di stampa</label>
+												</div>
+												<br>
+												<input type="checkbox" class="CheckBoxA" accesskey="u" id="AUTOMATION" title="Consente all'applicazione di esporre gli oggetti agli strumenti di scripting e ad altre applicazioni.">
+												<div class="itemTextCheckboxB" id="auto_title" title="Consente all'applicazione di esporre gli oggetti agli strumenti di scripting e ad altre applicazioni.">
+													<label id="AUTOMATION_TEXT" for="AUTOMATION">
+														A<u>u</u>tomazione</label>
+												</div>
+												<br>
+												<input type="checkbox" class="CheckBoxA" accesskey="c" id="ACTIVEX_CONTROLS" title="Consente di includere i controlli ActiveX nell'applicazione.">
+												<div class="itemTextCheckboxB" id="ACTIVEX_ENABLE_TEXT" title="Consente di includere i controlli ActiveX nell'applicazione.">
+													<label id="ACTIVEX_TEXT" for="ACTIVEX_CONTROLS">
+														<u>C</u>ontrolli ActiveX</label>
+												</div>
+												<br>
+												<input type="checkbox" class="CheckBoxA" accesskey="p" id="MAPI" title="Abilita il supporto MAPI, incluse le chiamate dirette alle funzioni MAPI dall'applicazione.">
+												<div class="itemTextCheckboxB" id="mapi_title" title="Abilita il supporto MAPI, incluse le chiamate dirette alle funzioni MAPI dall'applicazione.">
+													<label id="MAPI_TEXT" for="MAPI">
+														MA<u>P</u>I (API del sistema di messaggistica)</label>
+												</div>
+												<br>
+												<input type="checkbox" class="CheckBoxA" accesskey="w" id="SOCKETS" title="Abilita le librerie e i file di intestazione appropriati e la specifica Windows Sockets di MFC.">
+												<div class="itemTextCheckboxB" id="ENABLE_SOCKETS_TEXT" title="Abilita le librerie e i file di intestazione appropriati e la specifica Windows Sockets di MFC.">
+													<label id="SOCKETS_TEXT" for="SOCKETS">
+														<u>W</u>indows sockets</label>
+												</div>
+												<br>
+												<input type="checkbox" class="CheckBoxA" accesskey="a" id="ACCESSIBILITY" title="Abilita il supporto Active Accessibility.">
+												<div class="itemTextCheckboxB" id="ENABLE_ACCESSIBILITY_TEXT" title="Abilita il supporto Active Accessibility.">
+													<label id="ACCESSIBILITY_TEXT" for="ACCESSIBILITY">
+														<u>A</u>ctive Accessibility</label>
+												</div>
+												<br>
+												<input type="checkbox" class="CheckBoxA" accesskey="m" id="MANIFEST" title="Genera un manifesto dell'applicazione che abilita i nuovi controlli comuni forniti con Windows XP.">
+												<div class="itemTextCheckboxB" id="ENABLE_MANIFEST_TEXT" title="Genera un manifesto dell'applicazione che abilita i nuovi controlli comuni forniti con Windows XP.">
+													<label id="MANIFEST_TEXT" for="MANIFEST">
+														<u>M</u>anifesto controlli comuni</label>
+												</div>
+												<br>
+												<input type="checkbox" class="CheckBoxA" accesskey="V" id="RESTART_MGR_SUPPORT" title="Aggiunge il supporto per Gestione riavvio di Windows."
+													onpropertychange="OnRestartManagerChange(this);">
+												<div class="itemTextCheckboxB" id="ENABLE_RESTART_MGR_SUPPORT_TEXT" title="Aggiunge il supporto per Gestione riavvio di Windows.">
+													<label id="RESTART_MGR_SUPPORT_TEXT" for="RESTART_MGR_SUPPORT">
+														Supporto Gestione ria<u>v</u>vio</label>
+												</div>
+												<br>
+												<input type="checkbox" class="CheckboxIndent" accesskey="d" id="RESTART_MGR_SUPPORT_RESTART"
+													title="Aggiunge il supporto per l'apertura al riavvio di documenti aperti precedentemente.  Se sono disponibili versioni di documenti salvati automaticamente, verrà richiesto all'utente di ripristinarli."
+													onpropertychange="OnRestartManagerChange(this);">
+												<div class="itemTextCheckboxIndentB" id="ENABLE_RESTART_MGR_SUPPORT_RESTART_TEXT"
+													title="Aggiunge il supporto per l'apertura al riavvio di documenti aperti precedentemente.  Se sono disponibili versioni di documenti salvati automaticamente, verrà richiesto all'utente di ripristinarli.">
+													<label id="RESTART_MGR_SUPPORT_RESTART_TEXT" for="RESTART_MGR_SUPPORT_RESTART">
+														Riapri <u>d</u>ocumenti aperti precedentemente</label>
+												</div>
+												<br>
+												<input type="checkbox" class="CheckboxIndent" accesskey="z" id="RESTART_MGR_SUPPORT_RECOVERY"
+													title="Aggiunge il supporto per il ripristino dell'applicazione (in caso di blocco o arresto dell'applicazione), inclusi salvataggi automatici periodici dei documenti e richieste agli utenti se sono disponibili versioni salvate automaticamente."
+													onpropertychange="OnRestartManagerChange(this);">
+												<div class="itemTextCheckboxIndentB" id="ENABLE_RESTART_MGR_SUPPORT_RECOVERY_TEXT"
+													title="Aggiunge il supporto per il ripristino dell'applicazione (in caso di blocco o arresto dell'applicazione), inclusi salvataggi automatici periodici dei documenti e richieste agli utenti se sono disponibili versioni salvate automaticamente.">
+													<label id="RESTART_MGR_SUPPORT_RECOVERY_TEXT" for="RESTART_MGR_SUPPORT_RECOVERY">
+														Supporto ripristino dell'applica<u>z</u>ione</label>
+												</div>
+											</span>
+									</td>
+									<td valign="TOP" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP">
+										<span class="itemText" id="ADV_DOCKING_HEADER" title="Selezionare i riquadri frame da aggiungere all'applicazione.">
+											Riquadri frame avanzati:</span> <span class="ItemText">
+												<p class="Spacer">
+													&nbsp;</p>
+												<input type="checkbox" class="CheckBoxA" accesskey="e" id="ADV_DOCKING_EXPLORER"
+													title="Crea un riquadro di tipo Esplora soluzioni di Visual Studio ancorato a sinistra."
+													onclick="ToggleImage();">
+												<div class="itemTextCheckboxB" id="adv_docking_explorer_label" title="Crea un riquadro di tipo Esplora soluzioni di Visual Studio ancorato a sinistra.">
+													<label id="ADV_DOCKING_EXPLORER_LABEL" for="ADV_DOCKING_EXPLORER">
+														Riquadro di tipo <u>E</u>splora soluzioni ancorato</label>
+												</div>
+												<br>
+												<input type="checkbox" class="CheckBoxA" accesskey="o" id="ADV_DOCKING_OUTPUT" title="Crea un riquadro di tipo finestra di output di Visual Studio ancorato in basso."
+													onclick="ToggleImage();">
+												<div class="itemTextCheckboxB" id="adv_docking_output_label" title="Crea un riquadro di tipo finestra di output di Visual Studio ancorato in basso.">
+													<label id="ADV_DOCKING_OUTPUT_LABEL" for="ADV_DOCKING_OUTPUT">
+														Riquadro di tipo <u>o</u>utput ancorato</label>
+												</div>
+												<br>
+												<input type="checkbox" class="CheckBoxA" accesskey="i" id="ADV_DOCKING_PROPERTIES"
+													title="Crea un riquadro di tipo finestra delle proprietà di Visual Studio ancorato a destra."
+													onclick="ToggleImage();">
+												<div class="itemTextCheckboxB" id="adv_docking_properties_label" title="Crea un riquadro di tipo finestra delle proprietà di Visual Studio ancorato a destra.">
+													<label id="ADV_DOCKING_PROPERTIES_LABEL" for="ADV_DOCKING_PROPERTIES">
+														R<u>i</u>quadro di tipo proprietà ancorato</label>
+												</div>
+												<br>
+												<input type="checkbox" class="CheckBoxA" accesskey="t" id="ADV_DOCKING_NAVIGATION"
+													title="Crea un riquadro di navigazione di tipo Outlook ancorato a sinistra." onclick="ToggleImage();">
+												<div class="itemTextCheckboxB" id="adv_docking_navigation_label" title="Crea un riquadro di navigazione di tipo Outlook ancorato a sinistra.">
+													<label id="ADV_DOCKING_NAVIGATION_LABEL" for="ADV_DOCKING_NAVIGATION">
+														Riquadro di navi<u>g</u>azione</label>
+												</div>
+												<br>
+												<input type="checkbox" class="CheckBoxA" accesskey="b" id="ADV_DOCKING_CAPTION" title="Crea una barra del titolo di tipo Office sopra l'area client."
+													onclick="ToggleImage();">
+												<div class="itemTextCheckboxB" id="adv_docking_caption_label" title="Crea una barra del titolo di tipo Office sopra l'area client.">
+													<label id="ADV_DOCKING_CAPTION_LABEL" for="ADV_DOCKING_CAPTION">
+														<u>B</u>arra del titolo</label>
+												</div>
+											</span>
+										<p class="ElementSpacer">
+											&nbsp;</p>
+										<span class="itemText" id="pane_menus_activate_title">
+											<input class="CheckBox" type="checkbox" id="PANE_MENUS_ACTIVATE" accesskey="f" title="Le voci di menu di riquadri frame avanzati mostrano/attivano riquadri (comportamento di Visual Studio) anziché mostrare/nascondere riquadri (comportamento MFC predefinito)."
+												class="SINGLECHECKBOX">
+											<div class="itemTextCheckboxA" id="PANE_MENUS_ACTIVATE_DIV" title="Le voci di menu di riquadri frame avanzati mostrano/attivano riquadri (comportamento di Visual Studio) anziché mostrare/nascondere riquadri (comportamento MFC predefinito).">
+												<label id="PANE_MENUS_ACTIVATE_LABEL" for="PANE_MENUS_ACTIVATE">Voci avanzate del menu del <u>f</u>rame mostra/attiva riquadri</label>
+											</div>
+										</span>
+										<p class="ElementSpacer">
+											&nbsp;</p>
+										<span class="itemTextTop" id="mru_title">
+											<label id="NUMFILES_TEXT" for="MRU_SIZE">
+												<u>N</u>umero di file visualizzati nell'elenco dei file recenti:</label>
+											<br>
+											<select class="sidebtnNoWidth" id="MRU_SIZE" accesskey="n" title="" size="1">
+												<option value="0">0</option>
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4" selected>4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+												<option value="9">9</option>
+												<option value="10">10</option>
+												<option value="11">11</option>
+												<option value="12">12</option>
+												<option value="13">13</option>
+												<option value="14">14</option>
+												<option value="15">15</option>
+												<option value="16">16</option>
+											</select>
+										</span>
+									</td>
+								</tr>
+							</table>
+							<!--CLOSE OF CONTENT//-->
+						</td>
+					</tr>
+					<tr valign="BOTTOM">
+						<td>
+							<!--OPEN OF BUTTON HTML//-->
+							<table border="0" cellpadding="0" cellspacing="0">
+								<col width="12">
+								<col>
+								<col width="75">
+								<col width="4">
+								<col width="75">
+								<col width="4">
+								<col width="75">
+								<col width="12">
+								<tr>
+									<td valign="TOP" class="RULE" colspan="8" height="2">
+										<table border="0" width="100%" height="1" cellpadding="0" cellspacing="0">
+											<tr valign="TOP">
+												<td height="1" width="100%" bgcolor="BUTTONSHADOW">
+												</td>
+												<td height="1" width="1" bgcolor="WINDOW">
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="11" colspan="8">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="MIDDLE" height="23" width="12">
+										&nbsp;
+									</td>
+									<td valign="TOP" height="23">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="FinishBtn" onclick="OnFinish(document);">
+											Fine</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="4">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="CancelBtn" onclick="window.external.Finish(document, 'cancel');">
+											Annulla</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="4">
+										&nbsp;
+									</td>
+									<td valign="MIDDLE" height="23" width="75">
+										<button class="BUTTONS" id="HelpBtn" onclick="window.external.OnHelp('vc.appwiz.mfc.exe.advanced');">
+											?</button>
+									</td>
+									<td valign="MIDDLE" height="23" width="12">
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td valign="TOP" height="12" colspan="8">
+										&nbsp;
+									</td>
+								</tr>
+							</table>
+							<!--CLOSE OF BUTTON HTML//-->
+						</td>
+					</tr>
+				</table>
+				<!--CLOSE OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+<script language="JSCRIPT">
+
+var tab_array = new Array();
+tab_array[0] = Default;
+tab_array[1] = AppType;
+tab_array[2] = CompoundDoc;
+tab_array[3] = DocTemp;
+tab_array[4] = DBSupport;
+tab_array[5] = UIFeatures;
+tab_array[6] = Advanced;
+tab_array[7] = GeneratedClasses;
+
+function InitDocument(document)
+{
+	setDirection();
+	InitTabs();
+	window.external.Load(document);
+	InitControls();
+	ToggleImage();
+}
+
+function InitTabs()
+{
+	MouseOut(DBSupport);
+	MouseOut(CompoundDoc);
+	MouseOut(DocTemp);
+	PRINTING.focus();
+}
+
+function Next(document, linkto)
+{
+	window.external.Next(document, linkto);
+}
+
+function onClick(obj)
+{
+	if (obj == null || typeof(obj) == "undefined")
+		return;
+
+	if (obj.id == "DBSupport")
+	{
+		if (!window.external.FindSymbol("APP_TYPE_DLG"))
+		{ 
+			Next(document, "DBSupport.htm"); 
+		}
+	}
+	if (obj.id == "CompoundDoc")
+	{
+		if (window.external.FindSymbol("DOCVIEW") && !window.external.IsSymbolDisabled("DOCVIEW"))
+		{ 
+			Next(document, "CompoundDoc.htm"); 
+		}
+	}
+	if (obj.id == "DocTemp")
+	{
+		if (window.external.FindSymbol("DOCVIEW") && !window.external.IsSymbolDisabled("DOCVIEW"))
+		{ 
+			Next(document, "DocTemp.htm"); 
+		}
+	}
+}
+
+function InitControls()
+{
+	MAPI.disabled = false;
+	mapi_title.disabled = false;
+	PRINTING.disabled = false;
+	print_title.disabled = false;
+	AUTOMATION.disabled = false;
+	auto_title.disabled = false;
+	MRU_SIZE.disabled = false;
+	mru_title.disabled = false;
+	ADV_DOCKING_HEADER.disabled = false;
+	ADV_DOCKING_EXPLORER.disabled = false;
+	adv_docking_explorer_label.disabled = false;
+	ADV_DOCKING_OUTPUT.disabled = false;
+	adv_docking_output_label.disabled = false;
+	ADV_DOCKING_PROPERTIES.disabled = false;
+	adv_docking_properties_label.disabled = false;
+	ADV_DOCKING_NAVIGATION.disabled = false;
+	adv_docking_navigation_label.disabled = false;
+	ADV_DOCKING_CAPTION.disabled = false;
+	adv_docking_caption_label.disabled = false;
+
+	if (!window.external.FindSymbol("DOCVIEW") || window.external.IsSymbolDisabled("DOCVIEW"))
+	{
+		RESTART_MGR_SUPPORT_RESTART.checked = false;
+		RESTART_MGR_SUPPORT_RESTART.disabled = true;
+		RESTART_MGR_SUPPORT_RESTART_TEXT.disabled = true;
+		RESTART_MGR_SUPPORT_RECOVERY.checked = false;
+		RESTART_MGR_SUPPORT_RECOVERY.disabled = true;
+		RESTART_MGR_SUPPORT_RECOVERY_TEXT.disabled = true;
+	}
+
+	if ((!window.external.FindSymbol("DOCVIEW") || window.external.IsSymbolDisabled("DOCVIEW")) && !window.external.FindSymbol("APP_TYPE_DLG"))
+	{
+		AUTOMATION.disabled = true;
+		AUTOMATION.checked = false;
+		auto_title.disabled = true;
+	}
+
+	if (window.external.FindSymbol("APP_TYPE_DLG") || !window.external.FindSymbol("DOCVIEW") || window.external.IsSymbolDisabled("DOCVIEW"))
+	{
+		MAPI.disabled = true;
+		MAPI.checked = false;
+		mapi_title.disabled = true;
+		PRINTING.disabled = true;
+		PRINTING.checked = false;
+		print_title.disabled = true;
+		MRU_SIZE.disabled = true;
+		mru_title.disabled = true;
+	}
+
+	if (window.external.FindSymbol("VIEW_BASE_CLASS") == "CFormView")
+	{
+		PRINTING.disabled = true;
+		PRINTING.checked = false;
+		print_title.disabled = true;
+	}
+
+	if ((window.external.FindSymbol("USE_STANDARD_MENU_TOOLBAR") == true) || window.external.FindSymbol("APP_TYPE_DLG"))
+	{
+		ADV_DOCKING_HEADER.disabled = true;
+		ADV_DOCKING_EXPLORER.disabled = true;
+		adv_docking_explorer_label.disabled = true;
+		ADV_DOCKING_OUTPUT.disabled = true;
+		adv_docking_output_label.disabled = true;
+		ADV_DOCKING_PROPERTIES.disabled = true;
+		adv_docking_properties_label.disabled = true;
+		ADV_DOCKING_NAVIGATION.disabled = true;
+		adv_docking_navigation_label.disabled = true;
+		ADV_DOCKING_CAPTION.disabled = true;
+		adv_docking_caption_label.disabled = true;
+	}
+}
+
+function CheckDataSource()
+{
+	if (window.external.FindSymbol("DB_CONNECTION_STRING") == "" && ( window.external.FindSymbol("OLEDB") || window.external.FindSymbol("ODBC") ) )
+	{
+		L_Err1_Text = "È necessario specificare un'origine dati quando è selezionata l'opzione relativa alla visualizzazione database.";
+		window.external.ReportError(L_Err1_Text);
+		return false;
+	}
+	return true;
+}
+
+function OnFinish(document)
+{
+	if (!CheckDataSource())
+		return;
+
+	if (window.external.FindSymbol("ACTIVE_DOC_SERVER"))
+	{
+		var strExtension = window.external.FindSymbol("FILE_EXTENSION");
+		if (strExtension == "")
+		{
+			L_Err2_Text = "È necessario specificare un'estensione per il file di documento nella schermata Proprietà modello documento";
+			window.external.ReportError(L_Err2_Text);
+			return;
+		}
+	}
+	OnWizFinish(document);
+}
+
+function OnRestartManagerChange(obj)
+{
+	if (obj.id == "RESTART_MGR_SUPPORT")
+	{
+		if (!RESTART_MGR_SUPPORT.checked)
+		{
+			RESTART_MGR_SUPPORT_RESTART.checked = false;
+			RESTART_MGR_SUPPORT_RESTART.disabled = true;
+			RESTART_MGR_SUPPORT_RESTART_TEXT.disabled = true;
+
+			RESTART_MGR_SUPPORT_RECOVERY.checked = false;
+			RESTART_MGR_SUPPORT_RECOVERY.disabled = true;
+			RESTART_MGR_SUPPORT_RECOVERY_TEXT.disabled = true;
+		}
+		else
+		{
+			if (!window.external.FindSymbol("DOCVIEW") || window.external.IsSymbolDisabled("DOCVIEW"))
+			{
+				RESTART_MGR_SUPPORT_RESTART.checked = false;
+				RESTART_MGR_SUPPORT_RESTART.disabled = true;
+				RESTART_MGR_SUPPORT_RESTART_TEXT.disabled = true;
+
+				RESTART_MGR_SUPPORT_RECOVERY.checked = false;
+				RESTART_MGR_SUPPORT_RECOVERY.disabled = true;
+				RESTART_MGR_SUPPORT_RECOVERY_TEXT.disabled = true;
+			}
+			else
+			{
+				RESTART_MGR_SUPPORT_RESTART.checked = false;
+				RESTART_MGR_SUPPORT_RESTART.disabled = false;
+				RESTART_MGR_SUPPORT_RESTART_TEXT.disabled = false;
+
+				RESTART_MGR_SUPPORT_RECOVERY.checked = false;
+				RESTART_MGR_SUPPORT_RECOVERY.disabled = true;
+				RESTART_MGR_SUPPORT_RECOVERY_TEXT.disabled = true;
+			}
+		}
+	}
+	else if (obj.id == "RESTART_MGR_SUPPORT_RESTART")
+	{
+		if (!RESTART_MGR_SUPPORT_RESTART.checked)
+		{
+			RESTART_MGR_SUPPORT_RECOVERY.checked = false;
+			RESTART_MGR_SUPPORT_RECOVERY.disabled = true;
+			RESTART_MGR_SUPPORT_RECOVERY_TEXT.disabled = true;
+		}
+		else
+		{
+			RESTART_MGR_SUPPORT_RECOVERY.checked = false;
+			RESTART_MGR_SUPPORT_RECOVERY.disabled = false;
+			RESTART_MGR_SUPPORT_RECOVERY_TEXT.disabled = false;
+		}
+	}
+}
+
+function ToggleImage()
+{
+	SINGLE_DOC_IMAGE.style.display = "none";
+	EXPLORER_IMAGE.style.display = "none";
+	OUTPUT_IMAGE.style.display = "none";
+	PROPERTIES_IMAGE.style.display = "none";
+	OUTPUTPROPERTIES_IMAGE.style.display = "none";
+	OUTPUTEXPLORER_IMAGE.style.display = "none";
+	EXPLORERPROPERTIES_IMAGE.style.display = "none";
+	EXPLOREROUTPUTPROPERTIES_IMAGE.style.display = "none";
+	NAVIGATION_IMAGE.style.display = "none";
+	CAPTIONBAR_IMAGE.style.display = "none";
+	NAVIGATIONCAPTIONBAR_IMAGE.style.display = "none";
+	NAVIGATIONCAPTIONBAREXPLORER_IMAGE.style.display = "none";
+	NAVIGATIONCAPTIONBAROUTPUT_IMAGE.style.display = "none";
+	NAVIGATIONCAPTIONBARPROPERTIES_IMAGE.style.display = "none";
+	NAVIGATIONCAPTIONBAREXPLORERPROPERTIES_IMAGE.style.display = "none";
+	NAVIGATIONCAPTIONBAROUTPUTPROPERTIES_IMAGE.style.display = "none";
+	NAVIGATIONCAPTIONBAREXPLOREROUTPUT_IMAGE.style.display = "none";
+	NAVIGATIONCAPTIONBAREXPLOREROUTPUTPROPERTIES_IMAGE.style.display = "none";
+	NAVIGATIONEXPLORER_IMAGE.style.display = "none";
+	NAVIGATIONOUTPUT_IMAGE.style.display = "none";
+	NAVIGATIONPROPERTIES_IMAGE.style.display = "none";
+	NAVIGATIONEXPLORERPROPERTIES_IMAGE.style.display = "none";
+	NAVIGATIONOUTPUTPROPERTIES_IMAGE.style.display = "none";
+	NAVIGATIONEXPLOREROUTPUT_IMAGE.style.display = "none";
+	NAVIGATIONEXPLOREROUTPUTPROPERTIES_IMAGE.style.display = "none";
+	CAPTIONBAREXPLORER_IMAGE.style.display = "none";
+	CAPTIONBAROUTPUT_IMAGE.style.display = "none";
+	CAPTIONBARPROPERTIES_IMAGE.style.display = "none";
+	CAPTIONBAREXPLORERPROPERTIES_IMAGE.style.display = "none";
+	CAPTIONBAROUTPUTPROPERTIES_IMAGE.style.display = "none";
+	CAPTIONBAREXPLOREROUTPUT_IMAGE.style.display = "none";
+	CAPTIONBAREXPLOREROUTPUTPROPERTIES_IMAGE.style.display = "none";
+
+	if (ADV_DOCKING_NAVIGATION.checked && ADV_DOCKING_CAPTION.checked && ADV_DOCKING_EXPLORER.checked && ADV_DOCKING_OUTPUT.checked && ADV_DOCKING_PROPERTIES.checked)
+	{
+		NAVIGATIONCAPTIONBAREXPLOREROUTPUTPROPERTIES_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_NAVIGATION.checked && ADV_DOCKING_EXPLORER.checked && ADV_DOCKING_OUTPUT.checked && ADV_DOCKING_PROPERTIES.checked)
+	{
+		NAVIGATIONEXPLOREROUTPUTPROPERTIES_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_NAVIGATION.checked && ADV_DOCKING_CAPTION.checked && ADV_DOCKING_EXPLORER.checked && ADV_DOCKING_PROPERTIES.checked)
+	{
+		NAVIGATIONCAPTIONBAREXPLORERPROPERTIES_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_NAVIGATION.checked && ADV_DOCKING_CAPTION.checked && ADV_DOCKING_OUTPUT.checked && ADV_DOCKING_PROPERTIES.checked)
+	{
+		NAVIGATIONCAPTIONBAROUTPUTPROPERTIES_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_NAVIGATION.checked && ADV_DOCKING_CAPTION.checked && ADV_DOCKING_EXPLORER.checked && ADV_DOCKING_OUTPUT.checked)
+	{
+		NAVIGATIONCAPTIONBAREXPLOREROUTPUT_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_CAPTION.checked && ADV_DOCKING_EXPLORER.checked && ADV_DOCKING_OUTPUT.checked && ADV_DOCKING_PROPERTIES.checked)
+	{
+		CAPTIONBAREXPLOREROUTPUTPROPERTIES_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_EXPLORER.checked && ADV_DOCKING_OUTPUT.checked && ADV_DOCKING_PROPERTIES.checked)
+	{
+		EXPLOREROUTPUTPROPERTIES_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_NAVIGATION.checked && ADV_DOCKING_CAPTION.checked && ADV_DOCKING_EXPLORER.checked)
+	{
+		NAVIGATIONCAPTIONBAREXPLORER_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_NAVIGATION.checked && ADV_DOCKING_CAPTION.checked && ADV_DOCKING_OUTPUT.checked)
+	{
+		NAVIGATIONCAPTIONBAROUTPUT_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_NAVIGATION.checked && ADV_DOCKING_CAPTION.checked && ADV_DOCKING_PROPERTIES.checked)
+	{
+		NAVIGATIONCAPTIONBARPROPERTIES_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_NAVIGATION.checked && ADV_DOCKING_EXPLORER.checked && ADV_DOCKING_PROPERTIES.checked)
+	{
+		NAVIGATIONEXPLORERPROPERTIES_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_NAVIGATION.checked && ADV_DOCKING_OUTPUT.checked && ADV_DOCKING_PROPERTIES.checked)
+	{
+		NAVIGATIONOUTPUTPROPERTIES_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_NAVIGATION.checked && ADV_DOCKING_EXPLORER.checked && ADV_DOCKING_OUTPUT.checked)
+	{
+		NAVIGATIONEXPLOREROUTPUT_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_CAPTION.checked && ADV_DOCKING_EXPLORER.checked && ADV_DOCKING_PROPERTIES.checked)
+	{
+		CAPTIONBAREXPLORERPROPERTIES_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_CAPTION.checked && ADV_DOCKING_OUTPUT.checked && ADV_DOCKING_PROPERTIES.checked)
+	{
+		CAPTIONBAROUTPUTPROPERTIES_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_CAPTION.checked && ADV_DOCKING_EXPLORER.checked && ADV_DOCKING_OUTPUT.checked)
+	{
+		CAPTIONBAREXPLOREROUTPUT_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_NAVIGATION.checked && ADV_DOCKING_CAPTION.checked)
+	{
+		NAVIGATIONCAPTIONBAR_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_OUTPUT.checked && ADV_DOCKING_PROPERTIES.checked)
+	{
+		OUTPUTPROPERTIES_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_OUTPUT.checked && ADV_DOCKING_EXPLORER.checked)
+	{
+		OUTPUTEXPLORER_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_EXPLORER.checked && ADV_DOCKING_PROPERTIES.checked)
+	{
+		EXPLORERPROPERTIES_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_NAVIGATION.checked && ADV_DOCKING_EXPLORER.checked)
+	{
+		NAVIGATIONEXPLORER_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_NAVIGATION.checked && ADV_DOCKING_OUTPUT.checked)
+	{
+		NAVIGATIONOUTPUT_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_NAVIGATION.checked && ADV_DOCKING_PROPERTIES.checked)
+	{
+		NAVIGATIONPROPERTIES_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_CAPTION.checked && ADV_DOCKING_EXPLORER.checked)
+	{
+		CAPTIONBAREXPLORER_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_CAPTION.checked && ADV_DOCKING_OUTPUT.checked)
+	{
+		CAPTIONBAROUTPUT_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_CAPTION.checked && ADV_DOCKING_PROPERTIES.checked)
+	{
+		CAPTIONBARPROPERTIES_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_EXPLORER.checked)
+	{
+		EXPLORER_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_OUTPUT.checked)
+	{
+		OUTPUT_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_PROPERTIES.checked)
+	{
+		PROPERTIES_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_NAVIGATION.checked)
+	{
+		NAVIGATION_IMAGE.style.display = "block";
+		return;
+	}
+	if (ADV_DOCKING_CAPTION.checked)
+	{
+		CAPTIONBAR_IMAGE.style.display = "block";
+		return;
+	}
+
+	SINGLE_DOC_IMAGE.style.display = "block";
+}
+
+</script>
+
+<script id="INCLUDE_SCRIPT" language="JSCRIPT"></script>
+
+<script id="INCLUDE_COMMON" language="JSCRIPT"></script>
+
+<script>
+	document.scripts("INCLUDE_SCRIPT").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Script.js";
+	document.scripts("INCLUDE_COMMON").src = window.external.FindSymbol("SCRIPT_COMMON_PATH") + "/Common.js";
+</script>
+

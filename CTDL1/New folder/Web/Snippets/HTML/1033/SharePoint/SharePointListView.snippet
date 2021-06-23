@@ -1,0 +1,33 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>splistview</Title>
+    <Author>Microsoft Corporation</Author>
+    <Shortcut>splv</Shortcut>
+    <Description>Markup snippet for a SharePoint ListView control</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>listUrl</ID>
+        <ToolTip>Deployment URL of the list (use relative URLs)</ToolTip>
+        <Default>Lists/List1</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="html"><![CDATA[
+        <WebPartPages:WebPartZone runat="server" FrameType="TitleBarOnly" ID="full" Title="loc:full">
+            <WebPartPages:XsltListViewWebPart runat="server" 
+                ListUrl="$listUrl$" 
+                IsIncluded="True" 
+                JsLink="clientTemplate.js"
+                NoDefaultStyle="TRUE"
+                PageType="PAGE_NORMALVIEW" 
+                Default="False" 
+                ViewContentTypeId="0x">
+            </WebPartPages:XsltListViewWebPart>
+        </WebPartPages:WebPartZone>$end$
+    ]]></Code>
+  </Snippet>
+</CodeSnippet>

@@ -1,0 +1,25 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>create</Title>
+    <Author>Microsoft Corporation</Author>
+    <Description>Code snippet for a $create()</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>type</ID>
+        <ToolTip>The type of the component to create</ToolTip>
+        <Default>Sys.Component</Default>
+      </Literal>
+      <Literal>
+        <ID>element</ID>
+        <ToolTip>The DOM element that the component must be attached to</ToolTip>
+        <Default>null</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="JavaScript"><![CDATA[$$create($type$, {}, {}, {}, $element$)$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

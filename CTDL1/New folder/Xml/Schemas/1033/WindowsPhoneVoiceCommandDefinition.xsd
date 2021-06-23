@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema
+  attributeFormDefault="unqualified"
+  elementFormDefault="qualified"
+  targetNamespace="http://schemas.microsoft.com/voicecommands/1.0"
+  xmlns:vc="http://schemas.microsoft.com/voicecommands/1.0"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xs:annotation>
+    <xs:documentation xml:lang="en">
+      Windows Phone Voice Command Definition Schema Definition Language.
+      Copyright (c) Microsoft Corp. All rights reserved.
+    </xs:documentation>
+  </xs:annotation>
+
+
+  <!-- VoiceCommands element type -->
+  <xs:complexType name="VoiceCommands">
+    <xs:annotation>
+      <xs:documentation>
+        Required. The root element of a Voice Command Definition. The value of its xmlns attribute must be
+        http://schemas.microsoft.com/voicecommands/1.0.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="15" name="CommandSet" type="vc:CommandSet" >
+        <xs:unique name="commandNamesAreUniquePerCommandSet">
+          <xs:selector xpath="vc:Command" />
+          <xs:field xpath="@Name" />
+        </xs:unique>
+        <xs:unique name="phraseListLabelsAreUniquePerCommandSet">
+          <xs:selector xpath="vc:PhraseList" />
+          <xs:field xpath="@Label" />
+        </xs:unique>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- VoiceCommands::CommandSet element type -->
+  <xs:complexType name="CommandSet">
+    <xs:annotation>
+      <xs:documentation>
+        Required. A container for all voice commands that an application will accept in the single language
+        specified by the required xml:lang attribute. The value of the xml:lang attribute must be unique
+        across all CommandSets in the document.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="CommandPrefix" type="vc:CommandPrefix" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Example" type="vc:CommandSetExample" />
+      <xs:element minOccurs="1" maxOccurs="100" name="Command" type="vc:Command" />
+      <xs:element minOccurs="0" maxOccurs="10" name="PhraseList" type="vc:PhraseList" />
+    </xs:sequence>
+    <xs:attribute ref="xml:lang" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          Required. Specifies the language that Commands in this CommandSet will support. This should be a
+          single, specific language, specified in language name form, that corresponds to a language that is
+          available in the Speech control panel. Only one CommandSet per language may be specified in a
+          single Voice Command Definition.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Name" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          Optional. Specifies an identifying name for this CommandSet as will be seen by the
+          Windows.Phone.Speech.VoiceCommands API. If no Name is provided, the CommandSet will not be
+          programmatically visible or modifiable.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:minLength value="1" />
+          <xs:maxLength value="64" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+
+  <!-- VoiceCommands::CommandSet::CommandPrefix element type -->
+  <xs:simpleType name="CommandPrefix">
+    <xs:annotation>
+      <xs:documentation>
+        Optional. Specifies a user-friendly name for an application that a user can speak when giving a Voice
+        Command. This is useful for applications with names that are long or difficult to pronounce. Prefixes
+        that conflict with other voice-enabled experiences should not be used.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:minLength value="1" />
+      <xs:maxLength value="64" />
+      <xs:pattern value="^(?!call|dial|text|start|open|find|search|note|help).*$" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- VoiceCommands::CommandSet::Example element type -->
+  <xs:simpleType name="CommandSetExample">
+    <xs:annotation>
+      <xs:documentation>
+        Required. An ideal command for this application. This example will be visible to users when exploring
+        Voice Command functionality. The example should not include the name or prefix of the application, as
+        this is handled automatically.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:minLength value="1" />
+      <xs:maxLength value="128" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- VoiceCommands::CommandSet::Command element type -->
+  <xs:complexType name="Command">
+    <xs:annotation>
+      <xs:documentation>
+        Required. Defines an action that users can perform by speaking and what users can say to initiate the
+        action.
+      </xs:documentation>
+    </xs:annotation>  
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Example" type="vc:CommandExample" />
+      <xs:element minOccurs="1" maxOccurs="10" name="ListenFor" type="vc:ListenFor" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Feedback" type="vc:Feedback" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Navigate" type="vc:Navigate" />
+    </xs:sequence>
+    <xs:attribute name="Name" use="required">
+        <xs:annotation>
+          <xs:documentation>
+            Required. Specifies an identifying name for this Command, as will be provided to your application
+            via query string parameters when this Command is activated. This is the primary mechanism for
+            determining which, if any, Voice Command was activated in launching your application.
+          </xs:documentation>
+        </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:minLength value="1" />
+          <xs:maxLength value="64" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+
+  <!-- VoiceCommands::CommandSet::Command::Example element type -->
+  <xs:simpleType name="CommandExample">
+    <xs:annotation>
+      <xs:documentation>
+        Required. An example spoken phrase for this Command. When spoken, the example should be something
+        handled by this Command. The example should not include the name or prefix of the application, as
+        this is handled automatically.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:minLength value="1" />
+      <xs:maxLength value="128" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- VoiceCommands::CommandSet::Command::ListenFor element type -->
+  <xs:simpleType name="ListenFor">
+    <xs:annotation>
+      <xs:documentation>
+        Required. Contains a phrase that your application will recognize for this Command. This may include a
+        reference to a PhraseList element's Label attribute, which appears in the ListenFor element enclosed
+        in curly braces. This may also include words or phrases that are optional, which appear in the
+        element enclosed in square braces. A Command element may contain up to ten ListenFor elements, and
+        the content of any one can be recognized to activate the command.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:minLength value="1" />
+      <xs:maxLength value="128" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- VoiceCommands::CommandSet::Command::Feedback element type -->
+  <xs:simpleType name="Feedback">
+    <xs:annotation>
+      <xs:documentation>
+        Required. Specifies the text that will be displayed and read back to the user when the Command is
+        recognized. Like ListenFor elements, Feedback elements may include references to PhraseList elements,
+        but only for PhraseList labels that are defined within this CommandSet and used in every ListenFor in
+        this Command. These PhraseList references will have the text of the recognized Item substituted in
+        place of the Label.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:minLength value="1" />
+      <xs:maxLength value="128" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- VoiceCommands::CommandSet::Command::Navigate element type -->
+  <xs:complexType name="Navigate">
+    <xs:annotation>
+      <xs:documentation>
+        Required. Explicitly specifies that this Command will navigate to your application when activated.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="Target" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          Optional. Specifies a specific page within your application to navigate to when this Command is
+          activated. If not specified, your application will be launched in its default way and a UriMapper
+          will be needed to intercept Voice Command information.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:minLength value="1" />
+          <xs:maxLength value="128" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+
+  <!-- VoiceCommands::CommandSet::PhraseList element type -->
+  <xs:complexType name="PhraseList">
+    <xs:annotation>
+      <xs:documentation>
+        Optional. Specifies a collection of words or phrases that may be referenced from within ListenFor and
+        Feedback elements to expand the range of recognizable phrases and to include dynamic data sources.
+        Content may be programmatically updated from within your application.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence minOccurs="0">
+      <xs:element minOccurs="0" maxOccurs="2000" name="Item" type="vc:Item" />
+    </xs:sequence>
+    <xs:attribute name="Label" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          Required. Specifies an identifying name for this PhraseList, as can be referenced in other elements
+          and from the Windows.Phone.Speech.VoiceCommands API.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:minLength value="1" />
+          <xs:maxLength value="128" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="Disambiguate" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          Optional, default true. Specifies whether this PhraseList will produce user disambiguation when
+          multiple items from the list are simultaneously recognized. When false, this PhraseList will also
+          be unusable from within Feedback elements and will not produce query string parameters for your
+          application. Useful for phrases that are alternative ways of saying the same thing, but do not
+          require any specific action.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:boolean" />
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+
+  <!-- VoiceCommands::CommandSet::PhraseList::Item element type -->
+  <xs:simpleType name="Item">
+    <xs:annotation>
+      <xs:documentation>
+        Optional. Specifies a word or phrase that is included in the initial state of this PhraseList when
+        this CommandSet is installed. Items can be replaced via the Windows.Phone.Speech.VoiceCommands API.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:minLength value="1" />
+      <xs:maxLength value="64" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- The definition of the root VoiceCommands element -->
+  <xs:element name="VoiceCommands" type="vc:VoiceCommands">
+    <xs:unique name="langIdsAreUniquePerDocument">
+      <xs:selector xpath="vc:CommandSet" />
+      <xs:field xpath="@xml:lang" />
+    </xs:unique>
+  </xs:element>
+
+</xs:schema>

@@ -1,0 +1,4 @@
+﻿1>------ Build started: Project: Bai1_D_cdt, Configuration: Debug Win32 ------
+1>  program.cpp
+1>  Bai1_D_cdt.vcxproj -> D:\Nguyen Ly Lap Trinh Cau Truc\Bai1_D_cdt\Debug\Bai1_D_cdt.exe
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========

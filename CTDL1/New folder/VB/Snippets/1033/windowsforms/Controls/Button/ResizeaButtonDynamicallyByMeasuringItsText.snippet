@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Resize a Button Dynamically by Measuring its Text</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Resizes a button by measuring its text and then resetting its Width.</Description>
+      <Shortcut>butWidth</Shortcut>
+    </Header>
+    <Snippet>
+		<References>
+			<Reference>
+				<Assembly>System.Drawing.dll</Assembly>
+			</Reference>
+			<Reference>
+				<Assembly>System.Windows.Forms.dll</Assembly>
+			</Reference>
+		</References>
+		<Imports>
+			<Import>
+				<Namespace>System</Namespace>
+			</Import>
+			<Import>
+				<Namespace>System.Drawing</Namespace>
+			</Import>
+			<Import>
+				<Namespace>Microsoft.VisualBasic</Namespace>
+			</Import>
+		</Imports>
+		<Declarations>
+        <Object>
+          <ID>buttonName</ID>
+          <Type>Button</Type>
+          <ToolTip>Replace with a button on your form.</ToolTip>
+          <Default>Button1</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[' Use a Graphics object to measure the button's text.  Then add blanks to leave space on either side.
+Dim surface As Graphics = $buttonName$.CreateGraphics
+Dim textSize As SizeF = surface.MeasureString("  " & $buttonName$.Text & "  ", $buttonName$.Font)
+surface.Dispose()
+$buttonName$.Width = CInt(textSize.Width)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

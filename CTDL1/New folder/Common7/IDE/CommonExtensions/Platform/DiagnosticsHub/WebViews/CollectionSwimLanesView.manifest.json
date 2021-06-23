@@ -1,0 +1,180 @@
+﻿{
+	"start_url": "CollectionSwimLanesView.html",
+	"domain": "http://microsoft.com",
+	"name": "CollectionSwimLanesView",
+    "resource_aliases": {
+        "DiagnosticsHubResources": {
+            "path": "DiagnosticsHub.Javascript.ScriptResources",
+            "is_default": false
+        },
+        "DiagnosticsHubControlsResources": {
+            "path": "DiagnosticsHub.Javascript.Controls.ScriptResources",
+            "is_default": true
+        }
+    },
+    "vs": {
+		"theme_token_aliases": {
+            "diagnostics-host-border": {
+                "category": "f8a8b2a5-dd35-43f6-a382-fd6a61325c22",
+                "key_type": "BackgroundColor",
+                "name": "Border"
+            },
+            "diagnostics-host-graph-cursor": {
+                "category": "f8a8b2a5-dd35-43f6-a382-fd6a61325c22",
+                "key_type": "BackgroundColor",
+                "name": "GraphCursor"
+            },
+            "diagnostics-host-graph-line": {
+                "category": "f8a8b2a5-dd35-43f6-a382-fd6a61325c22",
+                "key_type": "BackgroundColor",
+                "name": "GraphLine"
+            },
+            "diagnostics-host-graph-scale": {
+                "category": "f8a8b2a5-dd35-43f6-a382-fd6a61325c22",
+                "key_type": "BackgroundColor",
+                "name": "GraphScale"
+            },
+            "diagnostics-host-ruler-slider": {
+                "category": "f8a8b2a5-dd35-43f6-a382-fd6a61325c22",
+                "key_type": "BackgroundColor",
+                "name": "RulerSlider"
+            },
+            "diagnostics-host-ruler-slider-active": {
+                "category": "f8a8b2a5-dd35-43f6-a382-fd6a61325c22",
+                "key_type": "BackgroundColor",
+                "name": "RulerSliderActive"
+            },
+            "diagnostics-host-ruler-tickmark": {
+                "category": "f8a8b2a5-dd35-43f6-a382-fd6a61325c22",
+                "key_type": "BackgroundColor",
+                "name": "RulerTickmark"
+            },
+            "diagnostics-host-swimlane-border": {
+                "category": "f8a8b2a5-dd35-43f6-a382-fd6a61325c22",
+                "key_type": "BackgroundColor",
+                "name": "SwimlaneBorder"
+            },
+            "diagnostics-host-toolbar-hover": {
+                "category": "f8a8b2a5-dd35-43f6-a382-fd6a61325c22",
+                "key_type": "BackgroundColor",
+                "name": "ToolbarBackgroundHover"
+            },
+			"diagnostics-host-toolbar-text-disabled": {
+                "category": "f8a8b2a5-dd35-43f6-a382-fd6a61325c22",
+                "key_type": "BackgroundColor",
+                "name": "ToolbarTextDisabled"
+            },
+			"diagnostics-host-toolbar-border": {
+                "category": "f8a8b2a5-dd35-43f6-a382-fd6a61325c22",
+                "key_type": "BackgroundColor",
+                "name": "ToolbarBorder"
+            },
+            "vs-command-bar-gradient-begin-color": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "CommandBarGradientBegin"
+            },
+            "diagnostics-information-background": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "InfoBackground"
+            },
+            "diagnostics-information-border": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "ToolWindowBorder"
+            },
+            "diagnostics-information-foreground": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "InfoText"
+            },
+            "diagnostics-information-link-foreground": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "PanelHyperlink"
+            },
+            "diagnostics-information-link-foreground-hover": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "PanelHyperlinkHover"
+            },
+            "diagnostics-information-link-foreground-pressed": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "PanelHyperlinkPressed"
+            },
+            "diagnostics-information-link-foreground-disabled": {
+                "category": "624ed9c3-bdfd-41fa-96c3-7c824ea32e3d",
+                "key_type": "BackgroundColor",
+                "name": "PanelHyperlinkDisabled"
+            }
+        },
+		"themed_images": {
+            "vs-image-icon-tree-expanded": {
+                "bitmap_source": "Images\\itemExpandedIcon.png",
+                "background_color": "plugin-background-color"
+            },
+            "vs-image-icon-tree-collapsed": {
+                "bitmap_source": "Images\\itemCollapsedIcon.png",
+                "background_color": "plugin-background-color"
+            },
+            "vs-image-toolbar-chartzoom-in": {
+                "bitmap_source": "Images\\i_chartzoom_in.png",
+                "background_color": "vs-command-bar-gradient-begin-color"
+            },
+			"vs-image-toolbar-chartzoom-in-disabled": {
+                "bitmap_source": "Images\\i_chartzoom_in_disabled.png",
+                "background_color": "vs-command-bar-gradient-begin-color"
+            },
+            "vs-image-toolbar-chartzoom-reset": {
+                "bitmap_source": "Images\\i_chartzoom_reset.png",
+                "background_color": "vs-command-bar-gradient-begin-color"
+            },
+			"vs-image-toolbar-chartzoom-reset-disabled": {
+                "bitmap_source": "Images\\i_chartzoom_reset_disabled.png",
+                "background_color": "vs-command-bar-gradient-begin-color"
+            },
+            "vs-image-toolbar-chartselection-clear": {
+                "bitmap_source": "Images\\i_chartselection_clear.png",
+                "background_color": "vs-command-bar-gradient-begin-color"
+            },
+			"vs-image-toolbar-chartselection-clear-disabled": {
+                "bitmap_source": "Images\\i_chartselection_clear_disabled.png",
+                "background_color": "vs-command-bar-gradient-begin-color"
+            },
+            "vs-image-graph-user-mark": {
+                "bitmap_source": "Images\\i_usermark.png",
+                "background_color": "plugin-background-color"
+            },
+            "vs-image-graph-app-event": {
+                "bitmap_source": "Images\\i_appevent.png",
+                "background_color": "plugin-background-color"
+            },
+            "vs-image-graph-aggregated-event": {
+                "bitmap_source": "Images\\CustomMark5_18x.png",
+                "background_color": "plugin-background-color"
+            },
+            "vs-image-graph-third-event": {
+                "bitmap_source": "Images\\CustomMark1_18x.png",
+                "background_color": "plugin-background-color"
+            },
+            "vs-image-graph-fourth-event": {
+                "bitmap_source": "Images\\CustomMark2_18x.png",
+                "background_color": "plugin-background-color"
+            },
+            "vs-image-graph-fifth-event": {
+                "bitmap_source": "Images\\CustomMark3_18x.png",
+                "background_color": "plugin-background-color"
+            },
+            "vs-image-graph-sixth-event": {
+                "bitmap_source": "Images\\CustomMark4_18x.png",
+                "background_color": "plugin-background-color"
+            },
+            "vs-image-information-icon": {
+                "bitmap_source": "Images\\Information_blue.png",
+                "background_color": "diagnostics-information-background"
+            }
+        }
+    }
+}

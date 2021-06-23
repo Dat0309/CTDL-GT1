@@ -1,0 +1,14 @@
+; [!output PROJECT_NAME].def: Deklaruje parametry modu³u dla biblioteki DLL.
+
+LIBRARY
+
+EXPORTS
+    ; Jawne eksportowanie jest mo¿liwe w tym miejscu
+[!if DLL_TYPE_REGULAR || DLL_TYPE_REGULAR_STATIC]
+[!if AUTOMATION]
+	DllCanUnloadNow     PRIVATE
+	DllGetClassObject   PRIVATE
+	DllRegisterServer   PRIVATE
+	DllUnregisterServer PRIVATE
+[!endif]
+[!endif]

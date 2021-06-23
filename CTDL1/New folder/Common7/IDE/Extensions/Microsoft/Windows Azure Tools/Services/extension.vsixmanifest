@@ -1,0 +1,22 @@
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="Microsoft.VisualStudio.WindowsAzure.Services.DC6E5C8D-701A-4362-9C84-A84A1AE78FA8" Version="1.4" Language="en-US" Publisher="Microsoft Corporation" />
+    <DisplayName>Microsoft Azure Mobile Services Tools</DisplayName>
+    <Description xml:space="preserve">Microsoft Azure Mobile Services Tools</Description>
+  </Metadata>
+  <Installation InstalledByMsi="true">
+    <!-- Pro = Pro, Premium, and Ultimate-->
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="12.0" ProductUpdate="true" />
+    <InstallationTarget Id="Microsoft.VisualStudio.VSWinExpress" Version="12.0" ProductUpdate="true" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" Version="4.5" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="Microsoft.VisualStudio.WindowsAzure.Services.Extensions.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="Microsoft.VisualStudio.WindowsAzure.Services.WebExtensions.dll" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="Microsoft.VisualStudio.WindowsAzure.Services.Package.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" Path="ProjectTemplates" />
+    <Asset Type="Microsoft.VisualStudio.Assembly" Path="Microsoft.VisualStudio.WindowsAzure.Services.Wizard.dll" AssemblyName="Microsoft.VisualStudio.WindowsAzure.Services.Wizard, Version=1.4.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </Assets>
+</PackageManifest>

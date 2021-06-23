@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{91DFF702-E034-4CE2-9EE6-A5BF33341908}" ID="1000" />
+    <Description Package="{91DFF702-E034-4CE2-9EE6-A5BF33341908}" ID="1001" />
+    <Icon Package="{91DFF702-E034-4CE2-9EE6-A5BF33341908}" ID="4004" />
+    <TemplateID>Microsoft.VisualBasic.WindowsPhoneApp.ClassLibrary</TemplateID>
+    <TemplateGroupID>WindowsPhoneApp-Managed-Win81</TemplateGroupID>    <ProjectType>VisualBasic</ProjectType>
+    <SortOrder>48</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>ClassLibrary</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <TargetPlatformName>Windows</TargetPlatformName>
+    <RequiredPlatformVersion>6.3.0</RequiredPlatformVersion>
+    <CreateInPlace>true</CreateInPlace>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="ClassLibrary.vbproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="My Project\AssemblyInfo.vb">AssemblyInfo.vb</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true">Class1.vb</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

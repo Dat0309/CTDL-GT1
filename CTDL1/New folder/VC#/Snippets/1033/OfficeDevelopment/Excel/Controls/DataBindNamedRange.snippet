@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Bind Data to a NamedRange Control</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Binds data to an Excel NamedRange control through a BindingSource object.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword></Keyword>
+      </Keywords>
+      <Shortcut></Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Microsoft.Office.Interop.Excel.dll</Assembly>
+          <Url></Url>
+        </Reference>
+        <Reference>
+          <Assembly>Microsoft.Office.Tools.Excel.dll</Assembly>
+          <Url></Url>
+        </Reference>
+        <Reference>
+          <Assembly>System.Windows.Forms.dll</Assembly>
+          <Url></Url>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Excel = Microsoft.Office.Interop.Excel</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.Office.Tools.Excel</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>dataMember</ID>
+          <Type>System.String</Type>
+          <ToolTip>Replace with the field of the property or list to bind to</ToolTip>
+          <Default>"dataMember"</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>propertyName</ID>
+          <Type>System.String</Type>
+          <ToolTip>Replace with the name of the control property to bind</ToolTip>
+          <Default>"propertyName"</Default>
+          <Function></Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>bindingSource</ID>
+          <Type>System.Windows.Forms.BindingSource</Type>
+          <ToolTip>Replace with a binding source to use to set up the data binding.</ToolTip>
+          <Default>bindingSource</Default>
+          <Function></Function>
+        </Object>
+        <Object Editable="true">
+          <ID>namedRange</ID>
+          <Type>Microsoft.Office.Tools.Excel.NamedRange</Type>
+          <ToolTip>Replace with the NamedRange control to data bind to.</ToolTip>
+          <Default>namedRange</Default>
+          <Function></Function>
+        </Object>
+      </Declarations>
+      <Code Language="CSharp" Kind="" Delimiter="$"><![CDATA[
+$namedRange$.DataBindings.Add($propertyName$, $bindingSource$, $dataMember$);
+			]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

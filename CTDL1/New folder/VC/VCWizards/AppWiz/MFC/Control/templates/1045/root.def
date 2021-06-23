@@ -1,0 +1,7 @@
+; [!output PROJECT_NAME].def : Deklaruje parametry modu³u.
+
+EXPORTS
+	DllCanUnloadNow     PRIVATE
+	DllGetClassObject   PRIVATE
+	DllRegisterServer   PRIVATE
+	DllUnregisterServer PRIVATE

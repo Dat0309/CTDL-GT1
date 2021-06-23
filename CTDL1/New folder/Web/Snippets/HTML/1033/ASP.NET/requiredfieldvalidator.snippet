@@ -1,0 +1,40 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>requiredfieldvalidator</Title>
+    <Author>Microsoft Corporation</Author>
+    <Shortcut>requiredfieldvalidator</Shortcut>
+    <AlternativeShortcuts>
+      <Shortcut>comparevalidator</Shortcut>
+      <Shortcut>rangevalidator</Shortcut>
+      <Shortcut>regularexpressionvalidator</Shortcut>
+      <Shortcut>customvalidator</Shortcut>
+      <Shortcut>dynamicvalidator</Shortcut>
+      <Shortcut Value="requiredfieldvalidator">asp:requiredfieldvalidator</Shortcut>
+      <Shortcut Value="comparevalidator">asp:comparevalidator</Shortcut>
+      <Shortcut Value="rangevalidator">asp:rangevalidator</Shortcut>
+      <Shortcut Value="regularexpressionvalidator">asp:regularexpressionvalidator</Shortcut>
+      <Shortcut Value="customvalidator">asp:customvalidator</Shortcut>
+      <Shortcut Value="dynamicvalidator">asp:dynamicvalidator</Shortcut>
+    </AlternativeShortcuts>
+    <Description>Markup snippet for a validator control</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>errormessage</ID>
+        <ToolTip>errormessage</ToolTip>
+        <Default>errormessage</Default>
+      </Literal>
+      <Literal>
+        <ID>controltovalidate</ID>
+        <ToolTip>controltovalidate</ToolTip>
+        <Default>controltovalidate</Default>
+        <Function>PreviousControlID()</Function>
+      </Literal>
+    </Declarations>
+    <Code Language="html"><![CDATA[<asp:$shortcut$ errormessage="$errormessage$" controltovalidate="$controltovalidate$" runat="server"/>$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

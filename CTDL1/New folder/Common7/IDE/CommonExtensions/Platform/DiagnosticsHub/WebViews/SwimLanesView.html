@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html style="overflow-y:auto;">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="Content-Type" content="text/html" />
+    <title>Swimlanes View</title>
+    <link href="CSS/View.css" type="text/css" rel="stylesheet" data-plugin-theme="true" />
+    <link href="CSS/Renderer.css" type="text/css" rel="stylesheet"  data-plugin-theme="true" />
+    <link href="CSS/Ruler.css" type="text/css" rel="stylesheet"  data-plugin-theme="true" />
+    <link href="CSS/Swimlane.css" type="text/css" rel="stylesheet"  data-plugin-theme="true" />
+    <link href="CSS/Toolbar.css" type="text/css" rel="stylesheet"  data-plugin-theme="true" />
+    <link href="CSS/MultiLineGraph.css" type="text/css" rel="stylesheet"  data-plugin-theme="true" />
+    <script src="Scripts/plugin.js"></script>
+    <script src="Scripts/DiagnosticsHub.js"></script>
+    <script src="Scripts/Controls.js"></script>
+</head>
+    <body>
+        <div>
+            <div id="mainContainer">
+                <div class="buffer"></div>
+            </div>
+        </div>
+        <script>
+            (function () {
+                window.addEventListener("DOMContentLoaded", function () {
+                    Plugin.addEventListener("pluginready", pluginLoaded);
+                });
+
+                function pluginLoaded() {
+                    Plugin.Tooltip.defaultTooltipContentToHTML = false;
+                    var args = {
+                        swimlane: {
+                            leftScale: {
+                                isVisible: true,
+                                width: 40
+                            },
+                            rightScale: {
+                                isVisible: true,
+                                width: 40
+                            },
+                            graph: {
+                                height: 88
+                            },
+                            minSelectionWidthInPixels: 10,
+                            isSelectionEnabled: true,
+                            isZoomEnabled: true,
+                            isGraphCollapsible: true
+                        },
+                        isToolbarRequired: true,
+                        isResizeHandlerRequired: true,
+                        isToolbarFloating: true
+                    };
+                    renderer = new Microsoft.VisualStudio.DiagnosticsHub.Renderer(args);
+                    renderer.execute();
+                }
+            })();
+        </script>
+    </body>
+</html>

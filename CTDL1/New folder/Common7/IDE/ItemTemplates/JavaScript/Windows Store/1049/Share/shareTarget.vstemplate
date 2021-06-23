@@ -1,0 +1,43 @@
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <Name>Предост. совм. доступ к целев. контракту</Name>
+        <Description>Контракт приложения, поддерживающий получение элементов, являющихся общими для нескольких приложений.</Description>
+        <Icon>shareTarget.ico</Icon>
+        <ProjectType>JavaScript</ProjectType>
+        <TemplateID>Microsoft.JavaScript.ShareTarget</TemplateID>
+        <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+        <DefaultName>shareTarget.html</DefaultName>
+        <PreviewImage>ShareTarget.png</PreviewImage>
+        <TargetPlatformName>Windows</TargetPlatformName> 
+        <RequiredPlatformVersion>6.3.0</RequiredPlatformVersion>
+        <AppliesTo>JavaScriptWJProject + !SharedAssetsProject</AppliesTo>
+    </TemplateData>
+    <TemplateContent>
+        <ProjectItem TargetFileName="$fileinputname$.js" ReplaceParameters="true" OpenInEditor="true" BlendOpenInEditor="false">shareTarget.js</ProjectItem>
+        <ProjectItem TargetFileName="$fileinputname$.html" ReplaceParameters="true" BlendOpenInEditor="true">shareTarget.html</ProjectItem>
+        <ProjectItem TargetFileName="$fileinputname$.css" ReplaceParameters="true">shareTarget.css</ProjectItem>
+    </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.WinRT.TemplateWizards, Version=12.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.WinRT.TemplateWizards.ActivationContract.Wizard</FullClassName>
+  </WizardExtension>
+    <WizardData>
+        <Activation>
+            <ManifestData>
+                <Extension Category="windows.shareTarget" StartPage="$wizardrelativeitemname$.html">
+                    <ShareTarget>
+                        <DataFormat>text</DataFormat>
+                        <DataFormat>uri</DataFormat>
+                    </ShareTarget>
+                </Extension>
+            </ManifestData>
+            <ManifestComment>
+                //
+                // TODO: Изменить файл манифеста для включения использования в качестве общего целевого объекта.  Манифест 
+                // пакета не может быть обновлен автоматически.  Откройте файл манифеста пакета
+                // пакета и проверьте, что включена поддержка активации общего доступа.
+
+            </ManifestComment>
+        </Activation>
+    </WizardData>
+</VSTemplate>

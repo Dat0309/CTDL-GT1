@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Get a Random Number using the Random class</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Generates a random integer between an upper bound and a lower bound.</Description>
+      <Shortcut>mathRand</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Microsoft.VisualBasic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>LowerBound</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with the smallest integer you want in the result set.</ToolTip>
+          <Default>10</Default>
+        </Literal>
+        <Literal>
+          <ID>UpperBound</ID>
+          <Type>Integer</Type>
+          <ToolTip>Replace with one more than the largest number you want in the result set.</ToolTip>
+          <Default>100</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim generator As New Random
+Dim randomValue As Integer
+randomValue = generator.Next($LowerBound$, $UpperBound$)
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

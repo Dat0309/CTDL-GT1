@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="1024" />
+    <Description Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="1025" />
+    <Icon Package="{BB89AFCA-43DA-45C1-907D-9D61DD11F28D}" ID="4017" />
+    <TemplateID>Microsoft.CS.WinRT.SearchContract</TemplateID>
+    <TemplateGroupID>WinRT-Managed-Win8</TemplateGroupID>
+    <ProjectType>CSharp</ProjectType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>SearchResultsPage.xaml</DefaultName>
+    <ShowByDefault>false</ShowByDefault>
+    <SortOrder>91</SortOrder>
+    <PreviewImage>SearchContract.png</PreviewImage>
+    <TargetPlatformName>Windows</TargetPlatformName>
+    <RequiredPlatformVersion>8</RequiredPlatformVersion>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="true" ItemType="Page" SubType="Designer" CustomTool="MSBuild:Compile" TargetFileName="$fileinputname$.xaml">SearchResultsPage.xaml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="true" TargetFileName="$fileinputname$.xaml.cs">SearchResultsPage.xaml.cs</ProjectItem>
+
+    <ProjectItem ReplaceParameters="false" TargetFileName="$wizardcommonprefix$ReadMe.txt">ReadMe.txt</ProjectItem>
+    <ProjectItem ReplaceParameters="false" TargetFileName="$wizardcommonprefix$StandardStyles.xaml">StandardStyles.xaml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$BindableBase.cs">BindableBase.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$BooleanToVisibilityConverter.cs">BooleanToVisibilityConverter.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$BooleanNegationConverter.cs">BooleanNegationConverter.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$LayoutAwarePage.cs">LayoutAwarePage.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$RichTextColumns.cs">RichTextColumns.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$wizardcommonprefix$SuspensionManager.cs">SuspensionManager.cs</ProjectItem>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.WinRT.TemplateWizards, Version=12.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.WinRT.TemplateWizards.SmartItem.Wizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <CommonOptional>ReadMe.txt</CommonOptional>
+    <CommonRequired>StandardStyles.xaml</CommonRequired>
+    <CommonRequired>BindableBase.cs</CommonRequired>
+    <CommonRequired>BooleanToVisibilityConverter.cs</CommonRequired>
+    <CommonRequired>BooleanNegationConverter.cs</CommonRequired>
+    <CommonRequired>LayoutAwarePage.cs</CommonRequired>
+    <CommonRequired>RichTextColumns.cs</CommonRequired>
+    <CommonRequired>SuspensionManager.cs</CommonRequired>
+    <Activation>
+      <AppMethod Name="OnSearchActivated" CommentPrefix="// ">
+        <![CDATA[
+        /// <summary>
+        /// Invoked when the application is activated to display search results.
+        /// </summary>
+        /// <param name="e">Details about the activation request.</param>
+        protected async override void OnSearchActivated(Windows.ApplicationModel.Activation.SearchActivatedEventArgs e)
+        {
+            // TODO: Register the Windows.ApplicationModel.Search.SearchPane.GetForCurrentView().QuerySubmitted
+            // event in OnWindowCreated to speed up searches once the application is already running
+
+            // If the Window isn't already using Frame navigation, insert our own Frame
+            var previousContent = Window.Current.Content;
+            var frame = previousContent as Frame;
+
+            // If the app does not contain a top-level frame, it is possible that this 
+            // is the initial launch of the app. Typically this method and OnLaunched 
+            // in App.xaml.cs can call a common method.
+            if (frame == null)
+            {
+                // Create a Frame to act as the navigation context and associate it with
+                // a SuspensionManager key
+                frame = new Frame();
+                $rootnamespace$.Common.SuspensionManager.RegisterFrame(frame, "AppFrame");
+
+                if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
+                {
+                    // Restore the saved session state only when appropriate
+                     try
+                    {
+                        await $rootnamespace$.Common.SuspensionManager.RestoreAsync();
+                    }
+                    catch ($rootnamespace$.Common.SuspensionManagerException)
+                    {
+                        //Something went wrong restoring state.
+                        //Assume there is no state and continue
+                    }
+                }
+            }
+
+            frame.Navigate(typeof($safeitemname$), e.QueryText);
+            Window.Current.Content = frame;
+
+            // Ensure the current window is active
+            Window.Current.Activate();
+        }
+        ]]>
+      </AppMethod>
+      <AppMethodComment>
+        <![CDATA[
+        // TODO: Respond to activation for search results
+        //
+        // The following code could not be automatically added to your application subclass,
+        // either because the appropriate class could not be located or because a method with
+        // the same name already exists.  Ensure that appropriate code deals with activation
+        // by displaying search results for the specified search term.
+        //
+        ]]>
+      </AppMethodComment>
+      <ManifestData>
+        <Extension Category="windows.search" />
+      </ManifestData>
+      <ManifestComment>
+        <![CDATA[
+        // TODO: Edit the manifest to enable searching
+        //
+        // The package manifest could not be automatically updated.  Open the package manifest
+        // file and ensure that support for activation for searching is enabled.
+        ]]>
+      </ManifestComment>
+    </Activation>
+  </WizardData>
+ </VSTemplate>

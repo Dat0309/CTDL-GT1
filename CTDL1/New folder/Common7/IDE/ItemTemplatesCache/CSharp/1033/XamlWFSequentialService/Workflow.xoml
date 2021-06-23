@@ -1,0 +1,22 @@
+﻿<SequentialWorkflowActivity x:Class="$rootnamespace$.$safeitemrootname$" x:Name="$safeitemrootname$" xmlns:ns0="clr-namespace:System.Workflow.Activities;Assembly=System.WorkflowServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow">
+	<ns0:ReceiveActivity.WorkflowServiceAttributes>
+		<ns0:WorkflowServiceAttributes Name="$safeitemrootname$" ConfigurationName="$safeitemrootname$" />
+	</ns0:ReceiveActivity.WorkflowServiceAttributes>
+	<ns0:ReceiveActivity x:Name="receiveActivity1" CanCreateInstance="True">
+		<ns0:ReceiveActivity.ServiceOperationInfo>
+			<ns0:TypedOperationInfo Name="GetData" ContractType="{x:Type $rootnamespace$.$contractName$}" />
+		</ns0:ReceiveActivity.ServiceOperationInfo>
+		<ns0:ReceiveActivity.ParameterBindings>
+			<WorkflowParameterBinding ParameterName="(ReturnValue)">
+				<WorkflowParameterBinding.Value>
+					<ActivityBind Name="$safeitemrootname$" Path="ReturnValue" />
+				</WorkflowParameterBinding.Value>
+			</WorkflowParameterBinding>
+			<WorkflowParameterBinding ParameterName="value">
+				<WorkflowParameterBinding.Value>
+					<ActivityBind Name="$safeitemrootname$" Path="InputValue" />
+				</WorkflowParameterBinding.Value>
+			</WorkflowParameterBinding>
+		</ns0:ReceiveActivity.ParameterBindings>
+	</ns0:ReceiveActivity>
+</SequentialWorkflowActivity>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Parse an E-mail Address</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Returns the user name and provider name from an e-mail address.</Description>
+      <Shortcut>typeParseEmail</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Object>
+          <ID>email</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with a string or literal that represents an email address</ToolTip>
+          <Default>"SomeName@SomeCompany.com"</Default>
+        </Object>
+      </Declarations>
+      <Code Language="VB" Kind="method body"><![CDATA[Dim emailParts() As String
+Dim user As String
+Dim provider As String
+emailParts = $email$.Split("@".ToCharArray, 2)
+If emailParts.Length = 2 Then
+    user = emailParts(0)
+    provider = emailParts(1)
+Else
+    ' Email address is not valid. The expected format is user@provider.*
+    user = String.Empty
+    provider = String.Empty
+End If]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
